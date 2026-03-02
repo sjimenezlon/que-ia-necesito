@@ -5,9 +5,9 @@
     "url": "https://chat.openai.com",
     "categories": [
       "escritura",
-      "investigación",
+      "investigacion",
       "chatbots",
-      "educación"
+      "educacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Gratis con límites. Plus: $20/mes",
@@ -65,9 +65,9 @@
     "url": "https://claude.ai",
     "categories": [
       "escritura",
-      "investigación",
+      "investigacion",
       "chatbots",
-      "programación"
+      "programacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Gratis con límites. Pro: $20/mes",
@@ -125,7 +125,7 @@
     "url": "https://gemini.google.com",
     "categories": [
       "chatbots",
-      "investigación",
+      "investigacion",
       "escritura"
     ],
     "pricing": "freemium",
@@ -183,7 +183,7 @@
     "name": "Perplexity",
     "url": "https://perplexity.ai",
     "categories": [
-      "investigación",
+      "investigacion",
       "chatbots"
     ],
     "pricing": "freemium",
@@ -415,7 +415,7 @@
     "url": "https://chat.mistral.ai",
     "categories": [
       "chatbots",
-      "programación"
+      "programacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Gratis. Planes empresariales disponibles",
@@ -647,7 +647,7 @@
     "url": "https://grammarly.com",
     "categories": [
       "escritura",
-      "traducción"
+      "traduccion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Gratis básico. Premium: $12/mes",
@@ -705,7 +705,7 @@
     "url": "https://quillbot.com",
     "categories": [
       "escritura",
-      "traducción"
+      "traduccion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Gratis con límites. Premium: $10/mes",
@@ -877,7 +877,7 @@
     "name": "Midjourney",
     "url": "https://midjourney.com",
     "categories": [
-      "diseño"
+      "diseno"
     ],
     "pricing": "pago",
     "pricingDetail": "Desde $10/mes. Sin plan gratuito",
@@ -916,7 +916,7 @@
     "keywords": [
       "imágenes",
       "arte",
-      "diseño",
+      "diseno",
       "ilustracion",
       "generar",
       "visual",
@@ -934,7 +934,7 @@
     "name": "DALL-E 3",
     "url": "https://openai.com/dall-e-3",
     "categories": [
-      "diseño"
+      "diseno"
     ],
     "pricing": "freemium",
     "pricingDetail": "Incluido en ChatGPT Plus ($20/mes). Creditos gratis limitados",
@@ -977,7 +977,7 @@
       "dibujar",
       "ilustracion",
       "logo",
-      "diseño",
+      "diseno",
       "visual"
     ],
     "tags": [
@@ -991,7 +991,7 @@
     "name": "Ideogram",
     "url": "https://ideogram.ai",
     "categories": [
-      "diseño"
+      "diseno"
     ],
     "pricing": "freemium",
     "pricingDetail": "Plan gratis: 10 imágenes/día. Plus: $8/mes",
@@ -1033,7 +1033,7 @@
       "logo",
       "poster",
       "banner",
-      "diseño",
+      "diseno",
       "imagen",
       "tarjeta"
     ],
@@ -1048,7 +1048,7 @@
     "name": "Leonardo AI",
     "url": "https://leonardo.ai",
     "categories": [
-      "diseño"
+      "diseno"
     ],
     "pricing": "freemium",
     "pricingDetail": "150 creditos gratis/día. Planes desde $12/mes",
@@ -1092,7 +1092,7 @@
       "textura",
       "modelos",
       "generar",
-      "diseño"
+      "diseno"
     ],
     "tags": [
       "Arte digital",
@@ -1105,7 +1105,7 @@
     "name": "Canva Magic Studio",
     "url": "https://canva.com",
     "categories": [
-      "diseño",
+      "diseno",
       "presentaciones"
     ],
     "pricing": "freemium",
@@ -1143,7 +1143,7 @@
       "dall-e"
     ],
     "keywords": [
-      "diseño",
+      "diseno",
       "plantilla",
       "redes",
       "logo",
@@ -1163,7 +1163,7 @@
     "name": "Adobe Firefly",
     "url": "https://firefly.adobe.com",
     "categories": [
-      "diseño"
+      "diseno"
     ],
     "pricing": "freemium",
     "pricingDetail": "Creditos gratis limitados. Incluido en Adobe Creative Cloud",
@@ -1202,7 +1202,7 @@
     "keywords": [
       "adobe",
       "photoshop",
-      "diseño",
+      "diseno",
       "imagen",
       "profesional",
       "vector",
@@ -1220,7 +1220,7 @@
     "name": "Stable Diffusion",
     "url": "https://stability.ai",
     "categories": [
-      "diseño"
+      "diseno"
     ],
     "pricing": "gratis",
     "pricingDetail": "Gratis y de código abierto. APIs de pago disponibles",
@@ -1277,7 +1277,7 @@
     "name": "Krea AI",
     "url": "https://krea.ai",
     "categories": [
-      "diseño"
+      "diseno"
     ],
     "pricing": "freemium",
     "pricingDetail": "Plan gratis limitado. Pro: $24/mes",
@@ -1320,7 +1320,7 @@
       "escalar",
       "boceto",
       "creativo",
-      "diseño",
+      "diseno",
       "interactivo"
     ],
     "tags": [
@@ -1429,7 +1429,7 @@
     ],
     "keywords": [
       "presentación",
-      "diseño",
+      "diseno",
       "automático",
       "profesional",
       "equipo",
@@ -1563,7 +1563,7 @@
     "url": "https://runway.ml",
     "categories": [
       "video",
-      "diseño"
+      "diseno"
     ],
     "pricing": "freemium",
     "pricingDetail": "125 creditos gratis. Desde $12/mes",
@@ -1735,7 +1735,7 @@
     "url": "https://synthesia.io",
     "categories": [
       "video",
-      "educación"
+      "educacion"
     ],
     "pricing": "pago",
     "pricingDetail": "Desde $22/mes. Planes empresariales disponibles",
@@ -1774,7 +1774,7 @@
     "keywords": [
       "video",
       "capacitación",
-      "educación",
+      "educacion",
       "avatar",
       "empresa",
       "tutorial",
@@ -1907,7 +1907,7 @@
     "url": "https://elevenlabs.io",
     "categories": [
       "audio",
-      "transcripción"
+      "transcripcion"
     ],
     "pricing": "freemium",
     "pricingDetail": "10K caracteres gratis/mes. Desde $5/mes",
@@ -2137,7 +2137,7 @@
     "categories": [
       "audio",
       "video",
-      "transcripción"
+      "transcripcion"
     ],
     "pricing": "freemium",
     "pricingDetail": "1 hora gratis de transcripción. Pro: $24/mes",
@@ -2194,7 +2194,7 @@
     "name": "GitHub Copilot",
     "url": "https://github.com/features/copilot",
     "categories": [
-      "programación"
+      "programacion"
     ],
     "pricing": "pago",
     "pricingDetail": "$10/mes individual. $19/mes business. Gratis para estudiantes",
@@ -2251,7 +2251,7 @@
     "name": "Cursor",
     "url": "https://cursor.com",
     "categories": [
-      "programación"
+      "programacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Plan gratis limitado. Pro: $20/mes",
@@ -2308,7 +2308,7 @@
     "name": "Replit AI",
     "url": "https://replit.com",
     "categories": [
-      "programación"
+      "programacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Plan gratis limitado. Core: $25/mes",
@@ -2365,7 +2365,7 @@
     "name": "Claude Code",
     "url": "https://claude.ai/code",
     "categories": [
-      "programación"
+      "programacion"
     ],
     "pricing": "pago",
     "pricingDetail": "Incluido en Claude Pro ($20/mes) o API con pago por uso",
@@ -2422,7 +2422,7 @@
     "name": "Windsurf",
     "url": "https://codeium.com",
     "categories": [
-      "programación"
+      "programacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Plan gratis con límites. Pro: $15/mes",
@@ -2479,8 +2479,8 @@
     "name": "v0 by Vercel",
     "url": "https://v0.dev",
     "categories": [
-      "programación",
-      "diseño"
+      "programacion",
+      "diseno"
     ],
     "pricing": "freemium",
     "pricingDetail": "Creditos gratis limitados. Premium: $20/mes",
@@ -2823,8 +2823,8 @@
     "name": "NotebookLM",
     "url": "https://notebooklm.google.com",
     "categories": [
-      "investigación",
-      "educación"
+      "investigacion",
+      "educacion"
     ],
     "pricing": "gratis",
     "pricingDetail": "Completamente gratis con cuenta de Google",
@@ -2881,7 +2881,7 @@
     "name": "Elicit",
     "url": "https://elicit.com",
     "categories": [
-      "investigación"
+      "investigacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "5K creditos gratis. Plus: $10/mes",
@@ -2938,7 +2938,7 @@
     "name": "Semantic Scholar",
     "url": "https://semanticscholar.org",
     "categories": [
-      "investigación"
+      "investigacion"
     ],
     "pricing": "gratis",
     "pricingDetail": "Completamente gratis",
@@ -2995,7 +2995,7 @@
     "name": "Connected Papers",
     "url": "https://connectedpapers.com",
     "categories": [
-      "investigación"
+      "investigacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "5 gráficas gratis/mes. Premium: $3/mes",
@@ -3052,7 +3052,7 @@
     "name": "Consensus",
     "url": "https://consensus.app",
     "categories": [
-      "investigación"
+      "investigacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "20 busquedas gratis/mes. Premium: $7/mes",
@@ -3109,7 +3109,7 @@
     "name": "Otter.ai",
     "url": "https://otter.ai",
     "categories": [
-      "transcripción",
+      "transcripcion",
       "productividad"
     ],
     "pricing": "freemium",
@@ -3167,7 +3167,7 @@
     "name": "Fireflies.ai",
     "url": "https://fireflies.ai",
     "categories": [
-      "transcripción",
+      "transcripcion",
       "productividad"
     ],
     "pricing": "freemium",
@@ -3225,7 +3225,7 @@
     "name": "Zapier AI",
     "url": "https://zapier.com",
     "categories": [
-      "automatización",
+      "automatizacion",
       "productividad"
     ],
     "pricing": "freemium",
@@ -3283,7 +3283,7 @@
     "name": "Make",
     "url": "https://make.com",
     "categories": [
-      "automatización",
+      "automatizacion",
       "productividad"
     ],
     "pricing": "freemium",
@@ -3398,7 +3398,7 @@
     "name": "Khanmigo",
     "url": "https://khanacademy.org",
     "categories": [
-      "educación"
+      "educacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Disponible con Khan Academy gratis. Premium: $44/año",
@@ -3439,7 +3439,7 @@
       "tutor",
       "matemáticas",
       "estudiar",
-      "educación",
+      "educacion",
       "escuela",
       "ejercicios",
       "profesor"
@@ -3455,8 +3455,8 @@
     "name": "Duolingo Max",
     "url": "https://duolingo.com",
     "categories": [
-      "educación",
-      "traducción"
+      "educacion",
+      "traduccion"
     ],
     "pricing": "pago",
     "pricingDetail": "Duolingo Max: $30/mes o $168/año",
@@ -3513,7 +3513,7 @@
     "name": "Quizlet AI",
     "url": "https://quizlet.com",
     "categories": [
-      "educación"
+      "educacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Gratis con límites. Plus: $3/mes",
@@ -3570,9 +3570,9 @@
     "name": "Wolfram Alpha",
     "url": "https://wolframalpha.com",
     "categories": [
-      "educación",
+      "educacion",
       "datos",
-      "investigación"
+      "investigacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Gratis básico. Pro: $5/mes. Pro Premium: $8/mes",
@@ -3802,7 +3802,7 @@
     "url": "https://adcreative.ai",
     "categories": [
       "negocios",
-      "diseño"
+      "diseno"
     ],
     "pricing": "pago",
     "pricingDetail": "Desde $29/mes. Prueba gratuita de 7 días",
@@ -3859,7 +3859,7 @@
     "name": "DeepL",
     "url": "https://deepl.com",
     "categories": [
-      "traducción"
+      "traduccion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Gratis con límites. Pro: $9/mes",
@@ -3916,7 +3916,7 @@
     "name": "Google Translate",
     "url": "https://translate.google.com",
     "categories": [
-      "traducción"
+      "traduccion"
     ],
     "pricing": "gratis",
     "pricingDetail": "Completamente gratis",
@@ -3974,7 +3974,7 @@
     "url": "https://wordtune.com",
     "categories": [
       "escritura",
-      "traducción"
+      "traduccion"
     ],
     "pricing": "freemium",
     "pricingDetail": "10 reescrituras gratis/día. Plus: $10/mes",
@@ -4031,7 +4031,7 @@
     "name": "Bardeen",
     "url": "https://bardeen.ai",
     "categories": [
-      "automatización"
+      "automatizacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Plan gratis con acciones basicas. Pro: $10/mes",
@@ -4088,7 +4088,7 @@
     "name": "Relevance AI",
     "url": "https://relevanceai.com",
     "categories": [
-      "automatización",
+      "automatizacion",
       "datos"
     ],
     "pricing": "pago",
@@ -4146,7 +4146,7 @@
     "name": "Respell",
     "url": "https://respell.ai",
     "categories": [
-      "automatización"
+      "automatizacion"
     ],
     "pricing": "freemium",
     "pricingDetail": "Plan gratis limitado. Pro: $25/mes",
@@ -4196,6 +4196,462 @@
       "Automatización",
       "Visual",
       "Flujos"
+    ]
+  },
+  {
+    "id": "photoroom",
+    "name": "PhotoRoom",
+    "url": "https://photoroom.com",
+    "categories": [
+      "diseno"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con marca de agua. Pro: $10/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Elimina fondos de fotos y crea imágenes de producto profesionales con IA.",
+    "fullDescription": "PhotoRoom es una herramienta de edición de fotos con IA especializada en eliminar fondos, crear imágenes de producto para e-commerce y generar fondos profesionales automáticamente. Ideal para tiendas online, emprendedores y vendedores que necesitan fotos de producto atractivas sin contratar un fotógrafo.",
+    "useCases": [
+      "Eliminar fondos de fotos de productos",
+      "Crear imágenes profesionales para tiendas online",
+      "Generar fondos atractivos para catálogos",
+      "Editar fotos de producto en lote",
+      "Crear contenido visual para redes sociales"
+    ],
+    "howToStart": [
+      "Descarga la app o ve a photoroom.com",
+      "Sube la foto de tu producto",
+      "PhotoRoom elimina el fondo automáticamente",
+      "Elige un fondo nuevo o personaliza el diseño"
+    ],
+    "proTip": "Usa el modo por lotes para editar decenas de fotos de producto de una sola vez: ideal si tienes una tienda con muchos artículos.",
+    "pros": [
+      "Eliminación de fondos casi perfecta",
+      "Muy fácil de usar",
+      "Ideal para e-commerce y tiendas online"
+    ],
+    "cons": [
+      "Marca de agua en plan gratis",
+      "Funciones avanzadas requieren suscripción"
+    ],
+    "alternatives": [
+      "canva",
+      "adobe-firefly",
+      "clipdrop"
+    ],
+    "keywords": [
+      "fondo",
+      "producto",
+      "foto",
+      "eliminar",
+      "tienda",
+      "e-commerce",
+      "editar",
+      "imagen"
+    ],
+    "tags": [
+      "E-commerce",
+      "Edición de fotos",
+      "Fondos"
+    ]
+  },
+  {
+    "id": "clipdrop",
+    "name": "Clipdrop",
+    "url": "https://clipdrop.co",
+    "categories": [
+      "diseno"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Herramientas gratis limitadas. Pro: $9/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Suite de herramientas de IA para editar, limpiar y mejorar imágenes.",
+    "fullDescription": "Clipdrop es una suite de herramientas de edición de imágenes con IA creada por Stability AI. Incluye eliminación de fondos, borrado de objetos, mejora de resolución, rellenado generativo, reemplazo de fondos y generación de imágenes. Todo desde el navegador sin instalar nada.",
+    "useCases": [
+      "Eliminar objetos no deseados de fotos",
+      "Mejorar la resolución de imágenes",
+      "Reemplazar fondos de fotografías",
+      "Rellenar áreas de imágenes con IA generativa",
+      "Limpiar y retocar fotos rápidamente"
+    ],
+    "howToStart": [
+      "Ve a clipdrop.co y elige la herramienta que necesitas",
+      "Sube tu imagen",
+      "La IA procesa y edita automáticamente",
+      "Descarga el resultado en alta calidad"
+    ],
+    "proTip": "Usa 'Cleanup' para borrar objetos, personas o texto de cualquier foto: simplemente pinta sobre lo que quieres eliminar.",
+    "pros": [
+      "Muchas herramientas en un solo lugar",
+      "No requiere instalación",
+      "Resultados rápidos y de calidad"
+    ],
+    "cons": [
+      "Resolución limitada en plan gratis",
+      "Algunas herramientas son básicas comparadas con Photoshop"
+    ],
+    "alternatives": [
+      "photoroom",
+      "canva",
+      "adobe-firefly"
+    ],
+    "keywords": [
+      "editar",
+      "foto",
+      "eliminar",
+      "mejorar",
+      "resolución",
+      "fondo",
+      "limpiar",
+      "retocar"
+    ],
+    "tags": [
+      "Edición",
+      "Herramientas IA",
+      "Imágenes"
+    ]
+  },
+  {
+    "id": "playground-ai",
+    "name": "Playground AI",
+    "url": "https://playground.com",
+    "categories": [
+      "diseno"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "500 imágenes gratis/día. Pro: $15/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Plataforma gratuita para generar y editar imágenes con múltiples modelos de IA.",
+    "fullDescription": "Playground AI es una plataforma de generación de imágenes con IA que ofrece un plan gratuito muy generoso. Permite generar cientos de imágenes al día usando múltiples modelos, editar imágenes existentes con IA, y combinar generación con edición manual en un canvas intuitivo.",
+    "useCases": [
+      "Generar imágenes en grandes cantidades",
+      "Crear arte digital y conceptual",
+      "Editar fotos con herramientas de IA",
+      "Diseñar contenido para redes sociales",
+      "Experimentar con diferentes estilos artísticos"
+    ],
+    "howToStart": [
+      "Regístrate gratis en playground.com",
+      "Elige un modelo de generación",
+      "Escribe tu descripción o sube una imagen",
+      "Genera y edita directamente en el canvas"
+    ],
+    "proTip": "Playground ofrece 500 imágenes gratis al día: úsalo para experimentar con prompts antes de usar herramientas de pago como Midjourney.",
+    "pros": [
+      "Plan gratuito extremadamente generoso",
+      "Múltiples modelos disponibles",
+      "Canvas de edición integrado"
+    ],
+    "cons": [
+      "Calidad inferior a Midjourney",
+      "La interfaz puede ser confusa al inicio"
+    ],
+    "alternatives": [
+      "midjourney",
+      "leonardo-ai",
+      "ideogram"
+    ],
+    "keywords": [
+      "generar",
+      "imágenes",
+      "gratis",
+      "arte",
+      "modelos",
+      "editar",
+      "canvas",
+      "crear"
+    ],
+    "tags": [
+      "Generación de imágenes",
+      "Gratis",
+      "Multi-modelo"
+    ]
+  },
+  {
+    "id": "freepik-ai",
+    "name": "Freepik AI (Pikaso)",
+    "url": "https://freepik.com/pikaso",
+    "categories": [
+      "diseno"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Créditos gratis limitados. Premium: $9/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Generador de imágenes de Freepik con edición en tiempo real y banco de recursos.",
+    "fullDescription": "Freepik AI, a través de su herramienta Pikaso, permite generar imágenes con IA, editar fotos en tiempo real y acceder al enorme banco de recursos de Freepik. Combina la generación de imágenes con IA con millones de vectores, fotos e ilustraciones editables, creando una plataforma completa para diseñadores.",
+    "useCases": [
+      "Generar imágenes y vectores con IA",
+      "Editar diseños en tiempo real con bocetos",
+      "Acceder a millones de recursos de diseño",
+      "Crear ilustraciones personalizadas",
+      "Diseñar mockups y plantillas con IA"
+    ],
+    "howToStart": [
+      "Ve a freepik.com/pikaso",
+      "Describe la imagen que necesitas",
+      "Usa el editor en tiempo real para ajustar",
+      "Combina con recursos del banco de Freepik"
+    ],
+    "proTip": "Dibuja un boceto simple en Pikaso y escribe una descripción: la IA transforma tu boceto en una imagen profesional en tiempo real.",
+    "pros": [
+      "Integrado con el banco de Freepik",
+      "Edición en tiempo real",
+      "Buena relación calidad-precio"
+    ],
+    "cons": [
+      "Generación menos potente que Midjourney",
+      "Requiere suscripción para alta resolución"
+    ],
+    "alternatives": [
+      "canva",
+      "ideogram",
+      "playground-ai"
+    ],
+    "keywords": [
+      "freepik",
+      "generar",
+      "vector",
+      "diseño",
+      "ilustración",
+      "recurso",
+      "plantilla",
+      "imagen"
+    ],
+    "tags": [
+      "Banco de recursos",
+      "Diseño",
+      "Vectores"
+    ]
+  },
+  {
+    "id": "remove-bg",
+    "name": "Remove.bg",
+    "url": "https://remove.bg",
+    "categories": [
+      "diseno"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis en baja resolución. Desde $1.99 por imagen HD",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Elimina el fondo de cualquier imagen en 5 segundos con IA.",
+    "fullDescription": "Remove.bg es la herramienta más popular y rápida para eliminar fondos de imágenes con IA. Solo sube una foto y en segundos obtienes el resultado sin fondo, con bordes limpios incluso en cabello y objetos complejos. Ofrece API para integrar en aplicaciones y procesamiento por lotes.",
+    "useCases": [
+      "Eliminar fondos de fotos de personas",
+      "Crear fotos de producto sin fondo",
+      "Preparar imágenes para presentaciones",
+      "Procesar lotes de imágenes automáticamente",
+      "Integrar eliminación de fondos en apps vía API"
+    ],
+    "howToStart": [
+      "Ve a remove.bg",
+      "Sube tu imagen o pega una URL",
+      "El fondo se elimina automáticamente en segundos",
+      "Descarga el resultado o edita el fondo"
+    ],
+    "proTip": "Usa la API de Remove.bg para automatizar la eliminación de fondos: ideal si procesas muchas imágenes regularmente.",
+    "pros": [
+      "Resultados instantáneos y precisos",
+      "Funciona sin registro para uso básico",
+      "API disponible para automatización"
+    ],
+    "cons": [
+      "Alta resolución requiere pago",
+      "Solo hace una cosa: eliminar fondos"
+    ],
+    "alternatives": [
+      "photoroom",
+      "clipdrop",
+      "canva"
+    ],
+    "keywords": [
+      "fondo",
+      "eliminar",
+      "recortar",
+      "foto",
+      "transparente",
+      "producto",
+      "rápido",
+      "imagen"
+    ],
+    "tags": [
+      "Fondos",
+      "Rápido",
+      "API"
+    ]
+  },
+  {
+    "id": "recraft",
+    "name": "Recraft AI",
+    "url": "https://recraft.ai",
+    "categories": [
+      "diseno"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis con créditos. Pro: $20/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Genera imágenes, vectores e ilustraciones con control preciso de estilo y marca.",
+    "fullDescription": "Recraft AI es una plataforma de generación de imágenes con IA enfocada en el control creativo profesional. Permite generar imágenes, vectores SVG, iconos e ilustraciones manteniendo consistencia de estilo y colores de marca. Su modelo Recraft V3 es considerado uno de los mejores para diseño gráfico profesional.",
+    "useCases": [
+      "Generar vectores SVG e iconos con IA",
+      "Crear ilustraciones con estilo consistente",
+      "Diseñar elementos de marca visual",
+      "Generar mockups y material gráfico",
+      "Crear sets de iconos personalizados"
+    ],
+    "howToStart": [
+      "Regístrate en recraft.ai",
+      "Elige el tipo de imagen: raster, vector o ilustración",
+      "Escribe tu descripción y selecciona el estilo",
+      "Ajusta colores y parámetros de marca"
+    ],
+    "proTip": "Recraft es el único generador que crea vectores SVG reales: úsalo para iconos y logos que necesiten escalarse sin perder calidad.",
+    "pros": [
+      "Genera vectores SVG reales",
+      "Control de marca y colores",
+      "Excelente para diseño gráfico profesional"
+    ],
+    "cons": [
+      "Curva de aprendizaje para aprovecharlo al máximo",
+      "Menos conocido que la competencia"
+    ],
+    "alternatives": [
+      "midjourney",
+      "ideogram",
+      "adobe-firefly"
+    ],
+    "keywords": [
+      "vector",
+      "SVG",
+      "icono",
+      "diseño",
+      "marca",
+      "ilustración",
+      "gráfico",
+      "estilo"
+    ],
+    "tags": [
+      "Vectores",
+      "Diseño gráfico",
+      "SVG"
+    ]
+  },
+  {
+    "id": "flux",
+    "name": "Flux",
+    "url": "https://flux1.ai",
+    "categories": [
+      "diseno"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Modelo gratuito y open source. Versiones Pro desde $0.01 por imagen",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Modelo de generación de imágenes de última generación por Black Forest Labs.",
+    "fullDescription": "Flux es una familia de modelos de generación de imágenes creada por Black Forest Labs (fundadores de Stable Diffusion). Se ha convertido en el estándar de la industria por su calidad excepcional, especialmente en realismo fotográfico, coherencia de texto y fidelidad a las instrucciones. Disponible en versiones open source y Pro.",
+    "useCases": [
+      "Generar imágenes fotorrealistas de alta calidad",
+      "Crear imágenes con texto legible integrado",
+      "Generar arte conceptual y diseños",
+      "Producir imágenes comerciales para marketing",
+      "Usar como modelo base en aplicaciones propias"
+    ],
+    "howToStart": [
+      "Accede a través de plataformas como Replicate, fal.ai o Together",
+      "O descarga la versión open source para uso local",
+      "Escribe una descripción detallada de la imagen",
+      "Ajusta la resolución y parámetros de calidad"
+    ],
+    "proTip": "Flux es especialmente bueno siguiendo instrucciones complejas: describe exactamente lo que quieres con detalle y obtendrás resultados muy fieles.",
+    "pros": [
+      "Calidad de imagen excepcional",
+      "Versión open source disponible",
+      "Excelente con texto en imágenes"
+    ],
+    "cons": [
+      "Requiere usar plataformas de terceros o instalación local",
+      "Las versiones Pro tienen costo por imagen"
+    ],
+    "alternatives": [
+      "midjourney",
+      "stable-diffusion",
+      "dall-e"
+    ],
+    "keywords": [
+      "generar",
+      "imagen",
+      "fotorrealista",
+      "calidad",
+      "open source",
+      "texto",
+      "profesional",
+      "modelo"
+    ],
+    "tags": [
+      "Generación de imágenes",
+      "Open source",
+      "Fotorrealista"
+    ]
+  },
+  {
+    "id": "pixlr",
+    "name": "Pixlr",
+    "url": "https://pixlr.com",
+    "categories": [
+      "diseno"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con anuncios. Premium: $8/mes",
+    "difficulty": 1,
+    "rating": 3,
+    "shortDescription": "Editor de fotos online gratuito con herramientas de IA integradas.",
+    "fullDescription": "Pixlr es un editor de imágenes online gratuito que combina herramientas de edición tradicionales con funciones de IA. Permite editar fotos, eliminar fondos, aplicar efectos, generar imágenes con IA y retocar retratos. Funciona directamente en el navegador sin necesidad de instalar software pesado como Photoshop.",
+    "useCases": [
+      "Editar fotos sin instalar software",
+      "Eliminar fondos y objetos de imágenes",
+      "Aplicar filtros y efectos artísticos",
+      "Retocar retratos automáticamente",
+      "Crear diseños con plantillas predefinidas"
+    ],
+    "howToStart": [
+      "Ve a pixlr.com y elige Pixlr E (avanzado) o Pixlr X (rápido)",
+      "Sube tu imagen o empieza desde cero",
+      "Usa las herramientas de IA para editar",
+      "Descarga en el formato que necesites"
+    ],
+    "proTip": "Usa Pixlr E para edición avanzada tipo Photoshop y Pixlr X para ediciones rápidas: ambos son gratuitos y funcionan en el navegador.",
+    "pros": [
+      "Gratis y funciona en el navegador",
+      "Interfaz similar a Photoshop",
+      "No requiere instalación"
+    ],
+    "cons": [
+      "Anuncios en la versión gratuita",
+      "Menos potente que editores de escritorio"
+    ],
+    "alternatives": [
+      "canva",
+      "clipdrop",
+      "adobe-firefly"
+    ],
+    "keywords": [
+      "editar",
+      "foto",
+      "gratis",
+      "online",
+      "navegador",
+      "filtro",
+      "retocar",
+      "photoshop"
+    ],
+    "tags": [
+      "Editor online",
+      "Gratis",
+      "Fotos"
     ]
   }
 ]

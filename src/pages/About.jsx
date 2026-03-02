@@ -57,7 +57,7 @@ export default function About() {
         <ul className="space-y-2 text-text-light">
           <li className="flex items-start gap-2">
             <span className="text-accent">✓</span>
-            Más de 70 herramientas de IA curadas y verificadas
+            Más de 80 herramientas de IA curadas y verificadas
           </li>
           <li className="flex items-start gap-2">
             <span className="text-accent">✓</span>

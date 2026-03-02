@@ -11,7 +11,7 @@ export default function Hero({ query, onQueryChange, results }) {
       <div className="max-w-4xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-6">
           <Sparkles className="w-4 h-4" />
-          Más de 70 herramientas de IA
+          Más de 80 herramientas de IA
         </div>
 
         <h1 className="text-3xl md:text-5xl font-bold text-text mb-4 leading-tight">
