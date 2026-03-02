@@ -1,0 +1,4201 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "url": "https://chat.openai.com",
+    "categories": [
+      "escritura",
+      "investigación",
+      "chatbots",
+      "educación"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites. Plus: $20/mes",
+    "difficulty": 1,
+    "rating": 5,
+    "shortDescription": "Asistente conversacional de OpenAI para escribir, investigar, programar y más.",
+    "fullDescription": "ChatGPT es el chatbot de inteligencia artificial más popular del mundo. Desarrollado por OpenAI, permite mantener conversaciones naturales para resolver dudas, redactar textos, generar código, analizar documentos y mucho más. Su interfaz es simple e intuitiva, ideal tanto para principiantes como para usuarios avanzados.",
+    "useCases": [
+      "Redactar correos, informes y documentos",
+      "Resolver dudas complejas con explicaciones claras",
+      "Generar código en multiples lenguajes",
+      "Resumir documentos largos",
+      "Preparar clases o contenido educativo"
+    ],
+    "howToStart": [
+      "Ve a chat.openai.com y crea una cuenta gratuita",
+      "Escribe tu pregunta o instrucción en el chat",
+      "Se específico: entre más contexto des, mejor respuesta obtienes",
+      "Usa Proyectos para organizar conversaciones por tema"
+    ],
+    "proTip": "Usa instrucciones personalizadas (Custom Instructions) para que ChatGPT siempre sepa tu contexto profesional y estilo preferido.",
+    "pros": [
+      "Muy versatil y fácil de usar",
+      "Interfaz simple e intuitiva",
+      "Plugins y GPTs personalizados"
+    ],
+    "cons": [
+      "Puede inventar información",
+      "La versión gratis tiene límites de uso"
+    ],
+    "alternatives": [
+      "claude",
+      "gemini",
+      "perplexity"
+    ],
+    "keywords": [
+      "chat",
+      "escribir",
+      "preguntar",
+      "asistente",
+      "redactar",
+      "investigar",
+      "código",
+      "resumir"
+    ],
+    "tags": [
+      "IA generativa",
+      "NLP",
+      "Multimodal"
+    ]
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "url": "https://claude.ai",
+    "categories": [
+      "escritura",
+      "investigación",
+      "chatbots",
+      "programación"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites. Pro: $20/mes",
+    "difficulty": 1,
+    "rating": 5,
+    "shortDescription": "Asistente de Anthropic especializado en análisis largo, escritura y programación.",
+    "fullDescription": "Claude es el asistente de IA de Anthropic, conocido por su capacidad de procesar documentos muy largos, generar texto de alta calidad y programar con precision. Destaca por ser más cauteloso y preciso que otros chatbots, con un enfoque en seguridad y utilidad.",
+    "useCases": [
+      "Analizar documentos largos de hasta 200 páginas",
+      "Escribir textos creativos y profesionales",
+      "Programar y depurar código",
+      "Resumir investigaciones academicas",
+      "Crear estrategias de negocio detalladas"
+    ],
+    "howToStart": [
+      "Ve a claude.ai y crea una cuenta",
+      "Escribe tu consulta o sube un documento",
+      "Para mejores resultados, da contexto detallado",
+      "Usa Proyectos para agrupar conversaciones relacionadas"
+    ],
+    "proTip": "Claude puede leer archivos PDF completos. Sube documentos largos y pídele que los analice, resuma o extraiga datos específicos.",
+    "pros": [
+      "Excelente para textos largos y análisis",
+      "Muy preciso y cauteloso con la información",
+      "Gran capacidad de programación"
+    ],
+    "cons": [
+      "Menos plugins que ChatGPT",
+      "No genera imágenes directamente"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "gemini",
+      "perplexity"
+    ],
+    "keywords": [
+      "chat",
+      "escribir",
+      "analizar",
+      "documentos",
+      "programar",
+      "asistente",
+      "investigar",
+      "resumir"
+    ],
+    "tags": [
+      "IA generativa",
+      "NLP",
+      "Análisis de documentos"
+    ]
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "url": "https://gemini.google.com",
+    "categories": [
+      "chatbots",
+      "investigación",
+      "escritura"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis. Advanced: $20/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Asistente de Google con acceso a búsqueda en tiempo real e integración con Google.",
+    "fullDescription": "Gemini es el asistente de IA de Google que combina capacidades conversacionales con acceso directo a la búsqueda de Google y sus servicios. Puede buscar información actualizada, generar texto, analizar imágenes y conectarse con Gmail, Drive y otros productos de Google.",
+    "useCases": [
+      "Buscar información actualizada en tiempo real",
+      "Analizar imágenes y fotos",
+      "Redactar emails y documentos",
+      "Integrar con Google Workspace",
+      "Planificar viajes e itinerarios"
+    ],
+    "howToStart": [
+      "Ve a gemini.google.com e inicia sesion con tu cuenta de Google",
+      "Escribe tu pregunta o sube una imagen",
+      "Activa las extensiones para conectar con Gmail y Drive",
+      "Prueba la generación de imágenes integrada"
+    ],
+    "proTip": "Conecta las extensiones de Google para que Gemini pueda buscar en tu Gmail, Drive y Maps directamente desde el chat.",
+    "pros": [
+      "Integración nativa con Google",
+      "Información actualizada en tiempo real",
+      "Generación de imágenes incluida"
+    ],
+    "cons": [
+      "Menos preciso en tareas complejas",
+      "Disponibilidad limitada en algunos paises"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "copilot"
+    ],
+    "keywords": [
+      "google",
+      "buscar",
+      "asistente",
+      "chat",
+      "imágenes",
+      "email",
+      "investigar",
+      "actualizado"
+    ],
+    "tags": [
+      "IA generativa",
+      "Google",
+      "Multimodal"
+    ]
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "url": "https://perplexity.ai",
+    "categories": [
+      "investigación",
+      "chatbots"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites. Pro: $20/mes",
+    "difficulty": 1,
+    "rating": 5,
+    "shortDescription": "Motor de búsqueda con IA que da respuestas con fuentes verificables.",
+    "fullDescription": "Perplexity es un motor de búsqueda potenciado por IA que responde preguntas citando fuentes verificables. A diferencia de los chatbots tradicionales, cada respuesta incluye enlaces a las fuentes originales, permitiendo verificar la información. Es ideal para investigación y consultas que requieren datos precisos y actualizados.",
+    "useCases": [
+      "Investigar temas con fuentes citadas",
+      "Obtener respuestas actualizadas sobre cualquier tema",
+      "Comparar productos o servicios",
+      "Investigación académica con referencias",
+      "Analizar noticias y tendencias actuales"
+    ],
+    "howToStart": [
+      "Ve a perplexity.ai y crea una cuenta",
+      "Escribe tu pregunta como si buscaras en Google",
+      "Revisa las fuentes citadas para verificar la información",
+      "Usa Focus para filtrar por tipo de fuente"
+    ],
+    "proTip": "Usa el modo Pro Search para investigaciones profundas: Perplexity te hara preguntas de seguimiento para refinar la búsqueda.",
+    "pros": [
+      "Siempre cita fuentes verificables",
+      "Información actualizada en tiempo real",
+      "Interfaz limpia y enfocada"
+    ],
+    "cons": [
+      "Menos creativo que otros chatbots",
+      "Funciones Pro limitadas en plan gratis"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "gemini",
+      "consensus"
+    ],
+    "keywords": [
+      "buscar",
+      "investigar",
+      "fuentes",
+      "verificar",
+      "noticias",
+      "académico",
+      "consultar",
+      "datos"
+    ],
+    "tags": [
+      "Búsqueda IA",
+      "Investigación",
+      "Verificacion"
+    ]
+  },
+  {
+    "id": "copilot",
+    "name": "Microsoft Copilot",
+    "url": "https://copilot.microsoft.com",
+    "categories": [
+      "chatbots",
+      "escritura",
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis. Copilot Pro: $20/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Asistente de Microsoft integrado con Windows, Edge y Office 365.",
+    "fullDescription": "Microsoft Copilot es el asistente de IA de Microsoft que se integra con Windows, el navegador Edge y las aplicaciones de Office 365. Permite generar texto, imágenes, analizar documentos y automatizar tareas dentro del ecosistema Microsoft. Es especialmente útil para quienes ya usan Word, Excel y PowerPoint.",
+    "useCases": [
+      "Crear documentos en Word con IA",
+      "Analizar datos en Excel automáticamente",
+      "Generar presentaciones en PowerPoint",
+      "Buscar información desde el navegador Edge",
+      "Resumir correos en Outlook"
+    ],
+    "howToStart": [
+      "Ve a copilot.microsoft.com o abrelo desde Edge",
+      "Inicia sesion con tu cuenta de Microsoft",
+      "Escribe tu consulta o instrucción",
+      "Para Office, necesitas suscripción Microsoft 365 Copilot"
+    ],
+    "proTip": "Si usas Microsoft 365, activa Copilot en Word para que te ayude a redactar y editar documentos directamente.",
+    "pros": [
+      "Integración perfecta con Microsoft Office",
+      "Genera imágenes gratis con DALL-E",
+      "Disponible en Windows directamente"
+    ],
+    "cons": [
+      "Menos potente que ChatGPT en conversaciones complejas",
+      "La integración completa con Office requiere pago adicional"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "gemini",
+      "claude"
+    ],
+    "keywords": [
+      "microsoft",
+      "office",
+      "word",
+      "excel",
+      "windows",
+      "asistente",
+      "productividad",
+      "edge"
+    ],
+    "tags": [
+      "Microsoft",
+      "Productividad",
+      "Office"
+    ]
+  },
+  {
+    "id": "poe",
+    "name": "Poe",
+    "url": "https://poe.com",
+    "categories": [
+      "chatbots"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites. Suscripción: $20/mes",
+    "difficulty": 1,
+    "rating": 3,
+    "shortDescription": "Plataforma que da acceso a multiples chatbots de IA en un solo lugar.",
+    "fullDescription": "Poe es una plataforma creada por Quora que permite acceder a multiples modelos de IA desde una sola interfaz. Puedes chatear con ChatGPT, Claude, Gemini y otros modelos sin necesidad de crear cuentas separadas. También permite crear bots personalizados.",
+    "useCases": [
+      "Probar diferentes modelos de IA sin multiples cuentas",
+      "Comparar respuestas entre diferentes chatbots",
+      "Crear bots personalizados para tareas específicas",
+      "Acceder a modelos de IA de última generación"
+    ],
+    "howToStart": [
+      "Ve a poe.com y crea una cuenta",
+      "Elige el modelo de IA que quieres usar",
+      "Escribe tu consulta y compara respuestas",
+      "Explora los bots creados por la comunidad"
+    ],
+    "proTip": "Usa Poe para comparar la misma pregunta en diferentes modelos y quedarte con la mejor respuesta.",
+    "pros": [
+      "Acceso a multiples modelos en un lugar",
+      "Fácil de usar",
+      "Bots personalizados de la comunidad"
+    ],
+    "cons": [
+      "Los límites gratuitos son bajos",
+      "Algunos modelos premium requieren suscripción"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "gemini"
+    ],
+    "keywords": [
+      "chatbot",
+      "multiples",
+      "modelos",
+      "comparar",
+      "bot",
+      "plataforma",
+      "IA",
+      "probar"
+    ],
+    "tags": [
+      "Agregador",
+      "Chatbots",
+      "Multi-modelo"
+    ]
+  },
+  {
+    "id": "meta-ai",
+    "name": "Meta AI",
+    "url": "https://meta.ai",
+    "categories": [
+      "chatbots",
+      "escritura"
+    ],
+    "pricing": "gratis",
+    "pricingDetail": "Completamente gratis",
+    "difficulty": 1,
+    "rating": 3,
+    "shortDescription": "Asistente gratuito de Meta disponible en WhatsApp, Instagram y Facebook.",
+    "fullDescription": "Meta AI es el asistente de inteligencia artificial de Meta, disponible de forma gratuita en WhatsApp, Instagram, Facebook y Messenger. Permite hacer preguntas, generar imágenes y obtener ayuda con tareas cotidianas directamente desde las apps que ya usas a diario.",
+    "useCases": [
+      "Resolver dudas rapidas desde WhatsApp",
+      "Generar imágenes con texto",
+      "Obtener recomendaciones de restaurantes o viajes",
+      "Ayuda con redacción de mensajes",
+      "Buscar información sin salir de redes sociales"
+    ],
+    "howToStart": [
+      "Abre WhatsApp, Instagram o Facebook",
+      "Busca Meta AI en los chats o usa @Meta AI en grupos",
+      "Escribe tu pregunta o pide una imagen",
+      "No necesitas crear cuenta adicional"
+    ],
+    "proTip": "En WhatsApp, escribe @Meta AI en cualquier grupo para obtener respuestas sin salir de la conversación.",
+    "pros": [
+      "Completamente gratis",
+      "Integrado en apps que ya usas",
+      "Genera imágenes sin costo"
+    ],
+    "cons": [
+      "Menos potente que ChatGPT o Claude",
+      "No disponible en todos los paises"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "gemini",
+      "copilot"
+    ],
+    "keywords": [
+      "whatsapp",
+      "gratis",
+      "meta",
+      "facebook",
+      "instagram",
+      "chat",
+      "imágenes",
+      "asistente"
+    ],
+    "tags": [
+      "Meta",
+      "Redes sociales",
+      "Gratis"
+    ]
+  },
+  {
+    "id": "mistral",
+    "name": "Mistral Le Chat",
+    "url": "https://chat.mistral.ai",
+    "categories": [
+      "chatbots",
+      "programación"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis. Planes empresariales disponibles",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Chatbot europeo de código abierto con gran rendimiento en programación.",
+    "fullDescription": "Mistral Le Chat es el asistente conversacional de Mistral AI, una empresa francesa lider en IA de código abierto. Destaca por su rendimiento en tareas de programación y razonamiento logico, con modelos que compiten con los mejores del mercado manteniendo un enfoque en privacidad y transparencia.",
+    "useCases": [
+      "Programar y depurar código",
+      "Análisis de datos y razonamiento logico",
+      "Redacción de textos técnicos",
+      "Consultas sobre tecnología y ciencia",
+      "Procesamiento de documentos en multiples idiomas"
+    ],
+    "howToStart": [
+      "Ve a chat.mistral.ai y crea una cuenta",
+      "Selecciona el modelo que deseas usar",
+      "Escribe tu consulta técnica o pregunta",
+      "Explora los diferentes modelos disponibles"
+    ],
+    "proTip": "Mistral destaca en tareas de código: usa sus modelos especializados para programación y obten respuestas más precisas que con chatbots generalistas.",
+    "pros": [
+      "Excelente para programación",
+      "Código abierto y transparente",
+      "Modelos europeos con enfoque en privacidad"
+    ],
+    "cons": [
+      "Interfaz menos pulida que competidores",
+      "Menos conocido entre usuarios no técnicos"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "github-copilot"
+    ],
+    "keywords": [
+      "programar",
+      "código",
+      "abierto",
+      "europeo",
+      "técnico",
+      "chat",
+      "desarrollador",
+      "logica"
+    ],
+    "tags": [
+      "Open source",
+      "Programación",
+      "IA europea"
+    ]
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "url": "https://jasper.ai",
+    "categories": [
+      "escritura",
+      "negocios"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Desde $49/mes. Prueba gratuita de 7 días",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Plataforma de escritura con IA para equipos de marketing y contenido.",
+    "fullDescription": "Jasper es una plataforma de escritura con IA diseñada especificamente para equipos de marketing y negocios. Ofrece plantillas especializadas para crear contenido de marca, desde posts para redes sociales hasta articulos de blog, emails de marketing y textos publicitarios, manteniendo el tono de voz de tu marca.",
+    "useCases": [
+      "Crear contenido de marketing y publicidad",
+      "Escribir articulos de blog optimizados para SEO",
+      "Generar textos para redes sociales",
+      "Crear emails de campanas de marketing",
+      "Redactar descripciones de productos"
+    ],
+    "howToStart": [
+      "Ve a jasper.ai y registrate para la prueba gratuita",
+      "Configura tu marca: tono de voz, audiencia y estilo",
+      "Elige una plantilla segun el tipo de contenido",
+      "Escribe un brief y deja que Jasper genere el texto"
+    ],
+    "proTip": "Configura la 'Voz de Marca' en Jasper para que todo el contenido generado mantenga el tono y estilo de tu empresa automáticamente.",
+    "pros": [
+      "Plantillas especializadas para marketing",
+      "Mantiene consistencia de marca",
+      "Ideal para equipos de contenido"
+    ],
+    "cons": [
+      "Precio elevado para uso individual",
+      "Requiere configuración inicial para mejores resultados"
+    ],
+    "alternatives": [
+      "copy-ai",
+      "writesonic",
+      "chatgpt"
+    ],
+    "keywords": [
+      "marketing",
+      "contenido",
+      "marca",
+      "escribir",
+      "blog",
+      "redes",
+      "publicidad",
+      "SEO"
+    ],
+    "tags": [
+      "Marketing",
+      "Escritura",
+      "Contenido"
+    ]
+  },
+  {
+    "id": "copy-ai",
+    "name": "Copy.ai",
+    "url": "https://copy.ai",
+    "categories": [
+      "escritura",
+      "negocios"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis limitado. Pro: $49/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Generador de textos de marketing, emails y contenido para redes sociales.",
+    "fullDescription": "Copy.ai es una herramienta de generación de texto enfocada en marketing y ventas. Con plantillas predefinidas para docenas de casos de uso, facilita la creación rápida de textos publicitarios, emails de venta, posts para redes sociales y descripciones de productos sin necesidad de ser un escritor experto.",
+    "useCases": [
+      "Generar textos publicitarios y de ventas",
+      "Crear posts para redes sociales",
+      "Escribir emails de marketing efectivos",
+      "Crear descripciones de productos",
+      "Generar ideas de contenido"
+    ],
+    "howToStart": [
+      "Registrate gratis en copy.ai",
+      "Elige una plantilla segun lo que necesitas escribir",
+      "Describe tu producto o servicio brevemente",
+      "Genera multiples opciones y elige la mejor"
+    ],
+    "proTip": "Genera siempre 3 o 4 versiones de cada texto y combina las mejores partes de cada una para un resultado optimo.",
+    "pros": [
+      "Plan gratis disponible",
+      "Plantillas faciles de usar",
+      "Rápido para generar variaciones"
+    ],
+    "cons": [
+      "Textos pueden sonar genericos",
+      "Plan gratis muy limitado"
+    ],
+    "alternatives": [
+      "jasper",
+      "writesonic",
+      "rytr"
+    ],
+    "keywords": [
+      "copiar",
+      "texto",
+      "marketing",
+      "ventas",
+      "redes",
+      "email",
+      "publicidad",
+      "generar"
+    ],
+    "tags": [
+      "Copywriting",
+      "Marketing",
+      "Ventas"
+    ]
+  },
+  {
+    "id": "writesonic",
+    "name": "Writesonic",
+    "url": "https://writesonic.com",
+    "categories": [
+      "escritura",
+      "negocios"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis limitado. Pro desde $20/mes",
+    "difficulty": 2,
+    "rating": 3,
+    "shortDescription": "Plataforma de escritura con IA para blogs, anuncios y contenido web.",
+    "fullDescription": "Writesonic es una plataforma de escritura con IA que ayuda a crear contenido para blogs, anuncios publicitarios, páginas web y redes sociales. Incluye herramientas de SEO integradas y un editor de articulos que genera textos largos y optimizados para buscadores.",
+    "useCases": [
+      "Escribir articulos de blog largos",
+      "Crear textos para anuncios de Google y Facebook",
+      "Generar contenido para landing pages",
+      "Escribir descripciones de productos para e-commerce",
+      "Crear titulares y meta descripciones SEO"
+    ],
+    "howToStart": [
+      "Registrate en writesonic.com",
+      "Selecciona el tipo de contenido a crear",
+      "Proporciona el tema y palabras clave",
+      "Revisa y edita el texto generado"
+    ],
+    "proTip": "Usa el Article Writer para crear articulos largos: dale un titulo y palabras clave, y genera articulos completos de más de 1500 palabras.",
+    "pros": [
+      "Herramientas SEO integradas",
+      "Bueno para articulos largos",
+      "Precio competitivo"
+    ],
+    "cons": [
+      "Calidad variable segun el idioma",
+      "Interfaz puede ser confusa al inicio"
+    ],
+    "alternatives": [
+      "jasper",
+      "copy-ai",
+      "rytr"
+    ],
+    "keywords": [
+      "blog",
+      "articulo",
+      "SEO",
+      "anuncios",
+      "web",
+      "contenido",
+      "escribir",
+      "landing"
+    ],
+    "tags": [
+      "SEO",
+      "Blogs",
+      "Contenido web"
+    ]
+  },
+  {
+    "id": "grammarly",
+    "name": "Grammarly",
+    "url": "https://grammarly.com",
+    "categories": [
+      "escritura",
+      "traducción"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis básico. Premium: $12/mes",
+    "difficulty": 1,
+    "rating": 5,
+    "shortDescription": "Corrector gramatical y de estilo con IA para escribir mejor en ingles y otros idiomas.",
+    "fullDescription": "Grammarly es el asistente de escritura más popular del mundo. Corrige errores gramaticales, mejora el estilo, sugiere vocabulario más preciso y adapta el tono segun la audiencia. Se integra con practicamente cualquier aplicación donde escribas, desde Gmail hasta Google Docs y redes sociales.",
+    "useCases": [
+      "Corregir errores gramaticales y ortograficos",
+      "Mejorar el tono y claridad de textos",
+      "Escribir emails profesionales sin errores",
+      "Revisar documentos académicos",
+      "Adaptar el estilo segun la audiencia"
+    ],
+    "howToStart": [
+      "Instala la extensión de Grammarly en tu navegador",
+      "Crea una cuenta gratuita",
+      "Empieza a escribir en cualquier sitio web y veras las sugerencias",
+      "Activa la revision de tono para ajustar tu estilo"
+    ],
+    "proTip": "Instala la extensión del navegador y el complemento de escritorio para que Grammarly te corrija en todas las aplicaciones automáticamente.",
+    "pros": [
+      "Se integra en todas partes",
+      "Correccion en tiempo real",
+      "Sugerencias de tono y estilo"
+    ],
+    "cons": [
+      "Mejor para ingles que para español",
+      "La versión gratuita es básica"
+    ],
+    "alternatives": [
+      "quillbot",
+      "wordtune",
+      "deepl"
+    ],
+    "keywords": [
+      "corregir",
+      "gramática",
+      "estilo",
+      "ingles",
+      "escribir",
+      "revisar",
+      "ortografía",
+      "email"
+    ],
+    "tags": [
+      "Correccion",
+      "Gramática",
+      "Estilo"
+    ]
+  },
+  {
+    "id": "quillbot",
+    "name": "QuillBot",
+    "url": "https://quillbot.com",
+    "categories": [
+      "escritura",
+      "traducción"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites. Premium: $10/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Herramienta para parafrasear, resumir y mejorar textos con IA.",
+    "fullDescription": "QuillBot es una herramienta de escritura con IA especializada en parafraseo y reescritura de textos. Permite reformular oraciones manteniendo el significado original, resumir textos largos, verificar gramática y traducir entre idiomas. Es muy popular entre estudiantes y profesionales.",
+    "useCases": [
+      "Parafrasear textos para evitar plagio",
+      "Resumir articulos y documentos largos",
+      "Mejorar la claridad de textos escritos",
+      "Traducir textos entre idiomas",
+      "Verificar gramática y estilo"
+    ],
+    "howToStart": [
+      "Ve a quillbot.com y usa la herramienta directamente",
+      "Pega el texto que quieres mejorar",
+      "Elige el modo de parafraseo: estandar, fluido, formal, etc.",
+      "Instala la extensión del navegador para usarlo en cualquier sitio"
+    ],
+    "proTip": "Usa el modo 'Formal' para convertir textos casuales en escritura profesional de un solo clic.",
+    "pros": [
+      "Excelente para parafrasear",
+      "Multiples modos de reescritura",
+      "Versión gratuita funcional"
+    ],
+    "cons": [
+      "Límite de caracteres en plan gratis",
+      "Menos útil para crear contenido desde cero"
+    ],
+    "alternatives": [
+      "grammarly",
+      "wordtune",
+      "chatgpt"
+    ],
+    "keywords": [
+      "parafrasear",
+      "resumir",
+      "reescribir",
+      "mejorar",
+      "texto",
+      "plagio",
+      "traducir",
+      "estudiante"
+    ],
+    "tags": [
+      "Parafraseo",
+      "Escritura",
+      "Académico"
+    ]
+  },
+  {
+    "id": "rytr",
+    "name": "Rytr",
+    "url": "https://rytr.me",
+    "categories": [
+      "escritura"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis: 10K caracteres/mes. Pro: $9/mes",
+    "difficulty": 1,
+    "rating": 3,
+    "shortDescription": "Asistente de escritura economico para crear contenido rápido.",
+    "fullDescription": "Rytr es una herramienta de escritura con IA accesible y economica, diseñada para generar contenido rápidamente. Ofrece más de 40 plantillas para diferentes tipos de contenido, desde emails hasta publicaciones de blog, con soporte para más de 30 idiomas incluido el español.",
+    "useCases": [
+      "Crear borradores rapidos de contenido",
+      "Escribir emails y mensajes profesionales",
+      "Generar ideas para publicaciones de blog",
+      "Crear descripciones de productos",
+      "Escribir perfiles de LinkedIn y CV"
+    ],
+    "howToStart": [
+      "Registrate gratis en rytr.me",
+      "Elige el idioma y tono de escritura",
+      "Selecciona una plantilla y describe lo que necesitas",
+      "Edita y refina el texto generado"
+    ],
+    "proTip": "Rytr es ideal para borradores rapidos: genera el contenido base y luego personalizalo con tu toque personal.",
+    "pros": [
+      "Muy economico",
+      "Fácil de usar para principiantes",
+      "Soporte para muchos idiomas"
+    ],
+    "cons": [
+      "Calidad de texto inferior a competidores premium",
+      "Límite bajo en plan gratis"
+    ],
+    "alternatives": [
+      "copy-ai",
+      "writesonic",
+      "jasper"
+    ],
+    "keywords": [
+      "escribir",
+      "contenido",
+      "economico",
+      "rápido",
+      "plantilla",
+      "email",
+      "blog",
+      "generar"
+    ],
+    "tags": [
+      "Escritura",
+      "Economico",
+      "Plantillas"
+    ]
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "url": "https://notion.so",
+    "categories": [
+      "escritura",
+      "productividad"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "$10/mes adicional a la suscripción de Notion",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "IA integrada en Notion para escribir, resumir y organizar información.",
+    "fullDescription": "Notion AI es la inteligencia artificial integrada directamente en Notion, la popular herramienta de productividad. Permite generar textos, resumir notas, crear tablas, traducir contenido y mejorar la escritura sin salir de tu espacio de trabajo. Ideal para quienes ya usan Notion para organizar su trabajo.",
+    "useCases": [
+      "Resumir notas de reuniones",
+      "Generar borradores de documentos",
+      "Crear tablas y bases de datos con IA",
+      "Traducir contenido dentro de Notion",
+      "Mejorar y expandir textos existentes"
+    ],
+    "howToStart": [
+      "Necesitas tener una cuenta de Notion",
+      "Activa Notion AI desde la configuración",
+      "Usa el comando '/' y selecciona 'Pedir a la IA'",
+      "Escribe instrucciones sobre lo que necesitas"
+    ],
+    "proTip": "Selecciona cualquier texto en Notion y usa 'Pedir a la IA' para resumirlo, traducirlo o mejorarlo al instante.",
+    "pros": [
+      "Integrado donde ya trabajas",
+      "Excelente para organizar información",
+      "Resumenes automáticos de notas"
+    ],
+    "cons": [
+      "Requiere suscripción adicional a Notion",
+      "Solo funciona dentro de Notion"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "grammarly"
+    ],
+    "keywords": [
+      "notion",
+      "notas",
+      "organizar",
+      "resumir",
+      "productividad",
+      "documentos",
+      "escribir",
+      "trabajo"
+    ],
+    "tags": [
+      "Productividad",
+      "Notion",
+      "Organizacion"
+    ]
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "url": "https://midjourney.com",
+    "categories": [
+      "diseño"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Desde $10/mes. Sin plan gratuito",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Generador de imágenes por IA con calidad artistica excepcional.",
+    "fullDescription": "Midjourney es considerado el mejor generador de imágenes con IA del mercado. Crea ilustraciones, fotos realistas, arte conceptual y disenos con una calidad visual impresionante. Funciona a traves de Discord o su sitio web, usando descripciones de texto para generar imágenes unicas.",
+    "useCases": [
+      "Crear arte conceptual y disenos originales",
+      "Generar imágenes para redes sociales",
+      "Diseñar mockups y prototipos visuales",
+      "Crear ilustraciones para presentaciones",
+      "Generar fondos y texturas para proyectos"
+    ],
+    "howToStart": [
+      "Ve a midjourney.com y crea una cuenta",
+      "Accede al canal de Discord de Midjourney",
+      "Escribe /imagine seguido de tu descripción",
+      "Ajusta y varia los resultados generados"
+    ],
+    "proTip": "Agrega referencias de estilo como 'estilo acuarela' o 'fotografía editorial' para obtener resultados más específicos y profesionales.",
+    "pros": [
+      "Calidad visual superior a la competencia",
+      "Estilos artisticos muy variados",
+      "Comunidad activa con ejemplos"
+    ],
+    "cons": [
+      "No tiene plan gratuito",
+      "Requiere aprender a escribir prompts efectivos"
+    ],
+    "alternatives": [
+      "dall-e",
+      "ideogram",
+      "leonardo-ai"
+    ],
+    "keywords": [
+      "imágenes",
+      "arte",
+      "diseño",
+      "ilustracion",
+      "generar",
+      "visual",
+      "creativo",
+      "foto"
+    ],
+    "tags": [
+      "Generación de imágenes",
+      "Arte",
+      "Diseño"
+    ]
+  },
+  {
+    "id": "dall-e",
+    "name": "DALL-E 3",
+    "url": "https://openai.com/dall-e-3",
+    "categories": [
+      "diseño"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Incluido en ChatGPT Plus ($20/mes). Creditos gratis limitados",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Generador de imágenes de OpenAI integrado en ChatGPT.",
+    "fullDescription": "DALL-E 3 es el generador de imágenes de OpenAI, integrado directamente en ChatGPT. Permite crear imágenes a partir de descripciones en lenguaje natural con resultados muy fieles a lo que describes. Es especialmente bueno para seguir instrucciones detalladas y generar texto dentro de las imágenes.",
+    "useCases": [
+      "Crear imágenes a partir de descripciones detalladas",
+      "Generar logos e iconos simples",
+      "Crear ilustraciones para presentaciones",
+      "Diseñar mockups rapidos",
+      "Generar imágenes con texto legible"
+    ],
+    "howToStart": [
+      "Accede a ChatGPT en chat.openai.com",
+      "Pide que genere una imagen describiendo lo que quieres",
+      "Se lo más descriptivo posible",
+      "Pide ajustes sobre la imagen generada en la misma conversación"
+    ],
+    "proTip": "DALL-E 3 entiende instrucciones en lenguaje natural mejor que otros: describe la imagen como si se la explicaras a una persona.",
+    "pros": [
+      "Integrado en ChatGPT",
+      "Excelente siguiendo instrucciones detalladas",
+      "Genera texto en imágenes correctamente"
+    ],
+    "cons": [
+      "Estilo visual más limitado que Midjourney",
+      "Límites de generación por día"
+    ],
+    "alternatives": [
+      "midjourney",
+      "ideogram",
+      "canva"
+    ],
+    "keywords": [
+      "imágenes",
+      "generar",
+      "crear",
+      "dibujar",
+      "ilustracion",
+      "logo",
+      "diseño",
+      "visual"
+    ],
+    "tags": [
+      "Generación de imágenes",
+      "OpenAI",
+      "Diseño"
+    ]
+  },
+  {
+    "id": "ideogram",
+    "name": "Ideogram",
+    "url": "https://ideogram.ai",
+    "categories": [
+      "diseño"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis: 10 imágenes/día. Plus: $8/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Generador de imágenes con IA especializado en texto y tipografía.",
+    "fullDescription": "Ideogram es un generador de imágenes con IA que se destaca por su capacidad de incluir texto legible y tipografía dentro de las imágenes. Es excelente para crear logos, posters, tarjetas y cualquier diseño que necesite combinar imágenes con texto de forma atractiva.",
+    "useCases": [
+      "Crear logos y disenos con texto",
+      "Generar posters y banners",
+      "Diseñar tarjetas de presentación",
+      "Crear contenido visual para redes sociales",
+      "Generar disenos tipograficos creativos"
+    ],
+    "howToStart": [
+      "Registrate gratis en ideogram.ai",
+      "Describe la imagen que quieres crear",
+      "Específica el texto que debe aparecer en la imagen",
+      "Elige entre los resultados y descarga"
+    ],
+    "proTip": "Ideogram es el mejor para imágenes con texto: ponlo entre comillas en tu descripción para que aparezca exactamente como lo escribes.",
+    "pros": [
+      "El mejor para texto en imágenes",
+      "Plan gratis generoso",
+      "Resultados rapidos y de calidad"
+    ],
+    "cons": [
+      "Menos versatil en estilos artisticos",
+      "Comunidad más pequeña que Midjourney"
+    ],
+    "alternatives": [
+      "dall-e",
+      "midjourney",
+      "canva"
+    ],
+    "keywords": [
+      "texto",
+      "tipografía",
+      "logo",
+      "poster",
+      "banner",
+      "diseño",
+      "imagen",
+      "tarjeta"
+    ],
+    "tags": [
+      "Tipografía",
+      "Diseño grafico",
+      "Logos"
+    ]
+  },
+  {
+    "id": "leonardo-ai",
+    "name": "Leonardo AI",
+    "url": "https://leonardo.ai",
+    "categories": [
+      "diseño"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "150 creditos gratis/día. Planes desde $12/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Plataforma de generación de imágenes con modelos personalizables.",
+    "fullDescription": "Leonardo AI es una plataforma de generación de imágenes que ofrece multiples modelos de IA y herramientas de edición avanzadas. Permite crear imágenes, entrenar modelos personalizados con tu propio estilo y editar imágenes existentes. Es popular entre diseñadores de videojuegos y artistas digitales.",
+    "useCases": [
+      "Generar arte para videojuegos y apps",
+      "Crear personajes e ilustraciones consistentes",
+      "Editar y mejorar imágenes existentes",
+      "Entrenar modelos con tu propio estilo",
+      "Generar texturas y assets para diseño"
+    ],
+    "howToStart": [
+      "Registrate gratis en leonardo.ai",
+      "Explora los modelos disponibles",
+      "Escribe tu descripción y ajusta los parametros",
+      "Usa las herramientas de edición para refinar"
+    ],
+    "proTip": "Entrena un modelo personalizado con tus propias imágenes para generar contenido que mantenga un estilo visual consistente.",
+    "pros": [
+      "Multiples modelos disponibles",
+      "Herramientas de edición integradas",
+      "Creditos gratis diarios"
+    ],
+    "cons": [
+      "Interfaz compleja para principiantes",
+      "Requiere conocimiento de parametros"
+    ],
+    "alternatives": [
+      "midjourney",
+      "stable-diffusion",
+      "krea-ai"
+    ],
+    "keywords": [
+      "imágenes",
+      "arte",
+      "videojuegos",
+      "personajes",
+      "textura",
+      "modelos",
+      "generar",
+      "diseño"
+    ],
+    "tags": [
+      "Arte digital",
+      "Videojuegos",
+      "Modelos IA"
+    ]
+  },
+  {
+    "id": "canva",
+    "name": "Canva Magic Studio",
+    "url": "https://canva.com",
+    "categories": [
+      "diseño",
+      "presentaciones"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites. Pro: $13/mes",
+    "difficulty": 1,
+    "rating": 5,
+    "shortDescription": "Plataforma de diseño todo en uno con herramientas de IA integradas.",
+    "fullDescription": "Canva es la plataforma de diseño más popular del mundo, ahora potenciada con Magic Studio, su suite de herramientas de IA. Permite crear disenos profesionales sin experiencia: presentaciones, posts para redes, logos, videos y más. La IA ayuda a generar imágenes, remover fondos, redactar textos y crear disenos automáticamente.",
+    "useCases": [
+      "Crear disenos para redes sociales",
+      "Hacer presentaciones profesionales",
+      "Diseñar logos y materiales de marca",
+      "Crear videos cortos con plantillas",
+      "Editar fotos: quitar fondos, redimensionar, mejorar"
+    ],
+    "howToStart": [
+      "Registrate gratis en canva.com",
+      "Elige una plantilla o empieza desde cero",
+      "Usa Magic Studio para generar imágenes o texto con IA",
+      "Descarga o comparte tu diseño directamente"
+    ],
+    "proTip": "Usa 'Magic Resize' para adaptar un mismo diseño a multiples formatos de redes sociales en un clic.",
+    "pros": [
+      "Extremadamente fácil de usar",
+      "Miles de plantillas profesionales",
+      "Herramientas de IA integradas"
+    ],
+    "cons": [
+      "Funciones premium requieren suscripción",
+      "Disenos pueden verse genericos si usas plantillas populares"
+    ],
+    "alternatives": [
+      "adobe-firefly",
+      "gamma",
+      "dall-e"
+    ],
+    "keywords": [
+      "diseño",
+      "plantilla",
+      "redes",
+      "logo",
+      "presentación",
+      "fácil",
+      "rápido",
+      "profesional"
+    ],
+    "tags": [
+      "Diseño",
+      "Plantillas",
+      "Todo en uno"
+    ]
+  },
+  {
+    "id": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "url": "https://firefly.adobe.com",
+    "categories": [
+      "diseño"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Creditos gratis limitados. Incluido en Adobe Creative Cloud",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Generador de imágenes de Adobe con integración en Photoshop e Illustrator.",
+    "fullDescription": "Adobe Firefly es el motor de IA generativa de Adobe que permite crear y editar imágenes, vectores, texturas y efectos de texto. Se integra directamente con Photoshop, Illustrator y otras herramientas de Adobe, permitiendo usar IA dentro de flujos de trabajo profesionales de diseño.",
+    "useCases": [
+      "Generar imágenes comercialmente seguras",
+      "Editar fotos en Photoshop con IA generativa",
+      "Crear vectores y patrones",
+      "Aplicar efectos de texto creativos",
+      "Extender imágenes con relleno generativo"
+    ],
+    "howToStart": [
+      "Ve a firefly.adobe.com y crea una cuenta de Adobe",
+      "Elige el tipo de generación: imagen, texto, vector",
+      "Escribe tu descripción y ajusta parametros",
+      "Descarga o abre directamente en Photoshop"
+    ],
+    "proTip": "Firefly genera imágenes entrenadas solo con contenido con licencia: esto significa que puedes usar las imágenes comercialmente sin problemas legales.",
+    "pros": [
+      "Seguro para uso comercial",
+      "Integración con Adobe Creative Cloud",
+      "Relleno generativo en Photoshop"
+    ],
+    "cons": [
+      "Calidad artistica inferior a Midjourney",
+      "Requiere cuenta Adobe"
+    ],
+    "alternatives": [
+      "midjourney",
+      "dall-e",
+      "canva"
+    ],
+    "keywords": [
+      "adobe",
+      "photoshop",
+      "diseño",
+      "imagen",
+      "profesional",
+      "vector",
+      "editar",
+      "comercial"
+    ],
+    "tags": [
+      "Adobe",
+      "Diseño profesional",
+      "Comercial"
+    ]
+  },
+  {
+    "id": "stable-diffusion",
+    "name": "Stable Diffusion",
+    "url": "https://stability.ai",
+    "categories": [
+      "diseño"
+    ],
+    "pricing": "gratis",
+    "pricingDetail": "Gratis y de código abierto. APIs de pago disponibles",
+    "difficulty": 3,
+    "rating": 4,
+    "shortDescription": "Modelo de generación de imágenes de código abierto que puedes ejecutar localmente.",
+    "fullDescription": "Stable Diffusion es un modelo de generación de imágenes de código abierto que puedes ejecutar en tu propio computador. Ofrece control total sobre el proceso de generación, con cientos de modelos personalizados creados por la comunidad. Es la opción preferida por usuarios técnicos que quieren maxima flexibilidad.",
+    "useCases": [
+      "Generar imágenes sin límites ni censura",
+      "Entrenar modelos personalizados con LoRAs",
+      "Crear arte con control total sobre parametros",
+      "Procesar lotes de imágenes automáticamente",
+      "Integrar generación de imágenes en aplicaciones propias"
+    ],
+    "howToStart": [
+      "Instala Stable Diffusion localmente o usa una plataforma online",
+      "Descarga un modelo base de la comunidad",
+      "Usa una interfaz como Automatic1111 o ComfyUI",
+      "Escribe tu descripción y ajusta los parametros"
+    ],
+    "proTip": "Empieza con la interfaz web de Automatic1111: es la más popular y tiene una comunidad enorme con tutoriales y extensiones.",
+    "pros": [
+      "Completamente gratis y de código abierto",
+      "Control total sobre la generación",
+      "Comunidad enorme con miles de modelos"
+    ],
+    "cons": [
+      "Requiere conocimientos técnicos para instalar",
+      "Necesita un computador potente con GPU"
+    ],
+    "alternatives": [
+      "midjourney",
+      "leonardo-ai",
+      "krea-ai"
+    ],
+    "keywords": [
+      "código abierto",
+      "gratis",
+      "local",
+      "GPU",
+      "modelos",
+      "personalizar",
+      "técnico",
+      "generar"
+    ],
+    "tags": [
+      "Open source",
+      "Local",
+      "Técnico"
+    ]
+  },
+  {
+    "id": "krea-ai",
+    "name": "Krea AI",
+    "url": "https://krea.ai",
+    "categories": [
+      "diseño"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis limitado. Pro: $24/mes",
+    "difficulty": 2,
+    "rating": 3,
+    "shortDescription": "Plataforma creativa con IA para generar y mejorar imágenes en tiempo real.",
+    "fullDescription": "Krea AI es una plataforma de diseño con IA que permite generar imágenes, mejorar fotos existentes y crear variaciones en tiempo real. Destaca por su generación en tiempo real que muestra resultados mientras dibujas o ajustas parametros, permitiendo un proceso creativo más interactivo.",
+    "useCases": [
+      "Generar imágenes en tiempo real mientras dibujas",
+      "Mejorar y escalar imágenes existentes",
+      "Crear variaciones de disenos",
+      "Generar fondos y texturas",
+      "Experimentar con estilos visuales interactivamente"
+    ],
+    "howToStart": [
+      "Registrate en krea.ai",
+      "Elige entre generación, mejora o variacion",
+      "Dibuja un boceto o sube una imagen de referencia",
+      "Ajusta en tiempo real y descarga el resultado"
+    ],
+    "proTip": "Usa el modo de generación en tiempo real para iterar rápidamente sobre ideas: dibuja un boceto simple y ve como la IA lo transforma al instante.",
+    "pros": [
+      "Generación en tiempo real interactiva",
+      "Mejora de imágenes incluida",
+      "Interfaz creativa e intuitiva"
+    ],
+    "cons": [
+      "Menos potente que Midjourney para resultados finales",
+      "Plan gratis muy limitado"
+    ],
+    "alternatives": [
+      "leonardo-ai",
+      "midjourney",
+      "stable-diffusion"
+    ],
+    "keywords": [
+      "imagen",
+      "tiempo real",
+      "mejorar",
+      "escalar",
+      "boceto",
+      "creativo",
+      "diseño",
+      "interactivo"
+    ],
+    "tags": [
+      "Tiempo real",
+      "Diseño",
+      "Interactivo"
+    ]
+  },
+  {
+    "id": "gamma",
+    "name": "Gamma",
+    "url": "https://gamma.app",
+    "categories": [
+      "presentaciones"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "400 creditos gratis. Plus: $8/mes",
+    "difficulty": 1,
+    "rating": 5,
+    "shortDescription": "Crea presentaciones profesionales con IA en minutos.",
+    "fullDescription": "Gamma es la herramienta de IA para presentaciones más popular del mercado. Solo necesitas escribir un tema o pegar un documento, y Gamma genera una presentación completa con diseño profesional, imágenes y estructura. Puedes editar, personalizar y presentar directamente desde la plataforma.",
+    "useCases": [
+      "Crear presentaciones profesionales en minutos",
+      "Convertir documentos en presentaciones",
+      "Generar pitch decks para inversores",
+      "Crear reportes visuales interactivos",
+      "Diseñar propuestas comerciales"
+    ],
+    "howToStart": [
+      "Registrate gratis en gamma.app",
+      "Escribe el tema o pega el contenido de tu presentación",
+      "Elige un estilo visual y deja que la IA genere las diapositivas",
+      "Edita, personaliza y presenta directamente"
+    ],
+    "proTip": "Pega un documento largo o notas de reunión y Gamma lo convertira automáticamente en una presentación estructurada y visual.",
+    "pros": [
+      "Genera presentaciones completas automáticamente",
+      "Disenos modernos y profesionales",
+      "Se puede presentar directamente desde la app"
+    ],
+    "cons": [
+      "Creditos limitados en plan gratis",
+      "Menos control de diseño que PowerPoint"
+    ],
+    "alternatives": [
+      "beautiful-ai",
+      "tome",
+      "canva"
+    ],
+    "keywords": [
+      "presentación",
+      "diapositivas",
+      "crear",
+      "profesional",
+      "rápido",
+      "pitch",
+      "reporte",
+      "slides"
+    ],
+    "tags": [
+      "Presentaciones",
+      "Automático",
+      "Profesional"
+    ]
+  },
+  {
+    "id": "beautiful-ai",
+    "name": "Beautiful.ai",
+    "url": "https://beautiful.ai",
+    "categories": [
+      "presentaciones"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Desde $12/mes. Prueba gratuita",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Software de presentaciones con diseño inteligente automático.",
+    "fullDescription": "Beautiful.ai es un software de presentaciones que aplica reglas de diseño automáticamente. Cada diapositiva se ajusta sola: el espaciado, la alineacion y los colores se mantienen profesionales sin esfuerzo. Ideal para equipos que necesitan presentaciones consistentes y bien disenadas.",
+    "useCases": [
+      "Crear presentaciones con diseño automático",
+      "Mantener consistencia visual en equipos",
+      "Generar informes y reportes visuales",
+      "Crear pitch decks de startups",
+      "Diseñar presentaciones de capacitación"
+    ],
+    "howToStart": [
+      "Registrate en beautiful.ai para la prueba gratuita",
+      "Elige una plantilla o empieza desde cero",
+      "Agrega contenido y observa como el diseño se ajusta",
+      "Comparte o descarga tu presentación"
+    ],
+    "proTip": "Beautiful.ai ajusta el diseño automáticamente cuando agregas contenido: no pierdas tiempo alineando elementos manualmente.",
+    "pros": [
+      "Diseño automático siempre profesional",
+      "Plantillas de alta calidad",
+      "Fácil para equipos"
+    ],
+    "cons": [
+      "No tiene plan gratuito permanente",
+      "Menos flexibilidad de diseño que Canva"
+    ],
+    "alternatives": [
+      "gamma",
+      "tome",
+      "canva"
+    ],
+    "keywords": [
+      "presentación",
+      "diseño",
+      "automático",
+      "profesional",
+      "equipo",
+      "slides",
+      "informe",
+      "visual"
+    ],
+    "tags": [
+      "Presentaciones",
+      "Diseño",
+      "Equipos"
+    ]
+  },
+  {
+    "id": "tome",
+    "name": "Tome",
+    "url": "https://tome.app",
+    "categories": [
+      "presentaciones"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis limitado. Pro: $16/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Crea narrativas visuales y presentaciones con IA generativa.",
+    "fullDescription": "Tome es una herramienta de presentaciones con IA que se enfoca en crear narrativas visuales. Genera presentaciones completas a partir de un tema, incluyendo texto, imágenes generadas por IA y una estructura narrativa coherente. Es ideal para storytelling visual y presentaciones que cuentan una historia.",
+    "useCases": [
+      "Crear presentaciones narrativas con storytelling",
+      "Generar pitch decks de forma rápida",
+      "Convertir ideas en presentaciones visuales",
+      "Crear contenido de marketing visual",
+      "Diseñar reportes y propuestas interactivas"
+    ],
+    "howToStart": [
+      "Registrate en tome.app",
+      "Escribe el tema de tu presentación",
+      "Deja que la IA genere la estructura y contenido",
+      "Personaliza imágenes, textos y diseño"
+    ],
+    "proTip": "Tome es ideal para storytelling: pide que genere una presentación con una narrativa y obtendras diapositivas que cuentan una historia coherente.",
+    "pros": [
+      "Excelente para narrativas y storytelling",
+      "Imágenes generadas por IA incluidas",
+      "Rápido para crear desde cero"
+    ],
+    "cons": [
+      "Menos opciones de diseño que Canva",
+      "Puede generar contenido generico"
+    ],
+    "alternatives": [
+      "gamma",
+      "beautiful-ai",
+      "slidesgo"
+    ],
+    "keywords": [
+      "presentación",
+      "narrativa",
+      "historia",
+      "storytelling",
+      "visual",
+      "pitch",
+      "crear",
+      "rápido"
+    ],
+    "tags": [
+      "Storytelling",
+      "Presentaciones",
+      "Narrativa"
+    ]
+  },
+  {
+    "id": "slidesgo",
+    "name": "SlidesGPT",
+    "url": "https://slidesgpt.com",
+    "categories": [
+      "presentaciones"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Generación gratis. Descarga desde $2.50 por presentación",
+    "difficulty": 1,
+    "rating": 3,
+    "shortDescription": "Genera presentaciones PowerPoint completas con IA a partir de un tema.",
+    "fullDescription": "SlidesGPT genera presentaciones completas de PowerPoint a partir de una descripción de texto. Solo escribe el tema y el número de diapositivas que necesitas, y la herramienta crea una presentación lista para descargar en formato PPTX que puedes editar en PowerPoint o Google Slides.",
+    "useCases": [
+      "Generar presentaciones PowerPoint rápidamente",
+      "Crear borradores iniciales de presentaciones",
+      "Generar contenido para clases y capacitaciones",
+      "Obtener ideas de estructura para presentaciones",
+      "Crear presentaciones para reuniones rapidas"
+    ],
+    "howToStart": [
+      "Ve a slidesgpt.com",
+      "Describe el tema de tu presentación",
+      "Indica el número de diapositivas deseado",
+      "Descarga en formato PowerPoint o PDF"
+    ],
+    "proTip": "Usa SlidesGPT para generar un borrador rápido y luego editalo en PowerPoint para personalizarlo con tu marca y estilo.",
+    "pros": [
+      "Genera presentaciones en segundos",
+      "Formato PPTX editable",
+      "No requiere registro"
+    ],
+    "cons": [
+      "Diseño básico comparado con la competencia",
+      "Cada descarga tiene un costo"
+    ],
+    "alternatives": [
+      "gamma",
+      "tome",
+      "beautiful-ai"
+    ],
+    "keywords": [
+      "powerpoint",
+      "presentación",
+      "generar",
+      "diapositivas",
+      "rápido",
+      "pptx",
+      "descargar",
+      "borrador"
+    ],
+    "tags": [
+      "PowerPoint",
+      "Rápido",
+      "Descargar"
+    ]
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "url": "https://runway.ml",
+    "categories": [
+      "video",
+      "diseño"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "125 creditos gratis. Desde $12/mes",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Plataforma lider de generación y edición de video con IA.",
+    "fullDescription": "Runway es la plataforma de IA para video más avanzada del mercado. Permite generar videos a partir de texto o imágenes, editar videos existentes con IA, remover fondos en video, y aplicar efectos avanzados. Es usada por profesionales de cine, publicidad y creación de contenido.",
+    "useCases": [
+      "Generar videos a partir de texto o imágenes",
+      "Remover fondos de videos automáticamente",
+      "Aplicar efectos visuales con IA",
+      "Expandir y editar escenas de video",
+      "Crear animaciones a partir de imágenes estaticas"
+    ],
+    "howToStart": [
+      "Registrate gratis en runway.ml",
+      "Elige la herramienta que necesitas: Gen-3, edición, etc.",
+      "Sube tu contenido o escribe una descripción",
+      "Procesa y descarga el resultado"
+    ],
+    "proTip": "Usa una imagen de referencia junto con tu texto para que la generación de video sea mucho más precisa y coherente con lo que imaginas.",
+    "pros": [
+      "La mejor calidad de video generado",
+      "Muchas herramientas de edición con IA",
+      "Usado por profesionales de la industria"
+    ],
+    "cons": [
+      "Los creditos se gastan rápido",
+      "Precio elevado para uso intensivo"
+    ],
+    "alternatives": [
+      "pika",
+      "luma",
+      "heygen"
+    ],
+    "keywords": [
+      "video",
+      "generar",
+      "editar",
+      "efectos",
+      "animación",
+      "fondo",
+      "profesional",
+      "crear"
+    ],
+    "tags": [
+      "Video IA",
+      "Edición",
+      "Profesional"
+    ]
+  },
+  {
+    "id": "pika",
+    "name": "Pika",
+    "url": "https://pika.art",
+    "categories": [
+      "video"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "150 creditos gratis/mes. Pro: $8/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Generador de videos con IA fácil de usar para todos los niveles.",
+    "fullDescription": "Pika es una herramienta de generación de video con IA diseñada para ser accesible a cualquier persona. Permite crear videos cortos a partir de texto, imágenes o video existente. Su interfaz simple la hace ideal para creadores de contenido que quieren agregar video a su trabajo sin conocimientos técnicos.",
+    "useCases": [
+      "Crear videos cortos para redes sociales",
+      "Animar imágenes estaticas",
+      "Transformar texto en escenas de video",
+      "Editar y modificar videos existentes",
+      "Crear contenido visual animado"
+    ],
+    "howToStart": [
+      "Registrate en pika.art",
+      "Escribe una descripción del video que quieres",
+      "O sube una imagen para animarla",
+      "Ajusta la duracion y descarga"
+    ],
+    "proTip": "Empieza con imágenes existentes y animalas: obtienes resultados más controlados que generando video desde cero.",
+    "pros": [
+      "Muy fácil de usar",
+      "Creditos gratis mensuales",
+      "Buenos resultados para principiantes"
+    ],
+    "cons": [
+      "Videos cortos solamente",
+      "Menos control que Runway"
+    ],
+    "alternatives": [
+      "runway",
+      "capcut",
+      "luma"
+    ],
+    "keywords": [
+      "video",
+      "animar",
+      "crear",
+      "fácil",
+      "corto",
+      "redes",
+      "imagen",
+      "rápido"
+    ],
+    "tags": [
+      "Video",
+      "Fácil",
+      "Redes sociales"
+    ]
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "url": "https://heygen.com",
+    "categories": [
+      "video"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Desde $24/mes. Prueba gratuita de 1 minuto",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Crea videos con avatares de IA que hablan en multiples idiomas.",
+    "fullDescription": "HeyGen permite crear videos con avatares de IA realistas que hablan y gesticulan naturalmente. Puedes elegir entre cientos de avatares, clonar tu propia apariencia, y generar videos en más de 40 idiomas. Ideal para videos corporativos, capacitaciones y contenido de marketing sin necesidad de grabar.",
+    "useCases": [
+      "Crear videos corporativos sin camara",
+      "Generar videos de capacitación en multiples idiomas",
+      "Crear avatares personalizados para tu marca",
+      "Traducir videos existentes a otros idiomas",
+      "Producir contenido de marketing escalable"
+    ],
+    "howToStart": [
+      "Registrate en heygen.com",
+      "Elige un avatar o crea uno personalizado",
+      "Escribe el guion o sube un texto",
+      "Selecciona el idioma y genera el video"
+    ],
+    "proTip": "Clona tu propia apariencia y voz para crear un avatar que te represente en videos sin tener que grabar cada vez.",
+    "pros": [
+      "Avatares muy realistas",
+      "Soporte para más de 40 idiomas",
+      "Ideal para videos corporativos"
+    ],
+    "cons": [
+      "Precio elevado",
+      "Los avatares pueden verse artificiales en algunos casos"
+    ],
+    "alternatives": [
+      "synthesia",
+      "runway",
+      "elevenlabs"
+    ],
+    "keywords": [
+      "avatar",
+      "video",
+      "hablar",
+      "idiomas",
+      "corporativo",
+      "capacitación",
+      "sin camara",
+      "presentador"
+    ],
+    "tags": [
+      "Avatares",
+      "Video",
+      "Corporativo"
+    ]
+  },
+  {
+    "id": "synthesia",
+    "name": "Synthesia",
+    "url": "https://synthesia.io",
+    "categories": [
+      "video",
+      "educación"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Desde $22/mes. Planes empresariales disponibles",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Plataforma de videos con presentadores de IA para empresas.",
+    "fullDescription": "Synthesia es una plataforma de creación de videos con presentadores de IA, enfocada en el sector empresarial y educativo. Permite crear videos de capacitación, tutoriales y presentaciones con avatares realistas que hablan en más de 130 idiomas, sin necesidad de equipo de grabacion ni actores.",
+    "useCases": [
+      "Crear videos de capacitación para empleados",
+      "Producir tutoriales y guías en video",
+      "Generar videos en multiples idiomas",
+      "Crear contenido educativo escalable",
+      "Producir videos de onboarding para nuevos empleados"
+    ],
+    "howToStart": [
+      "Registrate en synthesia.io",
+      "Elige un avatar y un template de video",
+      "Escribe o pega el guion",
+      "Genera el video y compartelo con tu equipo"
+    ],
+    "proTip": "Crea un video en un idioma y usa la función de traducción para generarlo automáticamente en todos los idiomas que necesites.",
+    "pros": [
+      "Muy fácil de usar sin experiencia técnica",
+      "130+ idiomas disponibles",
+      "Ideal para empresas y educación"
+    ],
+    "cons": [
+      "Precio orientado a empresas",
+      "Personalización visual limitada"
+    ],
+    "alternatives": [
+      "heygen",
+      "runway",
+      "descript"
+    ],
+    "keywords": [
+      "video",
+      "capacitación",
+      "educación",
+      "avatar",
+      "empresa",
+      "tutorial",
+      "idiomas",
+      "presentador"
+    ],
+    "tags": [
+      "Empresarial",
+      "Educación",
+      "Avatares"
+    ]
+  },
+  {
+    "id": "capcut",
+    "name": "CapCut",
+    "url": "https://capcut.com",
+    "categories": [
+      "video"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con marca de agua. Pro: $8/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Editor de video gratuito con herramientas de IA para crear contenido viral.",
+    "fullDescription": "CapCut es un editor de video gratuito desarrollado por ByteDance (creadores de TikTok) con potentes herramientas de IA integradas. Permite editar videos, agregar subtitulos automáticos, remover fondos, generar efectos y crear contenido optimizado para redes sociales de forma rápida y sencilla.",
+    "useCases": [
+      "Editar videos para TikTok, Reels e YouTube Shorts",
+      "Agregar subtitulos automáticos a videos",
+      "Remover fondos de video",
+      "Aplicar efectos y transiciones con IA",
+      "Crear videos cortos desde plantillas"
+    ],
+    "howToStart": [
+      "Descarga CapCut en tu celular o usa la versión web",
+      "Importa tu video o elige una plantilla",
+      "Usa las herramientas de IA para editar automáticamente",
+      "Exporta y comparte directamente en redes"
+    ],
+    "proTip": "Los subtitulos automáticos de CapCut son excelentes: actívalos en todos tus videos para aumentar el alcance en redes sociales.",
+    "pros": [
+      "Gratis y muy completo",
+      "Subtitulos automáticos excelentes",
+      "Optimizado para redes sociales"
+    ],
+    "cons": [
+      "Marca de agua en plan gratis",
+      "Algunas funciones IA solo en versión Pro"
+    ],
+    "alternatives": [
+      "descript",
+      "runway",
+      "pika"
+    ],
+    "keywords": [
+      "video",
+      "editar",
+      "tiktok",
+      "reels",
+      "subtitulos",
+      "gratis",
+      "redes",
+      "cortar"
+    ],
+    "tags": [
+      "Edición",
+      "Redes sociales",
+      "TikTok"
+    ]
+  },
+  {
+    "id": "luma",
+    "name": "Luma Dream Machine",
+    "url": "https://lumalabs.ai",
+    "categories": [
+      "video"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "30 generaciones gratis/mes. Pro: $24/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Generador de video con IA de alta calidad a partir de texto e imágenes.",
+    "fullDescription": "Luma Dream Machine es un generador de video con IA que crea clips de alta calidad a partir de descripciones de texto o imágenes de referencia. Destaca por la coherencia visual y el movimiento natural de sus videos generados, con resultados que se acercan a la calidad cinematográfica.",
+    "useCases": [
+      "Generar clips de video de alta calidad",
+      "Animar imágenes con movimiento realista",
+      "Crear secuencias cinematograficas con IA",
+      "Producir contenido visual para marketing",
+      "Experimentar con escenas y conceptos visuales"
+    ],
+    "howToStart": [
+      "Ve a lumalabs.ai y crea una cuenta",
+      "Escribe una descripción del video deseado",
+      "Opcionalmente sube una imagen de referencia",
+      "Genera y descarga el resultado"
+    ],
+    "proTip": "Combina una imagen de referencia con una descripción detallada del movimiento para obtener videos mucho más coherentes y controlados.",
+    "pros": [
+      "Alta calidad visual",
+      "Generaciones gratis mensuales",
+      "Movimiento natural y fluido"
+    ],
+    "cons": [
+      "Videos muy cortos",
+      "Tiempos de generación largos"
+    ],
+    "alternatives": [
+      "runway",
+      "pika",
+      "capcut"
+    ],
+    "keywords": [
+      "video",
+      "generar",
+      "cinematográfico",
+      "animar",
+      "calidad",
+      "clips",
+      "movimiento",
+      "crear"
+    ],
+    "tags": [
+      "Video IA",
+      "Cinematográfico",
+      "Generación"
+    ]
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "url": "https://elevenlabs.io",
+    "categories": [
+      "audio",
+      "transcripción"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "10K caracteres gratis/mes. Desde $5/mes",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Plataforma lider de generación de voz y clonación de voz con IA.",
+    "fullDescription": "ElevenLabs es la plataforma de IA de voz más avanzada del mercado. Permite generar voces ultra realistas, clonar cualquier voz con solo minutos de audio, crear audiolibros, doblaje automático en multiples idiomas y convertir texto a voz con una naturalidad impresionante.",
+    "useCases": [
+      "Convertir texto a voz con calidad humana",
+      "Clonar tu voz para automatizar grabaciones",
+      "Crear audiolibros y podcasts",
+      "Doblar videos a otros idiomas manteniendo tu voz",
+      "Generar voces para personajes y narraciones"
+    ],
+    "howToStart": [
+      "Registrate gratis en elevenlabs.io",
+      "Escribe o pega el texto que quieres convertir a voz",
+      "Elige una voz del catalogo o clona la tuya",
+      "Genera y descarga el audio"
+    ],
+    "proTip": "Clona tu propia voz con solo 3 minutos de audio para crear contenido de audio sin tener que grabar cada vez.",
+    "pros": [
+      "Voces ultra realistas",
+      "Clonación de voz impresionante",
+      "Soporte para 30+ idiomas"
+    ],
+    "cons": [
+      "Plan gratis muy limitado",
+      "La clonación de voz plantea cuestiones éticas"
+    ],
+    "alternatives": [
+      "murf",
+      "descript",
+      "suno"
+    ],
+    "keywords": [
+      "voz",
+      "hablar",
+      "audio",
+      "clonar",
+      "narrar",
+      "podcast",
+      "audiolibro",
+      "texto"
+    ],
+    "tags": [
+      "Voz IA",
+      "Clonación",
+      "Audio"
+    ]
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "url": "https://suno.com",
+    "categories": [
+      "audio"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "50 creditos gratis/día. Pro: $8/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Genera canciones completas con voz, letra y música usando solo texto.",
+    "fullDescription": "Suno es una plataforma de IA que genera canciones completas a partir de descripciones de texto. Crea la letra, la melodia, los instrumentos y hasta la voz cantada. Solo necesitas describir el estilo y tema de la cancion, y Suno produce una pista musical de calidad sorprendente en segundos.",
+    "useCases": [
+      "Crear canciones originales para proyectos",
+      "Generar música de fondo para videos",
+      "Componer jingles para publicidad",
+      "Explorar ideas musicales rápidamente",
+      "Crear canciones personalizadas para regalos"
+    ],
+    "howToStart": [
+      "Registrate en suno.com",
+      "Describe el estilo y tema de la cancion",
+      "Opcionalmente escribe tu propia letra",
+      "Genera y escucha las variaciones"
+    ],
+    "proTip": "Escribe la letra tu mismo y deja que Suno ponga la música: asi obtienes canciones personalizadas con tu mensaje exacto.",
+    "pros": [
+      "Genera canciones completas con voz",
+      "Muy fácil de usar",
+      "Variedad de géneros musicales"
+    ],
+    "cons": [
+      "No da control fino sobre la composición",
+      "Los derechos de uso pueden ser limitados"
+    ],
+    "alternatives": [
+      "udio",
+      "elevenlabs",
+      "murf"
+    ],
+    "keywords": [
+      "música",
+      "cancion",
+      "generar",
+      "letra",
+      "melodia",
+      "crear",
+      "audio",
+      "componer"
+    ],
+    "tags": [
+      "Música IA",
+      "Composición",
+      "Canciones"
+    ]
+  },
+  {
+    "id": "udio",
+    "name": "Udio",
+    "url": "https://udio.com",
+    "categories": [
+      "audio"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Creditos gratis limitados. Pro: $10/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Generador de música con IA que crea pistas de alta calidad en cualquier género.",
+    "fullDescription": "Udio es un generador de música con IA que produce pistas musicales de alta calidad en practicamente cualquier género. Permite crear música a partir de descripciones de texto, con control sobre el estilo, tempo y estructura. Los resultados son impresionantemente realistas y musicalmente coherentes.",
+    "useCases": [
+      "Generar música original para proyectos creativos",
+      "Crear pistas de fondo para videos y podcasts",
+      "Experimentar con géneros musicales",
+      "Producir demos de canciones",
+      "Crear jingles y música para publicidad"
+    ],
+    "howToStart": [
+      "Registrate en udio.com",
+      "Describe el tipo de música que quieres",
+      "Ajusta el género, mood y duracion",
+      "Genera variaciones y elige la mejor"
+    ],
+    "proTip": "Genera varias versiones con pequeñas variaciones en la descripción para encontrar la pista perfecta para tu proyecto.",
+    "pros": [
+      "Alta calidad de audio",
+      "Gran variedad de géneros",
+      "Resultados musicalmente coherentes"
+    ],
+    "cons": [
+      "Creditos gratis limitados",
+      "Menos control que un DAW profesional"
+    ],
+    "alternatives": [
+      "suno",
+      "elevenlabs",
+      "murf"
+    ],
+    "keywords": [
+      "música",
+      "generar",
+      "audio",
+      "pista",
+      "género",
+      "crear",
+      "producir",
+      "fondo"
+    ],
+    "tags": [
+      "Música IA",
+      "Producción",
+      "Géneros"
+    ]
+  },
+  {
+    "id": "murf",
+    "name": "Murf.ai",
+    "url": "https://murf.ai",
+    "categories": [
+      "audio"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "10 minutos gratis. Desde $23/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Generador de voz profesional para videos, presentaciones y e-learning.",
+    "fullDescription": "Murf.ai es una plataforma de texto a voz diseñada para crear locuciones profesionales para videos, presentaciones, cursos online y contenido corporativo. Ofrece más de 120 voces en 20+ idiomas, con control sobre el tono, velocidad y emoción de la narración.",
+    "useCases": [
+      "Crear locuciones para videos corporativos",
+      "Narrar presentaciones y cursos online",
+      "Generar voces para contenido de e-learning",
+      "Producir audios para IVR y asistentes de voz",
+      "Crear voces para videos de marketing"
+    ],
+    "howToStart": [
+      "Registrate en murf.ai",
+      "Escribe o pega tu guion",
+      "Elige una voz y ajusta el tono",
+      "Genera y descarga el audio"
+    ],
+    "proTip": "Usa las marcas de enfasis en el texto para controlar donde la voz hace pausas y pone más emoción.",
+    "pros": [
+      "Voces profesionales de alta calidad",
+      "120+ voces en multiples idiomas",
+      "Control sobre tono y emoción"
+    ],
+    "cons": [
+      "Plan gratis muy limitado en minutos",
+      "Precio elevado para uso frecuente"
+    ],
+    "alternatives": [
+      "elevenlabs",
+      "descript",
+      "suno"
+    ],
+    "keywords": [
+      "voz",
+      "locución",
+      "narrar",
+      "profesional",
+      "video",
+      "curso",
+      "audio",
+      "texto"
+    ],
+    "tags": [
+      "Locución",
+      "Profesional",
+      "E-learning"
+    ]
+  },
+  {
+    "id": "descript",
+    "name": "Descript",
+    "url": "https://descript.com",
+    "categories": [
+      "audio",
+      "video",
+      "transcripción"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "1 hora gratis de transcripción. Pro: $24/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Editor de audio y video donde editas la voz como si fuera un documento de texto.",
+    "fullDescription": "Descript es un editor de audio y video revolucionario donde puedes editar grabaciones como si editaras un documento de texto. Transcribe automáticamente el audio, y al borrar palabras del texto, se borran del audio. Incluye herramientas de IA para mejorar audio, remover muletillas y clonar tu voz.",
+    "useCases": [
+      "Editar podcasts y videos cortando texto",
+      "Transcribir reuniones y entrevistas automáticamente",
+      "Remover muletillas y silencios automáticamente",
+      "Clonar tu voz para corregir errores de grabacion",
+      "Crear clips para redes sociales desde videos largos"
+    ],
+    "howToStart": [
+      "Descarga Descript desde descript.com",
+      "Importa tu archivo de audio o video",
+      "Espera la transcripción automática",
+      "Edita el texto y el audio se ajusta automáticamente"
+    ],
+    "proTip": "Graba tus podcasts normalmente sin preocuparte por errores: Descript te permite cortar, mover y editar como si fuera un documento de Word.",
+    "pros": [
+      "Edición de audio basada en texto revolucionaria",
+      "Transcripción automática incluida",
+      "Elimina muletillas automáticamente"
+    ],
+    "cons": [
+      "Requiere aprender el flujo de trabajo",
+      "Funciones avanzadas requieren plan Pro"
+    ],
+    "alternatives": [
+      "otter",
+      "fireflies",
+      "elevenlabs"
+    ],
+    "keywords": [
+      "editar",
+      "audio",
+      "video",
+      "transcribir",
+      "podcast",
+      "texto",
+      "cortar",
+      "grabar"
+    ],
+    "tags": [
+      "Edición",
+      "Podcast",
+      "Transcripción"
+    ]
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "categories": [
+      "programación"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "$10/mes individual. $19/mes business. Gratis para estudiantes",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Asistente de programación de GitHub que autocompleta código en tu editor.",
+    "fullDescription": "GitHub Copilot es el asistente de programación con IA más utilizado del mundo. Se integra directamente en editores como VS Code, JetBrains y Neovim, sugiriendo lineas y bloques completos de código mientras programas. Entiende el contexto de tu proyecto y genera código relevante en cualquier lenguaje.",
+    "useCases": [
+      "Autocompletar código mientras programas",
+      "Generar funciones completas a partir de comentarios",
+      "Escribir tests unitarios automáticamente",
+      "Entender y documentar código existente",
+      "Resolver errores y bugs con sugerencias"
+    ],
+    "howToStart": [
+      "Ve a github.com/features/copilot y suscribete",
+      "Instala la extensión en VS Code o tu editor preferido",
+      "Empieza a escribir código y veras sugerencias automáticas",
+      "Acepta con Tab o pide alternativas"
+    ],
+    "proTip": "Escribe un comentario descriptivo antes de una función y Copilot generara la implementacion completa basandose en esa descripción.",
+    "pros": [
+      "Se integra en tu editor favorito",
+      "Sugerencias de código muy precisas",
+      "Gratis para estudiantes y open source"
+    ],
+    "cons": [
+      "Requiere suscripción mensual",
+      "Puede sugerir código con errores sutiles"
+    ],
+    "alternatives": [
+      "cursor",
+      "claude-code",
+      "windsurf"
+    ],
+    "keywords": [
+      "programar",
+      "código",
+      "autocompletar",
+      "editor",
+      "desarrollador",
+      "VS Code",
+      "funciones",
+      "github"
+    ],
+    "tags": [
+      "Programación",
+      "Autocompletado",
+      "IDE"
+    ]
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "url": "https://cursor.com",
+    "categories": [
+      "programación"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis limitado. Pro: $20/mes",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Editor de código con IA integrada para programar más rápido.",
+    "fullDescription": "Cursor es un editor de código basado en VS Code con IA profundamente integrada. Permite chatear con tu código, editar archivos con instrucciones en lenguaje natural, autocompletar con contexto del proyecto completo y depurar errores conversacionalmente. Es la herramienta favorita de muchos desarrolladores.",
+    "useCases": [
+      "Programar con asistencia de IA en tiempo real",
+      "Editar código con instrucciones en lenguaje natural",
+      "Entender codebases grandes rápidamente",
+      "Depurar errores conversacionalmente",
+      "Generar tests y documentacion automáticamente"
+    ],
+    "howToStart": [
+      "Descarga Cursor desde cursor.com",
+      "Importa tu configuración de VS Code",
+      "Usa Ctrl+K para editar código con IA",
+      "Usa Ctrl+L para chatear sobre tu código"
+    ],
+    "proTip": "Usa Ctrl+K para seleccionar código y dar instrucciones como 'refactoriza esto' o 'agrega manejo de errores': Cursor edita el código directamente.",
+    "pros": [
+      "IA integrada profundamente en el editor",
+      "Entiende el contexto del proyecto completo",
+      "Basado en VS Code, familiar para muchos"
+    ],
+    "cons": [
+      "Consume creditos rápidamente en plan gratis",
+      "Requiere aprender los atajos de IA"
+    ],
+    "alternatives": [
+      "github-copilot",
+      "claude-code",
+      "windsurf"
+    ],
+    "keywords": [
+      "editor",
+      "código",
+      "programar",
+      "IA",
+      "VS Code",
+      "chat",
+      "depurar",
+      "desarrollar"
+    ],
+    "tags": [
+      "IDE",
+      "Programación",
+      "IA integrada"
+    ]
+  },
+  {
+    "id": "replit-ai",
+    "name": "Replit AI",
+    "url": "https://replit.com",
+    "categories": [
+      "programación"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis limitado. Core: $25/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Plataforma de desarrollo en la nube con asistente de IA integrado.",
+    "fullDescription": "Replit es un entorno de desarrollo completo en la nube con IA integrada. Permite crear, ejecutar y desplegar aplicaciones directamente desde el navegador, con un asistente de IA que ayuda a escribir código, explicar errores y generar proyectos completos. No necesitas instalar nada en tu computador.",
+    "useCases": [
+      "Crear aplicaciones completas desde el navegador",
+      "Aprender a programar con asistencia de IA",
+      "Prototipar ideas rápidamente",
+      "Desplegar aplicaciones directamente a producción",
+      "Colaborar en código en tiempo real"
+    ],
+    "howToStart": [
+      "Registrate en replit.com",
+      "Crea un nuevo proyecto o usa una plantilla",
+      "Usa el asistente de IA para generar o editar código",
+      "Ejecuta y despliega directamente desde la plataforma"
+    ],
+    "proTip": "Replit es perfecto para prototipos rapidos: pide al agente de IA que construya una app completa y tendras algo funcional en minutos.",
+    "pros": [
+      "No requiere instalacion local",
+      "Despliegue a producción integrado",
+      "Perfecto para aprender y prototipar"
+    ],
+    "cons": [
+      "El rendimiento puede ser lento en plan gratis",
+      "Menos potente que un entorno local"
+    ],
+    "alternatives": [
+      "cursor",
+      "v0",
+      "windsurf"
+    ],
+    "keywords": [
+      "programar",
+      "nube",
+      "navegador",
+      "app",
+      "desplegar",
+      "prototipar",
+      "online",
+      "crear"
+    ],
+    "tags": [
+      "Cloud IDE",
+      "Prototipo",
+      "Despliegue"
+    ]
+  },
+  {
+    "id": "claude-code",
+    "name": "Claude Code",
+    "url": "https://claude.ai/code",
+    "categories": [
+      "programación"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Incluido en Claude Pro ($20/mes) o API con pago por uso",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Agente de programación de Anthropic que ejecuta código y modifica proyectos.",
+    "fullDescription": "Claude Code es el agente de programación de Anthropic que puede navegar tu código, entender proyectos completos, escribir y ejecutar código, y hacer cambios en multiples archivos simultaneamente. Funciona como un programador experto que entiende el contexto de tu proyecto y puede completar tareas complejas.",
+    "useCases": [
+      "Desarrollar funcionalidades completas en proyectos",
+      "Depurar y corregir errores complejos",
+      "Refactorizar código existente",
+      "Generar tests y documentacion",
+      "Automatizar tareas de desarrollo"
+    ],
+    "howToStart": [
+      "Instala Claude Code desde la terminal",
+      "Navega al directorio de tu proyecto",
+      "Ejecuta claude y describe lo que necesitas",
+      "Claude leera tu código y hara los cambios necesarios"
+    ],
+    "proTip": "Da instrucciones de alto nivel como 'agrega autenticacion con Google' y Claude Code se encargara de leer los archivos relevantes y hacer todos los cambios necesarios.",
+    "pros": [
+      "Entiende proyectos completos",
+      "Puede ejecutar código y verificar resultados",
+      "Modifica multiples archivos simultaneamente"
+    ],
+    "cons": [
+      "Requiere suscripción o API de pago",
+      "Puede tomar decisiones de diseño diferentes a las que esperas"
+    ],
+    "alternatives": [
+      "cursor",
+      "github-copilot",
+      "windsurf"
+    ],
+    "keywords": [
+      "programar",
+      "agente",
+      "código",
+      "proyecto",
+      "terminal",
+      "desarrollar",
+      "depurar",
+      "automatizar"
+    ],
+    "tags": [
+      "Agente IA",
+      "Programación",
+      "Terminal"
+    ]
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "url": "https://codeium.com",
+    "categories": [
+      "programación"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis con límites. Pro: $15/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Editor de código con IA que combina autocompletado y chat inteligente.",
+    "fullDescription": "Windsurf (anteriormente Codeium) es un editor de código con IA que ofrece autocompletado inteligente y un agente de IA que puede hacer cambios en tu proyecto. Se basa en VS Code y ofrece una experiencia similar a Cursor pero con un plan gratuito más generoso.",
+    "useCases": [
+      "Autocompletar código con IA",
+      "Chatear con tu codebase para entenderlo",
+      "Generar funciones y componentes",
+      "Refactorizar código con instrucciones",
+      "Buscar y navegar código inteligentemente"
+    ],
+    "howToStart": [
+      "Descarga Windsurf desde codeium.com",
+      "Importa tu configuración de VS Code",
+      "Empieza a programar con autocompletado de IA",
+      "Usa el chat para pedir cambios en tu código"
+    ],
+    "proTip": "El plan gratuito de Windsurf es más generoso que el de Cursor: ideal si quieres probar un editor con IA sin comprometerte con una suscripción.",
+    "pros": [
+      "Plan gratuito generoso",
+      "Autocompletado rápido y preciso",
+      "Basado en VS Code"
+    ],
+    "cons": [
+      "Menos conocido que Cursor o Copilot",
+      "Algunas funciones avanzadas solo en Pro"
+    ],
+    "alternatives": [
+      "cursor",
+      "github-copilot",
+      "replit-ai"
+    ],
+    "keywords": [
+      "editor",
+      "código",
+      "autocompletar",
+      "IA",
+      "gratis",
+      "programar",
+      "VS Code",
+      "chat"
+    ],
+    "tags": [
+      "IDE",
+      "Autocompletado",
+      "Gratis"
+    ]
+  },
+  {
+    "id": "v0",
+    "name": "v0 by Vercel",
+    "url": "https://v0.dev",
+    "categories": [
+      "programación",
+      "diseño"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Creditos gratis limitados. Premium: $20/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Genera componentes de interfaz web con IA a partir de descripciones o imágenes.",
+    "fullDescription": "v0 es una herramienta de Vercel que genera componentes de interfaz web a partir de descripciones en texto o imágenes de referencia. Crea código React con Tailwind CSS listo para usar, permitiendo construir interfaces profesionales sin diseñar desde cero. Ideal para prototipar y construir frontends rápidamente.",
+    "useCases": [
+      "Generar componentes React desde descripciones",
+      "Convertir disenos en código funcional",
+      "Prototipar interfaces rápidamente",
+      "Crear landing pages y dashboards",
+      "Generar formularios y tablas complejas"
+    ],
+    "howToStart": [
+      "Ve a v0.dev y crea una cuenta",
+      "Describe el componente que necesitas o sube una imagen",
+      "Revisa el código generado en React + Tailwind",
+      "Copia el código a tu proyecto o edita en v0"
+    ],
+    "proTip": "Sube una captura de pantalla de un diseño que te guste y v0 generara el código para replicarlo en React.",
+    "pros": [
+      "Genera código React listo para usar",
+      "Convierte imágenes en código",
+      "Rápido para prototipar interfaces"
+    ],
+    "cons": [
+      "Solo genera componentes frontend",
+      "Requiere conocimientos de React para integrar"
+    ],
+    "alternatives": [
+      "cursor",
+      "replit-ai",
+      "canva"
+    ],
+    "keywords": [
+      "frontend",
+      "react",
+      "interfaz",
+      "componente",
+      "web",
+      "diseñar",
+      "prototipar",
+      "código"
+    ],
+    "tags": [
+      "Frontend",
+      "React",
+      "Prototipo"
+    ]
+  },
+  {
+    "id": "julius",
+    "name": "Julius AI",
+    "url": "https://julius.ai",
+    "categories": [
+      "datos"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Consultas gratis limitadas. Pro: $20/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Analiza datos y crea gráficas con IA sin necesidad de programar.",
+    "fullDescription": "Julius AI es una plataforma que permite analizar datos, crear visualizaciones y obtener insights simplemente subiendo archivos de Excel, CSV o bases de datos y haciendo preguntas en lenguaje natural. No necesitas saber programar ni usar formulas complejas.",
+    "useCases": [
+      "Analizar hojas de calculo con preguntas naturales",
+      "Crear gráficas y visualizaciones automáticamente",
+      "Obtener insights de datos sin programar",
+      "Limpiar y transformar datos",
+      "Generar reportes de análisis"
+    ],
+    "howToStart": [
+      "Registrate en julius.ai",
+      "Sube tu archivo de datos (Excel, CSV, etc.)",
+      "Haz preguntas en español sobre tus datos",
+      "Obtendras respuestas, gráficas y análisis"
+    ],
+    "proTip": "Sube tu archivo de Excel y pregunta '¿cuales son los principales hallazgos?' para obtener un resumen automático de tus datos.",
+    "pros": [
+      "No requiere conocimientos de programación",
+      "Crea gráficas automáticamente",
+      "Entiende preguntas en español"
+    ],
+    "cons": [
+      "Consultas limitadas en plan gratis",
+      "Puede tener problemas con datos muy complejos"
+    ],
+    "alternatives": [
+      "rows",
+      "wolfram",
+      "chatgpt"
+    ],
+    "keywords": [
+      "datos",
+      "excel",
+      "gráfica",
+      "analizar",
+      "CSV",
+      "visualizar",
+      "reporte",
+      "preguntar"
+    ],
+    "tags": [
+      "Análisis",
+      "Datos",
+      "Visualización"
+    ]
+  },
+  {
+    "id": "rows",
+    "name": "Rows.com",
+    "url": "https://rows.com",
+    "categories": [
+      "datos",
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis para uso básico. Pro: $59/mes por equipo",
+    "difficulty": 2,
+    "rating": 3,
+    "shortDescription": "Hoja de calculo inteligente con IA y conexiones a datos en vivo.",
+    "fullDescription": "Rows es una hoja de calculo moderna con IA integrada que permite analizar datos, crear dashboards y conectarse a fuentes de datos en vivo. A diferencia de Excel, Rows puede conectarse directamente a APIs, bases de datos y servicios como Google Analytics para traer datos automáticamente.",
+    "useCases": [
+      "Crear dashboards con datos en tiempo real",
+      "Analizar datos con asistente de IA",
+      "Conectar hojas de calculo con APIs externas",
+      "Automatizar reportes periódicos",
+      "Crear tablas inteligentes con datos en vivo"
+    ],
+    "howToStart": [
+      "Registrate en rows.com",
+      "Importa datos o conecta una fuente externa",
+      "Usa el asistente de IA para analizar y visualizar",
+      "Comparte dashboards con tu equipo"
+    ],
+    "proTip": "Conecta Rows con Google Analytics o tu CRM para tener dashboards que se actualizan automáticamente sin trabajo manual.",
+    "pros": [
+      "Conexiones a datos en vivo",
+      "IA integrada para análisis",
+      "Dashboards compartibles"
+    ],
+    "cons": [
+      "Curva de aprendizaje para conexiones",
+      "Precio elevado para equipos"
+    ],
+    "alternatives": [
+      "julius",
+      "notion-ai",
+      "wolfram"
+    ],
+    "keywords": [
+      "hoja de calculo",
+      "datos",
+      "dashboard",
+      "API",
+      "analizar",
+      "reporte",
+      "automatizar",
+      "excel"
+    ],
+    "tags": [
+      "Hojas de calculo",
+      "Dashboard",
+      "Datos en vivo"
+    ]
+  },
+  {
+    "id": "monkeylearn",
+    "name": "MonkeyLearn",
+    "url": "https://monkeylearn.com",
+    "categories": [
+      "datos"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Desde $299/mes. Prueba gratuita disponible",
+    "difficulty": 3,
+    "rating": 3,
+    "shortDescription": "Plataforma de análisis de texto con IA para clasificar y extraer datos.",
+    "fullDescription": "MonkeyLearn es una plataforma de análisis de texto con machine learning que permite clasificar documentos, analizar sentimiento, extraer información y automatizar el procesamiento de texto a gran escala. Orientada a empresas que necesitan procesar grandes volumenes de texto.",
+    "useCases": [
+      "Analizar sentimiento de resenas de clientes",
+      "Clasificar tickets de soporte automáticamente",
+      "Extraer datos de documentos no estructurados",
+      "Categorizar emails y mensajes",
+      "Monitorear menciones de marca"
+    ],
+    "howToStart": [
+      "Registrate para la prueba gratuita en monkeylearn.com",
+      "Elige un modelo pre-entrenado o crea uno personalizado",
+      "Sube tus datos de texto",
+      "Configura la automatización para procesamiento continuo"
+    ],
+    "proTip": "Empieza con los modelos pre-entrenados de análisis de sentimiento para obtener resultados rapidos sin necesidad de entrenar tu propio modelo.",
+    "pros": [
+      "Modelos pre-entrenados listos para usar",
+      "Automatización de procesamiento de texto",
+      "Integraciones con herramientas populares"
+    ],
+    "cons": [
+      "Precio muy elevado",
+      "Orientado a empresas grandes"
+    ],
+    "alternatives": [
+      "obviously-ai",
+      "julius",
+      "chatgpt"
+    ],
+    "keywords": [
+      "texto",
+      "clasificar",
+      "sentimiento",
+      "análisis",
+      "extraer",
+      "automatizar",
+      "NLP",
+      "datos"
+    ],
+    "tags": [
+      "NLP",
+      "Análisis de texto",
+      "Empresarial"
+    ]
+  },
+  {
+    "id": "obviously-ai",
+    "name": "Obviously AI",
+    "url": "https://obviously.ai",
+    "categories": [
+      "datos"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Desde $75/mes. Prueba gratuita",
+    "difficulty": 2,
+    "rating": 3,
+    "shortDescription": "Plataforma de predicción con IA sin necesidad de código.",
+    "fullDescription": "Obviously AI permite crear modelos de predicción y machine learning sin escribir código. Sube tus datos, selecciona lo que quieres predecir, y la plataforma entrena automáticamente un modelo y te da resultados con explicaciones claras. Ideal para equipos de negocio sin científicos de datos.",
+    "useCases": [
+      "Predecir ventas y demanda",
+      "Identificar clientes con riesgo de abandono",
+      "Predecir el resultado de campanas de marketing",
+      "Analizar factores que afectan métricas clave",
+      "Crear modelos predictivos sin programar"
+    ],
+    "howToStart": [
+      "Registrate en obviously.ai",
+      "Sube tu dataset de datos",
+      "Selecciona la columna que quieres predecir",
+      "Obtendras un modelo entrenado con explicaciones"
+    ],
+    "proTip": "Asegurate de que tus datos esten limpios antes de subirlos: entre mejores datos, mejores predicciones obtendras.",
+    "pros": [
+      "No requiere conocimientos de programación",
+      "Explicaciones claras de los resultados",
+      "Rápido para crear modelos"
+    ],
+    "cons": [
+      "Precio elevado para individuos",
+      "Precisiones pueden ser limitadas con datos complejos"
+    ],
+    "alternatives": [
+      "julius",
+      "polymer",
+      "wolfram"
+    ],
+    "keywords": [
+      "predicción",
+      "datos",
+      "modelo",
+      "machine learning",
+      "ventas",
+      "análisis",
+      "sin código",
+      "predecir"
+    ],
+    "tags": [
+      "Machine Learning",
+      "Predicción",
+      "No-code"
+    ]
+  },
+  {
+    "id": "polymer",
+    "name": "Polymer Search",
+    "url": "https://polymersearch.com",
+    "categories": [
+      "datos"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Desde $20/mes. Prueba gratuita de 7 días",
+    "difficulty": 2,
+    "rating": 3,
+    "shortDescription": "Convierte datos en dashboards interactivos automáticamente con IA.",
+    "fullDescription": "Polymer Search transforma tus datos en dashboards interactivos y visualizaciones automáticamente. Sube un archivo de datos y Polymer crea tableros con gráficas, tablas y métricas clave sin necesidad de configuración manual. Permite buscar dentro de los datos con lenguaje natural.",
+    "useCases": [
+      "Crear dashboards automáticos desde Excel o CSV",
+      "Visualizar métricas de negocio rápidamente",
+      "Buscar insights en datos con lenguaje natural",
+      "Compartir tableros interactivos con el equipo",
+      "Monitorear KPIs de forma visual"
+    ],
+    "howToStart": [
+      "Registrate en polymersearch.com",
+      "Sube tu archivo de datos",
+      "Polymer generara un dashboard automático",
+      "Personaliza y comparte con tu equipo"
+    ],
+    "proTip": "Sube tus datos de Google Sheets y Polymer creara un dashboard interactivo en segundos que puedes compartir con tu equipo.",
+    "pros": [
+      "Dashboards automáticos sin configuración",
+      "Búsqueda en lenguaje natural",
+      "Fácil de compartir"
+    ],
+    "cons": [
+      "Funcionalidades limitadas comparado con herramientas BI",
+      "Precio puede ser alto para uso individual"
+    ],
+    "alternatives": [
+      "julius",
+      "rows",
+      "obviously-ai"
+    ],
+    "keywords": [
+      "dashboard",
+      "datos",
+      "visualizar",
+      "métricas",
+      "gráfica",
+      "KPI",
+      "excel",
+      "automático"
+    ],
+    "tags": [
+      "Dashboard",
+      "Visualización",
+      "BI"
+    ]
+  },
+  {
+    "id": "notebooklm",
+    "name": "NotebookLM",
+    "url": "https://notebooklm.google.com",
+    "categories": [
+      "investigación",
+      "educación"
+    ],
+    "pricing": "gratis",
+    "pricingDetail": "Completamente gratis con cuenta de Google",
+    "difficulty": 1,
+    "rating": 5,
+    "shortDescription": "Asistente de investigación de Google que analiza tus documentos y genera podcasts.",
+    "fullDescription": "NotebookLM es una herramienta gratuita de Google que permite subir documentos, articulos, videos de YouTube y páginas web para crear un asistente de IA personalizado sobre ese contenido. Puede generar resumenes, responder preguntas y hasta crear podcasts conversacionales automáticos basados en tus documentos.",
+    "useCases": [
+      "Analizar y resumir documentos de investigación",
+      "Generar podcasts conversacionales sobre tus documentos",
+      "Crear guías de estudio a partir de material académico",
+      "Responder preguntas específicas sobre tus fuentes",
+      "Comparar y sintetizar información de multiples documentos"
+    ],
+    "howToStart": [
+      "Ve a notebooklm.google.com con tu cuenta de Google",
+      "Crea un notebook y sube tus documentos",
+      "Haz preguntas sobre el contenido subido",
+      "Genera un Audio Overview para obtener un podcast"
+    ],
+    "proTip": "Sube tus apuntes de clase y genera un Audio Overview: obtendras un podcast de dos personas explicando el tema de forma amena.",
+    "pros": [
+      "Completamente gratis",
+      "Genera podcasts automáticos increibles",
+      "Solo responde basandose en tus fuentes"
+    ],
+    "cons": [
+      "Requiere subir documentos para funcionar",
+      "Solo analiza contenido que tu proporcionas"
+    ],
+    "alternatives": [
+      "perplexity",
+      "elicit",
+      "consensus"
+    ],
+    "keywords": [
+      "investigar",
+      "documentos",
+      "resumir",
+      "podcast",
+      "estudiar",
+      "analizar",
+      "fuentes",
+      "google"
+    ],
+    "tags": [
+      "Investigación",
+      "Educación",
+      "Google"
+    ]
+  },
+  {
+    "id": "elicit",
+    "name": "Elicit",
+    "url": "https://elicit.com",
+    "categories": [
+      "investigación"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "5K creditos gratis. Plus: $10/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Asistente de investigación académica con IA para encontrar y analizar papers.",
+    "fullDescription": "Elicit es un asistente de investigación académica que usa IA para encontrar papers relevantes, extraer datos clave, resumir hallazgos y organizar la literatura científica. Es especialmente útil para investigadores, estudiantes de posgrado y profesionales que necesitan revisar literatura académica eficientemente.",
+    "useCases": [
+      "Encontrar papers académicos relevantes",
+      "Extraer datos y hallazgos de estudios",
+      "Crear tablas comparativas de investigaciones",
+      "Resumir articulos científicos",
+      "Organizar revision de literatura"
+    ],
+    "howToStart": [
+      "Registrate en elicit.com",
+      "Escribe tu pregunta de investigación",
+      "Elicit buscara papers relevantes automáticamente",
+      "Revisa los resumenes y extrae datos clave"
+    ],
+    "proTip": "Usa Elicit para crear tablas comparativas automáticas de multiples papers: ahorra horas de trabajo manual en revisiones de literatura.",
+    "pros": [
+      "Especializado en investigación académica",
+      "Extrae datos de papers automáticamente",
+      "Crea tablas comparativas de estudios"
+    ],
+    "cons": [
+      "Limitado a contenido académico",
+      "Creditos se agotan rápido con uso intensivo"
+    ],
+    "alternatives": [
+      "semantic-scholar",
+      "connected-papers",
+      "consensus"
+    ],
+    "keywords": [
+      "investigar",
+      "académico",
+      "paper",
+      "ciencia",
+      "estudio",
+      "literatura",
+      "datos",
+      "resumir"
+    ],
+    "tags": [
+      "Académico",
+      "Investigación",
+      "Papers"
+    ]
+  },
+  {
+    "id": "semantic-scholar",
+    "name": "Semantic Scholar",
+    "url": "https://semanticscholar.org",
+    "categories": [
+      "investigación"
+    ],
+    "pricing": "gratis",
+    "pricingDetail": "Completamente gratis",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Motor de búsqueda académico con IA que encuentra y conecta papers relevantes.",
+    "fullDescription": "Semantic Scholar es un motor de búsqueda académico gratuito desarrollado por el Allen Institute for AI. Usa IA para analizar millones de papers científicos, identificar los más influyentes, mostrar conexiones entre estudios y generar resumenes automáticos. Es una herramienta esencial para cualquier investigador.",
+    "useCases": [
+      "Buscar papers académicos con IA",
+      "Encontrar los articulos más influyentes sobre un tema",
+      "Descubrir conexiones entre estudios",
+      "Acceder a resumenes generados por IA",
+      "Seguir tendencias en campos de investigación"
+    ],
+    "howToStart": [
+      "Ve a semanticscholar.org",
+      "Escribe tu tema de investigación",
+      "Explora los resultados con filtros de fecha, citas, etc.",
+      "Usa los resumenes de IA para evaluar papers rápidamente"
+    ],
+    "proTip": "Activa las alertas por email para recibir notificaciones cuando se publiquen nuevos papers sobre tu tema de interes.",
+    "pros": [
+      "Completamente gratis",
+      "Base de datos enorme de papers",
+      "Resumenes con IA incluidos"
+    ],
+    "cons": [
+      "Interfaz puede ser abrumadora al inicio",
+      "No todos los papers tienen texto completo"
+    ],
+    "alternatives": [
+      "connected-papers",
+      "elicit",
+      "consensus"
+    ],
+    "keywords": [
+      "académico",
+      "buscar",
+      "paper",
+      "científico",
+      "investigar",
+      "citas",
+      "estudio",
+      "gratis"
+    ],
+    "tags": [
+      "Académico",
+      "Búsqueda",
+      "Gratis"
+    ]
+  },
+  {
+    "id": "connected-papers",
+    "name": "Connected Papers",
+    "url": "https://connectedpapers.com",
+    "categories": [
+      "investigación"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "5 gráficas gratis/mes. Premium: $3/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Visualiza conexiones entre papers académicos en un grafo interactivo.",
+    "fullDescription": "Connected Papers crea grafos visuales interactivos que muestran las conexiones entre papers académicos. A partir de un paper inicial, genera un mapa visual de articulos relacionados, permitiendo descubrir investigaciones relevantes que podrias haber pasado por alto. Es excelente para revision de literatura.",
+    "useCases": [
+      "Descubrir papers relacionados visualmente",
+      "Explorar un campo de investigación nuevo",
+      "Encontrar literatura relevante que no aparece en busquedas normales",
+      "Visualizar la evolucion de un tema de investigación",
+      "Identificar autores y grupos de investigación clave"
+    ],
+    "howToStart": [
+      "Ve a connectedpapers.com",
+      "Busca un paper que ya conozcas sobre tu tema",
+      "Genera un grafo de papers conectados",
+      "Explora los nodos para descubrir nuevas investigaciones"
+    ],
+    "proTip": "Empieza con el paper más importante de tu area y genera el grafo: descubriras investigaciones relacionadas que no encontrarias con una búsqueda normal.",
+    "pros": [
+      "Visualización única de conexiones",
+      "Descubre papers ocultos",
+      "Muy barato en versión premium"
+    ],
+    "cons": [
+      "Gratuito solo 5 gráficas por mes",
+      "No todos los papers estan indexados"
+    ],
+    "alternatives": [
+      "semantic-scholar",
+      "elicit",
+      "consensus"
+    ],
+    "keywords": [
+      "papers",
+      "conexiones",
+      "grafo",
+      "visual",
+      "investigar",
+      "descubrir",
+      "académico",
+      "literatura"
+    ],
+    "tags": [
+      "Visualización",
+      "Académico",
+      "Grafos"
+    ]
+  },
+  {
+    "id": "consensus",
+    "name": "Consensus",
+    "url": "https://consensus.app",
+    "categories": [
+      "investigación"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "20 busquedas gratis/mes. Premium: $7/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Buscador que responde preguntas de investigación con evidencia científica.",
+    "fullDescription": "Consensus es un motor de búsqueda que responde preguntas usando exclusivamente evidencia de papers científicos. En lugar de buscar páginas web, busca en millones de estudios académicos y presenta las conclusiones con un medidor de consenso científico sobre el tema consultado.",
+    "useCases": [
+      "Obtener respuestas basadas en evidencia científica",
+      "Verificar afirmaciones con estudios reales",
+      "Encontrar consenso científico sobre temas controversiales",
+      "Buscar evidencia para presentaciones y reportes",
+      "Resolver debates con datos científicos"
+    ],
+    "howToStart": [
+      "Ve a consensus.app",
+      "Escribe tu pregunta de investigación en lenguaje natural",
+      "Lee el resumen del consenso científico",
+      "Explora los papers individuales para más detalle"
+    ],
+    "proTip": "Formula tu pregunta como si le preguntaras a un científico: 'Es efectiva la meditacion para reducir el estres?' funciona mejor que 'meditacion estres'.",
+    "pros": [
+      "Respuestas basadas solo en ciencia",
+      "Medidor de consenso científico",
+      "Fácil de usar para no académicos"
+    ],
+    "cons": [
+      "Base de datos limitada a ciertos campos",
+      "Busquedas gratuitas limitadas"
+    ],
+    "alternatives": [
+      "perplexity",
+      "elicit",
+      "semantic-scholar"
+    ],
+    "keywords": [
+      "ciencia",
+      "evidencia",
+      "investigar",
+      "preguntar",
+      "consenso",
+      "estudios",
+      "verificar",
+      "papers"
+    ],
+    "tags": [
+      "Evidencia",
+      "Ciencia",
+      "Consenso"
+    ]
+  },
+  {
+    "id": "otter",
+    "name": "Otter.ai",
+    "url": "https://otter.ai",
+    "categories": [
+      "transcripción",
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "600 minutos gratis/mes. Pro: $17/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Transcribe reuniones y conversaciones automáticamente con IA.",
+    "fullDescription": "Otter.ai es una herramienta de transcripción automática que convierte conversaciones de voz en texto en tiempo real. Se integra con Zoom, Google Meet y Microsoft Teams para transcribir reuniones automáticamente, generar resumenes y permitir buscar dentro de las transcripciones.",
+    "useCases": [
+      "Transcribir reuniones de Zoom y Google Meet",
+      "Generar resumenes automáticos de llamadas",
+      "Buscar información dentro de transcripciones",
+      "Compartir notas de reuniones con el equipo",
+      "Crear action items automáticamente"
+    ],
+    "howToStart": [
+      "Registrate en otter.ai",
+      "Conecta tu calendario y herramientas de videoconferencia",
+      "Otter se unira automáticamente a tus reuniones",
+      "Revisa las transcripciones y resumenes despues"
+    ],
+    "proTip": "Conecta Otter con tu calendario y se unira automáticamente a todas tus reuniones de Zoom y Google Meet sin que hagas nada.",
+    "pros": [
+      "Transcripción en tiempo real",
+      "Se integra con Zoom y Meet",
+      "Resumenes automáticos"
+    ],
+    "cons": [
+      "Mejor en ingles que en español",
+      "La transcripción puede tener errores"
+    ],
+    "alternatives": [
+      "fireflies",
+      "descript",
+      "copilot"
+    ],
+    "keywords": [
+      "transcribir",
+      "reunión",
+      "voz",
+      "texto",
+      "zoom",
+      "notas",
+      "automático",
+      "llamada"
+    ],
+    "tags": [
+      "Transcripción",
+      "Reuniones",
+      "Productividad"
+    ]
+  },
+  {
+    "id": "fireflies",
+    "name": "Fireflies.ai",
+    "url": "https://fireflies.ai",
+    "categories": [
+      "transcripción",
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis limitado. Pro: $18/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Asistente de reuniones con IA que transcribe, resume y analiza llamadas.",
+    "fullDescription": "Fireflies.ai es un asistente de reuniones con IA que se une automáticamente a tus videollamadas para transcribir, resumir y analizar las conversaciones. Genera resumenes con los puntos clave, action items y permite buscar cualquier tema mencionado en reuniones pasadas.",
+    "useCases": [
+      "Transcribir reuniones automáticamente",
+      "Generar resumenes con puntos clave y tareas",
+      "Buscar temas específicos en reuniones pasadas",
+      "Analizar patrones en conversaciones de ventas",
+      "Compartir fragmentos relevantes con el equipo"
+    ],
+    "howToStart": [
+      "Registrate en fireflies.ai",
+      "Conecta tu calendario y herramienta de videollamadas",
+      "Fireflies se unira a tus reuniones automáticamente",
+      "Revisa transcripciones y resumenes en el dashboard"
+    ],
+    "proTip": "Usa la búsqueda de Fireflies para encontrar exactamente donde se menciono un tema en reuniones pasadas: ahorra horas buscando en notas.",
+    "pros": [
+      "Se une automáticamente a reuniones",
+      "Buenos resumenes con action items",
+      "Búsqueda inteligente en transcripciones"
+    ],
+    "cons": [
+      "Plan gratis limitado en almacenamiento",
+      "Algunos participantes pueden no querer ser grabados"
+    ],
+    "alternatives": [
+      "otter",
+      "descript",
+      "reclaim"
+    ],
+    "keywords": [
+      "reunión",
+      "transcribir",
+      "resumir",
+      "llamada",
+      "zoom",
+      "notas",
+      "equipo",
+      "automático"
+    ],
+    "tags": [
+      "Reuniones",
+      "Transcripción",
+      "Análisis"
+    ]
+  },
+  {
+    "id": "zapier-ai",
+    "name": "Zapier AI",
+    "url": "https://zapier.com",
+    "categories": [
+      "automatización",
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "100 tareas gratis/mes. Desde $20/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Conecta y automatiza aplicaciones con IA, sin necesidad de programar.",
+    "fullDescription": "Zapier es la plataforma de automatización más popular del mundo, ahora potenciada con IA. Permite conectar más de 6000 aplicaciones y crear flujos de trabajo automáticos sin programar. La IA ayuda a crear automatizaciones con lenguaje natural y a procesar datos inteligentemente.",
+    "useCases": [
+      "Automatizar flujos de trabajo entre aplicaciones",
+      "Enviar datos entre herramientas automáticamente",
+      "Crear automatizaciones con instrucciones en lenguaje natural",
+      "Procesar emails y documentos con IA",
+      "Automatizar publicaciones en redes sociales"
+    ],
+    "howToStart": [
+      "Registrate gratis en zapier.com",
+      "Describe la automatización que necesitas en lenguaje natural",
+      "O elige un trigger y acciones manualmente",
+      "Activa el Zap y dejalo trabajar automáticamente"
+    ],
+    "proTip": "Describe tu automatización en español como 'cuando reciba un email con factura, guardala en Google Drive y notificame en Slack' y Zapier la creara.",
+    "pros": [
+      "6000+ aplicaciones conectadas",
+      "IA para crear automatizaciones con texto",
+      "Sin necesidad de programar"
+    ],
+    "cons": [
+      "El plan gratis es muy básico",
+      "Las automatizaciones complejas requieren plan de pago"
+    ],
+    "alternatives": [
+      "make",
+      "bardeen",
+      "relevance-ai"
+    ],
+    "keywords": [
+      "automatizar",
+      "conectar",
+      "apps",
+      "flujo",
+      "workflow",
+      "email",
+      "integrar",
+      "sin código"
+    ],
+    "tags": [
+      "Automatización",
+      "Integraciones",
+      "No-code"
+    ]
+  },
+  {
+    "id": "make",
+    "name": "Make",
+    "url": "https://make.com",
+    "categories": [
+      "automatización",
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "1000 operaciones gratis/mes. Desde $9/mes",
+    "difficulty": 3,
+    "rating": 4,
+    "shortDescription": "Plataforma de automatización visual para crear flujos de trabajo complejos.",
+    "fullDescription": "Make (antes Integromat) es una plataforma de automatización visual que permite crear flujos de trabajo complejos conectando cientos de aplicaciones. Su interfaz visual de arrastrar y soltar muestra cada paso de la automatización como un nodo en un diagrama, facilitando la creación de procesos sofisticados.",
+    "useCases": [
+      "Crear flujos de automatización complejos visualmente",
+      "Conectar herramientas de negocio entre si",
+      "Procesar datos entre multiples aplicaciones",
+      "Automatizar reportes y notificaciones",
+      "Crear integraciones personalizadas sin código"
+    ],
+    "howToStart": [
+      "Registrate gratis en make.com",
+      "Crea un nuevo escenario",
+      "Elige el trigger y las aplicaciones a conectar",
+      "Configura los pasos visualmente y activa el escenario"
+    ],
+    "proTip": "Make permite flujos mucho más complejos que Zapier: usa condiciones, bucles y ramificaciones para automatizaciones sofisticadas.",
+    "pros": [
+      "Interfaz visual muy clara",
+      "Más flexible que Zapier para flujos complejos",
+      "Plan gratis con 1000 operaciones"
+    ],
+    "cons": [
+      "Curva de aprendizaje más pronunciada",
+      "Requiere entender logica de programación básica"
+    ],
+    "alternatives": [
+      "zapier-ai",
+      "bardeen",
+      "relevance-ai"
+    ],
+    "keywords": [
+      "automatizar",
+      "visual",
+      "flujo",
+      "conectar",
+      "integrar",
+      "proceso",
+      "nodos",
+      "workflow"
+    ],
+    "tags": [
+      "Automatización",
+      "Visual",
+      "Integraciones"
+    ]
+  },
+  {
+    "id": "reclaim",
+    "name": "Reclaim.ai",
+    "url": "https://reclaim.ai",
+    "categories": [
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis para individuos. Pro: $8/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Asistente de calendario con IA que optimiza tu tiempo automáticamente.",
+    "fullDescription": "Reclaim.ai es un asistente de calendario inteligente que optimiza tu agenda automáticamente. Programa y reprograma reuniones, tiempo de enfoque, pausas y tareas basandose en tus prioridades y habitos. Se integra con Google Calendar y herramientas de gestion de proyectos.",
+    "useCases": [
+      "Optimizar tu calendario automáticamente",
+      "Proteger tiempo de enfoque para trabajo profundo",
+      "Programar pausas y habitos saludables",
+      "Sincronizar calendarios personales y de trabajo",
+      "Programar reuniones inteligentemente segun disponibilidad"
+    ],
+    "howToStart": [
+      "Registrate en reclaim.ai",
+      "Conecta tu Google Calendar",
+      "Define tus prioridades: tiempo de enfoque, pausas, tareas",
+      "Deja que Reclaim organice tu semana automáticamente"
+    ],
+    "proTip": "Define bloques de 'tiempo de enfoque' y Reclaim los protegera automáticamente: si alguien programa una reunión, Reclaim mueve tu tiempo de enfoque a otro horario.",
+    "pros": [
+      "Optimización automática del calendario",
+      "Protege tiempo de enfoque",
+      "Plan gratis funcional"
+    ],
+    "cons": [
+      "Solo funciona con Google Calendar",
+      "Puede ser difícil confiar en la programación automática"
+    ],
+    "alternatives": [
+      "zapier-ai",
+      "notion-ai",
+      "fireflies"
+    ],
+    "keywords": [
+      "calendario",
+      "tiempo",
+      "productividad",
+      "organizar",
+      "reuniones",
+      "enfoque",
+      "agenda",
+      "planificar"
+    ],
+    "tags": [
+      "Calendario",
+      "Productividad",
+      "Optimización"
+    ]
+  },
+  {
+    "id": "khanmigo",
+    "name": "Khanmigo",
+    "url": "https://khanacademy.org",
+    "categories": [
+      "educación"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Disponible con Khan Academy gratis. Premium: $44/año",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Tutor de IA de Khan Academy que guía el aprendizaje paso a paso.",
+    "fullDescription": "Khanmigo es el tutor de IA de Khan Academy que ayuda a los estudiantes a aprender guiandolos paso a paso en lugar de darles las respuestas directamente. Funciona como un profesor personal que hace preguntas, da pistas y adapta las explicaciones al nivel del estudiante.",
+    "useCases": [
+      "Aprender matemáticas con un tutor personal",
+      "Practicar idiomas con conversación guiada",
+      "Preparar examenes con ejercicios personalizados",
+      "Entender conceptos dificiles paso a paso",
+      "Obtener ayuda con tareas sin que te den la respuesta"
+    ],
+    "howToStart": [
+      "Ve a khanacademy.org y crea una cuenta",
+      "Busca el tema que quieres aprender",
+      "Activa Khanmigo como tu tutor de IA",
+      "Interactua respondiendo preguntas y pidiendo ayuda"
+    ],
+    "proTip": "Khanmigo no te da la respuesta: te hace preguntas para que llegues a la solucion tu mismo, lo que mejora tu aprendizaje real.",
+    "pros": [
+      "Enfoque pedagógico real, no solo respuestas",
+      "Adaptado al nivel del estudiante",
+      "Parte de Khan Academy gratuita"
+    ],
+    "cons": [
+      "Funciones premium requieren suscripción",
+      "Mejor para materias de Khan Academy"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "wolfram",
+      "quizlet"
+    ],
+    "keywords": [
+      "aprender",
+      "tutor",
+      "matemáticas",
+      "estudiar",
+      "educación",
+      "escuela",
+      "ejercicios",
+      "profesor"
+    ],
+    "tags": [
+      "Educación",
+      "Tutorias",
+      "Aprendizaje"
+    ]
+  },
+  {
+    "id": "duolingo-max",
+    "name": "Duolingo Max",
+    "url": "https://duolingo.com",
+    "categories": [
+      "educación",
+      "traducción"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Duolingo Max: $30/mes o $168/año",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Duolingo con IA para practicar conversaciones y obtener explicaciones personalizadas.",
+    "fullDescription": "Duolingo Max es la versión premium de Duolingo que incluye funciones de IA avanzadas: roleplay para practicar conversaciones reales en el idioma que estudias y explicaciones personalizadas de tus errores. La IA te corrige y adapta las lecciones a tus areas de mejora.",
+    "useCases": [
+      "Practicar conversaciones en otro idioma con IA",
+      "Obtener explicaciones personalizadas de errores",
+      "Aprender idiomas con un tutor de IA",
+      "Preparar situaciones reales en otro idioma",
+      "Mejorar pronunciacion y comprension"
+    ],
+    "howToStart": [
+      "Descarga Duolingo o ve a duolingo.com",
+      "Completa algunas lecciones en el idioma que estudias",
+      "Suscribete a Duolingo Max",
+      "Usa el Roleplay para practicar conversaciones"
+    ],
+    "proTip": "Usa el Roleplay de Duolingo Max para practicar situaciones reales: pedir comida, preguntar direcciones, entrevistas de trabajo en otro idioma.",
+    "pros": [
+      "Aprende idiomas de forma interactiva",
+      "Conversaciones con IA muy naturales",
+      "Explicaciones personalizadas de errores"
+    ],
+    "cons": [
+      "Precio elevado comparado con Duolingo Plus",
+      "Disponible solo para algunos idiomas"
+    ],
+    "alternatives": [
+      "deepl",
+      "google-translate",
+      "chatgpt"
+    ],
+    "keywords": [
+      "idiomas",
+      "aprender",
+      "ingles",
+      "hablar",
+      "conversar",
+      "practicar",
+      "curso",
+      "estudiar"
+    ],
+    "tags": [
+      "Idiomas",
+      "Aprendizaje",
+      "Conversación"
+    ]
+  },
+  {
+    "id": "quizlet",
+    "name": "Quizlet AI",
+    "url": "https://quizlet.com",
+    "categories": [
+      "educación"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites. Plus: $3/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Plataforma de estudio con IA que crea flashcards y examenes de práctica.",
+    "fullDescription": "Quizlet es una plataforma de estudio que usa IA para crear flashcards inteligentes, examenes de práctica y planes de estudio personalizados. El asistente de IA Q-Chat ayuda a estudiar de forma conversacional, adaptandose a lo que ya sabes y enfocandose en lo que necesitas reforzar.",
+    "useCases": [
+      "Crear flashcards de estudio automáticamente",
+      "Generar examenes de práctica personalizados",
+      "Estudiar con el asistente conversacional Q-Chat",
+      "Memorizar vocabulario y conceptos",
+      "Preparar examenes universitarios"
+    ],
+    "howToStart": [
+      "Registrate gratis en quizlet.com",
+      "Crea un set de estudio o busca uno existente",
+      "Usa Q-Chat para estudiar conversacionalmente",
+      "Práctica con los modos de estudio y examenes"
+    ],
+    "proTip": "Pega tus apuntes de clase en Quizlet y la IA generara flashcards automáticamente: no pierdas tiempo creandolas manualmente.",
+    "pros": [
+      "Flashcards con IA automáticas",
+      "Multiples modos de estudio",
+      "Base enorme de contenido existente"
+    ],
+    "cons": [
+      "Funciones de IA limitadas en plan gratis",
+      "Anuncios en la versión gratuita"
+    ],
+    "alternatives": [
+      "khanmigo",
+      "notebooklm",
+      "wolfram"
+    ],
+    "keywords": [
+      "estudiar",
+      "flashcards",
+      "examen",
+      "memorizar",
+      "aprender",
+      "universidad",
+      "repasar",
+      "quiz"
+    ],
+    "tags": [
+      "Estudio",
+      "Flashcards",
+      "Examenes"
+    ]
+  },
+  {
+    "id": "wolfram",
+    "name": "Wolfram Alpha",
+    "url": "https://wolframalpha.com",
+    "categories": [
+      "educación",
+      "datos",
+      "investigación"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis básico. Pro: $5/mes. Pro Premium: $8/mes",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Motor de conocimiento computacional para matemáticas, ciencias y datos.",
+    "fullDescription": "Wolfram Alpha es un motor de conocimiento computacional que resuelve problemas matemáticos, genera gráficos, calcula estadísticas y responde preguntas factuales usando computacion y bases de datos curadas. Es la referencia para matemáticas, física, química, ingenieria y cualquier pregunta que requiera calculo preciso.",
+    "useCases": [
+      "Resolver ecuaciónes y problemas matemáticos paso a paso",
+      "Generar gráficos y visualizaciones de funciones",
+      "Consultar datos estadisticos y científicos",
+      "Convertir unidades y calcular formulas",
+      "Obtener datos de nutricion, química y física"
+    ],
+    "howToStart": [
+      "Ve a wolframalpha.com",
+      "Escribe tu ecuación, pregunta o calculo",
+      "Obtendras la solucion con pasos detallados",
+      "Explora las diferentes secciones de la respuesta"
+    ],
+    "proTip": "Wolfram Alpha muestra los pasos de resolución de ecuaciónes: úsalo para entender el proceso, no solo para obtener la respuesta.",
+    "pros": [
+      "Precisiones matemáticas garantizadas",
+      "Resolución paso a paso",
+      "Base de datos de conocimiento curada"
+    ],
+    "cons": [
+      "Interfaz no muy moderna",
+      "Funciones avanzadas requieren Pro"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "julius",
+      "notebooklm"
+    ],
+    "keywords": [
+      "matemáticas",
+      "calcular",
+      "ecuación",
+      "ciencia",
+      "física",
+      "gráficos",
+      "estadística",
+      "resolver"
+    ],
+    "tags": [
+      "Matemáticas",
+      "Computacion",
+      "Ciencias"
+    ]
+  },
+  {
+    "id": "hubspot-ai",
+    "name": "HubSpot AI",
+    "url": "https://hubspot.com",
+    "categories": [
+      "negocios"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "CRM gratis. Herramientas de IA desde $20/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "CRM con IA para automatizar ventas, marketing y atencion al cliente.",
+    "fullDescription": "HubSpot es el CRM más popular para pequeñas y medianas empresas, ahora potenciado con herramientas de IA. Permite automatizar emails de ventas, generar contenido de marketing, analizar datos de clientes y crear chatbots para atencion al cliente, todo integrado en una sola plataforma.",
+    "useCases": [
+      "Automatizar emails de seguimiento de ventas",
+      "Generar contenido de marketing con IA",
+      "Crear chatbots para atencion al cliente",
+      "Analizar el rendimiento de campanas",
+      "Predecir el potencial de cierre de ventas"
+    ],
+    "howToStart": [
+      "Registrate gratis en hubspot.com para el CRM",
+      "Importa tus contactos y datos de clientes",
+      "Activa las herramientas de IA en la configuración",
+      "Empieza a automatizar tareas de ventas y marketing"
+    ],
+    "proTip": "Usa el asistente de IA de HubSpot para generar emails de seguimiento personalizados para cada prospecto: aumentan significativamente las tasas de respuesta.",
+    "pros": [
+      "CRM base gratuito",
+      "IA integrada en todo el flujo",
+      "Todo-en-uno para ventas y marketing"
+    ],
+    "cons": [
+      "Precio escala rápidamente con funciones",
+      "Puede ser complejo de configurar"
+    ],
+    "alternatives": [
+      "salesforce-einstein",
+      "surfer-seo",
+      "adcreative"
+    ],
+    "keywords": [
+      "CRM",
+      "ventas",
+      "marketing",
+      "clientes",
+      "email",
+      "automatizar",
+      "negocio",
+      "leads"
+    ],
+    "tags": [
+      "CRM",
+      "Marketing",
+      "Ventas"
+    ]
+  },
+  {
+    "id": "salesforce-einstein",
+    "name": "Salesforce Einstein",
+    "url": "https://salesforce.com/einstein",
+    "categories": [
+      "negocios"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Incluido en planes Salesforce desde $25/usuario/mes",
+    "difficulty": 3,
+    "rating": 4,
+    "shortDescription": "IA empresarial de Salesforce para predicciones de ventas y automatización.",
+    "fullDescription": "Salesforce Einstein es la capa de inteligencia artificial integrada en la plataforma Salesforce, el CRM lider del mercado empresarial. Ofrece predicciones de ventas, puntuacion de leads, recomendaciones automáticas, análisis de sentimiento y automatización inteligente para grandes equipos de ventas.",
+    "useCases": [
+      "Predecir probabilidad de cierre de ventas",
+      "Puntuar leads automáticamente por potencial",
+      "Generar análisis de sentimiento de clientes",
+      "Automatizar tareas repetitivas de CRM",
+      "Recomendar proximas acciones para vendedores"
+    ],
+    "howToStart": [
+      "Necesitas una suscripción de Salesforce activa",
+      "Activa Einstein en la configuración de tu org",
+      "Entrena los modelos con tus datos de ventas",
+      "Revisa las predicciones y recomendaciones en el dashboard"
+    ],
+    "proTip": "Einstein mejora con el tiempo: cuantos más datos de ventas tenga tu Salesforce, más precisas seran las predicciones de cierre.",
+    "pros": [
+      "Predicciones de ventas muy precisas",
+      "Integrado nativamente en Salesforce",
+      "Automatización inteligente"
+    ],
+    "cons": [
+      "Requiere suscripción a Salesforce",
+      "Orientado a empresas grandes"
+    ],
+    "alternatives": [
+      "hubspot-ai",
+      "adcreative",
+      "surfer-seo"
+    ],
+    "keywords": [
+      "ventas",
+      "CRM",
+      "predicción",
+      "empresa",
+      "leads",
+      "automatizar",
+      "salesforce",
+      "negocio"
+    ],
+    "tags": [
+      "Empresarial",
+      "CRM",
+      "Predicción"
+    ]
+  },
+  {
+    "id": "surfer-seo",
+    "name": "Surfer SEO",
+    "url": "https://surferseo.com",
+    "categories": [
+      "negocios",
+      "escritura"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Desde $89/mes. Prueba de 7 días",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Herramienta de SEO con IA para optimizar contenido y posicionar en Google.",
+    "fullDescription": "Surfer SEO es una herramienta de optimización de contenido que usa IA para analizar los primeros resultados de Google y darte recomendaciones específicas para superar a la competencia. Genera guías de contenido, sugiere palabras clave, estructura de encabezados y longitud optima para cada articulo.",
+    "useCases": [
+      "Optimizar articulos para posicionar en Google",
+      "Generar guías de contenido basadas en competencia",
+      "Identificar palabras clave estrategicas",
+      "Analizar la estructura de contenido ganador",
+      "Crear briefs de contenido para escritores"
+    ],
+    "howToStart": [
+      "Registrate en surferseo.com",
+      "Introduce la palabra clave objetivo",
+      "Analiza el contenido de los primeros resultados",
+      "Sigue las recomendaciones para crear contenido optimizado"
+    ],
+    "proTip": "Escribe tu articulo en el editor de Surfer y sigue el puntaje en tiempo real: apunta a 80+ puntos para maximizar tus chances de posicionar.",
+    "pros": [
+      "Recomendaciones basadas en datos reales",
+      "Editor de contenido en tiempo real",
+      "Análisis de competencia detallado"
+    ],
+    "cons": [
+      "Precio elevado",
+      "Requiere conocimientos basicos de SEO"
+    ],
+    "alternatives": [
+      "jasper",
+      "writesonic",
+      "hubspot-ai"
+    ],
+    "keywords": [
+      "SEO",
+      "google",
+      "posicionar",
+      "contenido",
+      "palabras clave",
+      "ranking",
+      "articulo",
+      "búsqueda"
+    ],
+    "tags": [
+      "SEO",
+      "Marketing",
+      "Contenido"
+    ]
+  },
+  {
+    "id": "adcreative",
+    "name": "AdCreative.ai",
+    "url": "https://adcreative.ai",
+    "categories": [
+      "negocios",
+      "diseño"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Desde $29/mes. Prueba gratuita de 7 días",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Genera creatividades publicitarias con IA para redes sociales y Google Ads.",
+    "fullDescription": "AdCreative.ai genera automáticamente creatividades para anuncios publicitarios en redes sociales y Google Ads. Usando IA, crea multiples variaciones de anuncios con imágenes, textos y llamados a la accion optimizados para conversion. Predice que creatividades tendran mejor rendimiento antes de publicarlas.",
+    "useCases": [
+      "Generar anuncios para Facebook e Instagram Ads",
+      "Crear variaciones de creatividades para A/B testing",
+      "Diseñar banners publicitarios automáticamente",
+      "Generar textos publicitarios optimizados",
+      "Predecir rendimiento de anuncios antes de publicar"
+    ],
+    "howToStart": [
+      "Registrate para la prueba gratuita en adcreative.ai",
+      "Sube el logo y colores de tu marca",
+      "Describe tu producto o servicio",
+      "Genera multiples creatividades y elige las mejores"
+    ],
+    "proTip": "Genera al menos 10 variaciones de cada anuncio y deja que la IA prediga cual tendra mejor rendimiento antes de invertir dinero.",
+    "pros": [
+      "Genera creatividades rápido",
+      "Predicción de rendimiento incluida",
+      "Multiples formatos de anuncios"
+    ],
+    "cons": [
+      "Resultados pueden necesitar ajustes manuales",
+      "Precio puede ser alto para pequeños anunciantes"
+    ],
+    "alternatives": [
+      "canva",
+      "hubspot-ai",
+      "copy-ai"
+    ],
+    "keywords": [
+      "publicidad",
+      "anuncios",
+      "ads",
+      "facebook",
+      "google",
+      "creatividad",
+      "banner",
+      "marketing"
+    ],
+    "tags": [
+      "Publicidad",
+      "Ads",
+      "Creatividades"
+    ]
+  },
+  {
+    "id": "deepl",
+    "name": "DeepL",
+    "url": "https://deepl.com",
+    "categories": [
+      "traducción"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites. Pro: $9/mes",
+    "difficulty": 1,
+    "rating": 5,
+    "shortDescription": "El traductor con IA más preciso del mercado, superior a Google Translate.",
+    "fullDescription": "DeepL es considerado el servicio de traducción automática más preciso del mundo. Usa redes neuronales avanzadas para producir traducciones que suenan naturales y mantienen el tono del texto original. Soporta 30+ idiomas y ofrece traducción de documentos completos manteniendo el formato.",
+    "useCases": [
+      "Traducir textos con calidad casi humana",
+      "Traducir documentos PDF y Word completos",
+      "Mejorar la traducción de emails profesionales",
+      "Integrar traducción en flujos de trabajo",
+      "Traducir sitios web completos"
+    ],
+    "howToStart": [
+      "Ve a deepl.com y pega tu texto",
+      "Elige los idiomas de origen y destino",
+      "Obtendras la traducción instantaneamente",
+      "Instala la extensión del navegador para traducir en cualquier sitio"
+    ],
+    "proTip": "Instala DeepL para Windows/Mac: selecciona cualquier texto en cualquier aplicación y presiona Ctrl+C+C para traducirlo al instante.",
+    "pros": [
+      "Traducciones más naturales que la competencia",
+      "Traduce documentos completos con formato",
+      "Extensión de escritorio muy práctica"
+    ],
+    "cons": [
+      "Menos idiomas que Google Translate",
+      "Límite de caracteres en plan gratis"
+    ],
+    "alternatives": [
+      "google-translate",
+      "wordtune",
+      "grammarly"
+    ],
+    "keywords": [
+      "traducir",
+      "idiomas",
+      "texto",
+      "documento",
+      "profesional",
+      "preciso",
+      "natural",
+      "lenguaje"
+    ],
+    "tags": [
+      "Traducción",
+      "Idiomas",
+      "Precision"
+    ]
+  },
+  {
+    "id": "google-translate",
+    "name": "Google Translate",
+    "url": "https://translate.google.com",
+    "categories": [
+      "traducción"
+    ],
+    "pricing": "gratis",
+    "pricingDetail": "Completamente gratis",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Servicio de traducción gratuito de Google con soporte para 130+ idiomas.",
+    "fullDescription": "Google Translate es el servicio de traducción más utilizado del mundo, con soporte para más de 130 idiomas. Permite traducir texto, páginas web, documentos e incluso traducir en tiempo real usando la camara del celular. Con IA cada vez más avanzada, las traducciones mejoran constantemente.",
+    "useCases": [
+      "Traducir texto e idiomas rápido y gratis",
+      "Traducir páginas web completas",
+      "Traducir con la camara del celular en tiempo real",
+      "Escuchar pronunciaciones en otro idioma",
+      "Traducir conversaciones en tiempo real"
+    ],
+    "howToStart": [
+      "Ve a translate.google.com o descarga la app",
+      "Escribe o pega el texto a traducir",
+      "Selecciona los idiomas",
+      "Usa la camara para traducir texto en imágenes"
+    ],
+    "proTip": "Descarga idiomas para uso offline en la app movil: útil cuando viajas y no tienes conexión a internet.",
+    "pros": [
+      "Completamente gratis",
+      "130+ idiomas soportados",
+      "Traducción con camara en tiempo real"
+    ],
+    "cons": [
+      "Traducciones menos naturales que DeepL",
+      "Puede tener errores en textos complejos"
+    ],
+    "alternatives": [
+      "deepl",
+      "wordtune",
+      "quillbot"
+    ],
+    "keywords": [
+      "traducir",
+      "gratis",
+      "idiomas",
+      "camara",
+      "google",
+      "rápido",
+      "texto",
+      "app"
+    ],
+    "tags": [
+      "Traducción",
+      "Gratis",
+      "Google"
+    ]
+  },
+  {
+    "id": "wordtune",
+    "name": "Wordtune",
+    "url": "https://wordtune.com",
+    "categories": [
+      "escritura",
+      "traducción"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "10 reescrituras gratis/día. Plus: $10/mes",
+    "difficulty": 1,
+    "rating": 3,
+    "shortDescription": "Herramienta de reescritura que mejora y adapta el tono de tus textos.",
+    "fullDescription": "Wordtune es una herramienta de IA que reescribe y mejora textos existentes. Sugiere alternativas para expresar la misma idea de forma más clara, casual o formal. También puede expandir o acortar textos y traducir manteniendo el tono original. Ideal para mejorar correos y documentos.",
+    "useCases": [
+      "Reescribir textos para mejorar claridad",
+      "Adaptar el tono de un texto: formal, casual, etc.",
+      "Acortar o expandir parrafos",
+      "Mejorar emails y mensajes profesionales",
+      "Traducir textos manteniendo el tono"
+    ],
+    "howToStart": [
+      "Instala la extensión de Wordtune en tu navegador",
+      "Escribe o pega tu texto en cualquier sitio web",
+      "Selecciona una oracion y ve las sugerencias",
+      "Elige la versión que más te guste"
+    ],
+    "proTip": "Usa Wordtune para emails importantes: escribe el borrador naturalmente y deja que Wordtune te sugiera versiones más profesionales o amigables.",
+    "pros": [
+      "Multiples opciones de reescritura",
+      "Extensión de navegador práctica",
+      "Ajuste de tono fácil"
+    ],
+    "cons": [
+      "Límite bajo en plan gratis",
+      "Mejor para ingles que español"
+    ],
+    "alternatives": [
+      "grammarly",
+      "quillbot",
+      "deepl"
+    ],
+    "keywords": [
+      "reescribir",
+      "mejorar",
+      "tono",
+      "formal",
+      "casual",
+      "email",
+      "texto",
+      "claridad"
+    ],
+    "tags": [
+      "Reescritura",
+      "Tono",
+      "Mejora"
+    ]
+  },
+  {
+    "id": "bardeen",
+    "name": "Bardeen",
+    "url": "https://bardeen.ai",
+    "categories": [
+      "automatización"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis con acciones basicas. Pro: $10/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Extensión de navegador para automatizar tareas web sin programar.",
+    "fullDescription": "Bardeen es una extensión de navegador que permite automatizar tareas repetitivas en la web sin programar. Puede extraer datos de sitios web, automatizar flujos de trabajo entre aplicaciones, y ejecutar acciones en el navegador automáticamente. Ideal para tareas como scraping, entrada de datos y automatización de procesos.",
+    "useCases": [
+      "Extraer datos de páginas web automáticamente",
+      "Automatizar tareas repetitivas del navegador",
+      "Conectar aplicaciones web entre si",
+      "Crear flujos de scraping sin código",
+      "Automatizar entrada de datos en formularios"
+    ],
+    "howToStart": [
+      "Instala la extensión de Bardeen en Chrome",
+      "Crea una cuenta gratuita",
+      "Explora los playbooks predefinidos o crea el tuyo",
+      "Ejecuta automatizaciones directamente desde el navegador"
+    ],
+    "proTip": "Usa los playbooks predefinidos de Bardeen para automatizaciones comunes: extraer contactos de LinkedIn, guardar datos en Google Sheets, etc.",
+    "pros": [
+      "Funciona directamente en el navegador",
+      "Playbooks predefinidos utiles",
+      "No requiere programación"
+    ],
+    "cons": [
+      "Limitado a acciones web",
+      "Automatizaciones complejas pueden ser inestables"
+    ],
+    "alternatives": [
+      "zapier-ai",
+      "make",
+      "respell"
+    ],
+    "keywords": [
+      "automatizar",
+      "navegador",
+      "web",
+      "extraer",
+      "datos",
+      "scraping",
+      "extensión",
+      "chrome"
+    ],
+    "tags": [
+      "Automatización",
+      "Navegador",
+      "Scraping"
+    ]
+  },
+  {
+    "id": "relevance-ai",
+    "name": "Relevance AI",
+    "url": "https://relevanceai.com",
+    "categories": [
+      "automatización",
+      "datos"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Desde $19/mes. Prueba gratuita disponible",
+    "difficulty": 3,
+    "rating": 3,
+    "shortDescription": "Plataforma para crear agentes de IA y automatizar flujos de trabajo complejos.",
+    "fullDescription": "Relevance AI es una plataforma para crear agentes de IA personalizados que automatizan tareas complejas de negocio. Permite construir flujos de trabajo con IA que procesan datos, toman decisiones y ejecutan acciones sin supervision. Orientada a equipos técnicos que necesitan automatización avanzada.",
+    "useCases": [
+      "Crear agentes de IA para tareas de negocio",
+      "Automatizar procesamiento de datos",
+      "Construir flujos de trabajo con toma de decisiones",
+      "Analizar grandes volumenes de texto con IA",
+      "Crear pipelines de datos automáticos"
+    ],
+    "howToStart": [
+      "Registrate en relevanceai.com",
+      "Crea un nuevo agente de IA",
+      "Define las herramientas y pasos del flujo",
+      "Prueba y despliega el agente"
+    ],
+    "proTip": "Empieza con los templates de agentes predefinidos y adáptalos a tu caso de uso: es más rápido que crear uno desde cero.",
+    "pros": [
+      "Agentes de IA personalizables",
+      "Flujos de trabajo avanzados",
+      "Templates predefinidos"
+    ],
+    "cons": [
+      "Curva de aprendizaje pronunciada",
+      "Orientado a usuarios técnicos"
+    ],
+    "alternatives": [
+      "zapier-ai",
+      "make",
+      "bardeen"
+    ],
+    "keywords": [
+      "agentes",
+      "automatizar",
+      "datos",
+      "flujo",
+      "IA",
+      "personalizar",
+      "pipeline",
+      "negocio"
+    ],
+    "tags": [
+      "Agentes IA",
+      "Automatización",
+      "Avanzado"
+    ]
+  },
+  {
+    "id": "respell",
+    "name": "Respell",
+    "url": "https://respell.ai",
+    "categories": [
+      "automatización"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Plan gratis limitado. Pro: $25/mes",
+    "difficulty": 2,
+    "rating": 3,
+    "shortDescription": "Crea flujos de trabajo con IA de forma visual, arrastrando y soltando.",
+    "fullDescription": "Respell es una plataforma de automatización con IA que permite crear flujos de trabajo de forma visual. Combina modelos de IA con acciones en aplicaciones populares para crear automatizaciones inteligentes. Su interfaz de arrastrar y soltar facilita la creación de procesos que incluyen generación de texto, análisis y toma de decisiones.",
+    "useCases": [
+      "Crear flujos de trabajo con IA integrada",
+      "Automatizar generación de contenido",
+      "Procesar y clasificar información automáticamente",
+      "Conectar herramientas con logica de IA",
+      "Crear asistentes automatizados para tareas repetitivas"
+    ],
+    "howToStart": [
+      "Registrate gratis en respell.ai",
+      "Explora los templates de flujos disponibles",
+      "Crea un flujo arrastrando componentes",
+      "Conecta tus aplicaciones y activa el flujo"
+    ],
+    "proTip": "Combina generación de texto con acciones en apps: por ejemplo, un flujo que genere respuestas a emails y las envie automáticamente.",
+    "pros": [
+      "Interfaz visual fácil de entender",
+      "IA integrada en los flujos",
+      "Templates para empezar rápido"
+    ],
+    "cons": [
+      "Menos integraciones que Zapier o Make",
+      "Comunidad pequeña"
+    ],
+    "alternatives": [
+      "zapier-ai",
+      "make",
+      "bardeen"
+    ],
+    "keywords": [
+      "automatizar",
+      "visual",
+      "flujo",
+      "IA",
+      "arrastrar",
+      "soltar",
+      "proceso",
+      "workflow"
+    ],
+    "tags": [
+      "Automatización",
+      "Visual",
+      "Flujos"
+    ]
+  }
+]
