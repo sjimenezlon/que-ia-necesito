@@ -6,6 +6,7 @@ import Footer from './Footer'
 const navLinks = [
   { to: '/', label: 'Inicio' },
   { to: '/explorar', label: 'Explorar' },
+  { to: '/prompt-lab', label: 'Prompt Lab' },
   { to: '/comparar', label: 'Comparar' },
   { to: '/acerca', label: 'Acerca de' },
 ]

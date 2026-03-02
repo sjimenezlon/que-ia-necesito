@@ -7,6 +7,7 @@ import Compare from './pages/Compare'
 import About from './pages/About'
 import ToolDetailPage from './pages/ToolDetailPage'
 import RecommendPage from './pages/RecommendPage'
+import PromptRefiner from './pages/PromptRefiner'
 
 export default function App() {
   const [compareIds, setCompareIds] = useState([])
@@ -48,6 +49,7 @@ export default function App() {
           <Route path="/acerca" element={<About />} />
           <Route path="/herramienta/:id" element={<ToolDetailPage />} />
           <Route path="/recomendador" element={<RecommendPage />} />
+          <Route path="/prompt-lab" element={<PromptRefiner />} />
         </Routes>
       </Layout>
     </BrowserRouter>

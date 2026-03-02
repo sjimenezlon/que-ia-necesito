@@ -26,12 +26,21 @@ export default function Hero({ query, onQueryChange, results }) {
         </div>
 
         {!query && (
-          <button
-            onClick={() => navigate('/recomendador')}
-            className="mb-12 inline-flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-xl font-medium cursor-pointer hover:bg-secondary-dark transition-colors border-none text-sm"
-          >
-            No sé qué buscar, guíame paso a paso
-          </button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
+            <button
+              onClick={() => navigate('/recomendador')}
+              className="inline-flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-xl font-medium cursor-pointer hover:bg-secondary-dark transition-colors border-none text-sm"
+            >
+              No sé qué buscar, guíame paso a paso
+            </button>
+            <button
+              onClick={() => navigate('/prompt-lab')}
+              className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-medium cursor-pointer hover:bg-primary/90 transition-colors border-none text-sm"
+            >
+              <Sparkles className="w-4 h-4" />
+              Aprende a hacer mejores prompts
+            </button>
+          </div>
         )}
 
         {!query && (

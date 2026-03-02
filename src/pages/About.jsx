@@ -1,4 +1,4 @@
-import { Bot, Heart, Search, GitCompare, Compass } from 'lucide-react'
+import { Bot, Heart, Search, GitCompare, Compass, Sparkles } from 'lucide-react'
 
 export default function About() {
   return (
@@ -28,7 +28,7 @@ export default function About() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-4 mb-8">
+      <div className="grid md:grid-cols-2 gap-4 mb-8">
         <div className="bg-white rounded-xl border border-border p-5 text-center">
           <Search className="w-8 h-8 text-primary mx-auto mb-3" />
           <h3 className="font-semibold text-text mb-1 text-sm">Busca por necesidad</h3>
@@ -41,6 +41,13 @@ export default function About() {
           <h3 className="font-semibold text-text mb-1 text-sm">Flujo guiado</h3>
           <p className="text-text-lighter text-xs">
             Si no sabes qué buscar, responde 3 preguntas simples y recibe recomendaciones personalizadas.
+          </p>
+        </div>
+        <div className="bg-white rounded-xl border border-border p-5 text-center">
+          <Sparkles className="w-8 h-8 text-primary mx-auto mb-3" />
+          <h3 className="font-semibold text-text mb-1 text-sm">Prompt Lab</h3>
+          <p className="text-text-lighter text-xs">
+            Aprende a hacer mejores prompts con la metodología CORTE-F en 6 pasos simples.
           </p>
         </div>
         <div className="bg-white rounded-xl border border-border p-5 text-center">
@@ -74,6 +81,10 @@ export default function About() {
           <li className="flex items-start gap-2">
             <span className="text-accent">✓</span>
             Consejos prácticos de uso para cada herramienta
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-accent">✓</span>
+            Prompt Lab: refinador de instrucciones con metodología CORTE-F en 6 pasos
           </li>
         </ul>
       </div>
