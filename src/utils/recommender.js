@@ -1,5 +1,5 @@
 import tools from '../data/tools.json'
-import { USE_CASES, getUseCaseById } from '../data/useCaseOptions'
+import { getUseCaseById } from '../data/useCaseOptions'
 
 /**
  * Smart recommendation engine with multi-factor scoring.

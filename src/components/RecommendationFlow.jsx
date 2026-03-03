@@ -293,10 +293,16 @@ export default function RecommendationFlow() {
               <button
                 key={cat.id}
                 onClick={() => {
-                  setCategory(cat.id)
-                  // Reset dependent fields when category changes
-                  setUseCase(null)
-                  setContextAnswer(null)
+                  if (cat.id !== category) {
+                    setCategory(cat.id)
+                    // Reset all dependent fields when category changes
+                    setUseCase(null)
+                    setContextAnswer(null)
+                    setDifficulty(null)
+                    setPricing(null)
+                  } else {
+                    setCategory(cat.id)
+                  }
                 }}
                 className={`p-4 rounded-xl border-2 text-left cursor-pointer transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] ${
                   category === cat.id

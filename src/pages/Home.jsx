@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useSearch } from '../hooks/useSearch'
 import { useStaggerReveal } from '../hooks/useScrollReveal'
-import { getPopularTools, getCategoryInfo, CATEGORIES } from '../utils/recommender'
+import { getPopularTools, getCategoryInfo } from '../utils/recommender'
 import Hero from '../components/Hero'
 import ToolCard from '../components/ToolCard'
 import SearchContextChips from '../components/SearchContextChips'
@@ -38,8 +38,9 @@ export default function Home({ onCompare, compareIds }) {
     <div>
       <Hero query={query} onQueryChange={setQuery} results={results} />
 
-      {/* Context chips */}
-      {query && meta && meta.hasStrongIntent && (
+      {/* Context chips — only render wrapper when chips will actually show */}
+      {query && meta && meta.hasStrongIntent &&
+        (meta.detectedCategories.length > 0 || meta.pricingHint || meta.difficultyHint) && (
         <div className="max-w-6xl mx-auto px-4 -mt-2 mb-2">
           <SearchContextChips meta={meta} onRemove={removeFilter} />
         </div>

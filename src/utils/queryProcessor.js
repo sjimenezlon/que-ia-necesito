@@ -159,9 +159,6 @@ const PRICING_SIGNALS = {
   'economica': 'gratis',
   'premium': 'pago',
   'de pago': 'pago',
-  'pago': 'pago',
-  'profesional': 'pago',
-  'pro': 'pago',
   'freemium': 'freemium',
 }
 
@@ -176,11 +173,9 @@ const DIFFICULTY_SIGNALS = {
   'sin experiencia': 1,
   'no se nada': 1,
   'intermedio': 2,
-  'media': 2,
   'avanzado': 3,
   'avanzada': 3,
   'experto': 3,
-  'profesional': 3,
   'tecnico': 3,
   'tecnica': 3,
   'potente': 3,
@@ -236,6 +231,16 @@ function normalize(text) {
     .trim()
 }
 
+/**
+ * Check if a phrase appears as whole words in the text (not as a substring).
+ * "pro" should NOT match inside "programar" or "producir".
+ */
+function matchesWholePhrase(text, phrase) {
+  const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  const regex = new RegExp(`(?:^|\\s|[^a-z])${escaped}(?:$|\\s|[^a-z])`)
+  return regex.test(text)
+}
+
 export function processQuery(rawQuery) {
   const normalized = normalize(rawQuery)
 
@@ -243,7 +248,12 @@ export function processQuery(rawQuery) {
   const detectedCategories = []
   const sortedIntents = Object.keys(INTENT_MAP).sort((a, b) => b.length - a.length)
   for (const phrase of sortedIntents) {
-    if (normalized.includes(normalize(phrase))) {
+    const normalizedPhrase = normalize(phrase)
+    // Multi-word phrases use includes (they're specific enough), single words use word boundary
+    const matches = normalizedPhrase.includes(' ')
+      ? normalized.includes(normalizedPhrase)
+      : matchesWholePhrase(normalized, normalizedPhrase)
+    if (matches) {
       const cat = INTENT_MAP[phrase]
       if (!detectedCategories.includes(cat)) {
         detectedCategories.push(cat)
@@ -254,7 +264,11 @@ export function processQuery(rawQuery) {
   // Detect pricing signals
   let pricingHint = null
   for (const [signal, value] of Object.entries(PRICING_SIGNALS)) {
-    if (normalized.includes(normalize(signal))) {
+    const normalizedSignal = normalize(signal)
+    const matches = normalizedSignal.includes(' ')
+      ? normalized.includes(normalizedSignal)
+      : matchesWholePhrase(normalized, normalizedSignal)
+    if (matches) {
       pricingHint = value
       break
     }
@@ -263,7 +277,11 @@ export function processQuery(rawQuery) {
   // Detect difficulty signals
   let difficultyHint = null
   for (const [signal, value] of Object.entries(DIFFICULTY_SIGNALS)) {
-    if (normalized.includes(normalize(signal))) {
+    const normalizedSignal = normalize(signal)
+    const matches = normalizedSignal.includes(' ')
+      ? normalized.includes(normalizedSignal)
+      : matchesWholePhrase(normalized, normalizedSignal)
+    if (matches) {
       difficultyHint = value
       break
     }
