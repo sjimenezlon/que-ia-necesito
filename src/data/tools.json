@@ -51,13 +51,29 @@
       "redactar",
       "investigar",
       "código",
-      "resumir"
+      "resumir",
+      "conversar",
+      "resolver dudas",
+      "generar texto",
+      "crear contenido",
+      "explicar"
     ],
     "tags": [
       "IA generativa",
       "NLP",
       "Multimodal"
-    ]
+    ],
+    "useCaseIds": [
+      "escritura-articulos",
+      "escritura-correos",
+      "escritura-creativa",
+      "chatbots-asistente",
+      "chatbots-consultas",
+      "educacion-aprender",
+      "investigacion-general",
+      "investigacion-resumir"
+    ],
+    "bestFor": "Ideal para resolver dudas, redactar textos y aprender de todo"
   },
   {
     "id": "claude",
@@ -111,13 +127,29 @@
       "programar",
       "asistente",
       "investigar",
-      "resumir"
+      "resumir",
+      "contexto largo",
+      "PDF",
+      "depurar",
+      "analisis profundo",
+      "razonamiento"
     ],
     "tags": [
       "IA generativa",
       "NLP",
       "Análisis de documentos"
-    ]
+    ],
+    "useCaseIds": [
+      "escritura-articulos",
+      "escritura-correos",
+      "escritura-academica",
+      "programacion-escribir",
+      "programacion-depurar",
+      "chatbots-asistente",
+      "investigacion-resumir",
+      "investigacion-academica"
+    ],
+    "bestFor": "Ideal para análisis profundo de documentos largos y programación"
   },
   {
     "id": "gemini",
@@ -170,13 +202,25 @@
       "imágenes",
       "email",
       "investigar",
-      "actualizado"
+      "actualizado",
+      "google workspace",
+      "multimodal",
+      "buscar en internet",
+      "drive"
     ],
     "tags": [
       "IA generativa",
       "Google",
       "Multimodal"
-    ]
+    ],
+    "useCaseIds": [
+      "chatbots-asistente",
+      "chatbots-consultas",
+      "investigacion-general",
+      "escritura-correos",
+      "traduccion-documento"
+    ],
+    "bestFor": "Ideal para búsquedas actualizadas e integración con Google"
   },
   {
     "id": "perplexity",
@@ -228,13 +272,24 @@
       "noticias",
       "académico",
       "consultar",
-      "datos"
+      "datos",
+      "citas",
+      "tiempo real",
+      "verificar informacion",
+      "respuestas con fuentes"
     ],
     "tags": [
       "Búsqueda IA",
       "Investigación",
       "Verificacion"
-    ]
+    ],
+    "useCaseIds": [
+      "investigacion-general",
+      "investigacion-fuentes",
+      "investigacion-academica",
+      "chatbots-consultas"
+    ],
+    "bestFor": "Ideal para investigar con fuentes verificables en tiempo real"
   },
   {
     "id": "copilot",
@@ -287,13 +342,24 @@
       "windows",
       "asistente",
       "productividad",
-      "edge"
+      "edge",
+      "powerpoint",
+      "teams",
+      "outlook",
+      "microsoft 365"
     ],
     "tags": [
       "Microsoft",
       "Productividad",
       "Office"
-    ]
+    ],
+    "useCaseIds": [
+      "chatbots-asistente",
+      "productividad-email",
+      "escritura-correos",
+      "productividad-organizar"
+    ],
+    "bestFor": "Ideal para usuarios de Microsoft que quieren IA en Office"
   },
   {
     "id": "poe",
@@ -343,13 +409,24 @@
       "bot",
       "plataforma",
       "IA",
-      "probar"
+      "probar",
+      "multiples modelos",
+      "comparar IAs",
+      "GPT",
+      "Claude",
+      "Llama"
     ],
     "tags": [
       "Agregador",
       "Chatbots",
       "Multi-modelo"
-    ]
+    ],
+    "useCaseIds": [
+      "chatbots-multimodelo",
+      "chatbots-consultas",
+      "chatbots-asistente"
+    ],
+    "bestFor": "Ideal para probar múltiples modelos de IA en un solo lugar"
   },
   {
     "id": "meta-ai",
@@ -401,13 +478,23 @@
       "instagram",
       "chat",
       "imágenes",
-      "asistente"
+      "asistente",
+      "whatsapp IA",
+      "gratis ilimitado",
+      "redes sociales",
+      "messenger"
     ],
     "tags": [
       "Meta",
       "Redes sociales",
       "Gratis"
-    ]
+    ],
+    "useCaseIds": [
+      "chatbots-asistente",
+      "chatbots-consultas",
+      "diseno-imagenes"
+    ],
+    "bestFor": "Ideal para chatear gratis desde WhatsApp o Instagram"
   },
   {
     "id": "mistral",
@@ -459,13 +546,22 @@
       "técnico",
       "chat",
       "desarrollador",
-      "logica"
+      "logica",
+      "open source",
+      "privacidad",
+      "API"
     ],
     "tags": [
       "Open source",
       "Programación",
       "IA europea"
-    ]
+    ],
+    "useCaseIds": [
+      "chatbots-consultas",
+      "programacion-escribir",
+      "programacion-depurar"
+    ],
+    "bestFor": "Ideal para desarrolladores que prefieren modelos open-source europeos"
   },
   {
     "id": "jasper",
@@ -517,13 +613,24 @@
       "blog",
       "redes",
       "publicidad",
-      "SEO"
+      "SEO",
+      "campana",
+      "brief",
+      "escala",
+      "equipo marketing"
     ],
     "tags": [
       "Marketing",
       "Escritura",
       "Contenido"
-    ]
+    ],
+    "useCaseIds": [
+      "escritura-marketing",
+      "negocios-marketing",
+      "escritura-articulos",
+      "negocios-seo"
+    ],
+    "bestFor": "Ideal para equipos de marketing que necesitan contenido a escala"
   },
   {
     "id": "copy-ai",
@@ -575,13 +682,25 @@
       "redes",
       "email",
       "publicidad",
-      "generar"
+      "generar",
+      "texto publicitario",
+      "redes sociales",
+      "anuncio",
+      "conversion",
+      "landing page"
     ],
     "tags": [
       "Copywriting",
       "Marketing",
       "Ventas"
-    ]
+    ],
+    "useCaseIds": [
+      "escritura-marketing",
+      "negocios-marketing",
+      "escritura-correos",
+      "negocios-publicidad"
+    ],
+    "bestFor": "Ideal para generar textos de marketing y ventas rápidamente"
   },
   {
     "id": "writesonic",
@@ -633,13 +752,24 @@
       "web",
       "contenido",
       "escribir",
-      "landing"
+      "landing",
+      "posicionar",
+      "google",
+      "articulo SEO",
+      "contenido web"
     ],
     "tags": [
       "SEO",
       "Blogs",
       "Contenido web"
-    ]
+    ],
+    "useCaseIds": [
+      "escritura-articulos",
+      "negocios-seo",
+      "escritura-marketing",
+      "negocios-publicidad"
+    ],
+    "bestFor": "Ideal para blogs optimizados para SEO y contenido web"
   },
   {
     "id": "grammarly",
@@ -691,13 +821,24 @@
       "escribir",
       "revisar",
       "ortografía",
-      "email"
+      "email",
+      "correccion",
+      "ortografia",
+      "gramatica",
+      "tono profesional",
+      "claridad"
     ],
     "tags": [
       "Correccion",
       "Gramática",
       "Estilo"
-    ]
+    ],
+    "useCaseIds": [
+      "escritura-correos",
+      "traduccion-mejorar",
+      "escritura-academica"
+    ],
+    "bestFor": "Ideal para corregir y mejorar textos en inglés y español"
   },
   {
     "id": "quillbot",
@@ -749,13 +890,24 @@
       "texto",
       "plagio",
       "traducir",
-      "estudiante"
+      "estudiante",
+      "antiplagio",
+      "sinonimos",
+      "reformular",
+      "academico"
     ],
     "tags": [
       "Parafraseo",
       "Escritura",
       "Académico"
-    ]
+    ],
+    "useCaseIds": [
+      "escritura-correos",
+      "traduccion-mejorar",
+      "escritura-academica",
+      "investigacion-resumir"
+    ],
+    "bestFor": "Ideal para parafrasear textos y evitar plagio académico"
   },
   {
     "id": "rytr",
@@ -806,13 +958,23 @@
       "plantilla",
       "email",
       "blog",
-      "generar"
+      "generar",
+      "rapido",
+      "plantillas",
+      "generar rapido",
+      "presupuesto bajo"
     ],
     "tags": [
       "Escritura",
       "Economico",
       "Plantillas"
-    ]
+    ],
+    "useCaseIds": [
+      "escritura-articulos",
+      "escritura-correos",
+      "escritura-marketing"
+    ],
+    "bestFor": "Ideal para generar contenido rápido y económico"
   },
   {
     "id": "notion-ai",
@@ -864,13 +1026,25 @@
       "productividad",
       "documentos",
       "escribir",
-      "trabajo"
+      "trabajo",
+      "notas inteligentes",
+      "base de datos",
+      "wiki",
+      "equipo",
+      "gestion de conocimiento"
     ],
     "tags": [
       "Productividad",
       "Notion",
       "Organizacion"
-    ]
+    ],
+    "useCaseIds": [
+      "productividad-organizar",
+      "escritura-correos",
+      "escritura-articulos",
+      "investigacion-resumir"
+    ],
+    "bestFor": "Ideal para equipos que ya usan Notion y quieren IA integrada"
   },
   {
     "id": "midjourney",
@@ -921,13 +1095,24 @@
       "generar",
       "visual",
       "creativo",
-      "foto"
+      "foto",
+      "arte digital",
+      "fotorrealista",
+      "concepto",
+      "estilo artistico",
+      "prompt visual"
     ],
     "tags": [
       "Generación de imágenes",
       "Arte",
       "Diseño"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-imagenes",
+      "diseno-social",
+      "diseno-producto"
+    ],
+    "bestFor": "Ideal para crear arte e imágenes de alta calidad estética"
   },
   {
     "id": "dall-e",
@@ -978,13 +1163,24 @@
       "ilustracion",
       "logo",
       "diseno",
-      "visual"
+      "visual",
+      "texto a imagen",
+      "generar desde texto",
+      "OpenAI",
+      "crear arte",
+      "concepto visual"
     ],
     "tags": [
       "Generación de imágenes",
       "OpenAI",
       "Diseño"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-imagenes",
+      "diseno-logo",
+      "diseno-social"
+    ],
+    "bestFor": "Ideal para generar imágenes desde texto con OpenAI"
   },
   {
     "id": "ideogram",
@@ -1035,13 +1231,22 @@
       "banner",
       "diseno",
       "imagen",
-      "tarjeta"
+      "tarjeta",
+      "texto en imagen",
+      "tipografia",
+      "lettering"
     ],
     "tags": [
       "Tipografía",
       "Diseño grafico",
       "Logos"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-logo",
+      "diseno-social",
+      "diseno-imagenes"
+    ],
+    "bestFor": "Ideal para diseños con texto integrado como logos y posters"
   },
   {
     "id": "leonardo-ai",
@@ -1092,13 +1297,21 @@
       "textura",
       "modelos",
       "generar",
-      "diseno"
+      "diseno",
+      "personaje",
+      "asset",
+      "fantasia"
     ],
     "tags": [
       "Arte digital",
       "Videojuegos",
       "Modelos IA"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-imagenes",
+      "diseno-producto"
+    ],
+    "bestFor": "Ideal para assets de videojuegos y arte digital detallado"
   },
   {
     "id": "canva",
@@ -1155,13 +1368,26 @@
       "slides",
       "pitch",
       "deck",
-      "póster"
+      "póster",
+      "arrastrar soltar",
+      "red social",
+      "post",
+      "infografia",
+      "facil"
     ],
     "tags": [
       "Diseño",
       "Plantillas",
       "Todo en uno"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-social",
+      "diseno-logo",
+      "presentaciones-pitch",
+      "presentaciones-reporte",
+      "presentaciones-clase"
+    ],
+    "bestFor": "Ideal para diseñar cualquier cosa sin experiencia en diseño"
   },
   {
     "id": "adobe-firefly",
@@ -1212,13 +1438,23 @@
       "profesional",
       "vector",
       "editar",
-      "comercial"
+      "comercial",
+      "photoshop IA",
+      "comercial seguro",
+      "relleno generativo",
+      "retoque"
     ],
     "tags": [
       "Adobe",
       "Diseño profesional",
       "Comercial"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-editar",
+      "diseno-imagenes",
+      "diseno-producto"
+    ],
+    "bestFor": "Ideal para profesionales de Adobe que necesitan IA integrada"
   },
   {
     "id": "stable-diffusion",
@@ -1269,13 +1505,21 @@
       "modelos",
       "personalizar",
       "técnico",
-      "generar"
+      "generar",
+      "sin censura",
+      "personalizar modelo",
+      "LoRA",
+      "ComfyUI"
     ],
     "tags": [
       "Open source",
       "Local",
       "Técnico"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-imagenes"
+    ],
+    "bestFor": "Ideal para usuarios técnicos que quieren control total y gratuito"
   },
   {
     "id": "krea-ai",
@@ -1326,13 +1570,21 @@
       "boceto",
       "creativo",
       "diseno",
-      "interactivo"
+      "interactivo",
+      "upscale",
+      "mejorar resolucion",
+      "boceto a imagen"
     ],
     "tags": [
       "Tiempo real",
       "Diseño",
       "Interactivo"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-editar",
+      "diseno-imagenes"
+    ],
+    "bestFor": "Ideal para mejorar imágenes y crear en tiempo real"
   },
   {
     "id": "gamma",
@@ -1384,13 +1636,23 @@
       "pitch",
       "reporte",
       "slides",
-      "deck"
+      "deck",
+      "automatico",
+      "rapido",
+      "AI slides",
+      "one-click"
     ],
     "tags": [
       "Presentaciones",
       "Automático",
       "Profesional"
-    ]
+    ],
+    "useCaseIds": [
+      "presentaciones-pitch",
+      "presentaciones-reporte",
+      "presentaciones-clase"
+    ],
+    "bestFor": "Ideal para crear presentaciones profesionales en minutos con IA"
   },
   {
     "id": "beautiful-ai",
@@ -1444,13 +1706,21 @@
       "visual",
       "diapositivas",
       "pitch",
-      "deck"
+      "deck",
+      "diseno automatico",
+      "colaborar",
+      "enterprise"
     ],
     "tags": [
       "Presentaciones",
       "Diseño",
       "Equipos"
-    ]
+    ],
+    "useCaseIds": [
+      "presentaciones-pitch",
+      "presentaciones-reporte"
+    ],
+    "bestFor": "Ideal para equipos que necesitan slides con diseño automático"
   },
   {
     "id": "tome",
@@ -1503,13 +1773,19 @@
       "crear",
       "rápido",
       "diapositivas",
-      "deck"
+      "deck",
+      "interactivo"
     ],
     "tags": [
       "Storytelling",
       "Presentaciones",
       "Narrativa"
-    ]
+    ],
+    "useCaseIds": [
+      "presentaciones-narrativa",
+      "presentaciones-pitch"
+    ],
+    "bestFor": "Ideal para contar historias visuales y narrativas con IA"
   },
   {
     "id": "slidesgo",
@@ -1560,13 +1836,20 @@
       "rápido",
       "pptx",
       "descargar",
-      "borrador"
+      "borrador",
+      "google slides",
+      "plantilla"
     ],
     "tags": [
       "PowerPoint",
       "Rápido",
       "Descargar"
-    ]
+    ],
+    "useCaseIds": [
+      "presentaciones-reporte",
+      "presentaciones-clase"
+    ],
+    "bestFor": "Ideal para generar borradores de PowerPoint rápidamente"
   },
   {
     "id": "runway",
@@ -1621,13 +1904,24 @@
       "crear",
       "clip",
       "editar video",
-      "película"
+      "película",
+      "gen-2",
+      "texto a video",
+      "efectos visuales",
+      "cine",
+      "produccion"
     ],
     "tags": [
       "Video IA",
       "Edición",
       "Profesional"
-    ]
+    ],
+    "useCaseIds": [
+      "video-generar",
+      "video-editar",
+      "video-animacion"
+    ],
+    "bestFor": "Ideal para generar y editar video con IA de nivel profesional"
   },
   {
     "id": "pika",
@@ -1681,13 +1975,24 @@
       "rápido",
       "clip",
       "animación",
-      "editar video"
+      "editar video",
+      "animar foto",
+      "video corto",
+      "social media",
+      "reel",
+      "facil"
     ],
     "tags": [
       "Video",
       "Fácil",
       "Redes sociales"
-    ]
+    ],
+    "useCaseIds": [
+      "video-clips",
+      "video-animacion",
+      "video-generar"
+    ],
+    "bestFor": "Ideal para crear videos cortos y animaciones de forma sencilla"
   },
   {
     "id": "heygen",
@@ -1740,13 +2045,21 @@
       "sin camara",
       "presentador",
       "clip",
-      "portavoz"
+      "portavoz",
+      "portavoz virtual",
+      "multiidioma",
+      "capacitacion"
     ],
     "tags": [
       "Avatares",
       "Video",
       "Corporativo"
-    ]
+    ],
+    "useCaseIds": [
+      "video-avatar",
+      "video-clips"
+    ],
+    "bestFor": "Ideal para crear videos con presentador virtual sin grabarse"
   },
   {
     "id": "synthesia",
@@ -1800,13 +2113,22 @@
       "idiomas",
       "presentador",
       "clip",
-      "curso"
+      "curso",
+      "training",
+      "e-learning",
+      "corporativo",
+      "avatar profesional"
     ],
     "tags": [
       "Empresarial",
       "Educación",
       "Avatares"
-    ]
+    ],
+    "useCaseIds": [
+      "video-avatar",
+      "educacion-aprender"
+    ],
+    "bestFor": "Ideal para videos de capacitación empresarial con avatar"
   },
   {
     "id": "capcut",
@@ -1860,13 +2182,22 @@
       "cortar",
       "clip",
       "editar video",
-      "reel"
+      "reel",
+      "subtitulos automaticos",
+      "efectos",
+      "viral"
     ],
     "tags": [
       "Edición",
       "Redes sociales",
       "TikTok"
-    ]
+    ],
+    "useCaseIds": [
+      "video-editar",
+      "video-clips",
+      "transcripcion-subtitulos"
+    ],
+    "bestFor": "Ideal para editar videos para TikTok y redes sociales gratis"
   },
   {
     "id": "luma",
@@ -1920,13 +2251,21 @@
       "crear",
       "clip",
       "animación",
-      "3D"
+      "3D",
+      "cinematografico",
+      "dream machine",
+      "calidad alta"
     ],
     "tags": [
       "Video IA",
       "Cinematográfico",
       "Generación"
-    ]
+    ],
+    "useCaseIds": [
+      "video-generar",
+      "video-animacion"
+    ],
+    "bestFor": "Ideal para generar videos cinematográficos de alta calidad"
   },
   {
     "id": "elevenlabs",
@@ -1981,13 +2320,25 @@
       "texto",
       "sonido",
       "canción",
-      "narración"
+      "narración",
+      "clonar voz",
+      "realista",
+      "doblaje",
+      "narrador",
+      "text to speech"
     ],
     "tags": [
       "Voz IA",
       "Clonación",
       "Audio"
-    ]
+    ],
+    "useCaseIds": [
+      "audio-voz",
+      "audio-narrar",
+      "audio-podcast",
+      "transcripcion-audio"
+    ],
+    "bestFor": "Ideal para clonar voces y generar narración ultra-realista"
   },
   {
     "id": "suno",
@@ -2042,13 +2393,22 @@
       "canción",
       "sonido",
       "beat",
-      "instrumental"
+      "instrumental",
+      "cancion completa",
+      "con letra",
+      "generar musica",
+      "crear canciones",
+      "genero musical"
     ],
     "tags": [
       "Música IA",
       "Composición",
       "Canciones"
-    ]
+    ],
+    "useCaseIds": [
+      "audio-musica"
+    ],
+    "bestFor": "Ideal para crear canciones completas con letra y melodía"
   },
   {
     "id": "udio",
@@ -2104,13 +2464,20 @@
       "sonido",
       "beat",
       "instrumental",
-      "componer"
+      "componer",
+      "alta calidad",
+      "genero",
+      "fondo musical"
     ],
     "tags": [
       "Música IA",
       "Producción",
       "Géneros"
-    ]
+    ],
+    "useCaseIds": [
+      "audio-musica"
+    ],
+    "bestFor": "Ideal para producir música de alta calidad en cualquier género"
   },
   {
     "id": "murf",
@@ -2164,13 +2531,23 @@
       "texto",
       "sonido",
       "narración",
-      "doblaje"
+      "doblaje",
+      "locutor",
+      "voz profesional",
+      "video narrado",
+      "e-learning",
+      "comercial"
     ],
     "tags": [
       "Locución",
       "Profesional",
       "E-learning"
-    ]
+    ],
+    "useCaseIds": [
+      "audio-voz",
+      "audio-narrar"
+    ],
+    "bestFor": "Ideal para locución profesional para videos y cursos"
   },
   {
     "id": "descript",
@@ -2228,13 +2605,25 @@
       "subtítulos",
       "reunión",
       "editar video",
-      "clip"
+      "clip",
+      "editar como texto",
+      "podcaster",
+      "overdub",
+      "filler words",
+      "produccion"
     ],
     "tags": [
       "Edición",
       "Podcast",
       "Transcripción"
-    ]
+    ],
+    "useCaseIds": [
+      "audio-podcast",
+      "video-editar",
+      "transcripcion-audio",
+      "transcripcion-subtitulos"
+    ],
+    "bestFor": "Ideal para editar podcast y video como si editaras un documento"
   },
   {
     "id": "github-copilot",
@@ -2285,13 +2674,21 @@
       "desarrollador",
       "VS Code",
       "funciones",
-      "github"
+      "github",
+      "sugerencias",
+      "pair programming",
+      "productividad dev"
     ],
     "tags": [
       "Programación",
       "Autocompletado",
       "IDE"
-    ]
+    ],
+    "useCaseIds": [
+      "programacion-ide",
+      "programacion-escribir"
+    ],
+    "bestFor": "Ideal para programadores que quieren autocompletado inteligente"
   },
   {
     "id": "cursor",
@@ -2342,13 +2739,24 @@
       "VS Code",
       "chat",
       "depurar",
-      "desarrollar"
+      "desarrollar",
+      "editor inteligente",
+      "chat en IDE",
+      "refactorizar",
+      "completar",
+      "AI-first"
     ],
     "tags": [
       "IDE",
       "Programación",
       "IA integrada"
-    ]
+    ],
+    "useCaseIds": [
+      "programacion-ide",
+      "programacion-escribir",
+      "programacion-depurar"
+    ],
+    "bestFor": "Ideal para desarrolladores que quieren un IDE con IA integrada"
   },
   {
     "id": "replit-ai",
@@ -2399,13 +2807,21 @@
       "desplegar",
       "prototipar",
       "online",
-      "crear"
+      "crear",
+      "compartir",
+      "colaborar"
     ],
     "tags": [
       "Cloud IDE",
       "Prototipo",
       "Despliegue"
-    ]
+    ],
+    "useCaseIds": [
+      "programacion-web",
+      "programacion-escribir",
+      "programacion-aprender"
+    ],
+    "bestFor": "Ideal para prototipar y desplegar apps desde el navegador"
   },
   {
     "id": "claude-code",
@@ -2456,13 +2872,21 @@
       "terminal",
       "desarrollar",
       "depurar",
-      "automatizar"
+      "automatizar",
+      "CLI",
+      "proyecto completo",
+      "autonomo"
     ],
     "tags": [
       "Agente IA",
       "Programación",
       "Terminal"
-    ]
+    ],
+    "useCaseIds": [
+      "programacion-escribir",
+      "programacion-depurar"
+    ],
+    "bestFor": "Ideal para desarrolladores que quieren un agente de código en terminal"
   },
   {
     "id": "windsurf",
@@ -2513,13 +2937,21 @@
       "gratis",
       "programar",
       "VS Code",
-      "chat"
+      "chat",
+      "cascade",
+      "flows",
+      "AI copilot"
     ],
     "tags": [
       "IDE",
       "Autocompletado",
       "Gratis"
-    ]
+    ],
+    "useCaseIds": [
+      "programacion-ide",
+      "programacion-escribir"
+    ],
+    "bestFor": "Ideal para un editor de código con IA gratuito y potente"
   },
   {
     "id": "v0",
@@ -2571,13 +3003,21 @@
       "web",
       "diseñar",
       "prototipar",
-      "código"
+      "código",
+      "next.js",
+      "UI",
+      "vercel"
     ],
     "tags": [
       "Frontend",
       "React",
       "Prototipo"
-    ]
+    ],
+    "useCaseIds": [
+      "programacion-web",
+      "diseno-social"
+    ],
+    "bestFor": "Ideal para generar interfaces React/Next.js desde texto"
   },
   {
     "id": "julius",
@@ -2633,13 +3073,24 @@
       "gráfico",
       "dashboard",
       "SQL",
-      "estadística"
+      "estadística",
+      "preguntar datos",
+      "lenguaje natural",
+      "sin codigo",
+      "grafico rapido",
+      "insight"
     ],
     "tags": [
       "Análisis",
       "Datos",
       "Visualización"
-    ]
+    ],
+    "useCaseIds": [
+      "datos-excel",
+      "datos-analizar",
+      "datos-visualizar"
+    ],
+    "bestFor": "Ideal para analizar datos de Excel con lenguaje natural"
   },
   {
     "id": "rows",
@@ -2694,13 +3145,22 @@
       "excel",
       "hoja de cálculo",
       "gráfico",
-      "spreadsheet"
+      "spreadsheet",
+      "spreadsheet inteligente",
+      "conectar datos",
+      "reportar"
     ],
     "tags": [
       "Hojas de calculo",
       "Dashboard",
       "Datos en vivo"
-    ]
+    ],
+    "useCaseIds": [
+      "datos-excel",
+      "datos-visualizar",
+      "productividad-organizar"
+    ],
+    "bestFor": "Ideal para crear dashboards y analizar datos en hojas de cálculo"
   },
   {
     "id": "monkeylearn",
@@ -2753,13 +3213,20 @@
       "NLP",
       "datos",
       "encuesta",
-      "opiniones"
+      "opiniones",
+      "opinion",
+      "clasificar texto"
     ],
     "tags": [
       "NLP",
       "Análisis de texto",
       "Empresarial"
-    ]
+    ],
+    "useCaseIds": [
+      "datos-analizar",
+      "datos-predecir"
+    ],
+    "bestFor": "Ideal para analizar texto y opiniones a gran escala"
   },
   {
     "id": "obviously-ai",
@@ -2810,13 +3277,22 @@
       "ventas",
       "análisis",
       "sin código",
-      "predecir"
+      "predecir",
+      "sin codigo",
+      "predecir ventas",
+      "modelo ML",
+      "no-code",
+      "forecast"
     ],
     "tags": [
       "Machine Learning",
       "Predicción",
       "No-code"
-    ]
+    ],
+    "useCaseIds": [
+      "datos-predecir"
+    ],
+    "bestFor": "Ideal para hacer predicciones con machine learning sin programar"
   },
   {
     "id": "polymer",
@@ -2870,13 +3346,22 @@
       "automático",
       "hoja de cálculo",
       "gráfico",
-      "visualización"
+      "visualización",
+      "dashboard automatico",
+      "visualizacion",
+      "sin codigo",
+      "metricas"
     ],
     "tags": [
       "Dashboard",
       "Visualización",
       "BI"
-    ]
+    ],
+    "useCaseIds": [
+      "datos-visualizar",
+      "datos-excel"
+    ],
+    "bestFor": "Ideal para crear dashboards automáticos desde tus datos"
   },
   {
     "id": "notebooklm",
@@ -2928,13 +3413,23 @@
       "estudiar",
       "analizar",
       "fuentes",
-      "google"
+      "google",
+      "podcast IA",
+      "estudiar documentos",
+      "fuentes propias",
+      "notebook"
     ],
     "tags": [
       "Investigación",
       "Educación",
       "Google"
-    ]
+    ],
+    "useCaseIds": [
+      "investigacion-resumir",
+      "educacion-aprender",
+      "investigacion-general"
+    ],
+    "bestFor": "Ideal para estudiar documentos y generar podcasts de resumen"
   },
   {
     "id": "elicit",
@@ -2985,13 +3480,23 @@
       "estudio",
       "literatura",
       "datos",
-      "resumir"
+      "resumir",
+      "revision literatura",
+      "paper cientifico",
+      "extraccion datos",
+      "academia",
+      "research"
     ],
     "tags": [
       "Académico",
       "Investigación",
       "Papers"
-    ]
+    ],
+    "useCaseIds": [
+      "investigacion-academica",
+      "investigacion-fuentes"
+    ],
+    "bestFor": "Ideal para revisión de literatura científica automatizada"
   },
   {
     "id": "semantic-scholar",
@@ -3042,13 +3547,22 @@
       "investigar",
       "citas",
       "estudio",
-      "gratis"
+      "gratis",
+      "buscar papers",
+      "grafo de citas",
+      "API academica",
+      "busqueda semantica"
     ],
     "tags": [
       "Académico",
       "Búsqueda",
       "Gratis"
-    ]
+    ],
+    "useCaseIds": [
+      "investigacion-academica",
+      "investigacion-fuentes"
+    ],
+    "bestFor": "Ideal para buscar papers académicos con IA gratuitamente"
   },
   {
     "id": "connected-papers",
@@ -3099,13 +3613,21 @@
       "investigar",
       "descubrir",
       "académico",
-      "literatura"
+      "literatura",
+      "mapa visual",
+      "papers relacionados",
+      "explorar literatura",
+      "campo"
     ],
     "tags": [
       "Visualización",
       "Académico",
       "Grafos"
-    ]
+    ],
+    "useCaseIds": [
+      "investigacion-academica"
+    ],
+    "bestFor": "Ideal para descubrir papers relacionados visualmente"
   },
   {
     "id": "consensus",
@@ -3156,13 +3678,21 @@
       "consenso",
       "estudios",
       "verificar",
-      "papers"
+      "papers",
+      "pregunta cientifica",
+      "si o no",
+      "respuesta basada en evidencia"
     ],
     "tags": [
       "Evidencia",
       "Ciencia",
       "Consenso"
-    ]
+    ],
+    "useCaseIds": [
+      "investigacion-academica",
+      "investigacion-fuentes"
+    ],
+    "bestFor": "Ideal para encontrar consenso científico sobre un tema"
   },
   {
     "id": "otter",
@@ -3218,13 +3748,22 @@
       "subtítulos",
       "audio a texto",
       "voz a texto",
-      "dictado"
+      "dictado",
+      "teams",
+      "notas automaticas",
+      "resumen reunion",
+      "accion items"
     ],
     "tags": [
       "Transcripción",
       "Reuniones",
       "Productividad"
-    ]
+    ],
+    "useCaseIds": [
+      "transcripcion-reunion",
+      "transcripcion-audio"
+    ],
+    "bestFor": "Ideal para transcribir reuniones de Zoom automáticamente"
   },
   {
     "id": "fireflies",
@@ -3280,13 +3819,22 @@
       "subtítulos",
       "audio a texto",
       "voz a texto",
-      "dictado"
+      "dictado",
+      "buscar en reuniones",
+      "CRM",
+      "integraciones",
+      "resumen"
     ],
     "tags": [
       "Reuniones",
       "Transcripción",
       "Análisis"
-    ]
+    ],
+    "useCaseIds": [
+      "transcripcion-reunion",
+      "transcripcion-audio"
+    ],
+    "bestFor": "Ideal para grabar, transcribir y buscar en tus reuniones"
   },
   {
     "id": "zapier-ai",
@@ -3338,13 +3886,23 @@
       "workflow",
       "email",
       "integrar",
-      "sin código"
+      "sin código",
+      "conectar apps",
+      "trigger",
+      "integracion",
+      "sin codigo",
+      "automatizar email"
     ],
     "tags": [
       "Automatización",
       "Integraciones",
       "No-code"
-    ]
+    ],
+    "useCaseIds": [
+      "automatizacion-workflow",
+      "productividad-automatizar"
+    ],
+    "bestFor": "Ideal para conectar apps y automatizar flujos sin programar"
   },
   {
     "id": "make",
@@ -3398,13 +3956,22 @@
       "nodos",
       "workflow",
       "conectar apps",
-      "no-code"
+      "no-code",
+      "escenario",
+      "complejo",
+      "API",
+      "integrar sistemas"
     ],
     "tags": [
       "Automatización",
       "Visual",
       "Integraciones"
-    ]
+    ],
+    "useCaseIds": [
+      "automatizacion-workflow",
+      "automatizacion-datos"
+    ],
+    "bestFor": "Ideal para automatizaciones visuales complejas y detalladas"
   },
   {
     "id": "reclaim",
@@ -3455,13 +4022,21 @@
       "reuniones",
       "enfoque",
       "agenda",
-      "planificar"
+      "planificar",
+      "deep work",
+      "habitos",
+      "bloquear tiempo",
+      "smart calendar"
     ],
     "tags": [
       "Calendario",
       "Productividad",
       "Optimización"
-    ]
+    ],
+    "useCaseIds": [
+      "productividad-calendario"
+    ],
+    "bestFor": "Ideal para optimizar tu calendario y proteger tiempo de enfoque"
   },
   {
     "id": "khanmigo",
@@ -3512,13 +4087,23 @@
       "educacion",
       "escuela",
       "ejercicios",
-      "profesor"
+      "profesor",
+      "Khan Academy",
+      "matematicas",
+      "paso a paso",
+      "explicacion",
+      "ejercicio"
     ],
     "tags": [
       "Educación",
       "Tutorias",
       "Aprendizaje"
-    ]
+    ],
+    "useCaseIds": [
+      "educacion-tutor",
+      "educacion-aprender"
+    ],
+    "bestFor": "Ideal como tutor personalizado de matemáticas y ciencias"
   },
   {
     "id": "duolingo-max",
@@ -3570,13 +4155,23 @@
       "conversar",
       "practicar",
       "curso",
-      "estudiar"
+      "estudiar",
+      "practica oral",
+      "roleplay",
+      "conversacion IA",
+      "gamificacion",
+      "diario"
     ],
     "tags": [
       "Idiomas",
       "Aprendizaje",
       "Conversación"
-    ]
+    ],
+    "useCaseIds": [
+      "educacion-idiomas",
+      "traduccion-aprender"
+    ],
+    "bestFor": "Ideal para practicar idiomas con conversación IA"
   },
   {
     "id": "quizlet",
@@ -3627,13 +4222,18 @@
       "aprender",
       "universidad",
       "repasar",
-      "quiz"
+      "quiz",
+      "tarjetas"
     ],
     "tags": [
       "Estudio",
       "Flashcards",
       "Examenes"
-    ]
+    ],
+    "useCaseIds": [
+      "educacion-estudiar"
+    ],
+    "bestFor": "Ideal para crear flashcards y estudiar para exámenes"
   },
   {
     "id": "wolfram",
@@ -3688,13 +4288,25 @@
       "estadística",
       "resolver",
       "cálculo",
-      "fórmula"
+      "fórmula",
+      "ecuacion",
+      "integral",
+      "derivada",
+      "fisica",
+      "quimica",
+      "resolver paso a paso"
     ],
     "tags": [
       "Matemáticas",
       "Computacion",
       "Ciencias"
-    ]
+    ],
+    "useCaseIds": [
+      "educacion-aprender",
+      "datos-analizar",
+      "investigacion-general"
+    ],
+    "bestFor": "Ideal para resolver problemas matemáticos y científicos complejos"
   },
   {
     "id": "hubspot-ai",
@@ -3745,13 +4357,23 @@
       "email",
       "automatizar",
       "negocio",
-      "leads"
+      "leads",
+      "pipeline",
+      "email marketing",
+      "automatizar ventas",
+      "contactos",
+      "funnel"
     ],
     "tags": [
       "CRM",
       "Marketing",
       "Ventas"
-    ]
+    ],
+    "useCaseIds": [
+      "negocios-crm",
+      "negocios-marketing"
+    ],
+    "bestFor": "Ideal para equipos de ventas y marketing con CRM gratuito"
   },
   {
     "id": "salesforce-einstein",
@@ -3802,13 +4424,22 @@
       "leads",
       "automatizar",
       "salesforce",
-      "negocio"
+      "negocio",
+      "enterprise",
+      "prediccion ventas",
+      "automatizar CRM",
+      "pipeline",
+      "forecast"
     ],
     "tags": [
       "Empresarial",
       "CRM",
       "Predicción"
-    ]
+    ],
+    "useCaseIds": [
+      "negocios-crm"
+    ],
+    "bestFor": "Ideal para empresas grandes con Salesforce que quieren IA predictiva"
   },
   {
     "id": "surfer-seo",
@@ -3860,13 +4491,22 @@
       "palabras clave",
       "ranking",
       "articulo",
-      "búsqueda"
+      "búsqueda",
+      "optimizar",
+      "ranking google",
+      "contenido SEO",
+      "competencia"
     ],
     "tags": [
       "SEO",
       "Marketing",
       "Contenido"
-    ]
+    ],
+    "useCaseIds": [
+      "negocios-seo",
+      "escritura-articulos"
+    ],
+    "bestFor": "Ideal para escribir artículos optimizados para Google"
   },
   {
     "id": "adcreative",
@@ -3918,13 +4558,22 @@
       "google",
       "creatividad",
       "banner",
-      "marketing"
+      "marketing",
+      "ad",
+      "facebook ads",
+      "conversion",
+      "A/B test"
     ],
     "tags": [
       "Publicidad",
       "Ads",
       "Creatividades"
-    ]
+    ],
+    "useCaseIds": [
+      "negocios-publicidad",
+      "diseno-social"
+    ],
+    "bestFor": "Ideal para generar creatividades publicitarias con alta conversión"
   },
   {
     "id": "deepl",
@@ -3975,13 +4624,21 @@
       "profesional",
       "preciso",
       "natural",
-      "lenguaje"
+      "lenguaje",
+      "calidad",
+      "contexto",
+      "matices"
     ],
     "tags": [
       "Traducción",
       "Idiomas",
       "Precision"
-    ]
+    ],
+    "useCaseIds": [
+      "traduccion-documento",
+      "traduccion-tiempo-real"
+    ],
+    "bestFor": "Ideal para traducciones profesionales de alta calidad"
   },
   {
     "id": "google-translate",
@@ -4032,13 +4689,21 @@
       "google",
       "rápido",
       "texto",
-      "app"
+      "app",
+      "rapido",
+      "app movil",
+      "130 idiomas"
     ],
     "tags": [
       "Traducción",
       "Gratis",
       "Google"
-    ]
+    ],
+    "useCaseIds": [
+      "traduccion-documento",
+      "traduccion-tiempo-real"
+    ],
+    "bestFor": "Ideal para traducciones rápidas y gratuitas en muchos idiomas"
   },
   {
     "id": "wordtune",
@@ -4090,13 +4755,20 @@
       "casual",
       "email",
       "texto",
-      "claridad"
+      "claridad",
+      "reformular",
+      "alternativas"
     ],
     "tags": [
       "Reescritura",
       "Tono",
       "Mejora"
-    ]
+    ],
+    "useCaseIds": [
+      "traduccion-mejorar",
+      "escritura-correos"
+    ],
+    "bestFor": "Ideal para mejorar el tono y claridad de tus textos"
   },
   {
     "id": "bardeen",
@@ -4150,13 +4822,23 @@
       "chrome",
       "flujo",
       "workflow",
-      "conectar apps"
+      "conectar apps",
+      "extension chrome",
+      "automatizar web",
+      "sin codigo",
+      "scraping facil",
+      "playbook"
     ],
     "tags": [
       "Automatización",
       "Navegador",
       "Scraping"
-    ]
+    ],
+    "useCaseIds": [
+      "automatizacion-web",
+      "automatizacion-workflow"
+    ],
+    "bestFor": "Ideal para automatizar tareas repetitivas en el navegador"
   },
   {
     "id": "relevance-ai",
@@ -4210,13 +4892,23 @@
       "pipeline",
       "negocio",
       "workflow",
-      "conectar apps"
+      "conectar apps",
+      "agente personalizado",
+      "pipeline IA",
+      "cadena",
+      "LLM",
+      "enterprise"
     ],
     "tags": [
       "Agentes IA",
       "Automatización",
       "Avanzado"
-    ]
+    ],
+    "useCaseIds": [
+      "automatizacion-agentes",
+      "automatizacion-datos"
+    ],
+    "bestFor": "Ideal para crear agentes de IA personalizados para tu negocio"
   },
   {
     "id": "respell",
@@ -4270,13 +4962,22 @@
       "workflow",
       "conectar apps",
       "agentes",
-      "no-code"
+      "no-code",
+      "drag and drop",
+      "spell",
+      "flujo IA",
+      "sin codigo"
     ],
     "tags": [
       "Automatización",
       "Visual",
       "Flujos"
-    ]
+    ],
+    "useCaseIds": [
+      "automatizacion-workflow",
+      "automatizacion-agentes"
+    ],
+    "bestFor": "Ideal para crear flujos de IA arrastrando y soltando"
   },
   {
     "id": "photoroom",
@@ -4327,13 +5028,21 @@
       "tienda",
       "e-commerce",
       "editar",
-      "imagen"
+      "imagen",
+      "fondo blanco",
+      "catalogo",
+      "tienda online"
     ],
     "tags": [
       "E-commerce",
       "Edición de fotos",
       "Fondos"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-producto",
+      "diseno-editar"
+    ],
+    "bestFor": "Ideal para fotos de producto profesionales para e-commerce"
   },
   {
     "id": "clipdrop",
@@ -4384,13 +5093,20 @@
       "resolución",
       "fondo",
       "limpiar",
-      "retocar"
+      "retocar",
+      "eliminar objeto",
+      "iluminar",
+      "retocar rapido"
     ],
     "tags": [
       "Edición",
       "Herramientas IA",
       "Imágenes"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-editar"
+    ],
+    "bestFor": "Ideal para editar y mejorar fotos rápidamente con IA"
   },
   {
     "id": "playground-ai",
@@ -4441,13 +5157,19 @@
       "modelos",
       "editar",
       "canvas",
-      "crear"
+      "crear",
+      "multiples estilos",
+      "libre"
     ],
     "tags": [
       "Generación de imágenes",
       "Gratis",
       "Multi-modelo"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-imagenes"
+    ],
+    "bestFor": "Ideal para generar imágenes gratis con múltiples modelos"
   },
   {
     "id": "freepik-ai",
@@ -4498,13 +5220,22 @@
       "ilustración",
       "recurso",
       "plantilla",
-      "imagen"
+      "imagen",
+      "recurso grafico",
+      "stock",
+      "vector IA",
+      "ilustracion"
     ],
     "tags": [
       "Banco de recursos",
       "Diseño",
       "Vectores"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-imagenes",
+      "diseno-social"
+    ],
+    "bestFor": "Ideal para generar recursos gráficos e ilustraciones"
   },
   {
     "id": "remove-bg",
@@ -4555,13 +5286,22 @@
       "transparente",
       "producto",
       "rápido",
-      "imagen"
+      "imagen",
+      "un clic",
+      "automatico",
+      "rapido",
+      "batch"
     ],
     "tags": [
       "Fondos",
       "Rápido",
       "API"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-editar",
+      "diseno-producto"
+    ],
+    "bestFor": "Ideal para eliminar fondos de fotos en un clic"
   },
   {
     "id": "recraft",
@@ -4612,13 +5352,20 @@
       "marca",
       "ilustración",
       "gráfico",
-      "estilo"
+      "estilo",
+      "icono set",
+      "estilo consistente"
     ],
     "tags": [
       "Vectores",
       "Diseño gráfico",
       "SVG"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-logo",
+      "diseno-imagenes"
+    ],
+    "bestFor": "Ideal para crear vectores, iconos y gráficos de marca"
   },
   {
     "id": "flux",
@@ -4669,13 +5416,19 @@
       "open source",
       "texto",
       "profesional",
-      "modelo"
+      "modelo",
+      "alta calidad",
+      "detalle"
     ],
     "tags": [
       "Generación de imágenes",
       "Open source",
       "Fotorrealista"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-imagenes"
+    ],
+    "bestFor": "Ideal para generar imágenes fotorrealistas de alta calidad"
   },
   {
     "id": "pixlr",
@@ -4726,12 +5479,18 @@
       "navegador",
       "filtro",
       "retocar",
-      "photoshop"
+      "photoshop",
+      "photoshop gratis",
+      "capas"
     ],
     "tags": [
       "Editor online",
       "Gratis",
       "Fotos"
-    ]
+    ],
+    "useCaseIds": [
+      "diseno-editar"
+    ],
+    "bestFor": "Ideal para editar fotos gratis en el navegador como en Photoshop"
   }
 ]

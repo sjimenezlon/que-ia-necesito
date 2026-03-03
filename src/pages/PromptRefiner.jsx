@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import {
   Palette, Megaphone, Newspaper, Code, Users, Lightbulb, PenTool,
+  GraduationCap, TrendingUp, Heart, Database,
   ChevronRight, ChevronLeft, Copy, Check, RotateCcw, Sparkles
 } from 'lucide-react'
 
@@ -12,6 +13,10 @@ const DOMAINS = [
   { id: 'talento', label: 'Gestión de Talento Humano', icon: Users, desc: 'Reclutamiento, evaluación, cultura y desarrollo organizacional.', color: 'bg-purple-50 text-purple-600 border-purple-200' },
   { id: 'creatividad', label: 'Creatividad', icon: Lightbulb, desc: 'Ideación, brainstorming, innovación y pensamiento lateral.', color: 'bg-orange-50 text-orange-600 border-orange-200' },
   { id: 'diseno', label: 'Diseño', icon: PenTool, desc: 'UX/UI, gráfico, industrial, de servicios y experiencia.', color: 'bg-pink-50 text-pink-600 border-pink-200' },
+  { id: 'educacion', label: 'Educación y Academia', icon: GraduationCap, desc: 'Planes de clase, rúbricas, investigación y divulgación.', color: 'bg-teal-50 text-teal-600 border-teal-200' },
+  { id: 'ventas', label: 'Ventas y Negocios', icon: TrendingUp, desc: 'Pitch, estrategia comercial, pricing y análisis de mercado.', color: 'bg-indigo-50 text-indigo-600 border-indigo-200' },
+  { id: 'salud', label: 'Salud y Bienestar', icon: Heart, desc: 'Divulgación médica, nutrición, bienestar y comunicación en salud.', color: 'bg-rose-50 text-rose-600 border-rose-200' },
+  { id: 'datos', label: 'Ciencia de Datos', icon: Database, desc: 'ML aplicado, visualización, dashboards y análisis estadístico.', color: 'bg-cyan-50 text-cyan-600 border-cyan-200' },
 ]
 
 const DOMAIN_DATA = {
@@ -83,6 +88,46 @@ const DOMAIN_DATA = {
       { title: 'Diseñador gráfico', desc: 'Creador visual para marcas, piezas y materiales.' },
       { title: 'Service designer', desc: 'Diseñador de servicios y experiencias multicanal.' },
       { title: 'Motion designer', desc: 'Especialista en animación y narrativa visual en movimiento.' },
+    ]
+  },
+  educacion: {
+    roleHint: 'Ej: "Eres un profesor universitario de física con 15 años de experiencia en educación STEM"',
+    taskHint: 'Ej: "Crea un plan de clase", "Diseña una rúbrica de evaluación"',
+    roleTemplates: [
+      { title: 'Profesor / Tutor', desc: 'Docente con experiencia en enseñanza y evaluación.' },
+      { title: 'Diseñador curricular', desc: 'Especialista en diseño de programas y planes de estudio.' },
+      { title: 'Investigador académico', desc: 'Experto en metodología de investigación y publicación.' },
+      { title: 'Divulgador científico', desc: 'Comunicador de ciencia para audiencias no especializadas.' },
+    ]
+  },
+  ventas: {
+    roleHint: 'Ej: "Eres un director comercial con experiencia en ventas B2B para empresas de tecnología en LATAM"',
+    taskHint: 'Ej: "Crea un pitch de ventas", "Diseña una estrategia de pricing"',
+    roleTemplates: [
+      { title: 'Estratega comercial', desc: 'Planificador de estrategias de venta y crecimiento.' },
+      { title: 'Closer de ventas', desc: 'Especialista en cierre de negocios y negociación.' },
+      { title: 'Analista de mercado', desc: 'Investigador de tendencias, competencia y oportunidades.' },
+      { title: 'Pitch designer', desc: 'Creador de presentaciones de venta persuasivas.' },
+    ]
+  },
+  salud: {
+    roleHint: 'Ej: "Eres un médico divulgador con experiencia en comunicación de salud pública para audiencias no especializadas"',
+    taskHint: 'Ej: "Redacta una guía de prevención", "Crea contenido educativo sobre nutrición"',
+    roleTemplates: [
+      { title: 'Divulgador de salud', desc: 'Comunicador médico para audiencias generales.' },
+      { title: 'Nutricionista / Coach', desc: 'Especialista en alimentación y hábitos saludables.' },
+      { title: 'Psicólogo / Terapeuta', desc: 'Profesional de salud mental y bienestar emocional.' },
+      { title: 'Comunicador médico', desc: 'Redactor de contenido científico-médico accesible.' },
+    ]
+  },
+  datos: {
+    roleHint: 'Ej: "Eres un data scientist senior con experiencia en ML aplicado y visualización de datos para stakeholders no técnicos"',
+    taskHint: 'Ej: "Analiza este dataset y encuentra patrones", "Crea un dashboard ejecutivo"',
+    roleTemplates: [
+      { title: 'Data analyst', desc: 'Analista de datos con enfoque en insights de negocio.' },
+      { title: 'ML engineer', desc: 'Ingeniero de machine learning y modelos predictivos.' },
+      { title: 'Visualizador de datos', desc: 'Especialista en dashboards y narrativa visual de datos.' },
+      { title: 'BI consultant', desc: 'Consultor de inteligencia de negocio y estrategia de datos.' },
     ]
   }
 }

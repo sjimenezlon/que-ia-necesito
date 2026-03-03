@@ -1,24 +1,29 @@
 import tools from '../data/tools.json'
+import { USE_CASES, getUseCaseById } from '../data/useCaseOptions'
 
 /**
- * Smart recommendation engine with progressive filter relaxation.
- * Ensures users ALWAYS get results by loosening criteria when needed.
- * Returns { tools, relaxed, relaxedMessage }
+ * Smart recommendation engine with multi-factor scoring.
+ * Now supports useCase and context in addition to category/difficulty/pricing.
+ * Returns { tools, relaxed, relaxedMessage, reasons }
  */
-export function getRecommendations({ category, difficulty, pricing }) {
+export function getRecommendations({ category, difficulty, pricing, useCase, context }) {
   // Step 1: Try strict match
   let candidates = applyFilters(tools, { category, difficulty, pricing })
 
   if (candidates.length >= 3) {
-    return { tools: topN(candidates, 5), relaxed: false, relaxedMessage: null }
+    return {
+      tools: scoreAndRank(candidates, { category, useCase, context }),
+      relaxed: false,
+      relaxedMessage: null,
+    }
   }
 
-  // Step 2: Relax pricing — "gratis" should include "freemium" (they have free tiers)
+  // Step 2: Relax pricing — "gratis" should include "freemium"
   if (pricing === 'gratis') {
     candidates = applyFilters(tools, { category, difficulty, pricing: 'gratis_or_freemium' })
     if (candidates.length >= 3) {
       return {
-        tools: topN(candidates, 5),
+        tools: scoreAndRank(candidates, { category, useCase, context }),
         relaxed: true,
         relaxedMessage: 'Incluimos herramientas freemium (tienen plan gratuito) para darte más opciones.',
       }
@@ -32,42 +37,125 @@ export function getRecommendations({ category, difficulty, pricing }) {
     candidates = applyFilters(tools, { category, difficulty: relaxedDifficulty, pricing: pricingToUse })
     if (candidates.length >= 2) {
       return {
-        tools: topN(candidates, 5),
+        tools: scoreAndRank(candidates, { category, useCase, context }),
         relaxed: true,
         relaxedMessage: 'Ampliamos el nivel de dificultad para incluir más opciones útiles.',
       }
     }
   }
 
-  // Step 4: Relax pricing completely — keep only category + difficulty
+  // Step 4: Relax pricing completely
   if (pricing && pricing !== 'any') {
     const relaxedDifficulty = difficulty ? Math.min(difficulty + 1, 3) : null
     candidates = applyFilters(tools, { category, difficulty: relaxedDifficulty, pricing: 'any' })
     if (candidates.length >= 2) {
       return {
-        tools: topN(candidates, 5),
+        tools: scoreAndRank(candidates, { category, useCase, context }),
         relaxed: true,
         relaxedMessage: 'Mostramos herramientas de todos los precios en esta categoría.',
       }
     }
   }
 
-  // Step 5: Last resort — just category, no other filters
+  // Step 5: Just category
   candidates = applyFilters(tools, { category, difficulty: null, pricing: 'any' })
   if (candidates.length > 0) {
     return {
-      tools: topN(candidates, 5),
+      tools: scoreAndRank(candidates, { category, useCase, context }),
       relaxed: true,
       relaxedMessage: 'Mostramos las mejores herramientas de esta categoría sin filtros adicionales.',
     }
   }
 
-  // Step 6: Absolute fallback — top tools overall
+  // Step 6: Absolute fallback
   return {
-    tools: topN(tools, 5),
+    tools: scoreAndRank(tools, { category, useCase, context }).slice(0, 5),
     relaxed: true,
     relaxedMessage: 'No hay herramientas específicas para esa combinación. Te mostramos las más populares en general.',
   }
+}
+
+/**
+ * Multi-factor scoring system.
+ * Scores each tool on a 0-100 scale and returns top 5 sorted by score.
+ */
+function scoreAndRank(candidates, { category, useCase, context }) {
+  const scored = candidates.map((tool) => {
+    let score = 0
+
+    // Factor 1: Use case match (0-40 points)
+    if (useCase && tool.useCaseIds) {
+      if (tool.useCaseIds.includes(useCase)) {
+        score += 40
+      } else {
+        // Fuzzy match with matchTerms
+        const useCaseInfo = getUseCaseById(useCase)
+        if (useCaseInfo) {
+          const toolText = [
+            ...(tool.keywords || []),
+            ...(tool.useCases || []),
+            tool.shortDescription || '',
+          ].join(' ').toLowerCase()
+          const matchCount = useCaseInfo.matchTerms.filter((term) =>
+            toolText.includes(term.toLowerCase())
+          ).length
+          score += Math.min(matchCount * 10, 30)
+        }
+      }
+    }
+
+    // Factor 2: Rating (0-25 points)
+    score += (tool.rating / 5) * 25
+
+    // Factor 3: Category specificity (0-15 points)
+    if (category && tool.categories) {
+      if (tool.categories[0] === category) {
+        score += 15 // Primary category
+      } else if (tool.categories.includes(category)) {
+        score += 8 // Secondary category
+      }
+    }
+
+    // Factor 4: Documentation richness (0-10 points)
+    const useCaseCount = (tool.useCases || []).length
+    const keywordCount = (tool.keywords || []).length
+    score += Math.min((useCaseCount + keywordCount) / 3, 10)
+
+    // Factor 5: Context match (0-10 points)
+    if (context && tool.keywords) {
+      const contextTerms = {
+        youtube: ['video', 'crear', 'clip', 'editar'],
+        redes: ['social', 'reel', 'tiktok', 'post', 'corto'],
+        profesional: ['empresa', 'corporativo', 'profesional', 'equipo'],
+        educativo: ['educacion', 'curso', 'aprender', 'tutorial'],
+        personal: ['personal', 'facil', 'simple', 'gratis'],
+        equipo: ['equipo', 'colaborar', 'empresa', 'compartir'],
+        academico: ['academico', 'universidad', 'investigar', 'paper'],
+        freelance: ['freelance', 'cliente', 'proyecto', 'profesional'],
+        vscode: ['VS Code', 'editor', 'IDE', 'extension'],
+        navegador: ['navegador', 'online', 'web', 'nube'],
+        terminal: ['terminal', 'CLI', 'linea de comandos'],
+        nocode: ['sin codigo', 'no-code', 'visual', 'arrastrar'],
+        raster: ['imagen', 'PNG', 'JPG', 'foto', 'generar'],
+        vector: ['vector', 'SVG', 'icono', 'logo'],
+        edicion: ['editar', 'retocar', 'fondo', 'mejorar'],
+        plantillas: ['plantilla', 'template', 'listo', 'rapido'],
+        excel: ['excel', 'hoja de calculo', 'CSV', 'spreadsheet'],
+        database: ['SQL', 'base de datos', 'query'],
+        texto: ['texto', 'NLP', 'sentimiento', 'encuesta'],
+        metricas: ['metrica', 'KPI', 'dashboard', 'negocio'],
+      }
+      const terms = contextTerms[context] || []
+      const toolKeywords = tool.keywords.join(' ').toLowerCase()
+      const contextMatch = terms.filter((t) => toolKeywords.includes(t.toLowerCase())).length
+      score += Math.min(contextMatch * 3, 10)
+    }
+
+    return { tool, score }
+  })
+
+  scored.sort((a, b) => b.score - a.score)
+  return scored.slice(0, 5).map((s) => s.tool)
 }
 
 function applyFilters(allTools, { category, difficulty, pricing }) {
@@ -90,10 +178,6 @@ function applyFilters(allTools, { category, difficulty, pricing }) {
   }
 
   return result
-}
-
-function topN(candidates, n) {
-  return [...candidates].sort((a, b) => b.rating - a.rating).slice(0, n)
 }
 
 export function getToolById(id) {
@@ -123,7 +207,7 @@ export function getRelatedTools(tool, limit = 4) {
  * Get popular tools for a fallback/suggestion UI
  */
 export function getPopularTools(limit = 6) {
-  return topN(tools, limit)
+  return [...tools].sort((a, b) => b.rating - a.rating).slice(0, limit)
 }
 
 export const CATEGORIES = [

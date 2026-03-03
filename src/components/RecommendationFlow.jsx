@@ -1,26 +1,13 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowLeft, ArrowRight, RotateCcw, Star, ExternalLink,
   Info, Sparkles, CheckCircle2,
 } from 'lucide-react'
 import { CATEGORIES, getRecommendations, getCategoryInfo } from '../utils/recommender'
+import { USE_CASES, CONTEXT_QUESTIONS } from '../data/useCaseOptions'
+import { getMatchReason } from '../utils/matchReasons'
 import { ToolFavicon } from './ToolCard'
-
-const steps = [
-  {
-    title: '¿En qué área necesitas ayuda?',
-    subtitle: 'Selecciona la categoría que más se acerque a lo que buscas.',
-  },
-  {
-    title: '¿Qué tan técnico eres?',
-    subtitle: 'Esto nos ayuda a recomendarte herramientas adecuadas a tu nivel.',
-  },
-  {
-    title: '¿Cuánto quieres invertir?',
-    subtitle: 'Hay opciones para todos los presupuestos.',
-  },
-]
 
 const difficultyOptions = [
   { value: 1, label: 'Principiante', desc: 'Quiero algo simple y fácil de usar', emoji: '🌱' },
@@ -50,16 +37,57 @@ const pricingStyles = {
 export default function RecommendationFlow() {
   const [step, setStep] = useState(0)
   const [category, setCategory] = useState(null)
+  const [useCase, setUseCase] = useState(null)
+  const [contextAnswer, setContextAnswer] = useState(null)
   const [difficulty, setDifficulty] = useState(null)
   const [pricing, setPricing] = useState(null)
   const [results, setResults] = useState(null)
   const [relaxedMessage, setRelaxedMessage] = useState(null)
 
+  // Determine if this category has a context question
+  const hasContextStep = category && CONTEXT_QUESTIONS[category]
+  const contextConfig = hasContextStep ? CONTEXT_QUESTIONS[category] : null
+
+  // Dynamic steps based on whether context is available
+  const steps = useMemo(() => {
+    const base = [
+      { title: '¿En qué área necesitas ayuda?', subtitle: 'Selecciona la categoría que más se acerque a lo que buscas.', label: 'Área' },
+      { title: '¿Qué quieres hacer exactamente?', subtitle: 'Elige el caso de uso más cercano a tu necesidad.', label: 'Caso de uso' },
+    ]
+    if (hasContextStep) {
+      base.push({ title: contextConfig.question, subtitle: 'Esto nos ayuda a afinar las recomendaciones.', label: 'Contexto' })
+    }
+    base.push(
+      { title: '¿Qué tan técnico eres?', subtitle: 'Esto nos ayuda a recomendarte herramientas adecuadas a tu nivel.', label: 'Nivel' },
+      { title: '¿Cuánto quieres invertir?', subtitle: 'Hay opciones para todos los presupuestos.', label: 'Precio' },
+    )
+    return base
+  }, [hasContextStep, contextConfig])
+
+  const totalSteps = steps.length
+
+  // Map step index to content type
+  const getStepType = (s) => {
+    if (s === 0) return 'category'
+    if (s === 1) return 'useCase'
+    if (hasContextStep && s === 2) return 'context'
+    if (hasContextStep) {
+      if (s === 3) return 'difficulty'
+      if (s === 4) return 'pricing'
+    } else {
+      if (s === 2) return 'difficulty'
+      if (s === 3) return 'pricing'
+    }
+    return null
+  }
+
+  const currentStepType = getStepType(step)
+
   const handleNext = () => {
-    if (step < 2) {
+    if (step < totalSteps - 1) {
       setStep(step + 1)
     } else {
-      const recs = getRecommendations({ category, difficulty, pricing })
+      const recs = getRecommendations({ category, difficulty, pricing, useCase, context: contextAnswer })
       setResults(recs.tools)
       setRelaxedMessage(recs.relaxed ? recs.relaxedMessage : null)
     }
@@ -72,18 +100,27 @@ export default function RecommendationFlow() {
   const handleReset = () => {
     setStep(0)
     setCategory(null)
+    setUseCase(null)
+    setContextAnswer(null)
     setDifficulty(null)
     setPricing(null)
     setResults(null)
     setRelaxedMessage(null)
   }
 
-  const canProceed =
-    (step === 0 && category) ||
-    (step === 1 && difficulty) ||
-    (step === 2 && pricing)
+  const canProceed = (() => {
+    switch (currentStepType) {
+      case 'category': return !!category
+      case 'useCase': return !!useCase
+      case 'context': return !!contextAnswer
+      case 'difficulty': return !!difficulty
+      case 'pricing': return !!pricing
+      default: return false
+    }
+  })()
 
   const selectedCategory = category ? getCategoryInfo(category) : null
+  const useCaseOptions = category ? USE_CASES[category] || [] : []
 
   // ─── Results view ───
   if (results) {
@@ -115,75 +152,82 @@ export default function RecommendationFlow() {
 
         {/* Results list */}
         <div className="space-y-4 mb-10">
-          {results.map((tool, i) => (
-            <div
-              key={tool.id}
-              className="group bg-surface rounded-2xl border border-border p-5 animate-slide-up hover:shadow-md hover:border-primary/20 transition-all duration-300 relative overflow-hidden"
-              style={{ animationDelay: `${(i + 1) * 80}ms` }}
-            >
-              {/* Rank accent */}
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-warm opacity-50 rounded-l-2xl" />
+          {results.map((tool, i) => {
+            const reason = getMatchReason(tool, { useCase, category, context: contextAnswer })
+            return (
+              <div
+                key={tool.id}
+                className="group bg-surface rounded-2xl border border-border p-5 animate-slide-up hover:shadow-md hover:border-primary/20 transition-all duration-300 relative overflow-hidden"
+                style={{ animationDelay: `${(i + 1) * 80}ms` }}
+              >
+                {/* Rank accent */}
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-warm opacity-50 rounded-l-2xl" />
 
-              <div className="flex items-start gap-4 pl-2">
-                {/* Rank number */}
-                <div className="w-9 h-9 bg-primary/8 rounded-xl flex items-center justify-center shrink-0">
-                  <span className="text-primary font-bold text-sm font-display">
-                    {i + 1}
-                  </span>
-                </div>
-
-                {/* Favicon */}
-                <div className="shrink-0 transition-transform duration-300 group-hover:scale-105">
-                  <ToolFavicon tool={tool} />
-                </div>
-
-                {/* Content */}
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 flex-wrap mb-1">
-                    <h3 className="font-display font-semibold text-text tracking-tight">{tool.name}</h3>
-                    <span
-                      className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${
-                        pricingStyles[tool.pricing]
-                      }`}
-                    >
-                      {pricingLabels[tool.pricing]}
+                <div className="flex items-start gap-4 pl-2">
+                  {/* Rank number */}
+                  <div className="w-9 h-9 bg-primary/8 rounded-xl flex items-center justify-center shrink-0">
+                    <span className="text-primary font-bold text-sm font-display">
+                      {i + 1}
                     </span>
-                    <div className="flex items-center gap-0.5 ml-auto">
-                      {Array.from({ length: 5 }).map((_, j) => (
-                        <Star
-                          key={j}
-                          className={`w-3 h-3 ${
-                            j < tool.rating
-                              ? 'text-amber-400 fill-amber-400'
-                              : 'text-zinc-200 fill-zinc-200'
-                          }`}
-                        />
-                      ))}
-                    </div>
                   </div>
-                  <p className="text-text-light text-sm leading-relaxed">
-                    {tool.shortDescription}
-                  </p>
-                  <div className="flex items-center gap-4 mt-3">
-                    <Link
-                      to={`/herramienta/${tool.id}`}
-                      className="text-primary text-sm font-semibold no-underline hover:underline"
-                    >
-                      Ver detalle →
-                    </Link>
-                    <a
-                      href={tool.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-text-lighter text-sm no-underline hover:text-primary transition-colors"
-                    >
-                      Visitar <ExternalLink className="w-3 h-3" />
-                    </a>
+
+                  {/* Favicon */}
+                  <div className="shrink-0 transition-transform duration-300 group-hover:scale-105">
+                    <ToolFavicon tool={tool} />
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 flex-wrap mb-1">
+                      <h3 className="font-display font-semibold text-text tracking-tight">{tool.name}</h3>
+                      <span
+                        className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${
+                          pricingStyles[tool.pricing]
+                        }`}
+                      >
+                        {pricingLabels[tool.pricing]}
+                      </span>
+                      <div className="flex items-center gap-0.5 ml-auto">
+                        {Array.from({ length: 5 }).map((_, j) => (
+                          <Star
+                            key={j}
+                            className={`w-3 h-3 ${
+                              j < tool.rating
+                                ? 'text-amber-400 fill-amber-400'
+                                : 'text-zinc-200 fill-zinc-200'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    {/* Match reason */}
+                    {reason && (
+                      <p className="text-accent text-xs font-medium mb-1.5">{reason}</p>
+                    )}
+                    <p className="text-text-light text-sm leading-relaxed">
+                      {tool.shortDescription}
+                    </p>
+                    <div className="flex items-center gap-4 mt-3">
+                      <Link
+                        to={`/herramienta/${tool.id}`}
+                        className="text-primary text-sm font-semibold no-underline hover:underline"
+                      >
+                        Ver detalle →
+                      </Link>
+                      <a
+                        href={tool.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-text-lighter text-sm no-underline hover:text-primary transition-colors"
+                      >
+                        Visitar <ExternalLink className="w-3 h-3" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         {/* Actions */}
@@ -211,19 +255,19 @@ export default function RecommendationFlow() {
     <div className="max-w-2xl mx-auto">
       {/* Progress bar */}
       <div className="flex items-center gap-2 mb-10">
-        {[0, 1, 2].map((s) => (
-          <div key={s} className="flex-1 relative">
+        {steps.map((s, i) => (
+          <div key={i} className="flex-1 relative">
             <div className="h-1.5 rounded-full bg-black/5 overflow-hidden">
               <div
                 className="h-full rounded-full transition-all duration-500 ease-out"
                 style={{
-                  width: s < step ? '100%' : s === step ? '50%' : '0%',
+                  width: i < step ? '100%' : i === step ? '50%' : '0%',
                   background: 'linear-gradient(90deg, #4338CA, #E11D48)',
                 }}
               />
             </div>
-            <span className={`block text-[10px] font-semibold mt-1.5 ${s <= step ? 'text-primary' : 'text-text-lighter'}`}>
-              {s === 0 ? 'Área' : s === 1 ? 'Nivel' : 'Precio'}
+            <span className={`block text-[10px] font-semibold mt-1.5 ${i <= step ? 'text-primary' : 'text-text-lighter'}`}>
+              {s.label}
             </span>
           </div>
         ))}
@@ -232,7 +276,7 @@ export default function RecommendationFlow() {
       {/* Step header */}
       <div className="text-center mb-8">
         <span className="text-xs font-bold text-primary uppercase tracking-[0.12em] mb-2 block">
-          Paso {step + 1} de 3
+          Paso {step + 1} de {totalSteps}
         </span>
         <h2 className="text-xl md:text-2xl font-bold text-text mb-2 tracking-tight">
           {steps[step].title}
@@ -242,12 +286,18 @@ export default function RecommendationFlow() {
 
       {/* Step content */}
       <div className="animate-scale-in" key={step}>
-        {step === 0 && (
+        {/* Category step */}
+        {currentStepType === 'category' && (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {CATEGORIES.map((cat) => (
               <button
                 key={cat.id}
-                onClick={() => setCategory(cat.id)}
+                onClick={() => {
+                  setCategory(cat.id)
+                  // Reset dependent fields when category changes
+                  setUseCase(null)
+                  setContextAnswer(null)
+                }}
                 className={`p-4 rounded-xl border-2 text-left cursor-pointer transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] ${
                   category === cat.id
                     ? 'border-primary bg-primary/5 shadow-sm'
@@ -262,7 +312,53 @@ export default function RecommendationFlow() {
           </div>
         )}
 
-        {step === 1 && (
+        {/* Use case step */}
+        {currentStepType === 'useCase' && (
+          <div className="space-y-3">
+            {useCaseOptions.map((opt) => (
+              <button
+                key={opt.id}
+                onClick={() => setUseCase(opt.id)}
+                className={`w-full p-5 rounded-xl border-2 text-left cursor-pointer transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] flex items-start gap-4 ${
+                  useCase === opt.id
+                    ? 'border-primary bg-primary/5 shadow-sm'
+                    : 'border-border bg-surface hover:border-primary/30'
+                }`}
+              >
+                <span className="text-2xl">{opt.emoji}</span>
+                <div>
+                  <span className="font-semibold text-text block">{opt.label}</span>
+                  <span className="text-sm text-text-light">{opt.matchTerms.slice(0, 3).join(', ')}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Context step (optional) */}
+        {currentStepType === 'context' && contextConfig && (
+          <div className="space-y-3">
+            {contextConfig.options.map((opt) => (
+              <button
+                key={opt.value}
+                onClick={() => setContextAnswer(opt.value)}
+                className={`w-full p-5 rounded-xl border-2 text-left cursor-pointer transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] flex items-start gap-4 ${
+                  contextAnswer === opt.value
+                    ? 'border-primary bg-primary/5 shadow-sm'
+                    : 'border-border bg-surface hover:border-primary/30'
+                }`}
+              >
+                <span className="text-2xl">{opt.emoji}</span>
+                <div>
+                  <span className="font-semibold text-text block">{opt.label}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Difficulty step */}
+        {currentStepType === 'difficulty' && (
           <div className="space-y-3">
             {difficultyOptions.map((opt) => (
               <button
@@ -284,7 +380,8 @@ export default function RecommendationFlow() {
           </div>
         )}
 
-        {step === 2 && (
+        {/* Pricing step */}
+        {currentStepType === 'pricing' && (
           <div className="space-y-3">
             {pricingOptions.map((opt) => (
               <button
@@ -330,7 +427,7 @@ export default function RecommendationFlow() {
               : 'bg-black/8 text-text-lighter cursor-not-allowed'
           }`}
         >
-          {step === 2 ? (
+          {step === totalSteps - 1 ? (
             <>
               <Sparkles className="w-4 h-4" />
               Ver resultados
