@@ -1150,7 +1150,12 @@
       "presentación",
       "fácil",
       "rápido",
-      "profesional"
+      "profesional",
+      "diapositivas",
+      "slides",
+      "pitch",
+      "deck",
+      "póster"
     ],
     "tags": [
       "Diseño",
@@ -1378,7 +1383,8 @@
       "rápido",
       "pitch",
       "reporte",
-      "slides"
+      "slides",
+      "deck"
     ],
     "tags": [
       "Presentaciones",
@@ -1435,7 +1441,10 @@
       "equipo",
       "slides",
       "informe",
-      "visual"
+      "visual",
+      "diapositivas",
+      "pitch",
+      "deck"
     ],
     "tags": [
       "Presentaciones",
@@ -1492,7 +1501,9 @@
       "visual",
       "pitch",
       "crear",
-      "rápido"
+      "rápido",
+      "diapositivas",
+      "deck"
     ],
     "tags": [
       "Storytelling",
@@ -1607,7 +1618,10 @@
       "animación",
       "fondo",
       "profesional",
-      "crear"
+      "crear",
+      "clip",
+      "editar video",
+      "película"
     ],
     "tags": [
       "Video IA",
@@ -1664,7 +1678,10 @@
       "corto",
       "redes",
       "imagen",
-      "rápido"
+      "rápido",
+      "clip",
+      "animación",
+      "editar video"
     ],
     "tags": [
       "Video",
@@ -1721,7 +1738,9 @@
       "corporativo",
       "capacitación",
       "sin camara",
-      "presentador"
+      "presentador",
+      "clip",
+      "portavoz"
     ],
     "tags": [
       "Avatares",
@@ -1779,7 +1798,9 @@
       "empresa",
       "tutorial",
       "idiomas",
-      "presentador"
+      "presentador",
+      "clip",
+      "curso"
     ],
     "tags": [
       "Empresarial",
@@ -1836,7 +1857,10 @@
       "subtitulos",
       "gratis",
       "redes",
-      "cortar"
+      "cortar",
+      "clip",
+      "editar video",
+      "reel"
     ],
     "tags": [
       "Edición",
@@ -1893,7 +1917,10 @@
       "calidad",
       "clips",
       "movimiento",
-      "crear"
+      "crear",
+      "clip",
+      "animación",
+      "3D"
     ],
     "tags": [
       "Video IA",
@@ -1951,7 +1978,10 @@
       "narrar",
       "podcast",
       "audiolibro",
-      "texto"
+      "texto",
+      "sonido",
+      "canción",
+      "narración"
     ],
     "tags": [
       "Voz IA",
@@ -2008,7 +2038,11 @@
       "melodia",
       "crear",
       "audio",
-      "componer"
+      "componer",
+      "canción",
+      "sonido",
+      "beat",
+      "instrumental"
     ],
     "tags": [
       "Música IA",
@@ -2065,7 +2099,12 @@
       "género",
       "crear",
       "producir",
-      "fondo"
+      "fondo",
+      "canción",
+      "sonido",
+      "beat",
+      "instrumental",
+      "componer"
     ],
     "tags": [
       "Música IA",
@@ -2122,7 +2161,10 @@
       "video",
       "curso",
       "audio",
-      "texto"
+      "texto",
+      "sonido",
+      "narración",
+      "doblaje"
     ],
     "tags": [
       "Locución",
@@ -2181,7 +2223,12 @@
       "podcast",
       "texto",
       "cortar",
-      "grabar"
+      "grabar",
+      "sonido",
+      "subtítulos",
+      "reunión",
+      "editar video",
+      "clip"
     ],
     "tags": [
       "Edición",
@@ -2581,7 +2628,12 @@
       "CSV",
       "visualizar",
       "reporte",
-      "preguntar"
+      "preguntar",
+      "hoja de cálculo",
+      "gráfico",
+      "dashboard",
+      "SQL",
+      "estadística"
     ],
     "tags": [
       "Análisis",
@@ -2639,7 +2691,10 @@
       "analizar",
       "reporte",
       "automatizar",
-      "excel"
+      "excel",
+      "hoja de cálculo",
+      "gráfico",
+      "spreadsheet"
     ],
     "tags": [
       "Hojas de calculo",
@@ -2696,7 +2751,9 @@
       "extraer",
       "automatizar",
       "NLP",
-      "datos"
+      "datos",
+      "encuesta",
+      "opiniones"
     ],
     "tags": [
       "NLP",
@@ -2810,7 +2867,10 @@
       "gráfica",
       "KPI",
       "excel",
-      "automático"
+      "automático",
+      "hoja de cálculo",
+      "gráfico",
+      "visualización"
     ],
     "tags": [
       "Dashboard",
@@ -3154,7 +3214,11 @@
       "zoom",
       "notas",
       "automático",
-      "llamada"
+      "llamada",
+      "subtítulos",
+      "audio a texto",
+      "voz a texto",
+      "dictado"
     ],
     "tags": [
       "Transcripción",
@@ -3212,7 +3276,11 @@
       "zoom",
       "notas",
       "equipo",
-      "automático"
+      "automático",
+      "subtítulos",
+      "audio a texto",
+      "voz a texto",
+      "dictado"
     ],
     "tags": [
       "Reuniones",
@@ -3328,7 +3396,9 @@
       "integrar",
       "proceso",
       "nodos",
-      "workflow"
+      "workflow",
+      "conectar apps",
+      "no-code"
     ],
     "tags": [
       "Automatización",
@@ -3616,7 +3686,9 @@
       "física",
       "gráficos",
       "estadística",
-      "resolver"
+      "resolver",
+      "cálculo",
+      "fórmula"
     ],
     "tags": [
       "Matemáticas",
@@ -4075,7 +4147,10 @@
       "datos",
       "scraping",
       "extensión",
-      "chrome"
+      "chrome",
+      "flujo",
+      "workflow",
+      "conectar apps"
     ],
     "tags": [
       "Automatización",
@@ -4133,7 +4208,9 @@
       "IA",
       "personalizar",
       "pipeline",
-      "negocio"
+      "negocio",
+      "workflow",
+      "conectar apps"
     ],
     "tags": [
       "Agentes IA",
@@ -4190,7 +4267,10 @@
       "arrastrar",
       "soltar",
       "proceso",
-      "workflow"
+      "workflow",
+      "conectar apps",
+      "agentes",
+      "no-code"
     ],
     "tags": [
       "Automatización",

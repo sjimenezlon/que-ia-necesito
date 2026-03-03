@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { X, Star, ExternalLink } from 'lucide-react'
 import { getToolById, getCategoryInfo } from '../utils/recommender'
@@ -9,9 +10,9 @@ const pricingLabels = {
 }
 
 const pricingStyles = {
-  gratis: 'bg-green-100 text-green-700',
-  freemium: 'bg-yellow-100 text-yellow-700',
-  pago: 'bg-red-100 text-red-700',
+  gratis: 'bg-emerald-50 text-emerald-700',
+  freemium: 'bg-amber-50 text-amber-700',
+  pago: 'bg-rose-50 text-rose-700',
 }
 
 const difficultyLabels = {
@@ -20,21 +21,60 @@ const difficultyLabels = {
   3: 'Avanzado',
 }
 
+function getFaviconUrl(url) {
+  try {
+    const domain = new URL(url).hostname
+    return `https://www.google.com/s2/favicons?domain=${domain}&sz=64`
+  } catch {
+    return null
+  }
+}
+
+function CompareToolFavicon({ tool }) {
+  const [imgError, setImgError] = useState(false)
+  const faviconUrl = getFaviconUrl(tool.url)
+
+  if (faviconUrl && !imgError) {
+    return (
+      <div className="w-9 h-9 bg-surface border border-border rounded-xl flex items-center justify-center">
+        <img
+          src={faviconUrl}
+          alt={tool.name}
+          className="w-5 h-5 object-contain"
+          onError={() => setImgError(true)}
+          loading="lazy"
+        />
+      </div>
+    )
+  }
+
+  return (
+    <div className="w-9 h-9 bg-primary/8 rounded-xl flex items-center justify-center">
+      <span className="text-primary font-bold text-sm">
+        {tool.name.charAt(0)}
+      </span>
+    </div>
+  )
+}
+
 export default function CompareTools({ toolIds, onRemove }) {
   const tools = toolIds.map(getToolById).filter(Boolean)
 
   if (tools.length === 0) {
     return (
-      <div className="text-center py-16">
-        <p className="text-text-lighter text-lg mb-2">
+      <div className="text-center py-20">
+        <div className="w-16 h-16 bg-black/4 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <span className="text-3xl">⚖️</span>
+        </div>
+        <p className="text-text font-display font-semibold text-lg mb-2">
           No hay herramientas para comparar
         </p>
-        <p className="text-text-lighter text-sm mb-6">
+        <p className="text-text-lighter text-sm mb-6 max-w-sm mx-auto">
           Agrega herramientas desde la página de explorar usando el botón +
         </p>
         <Link
           to="/explorar"
-          className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-medium no-underline hover:bg-primary-dark transition-colors text-sm"
+          className="inline-flex items-center gap-2 bg-text text-white px-6 py-3 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-md active:scale-[0.98] transition-all duration-200 text-sm"
         >
           Explorar herramientas
         </Link>
@@ -47,7 +87,7 @@ export default function CompareTools({ toolIds, onRemove }) {
       label: 'Precio',
       render: (t) => (
         <div>
-          <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${pricingStyles[t.pricing]}`}>
+          <span className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${pricingStyles[t.pricing]}`}>
             {pricingLabels[t.pricing]}
           </span>
           <p className="text-xs text-text-lighter mt-1">{t.pricingDetail}</p>
@@ -57,8 +97,8 @@ export default function CompareTools({ toolIds, onRemove }) {
     {
       label: 'Nivel',
       render: (t) => (
-        <span className="text-sm">
-          {'★'.repeat(t.difficulty)} {difficultyLabels[t.difficulty]}
+        <span className="text-sm font-medium">
+          {difficultyLabels[t.difficulty]}
         </span>
       ),
     },
@@ -72,7 +112,7 @@ export default function CompareTools({ toolIds, onRemove }) {
               className={`w-3.5 h-3.5 ${
                 i < t.rating
                   ? 'text-amber-400 fill-amber-400'
-                  : 'text-gray-200 fill-gray-200'
+                  : 'text-zinc-200 fill-zinc-200'
               }`}
             />
           ))}
@@ -86,7 +126,7 @@ export default function CompareTools({ toolIds, onRemove }) {
           {t.categories.map((catId) => {
             const cat = getCategoryInfo(catId)
             return cat ? (
-              <span key={catId} className={`text-xs px-1.5 py-0.5 rounded font-medium ${cat.color}`}>
+              <span key={catId} className={`text-[11px] px-1.5 py-0.5 rounded font-medium ${cat.color}`}>
                 {cat.label}
               </span>
             ) : null
@@ -111,7 +151,7 @@ export default function CompareTools({ toolIds, onRemove }) {
       render: (t) => (
         <ul className="space-y-1">
           {t.pros.map((p, i) => (
-            <li key={i} className="text-xs text-green-700">
+            <li key={i} className="text-xs text-emerald-700">
               + {p}
             </li>
           ))}
@@ -123,7 +163,7 @@ export default function CompareTools({ toolIds, onRemove }) {
       render: (t) => (
         <ul className="space-y-1">
           {t.cons.map((c, i) => (
-            <li key={i} className="text-xs text-red-700">
+            <li key={i} className="text-xs text-rose-700">
               - {c}
             </li>
           ))}
@@ -140,30 +180,26 @@ export default function CompareTools({ toolIds, onRemove }) {
             <th className="text-left p-3 text-sm font-medium text-text-lighter w-32" />
             {tools.map((tool) => (
               <th key={tool.id} className="p-3 text-left">
-                <div className="bg-white rounded-xl border border-border p-4">
+                <div className="bg-surface rounded-2xl border border-border p-4 shadow-xs">
                   <div className="flex items-start justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <span className="text-primary font-bold text-sm">
-                          {tool.name.charAt(0)}
-                        </span>
-                      </div>
-                      <span className="font-semibold text-text text-sm">
+                    <div className="flex items-center gap-2.5">
+                      <CompareToolFavicon tool={tool} />
+                      <span className="font-display font-semibold text-text text-sm tracking-tight">
                         {tool.name}
                       </span>
                     </div>
                     <button
                       onClick={() => onRemove(tool.id)}
-                      className="p-1 rounded-md hover:bg-gray-100 bg-transparent border-none cursor-pointer"
+                      className="p-1 rounded-lg hover:bg-black/5 bg-transparent border-none cursor-pointer transition-colors"
                       title="Quitar del comparador"
                     >
                       <X className="w-4 h-4 text-text-lighter" />
                     </button>
                   </div>
-                  <div className="flex items-center gap-2 mt-2">
+                  <div className="flex items-center gap-3 mt-2">
                     <Link
                       to={`/herramienta/${tool.id}`}
-                      className="text-xs text-primary no-underline hover:underline"
+                      className="text-xs text-primary font-semibold no-underline hover:underline"
                     >
                       Ver detalle
                     </Link>
@@ -171,7 +207,7 @@ export default function CompareTools({ toolIds, onRemove }) {
                       href={tool.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-text-lighter no-underline hover:text-primary"
+                      className="text-xs text-text-lighter no-underline hover:text-primary transition-colors"
                     >
                       <ExternalLink className="w-3 h-3 inline" /> Sitio
                     </a>
@@ -184,7 +220,7 @@ export default function CompareTools({ toolIds, onRemove }) {
         <tbody>
           {rows.map((row) => (
             <tr key={row.label} className="border-t border-border">
-              <td className="p-3 text-sm font-medium text-text-light align-top">
+              <td className="p-3 text-sm font-semibold text-text-light align-top">
                 {row.label}
               </td>
               {tools.map((tool) => (

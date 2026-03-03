@@ -4,10 +4,10 @@ import RecommendationFlow from '../components/RecommendationFlow'
 
 export default function RecommendPage() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="max-w-6xl mx-auto px-4 py-10">
       <Link
         to="/"
-        className="inline-flex items-center gap-1 text-text-light text-sm mb-6 no-underline hover:text-primary transition-colors"
+        className="inline-flex items-center gap-1.5 text-text-light text-sm mb-8 no-underline hover:text-primary transition-colors font-medium"
       >
         <ArrowLeft className="w-4 h-4" />
         Volver al inicio

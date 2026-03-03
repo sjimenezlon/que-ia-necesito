@@ -1,23 +1,99 @@
 import tools from '../data/tools.json'
 
+/**
+ * Smart recommendation engine with progressive filter relaxation.
+ * Ensures users ALWAYS get results by loosening criteria when needed.
+ * Returns { tools, relaxed, relaxedMessage }
+ */
 export function getRecommendations({ category, difficulty, pricing }) {
-  let candidates = tools
+  // Step 1: Try strict match
+  let candidates = applyFilters(tools, { category, difficulty, pricing })
+
+  if (candidates.length >= 3) {
+    return { tools: topN(candidates, 5), relaxed: false, relaxedMessage: null }
+  }
+
+  // Step 2: Relax pricing — "gratis" should include "freemium" (they have free tiers)
+  if (pricing === 'gratis') {
+    candidates = applyFilters(tools, { category, difficulty, pricing: 'gratis_or_freemium' })
+    if (candidates.length >= 3) {
+      return {
+        tools: topN(candidates, 5),
+        relaxed: true,
+        relaxedMessage: 'Incluimos herramientas freemium (tienen plan gratuito) para darte más opciones.',
+      }
+    }
+  }
+
+  // Step 3: Relax difficulty — allow one level higher
+  if (difficulty) {
+    const relaxedDifficulty = Math.min(difficulty + 1, 3)
+    const pricingToUse = pricing === 'gratis' ? 'gratis_or_freemium' : pricing
+    candidates = applyFilters(tools, { category, difficulty: relaxedDifficulty, pricing: pricingToUse })
+    if (candidates.length >= 2) {
+      return {
+        tools: topN(candidates, 5),
+        relaxed: true,
+        relaxedMessage: 'Ampliamos el nivel de dificultad para incluir más opciones útiles.',
+      }
+    }
+  }
+
+  // Step 4: Relax pricing completely — keep only category + difficulty
+  if (pricing && pricing !== 'any') {
+    const relaxedDifficulty = difficulty ? Math.min(difficulty + 1, 3) : null
+    candidates = applyFilters(tools, { category, difficulty: relaxedDifficulty, pricing: 'any' })
+    if (candidates.length >= 2) {
+      return {
+        tools: topN(candidates, 5),
+        relaxed: true,
+        relaxedMessage: 'Mostramos herramientas de todos los precios en esta categoría.',
+      }
+    }
+  }
+
+  // Step 5: Last resort — just category, no other filters
+  candidates = applyFilters(tools, { category, difficulty: null, pricing: 'any' })
+  if (candidates.length > 0) {
+    return {
+      tools: topN(candidates, 5),
+      relaxed: true,
+      relaxedMessage: 'Mostramos las mejores herramientas de esta categoría sin filtros adicionales.',
+    }
+  }
+
+  // Step 6: Absolute fallback — top tools overall
+  return {
+    tools: topN(tools, 5),
+    relaxed: true,
+    relaxedMessage: 'No hay herramientas específicas para esa combinación. Te mostramos las más populares en general.',
+  }
+}
+
+function applyFilters(allTools, { category, difficulty, pricing }) {
+  let result = allTools
 
   if (category) {
-    candidates = candidates.filter((t) => t.categories.includes(category))
+    result = result.filter((t) => t.categories.includes(category))
   }
 
   if (difficulty) {
-    candidates = candidates.filter((t) => t.difficulty <= difficulty)
+    result = result.filter((t) => t.difficulty <= difficulty)
   }
 
   if (pricing && pricing !== 'any') {
-    candidates = candidates.filter((t) => t.pricing === pricing)
+    if (pricing === 'gratis_or_freemium') {
+      result = result.filter((t) => t.pricing === 'gratis' || t.pricing === 'freemium')
+    } else {
+      result = result.filter((t) => t.pricing === pricing)
+    }
   }
 
-  candidates.sort((a, b) => b.rating - a.rating)
+  return result
+}
 
-  return candidates.slice(0, 5)
+function topN(candidates, n) {
+  return [...candidates].sort((a, b) => b.rating - a.rating).slice(0, n)
 }
 
 export function getToolById(id) {
@@ -41,6 +117,13 @@ export function getRelatedTools(tool, limit = 4) {
   sameCategory.sort((a, b) => b.rating - a.rating)
 
   return [...altTools, ...sameCategory].slice(0, limit)
+}
+
+/**
+ * Get popular tools for a fallback/suggestion UI
+ */
+export function getPopularTools(limit = 6) {
+  return topN(tools, limit)
 }
 
 export const CATEGORIES = [

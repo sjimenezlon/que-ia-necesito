@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { SlidersHorizontal } from 'lucide-react'
 import { useFilters } from '../hooks/useFilters'
 import { useSearch } from '../hooks/useSearch'
+import { useStaggerReveal } from '../hooks/useScrollReveal'
 import SearchBar from '../components/SearchBar'
 import FilterSidebar from '../components/FilterSidebar'
 import ToolCard from '../components/ToolCard'
@@ -11,6 +12,7 @@ export default function Explore({ onCompare, compareIds }) {
   const [searchParams] = useSearchParams()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const { query, setQuery, results } = useSearch()
+  const gridRef = useStaggerReveal()
 
   const filters = useFilters(query ? results : null)
 
@@ -24,19 +26,19 @@ export default function Explore({ onCompare, compareIds }) {
   const displayTools = query ? filters.filtered : filters.filtered
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold text-text mb-2">
+    <div className="max-w-6xl mx-auto px-4 py-10">
+      <div className="mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold text-text mb-2 tracking-tight">
           Explorar herramientas
         </h1>
-        <p className="text-text-light mb-4">
+        <p className="text-text-light mb-5">
           Descubre entre más de 80 herramientas de IA la ideal para ti.
         </p>
         <div className="flex items-center gap-3">
           <SearchBar value={query} onChange={setQuery} />
           <button
             onClick={() => setSidebarOpen(true)}
-            className="md:hidden flex items-center gap-2 px-4 py-3 bg-white border border-border rounded-xl text-sm text-text-light cursor-pointer hover:bg-gray-50 transition-colors"
+            className="md:hidden flex items-center gap-2 px-4 py-3 bg-surface border border-border rounded-xl text-sm text-text-light cursor-pointer hover:bg-black/3 transition-colors font-medium"
           >
             <SlidersHorizontal className="w-4 h-4" />
             Filtros
@@ -47,7 +49,7 @@ export default function Explore({ onCompare, compareIds }) {
         </div>
       </div>
 
-      <div className="flex gap-6">
+      <div className="flex gap-8">
         <FilterSidebar
           {...filters}
           isOpen={sidebarOpen}
@@ -55,14 +57,14 @@ export default function Explore({ onCompare, compareIds }) {
         />
 
         <div className="flex-1 min-w-0">
-          <div className="flex items-center justify-between mb-4">
-            <p className="text-sm text-text-lighter">
+          <div className="flex items-center justify-between mb-5">
+            <p className="text-sm text-text-lighter font-medium">
               {displayTools.length} herramienta{displayTools.length !== 1 ? 's' : ''}
             </p>
           </div>
 
           {displayTools.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {displayTools.map((tool) => (
                 <ToolCard
                   key={tool.id}
@@ -74,8 +76,14 @@ export default function Explore({ onCompare, compareIds }) {
             </div>
           ) : (
             <div className="text-center py-16">
-              <p className="text-text-lighter">
-                No hay herramientas que coincidan con estos filtros.
+              <div className="w-14 h-14 bg-black/4 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🤷</span>
+              </div>
+              <p className="text-text-light font-medium mb-1">
+                No hay herramientas con estos filtros
+              </p>
+              <p className="text-text-lighter text-sm">
+                Intenta quitar algún filtro para ver más opciones
               </p>
             </div>
           )}

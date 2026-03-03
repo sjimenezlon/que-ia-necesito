@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowLeft, ArrowRight, RotateCcw, Star, ExternalLink } from 'lucide-react'
+import {
+  ArrowLeft, ArrowRight, RotateCcw, Star, ExternalLink,
+  Info, Sparkles, CheckCircle2,
+} from 'lucide-react'
 import { CATEGORIES, getRecommendations, getCategoryInfo } from '../utils/recommender'
+import { ToolFavicon } from './ToolCard'
 
 const steps = [
   {
@@ -19,16 +23,16 @@ const steps = [
 ]
 
 const difficultyOptions = [
-  { value: 1, label: 'Principiante', desc: 'Quiero algo simple y fácil de usar' },
-  { value: 2, label: 'Intermedio', desc: 'Puedo aprender algo nuevo sin problema' },
-  { value: 3, label: 'Avanzado', desc: 'Me gustan las herramientas potentes' },
+  { value: 1, label: 'Principiante', desc: 'Quiero algo simple y fácil de usar', emoji: '🌱' },
+  { value: 2, label: 'Intermedio', desc: 'Puedo aprender algo nuevo sin problema', emoji: '🚀' },
+  { value: 3, label: 'Avanzado', desc: 'Me gustan las herramientas potentes', emoji: '⚡' },
 ]
 
 const pricingOptions = [
-  { value: 'gratis', label: 'Solo gratis', desc: 'No quiero pagar nada' },
-  { value: 'freemium', label: 'Freemium', desc: 'Gratis con opción de pago' },
-  { value: 'pago', label: 'De pago', desc: 'Dispuesto a invertir por calidad' },
-  { value: 'any', label: 'No importa', desc: 'Muéstrame todo' },
+  { value: 'gratis', label: 'Solo gratis', desc: 'Incluye herramientas con plan gratuito', emoji: '🆓' },
+  { value: 'freemium', label: 'Freemium', desc: 'Gratis con opción de pago para más funciones', emoji: '✨' },
+  { value: 'any', label: 'No importa el precio', desc: 'Muéstrame las mejores sin importar el costo', emoji: '💎' },
+  { value: 'pago', label: 'Solo de pago', desc: 'Quiero herramientas premium', emoji: '💳' },
 ]
 
 const pricingLabels = {
@@ -38,9 +42,9 @@ const pricingLabels = {
 }
 
 const pricingStyles = {
-  gratis: 'bg-green-100 text-green-700',
-  freemium: 'bg-yellow-100 text-yellow-700',
-  pago: 'bg-red-100 text-red-700',
+  gratis: 'bg-emerald-50 text-emerald-700',
+  freemium: 'bg-amber-50 text-amber-700',
+  pago: 'bg-rose-50 text-rose-700',
 }
 
 export default function RecommendationFlow() {
@@ -49,13 +53,15 @@ export default function RecommendationFlow() {
   const [difficulty, setDifficulty] = useState(null)
   const [pricing, setPricing] = useState(null)
   const [results, setResults] = useState(null)
+  const [relaxedMessage, setRelaxedMessage] = useState(null)
 
   const handleNext = () => {
     if (step < 2) {
       setStep(step + 1)
     } else {
       const recs = getRecommendations({ category, difficulty, pricing })
-      setResults(recs)
+      setResults(recs.tools)
+      setRelaxedMessage(recs.relaxed ? recs.relaxedMessage : null)
     }
   }
 
@@ -69,6 +75,7 @@ export default function RecommendationFlow() {
     setDifficulty(null)
     setPricing(null)
     setResults(null)
+    setRelaxedMessage(null)
   }
 
   const canProceed =
@@ -76,69 +83,99 @@ export default function RecommendationFlow() {
     (step === 1 && difficulty) ||
     (step === 2 && pricing)
 
+  const selectedCategory = category ? getCategoryInfo(category) : null
+
+  // ─── Results view ───
   if (results) {
     return (
-      <div className="max-w-3xl mx-auto animate-fade-in">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-text mb-2">
+      <div className="max-w-3xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-8 animate-slide-up">
+          <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-1.5 rounded-full text-sm font-semibold mb-4 border border-accent/15">
+            <CheckCircle2 className="w-4 h-4" />
+            {results.length} herramienta{results.length !== 1 ? 's' : ''} encontrada{results.length !== 1 ? 's' : ''}
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-text mb-2 tracking-tight">
             Tus recomendaciones
           </h2>
           <p className="text-text-light">
-            Basado en tus respuestas, estas son las mejores opciones para ti.
+            {selectedCategory
+              ? `Las mejores opciones en ${selectedCategory.label.toLowerCase()} para ti.`
+              : 'Basado en tus respuestas, estas son las mejores opciones para ti.'}
           </p>
         </div>
 
-        <div className="space-y-4 mb-8">
+        {/* Relaxation notice */}
+        {relaxedMessage && (
+          <div className="flex items-start gap-3 bg-blue-50 border border-blue-200/60 rounded-xl p-4 mb-6 animate-slide-up" style={{ animationDelay: '50ms' }}>
+            <Info className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
+            <p className="text-blue-700 text-sm leading-relaxed">{relaxedMessage}</p>
+          </div>
+        )}
+
+        {/* Results list */}
+        <div className="space-y-4 mb-10">
           {results.map((tool, i) => (
             <div
               key={tool.id}
-              className="bg-white rounded-xl border border-border p-5 animate-slide-up"
-              style={{ animationDelay: `${i * 100}ms` }}
+              className="group bg-surface rounded-2xl border border-border p-5 animate-slide-up hover:shadow-md hover:border-primary/20 transition-all duration-300 relative overflow-hidden"
+              style={{ animationDelay: `${(i + 1) * 80}ms` }}
             >
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                  <span className="text-primary font-bold text-lg">
+              {/* Rank accent */}
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-warm opacity-50 rounded-l-2xl" />
+
+              <div className="flex items-start gap-4 pl-2">
+                {/* Rank number */}
+                <div className="w-9 h-9 bg-primary/8 rounded-xl flex items-center justify-center shrink-0">
+                  <span className="text-primary font-bold text-sm font-display">
                     {i + 1}
                   </span>
                 </div>
+
+                {/* Favicon */}
+                <div className="shrink-0 transition-transform duration-300 group-hover:scale-105">
+                  <ToolFavicon tool={tool} />
+                </div>
+
+                {/* Content */}
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <h3 className="font-semibold text-text">{tool.name}</h3>
+                  <div className="flex items-center gap-2 flex-wrap mb-1">
+                    <h3 className="font-display font-semibold text-text tracking-tight">{tool.name}</h3>
                     <span
-                      className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                      className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${
                         pricingStyles[tool.pricing]
                       }`}
                     >
                       {pricingLabels[tool.pricing]}
                     </span>
-                    <div className="flex items-center gap-0.5">
+                    <div className="flex items-center gap-0.5 ml-auto">
                       {Array.from({ length: 5 }).map((_, j) => (
                         <Star
                           key={j}
                           className={`w-3 h-3 ${
                             j < tool.rating
                               ? 'text-amber-400 fill-amber-400'
-                              : 'text-gray-200 fill-gray-200'
+                              : 'text-zinc-200 fill-zinc-200'
                           }`}
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="text-text-light text-sm mt-1">
+                  <p className="text-text-light text-sm leading-relaxed">
                     {tool.shortDescription}
                   </p>
-                  <div className="flex items-center gap-3 mt-3">
+                  <div className="flex items-center gap-4 mt-3">
                     <Link
                       to={`/herramienta/${tool.id}`}
-                      className="text-primary text-sm font-medium no-underline hover:underline"
+                      className="text-primary text-sm font-semibold no-underline hover:underline"
                     >
-                      Ver detalle
+                      Ver detalle →
                     </Link>
                     <a
                       href={tool.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-text-lighter text-sm no-underline hover:text-primary"
+                      className="inline-flex items-center gap-1 text-text-lighter text-sm no-underline hover:text-primary transition-colors"
                     >
                       Visitar <ExternalLink className="w-3 h-3" />
                     </a>
@@ -149,59 +186,75 @@ export default function RecommendationFlow() {
           ))}
         </div>
 
-        {results.length === 0 && (
-          <div className="text-center py-12 text-text-lighter">
-            No encontramos herramientas con esos criterios exactos. Intenta con opciones diferentes.
-          </div>
-        )}
-
-        <div className="text-center">
+        {/* Actions */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <button
             onClick={handleReset}
-            className="inline-flex items-center gap-2 bg-white border border-border text-text px-5 py-2.5 rounded-xl font-medium cursor-pointer hover:bg-gray-50 transition-colors"
+            className="inline-flex items-center gap-2 bg-surface border border-border text-text px-5 py-2.5 rounded-xl font-semibold cursor-pointer hover:bg-black/3 transition-all duration-200"
           >
             <RotateCcw className="w-4 h-4" />
             Empezar de nuevo
           </button>
+          <Link
+            to="/explorar"
+            className="inline-flex items-center gap-2 text-primary text-sm font-semibold no-underline hover:underline"
+          >
+            Explorar todas las herramientas →
+          </Link>
         </div>
       </div>
     )
   }
 
+  // ─── Steps view ───
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="flex items-center gap-2 mb-8">
+      {/* Progress bar */}
+      <div className="flex items-center gap-2 mb-10">
         {[0, 1, 2].map((s) => (
-          <div
-            key={s}
-            className={`flex-1 h-2 rounded-full transition-colors ${
-              s <= step ? 'bg-primary' : 'bg-gray-200'
-            }`}
-          />
+          <div key={s} className="flex-1 relative">
+            <div className="h-1.5 rounded-full bg-black/5 overflow-hidden">
+              <div
+                className="h-full rounded-full transition-all duration-500 ease-out"
+                style={{
+                  width: s < step ? '100%' : s === step ? '50%' : '0%',
+                  background: 'linear-gradient(90deg, #4338CA, #E11D48)',
+                }}
+              />
+            </div>
+            <span className={`block text-[10px] font-semibold mt-1.5 ${s <= step ? 'text-primary' : 'text-text-lighter'}`}>
+              {s === 0 ? 'Área' : s === 1 ? 'Nivel' : 'Precio'}
+            </span>
+          </div>
         ))}
       </div>
 
+      {/* Step header */}
       <div className="text-center mb-8">
-        <h2 className="text-xl md:text-2xl font-bold text-text mb-2">
+        <span className="text-xs font-bold text-primary uppercase tracking-[0.12em] mb-2 block">
+          Paso {step + 1} de 3
+        </span>
+        <h2 className="text-xl md:text-2xl font-bold text-text mb-2 tracking-tight">
           {steps[step].title}
         </h2>
         <p className="text-text-light text-sm">{steps[step].subtitle}</p>
       </div>
 
-      <div className="animate-fade-in">
+      {/* Step content */}
+      <div className="animate-scale-in" key={step}>
         {step === 0 && (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {CATEGORIES.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setCategory(cat.id)}
-                className={`p-4 rounded-xl border-2 text-left cursor-pointer transition-all ${
+                className={`p-4 rounded-xl border-2 text-left cursor-pointer transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] ${
                   category === cat.id
-                    ? 'border-primary bg-primary/5'
-                    : 'border-border bg-white hover:border-primary/30'
+                    ? 'border-primary bg-primary/5 shadow-sm'
+                    : 'border-border bg-surface hover:border-primary/30'
                 }`}
               >
-                <span className="text-sm font-medium text-text block">
+                <span className="text-sm font-semibold text-text block leading-tight">
                   {cat.label}
                 </span>
               </button>
@@ -215,16 +268,17 @@ export default function RecommendationFlow() {
               <button
                 key={opt.value}
                 onClick={() => setDifficulty(opt.value)}
-                className={`w-full p-4 rounded-xl border-2 text-left cursor-pointer transition-all ${
+                className={`w-full p-5 rounded-xl border-2 text-left cursor-pointer transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] flex items-start gap-4 ${
                   difficulty === opt.value
-                    ? 'border-primary bg-primary/5'
-                    : 'border-border bg-white hover:border-primary/30'
+                    ? 'border-primary bg-primary/5 shadow-sm'
+                    : 'border-border bg-surface hover:border-primary/30'
                 }`}
               >
-                <span className="font-medium text-text block">
-                  {opt.label}
-                </span>
-                <span className="text-sm text-text-light">{opt.desc}</span>
+                <span className="text-2xl">{opt.emoji}</span>
+                <div>
+                  <span className="font-semibold text-text block">{opt.label}</span>
+                  <span className="text-sm text-text-light">{opt.desc}</span>
+                </div>
               </button>
             ))}
           </div>
@@ -236,30 +290,32 @@ export default function RecommendationFlow() {
               <button
                 key={opt.value}
                 onClick={() => setPricing(opt.value)}
-                className={`w-full p-4 rounded-xl border-2 text-left cursor-pointer transition-all ${
+                className={`w-full p-5 rounded-xl border-2 text-left cursor-pointer transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] flex items-start gap-4 ${
                   pricing === opt.value
-                    ? 'border-primary bg-primary/5'
-                    : 'border-border bg-white hover:border-primary/30'
+                    ? 'border-primary bg-primary/5 shadow-sm'
+                    : 'border-border bg-surface hover:border-primary/30'
                 }`}
               >
-                <span className="font-medium text-text block">
-                  {opt.label}
-                </span>
-                <span className="text-sm text-text-light">{opt.desc}</span>
+                <span className="text-2xl">{opt.emoji}</span>
+                <div>
+                  <span className="font-semibold text-text block">{opt.label}</span>
+                  <span className="text-sm text-text-light">{opt.desc}</span>
+                </div>
               </button>
             ))}
           </div>
         )}
       </div>
 
-      <div className="flex items-center justify-between mt-8">
+      {/* Navigation */}
+      <div className="flex items-center justify-between mt-10">
         <button
           onClick={handleBack}
           disabled={step === 0}
-          className={`inline-flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium border-none cursor-pointer transition-colors ${
+          className={`inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-semibold border-none cursor-pointer transition-all duration-200 ${
             step === 0
               ? 'text-text-lighter bg-transparent cursor-not-allowed'
-              : 'text-text-light bg-white hover:bg-gray-100'
+              : 'text-text-light bg-surface hover:bg-black/5'
           }`}
         >
           <ArrowLeft className="w-4 h-4" />
@@ -268,14 +324,23 @@ export default function RecommendationFlow() {
         <button
           onClick={handleNext}
           disabled={!canProceed}
-          className={`inline-flex items-center gap-1 px-6 py-2.5 rounded-lg text-sm font-medium border-none cursor-pointer transition-colors ${
+          className={`inline-flex items-center gap-1.5 px-7 py-2.5 rounded-xl text-sm font-semibold border-none cursor-pointer transition-all duration-200 ${
             canProceed
-              ? 'bg-primary text-white hover:bg-primary-dark'
-              : 'bg-gray-200 text-text-lighter cursor-not-allowed'
+              ? 'bg-text text-white hover:bg-text/90 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]'
+              : 'bg-black/8 text-text-lighter cursor-not-allowed'
           }`}
         >
-          {step === 2 ? 'Ver resultados' : 'Siguiente'}
-          <ArrowRight className="w-4 h-4" />
+          {step === 2 ? (
+            <>
+              <Sparkles className="w-4 h-4" />
+              Ver resultados
+            </>
+          ) : (
+            <>
+              Siguiente
+              <ArrowRight className="w-4 h-4" />
+            </>
+          )}
         </button>
       </div>
     </div>

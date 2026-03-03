@@ -306,9 +306,14 @@ export default function PromptRefiner() {
         {STEPS.map((s, i) => (
           <div
             key={s.letter}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
-              i === step ? 'w-12 bg-primary' : i < step ? 'w-8 bg-accent' : 'w-8 bg-gray-200'
+            className={`h-1.5 rounded-full transition-all duration-300 overflow-hidden ${
+              i === step ? 'w-12' : 'w-8'
             }`}
+            style={{
+              background: i <= step
+                ? 'linear-gradient(90deg, #4338CA, #E11D48)'
+                : '#e4e4e7',
+            }}
           />
         ))}
         <span className="text-xs text-text-lighter ml-2">
