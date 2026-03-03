@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import {
   Star, ExternalLink, ArrowLeft, Lightbulb,
-  CheckCircle, Zap, ChevronRight,
+  CheckCircle, Zap, ChevronRight, Heart,
 } from 'lucide-react'
 import { getToolById, getCategoryInfo } from '../utils/recommender'
 import { ToolFavicon } from './ToolCard'
@@ -18,8 +18,9 @@ const pricingLabels = {
   pago: 'De pago',
 }
 
-export default function ToolDetail({ tool }) {
+export default function ToolDetail({ tool, onToggleFavorite, isFavorite }) {
   if (!tool) return null
+  const favorited = isFavorite?.(tool.id)
 
   const alternatives = (tool.alternatives || [])
     .map(getToolById)
@@ -82,15 +83,30 @@ export default function ToolDetail({ tool }) {
               </span>
             </div>
           </div>
-          <a
-            href={tool.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-text text-white px-5 py-2.5 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-md active:scale-[0.98] transition-all duration-200 text-sm shrink-0"
-          >
-            Visitar sitio
-            <ExternalLink className="w-4 h-4" />
-          </a>
+          <div className="flex items-center gap-2 shrink-0">
+            {onToggleFavorite && (
+              <button
+                onClick={() => onToggleFavorite(tool.id)}
+                aria-label={favorited ? `Quitar ${tool.name} de favoritos` : `Agregar ${tool.name} a favoritos`}
+                className={`p-2.5 rounded-xl border transition-all duration-200 cursor-pointer hover:scale-105 active:scale-95 ${
+                  favorited
+                    ? 'bg-secondary/10 border-secondary text-secondary'
+                    : 'bg-surface border-border text-text-light hover:border-secondary hover:text-secondary'
+                }`}
+              >
+                <Heart className={`w-5 h-5 ${favorited ? 'fill-secondary' : ''}`} />
+              </button>
+            )}
+            <a
+              href={tool.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-text text-white px-5 py-2.5 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-md active:scale-[0.98] transition-all duration-200 text-sm"
+            >
+              Visitar sitio
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
         </div>
 
         <p className="text-text-light leading-relaxed mb-8">
@@ -182,7 +198,7 @@ export default function ToolDetail({ tool }) {
               {tool.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-black/4 text-text-lighter text-xs px-3 py-1 rounded-full font-medium"
+                  className="bg-text/4 text-text-lighter text-xs px-3 py-1 rounded-full font-medium"
                 >
                   {tag}
                 </span>
@@ -198,7 +214,7 @@ export default function ToolDetail({ tool }) {
                   <Link
                     key={alt.id}
                     to={`/herramienta/${alt.id}`}
-                    className="inline-flex items-center gap-2 bg-black/3 border border-border rounded-xl px-3 py-2 no-underline hover:bg-primary/5 hover:border-primary/30 transition-all duration-200"
+                    className="inline-flex items-center gap-2 bg-text/3 border border-border rounded-xl px-3 py-2 no-underline hover:bg-primary/5 hover:border-primary/30 transition-all duration-200"
                   >
                     <span className="w-6 h-6 bg-primary/8 rounded-lg flex items-center justify-center text-primary text-xs font-bold">
                       {alt.name.charAt(0)}

@@ -63,7 +63,7 @@ export default function CompareTools({ toolIds, onRemove }) {
   if (tools.length === 0) {
     return (
       <div className="text-center py-20">
-        <div className="w-16 h-16 bg-black/4 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <div className="w-16 h-16 bg-text/4 rounded-2xl flex items-center justify-center mx-auto mb-4">
           <span className="text-3xl">⚖️</span>
         </div>
         <p className="text-text font-display font-semibold text-lg mb-2">
@@ -105,7 +105,7 @@ export default function CompareTools({ toolIds, onRemove }) {
     {
       label: 'Rating',
       render: (t) => (
-        <div className="flex items-center gap-0.5">
+        <div className="flex items-center gap-0.5" aria-label={`Calificación: ${t.rating} de 5`}>
           {Array.from({ length: 5 }).map((_, i) => (
             <Star
               key={i}
@@ -175,6 +175,7 @@ export default function CompareTools({ toolIds, onRemove }) {
   return (
     <div className="overflow-x-auto animate-fade-in">
       <table className="w-full border-collapse min-w-[600px]">
+        <caption className="sr-only">Comparación de herramientas</caption>
         <thead>
           <tr>
             <th className="text-left p-3 text-sm font-medium text-text-lighter w-32" />
@@ -190,8 +191,8 @@ export default function CompareTools({ toolIds, onRemove }) {
                     </div>
                     <button
                       onClick={() => onRemove(tool.id)}
-                      className="p-1 rounded-lg hover:bg-black/5 bg-transparent border-none cursor-pointer transition-colors"
-                      title="Quitar del comparador"
+                      className="p-1 rounded-lg hover:bg-text/5 bg-transparent border-none cursor-pointer transition-colors"
+                      aria-label={`Quitar ${tool.name} del comparador`}
                     >
                       <X className="w-4 h-4 text-text-lighter" />
                     </button>

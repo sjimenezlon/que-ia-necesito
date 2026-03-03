@@ -38,6 +38,7 @@ export default function FilterSidebar({
           {hasActiveFilters && (
             <button
               onClick={clearFilters}
+              aria-label="Limpiar todos los filtros"
               className="text-xs text-primary font-semibold bg-transparent border-none cursor-pointer hover:underline"
             >
               Limpiar
@@ -45,7 +46,8 @@ export default function FilterSidebar({
           )}
           <button
             onClick={onClose}
-            className="md:hidden p-1 rounded-md hover:bg-black/5 bg-transparent border-none cursor-pointer"
+            aria-label="Cerrar filtros"
+            className="md:hidden p-1 rounded-md hover:bg-text/5 bg-transparent border-none cursor-pointer"
           >
             <X className="w-5 h-5 text-text-light" />
           </button>
@@ -58,7 +60,7 @@ export default function FilterSidebar({
           {CATEGORIES.map((cat) => (
             <label
               key={cat.id}
-              className="flex items-center gap-2 p-1.5 rounded-lg hover:bg-black/3 cursor-pointer text-sm transition-colors"
+              className="flex items-center gap-2 p-1.5 rounded-lg hover:bg-text/3 cursor-pointer text-sm transition-colors"
             >
               <input
                 type="checkbox"
@@ -78,7 +80,7 @@ export default function FilterSidebar({
           {pricingOptions.map((opt) => (
             <label
               key={opt.value}
-              className="flex items-center gap-2 p-1.5 rounded-lg hover:bg-black/3 cursor-pointer text-sm transition-colors"
+              className="flex items-center gap-2 p-1.5 rounded-lg hover:bg-text/3 cursor-pointer text-sm transition-colors"
             >
               <input
                 type="checkbox"
@@ -98,7 +100,7 @@ export default function FilterSidebar({
           {difficultyOptions.map((opt) => (
             <label
               key={opt.value}
-              className="flex items-center gap-2 p-1.5 rounded-lg hover:bg-black/3 cursor-pointer text-sm transition-colors"
+              className="flex items-center gap-2 p-1.5 rounded-lg hover:bg-text/3 cursor-pointer text-sm transition-colors"
             >
               <input
                 type="checkbox"
@@ -122,6 +124,7 @@ export default function FilterSidebar({
           max="5"
           value={minRating}
           onChange={(e) => setMinRating(Number(e.target.value))}
+          aria-label="Calificación mínima"
           className="w-full accent-[#4338CA]"
         />
         <div className="flex justify-between text-xs text-text-lighter">

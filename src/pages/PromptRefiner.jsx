@@ -1,9 +1,15 @@
 import { useState, useRef } from 'react'
 import {
   Palette, Megaphone, Newspaper, Code, Users, Lightbulb, PenTool,
-  GraduationCap, TrendingUp, Heart, Database,
-  ChevronRight, ChevronLeft, Copy, Check, RotateCcw, Sparkles
+  GraduationCap, TrendingUp, Heart, Database, Sparkles
 } from 'lucide-react'
+import DomainSelector from '../components/prompt-refiner/DomainSelector'
+import ContextRoleStep from '../components/prompt-refiner/ContextRoleStep'
+import TaskStep from '../components/prompt-refiner/TaskStep'
+import ToneStyleStep from '../components/prompt-refiner/ToneStyleStep'
+import FormatStep from '../components/prompt-refiner/FormatStep'
+import ConstraintsStep from '../components/prompt-refiner/ConstraintsStep'
+import GeneratedPrompt from '../components/prompt-refiner/GeneratedPrompt'
 
 const DOMAINS = [
   { id: 'artes', label: 'Artes', icon: Palette, desc: 'Creación artística, visual, musical, literaria y escénica.', color: 'bg-red-50 text-red-600 border-red-200' },
@@ -132,10 +138,6 @@ const DOMAIN_DATA = {
   }
 }
 
-const TONE_OPTIONS = ['Profesional', 'Conversacional', 'Académico', 'Persuasivo', 'Técnico', 'Inspirador', 'Directo', 'Humorístico', 'Poético', 'Periodístico', 'Minimalista', 'Provocador']
-const FORMAT_OPTIONS = ['Texto corrido', 'Lista con viñetas', 'Tabla comparativa', 'Código fuente', 'JSON / Datos estructurados', 'Paso a paso', 'Presentación / Slides', 'Documento formal', 'Guion / Script', 'Email / Mensaje', 'Post para redes', 'Infografía textual']
-const QUALITY_OPTIONS = ['Originalidad', 'Precisión factual', 'Coherencia lógica', 'Aplicabilidad práctica', 'Creatividad', 'Profundidad analítica', 'Claridad', 'Concisión']
-
 const STEPS = [
   { num: 1, letter: 'C', label: 'Contexto', short: 'Dominio' },
   { num: 2, letter: 'O', label: 'Orientación', short: 'Rol y audiencia' },
@@ -145,25 +147,9 @@ const STEPS = [
   { num: 6, letter: 'F', label: 'Filtros', short: 'Restricciones y criterios' },
 ]
 
-function Chip({ label, selected, onClick }) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={`px-3 py-1.5 rounded-full text-xs font-medium border cursor-pointer transition-colors ${
-        selected
-          ? 'bg-primary/10 border-primary text-primary'
-          : 'bg-white border-border text-text-light hover:border-primary/50'
-      }`}
-    >
-      {label}
-    </button>
-  )
-}
-
 function MethodSidebar({ currentStep }) {
   return (
-    <aside className="hidden lg:block bg-white rounded-2xl border border-border p-5 sticky top-24">
+    <aside className="hidden lg:block bg-surface rounded-2xl border border-border p-5 sticky top-24">
       <h3 className="font-bold text-text text-sm mb-4">Metodología CORTE-F</h3>
       <div className="space-y-2">
         {STEPS.map((s, i) => (
@@ -179,7 +165,7 @@ function MethodSidebar({ currentStep }) {
                   ? 'bg-accent text-white'
                   : i === currentStep
                   ? 'bg-primary text-white'
-                  : 'bg-gray-100 text-text-lighter'
+                  : 'bg-text/5 text-text-lighter'
               }`}
             >
               {i < currentStep ? '✓' : s.num}
@@ -218,7 +204,6 @@ export default function PromptRefiner() {
   const [quality, setQuality] = useState([])
   const [aiTool, setAiTool] = useState('universal')
   const [generated, setGenerated] = useState(null)
-  const [copied, setCopied] = useState(false)
   const outputRef = useRef(null)
 
   const toggleList = (list, setList, item) => {
@@ -227,8 +212,6 @@ export default function PromptRefiner() {
 
   const domainInfo = domain ? DOMAINS.find(d => d.id === domain) : null
   const domainData = domain ? DOMAIN_DATA[domain] : null
-
-  const canNext = step === 0 ? !!domain : true
 
   const next = () => {
     if (step < 5) setStep(step + 1)
@@ -298,13 +281,6 @@ export default function PromptRefiner() {
     }, 100)
   }
 
-  const copyPrompt = async () => {
-    if (!generated) return
-    await navigator.clipboard.writeText(generated)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-
   const resetAll = () => {
     setStep(0)
     setDomain(null)
@@ -325,13 +301,11 @@ export default function PromptRefiner() {
     setQuality([])
     setAiTool('universal')
     setGenerated(null)
-    setCopied(false)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      {/* Header */}
       <div className="text-center mb-8">
         <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-4">
           <Sparkles className="w-4 h-4" />
@@ -346,7 +320,6 @@ export default function PromptRefiner() {
         </p>
       </div>
 
-      {/* Step Progress Bar */}
       <div className="flex items-center justify-center gap-2 mb-8">
         {STEPS.map((s, i) => (
           <div
@@ -357,7 +330,7 @@ export default function PromptRefiner() {
             style={{
               background: i <= step
                 ? 'linear-gradient(90deg, #4338CA, #E11D48)'
-                : '#e4e4e7',
+                : 'var(--color-border)',
             }}
           />
         ))}
@@ -366,415 +339,73 @@ export default function PromptRefiner() {
         </span>
       </div>
 
-      {/* Main content with sidebar */}
       <div className="flex gap-6">
         {step > 0 && <MethodSidebar currentStep={step} />}
 
         <div className="flex-1 min-w-0">
-          {/* Step 0: Domain Selection */}
           {step === 0 && (
-            <div>
-              <div className="mb-6">
-                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Paso 1 — Dominio</p>
-                <h2 className="text-xl font-bold text-text mb-1">¿En qué área vas a trabajar?</h2>
-                <p className="text-sm text-text-light">Selecciona el dominio para personalizar la estructura del prompt.</p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {DOMAINS.map((d) => {
-                  const Icon = d.icon
-                  return (
-                    <button
-                      key={d.id}
-                      type="button"
-                      onClick={() => setDomain(d.id)}
-                      className={`text-left p-4 rounded-xl border-2 transition-all cursor-pointer bg-white ${
-                        domain === d.id
-                          ? 'border-primary shadow-sm'
-                          : 'border-border hover:border-primary/30'
-                      }`}
-                    >
-                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${d.color.split(' ').slice(0, 1).join(' ')}`}>
-                        <Icon className={`w-5 h-5 ${d.color.split(' ')[1]}`} />
-                      </div>
-                      <p className="font-semibold text-text text-sm mb-1">{d.label}</p>
-                      <p className="text-xs text-text-lighter leading-relaxed">{d.desc}</p>
-                    </button>
-                  )
-                })}
-              </div>
-
-              <div className="flex justify-end mt-6">
-                <button
-                  onClick={next}
-                  disabled={!canNext}
-                  className="inline-flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-xl font-medium cursor-pointer hover:bg-primary/90 transition-colors border-none text-sm disabled:opacity-40 disabled:cursor-not-allowed"
-                >
-                  Continuar <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
+            <DomainSelector
+              domains={DOMAINS}
+              domain={domain}
+              setDomain={setDomain}
+              canNext={!!domain}
+              onNext={next}
+            />
           )}
 
-          {/* Step 1: Context & Role */}
           {step === 1 && (
-            <div>
-              <div className="mb-6">
-                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Paso 2 — Contexto y Rol</p>
-                <h2 className="text-xl font-bold text-text mb-1">Define el escenario</h2>
-                <p className="text-sm text-text-light">Establece quién eres, para quién y en qué contexto se ejecutará la tarea.</p>
-              </div>
-
-              <div className="space-y-5">
-                <div>
-                  <label className="block text-sm font-medium text-text mb-1">¿Qué rol debe asumir la IA?</label>
-                  <p className="text-xs text-text-lighter italic mb-2">{domainData?.roleHint}</p>
-                  <textarea
-                    value={role}
-                    onChange={(e) => setRole(e.target.value)}
-                    rows={3}
-                    placeholder="Describe el rol, la experiencia y la especialidad..."
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm text-text placeholder:text-text-lighter focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 resize-y"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-text mb-1">¿Quién es la audiencia o destinatario?</label>
-                  <textarea
-                    value={audience}
-                    onChange={(e) => setAudience(e.target.value)}
-                    rows={2}
-                    placeholder="Ej: Emprendedores de 25-35 años en Latinoamérica que están lanzando su primer producto digital..."
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm text-text placeholder:text-text-lighter focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 resize-y"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-text mb-1">Contexto adicional relevante</label>
-                  <textarea
-                    value={context}
-                    onChange={(e) => setContext(e.target.value)}
-                    rows={2}
-                    placeholder="Ej: Estamos en fase de lanzamiento, el presupuesto es limitado, la marca aún no es conocida..."
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm text-text placeholder:text-text-lighter focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 resize-y"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-text mb-2">Plantillas rápidas de rol</label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {domainData?.roleTemplates.map((t) => (
-                      <button
-                        key={t.title}
-                        type="button"
-                        onClick={() => setRole(`Eres un ${t.title.toLowerCase()}. ${t.desc}`)}
-                        className="text-left p-3 rounded-lg border border-border bg-white hover:border-primary/30 hover:bg-primary/5 transition-colors cursor-pointer"
-                      >
-                        <p className="text-sm font-medium text-text">{t.title}</p>
-                        <p className="text-xs text-text-lighter">{t.desc}</p>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex justify-between mt-6">
-                <button onClick={prev} className="inline-flex items-center gap-1 text-text-light hover:text-text text-sm cursor-pointer bg-transparent border-none font-medium">
-                  <ChevronLeft className="w-4 h-4" /> Atrás
-                </button>
-                <button onClick={next} className="inline-flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-xl font-medium cursor-pointer hover:bg-primary/90 transition-colors border-none text-sm">
-                  Continuar <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
+            <ContextRoleStep
+              role={role} setRole={setRole}
+              audience={audience} setAudience={setAudience}
+              context={context} setContext={setContext}
+              domainData={domainData}
+              onNext={next} onPrev={prev}
+            />
           )}
 
-          {/* Step 2: Task */}
           {step === 2 && (
-            <div>
-              <div className="mb-6">
-                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Paso 3 — Requerimiento</p>
-                <h2 className="text-xl font-bold text-text mb-1">¿Qué necesitas que haga la IA?</h2>
-                <p className="text-sm text-text-light">Describe la tarea concreta. Sé específico: los verbos de acción marcan la diferencia.</p>
-              </div>
-
-              <div className="space-y-5">
-                <div>
-                  <label className="block text-sm font-medium text-text mb-1">Tarea principal</label>
-                  <p className="text-xs text-text-lighter italic mb-2">{domainData?.taskHint}</p>
-                  <textarea
-                    value={task}
-                    onChange={(e) => setTask(e.target.value)}
-                    rows={4}
-                    placeholder="Describe exactamente lo que necesitas que la IA produzca..."
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm text-text placeholder:text-text-lighter focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 resize-y"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-text mb-1">Subtareas o pasos esperados <span className="text-text-lighter font-normal">(opcional)</span></label>
-                  <textarea
-                    value={subtasks}
-                    onChange={(e) => setSubtasks(e.target.value)}
-                    rows={3}
-                    placeholder={"1. Primero investigar...\n2. Luego comparar...\n3. Finalmente producir..."}
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm text-text placeholder:text-text-lighter focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 resize-y"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-text mb-1">Ejemplo de resultado deseado <span className="text-text-lighter font-normal">(opcional)</span></label>
-                  <textarea
-                    value={example}
-                    onChange={(e) => setExample(e.target.value)}
-                    rows={3}
-                    placeholder="Ej: Similar a como lo haría The Economist en sus análisis de tendencias tecnológicas..."
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm text-text placeholder:text-text-lighter focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 resize-y"
-                  />
-                </div>
-              </div>
-
-              <div className="flex justify-between mt-6">
-                <button onClick={prev} className="inline-flex items-center gap-1 text-text-light hover:text-text text-sm cursor-pointer bg-transparent border-none font-medium">
-                  <ChevronLeft className="w-4 h-4" /> Atrás
-                </button>
-                <button onClick={next} className="inline-flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-xl font-medium cursor-pointer hover:bg-primary/90 transition-colors border-none text-sm">
-                  Continuar <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
+            <TaskStep
+              task={task} setTask={setTask}
+              subtasks={subtasks} setSubtasks={setSubtasks}
+              example={example} setExample={setExample}
+              domainData={domainData}
+              onNext={next} onPrev={prev}
+            />
           )}
 
-          {/* Step 3: Tone & Style */}
           {step === 3 && (
-            <div>
-              <div className="mb-6">
-                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Paso 4 — Tono y Estilo</p>
-                <h2 className="text-xl font-bold text-text mb-1">¿Cómo debe sonar el resultado?</h2>
-                <p className="text-sm text-text-light">Define la voz, el registro y la personalidad del output.</p>
-              </div>
-
-              <div className="space-y-5">
-                <div>
-                  <label className="block text-sm font-medium text-text mb-2">Tono general</label>
-                  <div className="flex flex-wrap gap-2">
-                    {TONE_OPTIONS.map((t) => (
-                      <Chip key={t} label={t} selected={tones.includes(t)} onClick={() => toggleList(tones, setTones, t)} />
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-text mb-1">Idioma de salida</label>
-                  <select
-                    value={lang}
-                    onChange={(e) => setLang(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-primary cursor-pointer appearance-none"
-                  >
-                    <option value="español">Español</option>
-                    <option value="inglés">Inglés</option>
-                    <option value="portugués">Portugués</option>
-                    <option value="francés">Francés</option>
-                    <option value="bilingüe español-inglés">Bilingüe (Español-Inglés)</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-text mb-1">Nivel de complejidad</label>
-                  <select
-                    value={complexity}
-                    onChange={(e) => setComplexity(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-primary cursor-pointer appearance-none"
-                  >
-                    <option value="básico">Básico — Para audiencias generales</option>
-                    <option value="intermedio">Intermedio — Conocimiento previo del tema</option>
-                    <option value="avanzado">Avanzado — Público experto o especializado</option>
-                    <option value="técnico">Técnico — Lenguaje de especialista</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-text mb-1">Referencia de estilo <span className="text-text-lighter font-normal">(opcional)</span></label>
-                  <input
-                    type="text"
-                    value={styleRef}
-                    onChange={(e) => setStyleRef(e.target.value)}
-                    placeholder="Ej: El estilo editorial de The New York Times, la comunicación de Apple..."
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm text-text placeholder:text-text-lighter focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20"
-                  />
-                </div>
-              </div>
-
-              <div className="flex justify-between mt-6">
-                <button onClick={prev} className="inline-flex items-center gap-1 text-text-light hover:text-text text-sm cursor-pointer bg-transparent border-none font-medium">
-                  <ChevronLeft className="w-4 h-4" /> Atrás
-                </button>
-                <button onClick={next} className="inline-flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-xl font-medium cursor-pointer hover:bg-primary/90 transition-colors border-none text-sm">
-                  Continuar <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
+            <ToneStyleStep
+              tones={tones} toggleTone={(t) => toggleList(tones, setTones, t)}
+              lang={lang} setLang={setLang}
+              complexity={complexity} setComplexity={setComplexity}
+              styleRef={styleRef} setStyleRef={setStyleRef}
+              onNext={next} onPrev={prev}
+            />
           )}
 
-          {/* Step 4: Format */}
           {step === 4 && (
-            <div>
-              <div className="mb-6">
-                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Paso 5 — Estructura</p>
-                <h2 className="text-xl font-bold text-text mb-1">¿Qué forma debe tener el resultado?</h2>
-                <p className="text-sm text-text-light">Especifica el formato, la extensión y la organización del output.</p>
-              </div>
-
-              <div className="space-y-5">
-                <div>
-                  <label className="block text-sm font-medium text-text mb-2">Formato de salida</label>
-                  <div className="flex flex-wrap gap-2">
-                    {FORMAT_OPTIONS.map((f) => (
-                      <Chip key={f} label={f} selected={formats.includes(f)} onClick={() => toggleList(formats, setFormats, f)} />
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-text mb-1">Extensión aproximada</label>
-                  <select
-                    value={length}
-                    onChange={(e) => setLength(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-primary cursor-pointer appearance-none"
-                  >
-                    <option value="breve (máximo 150 palabras)">Breve — Máximo 150 palabras</option>
-                    <option value="moderada (300-500 palabras)">Moderada — 300 a 500 palabras</option>
-                    <option value="extensa (800-1500 palabras)">Extensa — 800 a 1.500 palabras</option>
-                    <option value="muy extensa (más de 1500 palabras)">Muy extensa — Más de 1.500 palabras</option>
-                    <option value="la que sea necesaria para cubrir el tema">Flexible — Lo que sea necesario</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-text mb-1">Secciones o estructura interna <span className="text-text-lighter font-normal">(opcional)</span></label>
-                  <textarea
-                    value={sections}
-                    onChange={(e) => setSections(e.target.value)}
-                    rows={3}
-                    placeholder="Ej: Introducción, análisis de mercado, recomendaciones, conclusión con call-to-action..."
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm text-text placeholder:text-text-lighter focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 resize-y"
-                  />
-                </div>
-              </div>
-
-              <div className="flex justify-between mt-6">
-                <button onClick={prev} className="inline-flex items-center gap-1 text-text-light hover:text-text text-sm cursor-pointer bg-transparent border-none font-medium">
-                  <ChevronLeft className="w-4 h-4" /> Atrás
-                </button>
-                <button onClick={next} className="inline-flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-xl font-medium cursor-pointer hover:bg-primary/90 transition-colors border-none text-sm">
-                  Continuar <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
+            <FormatStep
+              formats={formats} toggleFormat={(f) => toggleList(formats, setFormats, f)}
+              length={length} setLength={setLength}
+              sections={sections} setSections={setSections}
+              onNext={next} onPrev={prev}
+            />
           )}
 
-          {/* Step 5: Constraints & Generate */}
           {step === 5 && (
-            <div>
-              <div className="mb-6">
-                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Paso 6 — Filtros y Resultado</p>
-                <h2 className="text-xl font-bold text-text mb-1">Restricciones y generación final</h2>
-                <p className="text-sm text-text-light">Agrega lo que la IA debe evitar, criterios de calidad y genera tu prompt refinado.</p>
-              </div>
-
-              <div className="space-y-5">
-                <div>
-                  <label className="block text-sm font-medium text-text mb-1">¿Qué debe EVITAR la IA?</label>
-                  <textarea
-                    value={avoid}
-                    onChange={(e) => setAvoid(e.target.value)}
-                    rows={3}
-                    placeholder="Ej: Evitar jerga técnica innecesaria, no usar clichés de marketing, no inventar datos estadísticos..."
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm text-text placeholder:text-text-lighter focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 resize-y"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-text mb-2">Criterios de calidad</label>
-                  <div className="flex flex-wrap gap-2">
-                    {QUALITY_OPTIONS.map((q) => (
-                      <Chip key={q} label={q} selected={quality.includes(q)} onClick={() => toggleList(quality, setQuality, q)} />
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-text mb-1">¿Para qué herramienta de IA es este prompt?</label>
-                  <select
-                    value={aiTool}
-                    onChange={(e) => setAiTool(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-border text-sm text-text bg-white focus:outline-none focus:border-primary cursor-pointer appearance-none"
-                  >
-                    <option value="universal">Universal — Compatible con cualquier IA</option>
-                    <option value="claude">Claude (Anthropic)</option>
-                    <option value="chatgpt">ChatGPT (OpenAI)</option>
-                    <option value="gemini">Gemini (Google)</option>
-                    <option value="perplexity">Perplexity</option>
-                    <option value="lovable">Lovable / v0 / Bolt (constructores de apps)</option>
-                    <option value="midjourney">Midjourney / DALL-E (imagen)</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="flex justify-between mt-6">
-                <button onClick={prev} className="inline-flex items-center gap-1 text-text-light hover:text-text text-sm cursor-pointer bg-transparent border-none font-medium">
-                  <ChevronLeft className="w-4 h-4" /> Atrás
-                </button>
-                <button
-                  onClick={generatePrompt}
-                  className="inline-flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-xl font-medium cursor-pointer hover:bg-primary/90 transition-colors border-none text-sm"
-                >
-                  <Sparkles className="w-4 h-4" /> Generar prompt refinado
-                </button>
-              </div>
-
-              {/* Generated Output */}
-              {generated && (
-                <div ref={outputRef} className="mt-10">
-                  <div className="mb-4">
-                    <h2 className="text-lg font-bold text-text">Tu prompt refinado</h2>
-                    <p className="text-sm text-text-light">Copia y pega directamente en tu herramienta de IA preferida.</p>
-                  </div>
-
-                  <div className="relative bg-gray-50 rounded-2xl border border-border p-5">
-                    <button
-                      onClick={copyPrompt}
-                      className={`absolute top-4 right-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border cursor-pointer transition-colors ${
-                        copied
-                          ? 'bg-accent text-white border-accent'
-                          : 'bg-white text-text-light border-border hover:border-primary hover:text-primary'
-                      }`}
-                    >
-                      {copied ? <><Check className="w-3 h-3" /> Copiado</> : <><Copy className="w-3 h-3" /> Copiar</>}
-                    </button>
-                    <pre className="text-sm text-text whitespace-pre-wrap font-mono leading-relaxed pr-20">
-                      {generated}
-                    </pre>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-border">
-                    <span className="text-xs text-text-lighter">Compatible con:</span>
-                    {['Claude', 'ChatGPT', 'Gemini', 'Perplexity', 'Lovable', 'v0', 'Bolt', 'Midjourney'].map((t) => (
-                      <span key={t} className="text-xs px-2 py-0.5 bg-gray-100 text-text-lighter rounded font-medium">{t}</span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-3 mt-4">
-                    <button
-                      onClick={resetAll}
-                      className="inline-flex items-center gap-2 bg-white text-text border border-border px-4 py-2 rounded-xl text-sm font-medium cursor-pointer hover:bg-gray-50 transition-colors"
-                    >
-                      <RotateCcw className="w-4 h-4" /> Nuevo prompt
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
+            <>
+              <ConstraintsStep
+                avoid={avoid} setAvoid={setAvoid}
+                quality={quality} toggleQuality={(q) => toggleList(quality, setQuality, q)}
+                aiTool={aiTool} setAiTool={setAiTool}
+                onPrev={prev} onGenerate={generatePrompt}
+              />
+              <GeneratedPrompt
+                generated={generated}
+                onReset={resetAll}
+                outputRef={outputRef}
+              />
+            </>
           )}
         </div>
       </div>

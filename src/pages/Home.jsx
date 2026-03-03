@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 import { useSearch } from '../hooks/useSearch'
 import { useStaggerReveal } from '../hooks/useScrollReveal'
-import { getPopularTools, getCategoryInfo } from '../utils/recommender'
+import { getPopularTools, getCategoryInfo, getToolById } from '../utils/recommender'
 import Hero from '../components/Hero'
 import ToolCard from '../components/ToolCard'
 import SearchContextChips from '../components/SearchContextChips'
-import { Compass, Search } from 'lucide-react'
+import { Compass, Search, Heart } from 'lucide-react'
 import tools from '../data/tools.json'
 
 const popularTools = getPopularTools(6)
@@ -19,7 +19,7 @@ const fallbackSuggestions = [
   'Traducir un documento',
 ]
 
-export default function Home({ onCompare, compareIds }) {
+export default function Home({ onCompare, compareIds, favorites = [], onToggleFavorite, isFavorite }) {
   const { query, setQuery, results, meta, removeFilter } = useSearch()
   const gridRef = useStaggerReveal([results])
 
@@ -33,6 +33,8 @@ export default function Home({ onCompare, compareIds }) {
       .slice(0, 4)
     return catTools.length > 0 ? { category: cat, tools: catTools } : null
   })()
+
+  const favoriteTools = favorites.map(getToolById).filter(Boolean)
 
   return (
     <div>
@@ -58,6 +60,30 @@ export default function Home({ onCompare, compareIds }) {
                 tool={tool}
                 onCompare={onCompare}
                 isInCompare={compareIds.includes(tool.id)}
+                onToggleFavorite={onToggleFavorite}
+                isFavorite={isFavorite}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Favorites section — shown when no query and user has favorites */}
+      {!query && favoriteTools.length > 0 && (
+        <section className="max-w-6xl mx-auto px-4 pb-10 pt-6">
+          <h2 className="text-lg font-semibold text-text mb-5 tracking-tight flex items-center gap-2">
+            <Heart className="w-5 h-5 text-secondary fill-secondary" />
+            Tus favoritos
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {favoriteTools.map((tool) => (
+              <ToolCard
+                key={tool.id}
+                tool={tool}
+                onCompare={onCompare}
+                isInCompare={compareIds.includes(tool.id)}
+                onToggleFavorite={onToggleFavorite}
+                isFavorite={isFavorite}
               />
             ))}
           </div>
@@ -67,7 +93,7 @@ export default function Home({ onCompare, compareIds }) {
       {query && results.length === 0 && (
         <section className="max-w-6xl mx-auto px-4 pb-16 animate-fade-in">
           <div className="text-center py-10 mb-8">
-            <div className="w-16 h-16 bg-black/4 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-text/4 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl">🔍</span>
             </div>
             <p className="text-text font-display font-semibold text-lg mb-1">
@@ -117,6 +143,8 @@ export default function Home({ onCompare, compareIds }) {
                     tool={tool}
                     onCompare={onCompare}
                     isInCompare={compareIds.includes(tool.id)}
+                    onToggleFavorite={onToggleFavorite}
+                    isFavorite={isFavorite}
                   />
                 ))}
               </div>
@@ -136,6 +164,8 @@ export default function Home({ onCompare, compareIds }) {
                     tool={tool}
                     onCompare={onCompare}
                     isInCompare={compareIds.includes(tool.id)}
+                    onToggleFavorite={onToggleFavorite}
+                    isFavorite={isFavorite}
                   />
                 ))}
               </div>

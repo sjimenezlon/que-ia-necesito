@@ -33,6 +33,25 @@
   --shadow-glow-warm: 0 0 24px rgb(249 115 22 / 0.2), 0 0 8px rgb(249 115 22 / 0.12);
 }
 
+/* ── Dark theme overrides ── */
+.dark {
+  --color-bg: #0F0F17;
+  --color-surface: #1A1A2E;
+  --color-text: #EDEDF0;
+  --color-text-light: #A1A1AA;
+  --color-text-lighter: #6B6B7B;
+  --color-border: #2A2A3E;
+  --color-border-warm: #2E2A26;
+
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.15);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.2), 0 1px 2px -1px rgb(0 0 0 / 0.15);
+  --shadow-md: 0 4px 12px -2px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+  --shadow-lg: 0 12px 24px -4px rgb(0 0 0 / 0.35), 0 4px 8px -4px rgb(0 0 0 / 0.2);
+  --shadow-xl: 0 24px 48px -8px rgb(0 0 0 / 0.4), 0 8px 16px -6px rgb(0 0 0 / 0.2);
+
+  color-scheme: dark;
+}
+
 @layer base {
   body {
     font-family: var(--font-sans);
@@ -57,6 +76,10 @@
   ::selection {
     background: rgb(67 56 202 / 0.15);
     color: #1A1A2E;
+  }
+
+  .dark ::selection {
+    color: #EDEDF0;
   }
 }
 
@@ -155,6 +178,14 @@
   -webkit-backdrop-filter: blur(24px) saturate(1.8);
 }
 
+.dark .glass {
+  background: rgba(15, 15, 23, 0.75);
+}
+
+.dark .glass-strong {
+  background: rgba(15, 15, 23, 0.9);
+}
+
 @utility text-gradient-primary {
   background: linear-gradient(135deg, #4338CA 0%, #E11D48 100%);
   -webkit-background-clip: text;
@@ -177,9 +208,21 @@
     linear-gradient(180deg, #FAFAF5 0%, #F5F3EE 100%);
 }
 
+.dark .hero-gradient {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(67, 56, 202, 0.15), transparent),
+    radial-gradient(ellipse 50% 50% at 85% 20%, rgba(249, 115, 22, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 10% 80%, rgba(13, 148, 136, 0.06), transparent),
+    linear-gradient(180deg, #0F0F17 0%, #141420 100%);
+}
+
 @utility dot-pattern {
   background-image: radial-gradient(circle, rgba(67, 56, 202, 0.05) 1px, transparent 1px);
   background-size: 28px 28px;
+}
+
+.dark .dot-pattern {
+  background-image: radial-gradient(circle, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
 }
 
 @utility skeleton {
@@ -187,6 +230,11 @@
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: 0.5rem;
+}
+
+.dark .skeleton {
+  background: linear-gradient(90deg, #1A1A2E 25%, #2A2A3E 50%, #1A1A2E 75%);
+  background-size: 200% 100%;
 }
 
 /* Scroll reveal */

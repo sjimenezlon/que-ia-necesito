@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://que-ia-necesito.vercel.app/sitemap.xml

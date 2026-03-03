@@ -1,0 +1,17 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#FAFAF5"/>
+  <rect width="1200" height="4" fill="url(#grad)"/>
+  <circle cx="600" cy="240" r="70" fill="#4338CA" opacity="0.1"/>
+  <text x="600" y="255" text-anchor="middle" font-size="72" fill="#4338CA">🤖</text>
+  <text x="600" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#1A1A2E">¿Qué IA necesito?</text>
+  <text x="600" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="#52525B">Encuentra la herramienta de IA perfecta para ti</text>
+  <text x="600" y="470" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" fill="#A1A1AA">80+ herramientas · Comparador · Recomendador · Prompt Lab</text>
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1200" y2="0">
+      <stop offset="0%" stop-color="#4338CA"/>
+      <stop offset="33%" stop-color="#E11D48"/>
+      <stop offset="66%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+</svg>

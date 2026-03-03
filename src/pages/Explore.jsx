@@ -8,7 +8,7 @@ import SearchBar from '../components/SearchBar'
 import FilterSidebar from '../components/FilterSidebar'
 import ToolCard from '../components/ToolCard'
 
-export default function Explore({ onCompare, compareIds }) {
+export default function Explore({ onCompare, compareIds, onToggleFavorite, isFavorite }) {
   const [searchParams] = useSearchParams()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const { query, setQuery, results } = useSearch()
@@ -23,7 +23,7 @@ export default function Explore({ onCompare, compareIds }) {
     }
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const displayTools = query ? filters.filtered : filters.filtered
+  const displayTools = filters.filtered
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
@@ -38,7 +38,7 @@ export default function Explore({ onCompare, compareIds }) {
           <SearchBar value={query} onChange={setQuery} />
           <button
             onClick={() => setSidebarOpen(true)}
-            className="md:hidden flex items-center gap-2 px-4 py-3 bg-surface border border-border rounded-xl text-sm text-text-light cursor-pointer hover:bg-black/3 transition-colors font-medium"
+            className="md:hidden flex items-center gap-2 px-4 py-3 bg-surface border border-border rounded-xl text-sm text-text-light cursor-pointer hover:bg-text/3 transition-colors font-medium"
           >
             <SlidersHorizontal className="w-4 h-4" />
             Filtros
@@ -71,12 +71,14 @@ export default function Explore({ onCompare, compareIds }) {
                   tool={tool}
                   onCompare={onCompare}
                   isInCompare={compareIds.includes(tool.id)}
+                  onToggleFavorite={onToggleFavorite}
+                  isFavorite={isFavorite}
                 />
               ))}
             </div>
           ) : (
             <div className="text-center py-16">
-              <div className="w-14 h-14 bg-black/4 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-14 h-14 bg-text/4 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🤷</span>
               </div>
               <p className="text-text-light font-medium mb-1">

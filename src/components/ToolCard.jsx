@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Star, Plus, Check, ExternalLink } from 'lucide-react'
+import { Star, Plus, Check, ExternalLink, Heart } from 'lucide-react'
 import { getCategoryInfo } from '../utils/recommender'
 
 const pricingStyles = {
@@ -63,7 +63,8 @@ function ToolFavicon({ tool, size = 'md' }) {
 
 export { ToolFavicon, getFaviconUrl }
 
-export default function ToolCard({ tool, onCompare, isInCompare = false }) {
+export default function ToolCard({ tool, onCompare, isInCompare = false, onToggleFavorite, isFavorite }) {
+  const favorited = isFavorite?.(tool.id)
   const primaryCategory = getCategoryInfo(tool.categories[0])
 
   return (
@@ -89,13 +90,24 @@ export default function ToolCard({ tool, onCompare, isInCompare = false }) {
             )}
           </div>
         </div>
-        <span
-          className={`text-[11px] px-2.5 py-1 rounded-full font-semibold whitespace-nowrap border ${
-            pricingStyles[tool.pricing]
-          }`}
-        >
-          {pricingLabels[tool.pricing]}
-        </span>
+        <div className="flex items-center gap-1.5 shrink-0">
+          {onToggleFavorite && (
+            <button
+              onClick={() => onToggleFavorite(tool.id)}
+              aria-label={favorited ? `Quitar ${tool.name} de favoritos` : `Agregar ${tool.name} a favoritos`}
+              className="p-1 rounded-lg bg-transparent border-none cursor-pointer hover:scale-110 active:scale-95 transition-transform"
+            >
+              <Heart className={`w-4 h-4 transition-colors ${favorited ? 'text-secondary fill-secondary' : 'text-text-lighter hover:text-secondary'}`} />
+            </button>
+          )}
+          <span
+            className={`text-[11px] px-2.5 py-1 rounded-full font-semibold whitespace-nowrap border ${
+              pricingStyles[tool.pricing]
+            }`}
+          >
+            {pricingLabels[tool.pricing]}
+          </span>
+        </div>
       </div>
 
       <p className="text-text-light text-sm leading-relaxed mb-4 flex-1">
@@ -103,7 +115,7 @@ export default function ToolCard({ tool, onCompare, isInCompare = false }) {
       </p>
 
       <div className="flex items-center justify-between mb-3">
-        <div className="flex items-center gap-0.5">
+        <div className="flex items-center gap-0.5" aria-label={`Calificación: ${tool.rating} de 5`}>
           {Array.from({ length: 5 }).map((_, i) => (
             <Star
               key={i}
@@ -123,6 +135,7 @@ export default function ToolCard({ tool, onCompare, isInCompare = false }) {
       <div className="flex items-center gap-2 mt-auto pt-3 border-t border-border">
         <Link
           to={`/herramienta/${tool.id}`}
+          aria-label={`Ver detalle de ${tool.name}`}
           className="flex-1 bg-text text-white text-sm font-semibold py-2.5 px-4 rounded-xl text-center no-underline hover:bg-text/90 hover:shadow-md active:scale-[0.98] transition-all duration-200"
         >
           Ver detalle
@@ -135,7 +148,7 @@ export default function ToolCard({ tool, onCompare, isInCompare = false }) {
                 ? 'bg-accent text-white border-accent'
                 : 'bg-surface text-text-light border-border hover:border-primary hover:text-primary'
             }`}
-            title={isInCompare ? 'En el comparador' : 'Agregar al comparador'}
+            aria-label={isInCompare ? 'En el comparador' : 'Agregar al comparador'}
           >
             {isInCompare ? (
               <Check className="w-4 h-4" />
@@ -149,7 +162,7 @@ export default function ToolCard({ tool, onCompare, isInCompare = false }) {
           target="_blank"
           rel="noopener noreferrer"
           className="p-2.5 rounded-xl border border-border bg-surface text-text-light hover:border-primary hover:text-primary transition-all duration-200 hover:scale-105 active:scale-95"
-          title="Ir al sitio"
+          aria-label={`Ir al sitio de ${tool.name}`}
         >
           <ExternalLink className="w-4 h-4" />
         </a>

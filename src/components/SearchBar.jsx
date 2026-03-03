@@ -102,7 +102,7 @@ export default function SearchBar({ value, onChange, large = false, hasResults =
             setShowSuggestions(false)
             inputRef.current?.focus()
           }}
-          className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-full hover:bg-black/5 bg-transparent border-none cursor-pointer transition-colors z-10"
+          className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-full hover:bg-text/5 bg-transparent border-none cursor-pointer transition-colors z-10"
           aria-label="Limpiar búsqueda"
         >
           <X className="w-4 h-4 text-text-lighter" />

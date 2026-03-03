@@ -234,7 +234,7 @@ export default function RecommendationFlow() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <button
             onClick={handleReset}
-            className="inline-flex items-center gap-2 bg-surface border border-border text-text px-5 py-2.5 rounded-xl font-semibold cursor-pointer hover:bg-black/3 transition-all duration-200"
+            className="inline-flex items-center gap-2 bg-surface border border-border text-text px-5 py-2.5 rounded-xl font-semibold cursor-pointer hover:bg-text/3 transition-all duration-200"
           >
             <RotateCcw className="w-4 h-4" />
             Empezar de nuevo
@@ -257,7 +257,7 @@ export default function RecommendationFlow() {
       <div className="flex items-center gap-2 mb-10">
         {steps.map((s, i) => (
           <div key={i} className="flex-1 relative">
-            <div className="h-1.5 rounded-full bg-black/5 overflow-hidden">
+            <div className="h-1.5 rounded-full bg-text/5 overflow-hidden">
               <div
                 className="h-full rounded-full transition-all duration-500 ease-out"
                 style={{
@@ -418,7 +418,7 @@ export default function RecommendationFlow() {
           className={`inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-semibold border-none cursor-pointer transition-all duration-200 ${
             step === 0
               ? 'text-text-lighter bg-transparent cursor-not-allowed'
-              : 'text-text-light bg-surface hover:bg-black/5'
+              : 'text-text-light bg-surface hover:bg-text/5'
           }`}
         >
           <ArrowLeft className="w-4 h-4" />
