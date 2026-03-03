@@ -6,6 +6,7 @@
 
 const INTENT_MAP = {
   // Video
+  'video': 'video',
   'hacer video': 'video',
   'crear video': 'video',
   'editar video': 'video',
@@ -20,6 +21,10 @@ const INTENT_MAP = {
   'presentador virtual': 'video',
 
   // Diseno
+  'diseno': 'diseno',
+  'foto': 'diseno',
+  'imagen': 'diseno',
+  'logo': 'diseno',
   'quitar fondo': 'diseno',
   'eliminar fondo': 'diseno',
   'generar imagen': 'diseno',
@@ -43,9 +48,11 @@ const INTENT_MAP = {
   'reescribir': 'escritura',
   'redactar': 'escritura',
   'copywriting': 'escritura',
-  'copy': 'escritura',
+  'blog': 'escritura',
 
   // Presentaciones
+  'presentacion': 'presentaciones',
+  'presentaciones': 'presentaciones',
   'hacer presentacion': 'presentaciones',
   'crear presentacion': 'presentaciones',
   'hacer slides': 'presentaciones',
@@ -53,8 +60,11 @@ const INTENT_MAP = {
   'powerpoint': 'presentaciones',
   'pitch deck': 'presentaciones',
   'pitch': 'presentaciones',
+  'slides': 'presentaciones',
 
   // Audio
+  'musica': 'audio',
+  'audio': 'audio',
   'crear musica': 'audio',
   'generar musica': 'audio',
   'hacer cancion': 'audio',
@@ -62,8 +72,11 @@ const INTENT_MAP = {
   'locucion': 'audio',
   'narrar': 'audio',
   'podcast': 'audio',
+  'cancion': 'audio',
 
   // Programacion
+  'codigo': 'programacion',
+  'programacion': 'programacion',
   'programar': 'programacion',
   'escribir codigo': 'programacion',
   'crear pagina web': 'programacion',
@@ -75,6 +88,8 @@ const INTENT_MAP = {
   'autocompletar codigo': 'programacion',
 
   // Datos
+  'datos': 'datos',
+  'excel': 'datos',
   'analizar datos': 'datos',
   'analizar excel': 'datos',
   'graficar datos': 'datos',
@@ -85,6 +100,7 @@ const INTENT_MAP = {
 
   // Investigacion
   'investigar': 'investigacion',
+  'investigacion': 'investigacion',
   'buscar papers': 'investigacion',
   'buscar articulos': 'investigacion',
   'paper academico': 'investigacion',
@@ -93,6 +109,7 @@ const INTENT_MAP = {
 
   // Transcripcion
   'transcribir': 'transcripcion',
+  'transcripcion': 'transcripcion',
   'transcribir reunion': 'transcripcion',
   'transcribir audio': 'transcripcion',
   'voz a texto': 'transcripcion',
@@ -103,6 +120,7 @@ const INTENT_MAP = {
   // Educacion
   'aprender': 'educacion',
   'estudiar': 'educacion',
+  'educacion': 'educacion',
   'tutor': 'educacion',
   'flashcards': 'educacion',
   'aprender idiomas': 'educacion',
@@ -219,8 +237,8 @@ const STOPWORDS = new Set([
   'una', 'uno', 'un', 'unas', 'unos', 'los', 'las', 'del', 'de', 'la',
   'el', 'en', 'es', 'y', 'o', 'mi', 'me', 'se', 'le', 'lo', 'hay',
   'tiene', 'tiene', 'ser', 'muy', 'mas', 'pero', 'sin', 'por', 'al',
-  'algo', 'como', 'hacer', 'herramienta', 'herramientas', 'ia',
-  'inteligencia', 'artificial', 'app', 'aplicacion', 'mejor',
+  'algo', 'como', 'herramienta', 'herramientas', 'ia',
+  'inteligencia', 'artificial', 'aplicacion', 'mejor',
 ])
 
 function normalize(text) {
@@ -244,15 +262,26 @@ function matchesWholePhrase(text, phrase) {
 export function processQuery(rawQuery) {
   const normalized = normalize(rawQuery)
 
+  // Create a stopword-stripped version for multi-word phrase matching
+  // So "hacer una presentacion" matches "hacer presentacion"
+  const normalizedNoStopwords = normalized
+    .split(/\s+/)
+    .filter((w) => !STOPWORDS.has(w))
+    .join(' ')
+
   // Detect categories from intent map (check longer phrases first)
   const detectedCategories = []
   const sortedIntents = Object.keys(INTENT_MAP).sort((a, b) => b.length - a.length)
   for (const phrase of sortedIntents) {
     const normalizedPhrase = normalize(phrase)
-    // Multi-word phrases use includes (they're specific enough), single words use word boundary
-    const matches = normalizedPhrase.includes(' ')
-      ? normalized.includes(normalizedPhrase)
-      : matchesWholePhrase(normalized, normalizedPhrase)
+    let matches
+    if (normalizedPhrase.includes(' ')) {
+      // Multi-word: check both original and stopword-stripped text
+      matches = normalized.includes(normalizedPhrase) || normalizedNoStopwords.includes(normalizedPhrase)
+    } else {
+      // Single word: use word boundary matching
+      matches = matchesWholePhrase(normalized, normalizedPhrase)
+    }
     if (matches) {
       const cat = INTENT_MAP[phrase]
       if (!detectedCategories.includes(cat)) {
@@ -265,9 +294,12 @@ export function processQuery(rawQuery) {
   let pricingHint = null
   for (const [signal, value] of Object.entries(PRICING_SIGNALS)) {
     const normalizedSignal = normalize(signal)
-    const matches = normalizedSignal.includes(' ')
-      ? normalized.includes(normalizedSignal)
-      : matchesWholePhrase(normalized, normalizedSignal)
+    let matches
+    if (normalizedSignal.includes(' ')) {
+      matches = normalized.includes(normalizedSignal) || normalizedNoStopwords.includes(normalizedSignal)
+    } else {
+      matches = matchesWholePhrase(normalized, normalizedSignal)
+    }
     if (matches) {
       pricingHint = value
       break
@@ -278,9 +310,12 @@ export function processQuery(rawQuery) {
   let difficultyHint = null
   for (const [signal, value] of Object.entries(DIFFICULTY_SIGNALS)) {
     const normalizedSignal = normalize(signal)
-    const matches = normalizedSignal.includes(' ')
-      ? normalized.includes(normalizedSignal)
-      : matchesWholePhrase(normalized, normalizedSignal)
+    let matches
+    if (normalizedSignal.includes(' ')) {
+      matches = normalized.includes(normalizedSignal) || normalizedNoStopwords.includes(normalizedSignal)
+    } else {
+      matches = matchesWholePhrase(normalized, normalizedSignal)
+    }
     if (matches) {
       difficultyHint = value
       break
