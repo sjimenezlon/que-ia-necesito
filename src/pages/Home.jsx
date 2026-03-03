@@ -41,13 +41,13 @@ export default function Home({ onCompare, compareIds }) {
       {/* Context chips — only render wrapper when chips will actually show */}
       {query && meta && meta.hasStrongIntent &&
         (meta.detectedCategories.length > 0 || meta.pricingHint || meta.difficultyHint) && (
-        <div className="max-w-6xl mx-auto px-4 -mt-2 mb-2">
+        <div className="max-w-6xl mx-auto px-4 mt-4 mb-2">
           <SearchContextChips meta={meta} onRemove={removeFilter} />
         </div>
       )}
 
       {query && results.length > 0 && (
-        <section className="max-w-6xl mx-auto px-4 pb-16 -mt-4">
+        <section className="max-w-6xl mx-auto px-4 pb-16 pt-6">
           <h2 className="text-lg font-semibold text-text mb-5 tracking-tight">
             {results.length} resultado{results.length !== 1 ? 's' : ''} para &quot;{query}&quot;
           </h2>
