@@ -54,12 +54,12 @@ export default function Hero({ query, onQueryChange, results }) {
           </p>
         </div>
 
-        <div className="flex justify-center mb-6 animate-slide-up" style={{ animationDelay: '160ms' }}>
+        <div className="relative z-30 flex justify-center mb-6 animate-slide-up" style={{ animationDelay: '160ms' }}>
           <SearchBar value={query} onChange={onQueryChange} large hasResults={results.length > 0} />
         </div>
 
         <div
-          className={`overflow-hidden transition-all duration-300 ease-out ${
+          className={`relative z-10 overflow-hidden transition-all duration-300 ease-out ${
             hasQuery ? 'max-h-0 opacity-0 pointer-events-none' : 'max-h-28 opacity-100 mb-14'
           }`}
         >
@@ -85,7 +85,7 @@ export default function Hero({ query, onQueryChange, results }) {
         </div>
 
         <div
-          className={`overflow-hidden transition-all duration-300 ease-out ${
+          className={`relative z-10 overflow-hidden transition-all duration-300 ease-out ${
             hasQuery ? 'max-h-0 opacity-0 pointer-events-none' : 'max-h-[600px] opacity-100 mt-4'
           }`}
         >
