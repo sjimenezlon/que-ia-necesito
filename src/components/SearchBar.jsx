@@ -15,7 +15,7 @@ const placeholders = [
   'Resumir un artículo largo',
 ]
 
-export default function SearchBar({ value, onChange, large = false }) {
+export default function SearchBar({ value, onChange, large = false, hasResults = false }) {
   const [placeholderIndex, setPlaceholderIndex] = useState(0)
   const [focused, setFocused] = useState(false)
   const [showSuggestions, setShowSuggestions] = useState(false)
@@ -109,8 +109,8 @@ export default function SearchBar({ value, onChange, large = false }) {
         </button>
       )}
 
-      {/* Autocomplete dropdown */}
-      {showSuggestions && focused && filteredSuggestions.length > 0 && (
+      {/* Autocomplete dropdown — hide when search already has results */}
+      {showSuggestions && focused && !hasResults && filteredSuggestions.length > 0 && (
         <div className="absolute top-full left-0 right-0 mt-2 bg-surface border border-border rounded-xl shadow-lg z-50 overflow-hidden animate-slide-down">
           <div className="py-1.5">
             <p className="px-4 py-1.5 text-[10px] font-semibold text-text-lighter uppercase tracking-wider">

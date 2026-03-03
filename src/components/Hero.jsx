@@ -7,7 +7,7 @@ export default function Hero({ query, onQueryChange, results }) {
   const navigate = useNavigate()
 
   return (
-    <section className="relative py-16 md:py-28 px-4 hero-gradient noise-overlay overflow-hidden">
+    <section className="relative py-16 md:py-28 px-4 hero-gradient noise-overlay overflow-x-clip">
       {/* Dot pattern overlay */}
       <div className="absolute inset-0 dot-pattern pointer-events-none" />
 
@@ -38,7 +38,7 @@ export default function Hero({ query, onQueryChange, results }) {
         </p>
 
         <div className="flex justify-center mb-8 animate-slide-up" style={{ animationDelay: '160ms' }}>
-          <SearchBar value={query} onChange={onQueryChange} large />
+          <SearchBar value={query} onChange={onQueryChange} large hasResults={results.length > 0} />
         </div>
 
         {!query && (
