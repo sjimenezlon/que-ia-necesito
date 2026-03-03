@@ -12,7 +12,7 @@ export default function Explore({ onCompare, compareIds }) {
   const [searchParams] = useSearchParams()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const { query, setQuery, results } = useSearch()
-  const gridRef = useStaggerReveal()
+  const gridRef = useStaggerReveal([results])
 
   const filters = useFilters(query ? results : null)
 

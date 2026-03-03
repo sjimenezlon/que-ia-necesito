@@ -85,6 +85,10 @@ export function useSearch() {
       if (filtered.length > 0) allResults = filtered
     }
 
+    // Cap results to avoid overwhelming the UI
+    const MAX_RESULTS = 18
+    allResults = allResults.slice(0, MAX_RESULTS)
+
     return {
       results: allResults.map((r) => r.item),
       meta: {

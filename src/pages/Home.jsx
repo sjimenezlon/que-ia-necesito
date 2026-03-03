@@ -21,7 +21,7 @@ const fallbackSuggestions = [
 
 export default function Home({ onCompare, compareIds }) {
   const { query, setQuery, results, meta, removeFilter } = useSearch()
-  const gridRef = useStaggerReveal()
+  const gridRef = useStaggerReveal([results])
 
   // Get category fallback tools when no results but category detected
   const categoryFallbackTools = (() => {

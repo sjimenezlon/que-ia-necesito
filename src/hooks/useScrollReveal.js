@@ -33,8 +33,9 @@ export function useScrollReveal(options = {}) {
  * Reveal children of a container with staggered delays.
  * Returns a ref to attach to the parent grid/container.
  * Each child should have className "scroll-reveal".
+ * Pass a deps array so the observer re-runs when content changes.
  */
-export function useStaggerReveal(options = {}) {
+export function useStaggerReveal(deps = []) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -57,12 +58,12 @@ export function useStaggerReveal(options = {}) {
           }
         })
       },
-      { threshold: 0.05, rootMargin: '0px 0px -20px 0px', ...options }
+      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
     )
 
     children.forEach((child) => observer.observe(child))
     return () => observer.disconnect()
-  }, [])
+  }, deps) // eslint-disable-line react-hooks/exhaustive-deps
 
   return ref
 }
