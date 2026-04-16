@@ -25,7 +25,7 @@ export default function About() {
       <div className="bg-surface rounded-2xl border border-border p-6 md:p-8 mb-10 shadow-sm">
         <h2 className="text-xl font-bold text-text mb-4 tracking-tight">¿Por qué existe esta app?</h2>
         <p className="text-text-light leading-relaxed mb-4">
-          A marzo de 2026, existen cientos de herramientas de IA, pero la mayoría de personas no sabe cuál usar para qué.
+          A abril de 2026, existen cientos de herramientas de IA, pero la mayoría de personas no sabe cuál usar para qué.
           Cada semana aparecen nuevas opciones y es difícil mantenerse al día.
         </p>
         <p className="text-text-light leading-relaxed">
@@ -54,8 +54,9 @@ export default function About() {
         <h2 className="text-xl font-bold text-text mb-4 tracking-tight">¿Qué incluye?</h2>
         <ul className="space-y-2.5 text-text-light">
           {[
-            'Más de 80 herramientas de IA curadas y verificadas',
-            '15 categorías: desde escritura y diseño hasta programación y automatización',
+            'Más de 100 herramientas de IA curadas y verificadas',
+            '16 categorías: incluye finanzas, programación, diseño y automatización',
+            'Capítulo especial para el sector público colombiano con casos de uso',
             'Información de precios, nivel de dificultad y casos de uso',
             'Guías paso a paso para empezar con cada herramienta',
             'Consejos prácticos de uso para cada herramienta',
@@ -73,7 +74,7 @@ export default function About() {
         <p className="text-text-light flex items-center justify-center gap-1.5 font-medium">
           Hecho con <Heart className="w-4 h-4 text-secondary fill-secondary" /> por Santiago Jiménez Londoño y Cristian Espinal Maya
         </p>
-        <p className="text-text-lighter text-sm mt-2">Marzo 2026</p>
+        <p className="text-text-lighter text-sm mt-2">Abril 2026</p>
       </div>
     </div>
   )

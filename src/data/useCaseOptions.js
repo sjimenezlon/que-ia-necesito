@@ -96,6 +96,16 @@ export const USE_CASES = {
     { id: 'traduccion-mejorar', label: 'Mejorar textos', emoji: '✨', matchTerms: ['mejorar', 'reescribir', 'parafrasear', 'tono', 'claridad'] },
     { id: 'traduccion-aprender', label: 'Aprender idiomas', emoji: '🌍', matchTerms: ['aprender', 'idiomas', 'practicar', 'conversar', 'vocabulario'] },
   ],
+  finanzas: [
+    { id: 'finanzas-analisis', label: 'Análisis financiero', emoji: '📊', matchTerms: ['analisis', 'finanzas', 'ratios', 'estados', 'ebitda', 'fcf'] },
+    { id: 'finanzas-investigacion', label: 'Research de empresas', emoji: '🔎', matchTerms: ['investigar', 'empresa', 'mercado', 'earnings', 'filings'] },
+    { id: 'finanzas-inversion', label: 'Decisiones de inversión', emoji: '📈', matchTerms: ['inversion', 'portafolio', 'acciones', 'bolsa', 'trading'] },
+    { id: 'finanzas-portafolio', label: 'Gestión de portafolio', emoji: '💼', matchTerms: ['portafolio', 'watchlist', 'dashboard', 'seguimiento', 'tenencia'] },
+    { id: 'finanzas-contabilidad', label: 'Contabilidad y cierre', emoji: '📒', matchTerms: ['contabilidad', 'cierre', 'conciliacion', 'erp', 'niif', 'factura'] },
+    { id: 'finanzas-gastos', label: 'Gestión de gastos', emoji: '💳', matchTerms: ['gastos', 'tarjeta', 'reembolso', 'aprobacion', 'saas', 'ahorro'] },
+    { id: 'finanzas-auditoria', label: 'Auditoría y fraude', emoji: '🕵️', matchTerms: ['auditoria', 'fraude', 'anomalia', 'riesgo', 'cumplimiento', 'sox'] },
+    { id: 'finanzas-personal', label: 'Finanzas personales', emoji: '🏠', matchTerms: ['personal', 'presupuesto', 'flujo caja', 'impuestos', 'pyme'] },
+  ],
 }
 
 /**
@@ -146,6 +156,15 @@ export const CONTEXT_QUESTIONS = {
       { value: 'database', label: 'Bases de datos / SQL', emoji: '🗄️' },
       { value: 'texto', label: 'Texto / Encuestas', emoji: '📝' },
       { value: 'metricas', label: 'Métricas de negocio', emoji: '📈' },
+    ],
+  },
+  finanzas: {
+    question: '¿En qué contexto financiero trabajas?',
+    options: [
+      { value: 'institucional', label: 'Banca / buy-side', emoji: '🏦' },
+      { value: 'corporativo', label: 'Corporativo / pyme', emoji: '🏢' },
+      { value: 'retail', label: 'Inversionista retail', emoji: '💰' },
+      { value: 'publico', label: 'Sector público', emoji: '🏛️' },
     ],
   },
 }

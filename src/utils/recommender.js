@@ -144,6 +144,10 @@ function scoreAndRank(candidates, { category, useCase, context }) {
         database: ['SQL', 'base de datos', 'query'],
         texto: ['texto', 'NLP', 'sentimiento', 'encuesta'],
         metricas: ['metrica', 'KPI', 'dashboard', 'negocio'],
+        institucional: ['buy side', 'hedge fund', 'enterprise', 'institucional', 'wall street'],
+        corporativo: ['erp', 'pyme', 'corporativo', 'empresa', 'contabilidad'],
+        retail: ['retail', 'acciones', 'personal', 'inversionista', 'facil'],
+        publico: ['publico', 'auditoria', 'cumplimiento', 'gobierno'],
       }
       const terms = contextTerms[context] || []
       const toolKeywords = tool.keywords.join(' ').toLowerCase()
@@ -226,6 +230,7 @@ export const CATEGORIES = [
   { id: 'negocios', label: 'Negocios y marketing', icon: 'Briefcase', color: 'bg-rose-100 text-rose-700' },
   { id: 'automatizacion', label: 'Automatización', icon: 'Zap', color: 'bg-yellow-100 text-yellow-700' },
   { id: 'traduccion', label: 'Traducción e idiomas', icon: 'Globe', color: 'bg-lime-100 text-lime-700' },
+  { id: 'finanzas', label: 'Finanzas y contabilidad', icon: 'DollarSign', color: 'bg-green-100 text-green-700' },
 ]
 
 export function getCategoryInfo(categoryId) {

@@ -15,7 +15,7 @@ export default function Footer() {
                 Hecho con <span role="img" aria-label="corazón">❤️</span> por Santiago Jiménez Londoño y Cristian Espinal Maya
               </p>
               <p className="text-text-lighter text-xs mt-0.5">
-                Última actualización: Marzo 2026
+                Última actualización: Abril 2026
               </p>
             </div>
           </div>

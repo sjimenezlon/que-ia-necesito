@@ -5492,5 +5492,1532 @@
       "diseno-editar"
     ],
     "bestFor": "Ideal para editar fotos gratis en el navegador como en Photoshop"
+  },
+  {
+    "id": "grok",
+    "name": "Grok",
+    "url": "https://grok.x.ai",
+    "categories": [
+      "chatbots",
+      "investigacion",
+      "escritura"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites. Premium: $8/mes. SuperGrok: $30/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Asistente conversacional de xAI con acceso en tiempo real a X (Twitter) e integración multimodal.",
+    "fullDescription": "Grok es el asistente de IA desarrollado por xAI de Elon Musk. Su principal diferencial es el acceso en tiempo real a conversaciones y tendencias en X (Twitter), lo que lo hace útil para análisis de actualidad, monitoreo de reputación y búsquedas sobre temas emergentes. La versión Grok 3 (2026) incluye razonamiento avanzado, generación de imágenes con Aurora y modo agente.",
+    "useCases": [
+      "Monitorear tendencias y conversaciones en redes sociales en tiempo real",
+      "Analizar percepción pública sobre temas o marcas",
+      "Investigar noticias y eventos recientes con fuentes actualizadas",
+      "Generar respuestas con un tono más directo y menos filtrado",
+      "Crear imágenes con Aurora integrado"
+    ],
+    "howToStart": [
+      "Ingresa a grok.x.ai o accede desde X.com (requiere cuenta X)",
+      "Selecciona el modo: regular, Think (razonamiento) o DeepSearch",
+      "Haz tu pregunta — Grok puede citar posts recientes",
+      "Activa modo Voice para conversación hablada"
+    ],
+    "proTip": "Usa el modo DeepSearch para investigaciones que requieran contexto actualizado de las últimas 24–48 horas; supera a Perplexity para eventos muy recientes.",
+    "pros": [
+      "Acceso en tiempo real a X (Twitter)",
+      "Menos filtros que otros chatbots",
+      "Modo razonamiento potente (Think)"
+    ],
+    "cons": [
+      "Requiere cuenta de X",
+      "Calidad variable en idiomas distintos al inglés",
+      "Sesgos según la plataforma fuente"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "perplexity",
+      "claude"
+    ],
+    "keywords": [
+      "grok",
+      "xai",
+      "elon musk",
+      "twitter",
+      "x",
+      "tiempo real",
+      "tendencias",
+      "redes sociales",
+      "noticias",
+      "investigar actualidad"
+    ],
+    "tags": [
+      "IA generativa",
+      "Tiempo real",
+      "Multimodal"
+    ],
+    "useCaseIds": [
+      "investigacion-general",
+      "chatbots-consultas",
+      "chatbots-asistente",
+      "negocios-marketing"
+    ],
+    "bestFor": "Ideal para monitorear tendencias y conversaciones en X en tiempo real"
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "url": "https://chat.deepseek.com",
+    "categories": [
+      "chatbots",
+      "programacion",
+      "investigacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis ilimitado. API: ~$0.14 por millón de tokens (muy bajo costo)",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Modelo open-source chino con razonamiento avanzado a muy bajo costo — rival directo de GPT-4 y Claude.",
+    "fullDescription": "DeepSeek es un laboratorio chino que ha disrumpido el mercado con modelos de IA open-source (V3, R1) que igualan o superan a GPT-4 y Claude en muchas tareas — a una fracción del costo. DeepSeek R1 destaca en razonamiento matemático, programación y análisis técnico. El modelo es libre para uso personal y la API es 30x más barata que la de OpenAI.",
+    "useCases": [
+      "Resolver problemas matemáticos complejos paso a paso",
+      "Generar y depurar código en múltiples lenguajes",
+      "Análisis técnico de documentación científica",
+      "Automatizar tareas con API a bajo costo",
+      "Alternativa gratuita a ChatGPT Plus"
+    ],
+    "howToStart": [
+      "Ve a chat.deepseek.com y crea una cuenta gratuita",
+      "Activa el modo DeepThink (R1) para razonamiento",
+      "Escribe tu consulta — muestra su cadena de razonamiento",
+      "Para desarrolladores: usa la API desde platform.deepseek.com"
+    ],
+    "proTip": "Activa DeepThink R1 cuando necesites ver el razonamiento explícito — es útil para entender errores matemáticos o depurar lógica compleja.",
+    "pros": [
+      "Gratis sin límites significativos",
+      "API extremadamente barata",
+      "Excelente en matemáticas y código"
+    ],
+    "cons": [
+      "Servidores en China (considerar privacidad)",
+      "Censura en temas políticos sensibles",
+      "Menor soporte multimodal que GPT-4o"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "qwen"
+    ],
+    "keywords": [
+      "deepseek",
+      "r1",
+      "razonamiento",
+      "open source",
+      "barato",
+      "matemáticas",
+      "código",
+      "api",
+      "china",
+      "gratis"
+    ],
+    "tags": [
+      "IA generativa",
+      "Open source",
+      "Razonamiento"
+    ],
+    "useCaseIds": [
+      "programacion-escribir",
+      "programacion-depurar",
+      "chatbots-consultas",
+      "investigacion-general"
+    ],
+    "bestFor": "Ideal para razonamiento avanzado y programación con costo casi cero"
+  },
+  {
+    "id": "qwen",
+    "name": "Qwen",
+    "url": "https://chat.qwen.ai",
+    "categories": [
+      "chatbots",
+      "traduccion",
+      "escritura"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con cuenta Alibaba. API: $0.20–2 por millón de tokens",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Modelo multilingüe de Alibaba con fortaleza en idiomas asiáticos y comprensión de documentos largos.",
+    "fullDescription": "Qwen (通义千问) es la familia de modelos de IA de Alibaba Cloud. Qwen2.5 y Qwen3 (2026) son referentes open-source con excelente rendimiento en traducciones, comprensión de documentos extensos (1M tokens de contexto) y procesamiento multilingüe — especialmente útil para empresas con operación en Asia o que manejen múltiples idiomas.",
+    "useCases": [
+      "Traducir entre más de 100 idiomas con matices culturales",
+      "Analizar documentos de hasta 1 millón de tokens",
+      "Generar contenido en chino, japonés, coreano, árabe",
+      "Razonamiento matemático y científico",
+      "Chat multimodal con imágenes y video"
+    ],
+    "howToStart": [
+      "Ingresa a chat.qwen.ai y accede con cuenta Alibaba",
+      "Selecciona el modelo: Qwen3-Max para calidad, Qwen3-Coder para código",
+      "Sube documentos largos para análisis",
+      "Para desarrolladores: usa la API en DashScope"
+    ],
+    "proTip": "Usa Qwen cuando necesites traducir matices culturales entre idiomas asiáticos — supera a Google Translate y DeepL en chino, japonés y coreano.",
+    "pros": [
+      "Excelente multilingüe",
+      "Contexto muy largo (1M tokens)",
+      "Open-source con licencia permisiva"
+    ],
+    "cons": [
+      "Interfaz mayormente en chino/inglés",
+      "Servidores chinos (privacidad)",
+      "Menor cobertura de español"
+    ],
+    "alternatives": [
+      "deepseek",
+      "chatgpt",
+      "claude"
+    ],
+    "keywords": [
+      "qwen",
+      "alibaba",
+      "multilingüe",
+      "traducir",
+      "chino",
+      "japonés",
+      "contexto largo",
+      "documentos",
+      "open source"
+    ],
+    "tags": [
+      "IA generativa",
+      "Multilingüe",
+      "Open source"
+    ],
+    "useCaseIds": [
+      "traduccion-documento",
+      "investigacion-resumir",
+      "chatbots-consultas"
+    ],
+    "bestFor": "Ideal para traducción multilingüe avanzada y documentos muy largos"
+  },
+  {
+    "id": "sora",
+    "name": "Sora",
+    "url": "https://sora.com",
+    "categories": [
+      "video"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Incluido en ChatGPT Plus ($20/mes) y Pro ($200/mes). Créditos limitados por plan",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Generador de video cinematográfico de OpenAI — crea clips de hasta 20 segundos desde texto.",
+    "fullDescription": "Sora es el modelo de generación de video de OpenAI, capaz de crear videos cinematográficos realistas desde prompts de texto o imágenes de referencia. Sora 2 (2026) genera videos de hasta 20 segundos en 1080p con audio sincronizado, coherencia de personajes y control de cámara. Disponible dentro del ecosistema ChatGPT.",
+    "useCases": [
+      "Crear videos publicitarios cortos sin producción",
+      "Generar b-roll para YouTube y redes",
+      "Visualizar ideas y storyboards rápidamente",
+      "Producir intros cinematográficas",
+      "Prototipos visuales para campañas"
+    ],
+    "howToStart": [
+      "Accede con tu cuenta ChatGPT Plus o Pro en sora.com",
+      "Describe la escena con detalle: personajes, cámara, estilo",
+      "Selecciona duración, aspect ratio y resolución",
+      "Refina con remix o storyboards multi-escena"
+    ],
+    "proTip": "Especifica el tipo de cámara (gran angular, teleobjetivo), el movimiento (dolly, pan) y el estilo cinematográfico (ej: 'shot on Arri Alexa') para resultados más profesionales.",
+    "pros": [
+      "Calidad cinematográfica sobresaliente",
+      "Audio sincronizado automático",
+      "Coherencia entre escenas"
+    ],
+    "cons": [
+      "Solo con planes pagos de ChatGPT",
+      "Créditos limitados por mes",
+      "No disponible en algunos países"
+    ],
+    "alternatives": [
+      "veo",
+      "runway",
+      "kling",
+      "luma"
+    ],
+    "keywords": [
+      "sora",
+      "openai",
+      "generar video",
+      "texto a video",
+      "cinematográfico",
+      "clips",
+      "publicidad",
+      "storyboard"
+    ],
+    "tags": [
+      "Generación de video",
+      "Texto a video",
+      "Cinematográfico"
+    ],
+    "useCaseIds": [
+      "video-generar",
+      "video-clips",
+      "video-animacion"
+    ],
+    "bestFor": "Ideal para crear video cinematográfico corto desde texto con calidad profesional"
+  },
+  {
+    "id": "veo",
+    "name": "Google Veo 3",
+    "url": "https://deepmind.google/technologies/veo",
+    "categories": [
+      "video"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites en Gemini. Pro: $20/mes. Ultra: $250/mes",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Generador de video de Google DeepMind con audio nativo, física realista y resolución 4K.",
+    "fullDescription": "Veo 3 es el modelo de video de Google DeepMind — competencia directa de Sora. Genera clips de hasta 8 segundos (extensibles) en resolución 4K con audio dialogado y efectos de sonido sincronizados. Destaca por la física realista de objetos y personajes y por integrarse con el ecosistema Google (Gemini, Flow, YouTube Shorts).",
+    "useCases": [
+      "Videos con diálogos y efectos sonoros generados",
+      "Animaciones con física realista",
+      "Producción rápida para YouTube y Shorts",
+      "Integración con Google Drive y Workspace",
+      "Prototipos para cine y publicidad"
+    ],
+    "howToStart": [
+      "Accede desde Gemini Advanced o Google AI Studio",
+      "En Flow (labs.google/flow) puedes encadenar escenas",
+      "Sube una imagen de referencia o describe la escena",
+      "Descarga en 1080p o 4K con audio incluido"
+    ],
+    "proTip": "En Flow puedes encadenar varias escenas y mantener consistencia de personajes con el feature Ingredients — ideal para historias cortas.",
+    "pros": [
+      "Audio dialogado nativo",
+      "Resolución 4K",
+      "Integración con Google Workspace"
+    ],
+    "cons": [
+      "Clips más cortos que Sora",
+      "Límites de créditos estrictos",
+      "Disponibilidad geográfica restringida"
+    ],
+    "alternatives": [
+      "sora",
+      "runway",
+      "kling",
+      "luma"
+    ],
+    "keywords": [
+      "veo",
+      "google",
+      "deepmind",
+      "video",
+      "audio",
+      "4k",
+      "flow",
+      "gemini",
+      "youtube"
+    ],
+    "tags": [
+      "Generación de video",
+      "Audio nativo",
+      "4K"
+    ],
+    "useCaseIds": [
+      "video-generar",
+      "video-clips",
+      "video-animacion"
+    ],
+    "bestFor": "Ideal para video con audio nativo y resolución 4K integrado a Google"
+  },
+  {
+    "id": "kling",
+    "name": "Kling AI",
+    "url": "https://klingai.com",
+    "categories": [
+      "video"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con créditos diarios. Pro: $10/mes. Premier: $37/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Generador de video chino con clips largos (hasta 2 min) y control preciso de personajes.",
+    "fullDescription": "Kling AI, desarrollado por Kuaishou (china), es uno de los generadores de video más accesibles del mercado. Destaca por permitir clips largos (hasta 2 minutos), control preciso sobre personajes con Face Model, y precios accesibles. Su versión 2.0 (2026) alcanza calidad comparable a Sora y Veo en escenas realistas.",
+    "useCases": [
+      "Clips largos para YouTube y TikTok",
+      "Animar una foto o avatar propio",
+      "Videos musicales y narrativos",
+      "Efectos visuales y transformaciones",
+      "Contenido para redes a bajo costo"
+    ],
+    "howToStart": [
+      "Ve a klingai.com y crea cuenta gratuita",
+      "Sube una imagen o describe la escena",
+      "Selecciona duración, modo rápido o de calidad",
+      "Usa Face Model para mantener un personaje consistente"
+    ],
+    "proTip": "Usa Start Frame + End Frame para controlar exactamente cómo empieza y termina la transición en tu clip — es más preciso que los prompts de texto.",
+    "pros": [
+      "Clips hasta 2 minutos",
+      "Precio accesible",
+      "Control de personajes preciso"
+    ],
+    "cons": [
+      "Tiempos de espera en plan gratis",
+      "Servidores chinos",
+      "Interfaz principalmente en inglés/chino"
+    ],
+    "alternatives": [
+      "sora",
+      "veo",
+      "runway",
+      "luma"
+    ],
+    "keywords": [
+      "kling",
+      "kuaishou",
+      "video largo",
+      "animar foto",
+      "personaje",
+      "barato",
+      "tiktok"
+    ],
+    "tags": [
+      "Generación de video",
+      "Clips largos",
+      "Económico"
+    ],
+    "useCaseIds": [
+      "video-generar",
+      "video-clips",
+      "video-animacion"
+    ],
+    "bestFor": "Ideal para clips largos con personajes consistentes a precio accesible"
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "url": "https://lovable.dev",
+    "categories": [
+      "programacion",
+      "automatizacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con 5 mensajes diarios. Starter: $25/mes. Scale: $100+/mes",
+    "difficulty": 1,
+    "rating": 5,
+    "shortDescription": "Crea aplicaciones web completas desde texto — frontend, backend, base de datos y deploy.",
+    "fullDescription": "Lovable (antes GPT Engineer) es una plataforma que construye aplicaciones web completas desde descripciones en lenguaje natural. Genera el frontend (React + Tailwind), conecta backends (Supabase), implementa autenticación, y despliega automáticamente en su infraestructura o GitHub. Es el referente en 'vibe coding' para no-desarrolladores.",
+    "useCases": [
+      "Crear una landing page o MVP en minutos",
+      "Construir dashboards con base de datos real",
+      "Prototipos funcionales para pitch o validación",
+      "Apps internas de empresa sin contratar dev",
+      "Sitios con autenticación y roles"
+    ],
+    "howToStart": [
+      "Ve a lovable.dev y describe tu app en detalle",
+      "Lovable construye una versión preliminar en 30 segundos",
+      "Itera pidiendo cambios en lenguaje natural",
+      "Conecta Supabase y despliega con un clic"
+    ],
+    "proTip": "Comienza con un PRD claro (problema, usuarios, features principales) antes del primer mensaje — te ahorra muchas iteraciones y créditos.",
+    "pros": [
+      "Cero conocimiento técnico requerido",
+      "Deploy automático incluido",
+      "Integración con GitHub"
+    ],
+    "cons": [
+      "Créditos caros para apps complejas",
+      "Debugging limitado para casos avanzados",
+      "Lock-in parcial con la plataforma"
+    ],
+    "alternatives": [
+      "bolt",
+      "v0",
+      "replit-ai",
+      "cursor"
+    ],
+    "keywords": [
+      "lovable",
+      "crear app",
+      "sin código",
+      "fullstack",
+      "web",
+      "mvp",
+      "landing",
+      "supabase",
+      "vibe coding"
+    ],
+    "tags": [
+      "IA generativa",
+      "No-code",
+      "Fullstack"
+    ],
+    "useCaseIds": [
+      "programacion-web",
+      "programacion-escribir",
+      "automatizacion-agentes"
+    ],
+    "bestFor": "Ideal para crear apps web completas desde texto sin saber programar"
+  },
+  {
+    "id": "bolt",
+    "name": "Bolt.new",
+    "url": "https://bolt.new",
+    "categories": [
+      "programacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con 1M tokens diarios. Pro: $20/mes. Teams: $50/mes",
+    "difficulty": 1,
+    "rating": 5,
+    "shortDescription": "IDE en el navegador que genera y ejecuta apps fullstack completas con un solo prompt.",
+    "fullDescription": "Bolt.new, de StackBlitz, es un entorno de desarrollo en el navegador que combina IA con WebContainers para generar, ejecutar y desplegar aplicaciones fullstack sin instalación. Soporta Next.js, Astro, Vite, React, Node.js y más. Su diferencial es que ejecutas todo en el navegador — no hay sandbox remoto, lo que acelera la iteración.",
+    "useCases": [
+      "Prototipos fullstack (Next.js, Nuxt, Astro)",
+      "Apps con SSR y APIs reales",
+      "Demos rápidas para presentar a clientes",
+      "Explorar frameworks sin instalar nada",
+      "Convertir diseño Figma a código funcional"
+    ],
+    "howToStart": [
+      "Ve a bolt.new y describe tu proyecto",
+      "Selecciona el stack (Next.js, Astro, etc.)",
+      "Bolt lo genera y ejecuta en el navegador",
+      "Despliega a Netlify con un clic o descarga el código"
+    ],
+    "proTip": "Conecta tu GitHub para commits automáticos — Bolt guarda tu progreso y puedes continuar desde Cursor o VS Code sin perder estado.",
+    "pros": [
+      "Ejecuta todo en el navegador",
+      "Soporta múltiples frameworks",
+      "Deploy a Netlify integrado"
+    ],
+    "cons": [
+      "Consume tokens rápido en apps grandes",
+      "Plan gratis muy limitado",
+      "Depurar errores complejos requiere código"
+    ],
+    "alternatives": [
+      "lovable",
+      "v0",
+      "replit-ai",
+      "cursor"
+    ],
+    "keywords": [
+      "bolt",
+      "stackblitz",
+      "crear app",
+      "nextjs",
+      "fullstack",
+      "navegador",
+      "webcontainers",
+      "prototipo"
+    ],
+    "tags": [
+      "IA generativa",
+      "Fullstack",
+      "IDE web"
+    ],
+    "useCaseIds": [
+      "programacion-web",
+      "programacion-escribir",
+      "programacion-ide"
+    ],
+    "bestFor": "Ideal para prototipar apps fullstack ejecutables en el navegador"
+  },
+  {
+    "id": "manus",
+    "name": "Manus",
+    "url": "https://manus.im",
+    "categories": [
+      "automatizacion",
+      "chatbots",
+      "investigacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con 1000 créditos. Starter: $39/mes. Pro: $199/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Agente autónomo general que navega la web, analiza datos y ejecuta tareas completas sin supervisión.",
+    "fullDescription": "Manus es un agente de IA autónomo desarrollado por Butterfly Effect. A diferencia de un chatbot, Manus ejecuta tareas completas: investiga, navega sitios, completa formularios, descarga datos, crea documentos y genera reportes finales. Puede trabajar durante horas en paralelo en tu nube sin requerir tu supervisión continua.",
+    "useCases": [
+      "Investigación de mercado multi-fuente con reportes",
+      "Análisis de CVs o proveedores en lote",
+      "Construcción de bases de datos desde la web",
+      "Automatización de tareas repetitivas complejas",
+      "Due diligence y benchmarks competitivos"
+    ],
+    "howToStart": [
+      "Registrate en manus.im (puede haber lista de espera)",
+      "Describe una tarea concreta con criterios de éxito",
+      "Manus crea un plan y lo ejecuta en paralelo",
+      "Revisa y descarga los entregables finales"
+    ],
+    "proTip": "Dale criterios de éxito específicos y el formato exacto del entregable — Manus funciona mejor con objetivos claros que con instrucciones paso a paso.",
+    "pros": [
+      "Ejecución autónoma de horas",
+      "Trabaja en paralelo en la nube",
+      "Entregables descargables"
+    ],
+    "cons": [
+      "Créditos caros para tareas largas",
+      "Errores sin supervisión pueden costar créditos",
+      "Lista de espera intermitente"
+    ],
+    "alternatives": [
+      "zapier-ai",
+      "relevance-ai",
+      "genspark"
+    ],
+    "keywords": [
+      "manus",
+      "agente",
+      "autónomo",
+      "automatizar",
+      "investigar",
+      "navegar",
+      "reporte",
+      "tareas",
+      "sin supervisión"
+    ],
+    "tags": [
+      "Agente autónomo",
+      "Automatización",
+      "IA generativa"
+    ],
+    "useCaseIds": [
+      "automatizacion-agentes",
+      "automatizacion-workflow",
+      "investigacion-general",
+      "automatizacion-web"
+    ],
+    "bestFor": "Ideal para tareas complejas que un agente autónomo puede ejecutar sin supervisión"
+  },
+  {
+    "id": "genspark",
+    "name": "Genspark",
+    "url": "https://genspark.ai",
+    "categories": [
+      "investigacion",
+      "automatizacion",
+      "chatbots"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con créditos diarios. Plus: $24/mes. Pro: $250/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Buscador agentic que responde investigaciones y genera hojas de cálculo, presentaciones y llamadas telefónicas.",
+    "fullDescription": "Genspark es un motor de búsqueda agentic que va más allá de Perplexity: además de responder preguntas con fuentes, puede hacer llamadas telefónicas reales (AI Phone Calls), generar Sparkpages (mini-sitios), crear hojas de cálculo con datos, y producir presentaciones. Integra múltiples modelos (GPT, Claude, Gemini) según la tarea.",
+    "useCases": [
+      "Buscar información con sources y validar con múltiples agentes",
+      "Llamar a un restaurante o proveedor para pedir info",
+      "Construir tablas comparativas automáticamente",
+      "Generar presentaciones desde un tema",
+      "Crear mini-sitios informativos (Sparkpages)"
+    ],
+    "howToStart": [
+      "Ve a genspark.ai y escribe tu consulta",
+      "Activa 'Agent' para tareas complejas",
+      "Prueba Call for Me para llamadas automatizadas",
+      "Exporta resultados como Sparkpage o PDF"
+    ],
+    "proTip": "Usa la feature Cross-check con múltiples modelos (GPT + Claude + Gemini) cuando necesites validar información crítica — reduce alucinaciones.",
+    "pros": [
+      "Multi-modelo en una sola interfaz",
+      "Llamadas telefónicas reales",
+      "Sparkpages compartibles"
+    ],
+    "cons": [
+      "Créditos consumidos rápido",
+      "Llamadas solo en algunos países",
+      "Calidad variable según el modelo"
+    ],
+    "alternatives": [
+      "perplexity",
+      "manus",
+      "chatgpt"
+    ],
+    "keywords": [
+      "genspark",
+      "agente",
+      "búsqueda",
+      "llamadas",
+      "sparkpage",
+      "investigar",
+      "multi modelo",
+      "tabla",
+      "comparar"
+    ],
+    "tags": [
+      "Agente autónomo",
+      "Búsqueda",
+      "Multi-modelo"
+    ],
+    "useCaseIds": [
+      "investigacion-general",
+      "automatizacion-agentes",
+      "chatbots-consultas",
+      "presentaciones-pitch"
+    ],
+    "bestFor": "Ideal para búsqueda agentic con llamadas telefónicas y entregables visuales"
+  },
+  {
+    "id": "finchat",
+    "name": "FinChat",
+    "url": "https://finchat.io",
+    "categories": [
+      "finanzas",
+      "investigacion",
+      "datos"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites. Plus: $49/mes. Pro: $139/mes",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "ChatGPT para analistas financieros — acceso a datos de 100K+ empresas con gráficas automáticas.",
+    "fullDescription": "FinChat (ahora Stock Analysis AI) es un asistente de investigación financiera que combina modelos de lenguaje con bases de datos fundamentales de más de 100,000 empresas públicas. Permite hacer preguntas en lenguaje natural sobre estados financieros, ratios, guidance de CEO en transcripts, y genera gráficas automáticas y comparables. Es la herramienta preferida por analistas buy-side y fondos.",
+    "useCases": [
+      "Analizar fundamentales de una empresa en segundos",
+      "Comparar ratios entre competidores del mismo sector",
+      "Leer transcripts de earnings calls con búsqueda semántica",
+      "Generar tesis de inversión con fuentes",
+      "Construir screeners personalizados"
+    ],
+    "howToStart": [
+      "Regístrate en finchat.io con tu correo",
+      "Pregunta en lenguaje natural: '¿Cuál es el FCF de Ecopetrol?'",
+      "Explora los dashboards preconstruidos por empresa",
+      "Guarda workspaces por cliente o tesis"
+    ],
+    "proTip": "Usa el feature de Custom Metrics para definir tus propios KPIs (ej: EV/EBITDA ajustado) y replicarlos en cualquier empresa — te ahorra horas de Excel.",
+    "pros": [
+      "Datos fundamentales verificados",
+      "Gráficas y comparables automáticos",
+      "Transcripts con búsqueda semántica"
+    ],
+    "cons": [
+      "Costoso para retail investors",
+      "Cobertura menor de small-caps LATAM",
+      "Curva de aprendizaje inicial"
+    ],
+    "alternatives": [
+      "koyfin",
+      "alphasense",
+      "perplexity"
+    ],
+    "keywords": [
+      "finchat",
+      "finanzas",
+      "análisis financiero",
+      "acciones",
+      "inversión",
+      "earnings",
+      "estados financieros",
+      "ratios",
+      "bolsa"
+    ],
+    "tags": [
+      "Finanzas",
+      "Análisis",
+      "Datos"
+    ],
+    "useCaseIds": [
+      "finanzas-analisis",
+      "finanzas-investigacion",
+      "datos-analizar",
+      "investigacion-general"
+    ],
+    "bestFor": "Ideal para analistas financieros que necesitan datos y respuestas rápidas"
+  },
+  {
+    "id": "alphasense",
+    "name": "AlphaSense",
+    "url": "https://alpha-sense.com",
+    "categories": [
+      "finanzas",
+      "investigacion"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Enterprise. Licencia estimada: $12K–40K USD/año por usuario",
+    "difficulty": 3,
+    "rating": 5,
+    "shortDescription": "Plataforma de inteligencia de mercado para financieros — busca en millones de documentos con IA.",
+    "fullDescription": "AlphaSense es la plataforma líder de inteligencia de mercado premium. Usa IA (GPT-4 y modelos propios) para buscar y resumir contenido dentro de millones de documentos: filings SEC, reportes de brokers, earnings call transcripts, investigaciones de expert networks y noticias. Es el estándar en hedge funds, bancos de inversión y corporativos globales.",
+    "useCases": [
+      "Due diligence en M&A y private equity",
+      "Monitoreo competitivo e inteligencia estratégica",
+      "Búsqueda semántica en filings de la SEC",
+      "Resúmenes automáticos de earnings calls",
+      "Alertas de menciones en industria específica"
+    ],
+    "howToStart": [
+      "Contacta al equipo de ventas para un demo",
+      "Define tu watchlist de empresas y temas",
+      "Usa búsqueda semántica — no requiere operadores booleanos",
+      "Configura alertas para cambios relevantes"
+    ],
+    "proTip": "Combina AlphaSense con un tema específico (ej: 'margin pressure' OR 'supply chain disruption') para detectar señales tempranas en las earnings calls antes que el consenso.",
+    "pros": [
+      "Cobertura de documentos sin igual",
+      "Búsqueda semántica con IA",
+      "Expert Network Transcripts incluido"
+    ],
+    "cons": [
+      "Muy caro — solo para instituciones",
+      "Sin plan individual",
+      "Limitado fuera de mercados desarrollados"
+    ],
+    "alternatives": [
+      "finchat",
+      "koyfin",
+      "kensho"
+    ],
+    "keywords": [
+      "alphasense",
+      "inteligencia mercado",
+      "buy side",
+      "m&a",
+      "due diligence",
+      "earnings",
+      "filings",
+      "expert network"
+    ],
+    "tags": [
+      "Finanzas",
+      "Enterprise",
+      "Búsqueda semántica"
+    ],
+    "useCaseIds": [
+      "finanzas-investigacion",
+      "finanzas-analisis",
+      "investigacion-general"
+    ],
+    "bestFor": "Ideal para instituciones financieras que necesitan inteligencia de mercado premium"
+  },
+  {
+    "id": "koyfin",
+    "name": "Koyfin",
+    "url": "https://koyfin.com",
+    "categories": [
+      "finanzas",
+      "datos"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites. Plus: $39/mes. Pro: $79/mes",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Terminal financiera tipo Bloomberg — datos, gráficas y AI copilot a una fracción del precio.",
+    "fullDescription": "Koyfin es la alternativa moderna a Bloomberg Terminal. Ofrece datos de mercado globales, modelado financiero, screeners, gráficas avanzadas y un AI copilot que responde preguntas sobre cualquier empresa. Muy usada por gestores independientes, family offices y analistas fintech que no justifican los USD 24,000/año de Bloomberg.",
+    "useCases": [
+      "Monitorear portafolios con dashboards personalizados",
+      "Construir screeners para ideas de inversión",
+      "Ver gráficas comparativas entre sectores",
+      "Acceder a estados financieros de 15+ años",
+      "Analizar índices globales incluyendo COLCAP"
+    ],
+    "howToStart": [
+      "Ve a koyfin.com y crea una cuenta gratuita",
+      "Personaliza tu dashboard con watchlists",
+      "Pregunta al AI Copilot sobre cualquier ticker",
+      "Exporta datos a Excel o Google Sheets"
+    ],
+    "proTip": "Usa los templates de dashboard MyG (My Grid) compartidos por la comunidad como punto de partida — ahorras horas de configuración inicial.",
+    "pros": [
+      "Interfaz moderna tipo Bloomberg",
+      "AI copilot integrado",
+      "Plan gratuito muy completo"
+    ],
+    "cons": [
+      "Datos LATAM menos profundos que US",
+      "Sin chat en vivo en plan gratis",
+      "No tiene noticias en tiempo real premium"
+    ],
+    "alternatives": [
+      "finchat",
+      "perplexity",
+      "julius"
+    ],
+    "keywords": [
+      "koyfin",
+      "bloomberg alternativa",
+      "terminal",
+      "datos financieros",
+      "screener",
+      "portafolio",
+      "acciones",
+      "etf",
+      "colcap"
+    ],
+    "tags": [
+      "Finanzas",
+      "Datos",
+      "Dashboard"
+    ],
+    "useCaseIds": [
+      "finanzas-analisis",
+      "finanzas-portafolio",
+      "datos-visualizar",
+      "datos-analizar"
+    ],
+    "bestFor": "Ideal como terminal financiera completa a costo accesible para profesionales"
+  },
+  {
+    "id": "danelfin",
+    "name": "Danelfin",
+    "url": "https://danelfin.com",
+    "categories": [
+      "finanzas"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con 3 consultas. Pro: $15/mes. Platinum: $31/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "IA que puntúa acciones con el AI Score — probabilidad de superar al mercado en los próximos 3 meses.",
+    "fullDescription": "Danelfin usa machine learning sobre más de 10,000 indicadores (técnicos, fundamentales, sentimentales) para asignar un AI Score (1–10) a cada acción de EE.UU. y Europa. El score predice la probabilidad estadística de que una acción supere al mercado en los próximos 3 meses. Es útil para retail investors que quieren filtrar ideas con rigor cuantitativo.",
+    "useCases": [
+      "Screener de acciones con alta probabilidad de outperform",
+      "Validar ideas propias con un segundo criterio",
+      "Construir portafolios equipo cuantitativo",
+      "Identificar acciones técnicamente sobrevendidas",
+      "Seguir el AI Score de tus tenencias"
+    ],
+    "howToStart": [
+      "Crea cuenta gratuita en danelfin.com",
+      "Busca cualquier acción US o europea",
+      "Revisa AI Score, Technical/Fundamental/Sentiment scores",
+      "Crea watchlists con alertas de cambios de score"
+    ],
+    "proTip": "Combina un AI Score alto (8+) con alta coincidencia de los 3 sub-scores (técnico + fundamental + sentimiento) para filtrar señales más robustas.",
+    "pros": [
+      "Simplifica decisiones para retail",
+      "Backtest público histórico",
+      "Precio accesible"
+    ],
+    "cons": [
+      "Solo acciones US y Europa",
+      "No cubre LATAM ni Asia",
+      "Modelo es caja negra"
+    ],
+    "alternatives": [
+      "finchat",
+      "koyfin",
+      "julius"
+    ],
+    "keywords": [
+      "danelfin",
+      "ai score",
+      "acciones",
+      "machine learning",
+      "retail",
+      "screener",
+      "inversión",
+      "alpha",
+      "outperform"
+    ],
+    "tags": [
+      "Finanzas",
+      "Machine Learning",
+      "Scoring"
+    ],
+    "useCaseIds": [
+      "finanzas-inversion",
+      "finanzas-analisis"
+    ],
+    "bestFor": "Ideal para retail investors que quieren filtrar acciones con rigor cuantitativo"
+  },
+  {
+    "id": "copilot-finance",
+    "name": "Copilot for Finance",
+    "url": "https://microsoft.com/microsoft-365/copilot/copilot-for-finance",
+    "categories": [
+      "finanzas",
+      "productividad",
+      "datos"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "USD 30/mes por usuario (requiere Microsoft 365 Copilot)",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "IA de Microsoft en Excel y Outlook para equipos de finanzas — conciliación, variance y reportes.",
+    "fullDescription": "Copilot for Finance es una extensión de Microsoft 365 Copilot diseñada para equipos financieros. Vive dentro de Excel, Outlook y Teams, y automatiza tareas repetitivas como conciliación de cuentas, análisis de varianzas, creación de reportes ejecutivos, resumen de hilos de correo de aprobación y preparación de datos para close mensual.",
+    "useCases": [
+      "Conciliar cuentas bancarias en Excel automáticamente",
+      "Explicar varianzas presupuestales en lenguaje natural",
+      "Preparar reportes ejecutivos desde datos raw",
+      "Resumir hilos de correo de aprobación de gastos",
+      "Acelerar el cierre mensual/trimestral"
+    ],
+    "howToStart": [
+      "Requiere licencia Microsoft 365 E3/E5 + Copilot",
+      "Instala el add-in desde AppSource en Excel",
+      "Abre Copilot en Excel y selecciona flujos: Reconcile, Variance",
+      "Conecta SAP, Dynamics, NetSuite o Oracle si aplica"
+    ],
+    "proTip": "Conecta tu ERP (SAP, Dynamics, NetSuite) para que Copilot tenga contexto real y no solo el Excel — reduce errores de conciliación en ~70%.",
+    "pros": [
+      "Integrado con ecosistema Microsoft",
+      "Ahorra días en close mensual",
+      "Gobernanza enterprise"
+    ],
+    "cons": [
+      "Caro y requiere licencias completas",
+      "Solo útil con Microsoft 365",
+      "Configuración inicial compleja"
+    ],
+    "alternatives": [
+      "finchat",
+      "julius",
+      "rows"
+    ],
+    "keywords": [
+      "copilot finance",
+      "microsoft",
+      "excel",
+      "conciliación",
+      "close",
+      "varianza",
+      "contabilidad",
+      "erp",
+      "reporte"
+    ],
+    "tags": [
+      "Finanzas",
+      "Microsoft",
+      "Productividad"
+    ],
+    "useCaseIds": [
+      "finanzas-contabilidad",
+      "finanzas-analisis",
+      "datos-excel",
+      "productividad-organizar"
+    ],
+    "bestFor": "Ideal para equipos corporativos de finanzas que trabajan en Excel y Microsoft 365"
+  },
+  {
+    "id": "intuit-assist",
+    "name": "Intuit Assist",
+    "url": "https://intuit.com/ai",
+    "categories": [
+      "finanzas",
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Incluido en QuickBooks (desde $30/mes) y TurboTax. Asistencia humana adicional: $50+/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "IA financiera personal y de pymes integrada en QuickBooks, TurboTax y Credit Karma.",
+    "fullDescription": "Intuit Assist es la capa de IA que impulsa QuickBooks (contabilidad pyme), TurboTax (impuestos US) y Credit Karma. Automatiza categorización de gastos, genera facturas, predice flujo de caja, detecta anomalías, y responde preguntas contables en lenguaje natural. Ideal para pymes y freelancers que llevan su contabilidad sin contador.",
+    "useCases": [
+      "Categorizar gastos bancarios automáticamente",
+      "Generar facturas desde correos o mensajes",
+      "Predecir flujo de caja próximos 90 días",
+      "Responder '¿cuánto gané este trimestre?' en español",
+      "Detectar gastos duplicados o inusuales"
+    ],
+    "howToStart": [
+      "Suscríbete a QuickBooks Online y conecta tu banco",
+      "Intuit Assist aparece como ícono en la interfaz",
+      "Pregunta en lenguaje natural sobre tus números",
+      "Revisa las recomendaciones de categorización"
+    ],
+    "proTip": "Activa las reglas automáticas basadas en IA — después de 2–3 correcciones manuales, Intuit Assist aprende tus patrones y deja de pedirte categorizar cada transacción.",
+    "pros": [
+      "Integrado en herramientas que ya usas",
+      "Flujo de caja predictivo",
+      "Funciona en español"
+    ],
+    "cons": [
+      "Principalmente mercado US",
+      "QuickBooks no conecta con todos los bancos LATAM",
+      "TurboTax solo para impuestos US"
+    ],
+    "alternatives": [
+      "copilot-finance",
+      "ramp"
+    ],
+    "keywords": [
+      "intuit",
+      "quickbooks",
+      "turbotax",
+      "contabilidad",
+      "pyme",
+      "facturas",
+      "flujo de caja",
+      "finanzas personales"
+    ],
+    "tags": [
+      "Finanzas",
+      "Contabilidad",
+      "Pymes"
+    ],
+    "useCaseIds": [
+      "finanzas-contabilidad",
+      "finanzas-personal",
+      "productividad-organizar"
+    ],
+    "bestFor": "Ideal para pymes y freelancers que llevan su contabilidad con QuickBooks"
+  },
+  {
+    "id": "ramp",
+    "name": "Ramp AI",
+    "url": "https://ramp.com",
+    "categories": [
+      "finanzas",
+      "productividad",
+      "automatizacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis la plataforma (monetiza por interchange). Plus: $15/usuario/mes",
+    "difficulty": 1,
+    "rating": 5,
+    "shortDescription": "Tarjetas corporativas con IA que ahorra dinero automáticamente detectando gastos duplicados y negociando.",
+    "fullDescription": "Ramp es una plataforma fintech de tarjetas corporativas, gestión de gastos y contabilidad automatizada, con IA embebida en cada proceso. Detecta suscripciones duplicadas, alerta sobre upgrades/downgrades disponibles, auto-categoriza gastos, genera reportes y hasta negocia renovaciones de software en tu nombre. Pymes US reportan ahorrar 3–5% de OPEX en el primer año.",
+    "useCases": [
+      "Detectar y cancelar suscripciones SaaS duplicadas",
+      "Automatizar reembolsos y aprobaciones de gastos",
+      "Conciliar tarjetas corporativas con ERP",
+      "Flujo de caja en vivo por equipo",
+      "Auditoría automática de contratos"
+    ],
+    "howToStart": [
+      "Registra tu empresa en ramp.com (US o con EIN)",
+      "Emite tarjetas corporativas virtuales o físicas",
+      "Conecta tu contabilidad (QuickBooks, NetSuite)",
+      "Activa reglas de gasto con IA"
+    ],
+    "proTip": "Activa Ramp Intelligence para que la IA analice tus contratos SaaS automáticamente y te alerte cuando detecte que otra empresa paga menos por el mismo software.",
+    "pros": [
+      "Plataforma gratuita",
+      "ROI tangible desde mes 1",
+      "Automatización profunda"
+    ],
+    "cons": [
+      "Solo empresas registradas en US",
+      "Sin disponibilidad directa en Colombia",
+      "Requiere mover la tarjeta corporativa"
+    ],
+    "alternatives": [
+      "copilot-finance",
+      "intuit-assist"
+    ],
+    "keywords": [
+      "ramp",
+      "tarjeta corporativa",
+      "gastos",
+      "saas",
+      "pyme",
+      "ahorro",
+      "automatizar",
+      "reembolso",
+      "aprobación"
+    ],
+    "tags": [
+      "Finanzas",
+      "Fintech",
+      "Automatización"
+    ],
+    "useCaseIds": [
+      "finanzas-contabilidad",
+      "finanzas-gastos",
+      "automatizacion-workflow",
+      "productividad-organizar"
+    ],
+    "bestFor": "Ideal para pymes que quieren reducir gastos SaaS y automatizar contabilidad"
+  },
+  {
+    "id": "mindbridge",
+    "name": "MindBridge",
+    "url": "https://mindbridge.ai",
+    "categories": [
+      "finanzas",
+      "datos"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Enterprise. Desde USD 500/mes por firma pequeña",
+    "difficulty": 3,
+    "rating": 4,
+    "shortDescription": "IA de auditoría y detección de fraude financiero — analiza el 100% de transacciones, no muestras.",
+    "fullDescription": "MindBridge es una plataforma canadiense de auditoría asistida por IA usada por firmas Big 4 y organismos gubernamentales. Analiza el 100% de las transacciones (vs. muestreos tradicionales) aplicando más de 30 algoritmos para detectar anomalías, patrones de fraude, errores contables y riesgos de cumplimiento en ERPs como SAP, Oracle, NetSuite.",
+    "useCases": [
+      "Auditoría interna con cobertura 100%",
+      "Detección de fraude en cuentas por pagar",
+      "Análisis forense de transacciones históricas",
+      "Cumplimiento SOX y NIIF",
+      "Revisión de proveedores en contratación pública"
+    ],
+    "howToStart": [
+      "Agenda demo con MindBridge Sales",
+      "Conecta tus datos contables (export CSV o conector ERP)",
+      "MindBridge aplica 30+ algoritmos y puntúa riesgos",
+      "Auditor revisa las transacciones marcadas de alto riesgo"
+    ],
+    "proTip": "Úsalo como primera pasada antes de auditoría tradicional — reduce el tiempo de fieldwork en 50% al llegar con las transacciones de alto riesgo ya identificadas.",
+    "pros": [
+      "Cobertura 100% vs. muestreo",
+      "Muchos algoritmos integrados",
+      "Estándar internacional para auditoría"
+    ],
+    "cons": [
+      "Curva de aprendizaje para auditores",
+      "Costo alto para firmas pequeñas",
+      "Requiere estandarización de datos"
+    ],
+    "alternatives": [
+      "copilot-finance",
+      "julius"
+    ],
+    "keywords": [
+      "mindbridge",
+      "auditoría",
+      "fraude",
+      "anomalías",
+      "erp",
+      "sap",
+      "contraloría",
+      "sox",
+      "niif",
+      "cumplimiento"
+    ],
+    "tags": [
+      "Finanzas",
+      "Auditoría",
+      "Enterprise"
+    ],
+    "useCaseIds": [
+      "finanzas-auditoria",
+      "finanzas-analisis",
+      "datos-analizar"
+    ],
+    "bestFor": "Ideal para firmas de auditoría y departamentos de control interno que necesitan cobertura total"
+  },
+  {
+    "id": "bloomberg-gpt",
+    "name": "Bloomberg GPT",
+    "url": "https://bloomberg.com/professional/solution/bloomberg-terminal",
+    "categories": [
+      "finanzas",
+      "investigacion",
+      "datos"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Incluido en Bloomberg Terminal: USD 31,500/año por usuario",
+    "difficulty": 3,
+    "rating": 5,
+    "shortDescription": "IA nativa del Bloomberg Terminal entrenada con 40 años de datos financieros propios.",
+    "fullDescription": "BloombergGPT es el modelo de lenguaje propietario de Bloomberg, entrenado con 363 mil millones de tokens de datos financieros exclusivos (terminales, news, filings, research). Vive dentro del Bloomberg Terminal y potencia funciones como resumen de transcripts, extracción de datos de PDFs, búsqueda semántica cross-asset y generación de informes para clientes institucionales.",
+    "useCases": [
+      "Resumir transcripts de earnings calls y Fed",
+      "Extraer métricas de PDFs de bonos y derivados",
+      "Búsqueda semántica en news históricos",
+      "Monitoreo de risk y compliance en tiempo real",
+      "Generar emails a clientes con contexto de mercado"
+    ],
+    "howToStart": [
+      "Requiere suscripción Bloomberg Terminal",
+      "Accede desde las funciones AI-enabled (BQNT, NSE)",
+      "Usa BQL (Bloomberg Query Language) en natural",
+      "Integra con Excel vía Bloomberg API"
+    ],
+    "proTip": "Usa BloombergGPT junto con BQL para convertir preguntas en lenguaje natural en queries estructurados — útil para analistas que no conocen la sintaxis exacta del Terminal.",
+    "pros": [
+      "Datos financieros inigualables",
+      "Estándar de Wall Street",
+      "Cobertura global profunda"
+    ],
+    "cons": [
+      "Extremadamente costoso",
+      "Solo con Terminal completo",
+      "Interfaz intimidante para nuevos"
+    ],
+    "alternatives": [
+      "alphasense",
+      "finchat",
+      "kensho"
+    ],
+    "keywords": [
+      "bloomberg",
+      "terminal",
+      "finanzas",
+      "wall street",
+      "banca",
+      "hedge fund",
+      "bonos",
+      "derivados",
+      "bql"
+    ],
+    "tags": [
+      "Finanzas",
+      "Enterprise",
+      "Bloomberg"
+    ],
+    "useCaseIds": [
+      "finanzas-analisis",
+      "finanzas-investigacion",
+      "datos-analizar",
+      "investigacion-general"
+    ],
+    "bestFor": "Ideal para instituciones financieras que ya usan Bloomberg Terminal"
+  },
+  {
+    "id": "kensho",
+    "name": "Kensho",
+    "url": "https://kensho.com",
+    "categories": [
+      "finanzas",
+      "datos"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Enterprise. Integrado en S&P Capital IQ y Platts (precio por módulo)",
+    "difficulty": 3,
+    "rating": 4,
+    "shortDescription": "IA financiera de S&P Global — extracción de datos de documentos, transcripción financiera y link de entidades.",
+    "fullDescription": "Kensho (adquirida por S&P Global en 2018) ofrece módulos de IA especializados en finanzas: Extract (extracción de tablas y datos de PDFs financieros), Scribe (transcripción de earnings calls con jerga financiera), NERD (link de entidades a instrumentos), Classify (taxonomía GICS). Es la columna vertebral de IA detrás de S&P Capital IQ Pro.",
+    "useCases": [
+      "Extraer tablas estructuradas de prospectos y 10-K",
+      "Transcribir earnings calls con precisión de jerga",
+      "Vincular menciones de empresas a ISINs",
+      "Clasificar empresas automáticamente en sectores GICS",
+      "Pipelines de datos para research quantitativo"
+    ],
+    "howToStart": [
+      "Contacta a S&P Global o Platts",
+      "Integra los APIs de Extract/Scribe/NERD",
+      "O accede vía S&P Capital IQ Pro",
+      "Desarrolla tu pipeline con el SDK"
+    ],
+    "proTip": "Si solo necesitas extracción de tablas financieras, Kensho Extract es el estándar — supera a tools generalistas en calidad de estructura para 10-K y prospectos.",
+    "pros": [
+      "Especialización financiera profunda",
+      "APIs robustos para pipelines",
+      "Respaldo de S&P Global"
+    ],
+    "cons": [
+      "Enterprise — no para individuales",
+      "Integración técnica compleja",
+      "Documentación limitada pública"
+    ],
+    "alternatives": [
+      "bloomberg-gpt",
+      "alphasense"
+    ],
+    "keywords": [
+      "kensho",
+      "s&p global",
+      "capital iq",
+      "extract",
+      "scribe",
+      "transcripción",
+      "pdf",
+      "datos financieros",
+      "api"
+    ],
+    "tags": [
+      "Finanzas",
+      "API",
+      "Enterprise"
+    ],
+    "useCaseIds": [
+      "finanzas-investigacion",
+      "datos-analizar"
+    ],
+    "bestFor": "Ideal para pipelines quant y research institucional que extraen datos de documentos financieros"
+  },
+  {
+    "id": "humata",
+    "name": "Humata AI",
+    "url": "https://humata.ai",
+    "categories": [
+      "investigacion",
+      "educacion",
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con 10 páginas. Pro: $14.99/mes. Team: $99/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Pregunta a tus PDFs — sube contratos, leyes o informes y chatea con su contenido en español.",
+    "fullDescription": "Humata AI es una herramienta para dialogar con tus documentos. Subes PDFs, Word, PowerPoint o TXT y puedes hacer preguntas en lenguaje natural con respuestas citadas. Ideal para abogados, investigadores y funcionarios públicos que deben analizar contratos, leyes, decretos o manuales extensos. Soporta español nativamente.",
+    "useCases": [
+      "Analizar contratos largos y encontrar cláusulas específicas",
+      "Buscar artículos específicos dentro de leyes y decretos",
+      "Comparar múltiples documentos simultáneamente",
+      "Generar resúmenes ejecutivos de informes",
+      "Responder preguntas sobre manuales o políticas"
+    ],
+    "howToStart": [
+      "Ve a humata.ai y crea cuenta gratuita",
+      "Sube tu PDF (o arrastra varios)",
+      "Pregunta en español sobre el contenido",
+      "Cada respuesta cita página exacta del PDF"
+    ],
+    "proTip": "Sube 3–5 documentos relacionados (por ejemplo: la ley + su decreto + la circular) y haz preguntas comparativas — Humata cruza la información entre documentos.",
+    "pros": [
+      "Citas con número de página exacto",
+      "Soporta español muy bien",
+      "Multi-documento simultáneo"
+    ],
+    "cons": [
+      "Plan gratis muy limitado",
+      "Límite de tamaño por documento",
+      "No procesa documentos escaneados mal"
+    ],
+    "alternatives": [
+      "notebooklm",
+      "chatpdf",
+      "claude"
+    ],
+    "keywords": [
+      "humata",
+      "pdf",
+      "chatear documento",
+      "contrato",
+      "ley",
+      "decreto",
+      "manual",
+      "analizar",
+      "español"
+    ],
+    "tags": [
+      "Documentos",
+      "Legal",
+      "Investigación"
+    ],
+    "useCaseIds": [
+      "investigacion-resumir",
+      "investigacion-general",
+      "educacion-aprender",
+      "productividad-organizar"
+    ],
+    "bestFor": "Ideal para analizar contratos, leyes y documentos legales con citas precisas"
+  },
+  {
+    "id": "chatpdf",
+    "name": "ChatPDF",
+    "url": "https://chatpdf.com",
+    "categories": [
+      "investigacion",
+      "educacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con 2 PDFs/día. Plus: $5/mes. Unlimited: $10/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Chatea con tus PDFs de forma simple y rápida — interfaz minimalista ideal para estudiantes y profesionales.",
+    "fullDescription": "ChatPDF es la forma más simple de interactuar con PDFs usando IA. Subes el documento y obtienes un chat inmediato para preguntas, resúmenes o extracción de datos. Su fortaleza es la simplicidad: no hay configuración, solo sube y pregunta. Muy usado por estudiantes, docentes y consultores para procesar informes y papers.",
+    "useCases": [
+      "Resumir papers académicos y tesis",
+      "Extraer puntos clave de informes extensos",
+      "Preparar preguntas para reuniones con directivos",
+      "Estudiar para exámenes desde material denso",
+      "Traducir secciones específicas de documentos"
+    ],
+    "howToStart": [
+      "Ve a chatpdf.com (no requiere cuenta para probar)",
+      "Sube tu PDF desde archivo, URL o drag-and-drop",
+      "Hace preguntas iniciales sugeridas o escribe las tuyas",
+      "Comparte el chat con un link"
+    ],
+    "proTip": "Comienza siempre preguntando 'Dame un resumen ejecutivo en 5 bullets y las 3 citas más importantes con número de página' — te da un mapa del documento inmediato.",
+    "pros": [
+      "Simplicidad extrema",
+      "No requiere cuenta para probar",
+      "Compartir chats con link"
+    ],
+    "cons": [
+      "Pocas features avanzadas",
+      "Límites estrictos en plan gratis",
+      "Menos citado que Humata en respuestas"
+    ],
+    "alternatives": [
+      "humata",
+      "notebooklm",
+      "claude"
+    ],
+    "keywords": [
+      "chatpdf",
+      "pdf",
+      "resumir",
+      "estudiar",
+      "paper",
+      "informe",
+      "documento",
+      "extraer"
+    ],
+    "tags": [
+      "Documentos",
+      "Educación",
+      "Investigación"
+    ],
+    "useCaseIds": [
+      "investigacion-resumir",
+      "educacion-aprender",
+      "educacion-estudiar"
+    ],
+    "bestFor": "Ideal para estudiantes y profesionales que necesitan chatear con PDFs sin fricción"
+  },
+  {
+    "id": "cocounsel",
+    "name": "CoCounsel (Thomson Reuters)",
+    "url": "https://thomsonreuters.com/en/products/legal-cocounsel",
+    "categories": [
+      "investigacion",
+      "productividad"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Enterprise. Estimado USD 250–500 por abogado/mes",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Asistente legal con IA de Thomson Reuters — revisa contratos, investiga jurisprudencia y redacta memorandos.",
+    "fullDescription": "CoCounsel es el asistente legal con IA de Thomson Reuters (integrado con Westlaw). Automatiza revisión de contratos, investigación de jurisprudencia, resumen de depositions, due diligence documental y redacción de memorandos. Usado por firmas top-100 y departamentos legales corporativos. Entrenado sobre la base de datos legal más grande del mundo.",
+    "useCases": [
+      "Revisar contratos y extraer cláusulas riesgosas",
+      "Investigar jurisprudencia con síntesis automática",
+      "Preparar memorandos legales con citas",
+      "Due diligence de documentos en M&A",
+      "Responder preguntas regulatorias complejas"
+    ],
+    "howToStart": [
+      "Contacta Thomson Reuters para demo",
+      "Integra con Westlaw y Microsoft Word",
+      "Sube documentos al workspace del cliente",
+      "Define skills: contract review, research, etc."
+    ],
+    "proTip": "Combina CoCounsel con Practical Law dentro del mismo flujo — te da precedentes + plantillas que reducen la redacción a revisión y personalización.",
+    "pros": [
+      "Respaldo de Westlaw",
+      "Skills específicas por área legal",
+      "Alta precisión en citas"
+    ],
+    "cons": [
+      "Muy costoso",
+      "Enfoque en jurisdicción US/UK",
+      "Menor cobertura LATAM"
+    ],
+    "alternatives": [
+      "humata",
+      "claude"
+    ],
+    "keywords": [
+      "cocounsel",
+      "thomson reuters",
+      "westlaw",
+      "legal",
+      "contratos",
+      "jurisprudencia",
+      "abogado",
+      "memorando",
+      "due diligence"
+    ],
+    "tags": [
+      "Legal",
+      "Enterprise",
+      "Investigación"
+    ],
+    "useCaseIds": [
+      "investigacion-general",
+      "investigacion-resumir",
+      "productividad-organizar"
+    ],
+    "bestFor": "Ideal para firmas de abogados y departamentos legales corporativos"
   }
 ]

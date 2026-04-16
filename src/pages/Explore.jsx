@@ -32,7 +32,7 @@ export default function Explore({ onCompare, compareIds, onToggleFavorite, isFav
           Explorar herramientas
         </h1>
         <p className="text-text-light mb-5">
-          Descubre entre más de 80 herramientas de IA la ideal para ti.
+          Descubre entre más de 100 herramientas de IA la ideal para ti.
         </p>
         <div className="flex items-center gap-3">
           <SearchBar value={query} onChange={setQuery} />

@@ -161,6 +161,26 @@ const INTENT_MAP = {
   'traducir documento': 'traduccion',
   'traduccion': 'traduccion',
   'idiomas': 'traduccion',
+
+  // Finanzas
+  'finanzas': 'finanzas',
+  'financiero': 'finanzas',
+  'contabilidad': 'finanzas',
+  'contable': 'finanzas',
+  'presupuesto': 'finanzas',
+  'flujo de caja': 'finanzas',
+  'inversion': 'finanzas',
+  'inversiones': 'finanzas',
+  'bolsa': 'finanzas',
+  'acciones': 'finanzas',
+  'portafolio': 'finanzas',
+  'auditoria': 'finanzas',
+  'cierre contable': 'finanzas',
+  'impuestos': 'finanzas',
+  'tesoreria': 'finanzas',
+  'estados financieros': 'finanzas',
+  'analisis financiero': 'finanzas',
+  'conciliacion': 'finanzas',
 }
 
 const PRICING_SIGNALS = {

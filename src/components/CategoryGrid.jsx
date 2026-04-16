@@ -2,14 +2,14 @@ import { useNavigate } from 'react-router-dom'
 import {
   PenLine, Palette, Presentation, Video, Music,
   Code, BarChart3, Search, Mic, GraduationCap,
-  Mail, Bot, Briefcase, Zap, Globe,
+  Mail, Bot, Briefcase, Zap, Globe, DollarSign,
 } from 'lucide-react'
 import { CATEGORIES } from '../utils/recommender'
 
 const iconMap = {
   PenLine, Palette, Presentation, Video, Music,
   Code, BarChart3, Search, Mic, GraduationCap,
-  Mail, Bot, Briefcase, Zap, Globe,
+  Mail, Bot, Briefcase, Zap, Globe, DollarSign,
 }
 
 export default function CategoryGrid() {
