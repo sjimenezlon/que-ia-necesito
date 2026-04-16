@@ -34,6 +34,40 @@ const SECTIONS = [
         entity: 'Función Pública (DAFP)',
         application: 'Análisis de PQRSD agregadas para detectar problemas sistémicos por entidad.',
       },
+      {
+        entity: 'Alcaldía de Bogotá — SDQS',
+        application: 'Sistema Distrital de Quejas y Soluciones con categorización automática por tema y localidad para enrutar a la secretaría correcta.',
+      },
+      {
+        entity: 'Supersalud',
+        application: 'Tamizaje automático de PQRSD sensibles (urgencia vital, tutelas, óbitos) con alertas al equipo jurídico en tiempo real.',
+      },
+      {
+        entity: 'ICBF',
+        application: 'Análisis de llamadas al 141 (línea de atención) con transcripción + NLP para priorizar casos de protección inmediata.',
+      },
+    ],
+    playbooks: [
+      {
+        title: 'Triage automático de PQRSD por correo',
+        steps: [
+          'Conectar el buzón institucional (peticiones@entidad.gov.co) a Make o Zapier AI',
+          'Cada nuevo correo pasa por Claude/ChatGPT con prompt: clasificar tipo (P/Q/R/S/D), extraer cédula, tema (salud/vivienda/impuestos…), urgencia 1-5 y resumen de 3 líneas',
+          'La automatización radica en el SGD (Orfeo, SAIA, GESDOC) y notifica al responsable con borrador de respuesta en Teams/Slack',
+          'Panel semanal en Looker o Power BI con temas recurrentes para escalar a política pública',
+        ],
+        impact: 'Reducción 60–70% del tiempo de triage; trazabilidad del término de 15 días hábiles con SLA visibles.',
+      },
+      {
+        title: 'Chatbot normativo para sede electrónica',
+        steps: [
+          'Subir a NotebookLM o Humata los manuales, TUPA y normativa aplicable al trámite (ej: impuesto predial)',
+          'Configurar el chatbot para responder solo con citas verificables del corpus cargado',
+          'Integrar con GOV.CO usando API de WhatsApp Business o widget web',
+          'Revisar cada 15 días la tasa de "no sé" y alimentar el corpus con los vacíos detectados',
+        ],
+        impact: 'Atención 24/7 sin backlog; 40–50% de consultas frecuentes resueltas sin escalar a asesor.',
+      },
     ],
     tools: ['chatgpt', 'claude', 'humata', 'zapier-ai', 'manus'],
   },
@@ -63,6 +97,40 @@ const SECTIONS = [
       {
         entity: 'Minjusticia',
         application: 'Análisis de sentencias de la Corte Constitucional para evaluar impacto de proyectos de ley.',
+      },
+      {
+        entity: 'MinAmbiente',
+        application: 'Cruce de POMCAS, planes de ordenamiento y resoluciones ANLA para ajustar licenciamiento ambiental regional.',
+      },
+      {
+        entity: 'MinHacienda — DGPM',
+        application: 'Síntesis de marcos fiscales de la OCDE y benchmarks regionales para la Regla Fiscal y Marco Fiscal de Mediano Plazo.',
+      },
+      {
+        entity: 'Congreso de la República',
+        application: 'Unidades técnicas legislativas usando NotebookLM para comparar proyectos de ley vs. iniciativas similares hundidas en periodos anteriores.',
+      },
+    ],
+    playbooks: [
+      {
+        title: 'Ficha técnica de impacto regulatorio en 2 horas',
+        steps: [
+          'Subir a NotebookLM el proyecto de ley/decreto, normativa vigente relacionada, estudios OCDE y 3–5 sentencias relevantes',
+          'Pedir: "genera matriz AIR (Análisis de Impacto Regulatorio) con costos, beneficios, afectados y alternativas evaluadas"',
+          'Cruzar con Perplexity: "¿qué países han implementado medidas similares y con qué resultado entre 2020-2026?"',
+          'Validar con equipo jurídico y armar ficha final con citas trazables',
+        ],
+        impact: 'De 2 semanas a 2 horas en primera versión; queda tiempo para profundizar en puntos críticos.',
+      },
+      {
+        title: 'Búsqueda jurisprudencial para exposición de motivos',
+        steps: [
+          'Cargar en Humata o CoCounsel las sentencias de la Corte Constitucional y Consejo de Estado sobre el tema',
+          'Preguntar: "identifica la ratio decidendi en cada una y construye una línea jurisprudencial"',
+          'Pedir citas con número de sentencia + página exacta para incluir en el proyecto',
+          'Verificar manualmente las citas antes de publicar (la IA puede alucinar números de radicado)',
+        ],
+        impact: 'Exposiciones de motivos más robustas; menor riesgo de vicios por inconstitucionalidad sobreviniente.',
       },
     ],
     tools: ['claude', 'perplexity', 'notebooklm', 'humata', 'cocounsel'],
@@ -94,6 +162,40 @@ const SECTIONS = [
         entity: 'Secretarías de Hacienda (municipios)',
         application: 'Revisión asistida de pliegos antes de publicación para reducir adendas y demandas.',
       },
+      {
+        entity: 'Agencia Nacional de Infraestructura (ANI)',
+        application: 'Revisión asistida de contratos de concesión 4G/5G (cientos de páginas) para identificar riesgos de controversias contractuales.',
+      },
+      {
+        entity: 'Ministerio de Defensa — Agencia Logística',
+        application: 'Comparación masiva de cotizaciones de víveres y uniformes entre regionales para detectar sobrecostos sistemáticos.',
+      },
+      {
+        entity: 'Empresas Sociales del Estado (ESE)',
+        application: 'Estandarización de estudios previos de medicamentos POS y dispositivos con Claude + plantillas tipo CCE.',
+      },
+    ],
+    playbooks: [
+      {
+        title: 'Detector de alertas de colusión en procesos SECOP',
+        steps: [
+          'Descargar de datos.gov.co los procesos del SECOP de los últimos 24 meses (CSV)',
+          'Subir a Julius AI y preguntar: "encuentra procesos donde ganen siempre los mismos 2–3 proponentes; proponentes que rotan pero pertenecen al mismo grupo; precios con varianza menor al 1% entre 3+ oferentes"',
+          'Cruzar hallazgos con RUES y SIIF para verificar direcciones, representantes legales y beneficiarios finales',
+          'Generar reporte para el comité de contratación y archivo de soporte para posible traslado a entes de control',
+        ],
+        impact: 'Identificación temprana de patrones atípicos que un muestreo tradicional no detectaría.',
+      },
+      {
+        title: 'Revisión jurídica de pliegos antes de publicación',
+        steps: [
+          'Subir a Humata o CoCounsel el borrador de pliego + Ley 80, Ley 1150, Decreto 1082 y documentos tipo vigentes',
+          'Pedir: "identifica cláusulas que contradicen normativa vigente, requisitos desproporcionados y criterios subjetivos de calificación"',
+          'Revisar cada hallazgo con el abogado de procesos — la IA propone, el humano decide',
+          'Dejar trazabilidad de la revisión como soporte ante observaciones o demandas',
+        ],
+        impact: 'Menos adendas reactivas, menor exposición a tutelas contractuales y observaciones de la Contraloría.',
+      },
     ],
     tools: ['claude', 'humata', 'mindbridge', 'chatgpt', 'cocounsel'],
   },
@@ -123,6 +225,40 @@ const SECTIONS = [
       {
         entity: 'Secretaría de Planeación (ciudades)',
         application: 'Tableros territoriales con indicadores ODS vinculados al Plan de Desarrollo Municipal.',
+      },
+      {
+        entity: 'IDEAM',
+        application: 'Predicción de niveles de ríos con modelos de ML entrenados sobre series históricas hidrológicas y meteorológicas.',
+      },
+      {
+        entity: 'Secretaría de Movilidad — Bogotá/Medellín',
+        application: 'Visión computacional para conteo vehicular en tiempo real y optimización de semáforos según flujo.',
+      },
+      {
+        entity: 'Fiscalía General — eje de análisis',
+        application: 'Análisis de cohortes del Sistema Penal Oral Acusatorio para identificar cuellos de botella por tipo de delito.',
+      },
+    ],
+    playbooks: [
+      {
+        title: 'Cruce de brechas territoriales sin SQL',
+        steps: [
+          'Descargar de datos.gov.co los datasets relevantes (ej: cobertura educativa + pobreza multidimensional por municipio)',
+          'Subir ambos CSV a Julius AI y preguntar: "haz merge por código DANE de municipio y encuentra los 20 municipios con mayor brecha"',
+          'Pedir mapa coroplético con el resultado y ranking por departamento',
+          'Validar con equipo técnico y anexar el mapa al informe de planeación',
+        ],
+        impact: 'Decisiones de inversión basadas en evidencia territorial; democratiza el análisis para no-técnicos.',
+      },
+      {
+        title: 'Boletín mensual de ejecución presupuestal automatizado',
+        steps: [
+          'Exportar mensualmente ejecución SIIF Nación o SICOF territorial a CSV',
+          'Con ChatGPT Advanced Data Analysis o Rows: generar gráficas por entidad, rubro y % de avance',
+          'Pedir: "escribe un resumen ejecutivo de 200 palabras destacando los 3 rubros con mayor rezago y los 3 con ejecución atípicamente alta"',
+          'Publicar en el portal de transparencia con los datasets fuente para trazabilidad',
+        ],
+        impact: 'Rendición de cuentas oportuna sin carga operativa; trazabilidad completa.',
       },
     ],
     tools: ['julius', 'notebooklm', 'claude', 'perplexity', 'rows'],
@@ -154,6 +290,40 @@ const SECTIONS = [
         entity: 'Gobernaciones',
         application: 'Generación de infografías territoriales de rendición de cuentas.',
       },
+      {
+        entity: 'Registraduría — campañas de cedulación',
+        application: 'Videos educativos cortos para jóvenes sobre cédula digital y elecciones, producidos con HeyGen en minutos.',
+      },
+      {
+        entity: 'MinEducación — Todos a Aprender',
+        application: 'Audiocuentos y material pedagógico en lenguas indígenas (wayuunaiki, nasa yuwe) con ElevenLabs + revisión humana.',
+      },
+      {
+        entity: 'Secretarías de Salud territoriales',
+        application: 'Campañas masivas de vacunación con piezas adaptadas por grupo etario y dialecto regional generadas con Canva + DALL-E.',
+      },
+    ],
+    playbooks: [
+      {
+        title: 'Traducción a lenguaje claro para trámites GOV.CO',
+        steps: [
+          'Tomar el texto legal del trámite (ej: solicitud de subsidio) tal como figura en el decreto',
+          'En Claude: "reescribe este texto en lenguaje claro para alguien con básica primaria. Máximo 7 palabras por frase, voz activa, sin tecnicismos. Preserva los plazos y requisitos exactos"',
+          'Someter a prueba de lectura con servidores de ventanilla — ellos detectan dónde falla',
+          'Publicar en la ficha GOV.CO y mantener el texto legal como referencia jurídica',
+        ],
+        impact: 'Menos preguntas en ventanilla, más ciudadanos completando el trámite sin ayuda.',
+      },
+      {
+        title: 'Video explicativo multilingüe en 1 día',
+        steps: [
+          'Redactar guion en Claude o ChatGPT siguiendo el tono institucional (200–300 palabras)',
+          'Generar voz con ElevenLabs en español, wayuunaiki, criollo sanandresano u otro (requiere validación por hablante nativo)',
+          'Crear video con HeyGen o Synthesia usando avatar oficial de la entidad y el audio generado',
+          'Agregar subtítulos SDH con CapCut para accesibilidad (Ley 1618)',
+        ],
+        impact: 'Campañas inclusivas con el 10% del costo de producción tradicional.',
+      },
     ],
     tools: ['canva', 'synthesia', 'heygen', 'capcut', 'elevenlabs', 'dall-e'],
   },
@@ -184,6 +354,40 @@ const SECTIONS = [
         entity: 'Auditoría General',
         application: 'Revisión asistida por IA de rendiciones de cuenta de contralorías territoriales.',
       },
+      {
+        entity: 'UIAF',
+        application: 'Detección de operaciones sospechosas de lavado con modelos de grafos sobre transacciones de entidades reporteantes.',
+      },
+      {
+        entity: 'DIAN — Gestión de Riesgos',
+        application: 'Scoring de riesgo tributario por NIT cruzando declaraciones, factura electrónica y terceros informantes.',
+      },
+      {
+        entity: 'Oficinas de control interno (territoriales)',
+        application: 'Aplicación del MECI con MindBridge para auditar ingresos municipales y detectar evasión predial.',
+      },
+    ],
+    playbooks: [
+      {
+        title: 'Conflictos de interés en contratación directa',
+        steps: [
+          'Descargar de SECOP los contratos del último año con sus contratistas (NIT, representante legal, dirección)',
+          'Cruzar con la nómina de la entidad (cédula, fecha vinculación, cargo) usando Julius o Claude + CSV',
+          'Pedir: "identifica coincidencias en apellidos, direcciones o NIT de empresas con vínculos familiares con funcionarios directivos"',
+          'Cada hallazgo se verifica manualmente antes de activar indagación preliminar — la IA asiste, no condena',
+        ],
+        impact: 'Prevención de riesgos disciplinarios antes de que escalen a entes de control externo.',
+      },
+      {
+        title: 'Auditoría al 100% de cuentas por pagar',
+        steps: [
+          'Conectar MindBridge al ERP financiero (SAP, Dynamics, SIIF) o cargar export masivo de transacciones',
+          'El sistema aplica 30+ algoritmos: facturas duplicadas, pagos en sábado/festivo, proveedores nuevos, montos redondeados',
+          'Revisar las transacciones con puntaje de riesgo > 80 (típicamente < 2% del total) con el equipo auditor',
+          'Documentar hallazgos y cerrar los falsos positivos para afinar el modelo',
+        ],
+        impact: 'Cobertura 100% vs. muestreo del 5–10%; 50% menos tiempo en fieldwork tradicional.',
+      },
     ],
     tools: ['mindbridge', 'julius', 'claude', 'copilot-finance'],
   },
@@ -213,6 +417,40 @@ const SECTIONS = [
       {
         entity: 'Registraduría',
         application: 'Verificación biométrica y validación documental en cedulación.',
+      },
+      {
+        entity: 'Migración Colombia',
+        application: 'Check-in biométrico en aeropuertos (PCR facial) + clasificación automática de visados por tipo y riesgo.',
+      },
+      {
+        entity: 'Secretarías de Tránsito (SIM, RUNT)',
+        application: 'Validación automática de documentos para renovación de licencias y detección de suplantación con OCR + IA.',
+      },
+      {
+        entity: 'MinSalud — Mi Vacuna',
+        application: 'Automatización de carnets de vacunación y cruce con RUAF para detección de duplicados.',
+      },
+    ],
+    playbooks: [
+      {
+        title: 'Correspondencia oficial clasificada y enrutada',
+        steps: [
+          'Conectar el correo de radicación (correspondencia@entidad.gov.co) a Make o Zapier AI',
+          'Cada oficio entrante pasa por OCR (si es imagen/PDF escaneado) y luego a Claude: "identifica destinatario, asunto, tipo (oficio, memorando, circular), entidad remitente y dependencia responsable"',
+          'Sistema radica automáticamente en Orfeo/SAIA y notifica al jefe de dependencia',
+          'Los oficios con términos legales (tutela, acción popular) se escalan inmediatamente a jurídica',
+        ],
+        impact: 'De 2–3 días de radicación manual a minutos; cero oficios perdidos.',
+      },
+      {
+        title: 'Actas de comités con borrador automático',
+        steps: [
+          'Grabar la reunión en Teams/Zoom (con aviso a asistentes por Ley 1581)',
+          'Transcribir con Otter, Fireflies o Whisper en español',
+          'Pasar la transcripción a Claude con el prompt: "elabora acta oficial con asistentes, agenda, temas tratados, decisiones adoptadas, tareas asignadas con responsable y fecha. Formato de acta administrativa colombiana"',
+          'Secretario técnico revisa, ajusta y firma en 15 minutos en vez de 2 horas',
+        ],
+        impact: 'Documentación puntual; se libera al secretario técnico para actividades sustantivas.',
       },
     ],
     tools: ['zapier-ai', 'make', 'manus', 'copilot-finance', 'bardeen'],
@@ -365,6 +603,42 @@ export default function SectorPublico() {
                   </div>
                 </div>
               </div>
+
+              {section.playbooks && section.playbooks.length > 0 && (
+                <div className="mt-6 pt-6 border-t border-border">
+                  <h3 className="text-xs font-bold text-text-lighter uppercase tracking-[0.12em] mb-4">
+                    Playbooks prácticos
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {section.playbooks.map((pb, i) => (
+                      <div
+                        key={i}
+                        className="bg-bg/60 rounded-xl border border-border/80 p-5"
+                      >
+                        <div className="flex items-start gap-2 mb-3">
+                          <span className={`inline-flex items-center justify-center w-6 h-6 rounded-md ${section.bg} ${section.color} font-bold text-xs shrink-0`}>
+                            {i + 1}
+                          </span>
+                          <h4 className="font-semibold text-text text-sm leading-tight tracking-tight">
+                            {pb.title}
+                          </h4>
+                        </div>
+                        <ol className="space-y-1.5 text-xs text-text-light leading-relaxed list-decimal ml-5 mb-3">
+                          {pb.steps.map((s, j) => (
+                            <li key={j}>{s}</li>
+                          ))}
+                        </ol>
+                        <div className="flex items-start gap-1.5 mt-3 pt-3 border-t border-border/60">
+                          <span className="text-accent font-bold text-xs">⟶</span>
+                          <p className="text-xs text-text-light italic leading-relaxed">
+                            <span className="font-semibold not-italic">Impacto:</span> {pb.impact}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="mt-6 pt-6 border-t border-border">
                 <h3 className="text-xs font-bold text-text-lighter uppercase tracking-[0.12em] mb-3">
