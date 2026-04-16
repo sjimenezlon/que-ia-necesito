@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import {
   Landmark, Users, FileSearch, ShieldCheck, Megaphone,
   GitBranch, Sparkles, AlertTriangle, BookOpen, ArrowRight,
+  Building2, MapPin, ScrollText, Scale, Rocket, Target,
+  Gauge, TrendingUp,
 } from 'lucide-react'
 import { getToolById } from '../utils/recommender'
 import { ToolFavicon } from '../components/ToolCard'
@@ -459,20 +461,104 @@ const SECTIONS = [
 
 const PRINCIPLES = [
   {
+    icon: ShieldCheck,
     title: 'Ley 1581 de 2012 — Habeas Data',
     desc: 'Toda implementación debe respetar tratamiento de datos personales, con finalidades definidas y bases legales claras.',
   },
   {
+    icon: Scale,
     title: 'CONPES 4144 — Política Nacional de IA',
     desc: 'Marco colombiano que exige gobernanza, ética, gestión de riesgos y transparencia en sistemas de IA del Estado.',
   },
   {
+    icon: ScrollText,
     title: 'Ley 2208 de 2022 — Transformación Digital',
     desc: 'Obliga a las entidades a adoptar tecnologías emergentes con enfoque de servicios centrados en el ciudadano.',
   },
   {
+    icon: Landmark,
     title: 'Principios OCDE y UNESCO',
     desc: 'Colombia adoptó recomendaciones sobre IA: equidad, no discriminación, supervisión humana y rendición de cuentas.',
+  },
+]
+
+const STATS = [
+  {
+    icon: MapPin,
+    number: '1,135',
+    label: 'Entes territoriales',
+    sub: '32 departamentos + 1,103 municipios',
+    color: 'text-primary',
+    bg: 'bg-primary/8',
+  },
+  {
+    icon: Building2,
+    number: '7',
+    label: 'Áreas cubiertas',
+    sub: 'PQRSD, políticas, SECOP, datos, comunicación, auditoría, trámites',
+    color: 'text-accent',
+    bg: 'bg-accent/8',
+  },
+  {
+    icon: Rocket,
+    number: '14',
+    label: 'Playbooks prácticos',
+    sub: 'Workflows paso a paso con impacto medible',
+    color: 'text-warm',
+    bg: 'bg-warm/8',
+  },
+  {
+    icon: Scale,
+    number: '4',
+    label: 'Pilares normativos',
+    sub: 'Ley 1581, CONPES 4144, Ley 2208, OCDE',
+    color: 'text-secondary',
+    bg: 'bg-secondary/8',
+  },
+]
+
+const ROADMAP = [
+  {
+    phase: 'Fase 1',
+    duration: '1–3 meses',
+    title: 'Piloto controlado',
+    icon: Target,
+    color: 'text-primary',
+    bg: 'bg-primary/8',
+    points: [
+      'Elegir 1 caso de uso de alto impacto y bajo riesgo (ej: resumen de PQRSD, traducción a lenguaje claro)',
+      'Equipo pequeño (3–5 personas) con supervisor humano en cada paso',
+      'Herramientas freemium con datos no sensibles o anonimizados',
+      'Medir línea base antes de arrancar (tiempo, costos, errores)',
+    ],
+  },
+  {
+    phase: 'Fase 2',
+    duration: '3–12 meses',
+    title: 'Escalamiento',
+    icon: TrendingUp,
+    color: 'text-warm',
+    bg: 'bg-warm/8',
+    points: [
+      'Expandir 2–4 casos de uso adicionales en dependencias distintas',
+      'Definir política interna de IA + comité de ética + rol de Oficial de Datos',
+      'Pasar a planes empresariales con gobernanza (SSO, logs, retención)',
+      'Evaluación de Impacto en Protección de Datos (EIPD) formalizada',
+    ],
+  },
+  {
+    phase: 'Fase 3',
+    duration: '12+ meses',
+    title: 'Institucionalización',
+    icon: Gauge,
+    color: 'text-accent',
+    bg: 'bg-accent/8',
+    points: [
+      'IA como capa transversal (API gateway, modelos internos, integración ERP)',
+      'Monitoreo continuo de sesgos, drift y calidad del servicio',
+      'Contratación de modelos on-premise o soberanos si los datos lo requieren',
+      'Transparencia algorítmica publicada como parte de rendición de cuentas',
+    ],
   },
 ]
 
@@ -515,6 +601,31 @@ export default function SectorPublico() {
             Una guía práctica para que entidades nacionales, gobernaciones, alcaldías, órganos de control
             y empresas sociales del Estado usen IA con <span className="text-text font-semibold">criterio, ética y enfoque ciudadano</span>.
           </p>
+        </div>
+      </section>
+
+      {/* Stats banner */}
+      <section className="max-w-5xl mx-auto px-4 -mt-10 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 bg-surface rounded-2xl border border-border shadow-lg p-5 md:p-6">
+          {STATS.map((s) => {
+            const StatIcon = s.icon
+            return (
+              <div key={s.label} className="flex flex-col items-start gap-2 p-2">
+                <div className={`w-10 h-10 ${s.bg} rounded-xl flex items-center justify-center`}>
+                  <StatIcon className={`w-5 h-5 ${s.color}`} />
+                </div>
+                <div>
+                  <div className="font-display font-extrabold text-text text-2xl md:text-3xl tracking-tight leading-none">
+                    {s.number}
+                  </div>
+                  <div className="text-xs font-semibold text-text mt-1 tracking-tight">{s.label}</div>
+                  <div className="text-[11px] text-text-lighter leading-snug mt-0.5 hidden md:block">
+                    {s.sub}
+                  </div>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </section>
 
@@ -597,9 +708,17 @@ export default function SectorPublico() {
                   </h3>
                   <div className="space-y-3">
                     {section.examples.map((ex, i) => (
-                      <div key={i} className="border-l-2 border-primary/30 pl-3">
-                        <div className="font-semibold text-text text-sm">{ex.entity}</div>
-                        <div className="text-xs text-text-light leading-relaxed">{ex.application}</div>
+                      <div
+                        key={i}
+                        className={`border-l-2 ${section.color.replace('text-', 'border-')}/40 pl-3 hover:pl-4 transition-all duration-200`}
+                      >
+                        <div className="flex items-start gap-2">
+                          <Building2 className={`w-3.5 h-3.5 ${section.color} mt-0.5 shrink-0`} />
+                          <div>
+                            <div className="font-semibold text-text text-sm">{ex.entity}</div>
+                            <div className="text-xs text-text-light leading-relaxed">{ex.application}</div>
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -608,32 +727,45 @@ export default function SectorPublico() {
 
               {section.playbooks && section.playbooks.length > 0 && (
                 <div className="mt-6 pt-6 border-t border-border">
-                  <h3 className="text-xs font-bold text-text-lighter uppercase tracking-[0.12em] mb-4">
-                    Playbooks prácticos
-                  </h3>
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className={`w-6 h-6 rounded-md ${section.bg} ${section.color} flex items-center justify-center`}>
+                      <Rocket className="w-3.5 h-3.5" />
+                    </div>
+                    <h3 className="text-xs font-bold text-text-lighter uppercase tracking-[0.12em]">
+                      Playbooks prácticos
+                    </h3>
+                  </div>
                   <div className="grid md:grid-cols-2 gap-4">
                     {section.playbooks.map((pb, i) => (
                       <div
                         key={i}
-                        className="bg-bg/60 rounded-xl border border-border/80 p-5"
+                        className="relative bg-bg/60 rounded-xl border border-border/80 p-5 hover:shadow-md hover:border-primary/30 transition-all duration-200"
                       >
-                        <div className="flex items-start gap-2 mb-3">
-                          <span className={`inline-flex items-center justify-center w-6 h-6 rounded-md ${section.bg} ${section.color} font-bold text-xs shrink-0`}>
+                        {/* Accent top bar */}
+                        <div className={`absolute top-0 left-0 right-0 h-1 rounded-t-xl ${section.color.replace('text-', 'bg-')}/60`} />
+                        <div className="flex items-start gap-3 mb-4 mt-1">
+                          <span className={`inline-flex items-center justify-center w-7 h-7 rounded-lg ${section.bg} ${section.color} font-bold text-sm shrink-0 font-display`}>
                             {i + 1}
                           </span>
-                          <h4 className="font-semibold text-text text-sm leading-tight tracking-tight">
+                          <h4 className="font-display font-semibold text-text text-sm leading-tight tracking-tight pt-0.5">
                             {pb.title}
                           </h4>
                         </div>
-                        <ol className="space-y-1.5 text-xs text-text-light leading-relaxed list-decimal ml-5 mb-3">
+                        <div className="space-y-2.5 mb-4">
                           {pb.steps.map((s, j) => (
-                            <li key={j}>{s}</li>
+                            <div key={j} className="flex items-start gap-2.5">
+                              <div className={`w-5 h-5 rounded-full border ${section.color.replace('text-', 'border-')}/40 ${section.bg} flex items-center justify-center shrink-0 mt-0.5`}>
+                                <span className={`text-[10px] font-bold ${section.color}`}>{j + 1}</span>
+                              </div>
+                              <p className="text-xs text-text-light leading-relaxed flex-1">{s}</p>
+                            </div>
                           ))}
-                        </ol>
-                        <div className="flex items-start gap-1.5 mt-3 pt-3 border-t border-border/60">
-                          <span className="text-accent font-bold text-xs">⟶</span>
-                          <p className="text-xs text-text-light italic leading-relaxed">
-                            <span className="font-semibold not-italic">Impacto:</span> {pb.impact}
+                        </div>
+                        <div className="flex items-start gap-2 mt-3 pt-3 border-t border-border/60 bg-accent/4 -mx-5 -mb-5 px-5 pb-4 pt-3 rounded-b-xl">
+                          <TrendingUp className="w-3.5 h-3.5 text-accent shrink-0 mt-0.5" />
+                          <p className="text-xs text-text leading-relaxed">
+                            <span className="font-semibold text-accent">Impacto:</span>{' '}
+                            <span className="text-text-light">{pb.impact}</span>
                           </p>
                         </div>
                       </div>
@@ -657,6 +789,61 @@ export default function SectorPublico() {
         })}
       </div>
 
+      {/* Roadmap de adopción */}
+      <section className="max-w-5xl mx-auto px-4 py-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-accent/10">
+            <Rocket className="w-3 h-3" />
+            Ruta de adopción
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-text tracking-tight mb-2">
+            Cómo empezar sin quemar recursos
+          </h2>
+          <p className="text-text-light text-sm max-w-2xl mx-auto">
+            No todas las entidades arrancan igual. Esta ruta de madurez te da un punto de partida realista
+            según el estado actual de tu equipo y presupuesto.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-4 relative">
+          {/* Connector line (desktop) */}
+          <div className="hidden md:block absolute top-14 left-[16.6%] right-[16.6%] h-0.5 bg-gradient-to-r from-primary/20 via-warm/20 to-accent/20 z-0" />
+
+          {ROADMAP.map((phase) => {
+            const PhaseIcon = phase.icon
+            return (
+              <div
+                key={phase.phase}
+                className="relative bg-surface rounded-2xl border border-border p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 z-10"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`w-12 h-12 ${phase.bg} rounded-xl flex items-center justify-center shrink-0`}>
+                    <PhaseIcon className={`w-6 h-6 ${phase.color}`} />
+                  </div>
+                  <div>
+                    <div className={`text-xs font-bold uppercase tracking-[0.1em] ${phase.color}`}>
+                      {phase.phase}
+                    </div>
+                    <div className="text-[11px] text-text-lighter">{phase.duration}</div>
+                  </div>
+                </div>
+                <h3 className="font-display font-bold text-text text-lg tracking-tight mb-3">
+                  {phase.title}
+                </h3>
+                <ul className="space-y-2">
+                  {phase.points.map((p, j) => (
+                    <li key={j} className="flex items-start gap-2 text-xs text-text-light leading-relaxed">
+                      <span className={`${phase.color} font-bold mt-0.5 text-xs`}>•</span>
+                      <span>{p}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+          })}
+        </div>
+      </section>
+
       {/* Principios normativos */}
       <section className="max-w-5xl mx-auto px-4 py-10">
         <div className="bg-text text-white rounded-2xl p-6 md:p-10">
@@ -666,15 +853,25 @@ export default function SectorPublico() {
             éticos internacionales. Estos son los cuatro pilares:
           </p>
           <div className="grid md:grid-cols-2 gap-4">
-            {PRINCIPLES.map((p) => (
-              <div
-                key={p.title}
-                className="bg-white/10 rounded-xl p-5 backdrop-blur-sm border border-white/10"
-              >
-                <h3 className="font-semibold text-base mb-1 tracking-tight">{p.title}</h3>
-                <p className="text-white/75 text-sm leading-relaxed">{p.desc}</p>
-              </div>
-            ))}
+            {PRINCIPLES.map((p) => {
+              const PIcon = p.icon
+              return (
+                <div
+                  key={p.title}
+                  className="bg-white/10 rounded-xl p-5 backdrop-blur-sm border border-white/10 hover:bg-white/15 hover:border-white/20 transition-all duration-300"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="w-9 h-9 bg-white/15 rounded-lg flex items-center justify-center shrink-0">
+                      <PIcon className="w-4.5 h-4.5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-base mb-1 tracking-tight">{p.title}</h3>
+                      <p className="text-white/75 text-sm leading-relaxed">{p.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
           </div>
           <div className="mt-6 text-sm text-white/70">
             <strong className="text-white">Recomendación transversal:</strong> antes de pilotear cualquier sistema de
