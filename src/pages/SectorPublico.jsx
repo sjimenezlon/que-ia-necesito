@@ -526,9 +526,11 @@ export default function SectorPublico() {
             ¿Por qué un capítulo para el sector público?
           </h2>
           <p className="text-text-light leading-relaxed mb-3">
-            Colombia tiene más de 5,700 entidades públicas entre el orden nacional y territorial. Cada una enfrenta
-            retos parecidos — pero con restricciones presupuestales, obligaciones de transparencia y
-            responsabilidad fiscal que el sector privado no tiene.
+            Colombia tiene miles de entidades públicas entre el orden nacional y territorial — 32 departamentos,
+            más de 1,100 municipios, y cientos de ministerios, superintendencias, establecimientos públicos,
+            empresas sociales del Estado y unidades administrativas especiales. Cada una enfrenta retos
+            parecidos, pero con restricciones presupuestales, obligaciones de transparencia y responsabilidad
+            fiscal que el sector privado no tiene.
           </p>
           <p className="text-text-light leading-relaxed">
             Esta guía traduce las herramientas de IA del catálogo a <span className="font-semibold text-text">casos de uso
