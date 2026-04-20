@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom'
 import {
   Landmark, Users, FileSearch, ShieldCheck, Megaphone,
   GitBranch, Sparkles, AlertTriangle, BookOpen, ArrowRight,
-  Building2, MapPin, ScrollText, Scale, Rocket, Target,
-  Gauge, TrendingUp,
+  Building2, ScrollText, Scale, Rocket, Target,
+  Gauge, TrendingUp, Zap,
+  BarChart3, Globe2, Heart, Leaf, Stethoscope, GraduationCap,
+  Truck, Banknote, Shield,
 } from 'lucide-react'
 import { getToolById } from '../utils/recommender'
 import { ToolFavicon } from '../components/ToolCard'
@@ -47,6 +49,18 @@ const SECTIONS = [
       {
         entity: 'ICBF',
         application: 'Análisis de llamadas al 141 (línea de atención) con transcripción + NLP para priorizar casos de protección inmediata.',
+      },
+      {
+        entity: 'Sena — atención al aprendiz',
+        application: 'Chatbot en la plataforma Sofía Plus responde dudas sobre inscripciones, certificados y rutas de formación las 24 horas.',
+      },
+      {
+        entity: 'Alcaldía de Cali — CaliGenial',
+        application: 'Asistente virtual para trámites de predial, industria y comercio, y reportes ciudadanos con integración a la MiCali app.',
+      },
+      {
+        entity: 'Área Metropolitana del Valle de Aburrá',
+        application: 'Clasificación automática de quejas ambientales (ruido, olores, emisiones) con geolocalización para priorizar operativos de control.',
       },
     ],
     playbooks: [
@@ -112,6 +126,18 @@ const SECTIONS = [
         entity: 'Congreso de la República',
         application: 'Unidades técnicas legislativas usando NotebookLM para comparar proyectos de ley vs. iniciativas similares hundidas en periodos anteriores.',
       },
+      {
+        entity: 'Banco de la República — Política Monetaria',
+        application: 'Lectura asistida de actas de la Fed, BCE y pares LATAM para enriquecer informes de la Junta Directiva.',
+      },
+      {
+        entity: 'ANLA',
+        application: 'Análisis comparado de decisiones de licenciamiento ambiental para identificar precedentes aplicables a nuevos proyectos.',
+      },
+      {
+        entity: 'Secretaría Jurídica Distrital — Bogotá',
+        application: 'Revisión de constitucionalidad de proyectos de acuerdo distrital con asistencia de modelos especializados en derecho público.',
+      },
     ],
     playbooks: [
       {
@@ -175,6 +201,18 @@ const SECTIONS = [
       {
         entity: 'Empresas Sociales del Estado (ESE)',
         application: 'Estandarización de estudios previos de medicamentos POS y dispositivos con Claude + plantillas tipo CCE.',
+      },
+      {
+        entity: 'Invías',
+        application: 'Revisión masiva de pliegos de obra vial con detección de cláusulas atípicas y comparación con proyectos anteriores.',
+      },
+      {
+        entity: 'EPM — Abastecimiento',
+        application: 'Análisis asistido de ofertas técnicas complejas (energía, agua, gas) para acortar el cronograma de evaluación.',
+      },
+      {
+        entity: 'Metro de Medellín',
+        application: 'Seguimiento automatizado a cronogramas y hitos de ejecución contractual con alertas tempranas de desviación.',
       },
     ],
     playbooks: [
@@ -240,6 +278,18 @@ const SECTIONS = [
         entity: 'Fiscalía General — eje de análisis',
         application: 'Análisis de cohortes del Sistema Penal Oral Acusatorio para identificar cuellos de botella por tipo de delito.',
       },
+      {
+        entity: 'Superfinanciera',
+        application: 'Monitoreo en tiempo real de indicadores de estabilidad bancaria con detección temprana de anomalías en reporte de entidades vigiladas.',
+      },
+      {
+        entity: 'SIATA — Medellín',
+        application: 'Modelos de alerta temprana de inundaciones y calidad del aire basados en fusión de datos de radar, estaciones y satélites.',
+      },
+      {
+        entity: 'IGAC',
+        application: 'Actualización catastral multipropósito con clasificación automática de uso del suelo vía imágenes satelitales y deep learning.',
+      },
     ],
     playbooks: [
       {
@@ -303,6 +353,18 @@ const SECTIONS = [
       {
         entity: 'Secretarías de Salud territoriales',
         application: 'Campañas masivas de vacunación con piezas adaptadas por grupo etario y dialecto regional generadas con Canva + DALL-E.',
+      },
+      {
+        entity: 'Banco de la República — Educación económica',
+        application: 'Piezas y videos explicativos sobre inflación, tasa de interés y moneda para audiencias amplias con tono Banrep.',
+      },
+      {
+        entity: 'Policía Nacional — Prevención',
+        application: 'Generación ágil de piezas de alerta ciudadana frente a modalidades de hurto y fraudes digitales.',
+      },
+      {
+        entity: 'Fontur — MinCIT',
+        application: 'Contenido turístico multilingüe (inglés, francés, portugués) para campañas internacionales "Colombia, el país de la belleza".',
       },
     ],
     playbooks: [
@@ -368,6 +430,18 @@ const SECTIONS = [
         entity: 'Oficinas de control interno (territoriales)',
         application: 'Aplicación del MECI con MindBridge para auditar ingresos municipales y detectar evasión predial.',
       },
+      {
+        entity: 'Fiscalía — Dirección Especializada Anticorrupción',
+        application: 'Análisis forense de correos, chats y repositorios documentales incautados con asistencia de LLM para construir líneas de tiempo.',
+      },
+      {
+        entity: 'ADRES',
+        application: 'Detección de pagos atípicos a prestadores de salud (recobros, UPC) con scoring que combina historial y patrones epidemiológicos.',
+      },
+      {
+        entity: 'Prosperidad Social',
+        application: 'Auditoría automatizada de focalización en transferencias monetarias (Renta Ciudadana, Jóvenes en Acción) cruzando SISBÉN y registros.',
+      },
     ],
     playbooks: [
       {
@@ -432,6 +506,18 @@ const SECTIONS = [
         entity: 'MinSalud — Mi Vacuna',
         application: 'Automatización de carnets de vacunación y cruce con RUAF para detección de duplicados.',
       },
+      {
+        entity: 'Notarías — Supernotariado',
+        application: 'OCR + IA para lectura de escrituras antiguas manuscritas y trazabilidad de cadenas de propiedad en el folio de matrícula.',
+      },
+      {
+        entity: 'Ministerio de Trabajo — UGPP',
+        application: 'Detección de inconsistencias en aportes a seguridad social cruzando PILA, nómina electrónica y renta.',
+      },
+      {
+        entity: 'Cancillería — pasaportes',
+        application: 'Agendamiento inteligente y priorización de citas según disponibilidad de libretas y tiempos promedio por oficina.',
+      },
     ],
     playbooks: [
       {
@@ -482,38 +568,145 @@ const PRINCIPLES = [
   },
 ]
 
-const STATS = [
+const FEATURED_CASES = [
   {
-    icon: MapPin,
-    number: '1,135',
-    label: 'Entes territoriales',
-    sub: '32 departamentos + 1,103 municipios',
+    icon: Stethoscope,
     color: 'text-primary',
     bg: 'bg-primary/8',
+    ring: 'ring-primary/20',
+    entity: 'ADRES',
+    area: 'Salud · Antifraude',
+    headline: 'Detección de recobros atípicos',
+    story: 'Modelos de anomalías aplicados sobre el flujo de recobros y UPC permiten priorizar revisiones y reducir filtraciones del aseguramiento.',
+    metric: 'Millones de registros',
+    metricLabel: 'analizados al 100%',
   },
   {
-    icon: Building2,
-    number: '7',
-    label: 'Áreas cubiertas',
-    sub: 'PQRSD, políticas, SECOP, datos, comunicación, auditoría, trámites',
-    color: 'text-accent',
-    bg: 'bg-accent/8',
-  },
-  {
-    icon: Rocket,
-    number: '14',
-    label: 'Playbooks prácticos',
-    sub: 'Workflows paso a paso con impacto medible',
+    icon: Truck,
     color: 'text-warm',
     bg: 'bg-warm/8',
+    ring: 'ring-warm/20',
+    entity: 'Invías + ANI',
+    area: 'Infraestructura',
+    headline: 'Monitoreo de obras viales',
+    story: 'Visión computacional sobre imágenes satelitales y drones para verificar avance de obra, detección de sobrecostos y alertas geotécnicas.',
+    metric: '+27.000 km',
+    metricLabel: 'red vial nacional',
   },
   {
-    icon: Scale,
-    number: '4',
-    label: 'Pilares normativos',
-    sub: 'Ley 1581, CONPES 4144, Ley 2208, OCDE',
+    icon: GraduationCap,
+    color: 'text-accent',
+    bg: 'bg-accent/8',
+    ring: 'ring-accent/20',
+    entity: 'MinEducación',
+    area: 'Educación',
+    headline: 'Alerta temprana deserción',
+    story: 'Modelos predictivos sobre SIMAT identifican estudiantes con alto riesgo de desertar y activan rutas de acompañamiento en IETDH y IES.',
+    metric: '10M+',
+    metricLabel: 'estudiantes SIMAT',
+  },
+  {
+    icon: Leaf,
+    color: 'text-emerald-700',
+    bg: 'bg-emerald-100',
+    ring: 'ring-emerald-200',
+    entity: 'IDEAM + MinAmbiente',
+    area: 'Ambiente',
+    headline: 'Alerta temprana climática',
+    story: 'Redes neuronales sobre series hidrometeorológicas anticipan fenómenos El Niño/La Niña y apoyan planes de contingencia departamentales.',
+    metric: '32 dptos',
+    metricLabel: 'cobertura operativa',
+  },
+  {
+    icon: Banknote,
     color: 'text-secondary',
     bg: 'bg-secondary/8',
+    ring: 'ring-secondary/20',
+    entity: 'DIAN',
+    area: 'Tributario',
+    headline: 'Scoring de riesgo tributario',
+    story: 'Factura electrónica + declaraciones + terceros informantes alimentan modelos que priorizan auditorías con mayor retorno fiscal.',
+    metric: '+$200 bn',
+    metricLabel: 'recaudo anual',
+  },
+  {
+    icon: Shield,
+    color: 'text-primary',
+    bg: 'bg-primary/8',
+    ring: 'ring-primary/20',
+    entity: 'Contraloría General',
+    area: 'Control fiscal',
+    headline: 'OCEANO sobre SECOP',
+    story: 'Analítica masiva sobre contratación estatal identifica patrones de riesgo de corrupción que escapan al muestreo tradicional.',
+    metric: '6M+',
+    metricLabel: 'contratos SECOP',
+  },
+]
+
+const SECTORS = [
+  {
+    icon: Stethoscope,
+    title: 'Salud',
+    desc: 'Cobertura, epidemiología y prestación',
+    color: 'text-rose-600',
+    bg: 'bg-rose-50',
+    entities: ['MinSalud', 'INS', 'ADRES', 'Supersalud', 'Invima'],
+  },
+  {
+    icon: GraduationCap,
+    title: 'Educación',
+    desc: 'Matrícula, deserción y calidad',
+    color: 'text-sky-600',
+    bg: 'bg-sky-50',
+    entities: ['MinEducación', 'ICFES', 'Sena', 'Colciencias', 'ICETEX'],
+  },
+  {
+    icon: Truck,
+    title: 'Transporte',
+    desc: 'Movilidad, licencias y logística',
+    color: 'text-amber-600',
+    bg: 'bg-amber-50',
+    entities: ['MinTransporte', 'Invías', 'ANI', 'RUNT', 'Aeronáutica Civil'],
+  },
+  {
+    icon: Leaf,
+    title: 'Ambiente',
+    desc: 'Clima, agua y licenciamiento',
+    color: 'text-emerald-600',
+    bg: 'bg-emerald-50',
+    entities: ['MinAmbiente', 'IDEAM', 'ANLA', 'Parques Nacionales', 'AMVA'],
+  },
+  {
+    icon: Banknote,
+    title: 'Finanzas públicas',
+    desc: 'Tributación, presupuesto y tesorería',
+    color: 'text-violet-600',
+    bg: 'bg-violet-50',
+    entities: ['MinHacienda', 'DIAN', 'Banco de la República', 'Superfinanciera', 'UGPP'],
+  },
+  {
+    icon: Shield,
+    title: 'Seguridad y justicia',
+    desc: 'Prevención, análisis criminal y rendición',
+    color: 'text-slate-700',
+    bg: 'bg-slate-100',
+    entities: ['Policía', 'Fiscalía', 'MinJusticia', 'INPEC', 'Migración'],
+  },
+  {
+    icon: Heart,
+    title: 'Social y territorial',
+    desc: 'Focalización, territorios y cultura',
+    color: 'text-pink-600',
+    bg: 'bg-pink-50',
+    entities: ['DPS', 'ICBF', 'DNP', 'DANE', 'Mincultura'],
+  },
+  {
+    icon: Globe2,
+    title: 'Transformación digital',
+    desc: 'Gobierno digital y ciudadanía',
+    color: 'text-indigo-600',
+    bg: 'bg-indigo-50',
+    entities: ['MinTIC', 'AND', 'Registraduría', 'GOV.CO', 'Archivo General'],
   },
 ]
 
@@ -604,31 +797,6 @@ export default function SectorPublico() {
         </div>
       </section>
 
-      {/* Stats banner */}
-      <section className="max-w-5xl mx-auto px-4 -mt-10 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 bg-surface rounded-2xl border border-border shadow-lg p-5 md:p-6">
-          {STATS.map((s) => {
-            const StatIcon = s.icon
-            return (
-              <div key={s.label} className="flex flex-col items-start gap-2 p-2">
-                <div className={`w-10 h-10 ${s.bg} rounded-xl flex items-center justify-center`}>
-                  <StatIcon className={`w-5 h-5 ${s.color}`} />
-                </div>
-                <div>
-                  <div className="font-display font-extrabold text-text text-2xl md:text-3xl tracking-tight leading-none">
-                    {s.number}
-                  </div>
-                  <div className="text-xs font-semibold text-text mt-1 tracking-tight">{s.label}</div>
-                  <div className="text-[11px] text-text-lighter leading-snug mt-0.5 hidden md:block">
-                    {s.sub}
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </section>
-
       {/* Intro normativa */}
       <section className="max-w-5xl mx-auto px-4 pt-12 pb-6">
         <div className="bg-surface rounded-2xl border border-border p-6 md:p-8 shadow-sm">
@@ -648,6 +816,60 @@ export default function SectorPublico() {
             concretos</span> del Estado colombiano, con ejemplos de entidades que ya las aplican y recomendaciones
             alineadas al marco normativo vigente.
           </p>
+        </div>
+      </section>
+
+      {/* Featured cases — visual storytelling */}
+      <section className="max-w-5xl mx-auto px-4 py-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 bg-warm/10 text-warm px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-warm/15">
+            <Zap className="w-3 h-3" />
+            Historias que ya están en marcha
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-text tracking-tight mb-2">
+            Casos emblemáticos del Estado colombiano
+          </h2>
+          <p className="text-text-light text-sm max-w-2xl mx-auto">
+            Entidades que ya aplican IA en operaciones reales — no pilotos de laboratorio. Úsalos como referencia para tu propia hoja de ruta.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {FEATURED_CASES.map((c) => {
+            const CIcon = c.icon
+            return (
+              <div
+                key={c.entity}
+                className={`group relative bg-surface rounded-2xl border border-border p-5 hover:shadow-lg hover:-translate-y-1 hover:border-primary/30 transition-all duration-300`}
+              >
+                <div className="flex items-start gap-3 mb-4">
+                  <div className={`w-12 h-12 ${c.bg} rounded-xl flex items-center justify-center shrink-0 ring-4 ${c.ring} ring-offset-0`}>
+                    <CIcon className={`w-6 h-6 ${c.color}`} />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className={`text-[10px] font-bold uppercase tracking-[0.12em] ${c.color}`}>
+                      {c.area}
+                    </div>
+                    <div className="font-display font-bold text-text text-sm mt-0.5 tracking-tight truncate">
+                      {c.entity}
+                    </div>
+                  </div>
+                </div>
+                <h3 className="font-display font-semibold text-text text-base leading-tight tracking-tight mb-2">
+                  {c.headline}
+                </h3>
+                <p className="text-xs text-text-light leading-relaxed mb-4">
+                  {c.story}
+                </p>
+                <div className={`flex items-baseline gap-2 pt-3 border-t border-border/60`}>
+                  <div className={`font-display font-extrabold ${c.color} text-xl tracking-tight leading-none`}>
+                    {c.metric}
+                  </div>
+                  <div className="text-[11px] text-text-lighter">{c.metricLabel}</div>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </section>
 
@@ -788,6 +1010,55 @@ export default function SectorPublico() {
           )
         })}
       </div>
+
+      {/* Sectores del Estado donde ya se aplica IA */}
+      <section className="max-w-5xl mx-auto px-4 py-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 bg-primary/8 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-primary/10">
+            <BarChart3 className="w-3 h-3" />
+            Panorama por sectores
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-text tracking-tight mb-2">
+            La IA ya llegó a todos los frentes del Estado
+          </h2>
+          <p className="text-text-light text-sm max-w-2xl mx-auto">
+            No es un tema exclusivo de TIC o innovación. Desde salud hasta control fiscal, hay entidades moviendo la aguja.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {SECTORS.map((s) => {
+            const SIcon = s.icon
+            return (
+              <div
+                key={s.title}
+                className="group relative bg-surface rounded-2xl border border-border p-4 hover:shadow-md hover:-translate-y-0.5 hover:border-primary/30 transition-all duration-200 overflow-hidden"
+              >
+                <div className={`absolute -top-6 -right-6 w-20 h-20 ${s.bg} rounded-full opacity-60 group-hover:scale-125 transition-transform duration-500`} />
+                <div className="relative">
+                  <div className={`w-11 h-11 ${s.bg} rounded-xl flex items-center justify-center mb-3`}>
+                    <SIcon className={`w-5 h-5 ${s.color}`} />
+                  </div>
+                  <h3 className="font-display font-bold text-text text-sm tracking-tight mb-1">
+                    {s.title}
+                  </h3>
+                  <p className="text-[11px] text-text-lighter leading-snug mb-3">{s.desc}</p>
+                  <div className="flex flex-wrap gap-1">
+                    {s.entities.map((e) => (
+                      <span
+                        key={e}
+                        className={`inline-flex items-center text-[10px] font-medium ${s.color} ${s.bg} px-1.5 py-0.5 rounded-md border border-current/10`}
+                      >
+                        {e}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </section>
 
       {/* Roadmap de adopción */}
       <section className="max-w-5xl mx-auto px-4 py-10">
