@@ -3,7 +3,7 @@ import {
   Landmark, Users, FileSearch, ShieldCheck, Megaphone,
   GitBranch, Sparkles, AlertTriangle, BookOpen, ArrowRight,
   Building2, ScrollText, Scale, Rocket, Target,
-  Gauge, TrendingUp, Zap,
+  Gauge, TrendingUp, Zap, CheckCircle2, ExternalLink, Gavel,
   BarChart3, Globe2, Heart, Leaf, Stethoscope, GraduationCap,
   Truck, Banknote, Shield,
 } from 'lucide-react'
@@ -28,39 +28,30 @@ const SECTIONS = [
     examples: [
       {
         entity: 'Alcaldía de Medellín',
-        application: 'Chatbot MAIA responde consultas sobre trámites, impuestos y eventos en WhatsApp y web, reduciendo carga de call center.',
+        application: 'Asistente virtual "Flor" responde en WhatsApp (301 604 4444) sobre predial, trámites y citas de atención ciudadana.',
+        source: 'https://www.elcolombiano.com/medellin/nuevos-servicios-de-la-asistente-virtual-de-la-alcaldia-de-medellin-EA26738914',
+      },
+      {
+        entity: 'Alcaldía de Bogotá — "Bogotá Te Escucha" (SDQS + IA)',
+        application: 'Canal distrital con IA generativa para clasificar PQRSD; pasó de 17% a 97% de precisión en enrutamiento. Acuerdo 003 de 2025 como marco de gobernanza.',
+        source: 'https://bogota.gov.co/mi-ciudad/gestion-publica/bogota-lanzo-canal-de-conversacion-y-atencion-ciudadania-con-ia',
+      },
+      {
+        entity: 'Sena — Asesora virtual "ISA"',
+        application: 'Chatbot oficial (chatbotisa.sena.edu.co) atiende dudas sobre Sofía Plus, certificados, formación y estado del proceso las 24 horas.',
+        source: 'https://chatbotisa.sena.edu.co/',
       },
       {
         entity: 'DIAN',
-        application: 'Asistentes virtuales en portal MUISCA ayudan con RUT, firma electrónica y devoluciones.',
-      },
-      {
-        entity: 'Función Pública (DAFP)',
-        application: 'Análisis de PQRSD agregadas para detectar problemas sistémicos por entidad.',
-      },
-      {
-        entity: 'Alcaldía de Bogotá — SDQS',
-        application: 'Sistema Distrital de Quejas y Soluciones con categorización automática por tema y localidad para enrutar a la secretaría correcta.',
+        application: 'Portal MUISCA concentra trámites tributarios en línea (RUT, firma electrónica, devoluciones); la entidad reporta uso creciente de analítica e IA para fiscalización.',
       },
       {
         entity: 'Supersalud',
-        application: 'Tamizaje automático de PQRSD sensibles (urgencia vital, tutelas, óbitos) con alertas al equipo jurídico en tiempo real.',
+        application: 'Sistema de PQRSD (SuperArgo) para priorización; la Superintendencia avanza en modernización con analítica sobre datos de PQR en salud.',
       },
       {
-        entity: 'ICBF',
-        application: 'Análisis de llamadas al 141 (línea de atención) con transcripción + NLP para priorizar casos de protección inmediata.',
-      },
-      {
-        entity: 'Sena — atención al aprendiz',
-        application: 'Chatbot en la plataforma Sofía Plus responde dudas sobre inscripciones, certificados y rutas de formación las 24 horas.',
-      },
-      {
-        entity: 'Alcaldía de Cali — CaliGenial',
-        application: 'Asistente virtual para trámites de predial, industria y comercio, y reportes ciudadanos con integración a la MiCali app.',
-      },
-      {
-        entity: 'Área Metropolitana del Valle de Aburrá',
-        application: 'Clasificación automática de quejas ambientales (ruido, olores, emisiones) con geolocalización para priorizar operativos de control.',
+        entity: 'ICBF — Línea 141',
+        application: 'Línea de protección con priorización de casos de niñez; canal clave para ampliar triage asistido cuando la entidad integre NLP.',
       },
     ],
     playbooks: [
@@ -103,40 +94,32 @@ const SECTIONS = [
     ],
     examples: [
       {
-        entity: 'DNP',
-        application: 'Análisis de consistencia entre CONPES, Plan Nacional de Desarrollo y Presupuesto Plurianual de Inversiones.',
+        entity: 'Corte Constitucional — PretorIA',
+        application: 'Sistema de IA que apoya la Sala de Selección en el tamizaje de más de 620.000 tutelas anuales, identificando casos con relevancia constitucional.',
+        source: 'https://www.dejusticia.org/conoce-nuestra-investigacion-sobre-pretoria-la-tecnologia-que-incorpora-la-inteligencia-artificial-a-la-corte-constitucional/',
       },
       {
-        entity: 'MINTIC',
-        application: 'Implementación del CONPES 4144 (IA) y la política de transformación digital con investigación comparada.',
+        entity: 'Corte Constitucional — Sentencia T-323/2024',
+        application: 'Primer precedente que fija lineamientos sobre uso de ChatGPT/IA por jueces: transparencia, supervisión humana y no discriminación.',
+        source: 'https://www.corteconstitucional.gov.co/relatoria/2024/T-323-24.htm',
       },
       {
-        entity: 'Minjusticia',
-        application: 'Análisis de sentencias de la Corte Constitucional para evaluar impacto de proyectos de ley.',
+        entity: 'DNP + MinTIC — CONPES 4144',
+        application: 'Política Nacional de IA (feb 2025), USD 479 millones, 6 ejes estratégicos. Hoja de ruta para la adopción ética y responsable.',
+        source: 'https://www.dnp.gov.co/publicaciones/Planeacion/Paginas/conpes-4144-hoja-de-ruta-colombia-inteligencia-artificial-retos-actuales-transformacion-futura.aspx',
       },
       {
-        entity: 'MinAmbiente',
-        application: 'Cruce de POMCAS, planes de ordenamiento y resoluciones ANLA para ajustar licenciamiento ambiental regional.',
+        entity: 'DNP — Catastro multipropósito',
+        application: 'Uso de IA y deep learning sobre Sentinel-2 para apoyar actualización catastral y análisis territorial.',
+        source: 'https://www.dnp.gov.co/Prensa_/Noticias/Paginas/con-inteligencia-artificial-el-dnp-apoya-el-proceso-de-actualizacion-del-catastro-multiproposito.aspx',
       },
       {
-        entity: 'MinHacienda — DGPM',
-        application: 'Síntesis de marcos fiscales de la OCDE y benchmarks regionales para la Regla Fiscal y Marco Fiscal de Mediano Plazo.',
+        entity: 'MinJusticia — política criminal',
+        application: 'Analítica sobre grandes volúmenes de sentencias y jurisprudencia para identificar tendencias que alimentan reformas normativas.',
       },
       {
-        entity: 'Congreso de la República',
-        application: 'Unidades técnicas legislativas usando NotebookLM para comparar proyectos de ley vs. iniciativas similares hundidas en periodos anteriores.',
-      },
-      {
-        entity: 'Banco de la República — Política Monetaria',
-        application: 'Lectura asistida de actas de la Fed, BCE y pares LATAM para enriquecer informes de la Junta Directiva.',
-      },
-      {
-        entity: 'ANLA',
-        application: 'Análisis comparado de decisiones de licenciamiento ambiental para identificar precedentes aplicables a nuevos proyectos.',
-      },
-      {
-        entity: 'Secretaría Jurídica Distrital — Bogotá',
-        application: 'Revisión de constitucionalidad de proyectos de acuerdo distrital con asistencia de modelos especializados en derecho público.',
+        entity: 'Congreso — unidades técnicas',
+        application: 'Oportunidad clara para incorporar NotebookLM / asistentes de lectura jurídica sobre proyectos de ley y jurisprudencia relacionada.',
       },
     ],
     playbooks: [
@@ -179,40 +162,30 @@ const SECTIONS = [
     ],
     examples: [
       {
-        entity: 'Colombia Compra Eficiente (CCE)',
-        application: 'Tienda Virtual del Estado + modelos de IA para recomendar acuerdos marco y estandarizar documentos tipo.',
+        entity: 'Contraloría General — OCEANO',
+        application: 'Plataforma con Big Data, analítica predictiva e IA que vigila el gasto público y genera alertas tempranas de riesgos en contratación estatal.',
+        source: 'https://www.contraloria.gov.co/en/w/contralor%C3%ADa-y-colombia-compra-eficiente-unen-esfuerzos-para-generar-alertas-e-identificar-riesgos-de-corrupci%C3%B3n-en-contrataci%C3%B3n-estatal',
       },
       {
-        entity: 'Contraloría General',
-        application: 'OCEANO — análisis masivo de contratos del SECOP para detectar riesgos de corrupción.',
+        entity: 'Contraloría + Colombia Compra Eficiente',
+        application: 'Convenio para cruzar datos de SECOP con OCEANO y generar alertas tempranas sobre prácticas de colusión y sobrecostos.',
+        source: 'https://www.contraloria.gov.co/en/w/contralor%C3%ADa-y-colombia-compra-eficiente-unen-esfuerzos-para-generar-alertas-e-identificar-riesgos-de-corrupci%C3%B3n-en-contrataci%C3%B3n-estatal',
       },
       {
-        entity: 'Secretarías de Hacienda (municipios)',
-        application: 'Revisión asistida de pliegos antes de publicación para reducir adendas y demandas.',
+        entity: 'Colombia Compra Eficiente',
+        application: 'Documentos tipo, Tienda Virtual y acuerdos marco; base estandarizada que facilita auditoría asistida por IA sobre pliegos.',
       },
       {
-        entity: 'Agencia Nacional de Infraestructura (ANI)',
-        application: 'Revisión asistida de contratos de concesión 4G/5G (cientos de páginas) para identificar riesgos de controversias contractuales.',
+        entity: 'ANI — contratos de concesión',
+        application: 'Volumen contractual 4G/5G hace ideal la revisión asistida de cláusulas (riesgos, hitos, garantías) con LLM + RAG sobre pliegos.',
       },
       {
-        entity: 'Ministerio de Defensa — Agencia Logística',
-        application: 'Comparación masiva de cotizaciones de víveres y uniformes entre regionales para detectar sobrecostos sistemáticos.',
+        entity: 'ESE y hospitales públicos',
+        application: 'Estandarización de estudios previos de medicamentos POS y dispositivos usando LLM + plantillas tipo CCE.',
       },
       {
-        entity: 'Empresas Sociales del Estado (ESE)',
-        application: 'Estandarización de estudios previos de medicamentos POS y dispositivos con Claude + plantillas tipo CCE.',
-      },
-      {
-        entity: 'Invías',
-        application: 'Revisión masiva de pliegos de obra vial con detección de cláusulas atípicas y comparación con proyectos anteriores.',
-      },
-      {
-        entity: 'EPM — Abastecimiento',
-        application: 'Análisis asistido de ofertas técnicas complejas (energía, agua, gas) para acortar el cronograma de evaluación.',
-      },
-      {
-        entity: 'Metro de Medellín',
-        application: 'Seguimiento automatizado a cronogramas y hitos de ejecución contractual con alertas tempranas de desviación.',
+        entity: 'Secretarías de Hacienda territoriales',
+        application: 'Revisión asistida de pliegos antes de publicación para reducir adendas reactivas y demandas.',
       },
     ],
     playbooks: [
@@ -255,40 +228,42 @@ const SECTIONS = [
     ],
     examples: [
       {
-        entity: 'DANE',
-        application: 'Uso de IA para control de calidad de microdatos censales y geocoded statistics.',
+        entity: 'IDEAM — HydroViewer Colombia',
+        application: '51 simulaciones de caudales con horizonte de 15 días (alianza IDEAM / CIAT / SERVIR-Amazonía) para gestión del recurso hídrico.',
+        source: 'https://ideam.geoglows.org/apps/hydroviewer-colombia/user-manual/',
       },
       {
-        entity: 'MinSalud — SISPRO',
-        application: 'Análisis predictivo de cobertura en salud y detección temprana de brotes.',
+        entity: 'IGAC — catastro multipropósito',
+        application: 'ColSMART: deep learning sobre imágenes Sentinel-2 con precisión 70-94% para apoyar actualización catastral nacional.',
+        source: 'https://www.igac.gov.co/noticias/inteligencia-artificial-para-decodificar-imagenes-satelitales-y-nuevas-tecnologias-del-catastro-temas-principales-del-igac-embdata-tech',
       },
       {
-        entity: 'Secretaría de Planeación (ciudades)',
-        application: 'Tableros territoriales con indicadores ODS vinculados al Plan de Desarrollo Municipal.',
+        entity: 'Secretaría de Movilidad Bogotá',
+        application: 'Semáforos inteligentes con videodetectores que cuentan flujo vehicular y autorregulan ciclos según densidad real.',
+        source: 'https://bogota.gov.co/asi-vamos/conoce-la-semaforizacion-inteligente-en-bogota',
       },
       {
-        entity: 'IDEAM',
-        application: 'Predicción de niveles de ríos con modelos de ML entrenados sobre series históricas hidrológicas y meteorológicas.',
+        entity: 'Fiscalía General — Fiscal Watson',
+        application: 'Sistema con IBM Watson que correlaciona más de 13 millones de denuncias del SPOA; identificó un depredador sexual en Tolima.',
+        source: 'https://www.elpais.com.co/judicial/watson-el-investigador-inteligente-con-el-que-la-fiscalia-busca-cerrarle-el-paso-al-crimen.html',
       },
       {
-        entity: 'Secretaría de Movilidad — Bogotá/Medellín',
-        application: 'Visión computacional para conteo vehicular en tiempo real y optimización de semáforos según flujo.',
-      },
-      {
-        entity: 'Fiscalía General — eje de análisis',
-        application: 'Análisis de cohortes del Sistema Penal Oral Acusatorio para identificar cuellos de botella por tipo de delito.',
-      },
-      {
-        entity: 'Superfinanciera',
-        application: 'Monitoreo en tiempo real de indicadores de estabilidad bancaria con detección temprana de anomalías en reporte de entidades vigiladas.',
+        entity: 'Superfinanciera — Centro de Excelencia IA',
+        application: 'Hub de supervisión digital y análisis de redes para entidades vigiladas; transforma el modelo tradicional de inspección.',
+        source: 'https://www.superfinanciera.gov.co/publicaciones/10115852/el-papel-de-la-inteligencia-artificial-en-la-transformacion-de-la-supervision-financiera/',
       },
       {
         entity: 'SIATA — Medellín',
-        application: 'Modelos de alerta temprana de inundaciones y calidad del aire basados en fusión de datos de radar, estaciones y satélites.',
+        application: '~1.200 sensores + radares meteorológicos para alertas tempranas de inundaciones, deslizamientos y calidad del aire en el Valle de Aburrá.',
+        source: 'https://siata.gov.co/portalWeb',
       },
       {
-        entity: 'IGAC',
-        application: 'Actualización catastral multipropósito con clasificación automática de uso del suelo vía imágenes satelitales y deep learning.',
+        entity: 'DANE',
+        application: 'Dispositivos Móviles de Captura (DMC) y geocodificación sobre microdatos censales — base ideal para escalar IA en control de calidad.',
+      },
+      {
+        entity: 'MinSalud — SISPRO',
+        application: 'Repositorio nacional con historiales de prestación, aseguramiento y gasto en salud; base para analítica predictiva y vigilancia epidemiológica.',
       },
     ],
     playbooks: [
@@ -331,40 +306,29 @@ const SECTIONS = [
     ],
     examples: [
       {
+        entity: 'Registraduría Nacional',
+        application: 'Incorpora IA en procesos electorales, identificación y comunicación ciudadana; base ideal para ampliar videos educativos con avatares generativos.',
+        source: 'https://www.registraduria.gov.co/Registraduria-implementa-inteligencia-artificial-en-procesos-electorales-y-de.html',
+      },
+      {
         entity: 'Presidencia / Mincultura',
-        application: 'Campañas multilingües en castellano + lenguas nativas usando traducción asistida por IA.',
+        application: 'Campañas multilingües en castellano + lenguas nativas; oportunidad concreta para traducción asistida y doblaje con ElevenLabs o HeyGen.',
       },
       {
         entity: 'Superintendencias',
-        application: 'Videos con avatares IA explicando derechos del consumidor en redes.',
+        application: 'Mandato pedagógico frente al consumidor: IA generativa permite acelerar piezas explicativas sobre derechos en redes.',
       },
       {
-        entity: 'Gobernaciones',
-        application: 'Generación de infografías territoriales de rendición de cuentas.',
-      },
-      {
-        entity: 'Registraduría — campañas de cedulación',
-        application: 'Videos educativos cortos para jóvenes sobre cédula digital y elecciones, producidos con HeyGen en minutos.',
+        entity: 'Gobernaciones y alcaldías',
+        application: 'Infografías automáticas de rendición de cuentas con plantillas estándar en Canva + generación de texto asistida.',
       },
       {
         entity: 'MinEducación — Todos a Aprender',
-        application: 'Audiocuentos y material pedagógico en lenguas indígenas (wayuunaiki, nasa yuwe) con ElevenLabs + revisión humana.',
+        application: 'Producción de material pedagógico y audiocuentos en lenguas indígenas (wayuunaiki, nasa yuwe) con voces sintéticas + revisión humana.',
       },
       {
         entity: 'Secretarías de Salud territoriales',
-        application: 'Campañas masivas de vacunación con piezas adaptadas por grupo etario y dialecto regional generadas con Canva + DALL-E.',
-      },
-      {
-        entity: 'Banco de la República — Educación económica',
-        application: 'Piezas y videos explicativos sobre inflación, tasa de interés y moneda para audiencias amplias con tono Banrep.',
-      },
-      {
-        entity: 'Policía Nacional — Prevención',
-        application: 'Generación ágil de piezas de alerta ciudadana frente a modalidades de hurto y fraudes digitales.',
-      },
-      {
-        entity: 'Fontur — MinCIT',
-        application: 'Contenido turístico multilingüe (inglés, francés, portugués) para campañas internacionales "Colombia, el país de la belleza".',
+        application: 'Campañas masivas de vacunación con piezas adaptadas por grupo etario y dialecto regional generadas con Canva + modelos de imagen.',
       },
     ],
     playbooks: [
@@ -407,40 +371,31 @@ const SECTIONS = [
     ],
     examples: [
       {
-        entity: 'Contraloría General de la República',
-        application: 'Proyecto OCEANO y analítica avanzada sobre SECOP y SIIF Nación para riesgos fiscales.',
+        entity: 'Contraloría General — OCEANO',
+        application: 'Big Data + IA + cartografía digital para vigilar gasto público en tiempo real y generar alertas sobre SECOP y SIIF.',
+        source: 'https://www.contraloria.gov.co/en/w/contralor%C3%ADa-y-colombia-compra-eficiente-unen-esfuerzos-para-generar-alertas-e-identificar-riesgos-de-corrupci%C3%B3n-en-contrataci%C3%B3n-estatal',
       },
       {
-        entity: 'Procuraduría',
-        application: 'Análisis de declaraciones de bienes y rentas usando modelos de anomalías.',
+        entity: 'ADRES — Sistema SIA (AWS + Blend360)',
+        application: 'Audita recobros y cuentas médicas con IA; baja el ciclo de revisión de 3 meses a 14 días para agilizar pagos al sector.',
+        source: 'https://www.presidencia.gov.co/prensa/Paginas/Gobierno-implementa-sistema-con-inteligencia-artificial-para-auditar-cuentas-medicas-y-agilizar-pagos-260414.aspx',
       },
       {
-        entity: 'Auditoría General',
-        application: 'Revisión asistida por IA de rendiciones de cuenta de contralorías territoriales.',
-      },
-      {
-        entity: 'UIAF',
-        application: 'Detección de operaciones sospechosas de lavado con modelos de grafos sobre transacciones de entidades reporteantes.',
+        entity: 'Superfinanciera — Centro de Excelencia IA',
+        application: 'Supervisión digital con análisis de redes sobre entidades vigiladas; transforma el modelo tradicional de inspección.',
+        source: 'https://www.superfinanciera.gov.co/publicaciones/10115852/el-papel-de-la-inteligencia-artificial-en-la-transformacion-de-la-supervision-financiera/',
       },
       {
         entity: 'DIAN — Gestión de Riesgos',
-        application: 'Scoring de riesgo tributario por NIT cruzando declaraciones, factura electrónica y terceros informantes.',
+        application: 'La DIAN avanza en modelos de scoring de riesgo tributario apalancados en factura electrónica, declaraciones y terceros informantes.',
       },
       {
-        entity: 'Oficinas de control interno (territoriales)',
-        application: 'Aplicación del MECI con MindBridge para auditar ingresos municipales y detectar evasión predial.',
+        entity: 'UIAF — lucha antilavado',
+        application: 'La UIAF ha declarado inversión en IA y alianzas internacionales (UNITAR) para detección de operaciones sospechosas de lavado.',
       },
       {
-        entity: 'Fiscalía — Dirección Especializada Anticorrupción',
-        application: 'Análisis forense de correos, chats y repositorios documentales incautados con asistencia de LLM para construir líneas de tiempo.',
-      },
-      {
-        entity: 'ADRES',
-        application: 'Detección de pagos atípicos a prestadores de salud (recobros, UPC) con scoring que combina historial y patrones epidemiológicos.',
-      },
-      {
-        entity: 'Prosperidad Social',
-        application: 'Auditoría automatizada de focalización en transferencias monetarias (Renta Ciudadana, Jóvenes en Acción) cruzando SISBÉN y registros.',
+        entity: 'Oficinas de control interno territoriales',
+        application: 'Aplicación del MECI con herramientas tipo MindBridge para auditar ingresos municipales y detectar evasión predial.',
       },
     ],
     playbooks: [
@@ -483,40 +438,39 @@ const SECTIONS = [
     ],
     examples: [
       {
+        entity: 'Migración Colombia — Biomig',
+        application: '30 equipos biométricos en 4 aeropuertos internacionales: iris para nacionales y facial para extranjeros, agilizando el control migratorio.',
+        source: 'https://www.presidencia.gov.co/prensa/Paginas/Migracion-Colombia-modernizo-control-en-cuatro-aeropuertos-internacionales-del-pais-con-30-equipos-biometricos-231122.aspx',
+      },
+      {
+        entity: 'Cancillería — citas consulares',
+        application: 'Plataforma de citas basada en reconocimiento facial para consulados de Miami, Madrid, Barcelona y Valencia.',
+        source: 'https://www.cancilleria.gov.co/newsroom/news/cancilleria-moderniza-atencion-consular-nueva-plataforma-citas-basada-reconocimiento',
+      },
+      {
+        entity: 'Registraduría Nacional',
+        application: 'Biometría facial y dactilar + centro de analítica para detectar irregularidades en cedulación y procesos electorales.',
+        source: 'https://www.registraduria.gov.co/Registraduria-implementa-inteligencia-artificial-en-procesos-electorales-y-de.html',
+      },
+      {
         entity: 'Agencia Nacional Digital / MinTIC',
-        application: 'GOV.CO — Carpeta Ciudadana e interoperabilidad con IA para precargar formularios.',
+        application: 'GOV.CO y la Carpeta Ciudadana son la infraestructura ideal para precargar formularios con IA e interoperar trámites entre entidades.',
       },
       {
-        entity: 'DIAN',
-        application: 'Factura electrónica + IA para categorización automática y detección de evasión.',
+        entity: 'DIAN — factura electrónica',
+        application: 'Masificación de factura electrónica facilita la categorización automática y detección de evasión con IA sobre el flujo transaccional.',
       },
       {
-        entity: 'Registraduría',
-        application: 'Verificación biométrica y validación documental en cedulación.',
-      },
-      {
-        entity: 'Migración Colombia',
-        application: 'Check-in biométrico en aeropuertos (PCR facial) + clasificación automática de visados por tipo y riesgo.',
-      },
-      {
-        entity: 'Secretarías de Tránsito (SIM, RUNT)',
-        application: 'Validación automática de documentos para renovación de licencias y detección de suplantación con OCR + IA.',
+        entity: 'UGPP — aportes a seguridad social',
+        application: 'Cruce DIAN + PILA + nómina electrónica: caso claro donde la IA escala detección de inconsistencias que hoy se revisan manualmente.',
       },
       {
         entity: 'MinSalud — Mi Vacuna',
-        application: 'Automatización de carnets de vacunación y cruce con RUAF para detección de duplicados.',
+        application: 'Carnet digital de vacunación con cruce automático contra RUAF para evitar duplicados y mantener coberturas confiables.',
       },
       {
-        entity: 'Notarías — Supernotariado',
-        application: 'OCR + IA para lectura de escrituras antiguas manuscritas y trazabilidad de cadenas de propiedad en el folio de matrícula.',
-      },
-      {
-        entity: 'Ministerio de Trabajo — UGPP',
-        application: 'Detección de inconsistencias en aportes a seguridad social cruzando PILA, nómina electrónica y renta.',
-      },
-      {
-        entity: 'Cancillería — pasaportes',
-        application: 'Agendamiento inteligente y priorización de citas según disponibilidad de libretas y tiempos promedio por oficina.',
+        entity: 'Secretarías de Tránsito (RUNT)',
+        application: 'OCR + validación automática de documentos para renovación de licencias y detección de suplantación en trámites.',
       },
     ],
     playbooks: [
@@ -553,13 +507,25 @@ const PRINCIPLES = [
   },
   {
     icon: Scale,
-    title: 'CONPES 4144 — Política Nacional de IA',
-    desc: 'Marco colombiano que exige gobernanza, ética, gestión de riesgos y transparencia en sistemas de IA del Estado.',
+    title: 'CONPES 4144 / 2025 — Política Nacional de IA',
+    desc: 'Hoja de ruta nacional aprobada en febrero de 2025 (USD 479M, 6 ejes) sobre gobernanza, ética, gestión de riesgos y transparencia.',
+    source: 'https://www.dnp.gov.co/publicaciones/Planeacion/Paginas/conpes-4144-hoja-de-ruta-colombia-inteligencia-artificial-retos-actuales-transformacion-futura.aspx',
+  },
+  {
+    icon: Gavel,
+    title: 'Sentencia T-323 de 2024 — Corte Constitucional',
+    desc: 'Primer precedente que fija límites al uso de ChatGPT/IA por jueces: transparencia, supervisión humana y no discriminación como obligaciones.',
+    source: 'https://www.corteconstitucional.gov.co/relatoria/2024/T-323-24.htm',
   },
   {
     icon: ScrollText,
     title: 'Ley 2208 de 2022 — Transformación Digital',
     desc: 'Obliga a las entidades a adoptar tecnologías emergentes con enfoque de servicios centrados en el ciudadano.',
+  },
+  {
+    icon: Building2,
+    title: 'Acuerdo 003 de 2025 — Distrito de Bogotá',
+    desc: 'Primer marco distrital de gobernanza de IA en Colombia: transparencia, trazabilidad y supervisión humana sobre sistemas como Bogotá Te Escucha.',
   },
   {
     icon: Landmark,
@@ -570,76 +536,116 @@ const PRINCIPLES = [
 
 const FEATURED_CASES = [
   {
-    icon: Stethoscope,
+    icon: Scale,
     color: 'text-primary',
     bg: 'bg-primary/8',
     ring: 'ring-primary/20',
-    entity: 'ADRES',
-    area: 'Salud · Antifraude',
-    headline: 'Detección de recobros atípicos',
-    story: 'Modelos de anomalías aplicados sobre el flujo de recobros y UPC permiten priorizar revisiones y reducir filtraciones del aseguramiento.',
-    metric: 'Millones de registros',
-    metricLabel: 'analizados al 100%',
+    entity: 'Corte Constitucional',
+    area: 'Justicia · IA',
+    headline: 'PretorIA — selección de tutelas',
+    story: 'Sistema de IA que apoya la Sala de Selección en el análisis de más de 620.000 tutelas al año, identificando casos con relevancia constitucional.',
+    metric: '620K+',
+    metricLabel: 'tutelas/año tamizadas',
+    source: 'https://www.dejusticia.org/conoce-nuestra-investigacion-sobre-pretoria-la-tecnologia-que-incorpora-la-inteligencia-artificial-a-la-corte-constitucional/',
+    sourceLabel: 'Dejusticia',
   },
   {
-    icon: Truck,
+    icon: Shield,
     color: 'text-warm',
     bg: 'bg-warm/8',
     ring: 'ring-warm/20',
-    entity: 'Invías + ANI',
-    area: 'Infraestructura',
-    headline: 'Monitoreo de obras viales',
-    story: 'Visión computacional sobre imágenes satelitales y drones para verificar avance de obra, detección de sobrecostos y alertas geotécnicas.',
-    metric: '+27.000 km',
-    metricLabel: 'red vial nacional',
+    entity: 'Contraloría General',
+    area: 'Control fiscal',
+    headline: 'OCEANO sobre SECOP + SIIF',
+    story: 'Plataforma de analítica avanzada, Big Data e IA que vigila el gasto público y genera alertas tempranas de riesgos en contratación estatal.',
+    metric: 'Convenio',
+    metricLabel: 'con Colombia Compra Eficiente',
+    source: 'https://www.contraloria.gov.co/en/w/contralor%C3%ADa-y-colombia-compra-eficiente-unen-esfuerzos-para-generar-alertas-e-identificar-riesgos-de-corrupci%C3%B3n-en-contrataci%C3%B3n-estatal',
+    sourceLabel: 'CGR',
   },
   {
-    icon: GraduationCap,
+    icon: Stethoscope,
+    color: 'text-rose-600',
+    bg: 'bg-rose-50',
+    ring: 'ring-rose-200',
+    entity: 'ADRES',
+    area: 'Salud · Auditoría',
+    headline: 'SIA — auditoría de cuentas médicas',
+    story: 'Sistema con IA (AWS + Blend360) que audita recobros y cuentas médicas reduciendo de 3 meses a 14 días el tiempo de revisión y pago.',
+    metric: '3 meses → 14 días',
+    metricLabel: 'auditoría de cuentas',
+    source: 'https://www.presidencia.gov.co/prensa/Paginas/Gobierno-implementa-sistema-con-inteligencia-artificial-para-auditar-cuentas-medicas-y-agilizar-pagos-260414.aspx',
+    sourceLabel: 'Presidencia',
+  },
+  {
+    icon: Shield,
+    color: 'text-slate-700',
+    bg: 'bg-slate-100',
+    ring: 'ring-slate-200',
+    entity: 'Policía Nacional',
+    area: 'Seguridad ciudadana',
+    headline: 'IAPol / XCrime',
+    story: 'Plataforma sobre AWS con mapas de calor delictivo y modelos predictivos; reporta 99% de precisión y −29% en tiempos de respuesta operativa.',
+    metric: '−29%',
+    metricLabel: 'tiempo de respuesta',
+    source: 'https://aws.amazon.com/es/solutions/case-studies/policia-nacional-colombia/',
+    sourceLabel: 'AWS Case Study',
+  },
+  {
+    icon: Users,
     color: 'text-accent',
     bg: 'bg-accent/8',
     ring: 'ring-accent/20',
-    entity: 'MinEducación',
-    area: 'Educación',
-    headline: 'Alerta temprana deserción',
-    story: 'Modelos predictivos sobre SIMAT identifican estudiantes con alto riesgo de desertar y activan rutas de acompañamiento en IETDH y IES.',
-    metric: '10M+',
-    metricLabel: 'estudiantes SIMAT',
+    entity: 'Alcaldía de Bogotá',
+    area: 'Atención ciudadana',
+    headline: 'Bogotá Te Escucha (SDQS + IA)',
+    story: 'Canal distrital con IA para clasificar y responder PQRSD. Pasó de 17% a 97% de precisión en enrutamiento; marco de gobernanza por Acuerdo 003/2025.',
+    metric: '17% → 97%',
+    metricLabel: 'precisión de enrutamiento',
+    source: 'https://bogota.gov.co/mi-ciudad/gestion-publica/bogota-lanzo-canal-de-conversacion-y-atencion-ciudadania-con-ia',
+    sourceLabel: 'bogota.gov.co',
+  },
+  {
+    icon: Globe2,
+    color: 'text-indigo-600',
+    bg: 'bg-indigo-50',
+    ring: 'ring-indigo-200',
+    entity: 'Migración Colombia',
+    area: 'Fronteras',
+    headline: 'Biomig — control biométrico',
+    story: '30 equipos biométricos en 4 aeropuertos internacionales: iris para nacionales y facial para extranjeros, agilizando el control migratorio.',
+    metric: '4 aeropuertos',
+    metricLabel: 'con 30 equipos Biomig',
+    source: 'https://www.presidencia.gov.co/prensa/Paginas/Migracion-Colombia-modernizo-control-en-cuatro-aeropuertos-internacionales-del-pais-con-30-equipos-biometricos-231122.aspx',
+    sourceLabel: 'Presidencia',
   },
   {
     icon: Leaf,
     color: 'text-emerald-700',
     bg: 'bg-emerald-100',
     ring: 'ring-emerald-200',
-    entity: 'IDEAM + MinAmbiente',
-    area: 'Ambiente',
-    headline: 'Alerta temprana climática',
-    story: 'Redes neuronales sobre series hidrometeorológicas anticipan fenómenos El Niño/La Niña y apoyan planes de contingencia departamentales.',
-    metric: '32 dptos',
-    metricLabel: 'cobertura operativa',
+    entity: 'IDEAM',
+    area: 'Hidrología · Clima',
+    headline: 'HydroViewer Colombia',
+    story: 'Pronóstico hidrológico sobre 51 simulaciones con horizonte de 15 días (alianza IDEAM / CIAT / SERVIR-Amazonía) para gestión del recurso hídrico.',
+    metric: '15 días',
+    metricLabel: 'horizonte de pronóstico',
+    source: 'https://ideam.geoglows.org/apps/hydroviewer-colombia/user-manual/',
+    sourceLabel: 'IDEAM',
   },
   {
-    icon: Banknote,
-    color: 'text-secondary',
-    bg: 'bg-secondary/8',
-    ring: 'ring-secondary/20',
-    entity: 'DIAN',
-    area: 'Tributario',
-    headline: 'Scoring de riesgo tributario',
-    story: 'Factura electrónica + declaraciones + terceros informantes alimentan modelos que priorizan auditorías con mayor retorno fiscal.',
-    metric: '+$200 bn',
-    metricLabel: 'recaudo anual',
-  },
-  {
-    icon: Shield,
-    color: 'text-primary',
-    bg: 'bg-primary/8',
-    ring: 'ring-primary/20',
-    entity: 'Contraloría General',
-    area: 'Control fiscal',
-    headline: 'OCEANO sobre SECOP',
-    story: 'Analítica masiva sobre contratación estatal identifica patrones de riesgo de corrupción que escapan al muestreo tradicional.',
-    metric: '6M+',
-    metricLabel: 'contratos SECOP',
+    icon: BarChart3,
+    color: 'text-violet-600',
+    bg: 'bg-violet-50',
+    ring: 'ring-violet-200',
+    entity: 'Superfinanciera',
+    area: 'Supervisión financiera',
+    headline: 'Centro de Excelencia en IA',
+    story: 'Hub de supervisión digital y análisis de redes sobre entidades vigiladas; impulsa la transformación del modelo tradicional de inspección.',
+    metric: '2026',
+    metricLabel: 'operación Centro IA',
+    source: 'https://www.superfinanciera.gov.co/publicaciones/10115852/el-papel-de-la-inteligencia-artificial-en-la-transformacion-de-la-supervision-financiera/',
+    sourceLabel: 'SFC',
   },
 ]
 
@@ -824,13 +830,13 @@ export default function SectorPublico() {
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-warm/10 text-warm px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-warm/15">
             <Zap className="w-3 h-3" />
-            Historias que ya están en marcha
+            Casos verificados con fuente pública
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-text tracking-tight mb-2">
-            Casos emblemáticos del Estado colombiano
+            La IA ya opera en el Estado colombiano
           </h2>
           <p className="text-text-light text-sm max-w-2xl mx-auto">
-            Entidades que ya aplican IA en operaciones reales — no pilotos de laboratorio. Úsalos como referencia para tu propia hoja de ruta.
+            Ocho iniciativas con evidencia oficial: cada tarjeta cita la fuente. No son pilotos de laboratorio, son sistemas en operación.
           </p>
         </div>
 
@@ -840,7 +846,7 @@ export default function SectorPublico() {
             return (
               <div
                 key={c.entity}
-                className={`group relative bg-surface rounded-2xl border border-border p-5 hover:shadow-lg hover:-translate-y-1 hover:border-primary/30 transition-all duration-300`}
+                className={`group relative bg-surface rounded-2xl border border-border p-5 hover:shadow-lg hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 flex flex-col`}
               >
                 <div className="flex items-start gap-3 mb-4">
                   <div className={`w-12 h-12 ${c.bg} rounded-xl flex items-center justify-center shrink-0 ring-4 ${c.ring} ring-offset-0`}>
@@ -854,11 +860,12 @@ export default function SectorPublico() {
                       {c.entity}
                     </div>
                   </div>
+                  <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-1" title="Verificado con fuente pública" />
                 </div>
                 <h3 className="font-display font-semibold text-text text-base leading-tight tracking-tight mb-2">
                   {c.headline}
                 </h3>
-                <p className="text-xs text-text-light leading-relaxed mb-4">
+                <p className="text-xs text-text-light leading-relaxed mb-4 flex-1">
                   {c.story}
                 </p>
                 <div className={`flex items-baseline gap-2 pt-3 border-t border-border/60`}>
@@ -867,6 +874,17 @@ export default function SectorPublico() {
                   </div>
                   <div className="text-[11px] text-text-lighter">{c.metricLabel}</div>
                 </div>
+                {c.source && (
+                  <a
+                    href={c.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-1.5 text-[10px] font-semibold text-text-lighter hover:text-primary transition-colors no-underline"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    Fuente: {c.sourceLabel}
+                  </a>
+                )}
               </div>
             )
           })}
@@ -936,9 +954,25 @@ export default function SectorPublico() {
                       >
                         <div className="flex items-start gap-2">
                           <Building2 className={`w-3.5 h-3.5 ${section.color} mt-0.5 shrink-0`} />
-                          <div>
-                            <div className="font-semibold text-text text-sm">{ex.entity}</div>
+                          <div className="min-w-0 flex-1">
+                            <div className="flex items-center gap-1.5 flex-wrap">
+                              <span className="font-semibold text-text text-sm">{ex.entity}</span>
+                              {ex.source && (
+                                <CheckCircle2 className="w-3 h-3 text-accent shrink-0" title="Caso verificado con fuente pública" />
+                              )}
+                            </div>
                             <div className="text-xs text-text-light leading-relaxed">{ex.application}</div>
+                            {ex.source && (
+                              <a
+                                href={ex.source}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 mt-1 text-[10px] font-semibold text-text-lighter hover:text-primary transition-colors no-underline"
+                              >
+                                <ExternalLink className="w-2.5 h-2.5" />
+                                Ver fuente
+                              </a>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -1123,23 +1157,34 @@ export default function SectorPublico() {
             Cualquier uso de IA en el sector público debe alinearse con el marco legal colombiano y los principios
             éticos internacionales. Estos son los cuatro pilares:
           </p>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {PRINCIPLES.map((p) => {
               const PIcon = p.icon
               return (
                 <div
                   key={p.title}
-                  className="bg-white/10 rounded-xl p-5 backdrop-blur-sm border border-white/10 hover:bg-white/15 hover:border-white/20 transition-all duration-300"
+                  className="bg-white/10 rounded-xl p-5 backdrop-blur-sm border border-white/10 hover:bg-white/15 hover:border-white/20 transition-all duration-300 flex flex-col"
                 >
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-3 flex-1">
                     <div className="w-9 h-9 bg-white/15 rounded-lg flex items-center justify-center shrink-0">
                       <PIcon className="w-4.5 h-4.5 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-base mb-1 tracking-tight">{p.title}</h3>
-                      <p className="text-white/75 text-sm leading-relaxed">{p.desc}</p>
+                      <h3 className="font-semibold text-sm mb-1 tracking-tight leading-tight">{p.title}</h3>
+                      <p className="text-white/75 text-xs leading-relaxed">{p.desc}</p>
                     </div>
                   </div>
+                  {p.source && (
+                    <a
+                      href={p.source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-1 text-[10px] font-semibold text-white/60 hover:text-white transition-colors no-underline"
+                    >
+                      <ExternalLink className="w-2.5 h-2.5" />
+                      Fuente oficial
+                    </a>
+                  )}
                 </div>
               )
             })}
