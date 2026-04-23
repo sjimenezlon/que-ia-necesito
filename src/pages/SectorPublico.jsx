@@ -41,12 +41,12 @@ const SECTIONS = [
       },
       {
         entity: 'Alcaldía de Bogotá — "Bogotá Te Escucha" (SDQS + IA)',
-        application: 'Canal distrital con IA generativa para clasificar PQRSD; pasó de 17% a 97% de precisión en enrutamiento. Acuerdo 003 de 2025 como marco de gobernanza.',
+        application: 'Canal distrital con IA generativa para clasificar PQRSD; pasó de 17% (2022) a 97% (2023) de precisión en enrutamiento, con 71.423 requerimientos identificados en 26 meses. El Acuerdo 003/2025 de la Comisión Distrital y el Acuerdo 1017/2025 del Concejo fijaron después el marco de gobernanza distrital.',
         source: 'https://bogota.gov.co/mi-ciudad/gestion-publica/bogota-lanzo-canal-de-conversacion-y-atencion-ciudadania-con-ia',
       },
       {
         entity: 'Sena — Asesora virtual "ISA"',
-        application: 'Chatbot oficial (chatbotisa.sena.edu.co) atiende dudas sobre Sofía Plus, certificados, formación y estado del proceso las 24 horas.',
+        application: 'Chatbot oficial de la Dirección Administrativa y Financiera del SENA (chatbotisa.sena.edu.co), orientado a trámites internos. Para atención ciudadana general el SENA usa el chat institucional en sena.edu.co.',
         source: 'https://chatbotisa.sena.edu.co/',
       },
       {
@@ -71,7 +71,7 @@ const SECTIONS = [
           'La automatización radica en el SGD (Orfeo, SAIA, GESDOC) y notifica al responsable con borrador de respuesta en Teams/Slack',
           'Panel semanal en Looker o Power BI con temas recurrentes para escalar a política pública',
         ],
-        impact: 'Reducción 60–70% del tiempo de triage; trazabilidad del término de 15 días hábiles con SLA visibles.',
+        impact: 'Reducción 60–70% del tiempo de triage; trazabilidad del término de Ley 1755/2015 con SLA visibles.',
       },
       {
         title: 'Chatbot normativo para sede electrónica',
@@ -103,7 +103,7 @@ const SECTIONS = [
     examples: [
       {
         entity: 'Corte Constitucional — PretorIA',
-        application: 'Sistema de IA que apoya la Sala de Selección en el tamizaje de más de 620.000 tutelas anuales, identificando casos con relevancia constitucional.',
+        application: 'Sistema de IA que apoyó el tamizaje de más de 620.000 tutelas (cifra de referencia 2019) en la Sala de Selección, identificando casos con relevancia constitucional. Hito histórico; estado operativo actual sin confirmación pública en 2026.',
         source: 'https://www.dejusticia.org/conoce-nuestra-investigacion-sobre-pretoria-la-tecnologia-que-incorpora-la-inteligencia-artificial-a-la-corte-constitucional/',
       },
       {
@@ -112,13 +112,13 @@ const SECTIONS = [
         source: 'https://www.corteconstitucional.gov.co/relatoria/2024/T-323-24.htm',
       },
       {
-        entity: 'DNP + MinTIC — CONPES 4144',
-        application: 'Política Nacional de IA (feb 2025), COP $479.000 millones (~USD 112M) con más de 100 acciones a 2030 y 6 ejes estratégicos.',
+        entity: 'MinTIC · DAPRE · MinCiencias · DNP — CONPES 4144',
+        application: 'Política Nacional de IA (14-feb-2025), COP $479.273 millones con 106 acciones a 2030 distribuidas en 6 ejes estratégicos.',
         source: 'https://www.dnp.gov.co/publicaciones/Planeacion/Paginas/conpes-4144-hoja-de-ruta-colombia-inteligencia-artificial-retos-actuales-transformacion-futura.aspx',
       },
       {
         entity: 'DNP — Catastro multipropósito',
-        application: 'Uso de IA y deep learning sobre Sentinel-2 para apoyar actualización catastral y análisis territorial.',
+        application: 'Piloto con IA (alianza PNUD) sobre ortoimágenes para detectar vías, construcciones, cercas y manzanas, con precisión 70–94% que apoya la actualización catastral.',
         source: 'https://www.dnp.gov.co/Prensa_/Noticias/Paginas/con-inteligencia-artificial-el-dnp-apoya-el-proceso-de-actualizacion-del-catastro-multiproposito.aspx',
       },
       {
@@ -171,7 +171,7 @@ const SECTIONS = [
     examples: [
       {
         entity: 'Contraloría General — OCEANO',
-        application: 'Plataforma con Big Data, analítica predictiva e IA que vigila el gasto público y genera alertas tempranas de riesgos en contratación estatal.',
+        application: 'Plataforma con Big Data, analítica predictiva e IA que vigila el gasto público cruzando SECOP I/II, SIIF y otras fuentes, generando alertas tempranas de riesgos en contratación estatal.',
         source: 'https://www.contraloria.gov.co/en/w/contralor%C3%ADa-y-colombia-compra-eficiente-unen-esfuerzos-para-generar-alertas-e-identificar-riesgos-de-corrupci%C3%B3n-en-contrataci%C3%B3n-estatal',
       },
       {
@@ -241,9 +241,14 @@ const SECTIONS = [
         source: 'https://ideam.geoglows.org/apps/hydroviewer-colombia/user-manual/',
       },
       {
-        entity: 'IGAC — catastro multipropósito',
-        application: 'ColSMART: deep learning sobre imágenes Sentinel-2 con precisión 70-94% para apoyar actualización catastral nacional.',
+        entity: 'IGAC — ColSMART',
+        application: 'Clasificación automatizada de cobertura sobre imágenes Sentinel-2 + Corine Land Cover usando ArcGIS (Esri) para apoyar la actualización catastral.',
         source: 'https://www.igac.gov.co/noticias/inteligencia-artificial-para-decodificar-imagenes-satelitales-y-nuevas-tecnologias-del-catastro-temas-principales-del-igac-embdata-tech',
+      },
+      {
+        entity: 'DNP + PNUD — piloto IA catastral',
+        application: 'Detección automatizada de vías, construcciones, cercas, muros y manzanas sobre ortoimágenes con precisión del 70–94% para agilizar la actualización del catastro multipropósito.',
+        source: 'https://www.dnp.gov.co/Prensa_/Noticias/Paginas/con-inteligencia-artificial-el-dnp-apoya-el-proceso-de-actualizacion-del-catastro-multiproposito.aspx',
       },
       {
         entity: 'Secretaría de Movilidad Bogotá',
@@ -252,7 +257,7 @@ const SECTIONS = [
       },
       {
         entity: 'Fiscalía General — Fiscal Watson',
-        application: 'Sistema con IBM Watson que correlaciona más de 13 millones de denuncias del SPOA; identificó un depredador sexual en Tolima.',
+        application: 'Implementación pionera (2018) con IBM Watson que correlaciona ~13 millones de denuncias del SPOA; identificó en Tolima 9 casos asociados al mismo autor. Hito histórico de analítica criminal asistida por IA en Colombia.',
         source: 'https://www.elpais.com.co/judicial/watson-el-investigador-inteligente-con-el-que-la-fiscalia-busca-cerrarle-el-paso-al-crimen.html',
       },
       {
@@ -262,7 +267,7 @@ const SECTIONS = [
       },
       {
         entity: 'SIATA — Medellín',
-        application: '~1.200 sensores + radares meteorológicos para alertas tempranas de inundaciones, deslizamientos y calidad del aire en el Valle de Aburrá.',
+        application: '~300 sensores en tierra, 148 cámaras, radar meteorológico y radiómetro (23 tipos de sensores en redes pluviométrica, meteorológica, de nivel, humedad y acelerográfica) para alertas tempranas de inundaciones, deslizamientos y calidad del aire en el Valle de Aburrá.',
         source: 'https://siata.gov.co/portalWeb',
       },
       {
@@ -356,7 +361,7 @@ const SECTIONS = [
           'Redactar guion en Claude o ChatGPT siguiendo el tono institucional (200–300 palabras)',
           'Generar voz con ElevenLabs en español, wayuunaiki, criollo sanandresano u otro (requiere validación por hablante nativo)',
           'Crear video con HeyGen o Synthesia usando avatar oficial de la entidad y el audio generado',
-          'Agregar subtítulos SDH con CapCut para accesibilidad (Ley 1618)',
+          'Agregar subtítulos SDH con CapCut para accesibilidad (Ley 1618/2013 + reglamentación MinTIC/INSOR)',
         ],
         impact: 'Campañas inclusivas con el 10% del costo de producción tradicional.',
       },
@@ -380,12 +385,12 @@ const SECTIONS = [
     examples: [
       {
         entity: 'Contraloría General — OCEANO',
-        application: 'Big Data + IA + cartografía digital para vigilar gasto público en tiempo real y generar alertas sobre SECOP y SIIF.',
+        application: 'Big Data + analítica + IA para vigilar el gasto público cruzando SECOP I/II y SIIF con alertas tempranas sobre contratación estatal.',
         source: 'https://www.contraloria.gov.co/en/w/contralor%C3%ADa-y-colombia-compra-eficiente-unen-esfuerzos-para-generar-alertas-e-identificar-riesgos-de-corrupci%C3%B3n-en-contrataci%C3%B3n-estatal',
       },
       {
         entity: 'ADRES — Sistema SIA (AWS + Blend360)',
-        application: 'Audita recobros y cuentas médicas con IA; baja el ciclo de revisión de 3 meses a 14 días para agilizar pagos al sector.',
+        application: 'Sistema con IA que audita reclamaciones (inicialmente SOAT / accidentes de tránsito, con proyección a cuentas médicas); reduce el ciclo de revisión de más de 3 meses a menos de 2 semanas. Anuncio 14-abr-2026; operación plena desde mayo 2026 con tope inicial de 1.000 casos/día.',
         source: 'https://www.presidencia.gov.co/prensa/Paginas/Gobierno-implementa-sistema-con-inteligencia-artificial-para-auditar-cuentas-medicas-y-agilizar-pagos-260414.aspx',
       },
       {
@@ -447,7 +452,7 @@ const SECTIONS = [
     examples: [
       {
         entity: 'Migración Colombia — Biomig',
-        application: '30 equipos biométricos en 4 aeropuertos internacionales: iris para nacionales y facial para extranjeros, agilizando el control migratorio.',
+        application: 'Lanzamiento con 30 equipos biométricos en 4 aeropuertos internacionales (2023); a 2026 se registra iris para nacionales en 5 aeropuertos (El Dorado, JMC Rionegro, Cartagena, Barranquilla, Cali) y facial para extranjeros.',
         source: 'https://www.presidencia.gov.co/prensa/Paginas/Migracion-Colombia-modernizo-control-en-cuatro-aeropuertos-internacionales-del-pais-con-30-equipos-biometricos-231122.aspx',
       },
       {
@@ -516,7 +521,7 @@ const PRINCIPLES = [
   {
     icon: Scale,
     title: 'CONPES 4144 / 2025 — Política Nacional de IA',
-    desc: 'Hoja de ruta nacional aprobada el 14-feb-2025 (COP $479.000 M, 6 ejes, 100+ acciones a 2030) sobre gobernanza, ética, riesgos y transparencia.',
+    desc: 'Hoja de ruta nacional aprobada el 14-feb-2025 (COP $479.273 M · 6 ejes · 106 acciones a 2030) liderada por MinTIC, DAPRE, MinCiencias y DNP: gobernanza, ética, riesgos y transparencia.',
     source: 'https://www.dnp.gov.co/publicaciones/Planeacion/Paginas/conpes-4144-hoja-de-ruta-colombia-inteligencia-artificial-retos-actuales-transformacion-futura.aspx',
   },
   {
@@ -527,13 +532,15 @@ const PRINCIPLES = [
   },
   {
     icon: ScrollText,
-    title: 'Ley 2208 de 2022 — Transformación Digital',
-    desc: 'Obliga a las entidades a adoptar tecnologías emergentes con enfoque de servicios centrados en el ciudadano.',
+    title: 'Ley 1955/2019 (art. 147) + Decreto 767/2022 — Gobierno Digital',
+    desc: 'Marco de política de Gobierno Digital y adopción de tecnologías emergentes (4RI). Reglamentado por Decreto 1263/2022. Obliga a entidades públicas a integrar servicios centrados en el ciudadano.',
+    source: 'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=190206',
   },
   {
     icon: Building2,
-    title: 'Acuerdo 003 de 2025 — Distrito de Bogotá',
-    desc: 'Primer marco distrital de gobernanza de IA en Colombia: transparencia, trazabilidad y supervisión humana sobre sistemas como Bogotá Te Escucha.',
+    title: 'Acuerdo 003 de 2025 + Acuerdo 1017 de 2025 — Distrito de Bogotá',
+    desc: 'Marco distrital de gobernanza de IA: el Acuerdo 003 (26-dic-2025, Comisión Distrital de Transformación Digital) define el ciclo de vida de sistemas IA con enfoque PHVA; el Acuerdo 1017 (Concejo de Bogotá) fija principios de uso ético y responsable.',
+    source: 'https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=191996',
   },
   {
     icon: Landmark,
@@ -551,9 +558,9 @@ const FEATURED_CASES = [
     entity: 'Corte Constitucional',
     area: 'Justicia · IA',
     headline: 'PretorIA — selección de tutelas',
-    story: 'Sistema de IA que apoya la Sala de Selección en el análisis de más de 620.000 tutelas al año, identificando casos con relevancia constitucional.',
-    metric: '620K+',
-    metricLabel: 'tutelas/año tamizadas',
+    story: 'Sistema de IA que apoyó el tamizaje de la Sala de Selección sobre el volumen de tutelas que llegan a la Corte (620.242 en 2019). Hito histórico; estado operativo actual sin confirmación pública en 2026.',
+    metric: '620.242',
+    metricLabel: 'tutelas tamizadas (2019)',
     source: 'https://www.dejusticia.org/conoce-nuestra-investigacion-sobre-pretoria-la-tecnologia-que-incorpora-la-inteligencia-artificial-a-la-corte-constitucional/',
     sourceLabel: 'Dejusticia',
   },
@@ -578,10 +585,10 @@ const FEATURED_CASES = [
     ring: 'ring-rose-200',
     entity: 'ADRES',
     area: 'Salud · Auditoría',
-    headline: 'SIA — auditoría de cuentas médicas',
-    story: 'Sistema con IA (AWS + Blend360) que audita recobros y cuentas médicas reduciendo de 3 meses a 14 días el tiempo de revisión y pago.',
-    metric: '3 meses → 14 días',
-    metricLabel: 'auditoría de cuentas',
+    headline: 'SIA — auditoría de reclamaciones',
+    story: 'Sistema con IA (AWS + Blend360) para auditar reclamaciones SOAT inicialmente, con proyección a cuentas médicas. Reduce el ciclo de revisión y pago de más de 3 meses a menos de 2 semanas. Operación plena desde mayo 2026.',
+    metric: '3 meses → 2 sem.',
+    metricLabel: 'ciclo auditoría SOAT',
     source: 'https://www.presidencia.gov.co/prensa/Paginas/Gobierno-implementa-sistema-con-inteligencia-artificial-para-auditar-cuentas-medicas-y-agilizar-pagos-260414.aspx',
     sourceLabel: 'Presidencia',
   },
@@ -593,9 +600,9 @@ const FEATURED_CASES = [
     entity: 'Policía Nacional',
     area: 'Seguridad ciudadana',
     headline: 'IAPol / XCrime',
-    story: 'Plataforma sobre AWS con mapas de calor delictivo y modelos predictivos; reporta 99% de precisión y −29% en tiempos de respuesta operativa.',
+    story: 'Plataforma sobre AWS (Nuvu + TD Synnex) con mapas de calor delictivo y modelos predictivos. Case study AWS reporta −29% en tiempo de respuesta; la variante Partner (Nuvu) reporta +89% de precisión y −49% en tiempo de respuesta.',
     metric: '−29%',
-    metricLabel: 'tiempo de respuesta',
+    metricLabel: 'tiempo respuesta · AWS',
     source: 'https://aws.amazon.com/es/solutions/case-studies/policia-nacional-colombia/',
     sourceLabel: 'AWS Case Study',
   },
@@ -607,7 +614,7 @@ const FEATURED_CASES = [
     entity: 'Alcaldía de Bogotá',
     area: 'Atención ciudadana',
     headline: 'Bogotá Te Escucha (SDQS + IA)',
-    story: 'Canal distrital con IA para clasificar y responder PQRSD. Pasó de 17% a 97% de precisión en enrutamiento; marco de gobernanza por Acuerdo 003/2025.',
+    story: 'Canal distrital con IA para clasificar y responder PQRSD. De 17% (2022) a 97% (2023) de precisión; gobernanza distrital por Acuerdos 003 y 1017 de 2025.',
     metric: '17% → 97%',
     metricLabel: 'precisión de enrutamiento',
     source: 'https://bogota.gov.co/mi-ciudad/gestion-publica/bogota-lanzo-canal-de-conversacion-y-atencion-ciudadania-con-ia',
@@ -621,9 +628,9 @@ const FEATURED_CASES = [
     entity: 'Migración Colombia',
     area: 'Fronteras',
     headline: 'Biomig — control biométrico',
-    story: '30 equipos biométricos en 4 aeropuertos internacionales: iris para nacionales y facial para extranjeros, agilizando el control migratorio.',
-    metric: '4 aeropuertos',
-    metricLabel: 'con 30 equipos Biomig',
+    story: 'Lanzamiento en 2023 con 30 equipos biométricos en 4 aeropuertos; a 2026 Biomig con registro de iris opera en 5 aeropuertos internacionales para nacionales, y reconocimiento facial para extranjeros.',
+    metric: '5 aeropuertos',
+    metricLabel: 'Biomig iris · nacionales',
     source: 'https://www.presidencia.gov.co/prensa/Paginas/Migracion-Colombia-modernizo-control-en-cuatro-aeropuertos-internacionales-del-pais-con-30-equipos-biometricos-231122.aspx',
     sourceLabel: 'Presidencia',
   },
@@ -1396,7 +1403,7 @@ const RED_FLAGS = [
     title: 'Copiar citas de IA sin verificar',
     why: 'Los modelos inventan números de sentencia, páginas de libros, artículos de ley. Ha habido jueces y abogados sancionados por citar jurisprudencia inexistente generada por IA.',
     instead: 'Toda cita jurídica o bibliográfica debe verificarse contra la fuente original antes de firmar o publicar.',
-    norm: 'Deber de diligencia · C.D.U.',
+    norm: 'Deber de diligencia · CGD (Ley 1952/2019)',
   },
   {
     title: 'Focalizar beneficiarios sin auditoría de sesgos',
@@ -1426,7 +1433,7 @@ const RED_FLAGS = [
     title: 'Omitir la IA en el expediente administrativo',
     why: 'Si un acto administrativo se apoyó en IA y no se documenta qué sistema, con qué datos y quién validó, el expediente incumple el deber de motivación. Nulidad probable.',
     instead: 'En el expediente registra: herramienta usada, versión, datos de entrada, prompt, validación humana y responsable.',
-    norm: 'Art. 42 Ley 1437/2011 · CPACA',
+    norm: 'Arts. 7, 35 y 42 Ley 1437/2011 · CPACA',
   },
 ]
 
@@ -1991,10 +1998,10 @@ export default function SectorPublico() {
           {/* Metric strip — el estado de la IA pública */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
             {[
-              { v: '620K+', l: 'tutelas/año', s: 'PretorIA' },
-              { v: '3m→14d', l: 'auditoría cuentas', s: 'ADRES SIA' },
+              { v: '620K', l: 'tutelas tamizadas', s: 'PretorIA (2019)' },
+              { v: '3m → 2sem', l: 'auditoría SOAT', s: 'ADRES SIA (may-26)' },
               { v: '17→97%', l: 'precisión PQRSD', s: 'Bogotá Te Escucha' },
-              { v: '$479 mil M', l: 'COP · CONPES 4144', s: 'Política Nal. IA' },
+              { v: '$479,3 mil M', l: 'COP · CONPES 4144', s: '106 acciones a 2030' },
             ].map((m, i) => (
               <div
                 key={i}
@@ -3368,7 +3375,7 @@ export default function SectorPublico() {
 
         <div className="mt-8 text-center">
           <p className="text-xs text-text-lighter max-w-2xl mx-auto">
-            Referencia clave: <span className="font-semibold text-text">Sentencia T-323 de 2024</span> · <span className="font-semibold text-text">Ley 1581 de 2012</span> · <span className="font-semibold text-text">CONPES 4144 de 2025</span> · <span className="font-semibold text-text">Ley 1437 de 2011 (CPACA)</span>.
+            Referencia clave: <span className="font-semibold text-text">Sentencia T-323 de 2024</span> · <span className="font-semibold text-text">Ley 1581 de 2012</span> · <span className="font-semibold text-text">CONPES 4144 de 2025</span> · <span className="font-semibold text-text">Ley 1437 de 2011 (CPACA)</span> · <span className="font-semibold text-text">Ley 1952 de 2019 (CGD)</span>.
           </p>
         </div>
       </section>
