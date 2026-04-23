@@ -1,4 +1,4 @@
-import { Bot, Heart, Search, GitCompare, Compass, Sparkles } from 'lucide-react'
+import { Bot, Heart, Search, GitCompare, Compass, Sparkles, ShieldCheck, ExternalLink, AlertCircle } from 'lucide-react'
 
 const features = [
   { icon: Search, color: 'text-primary', bg: 'bg-primary/8', title: 'Busca por necesidad', desc: 'Escribe lo que quieres hacer en lenguaje natural y encuentra la herramienta ideal.' },
@@ -70,11 +70,60 @@ export default function About() {
         </ul>
       </div>
 
+      {/* Disclaimer de uso ético */}
+      <div className="bg-accent/5 border border-accent/20 rounded-2xl p-6 md:p-8 mb-10">
+        <div className="flex items-start gap-3 mb-3">
+          <div className="w-9 h-9 bg-accent/10 rounded-lg flex items-center justify-center shrink-0">
+            <ShieldCheck className="w-5 h-5 text-accent" />
+          </div>
+          <div>
+            <h2 className="text-lg font-bold text-text tracking-tight mb-1">Uso responsable y ético</h2>
+            <p className="text-xs text-text-lighter">Disclaimer · lee antes de aplicar cualquier recomendación</p>
+          </div>
+        </div>
+        <div className="space-y-3 text-sm text-text-light leading-relaxed">
+          <p>
+            Esta guía es orientativa y educativa. Las decisiones sobre qué herramienta usar, qué datos cargar en ella
+            y cómo aplicar los resultados son <span className="font-semibold text-text">responsabilidad exclusiva de cada
+            persona y de la organización a la que pertenece</span>.
+          </p>
+          <p>
+            El uso ético implica: verificar siempre la información generada, no cargar datos personales o reservados en
+            servicios públicos sin las garantías adecuadas, respetar la normativa vigente (habeas data, propiedad
+            intelectual, transparencia algorítmica) y mantener la supervisión humana sobre decisiones que afectan a
+            terceros.
+          </p>
+          <p className="text-text-lighter text-xs italic flex items-start gap-2">
+            <AlertCircle className="w-3.5 h-3.5 shrink-0 mt-0.5 text-warm" />
+            <span>Ni el autor ni esta guía se hacen responsables del uso que se dé a las herramientas aquí listadas.</span>
+          </p>
+        </div>
+      </div>
+
       <div className="text-center pt-4">
-        <p className="text-text-light flex items-center justify-center gap-1.5 font-medium">
-          Hecho con <Heart className="w-4 h-4 text-secondary fill-secondary" /> por Santiago Jiménez Londoño
+        <p className="text-text-light flex items-center justify-center gap-1.5 font-medium flex-wrap">
+          Hecho con <Heart className="w-4 h-4 text-secondary fill-secondary" /> por{' '}
+          <a
+            href="https://sjimenezlon.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-primary/80 no-underline inline-flex items-center gap-1 font-semibold"
+          >
+            Santiago Jiménez Londoño
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
         </p>
-        <p className="text-text-lighter text-sm mt-2">Abril 2026</p>
+        <p className="text-text-lighter text-sm mt-2">
+          Abril 2026 ·{' '}
+          <a
+            href="https://sjimenezlon.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-primary/80 no-underline"
+          >
+            sjimenezlon.co
+          </a>
+        </p>
       </div>
     </div>
   )

@@ -976,6 +976,45 @@ const PROMPTS_LIBRARY = [
         body: 'Evalúa si las garantías exigidas en el pliego (cumplimiento, calidad, salarios, responsabilidad civil) son proporcionales al objeto y valor del contrato. Compara con Decreto 1082 y jurisprudencia reciente del Consejo de Estado. Marca excesos y defectos.',
         tool: 'cocounsel',
       },
+      {
+        title: 'Estudio de mercado CCE (obra / bien / servicio)',
+        body: `Actúa como consultor senior experto en contratación estatal colombiana. Tu PRODUCTO es un Estudio de Mercado alineado a la Guía para la Elaboración de Estudios de Mercado de Colombia Compra Eficiente.
+
+## DATOS DEL PROYECTO (completa antes de correr)
+- Objeto: [DESCRIBE]
+- Presupuesto oficial estimado: [VALOR COP]
+- Plazo de ejecución: [MESES]
+- Ubicación: [MUNICIPIO, DEPARTAMENTO]
+- Códigos UNSPSC: [LISTA]
+- Actividades principales: [LISTA]
+- Estructura AIU propuesta: A [%] · I [%] · U [%]
+
+## CONTEXTO MACROECONÓMICO (reemplaza con los datos oficiales del año vigente)
+- SMLMV + auxilio de transporte: [VALOR]
+- Factor prestacional aplicable: [%]
+- Inflación IPC anual: [%]
+- Proyección PIB: [%]
+- Tasa de desempleo: [%]
+- ICOCIV / índice sectorial: [%]
+
+## PRODUCTO ESPERADO
+Informe técnico-jurídico con:
+1. Análisis del sector y la región — comportamiento del subsector frente al PIB vigente.
+2. Análisis económico — impacto del SMLMV e IPC sobre los APU; justificación de si el presupuesto oficial responde al mercado.
+3. Análisis de riesgos — relación entre porcentaje de imprevistos y variables macro.
+4. Justificación del AIU — si los porcentajes propuestos cubren los costos indirectos reales.
+5. Verificación UNSPSC — coincidencia de códigos con el objeto y las actividades.
+
+## REGLAS
+- Tono profesional, técnico, jurídico y económico; lenguaje de pliegos de condiciones colombianos.
+- Sólo datos verificables. Si un dato no se sustenta en las fuentes cargadas, dilo explícitamente.
+- Cita la normativa aplicable (Ley 80, Ley 1150, Decreto 1082, circulares CCE vigentes) con artículo.
+- No inventes cifras oficiales (SMLMV, IPC, PIB se toman de DANE / BanRep del año en curso).
+
+## FUENTES A CARGAR
+Estudio previo · presupuesto oficial · APU · normativa y circulares CCE · Guía CCE de estudios de mercado.`,
+        tool: 'claude',
+      },
     ],
   },
   {
@@ -1929,11 +1968,25 @@ export default function SectorPublico() {
             <br className="hidden sm:block" />
             <span className="text-text-light font-bold"> colombiano</span>
           </h1>
-          <p className="text-text-light text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
+          <p className="text-text-light text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-6">
             Guía práctica por <span className="text-text font-semibold">rol misional</span>: buscar información,
             contratar, auditar, hacer dashboards, revisar contratos, comunicar. Con ejemplos que ya operan
             en el Estado colombiano y <span className="text-text font-semibold">cifras verificadas a abril 2026</span>.
           </p>
+
+          {/* Byline */}
+          <div className="flex items-center justify-center gap-2 mb-10 text-sm">
+            <span className="text-text-lighter">Por</span>
+            <a
+              href="https://sjimenezlon.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-primary font-semibold no-underline hover:text-primary/80"
+            >
+              Santiago Jiménez Londoño
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
 
           {/* Metric strip — el estado de la IA pública */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
@@ -3620,6 +3673,54 @@ export default function SectorPublico() {
             <strong className="text-white">Recomendación transversal:</strong> antes de pilotear cualquier sistema de
             IA, realiza una Evaluación de Impacto en Protección de Datos (EIPD) y define indicadores de sesgo,
             explicabilidad y supervisión humana.
+          </div>
+        </div>
+      </section>
+
+      {/* Disclaimer ético + créditos */}
+      <section className="max-w-5xl mx-auto px-4 py-10">
+        <div className="bg-accent/5 border border-accent/20 rounded-2xl p-6 md:p-8">
+          <div className="flex items-start gap-3 mb-3">
+            <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center shrink-0">
+              <ShieldCheck className="w-5 h-5 text-accent" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-text tracking-tight leading-tight">Uso responsable · la ética no se terceriza</h3>
+              <p className="text-xs text-text-lighter mt-0.5">Lee antes de llevar cualquier recomendación a tu entidad</p>
+            </div>
+          </div>
+          <div className="space-y-2.5 text-sm text-text-light leading-relaxed">
+            <p>
+              Esta guía es educativa y orientativa. La decisión sobre qué herramienta usar, qué datos cargar y cómo aplicar
+              los resultados es <span className="font-semibold text-text">responsabilidad de cada servidor público y de la
+              entidad</span> bajo su rol y marco normativo.
+            </p>
+            <p>
+              El uso ético exige: supervisión humana sobre decisiones que afectan ciudadanos, no cargar datos personales
+              o reservados en servicios públicos sin las garantías legales, documentar en el expediente el uso de IA
+              (conforme a la T-323/2024 y CONPES 4144), y verificar siempre antes de firmar.
+            </p>
+            <p className="text-text-lighter text-xs italic flex items-start gap-2">
+              <AlertTriangle className="w-3.5 h-3.5 text-warm shrink-0 mt-0.5" />
+              <span>El autor de esta guía no se hace responsable del uso que se dé a las herramientas aquí listadas. Cualquier aplicación concreta debe validarse por jurídica, control interno y la oficina de protección de datos de la entidad.</span>
+            </p>
+          </div>
+          <div className="mt-5 pt-5 border-t border-accent/15 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div className="text-xs text-text-light">
+              Capítulo curado por{' '}
+              <a
+                href="https://sjimenezlon.co/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 font-semibold text-primary no-underline hover:text-primary/80"
+              >
+                Santiago Jiménez Londoño
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
+            <div className="text-[11px] text-text-lighter">
+              Última revisión: abril 2026 · sjimenezlon.co
+            </div>
           </div>
         </div>
       </section>
