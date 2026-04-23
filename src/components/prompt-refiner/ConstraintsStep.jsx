@@ -1,4 +1,4 @@
-import { ChevronLeft, Sparkles } from 'lucide-react'
+import { ChevronLeft, Sparkles, ShieldCheck } from 'lucide-react'
 
 function Chip({ label, selected, onClick }) {
   return (
@@ -18,7 +18,7 @@ function Chip({ label, selected, onClick }) {
 
 const QUALITY_OPTIONS = ['Originalidad', 'Precisión factual', 'Coherencia lógica', 'Aplicabilidad práctica', 'Creatividad', 'Profundidad analítica', 'Claridad', 'Concisión']
 
-export default function ConstraintsStep({ avoid, setAvoid, quality, toggleQuality, aiTool, setAiTool, onPrev, onGenerate }) {
+export default function ConstraintsStep({ avoid, setAvoid, quality, toggleQuality, aiTool, setAiTool, onPrev, onGenerate, isPublico, constraintsHint }) {
   return (
     <div>
       <div className="mb-6">
@@ -27,9 +27,23 @@ export default function ConstraintsStep({ avoid, setAvoid, quality, toggleQualit
         <p className="text-sm text-text-light">Agrega lo que la IA debe evitar, criterios de calidad y genera tu prompt refinado.</p>
       </div>
 
+      {isPublico && (
+        <div className="mb-5 rounded-xl border border-indigo-200 bg-indigo-50/60 p-4 flex items-start gap-3">
+          <ShieldCheck className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" />
+          <div className="text-xs text-indigo-900 leading-relaxed">
+            <span className="font-semibold">Checklist sector público:</span> activa "Precisión factual" y agrega en Evitar
+            → <span className="italic">"No inventar números de sentencia, radicado ni artículos de ley. Si un dato no
+            está en las fuentes, decirlo."</span> Toda cita jurídica debe verificarse contra la fuente original antes de firmar.
+          </div>
+        </div>
+      )}
+
       <div className="space-y-5">
         <div>
           <label className="block text-sm font-medium text-text mb-1">¿Qué debe EVITAR la IA?</label>
+          {constraintsHint && (
+            <p className="text-xs text-text-lighter italic mb-2">{constraintsHint}</p>
+          )}
           <textarea
             value={avoid}
             onChange={(e) => setAvoid(e.target.value)}

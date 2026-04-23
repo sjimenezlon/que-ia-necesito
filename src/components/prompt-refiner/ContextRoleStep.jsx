@@ -24,6 +24,9 @@ export default function ContextRoleStep({ role, setRole, audience, setAudience, 
 
         <div>
           <label className="block text-sm font-medium text-text mb-1">¿Quién es la audiencia o destinatario?</label>
+          {domainData?.audienceHint && (
+            <p className="text-xs text-text-lighter italic mb-2">{domainData.audienceHint}</p>
+          )}
           <textarea
             value={audience}
             onChange={(e) => setAudience(e.target.value)}

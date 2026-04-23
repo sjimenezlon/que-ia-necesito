@@ -72,7 +72,7 @@ export default function About() {
 
       <div className="text-center pt-4">
         <p className="text-text-light flex items-center justify-center gap-1.5 font-medium">
-          Hecho con <Heart className="w-4 h-4 text-secondary fill-secondary" /> por Santiago Jiménez Londoño y Cristian Espinal Maya
+          Hecho con <Heart className="w-4 h-4 text-secondary fill-secondary" /> por Santiago Jiménez Londoño
         </p>
         <p className="text-text-lighter text-sm mt-2">Abril 2026</p>
       </div>

@@ -1,7 +1,8 @@
 import { useState, useRef } from 'react'
 import {
   Palette, Megaphone, Newspaper, Code, Users, Lightbulb, PenTool,
-  GraduationCap, TrendingUp, Heart, Database, Sparkles
+  GraduationCap, TrendingUp, Heart, Database, Sparkles, Landmark,
+  Package, Brain, Target, AlertCircle
 } from 'lucide-react'
 import DomainSelector from '../components/prompt-refiner/DomainSelector'
 import ContextRoleStep from '../components/prompt-refiner/ContextRoleStep'
@@ -23,6 +24,7 @@ const DOMAINS = [
   { id: 'ventas', label: 'Ventas y Negocios', icon: TrendingUp, desc: 'Pitch, estrategia comercial, pricing y análisis de mercado.', color: 'bg-indigo-50 text-indigo-600 border-indigo-200' },
   { id: 'salud', label: 'Salud y Bienestar', icon: Heart, desc: 'Divulgación médica, nutrición, bienestar y comunicación en salud.', color: 'bg-rose-50 text-rose-600 border-rose-200' },
   { id: 'datos', label: 'Ciencia de Datos', icon: Database, desc: 'ML aplicado, visualización, dashboards y análisis estadístico.', color: 'bg-cyan-50 text-cyan-600 border-cyan-200' },
+  { id: 'publico', label: 'Sector Público Colombia', icon: Landmark, desc: 'PQRSD, contratación SECOP, política pública, control interno y comunicación ciudadana.', color: 'bg-indigo-50 text-indigo-600 border-indigo-200' },
 ]
 
 const DOMAIN_DATA = {
@@ -135,6 +137,23 @@ const DOMAIN_DATA = {
       { title: 'Visualizador de datos', desc: 'Especialista en dashboards y narrativa visual de datos.' },
       { title: 'BI consultant', desc: 'Consultor de inteligencia de negocio y estrategia de datos.' },
     ]
+  },
+  publico: {
+    roleHint: 'Ej: "Eres un asesor con 15 años en planeación territorial colombiana, experto en CONPES, Plan de Desarrollo y normativa DNP. Conoces SINERGIA, Terridata y SISBEN"',
+    taskHint: 'Ej: "Redacta respuesta a PQRSD sobre subsidio", "Analiza pliego SECOP II frente a Ley 80", "Construye ficha AIR para proyecto de decreto"',
+    productHint: 'Ej: "Memorando radicable de 1 página", "Tabla comparativa lado-a-lado de 3 ofertas", "Boletín ciudadano de 400 palabras en lenguaje claro", "Matriz AIR con costos/beneficios por opción"',
+    audienceHint: 'Ej: "Comité Primario del alcalde", "Consejo de Gobierno", "Ciudadanía del municipio con básica primaria", "Veedores ciudadanos y Contraloría"',
+    constraintsHint: 'Cita normas aplicables (Ley 1581, Ley 1755, CPACA, T-323/2024). Tono institucional colombiano. No inventar números de radicado, sentencia ni artículos de ley — si no hay soporte, dilo.',
+    roleTemplates: [
+      { title: 'Asesor de despacho', desc: 'Experto en agenda pública y toma de decisiones institucionales.' },
+      { title: 'Abogado de contratación', desc: 'Especialista en Ley 80, 1150, Decreto 1082 y documentos tipo CCE.' },
+      { title: 'Servidor de ventanilla PQRSD', desc: 'Enfocado en atención ciudadana con tono institucional y Ley 1755.' },
+      { title: 'Analista de planeación / PDT', desc: 'Diagnóstico territorial con DANE, SISBEN, ECV y Terridata.' },
+      { title: 'Auditor / Control interno', desc: 'Revisión 100% de transacciones y trazabilidad bajo MECI.' },
+      { title: 'Comunicador institucional', desc: 'Piezas para GOV.CO y redes en lenguaje claro y plurilingüe.' },
+      { title: 'Asesor de política pública', desc: 'AIR, líneas jurisprudenciales y benchmark OCDE.' },
+      { title: 'Líder de GovTech', desc: 'RAG, chatbots ciudadanos, integración con Orfeo/SAIA/GOV.CO.' },
+    ]
   }
 }
 
@@ -190,6 +209,7 @@ export default function PromptRefiner() {
   const [role, setRole] = useState('')
   const [audience, setAudience] = useState('')
   const [context, setContext] = useState('')
+  const [product, setProduct] = useState('')
   const [task, setTask] = useState('')
   const [subtasks, setSubtasks] = useState('')
   const [example, setExample] = useState('')
@@ -232,6 +252,8 @@ export default function PromptRefiner() {
     if (audience) ctxBlock += `Audiencia objetivo: ${audience}.\n`
     if (context) ctxBlock += `${context}\n`
     prompt += ctxBlock + '\n'
+
+    if (product) prompt += `## PRODUCTO ESPERADO\n${product}\n\n`
 
     prompt += `## TAREA\n${task || '[Describe tu tarea aquí]'}\n`
     if (subtasks) prompt += `\nPasos esperados:\n${subtasks}\n`
@@ -287,6 +309,7 @@ export default function PromptRefiner() {
     setRole('')
     setAudience('')
     setContext('')
+    setProduct('')
     setTask('')
     setSubtasks('')
     setExample('')
@@ -318,6 +341,36 @@ export default function PromptRefiner() {
           Construye instrucciones precisas y efectivas para cualquier IA en 6 pasos simples.
           Mejor prompt = mejor resultado.
         </p>
+      </div>
+
+      {/* Reflexión clave: razonamiento vs. producto */}
+      <div className="max-w-3xl mx-auto mb-10 grid sm:grid-cols-2 gap-3">
+        <div className="rounded-2xl border border-indigo-200 bg-gradient-to-br from-indigo-50 to-violet-50 p-5">
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-8 h-8 rounded-lg bg-indigo-100 flex items-center justify-center">
+              <Brain className="w-4 h-4 text-indigo-600" />
+            </div>
+            <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-indigo-700">Claridad 1 · Los modelos ya razonan</span>
+          </div>
+          <p className="text-sm text-text leading-relaxed">
+            Claude, ChatGPT, Gemini y Kimi piensan paso a paso por cuenta propia. No tienes que explicarles cómo
+            razonar. <span className="font-semibold">El tiempo no se invierte en micro-instrucciones</span> — se invierte
+            en darles materia prima de calidad.
+          </p>
+        </div>
+        <div className="rounded-2xl border border-accent/30 bg-gradient-to-br from-emerald-50 to-teal-50 p-5">
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-8 h-8 rounded-lg bg-accent/15 flex items-center justify-center">
+              <Package className="w-4 h-4 text-accent" />
+            </div>
+            <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-accent">Claridad 2 · Define el producto</span>
+          </div>
+          <p className="text-sm text-text leading-relaxed">
+            Lo que sí paga: decir <span className="font-semibold">qué entregable</span> esperas. ¿Memorando de 1 página?
+            ¿Tabla comparativa? ¿Boletín ciudadano de 400 palabras? Cuando el producto queda claro, el resultado es
+            usable a la primera.
+          </p>
+        </div>
       </div>
 
       <div className="flex items-center justify-center gap-2 mb-8">
@@ -368,7 +421,9 @@ export default function PromptRefiner() {
               task={task} setTask={setTask}
               subtasks={subtasks} setSubtasks={setSubtasks}
               example={example} setExample={setExample}
+              product={product} setProduct={setProduct}
               domainData={domainData}
+              isPublico={domain === 'publico'}
               onNext={next} onPrev={prev}
             />
           )}
@@ -398,6 +453,8 @@ export default function PromptRefiner() {
                 avoid={avoid} setAvoid={setAvoid}
                 quality={quality} toggleQuality={(q) => toggleList(quality, setQuality, q)}
                 aiTool={aiTool} setAiTool={setAiTool}
+                isPublico={domain === 'publico'}
+                constraintsHint={domainData?.constraintsHint}
                 onPrev={prev} onGenerate={generatePrompt}
               />
               <GeneratedPrompt

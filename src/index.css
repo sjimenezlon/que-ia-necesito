@@ -200,6 +200,13 @@
   background-clip: text;
 }
 
+@utility text-gradient-gold {
+  background: linear-gradient(135deg, #FBBF24 0%, #F97316 50%, #E11D48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 @utility hero-gradient {
   background:
     radial-gradient(ellipse 80% 60% at 50% -10%, rgba(67, 56, 202, 0.08), transparent),

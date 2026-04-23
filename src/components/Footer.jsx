@@ -12,7 +12,7 @@ export default function Footer() {
             </div>
             <div>
               <p className="font-display text-text font-semibold text-sm">
-                Hecho con <span role="img" aria-label="corazón">❤️</span> por Santiago Jiménez Londoño y Cristian Espinal Maya
+                Hecho con <span role="img" aria-label="corazón">❤️</span> por Santiago Jiménez Londoño
               </p>
               <p className="text-text-lighter text-xs mt-0.5">
                 Última actualización: Abril 2026

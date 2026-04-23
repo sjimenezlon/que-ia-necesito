@@ -5632,6 +5632,74 @@
     "bestFor": "Ideal para razonamiento avanzado y programación con costo casi cero"
   },
   {
+    "id": "kimi",
+    "name": "Kimi",
+    "url": "https://www.kimi.com",
+    "categories": [
+      "chatbots",
+      "investigacion",
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis en kimi.moonshot.cn y kimi.com. API (platform.moonshot.ai): desde USD 0,15/1M tokens entrada",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Asistente agéntico de Moonshot AI con 256K de contexto; K2.6 (abril 2026) ejecuta tareas largas de forma autónoma.",
+    "fullDescription": "Kimi es el asistente de Moonshot AI. La versión K2.6 (lanzada el 20 de abril de 2026) es un modelo MoE de 1T parámetros con 256K de contexto, multimodal (texto, imagen, video) y enfocado en ejecución agéntica de tareas largas. En benchmarks públicos supera a GPT-5.4 en SWE-Bench Pro (58,6) y en Humanity's Last Exam con herramientas (54,0). Ideal para expedientes voluminosos, investigación normativa y tareas que requieren analizar cientos de documentos sin perder contexto.",
+    "useCases": [
+      "Analizar expedientes de licitación completos (pliego, adendas, ofertas, evaluación)",
+      "Investigar líneas jurisprudenciales cruzando sentencias completas",
+      "Resumir CONPES, planes de desarrollo y estudios sectoriales largos",
+      "Agentes que orquestan varias tareas (descargar, procesar, redactar)",
+      "Comparar versiones de normativa en trámite"
+    ],
+    "howToStart": [
+      "Ingresa a kimi.moonshot.cn o kimi.com y crea cuenta",
+      "Sube hasta 200 archivos o pega URLs para cargar el contexto",
+      "Activa modo K2.6 para ejecución agéntica de tareas largas",
+      "Para desarrolladores: usa la API en platform.moonshot.ai"
+    ],
+    "proTip": "Cuando tengas un expediente de más de 500 páginas (varios PDFs de licitación, un plan de desarrollo completo, 30 sentencias), Kimi mantiene el hilo mejor que ChatGPT y Claude estándar gracias a sus 256K de contexto.",
+    "pros": [
+      "Contexto de 256K tokens sin degradación",
+      "Capacidad agéntica (ejecuta varios pasos)",
+      "Muy competitivo en precio y rendimiento"
+    ],
+    "cons": [
+      "Servidores en China (considerar privacidad de datos sensibles)",
+      "Interfaz principal en chino (disponible en inglés)",
+      "Restricciones en temas políticos sensibles"
+    ],
+    "alternatives": [
+      "claude",
+      "deepseek",
+      "chatgpt"
+    ],
+    "keywords": [
+      "kimi",
+      "moonshot",
+      "k2",
+      "agente",
+      "contexto largo",
+      "256k",
+      "documentos",
+      "china",
+      "open source"
+    ],
+    "tags": [
+      "IA generativa",
+      "Contexto largo",
+      "Agente"
+    ],
+    "useCaseIds": [
+      "investigacion-resumir",
+      "investigacion-general",
+      "chatbots-consultas",
+      "programacion-escribir"
+    ],
+    "bestFor": "Ideal para analizar expedientes largos y tareas agénticas de varios pasos"
+  },
+  {
     "id": "qwen",
     "name": "Qwen",
     "url": "https://chat.qwen.ai",
