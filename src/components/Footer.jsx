@@ -24,7 +24,7 @@ export default function Footer() {
                 </a>
               </p>
               <p className="text-text-lighter text-xs mt-0.5">
-                Última actualización: Abril 2026 · <a href="https://sjimenezlon.co/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 no-underline">sjimenezlon.co</a>
+                Última actualización: Mayo 2026 · <a href="https://sjimenezlon.co/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 no-underline">sjimenezlon.co</a>
               </p>
             </div>
           </div>

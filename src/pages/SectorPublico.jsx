@@ -1968,7 +1968,7 @@ export default function SectorPublico() {
         <div className="relative max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-primary/8 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-8 border border-primary/10 shadow-sm">
             <Landmark className="w-3.5 h-3.5" />
-            Capítulo especial · abril 2026
+            Capítulo especial · mayo 2026
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-text leading-[1.05] tracking-tight mb-6">
             IA para el <span className="text-gradient-primary">sector público</span>
@@ -1978,7 +1978,7 @@ export default function SectorPublico() {
           <p className="text-text-light text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-6">
             Guía práctica por <span className="text-text font-semibold">rol misional</span>: buscar información,
             contratar, auditar, hacer dashboards, revisar contratos, comunicar. Con ejemplos que ya operan
-            en el Estado colombiano y <span className="text-text font-semibold">cifras verificadas a abril 2026</span>.
+            en el Estado colombiano y <span className="text-text font-semibold">cifras verificadas a mayo 2026</span>.
           </p>
 
           {/* Byline */}
@@ -3726,7 +3726,7 @@ export default function SectorPublico() {
               </a>
             </div>
             <div className="text-[11px] text-text-lighter">
-              Última revisión: abril 2026 · sjimenezlon.co
+              Última revisión: mayo 2026 · sjimenezlon.co
             </div>
           </div>
         </div>
