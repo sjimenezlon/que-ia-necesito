@@ -28,7 +28,7 @@ export default function Hero({ query, onQueryChange, results }) {
           }`}
         >
           <Sparkles className="w-3.5 h-3.5" />
-          Más de 100 herramientas curadas · Mayo 2026
+          Más de 100 herramientas curadas · Julio 2026
         </div>
 
         <h1

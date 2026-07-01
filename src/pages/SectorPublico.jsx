@@ -294,14 +294,14 @@ const SECTIONS = [
         title: 'Boletín mensual de ejecución presupuestal automatizado',
         steps: [
           'Exportar mensualmente ejecución SIIF Nación o SICOF territorial a CSV',
-          'Con ChatGPT Advanced Data Analysis o Rows: generar gráficas por entidad, rubro y % de avance',
+          'Con ChatGPT Advanced Data Analysis o Julius: generar gráficas por entidad, rubro y % de avance',
           'Pedir: "escribe un resumen ejecutivo de 200 palabras destacando los 3 rubros con mayor rezago y los 3 con ejecución atípicamente alta"',
           'Publicar en el portal de transparencia con los datasets fuente para trazabilidad',
         ],
         impact: 'Rendición de cuentas oportuna sin carga operativa; trazabilidad completa.',
       },
     ],
-    tools: ['julius', 'notebooklm', 'claude', 'deepseek', 'perplexity', 'rows'],
+    tools: ['julius', 'notebooklm', 'claude', 'deepseek', 'perplexity', 'n8n'],
   },
   {
     id: 'comunicacion',
@@ -390,7 +390,7 @@ const SECTIONS = [
       },
       {
         entity: 'ADRES — Sistema SIA (AWS + Blend360)',
-        application: 'Sistema con IA que audita reclamaciones (inicialmente SOAT / accidentes de tránsito, con proyección a cuentas médicas); reduce el ciclo de revisión de más de 3 meses a menos de 2 semanas. Anuncio 14-abr-2026; operación plena desde mayo 2026 con tope inicial de 1.000 casos/día.',
+        application: 'Sistema Inteligente de Auditoría (SIA): audita reclamaciones (inicialmente SOAT / accidentes de tránsito, con proyección a cuentas médicas); reduce el ciclo de revisión de más de 3 meses a menos de 2 semanas. Anuncio 14-abr-2026; operación plena desde el 1 de mayo de 2026 con tope inicial de 1.000 casos/día.',
         source: 'https://www.presidencia.gov.co/prensa/Paginas/Gobierno-implementa-sistema-con-inteligencia-artificial-para-auditar-cuentas-medicas-y-agilizar-pagos-260414.aspx',
       },
       {
@@ -452,7 +452,7 @@ const SECTIONS = [
     examples: [
       {
         entity: 'Migración Colombia — Biomig',
-        application: 'Lanzamiento con 30 equipos biométricos en 4 aeropuertos internacionales (2023); a 2026 se registra iris para nacionales en 5 aeropuertos (El Dorado, JMC Rionegro, Cartagena, Barranquilla, Cali) y facial para extranjeros.',
+        application: 'Lanzamiento con 30 equipos biométricos en 4 aeropuertos internacionales (2023); a 2026 se registra iris para nacionales en 7 aeropuertos (El Dorado, JMC Rionegro, Cartagena, Barranquilla, Cali, Pereira y Bucaramanga/Palonegro) y facial para extranjeros.',
         source: 'https://www.presidencia.gov.co/prensa/Paginas/Migracion-Colombia-modernizo-control-en-cuatro-aeropuertos-internacionales-del-pais-con-30-equipos-biometricos-231122.aspx',
       },
       {
@@ -586,7 +586,7 @@ const FEATURED_CASES = [
     entity: 'ADRES',
     area: 'Salud · Auditoría',
     headline: 'SIA — auditoría de reclamaciones',
-    story: 'Sistema con IA (AWS + Blend360) para auditar reclamaciones SOAT inicialmente, con proyección a cuentas médicas. Reduce el ciclo de revisión y pago de más de 3 meses a menos de 2 semanas. Operación plena desde mayo 2026.',
+    story: 'Sistema Inteligente de Auditoría (SIA), con AWS + Blend360, para auditar reclamaciones SOAT inicialmente, con proyección a cuentas médicas. Reduce el ciclo de revisión y pago de más de 3 meses a menos de 2 semanas. Operación plena desde el 1 de mayo de 2026.',
     metric: '3 meses → 2 sem.',
     metricLabel: 'ciclo auditoría SOAT',
     source: 'https://www.presidencia.gov.co/prensa/Paginas/Gobierno-implementa-sistema-con-inteligencia-artificial-para-auditar-cuentas-medicas-y-agilizar-pagos-260414.aspx',
@@ -628,8 +628,8 @@ const FEATURED_CASES = [
     entity: 'Migración Colombia',
     area: 'Fronteras',
     headline: 'Biomig — control biométrico',
-    story: 'Lanzamiento en 2023 con 30 equipos biométricos en 4 aeropuertos; a 2026 Biomig con registro de iris opera en 5 aeropuertos internacionales para nacionales, y reconocimiento facial para extranjeros.',
-    metric: '5 aeropuertos',
+    story: 'Lanzamiento en 2023 con 30 equipos biométricos en 4 aeropuertos; a 2026 Biomig con registro de iris opera en 7 aeropuertos internacionales para nacionales (se sumaron Pereira y Bucaramanga/Palonegro), y reconocimiento facial para extranjeros.',
+    metric: '7 aeropuertos',
     metricLabel: 'Biomig iris · nacionales',
     source: 'https://www.presidencia.gov.co/prensa/Paginas/Migracion-Colombia-modernizo-control-en-cuatro-aeropuertos-internacionales-del-pais-con-30-equipos-biometricos-231122.aspx',
     sourceLabel: 'Presidencia',
@@ -1968,7 +1968,7 @@ export default function SectorPublico() {
         <div className="relative max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-primary/8 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-8 border border-primary/10 shadow-sm">
             <Landmark className="w-3.5 h-3.5" />
-            Capítulo especial · mayo 2026
+            Capítulo especial · julio 2026
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-text leading-[1.05] tracking-tight mb-6">
             IA para el <span className="text-gradient-primary">sector público</span>
@@ -1978,7 +1978,7 @@ export default function SectorPublico() {
           <p className="text-text-light text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-6">
             Guía práctica por <span className="text-text font-semibold">rol misional</span>: buscar información,
             contratar, auditar, hacer dashboards, revisar contratos, comunicar. Con ejemplos que ya operan
-            en el Estado colombiano y <span className="text-text font-semibold">cifras verificadas a mayo 2026</span>.
+            en el Estado colombiano y <span className="text-text font-semibold">cifras verificadas a julio 2026</span>.
           </p>
 
           {/* Byline */}
@@ -3726,7 +3726,7 @@ export default function SectorPublico() {
               </a>
             </div>
             <div className="text-[11px] text-text-lighter">
-              Última revisión: mayo 2026 · sjimenezlon.co
+              Última revisión: julio 2026 · sjimenezlon.co
             </div>
           </div>
         </div>

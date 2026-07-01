@@ -10,11 +10,11 @@
       "educacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. Plus: $20/mes",
+    "pricingDetail": "Gratis con límites (GPT-5.5). Go: $8/mes. Plus: $20/mes. Pro intermedio: $100/mes. Pro: $200/mes",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Asistente conversacional de OpenAI para escribir, investigar, programar y más.",
-    "fullDescription": "ChatGPT es el chatbot de inteligencia artificial más popular del mundo. Desarrollado por OpenAI, permite mantener conversaciones naturales para resolver dudas, redactar textos, generar código, analizar documentos y mucho más. Su interfaz es simple e intuitiva, ideal tanto para principiantes como para usuarios avanzados.",
+    "fullDescription": "ChatGPT es el chatbot de inteligencia artificial más popular del mundo. Desarrollado por OpenAI, permite mantener conversaciones naturales para resolver dudas, redactar textos, generar código, analizar documentos y mucho más. Su interfaz es simple e intuitiva, ideal tanto para principiantes como para usuarios avanzados. Su modelo más reciente es GPT-5.5 (2026).",
     "useCases": [
       "Redactar correos, informes y documentos",
       "Resolver dudas complejas con explicaciones claras",
@@ -86,11 +86,11 @@
       "programacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. Pro: $20/mes",
+    "pricingDetail": "Gratis con límites. Pro: $20/mes. Max: $100/mes o $200/mes",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Asistente de Anthropic especializado en análisis largo, escritura y programación.",
-    "fullDescription": "Claude es el asistente de IA de Anthropic, conocido por su capacidad de procesar documentos muy largos, generar texto de alta calidad y programar con precision. Destaca por ser más cauteloso y preciso que otros chatbots, con un enfoque en seguridad y utilidad.",
+    "fullDescription": "Claude es el asistente de IA de Anthropic, conocido por su capacidad de procesar documentos muy largos, generar texto de alta calidad y programar con precision. Destaca por ser más cauteloso y preciso que otros chatbots, con un enfoque en seguridad y utilidad. Su familia vigente es Claude 4.x, con Claude Opus 4.8 como modelo más capaz (2026).",
     "useCases": [
       "Analizar documentos largos de hasta 200 páginas",
       "Escribir textos creativos y profesionales",
@@ -161,11 +161,11 @@
       "escritura"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis. Advanced: $20/mes",
+    "pricingDetail": "Gratis. Google AI Plus: $4.99/mes. AI Pro: $19.99/mes. AI Ultra: $99.99/mes",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Asistente de Google con acceso a búsqueda en tiempo real e integración con Google.",
-    "fullDescription": "Gemini es el asistente de IA de Google que combina capacidades conversacionales con acceso directo a la búsqueda de Google y sus servicios. Puede buscar información actualizada, generar texto, analizar imágenes y conectarse con Gmail, Drive y otros productos de Google.",
+    "fullDescription": "Gemini es el asistente de IA de Google que combina capacidades conversacionales con acceso directo a la búsqueda de Google y sus servicios. Puede buscar información actualizada, generar texto, analizar imágenes y conectarse con Gmail, Drive y otros productos de Google. Su modelo vigente es la familia Gemini 3.x (con Gemini 3.1 Pro como flagship); el plan de pago se llama ahora Google AI Pro (antes Advanced).",
     "useCases": [
       "Buscar información actualizada en tiempo real",
       "Analizar imágenes y fotos",
@@ -231,7 +231,7 @@
       "chatbots"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. Pro: $20/mes",
+    "pricingDetail": "Gratis con límites. Pro: $20/mes. Max: $200/mes",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Motor de búsqueda con IA que da respuestas con fuentes verificables.",
@@ -301,7 +301,7 @@
       "productividad"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis. Copilot Pro: $20/mes",
+    "pricingDetail": "Gratis (GPT-5.5 con límites). Copilot Pro: $20/mes. Microsoft 365 Copilot: $30/usuario/mes",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Asistente de Microsoft integrado con Windows, Edge y Office 365.",
@@ -369,7 +369,7 @@
       "chatbots"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. Suscripción: $20/mes",
+    "pricingDetail": "Gratis con límites. Plan económico: $5/mes. Suscripción: $19.99/mes",
     "difficulty": 1,
     "rating": 3,
     "shortDescription": "Plataforma que da acceso a multiples chatbots de IA en un solo lugar.",
@@ -441,7 +441,7 @@
     "difficulty": 1,
     "rating": 3,
     "shortDescription": "Asistente gratuito de Meta disponible en WhatsApp, Instagram y Facebook.",
-    "fullDescription": "Meta AI es el asistente de inteligencia artificial de Meta, disponible de forma gratuita en WhatsApp, Instagram, Facebook y Messenger. Permite hacer preguntas, generar imágenes y obtener ayuda con tareas cotidianas directamente desde las apps que ya usas a diario.",
+    "fullDescription": "Meta AI es el asistente de inteligencia artificial de Meta, disponible de forma gratuita en WhatsApp, Instagram, Facebook y Messenger. Permite hacer preguntas, generar imágenes y obtener ayuda con tareas cotidianas directamente desde las apps que ya usas a diario. Funciona sobre la generación Llama 4 (multimodal).",
     "useCases": [
       "Resolver dudas rapidas desde WhatsApp",
       "Generar imágenes con texto",
@@ -505,11 +505,11 @@
       "programacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis. Planes empresariales disponibles",
+    "pricingDetail": "Gratis (Le Chat). Pro: $14.99/mes. Team: $24.99/usuario/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Chatbot europeo de código abierto con gran rendimiento en programación.",
-    "fullDescription": "Mistral Le Chat es el asistente conversacional de Mistral AI, una empresa francesa lider en IA de código abierto. Destaca por su rendimiento en tareas de programación y razonamiento logico, con modelos que compiten con los mejores del mercado manteniendo un enfoque en privacidad y transparencia.",
+    "fullDescription": "Mistral Le Chat es el asistente conversacional de Mistral AI, una empresa francesa lider en IA de código abierto. Destaca por su rendimiento en tareas de programación y razonamiento logico, con modelos que compiten con los mejores del mercado manteniendo un enfoque en privacidad y transparencia. Su modelo insignia vigente es Mistral Large 3, y Le Chat ya tiene plan Pro de pago.",
     "useCases": [
       "Programar y depurar código",
       "Análisis de datos y razonamiento logico",
@@ -572,7 +572,7 @@
       "negocios"
     ],
     "pricing": "pago",
-    "pricingDetail": "Desde $49/mes. Prueba gratuita de 7 días",
+    "pricingDetail": "Plan Pro desde $59/mes (anual) o $69/mes. Business a medida. Prueba gratis de 7 días",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Plataforma de escritura con IA para equipos de marketing y contenido.",
@@ -641,7 +641,7 @@
       "negocios"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Plan gratis limitado. Pro: $49/mes",
+    "pricingDetail": "Gratis (2.000 palabras/mes). Pro: $49/mes ($36/mes anual). Team y Enterprise a medida",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Generador de textos de marketing, emails y contenido para redes sociales.",
@@ -710,8 +710,8 @@
       "escritura",
       "negocios"
     ],
-    "pricing": "freemium",
-    "pricingDetail": "Plan gratis limitado. Pro desde $20/mes",
+    "pricing": "pago",
+    "pricingDetail": "Plataforma de visibilidad en IA (GEO). Starter: $79/mes. Basic: $199/mes. Growth: $399/mes",
     "difficulty": 2,
     "rating": 3,
     "shortDescription": "Plataforma de escritura con IA para blogs, anuncios y contenido web.",
@@ -780,7 +780,7 @@
       "traduccion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis básico. Premium: $12/mes",
+    "pricingDetail": "Gratis. Pro: $12/mes (anual) o $30/mes. Planes Business por asiento",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Corrector gramatical y de estilo con IA para escribir mejor en ingles y otros idiomas.",
@@ -849,7 +849,7 @@
       "traduccion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. Premium: $10/mes",
+    "pricingDetail": "Gratis con límites. Premium: $19.95/mes ($8.33/mes anual)",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Herramienta para parafrasear, resumir y mejorar textos con IA.",
@@ -917,7 +917,7 @@
       "escritura"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Plan gratis: 10K caracteres/mes. Pro: $9/mes",
+    "pricingDetail": "Gratis (10.000 caracteres/mes). Unlimited: $9/mes. Premium: $29/mes",
     "difficulty": 1,
     "rating": 3,
     "shortDescription": "Asistente de escritura economico para crear contenido rápido.",
@@ -985,7 +985,7 @@
       "productividad"
     ],
     "pricing": "pago",
-    "pricingDetail": "$10/mes adicional a la suscripción de Notion",
+    "pricingDetail": "La IA viene incluida en Notion Business (~$20/usuario/mes) y Enterprise; ya no se vende como complemento suelto",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "IA integrada en Notion para escribir, resumir y organizar información.",
@@ -1054,11 +1054,11 @@
       "diseno"
     ],
     "pricing": "pago",
-    "pricingDetail": "Desde $10/mes. Sin plan gratuito",
+    "pricingDetail": "Desde $10/mes (Basic). Standard: $30/mes. Pro: $60/mes. Mega: $120/mes. Sin plan gratuito",
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Generador de imágenes por IA con calidad artistica excepcional.",
-    "fullDescription": "Midjourney es considerado el mejor generador de imágenes con IA del mercado. Crea ilustraciones, fotos realistas, arte conceptual y disenos con una calidad visual impresionante. Funciona a traves de Discord o su sitio web, usando descripciones de texto para generar imágenes unicas.",
+    "fullDescription": "Midjourney es considerado el mejor generador de imágenes con IA del mercado. Crea ilustraciones, fotos realistas, arte conceptual y disenos con una calidad visual impresionante. Funciona a traves de Discord o su sitio web, usando descripciones de texto para generar imágenes unicas. Su versión por defecto es la V8.1 (desde junio de 2026) y ahora también genera video.",
     "useCases": [
       "Crear arte conceptual y disenos originales",
       "Generar imágenes para redes sociales",
@@ -1116,17 +1116,17 @@
   },
   {
     "id": "dall-e",
-    "name": "DALL-E 3",
-    "url": "https://openai.com/dall-e-3",
+    "name": "GPT Image (OpenAI)",
+    "url": "https://chatgpt.com",
     "categories": [
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Incluido en ChatGPT Plus ($20/mes). Creditos gratis limitados",
+    "pricingDetail": "Incluido en ChatGPT (gratis con límites; Plus $20/mes). API gpt-image-1: ~$0.01–0.25 por imagen",
     "difficulty": 1,
     "rating": 4,
-    "shortDescription": "Generador de imágenes de OpenAI integrado en ChatGPT.",
-    "fullDescription": "DALL-E 3 es el generador de imágenes de OpenAI, integrado directamente en ChatGPT. Permite crear imágenes a partir de descripciones en lenguaje natural con resultados muy fieles a lo que describes. Es especialmente bueno para seguir instrucciones detalladas y generar texto dentro de las imágenes.",
+    "shortDescription": "Generador de imágenes nativo de OpenAI dentro de ChatGPT (sucesor de DALL-E 3).",
+    "fullDescription": "GPT Image es el generador de imágenes de OpenAI integrado en ChatGPT, que reemplazó a DALL-E 3. Es un modelo multimodal nativo (API: gpt-image-1) que crea y edita imágenes a partir de descripciones en lenguaje natural, con excelente seguimiento de instrucciones detalladas, edición por conversación y renderizado preciso de texto dentro de la imagen.",
     "useCases": [
       "Crear imágenes a partir de descripciones detalladas",
       "Generar logos e iconos simples",
@@ -1190,11 +1190,11 @@
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Plan gratis: 10 imágenes/día. Plus: $8/mes",
+    "pricingDetail": "Gratis ~10 prompts/semana. Plus: $20/mes ($15 anual). Pro: $60/mes ($42 anual)",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Generador de imágenes con IA especializado en texto y tipografía.",
-    "fullDescription": "Ideogram es un generador de imágenes con IA que se destaca por su capacidad de incluir texto legible y tipografía dentro de las imágenes. Es excelente para crear logos, posters, tarjetas y cualquier diseño que necesite combinar imágenes con texto de forma atractiva.",
+    "fullDescription": "Ideogram es un generador de imágenes con IA que se destaca por su capacidad de incluir texto legible y tipografía dentro de las imágenes. Es excelente para crear logos, posters, tarjetas y cualquier diseño que necesite combinar imágenes con texto de forma atractiva. Su versión vigente es Ideogram 4.0, líder en renderizado de texto dentro de imágenes.",
     "useCases": [
       "Crear logos y disenos con texto",
       "Generar posters y banners",
@@ -1256,11 +1256,11 @@
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "150 creditos gratis/día. Planes desde $12/mes",
+    "pricingDetail": "Gratis 150 tokens/día. Essential: $12/mes. Premium: $30/mes. Ultimate: $60/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Plataforma de generación de imágenes con modelos personalizables.",
-    "fullDescription": "Leonardo AI es una plataforma de generación de imágenes que ofrece multiples modelos de IA y herramientas de edición avanzadas. Permite crear imágenes, entrenar modelos personalizados con tu propio estilo y editar imágenes existentes. Es popular entre diseñadores de videojuegos y artistas digitales.",
+    "fullDescription": "Leonardo AI es una plataforma de generación de imágenes que ofrece multiples modelos de IA y herramientas de edición avanzadas. Permite crear imágenes, entrenar modelos personalizados con tu propio estilo y editar imágenes existentes. Es popular entre diseñadores de videojuegos y artistas digitales. Suma generación de video (vía Veo) y es el motor detrás de Dream Lab de Canva.",
     "useCases": [
       "Generar arte para videojuegos y apps",
       "Crear personajes e ilustraciones consistentes",
@@ -1322,7 +1322,7 @@
       "presentaciones"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. Pro: $13/mes",
+    "pricingDetail": "Gratis con límites. Pro: $12.99/mes (~$120/año), incluye Magic Studio",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Plataforma de diseño todo en uno con herramientas de IA integradas.",
@@ -1397,11 +1397,11 @@
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Creditos gratis limitados. Incluido en Adobe Creative Cloud",
+    "pricingDetail": "Gratis con límites. Standard: $9.99/mes. Pro: $19.99/mes. Premium hasta $199.99/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Generador de imágenes de Adobe con integración en Photoshop e Illustrator.",
-    "fullDescription": "Adobe Firefly es el motor de IA generativa de Adobe que permite crear y editar imágenes, vectores, texturas y efectos de texto. Se integra directamente con Photoshop, Illustrator y otras herramientas de Adobe, permitiendo usar IA dentro de flujos de trabajo profesionales de diseño.",
+    "fullDescription": "Adobe Firefly es el motor de IA generativa de Adobe que permite crear y editar imágenes, vectores, texturas y efectos de texto. Se integra directamente con Photoshop, Illustrator y otras herramientas de Adobe, permitiendo usar IA dentro de flujos de trabajo profesionales de diseño. Su modelo vigente es Firefly Image Model 4 y ahora integra también modelos de terceros (Nano Banana Pro, GPT Image, Runway).",
     "useCases": [
       "Generar imágenes comercialmente seguras",
       "Editar fotos en Photoshop con IA generativa",
@@ -1464,11 +1464,11 @@
       "diseno"
     ],
     "pricing": "gratis",
-    "pricingDetail": "Gratis y de código abierto. APIs de pago disponibles",
+    "pricingDetail": "Gratis y open source (descargable). Uso comercial libre si ingresos < $1M/año. APIs de pago disponibles",
     "difficulty": 3,
     "rating": 4,
     "shortDescription": "Modelo de generación de imágenes de código abierto que puedes ejecutar localmente.",
-    "fullDescription": "Stable Diffusion es un modelo de generación de imágenes de código abierto que puedes ejecutar en tu propio computador. Ofrece control total sobre el proceso de generación, con cientos de modelos personalizados creados por la comunidad. Es la opción preferida por usuarios técnicos que quieren maxima flexibilidad.",
+    "fullDescription": "Stable Diffusion es un modelo de generación de imágenes de código abierto que puedes ejecutar en tu propio computador. Ofrece control total sobre el proceso de generación, con cientos de modelos personalizados creados por la comunidad. Es la opción preferida por usuarios técnicos que quieren maxima flexibilidad. Su versión open source vigente es Stable Diffusion 3.5.",
     "useCases": [
       "Generar imágenes sin límites ni censura",
       "Entrenar modelos personalizados con LoRAs",
@@ -1529,11 +1529,11 @@
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Plan gratis limitado. Pro: $24/mes",
+    "pricingDetail": "Gratis 100 créditos/día. Basic: $9/mes. Pro: $35/mes. Max: $70/mes",
     "difficulty": 2,
     "rating": 3,
     "shortDescription": "Plataforma creativa con IA para generar y mejorar imágenes en tiempo real.",
-    "fullDescription": "Krea AI es una plataforma de diseño con IA que permite generar imágenes, mejorar fotos existentes y crear variaciones en tiempo real. Destaca por su generación en tiempo real que muestra resultados mientras dibujas o ajustas parametros, permitiendo un proceso creativo más interactivo.",
+    "fullDescription": "Krea AI es una plataforma de diseño con IA que permite generar imágenes, mejorar fotos existentes y crear variaciones en tiempo real. Destaca por su generación en tiempo real que muestra resultados mientras dibujas o ajustas parametros, permitiendo un proceso creativo más interactivo. Tiene modelo propio Krea 1 e integra modelos de video de terceros (Veo, Sora, Kling, Runway).",
     "useCases": [
       "Generar imágenes en tiempo real mientras dibujas",
       "Mejorar y escalar imágenes existentes",
@@ -1594,11 +1594,11 @@
       "presentaciones"
     ],
     "pricing": "freemium",
-    "pricingDetail": "400 creditos gratis. Plus: $8/mes",
+    "pricingDetail": "Gratis (400 créditos). Plus: $8/mes (anual) o $10/mes. Pro: $15/mes ($20 mensual)",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Crea presentaciones profesionales con IA en minutos.",
-    "fullDescription": "Gamma es la herramienta de IA para presentaciones más popular del mercado. Solo necesitas escribir un tema o pegar un documento, y Gamma genera una presentación completa con diseño profesional, imágenes y estructura. Puedes editar, personalizar y presentar directamente desde la plataforma.",
+    "fullDescription": "Gamma es la herramienta de IA para presentaciones más popular del mercado. Solo necesitas escribir un tema o pegar un documento, y Gamma genera una presentación completa con diseño profesional, imágenes y estructura. Puedes editar, personalizar y presentar directamente desde la plataforma. Lanzó Gamma 3.0 con el Gamma Agent, que investiga la web y rediseña tus decks.",
     "useCases": [
       "Crear presentaciones profesionales en minutos",
       "Convertir documentos en presentaciones",
@@ -1624,7 +1624,6 @@
     ],
     "alternatives": [
       "beautiful-ai",
-      "tome",
       "canva"
     ],
     "keywords": [
@@ -1662,7 +1661,7 @@
       "presentaciones"
     ],
     "pricing": "pago",
-    "pricingDetail": "Desde $12/mes. Prueba gratuita",
+    "pricingDetail": "Sin plan gratis permanente (prueba 14 días). Pro: $12/mes (anual) o $45/mes. Team: $40/usuario/mes",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Software de presentaciones con diseño inteligente automático.",
@@ -1692,7 +1691,6 @@
     ],
     "alternatives": [
       "gamma",
-      "tome",
       "canva"
     ],
     "keywords": [
@@ -1723,71 +1721,6 @@
     "bestFor": "Ideal para equipos que necesitan slides con diseño automático"
   },
   {
-    "id": "tome",
-    "name": "Tome",
-    "url": "https://tome.app",
-    "categories": [
-      "presentaciones"
-    ],
-    "pricing": "freemium",
-    "pricingDetail": "Plan gratis limitado. Pro: $16/mes",
-    "difficulty": 1,
-    "rating": 4,
-    "shortDescription": "Crea narrativas visuales y presentaciones con IA generativa.",
-    "fullDescription": "Tome es una herramienta de presentaciones con IA que se enfoca en crear narrativas visuales. Genera presentaciones completas a partir de un tema, incluyendo texto, imágenes generadas por IA y una estructura narrativa coherente. Es ideal para storytelling visual y presentaciones que cuentan una historia.",
-    "useCases": [
-      "Crear presentaciones narrativas con storytelling",
-      "Generar pitch decks de forma rápida",
-      "Convertir ideas en presentaciones visuales",
-      "Crear contenido de marketing visual",
-      "Diseñar reportes y propuestas interactivas"
-    ],
-    "howToStart": [
-      "Registrate en tome.app",
-      "Escribe el tema de tu presentación",
-      "Deja que la IA genere la estructura y contenido",
-      "Personaliza imágenes, textos y diseño"
-    ],
-    "proTip": "Tome es ideal para storytelling: pide que genere una presentación con una narrativa y obtendras diapositivas que cuentan una historia coherente.",
-    "pros": [
-      "Excelente para narrativas y storytelling",
-      "Imágenes generadas por IA incluidas",
-      "Rápido para crear desde cero"
-    ],
-    "cons": [
-      "Menos opciones de diseño que Canva",
-      "Puede generar contenido generico"
-    ],
-    "alternatives": [
-      "gamma",
-      "beautiful-ai",
-      "slidesgo"
-    ],
-    "keywords": [
-      "presentación",
-      "narrativa",
-      "historia",
-      "storytelling",
-      "visual",
-      "pitch",
-      "crear",
-      "rápido",
-      "diapositivas",
-      "deck",
-      "interactivo"
-    ],
-    "tags": [
-      "Storytelling",
-      "Presentaciones",
-      "Narrativa"
-    ],
-    "useCaseIds": [
-      "presentaciones-narrativa",
-      "presentaciones-pitch"
-    ],
-    "bestFor": "Ideal para contar historias visuales y narrativas con IA"
-  },
-  {
     "id": "slidesgo",
     "name": "SlidesGPT",
     "url": "https://slidesgpt.com",
@@ -1795,7 +1728,7 @@
       "presentaciones"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Generación gratis. Descarga desde $2.50 por presentación",
+    "pricingDetail": "Gratis (genera y previsualiza). Pro: $9.99/mes — paga solo al descargar (PPT/PDF/Google Slides)",
     "difficulty": 1,
     "rating": 3,
     "shortDescription": "Genera presentaciones PowerPoint completas con IA a partir de un tema.",
@@ -1825,7 +1758,6 @@
     ],
     "alternatives": [
       "gamma",
-      "tome",
       "beautiful-ai"
     ],
     "keywords": [
@@ -1860,11 +1792,11 @@
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "125 creditos gratis. Desde $12/mes",
+    "pricingDetail": "Gratis 125 créditos únicos. Standard: $12/mes. Pro: $28/mes. Max: $76/mes",
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Plataforma lider de generación y edición de video con IA.",
-    "fullDescription": "Runway es la plataforma de IA para video más avanzada del mercado. Permite generar videos a partir de texto o imágenes, editar videos existentes con IA, remover fondos en video, y aplicar efectos avanzados. Es usada por profesionales de cine, publicidad y creación de contenido.",
+    "fullDescription": "Runway es la plataforma de IA para video más avanzada del mercado. Permite generar videos a partir de texto o imágenes, editar videos existentes con IA, remover fondos en video, y aplicar efectos avanzados. Es usada por profesionales de cine, publicidad y creación de contenido. Su modelo insignia vigente es Gen-4.5.",
     "useCases": [
       "Generar videos a partir de texto o imágenes",
       "Remover fondos de videos automáticamente",
@@ -1931,11 +1863,11 @@
       "video"
     ],
     "pricing": "freemium",
-    "pricingDetail": "150 creditos gratis/mes. Pro: $8/mes",
+    "pricingDetail": "Gratis (Pika 2.5, 480p). Standard: $8/mes. Pro: $28/mes. Fancy: $76/mes",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Generador de videos con IA fácil de usar para todos los niveles.",
-    "fullDescription": "Pika es una herramienta de generación de video con IA diseñada para ser accesible a cualquier persona. Permite crear videos cortos a partir de texto, imágenes o video existente. Su interfaz simple la hace ideal para creadores de contenido que quieren agregar video a su trabajo sin conocimientos técnicos.",
+    "fullDescription": "Pika es una herramienta de generación de video con IA diseñada para ser accesible a cualquier persona. Permite crear videos cortos a partir de texto, imágenes o video existente. Su interfaz simple la hace ideal para creadores de contenido que quieren agregar video a su trabajo sin conocimientos técnicos. Su versión vigente es Pika 2.5, con motor de física y efectos de sonido integrados.",
     "useCases": [
       "Crear videos cortos para redes sociales",
       "Animar imágenes estaticas",
@@ -2002,11 +1934,11 @@
       "video"
     ],
     "pricing": "pago",
-    "pricingDetail": "Desde $24/mes. Prueba gratuita de 1 minuto",
+    "pricingDetail": "Gratis (3 videos/mes con marca de agua). Creator: $29/mes. Pro desde $49/mes. Business: $149/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Crea videos con avatares de IA que hablan en multiples idiomas.",
-    "fullDescription": "HeyGen permite crear videos con avatares de IA realistas que hablan y gesticulan naturalmente. Puedes elegir entre cientos de avatares, clonar tu propia apariencia, y generar videos en más de 40 idiomas. Ideal para videos corporativos, capacitaciones y contenido de marketing sin necesidad de grabar.",
+    "fullDescription": "HeyGen permite crear videos con avatares de IA realistas que hablan y gesticulan naturalmente. Puedes elegir entre cientos de avatares, clonar tu propia apariencia, y generar videos en más de 40 idiomas. Ideal para videos corporativos, capacitaciones y contenido de marketing sin necesidad de grabar. Su generación de avatares vigente es Avatar IV.",
     "useCases": [
       "Crear videos corporativos sin camara",
       "Generar videos de capacitación en multiples idiomas",
@@ -2070,11 +2002,11 @@
       "educacion"
     ],
     "pricing": "pago",
-    "pricingDetail": "Desde $22/mes. Planes empresariales disponibles",
+    "pricingDetail": "Gratis (10 min/mes, marca de agua). Starter: $29/mes ($18 anual). Creator: $89/mes. Enterprise a medida",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Plataforma de videos con presentadores de IA para empresas.",
-    "fullDescription": "Synthesia es una plataforma de creación de videos con presentadores de IA, enfocada en el sector empresarial y educativo. Permite crear videos de capacitación, tutoriales y presentaciones con avatares realistas que hablan en más de 130 idiomas, sin necesidad de equipo de grabacion ni actores.",
+    "fullDescription": "Synthesia es una plataforma de creación de videos con presentadores de IA, enfocada en el sector empresarial y educativo. Permite crear videos de capacitación, tutoriales y presentaciones con avatares realistas que hablan en más de 130 idiomas, sin necesidad de equipo de grabacion ni actores. Ofrece 240+ avatares de IA en 160+ idiomas.",
     "useCases": [
       "Crear videos de capacitación para empleados",
       "Producir tutoriales y guías en video",
@@ -2138,7 +2070,7 @@
       "video"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con marca de agua. Pro: $8/mes",
+    "pricingDetail": "Gratis (export 1080p sin marca de agua, IA con límites). Pro: $19.99/mes o $179.99/año",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Editor de video gratuito con herramientas de IA para crear contenido viral.",
@@ -2207,11 +2139,11 @@
       "video"
     ],
     "pricing": "freemium",
-    "pricingDetail": "30 generaciones gratis/mes. Pro: $24/mes",
+    "pricingDetail": "Gratis 30 generaciones/mes. Lite: $9.99/mes. Plus: $30/mes. Pro: $90/mes. Ultra: $300/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Generador de video con IA de alta calidad a partir de texto e imágenes.",
-    "fullDescription": "Luma Dream Machine es un generador de video con IA que crea clips de alta calidad a partir de descripciones de texto o imágenes de referencia. Destaca por la coherencia visual y el movimiento natural de sus videos generados, con resultados que se acercan a la calidad cinematográfica.",
+    "fullDescription": "Luma Dream Machine es un generador de video con IA que crea clips de alta calidad a partir de descripciones de texto o imágenes de referencia. Destaca por la coherencia visual y el movimiento natural de sus videos generados, con resultados que se acercan a la calidad cinematográfica. Su modelo vigente es Ray3, con salidas HDR.",
     "useCases": [
       "Generar clips de video de alta calidad",
       "Animar imágenes con movimiento realista",
@@ -2276,11 +2208,11 @@
       "transcripcion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "10K caracteres gratis/mes. Desde $5/mes",
+    "pricingDetail": "Gratis 10.000 caracteres/mes. Starter: $5/mes. Creator: $22/mes. Pro: $99/mes",
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Plataforma lider de generación de voz y clonación de voz con IA.",
-    "fullDescription": "ElevenLabs es la plataforma de IA de voz más avanzada del mercado. Permite generar voces ultra realistas, clonar cualquier voz con solo minutos de audio, crear audiolibros, doblaje automático en multiples idiomas y convertir texto a voz con una naturalidad impresionante.",
+    "fullDescription": "ElevenLabs es la plataforma de IA de voz más avanzada del mercado. Permite generar voces ultra realistas, clonar cualquier voz con solo minutos de audio, crear audiolibros, doblaje automático en multiples idiomas y convertir texto a voz con una naturalidad impresionante. Su modelo de voz v3 ya es general y lanzó ElevenMusic para crear música.",
     "useCases": [
       "Convertir texto a voz con calidad humana",
       "Clonar tu voz para automatizar grabaciones",
@@ -2348,11 +2280,11 @@
       "audio"
     ],
     "pricing": "freemium",
-    "pricingDetail": "50 creditos gratis/día. Pro: $8/mes",
+    "pricingDetail": "Gratis 50 créditos/día (sin uso comercial). Pro: $10/mes. Premier: $30/mes (incluye Suno Studio)",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Genera canciones completas con voz, letra y música usando solo texto.",
-    "fullDescription": "Suno es una plataforma de IA que genera canciones completas a partir de descripciones de texto. Crea la letra, la melodia, los instrumentos y hasta la voz cantada. Solo necesitas describir el estilo y tema de la cancion, y Suno produce una pista musical de calidad sorprendente en segundos.",
+    "fullDescription": "Suno es una plataforma de IA que genera canciones completas a partir de descripciones de texto. Crea la letra, la melodia, los instrumentos y hasta la voz cantada. Solo necesitas describir el estilo y tema de la cancion, y Suno produce una pista musical de calidad sorprendente en segundos. Su modelo vigente para suscriptores de pago es v5, con Suno Studio (DAW) en el plan Premier.",
     "useCases": [
       "Crear canciones originales para proyectos",
       "Generar música de fondo para videos",
@@ -2418,7 +2350,7 @@
       "audio"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Creditos gratis limitados. Pro: $10/mes",
+    "pricingDetail": "Gratis 10 créditos/día. Standard: $10/mes. Pro: $30/mes. OJO: tras acuerdos con disqueras ya no permite descargar las pistas",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Generador de música con IA que crea pistas de alta calidad en cualquier género.",
@@ -2487,7 +2419,7 @@
       "audio"
     ],
     "pricing": "freemium",
-    "pricingDetail": "10 minutos gratis. Desde $23/mes",
+    "pricingDetail": "Gratis. Creator: $29/mes ($19 anual). Business: $99/mes",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Generador de voz profesional para videos, presentaciones y e-learning.",
@@ -2559,7 +2491,7 @@
       "transcripcion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "1 hora gratis de transcripción. Pro: $24/mes",
+    "pricingDetail": "Gratis (~1 h de transcripción/mes). Hobbyist: $24/mes. Creator: $35/mes. Business: $65/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Editor de audio y video donde editas la voz como si fuera un documento de texto.",
@@ -2633,7 +2565,7 @@
       "programacion"
     ],
     "pricing": "pago",
-    "pricingDetail": "$10/mes individual. $19/mes business. Gratis para estudiantes",
+    "pricingDetail": "Free (límites). Pro: $10/mes. Pro+: $39/mes. Max: $100/mes. Business: $19/usuario/mes. Enterprise: $39/usuario/mes",
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Asistente de programación de GitHub que autocompleta código en tu editor.",
@@ -2698,11 +2630,11 @@
       "programacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Plan gratis limitado. Pro: $20/mes",
+    "pricingDetail": "Gratis (Hobby). Pro: $20/mes. Pro+: $60/mes. Ultra: $200/mes. Teams: $40/usuario/mes",
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Editor de código con IA integrada para programar más rápido.",
-    "fullDescription": "Cursor es un editor de código basado en VS Code con IA profundamente integrada. Permite chatear con tu código, editar archivos con instrucciones en lenguaje natural, autocompletar con contexto del proyecto completo y depurar errores conversacionalmente. Es la herramienta favorita de muchos desarrolladores.",
+    "fullDescription": "Cursor es un editor de código basado en VS Code con IA profundamente integrada. Permite chatear con tu código, editar archivos con instrucciones en lenguaje natural, autocompletar con contexto del proyecto completo y depurar errores conversacionalmente. Es la herramienta favorita de muchos desarrolladores. Su precio se basa en consumo real de tokens y da acceso a modelos frontera (Claude, GPT-5.x, Gemini).",
     "useCases": [
       "Programar con asistencia de IA en tiempo real",
       "Editar código con instrucciones en lenguaje natural",
@@ -2766,11 +2698,11 @@
       "programacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Plan gratis limitado. Core: $25/mes",
+    "pricingDetail": "Gratis (Starter). Core: $20/mes (incluye $25 en créditos de IA/cómputo)",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Plataforma de desarrollo en la nube con asistente de IA integrado.",
-    "fullDescription": "Replit es un entorno de desarrollo completo en la nube con IA integrada. Permite crear, ejecutar y desplegar aplicaciones directamente desde el navegador, con un asistente de IA que ayuda a escribir código, explicar errores y generar proyectos completos. No necesitas instalar nada en tu computador.",
+    "fullDescription": "Replit es un entorno de desarrollo completo en la nube con IA integrada. Permite crear, ejecutar y desplegar aplicaciones directamente desde el navegador, con un asistente de IA que ayuda a escribir código, explicar errores y generar proyectos completos. No necesitas instalar nada en tu computador. Su agente vigente es Replit Agent 3.",
     "useCases": [
       "Crear aplicaciones completas desde el navegador",
       "Aprender a programar con asistencia de IA",
@@ -2831,11 +2763,11 @@
       "programacion"
     ],
     "pricing": "pago",
-    "pricingDetail": "Incluido en Claude Pro ($20/mes) o API con pago por uso",
+    "pricingDetail": "Incluido en Claude Pro ($20/mes), Max ($100 o $200/mes) o API con pago por uso",
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Agente de programación de Anthropic que ejecuta código y modifica proyectos.",
-    "fullDescription": "Claude Code es el agente de programación de Anthropic que puede navegar tu código, entender proyectos completos, escribir y ejecutar código, y hacer cambios en multiples archivos simultaneamente. Funciona como un programador experto que entiende el contexto de tu proyecto y puede completar tareas complejas.",
+    "fullDescription": "Claude Code es el agente de programación de Anthropic que puede navegar tu código, entender proyectos completos, escribir y ejecutar código, y hacer cambios en multiples archivos simultaneamente. Funciona como un programador experto que entiende el contexto de tu proyecto y puede completar tareas complejas. Usa la familia Claude 4.x (Sonnet 4.6 y Opus 4.8).",
     "useCases": [
       "Desarrollar funcionalidades completas en proyectos",
       "Depurar y corregir errores complejos",
@@ -2896,11 +2828,11 @@
       "programacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Plan gratis con límites. Pro: $15/mes",
+    "pricingDetail": "Gratis con límites. Pro: $20/mes. Max: $200/mes. Teams: $80 base + $40/usuario/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Editor de código con IA que combina autocompletado y chat inteligente.",
-    "fullDescription": "Windsurf (anteriormente Codeium) es un editor de código con IA que ofrece autocompletado inteligente y un agente de IA que puede hacer cambios en tu proyecto. Se basa en VS Code y ofrece una experiencia similar a Cursor pero con un plan gratuito más generoso.",
+    "fullDescription": "Windsurf (anteriormente Codeium) es un editor de código con IA que ofrece autocompletado inteligente y un agente de IA que puede hacer cambios en tu proyecto. Se basa en VS Code y ofrece una experiencia similar a Cursor pero con un plan gratuito más generoso. Ahora es operado por Cognition AI (creadores de Devin) y en 2026 se integró a su línea como “Devin Desktop”.",
     "useCases": [
       "Autocompletar código con IA",
       "Chatear con tu codebase para entenderlo",
@@ -2962,7 +2894,7 @@
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Creditos gratis limitados. Premium: $20/mes",
+    "pricingDetail": "Gratis ($5/mes en créditos). Premium: $20/mes. Team: $30/usuario/mes. Business: $100/usuario/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Genera componentes de interfaz web con IA a partir de descripciones o imágenes.",
@@ -3027,7 +2959,7 @@
       "datos"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Consultas gratis limitadas. Pro: $20/mes",
+    "pricingDetail": "Gratis (15 mensajes/mes). Plus: $35/mes ($29 anual). Pro: $45/usuario/mes. Max: $200/mes",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Analiza datos y crea gráficas con IA sin necesidad de programar.",
@@ -3056,7 +2988,6 @@
       "Puede tener problemas con datos muy complejos"
     ],
     "alternatives": [
-      "rows",
       "wolfram",
       "chatgpt"
     ],
@@ -3093,142 +3024,6 @@
     "bestFor": "Ideal para analizar datos de Excel con lenguaje natural"
   },
   {
-    "id": "rows",
-    "name": "Rows.com",
-    "url": "https://rows.com",
-    "categories": [
-      "datos",
-      "productividad"
-    ],
-    "pricing": "freemium",
-    "pricingDetail": "Gratis para uso básico. Pro: $59/mes por equipo",
-    "difficulty": 2,
-    "rating": 3,
-    "shortDescription": "Hoja de calculo inteligente con IA y conexiones a datos en vivo.",
-    "fullDescription": "Rows es una hoja de calculo moderna con IA integrada que permite analizar datos, crear dashboards y conectarse a fuentes de datos en vivo. A diferencia de Excel, Rows puede conectarse directamente a APIs, bases de datos y servicios como Google Analytics para traer datos automáticamente.",
-    "useCases": [
-      "Crear dashboards con datos en tiempo real",
-      "Analizar datos con asistente de IA",
-      "Conectar hojas de calculo con APIs externas",
-      "Automatizar reportes periódicos",
-      "Crear tablas inteligentes con datos en vivo"
-    ],
-    "howToStart": [
-      "Registrate en rows.com",
-      "Importa datos o conecta una fuente externa",
-      "Usa el asistente de IA para analizar y visualizar",
-      "Comparte dashboards con tu equipo"
-    ],
-    "proTip": "Conecta Rows con Google Analytics o tu CRM para tener dashboards que se actualizan automáticamente sin trabajo manual.",
-    "pros": [
-      "Conexiones a datos en vivo",
-      "IA integrada para análisis",
-      "Dashboards compartibles"
-    ],
-    "cons": [
-      "Curva de aprendizaje para conexiones",
-      "Precio elevado para equipos"
-    ],
-    "alternatives": [
-      "julius",
-      "notion-ai",
-      "wolfram"
-    ],
-    "keywords": [
-      "hoja de calculo",
-      "datos",
-      "dashboard",
-      "API",
-      "analizar",
-      "reporte",
-      "automatizar",
-      "excel",
-      "hoja de cálculo",
-      "gráfico",
-      "spreadsheet",
-      "spreadsheet inteligente",
-      "conectar datos",
-      "reportar"
-    ],
-    "tags": [
-      "Hojas de calculo",
-      "Dashboard",
-      "Datos en vivo"
-    ],
-    "useCaseIds": [
-      "datos-excel",
-      "datos-visualizar",
-      "productividad-organizar"
-    ],
-    "bestFor": "Ideal para crear dashboards y analizar datos en hojas de cálculo"
-  },
-  {
-    "id": "monkeylearn",
-    "name": "MonkeyLearn",
-    "url": "https://monkeylearn.com",
-    "categories": [
-      "datos"
-    ],
-    "pricing": "pago",
-    "pricingDetail": "Desde $299/mes. Prueba gratuita disponible",
-    "difficulty": 3,
-    "rating": 3,
-    "shortDescription": "Plataforma de análisis de texto con IA para clasificar y extraer datos.",
-    "fullDescription": "MonkeyLearn es una plataforma de análisis de texto con machine learning que permite clasificar documentos, analizar sentimiento, extraer información y automatizar el procesamiento de texto a gran escala. Orientada a empresas que necesitan procesar grandes volumenes de texto.",
-    "useCases": [
-      "Analizar sentimiento de resenas de clientes",
-      "Clasificar tickets de soporte automáticamente",
-      "Extraer datos de documentos no estructurados",
-      "Categorizar emails y mensajes",
-      "Monitorear menciones de marca"
-    ],
-    "howToStart": [
-      "Registrate para la prueba gratuita en monkeylearn.com",
-      "Elige un modelo pre-entrenado o crea uno personalizado",
-      "Sube tus datos de texto",
-      "Configura la automatización para procesamiento continuo"
-    ],
-    "proTip": "Empieza con los modelos pre-entrenados de análisis de sentimiento para obtener resultados rapidos sin necesidad de entrenar tu propio modelo.",
-    "pros": [
-      "Modelos pre-entrenados listos para usar",
-      "Automatización de procesamiento de texto",
-      "Integraciones con herramientas populares"
-    ],
-    "cons": [
-      "Precio muy elevado",
-      "Orientado a empresas grandes"
-    ],
-    "alternatives": [
-      "obviously-ai",
-      "julius",
-      "chatgpt"
-    ],
-    "keywords": [
-      "texto",
-      "clasificar",
-      "sentimiento",
-      "análisis",
-      "extraer",
-      "automatizar",
-      "NLP",
-      "datos",
-      "encuesta",
-      "opiniones",
-      "opinion",
-      "clasificar texto"
-    ],
-    "tags": [
-      "NLP",
-      "Análisis de texto",
-      "Empresarial"
-    ],
-    "useCaseIds": [
-      "datos-analizar",
-      "datos-predecir"
-    ],
-    "bestFor": "Ideal para analizar texto y opiniones a gran escala"
-  },
-  {
     "id": "obviously-ai",
     "name": "Obviously AI",
     "url": "https://obviously.ai",
@@ -3236,7 +3031,7 @@
       "datos"
     ],
     "pricing": "pago",
-    "pricingDetail": "Desde $75/mes. Prueba gratuita",
+    "pricingDetail": "Sin plan gratis (prueba sin tarjeta). Desde ~$75/mes. Enterprise a medida",
     "difficulty": 2,
     "rating": 3,
     "shortDescription": "Plataforma de predicción con IA sin necesidad de código.",
@@ -3302,7 +3097,7 @@
       "datos"
     ],
     "pricing": "pago",
-    "pricingDetail": "Desde $20/mes. Prueba gratuita de 7 días",
+    "pricingDetail": "Sin plan gratis (prueba 7 días). Basic: $10/mes. Starter: $50/mes. Pro: $100/mes. Teams: $250/mes",
     "difficulty": 2,
     "rating": 3,
     "shortDescription": "Convierte datos en dashboards interactivos automáticamente con IA.",
@@ -3332,7 +3127,6 @@
     ],
     "alternatives": [
       "julius",
-      "rows",
       "obviously-ai"
     ],
     "keywords": [
@@ -3372,11 +3166,11 @@
       "educacion"
     ],
     "pricing": "gratis",
-    "pricingDetail": "Completamente gratis con cuenta de Google",
+    "pricingDetail": "Gratis (robusto). Versiones de pago incluidas en Google AI: Plus $4.99/mes, Pro $19.99/mes, Ultra desde $99.99/mes",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Asistente de investigación de Google que analiza tus documentos y genera podcasts.",
-    "fullDescription": "NotebookLM es una herramienta gratuita de Google que permite subir documentos, articulos, videos de YouTube y páginas web para crear un asistente de IA personalizado sobre ese contenido. Puede generar resumenes, responder preguntas y hasta crear podcasts conversacionales automáticos basados en tus documentos.",
+    "fullDescription": "NotebookLM es una herramienta gratuita de Google que permite subir documentos, articulos, videos de YouTube y páginas web para crear un asistente de IA personalizado sobre ese contenido. Puede generar resumenes, responder preguntas y hasta crear podcasts conversacionales automáticos basados en tus documentos. Sus versiones de pago ahora vienen incluidas en las suscripciones Google AI (Plus/Pro/Ultra).",
     "useCases": [
       "Analizar y resumir documentos de investigación",
       "Generar podcasts conversacionales sobre tus documentos",
@@ -3439,7 +3233,7 @@
       "investigacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "5K creditos gratis. Plus: $10/mes",
+    "pricingDetail": "Gratis (20 extracciones de PDF/mes). Plus: $12/mes. Pro: $49/mes. Team: $79/asiento/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Asistente de investigación académica con IA para encontrar y analizar papers.",
@@ -3572,7 +3366,7 @@
       "investigacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "5 gráficas gratis/mes. Premium: $3/mes",
+    "pricingDetail": "Gratis 5 grafos/mes. Académico ~$4/mes. Premium desde ~$6/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Visualiza conexiones entre papers académicos en un grafo interactivo.",
@@ -3637,7 +3431,7 @@
       "investigacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "20 busquedas gratis/mes. Premium: $7/mes",
+    "pricingDetail": "Gratis (búsquedas básicas). Premium: $15/mes ($10 anual). Deep: $45/usuario/mes. Team: $9.99/asiento/mes",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Buscador que responde preguntas de investigación con evidencia científica.",
@@ -3703,7 +3497,7 @@
       "productividad"
     ],
     "pricing": "freemium",
-    "pricingDetail": "600 minutos gratis/mes. Pro: $17/mes",
+    "pricingDetail": "Gratis (300 min/mes). Pro: $16.99/usuario/mes ($8.33 anual). Business: $30/usuario/mes",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Transcribe reuniones y conversaciones automáticamente con IA.",
@@ -3774,7 +3568,7 @@
       "productividad"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Plan gratis limitado. Pro: $18/mes",
+    "pricingDetail": "Gratis (800 min de almacenamiento). Pro: $10/usuario/mes (anual). Business: $19/usuario/mes (anual). Enterprise desde $39",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Asistente de reuniones con IA que transcribe, resume y analiza llamadas.",
@@ -3845,11 +3639,11 @@
       "productividad"
     ],
     "pricing": "freemium",
-    "pricingDetail": "100 tareas gratis/mes. Desde $20/mes",
+    "pricingDetail": "Gratis 100 tasks/mes. Professional: ~$49/mes (anual). Team: ~$69/mes. Enterprise a medida",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Conecta y automatiza aplicaciones con IA, sin necesidad de programar.",
-    "fullDescription": "Zapier es la plataforma de automatización más popular del mundo, ahora potenciada con IA. Permite conectar más de 6000 aplicaciones y crear flujos de trabajo automáticos sin programar. La IA ayuda a crear automatizaciones con lenguaje natural y a procesar datos inteligentemente.",
+    "fullDescription": "Zapier es la plataforma de automatización más popular del mundo, ahora potenciada con IA. Permite conectar más de 6000 aplicaciones y crear flujos de trabajo automáticos sin programar. La IA ayuda a crear automatizaciones con lenguaje natural y a procesar datos inteligentemente. Se reposicionó como plataforma de orquestación de IA con Zapier Agents y Copilot.",
     "useCases": [
       "Automatizar flujos de trabajo entre aplicaciones",
       "Enviar datos entre herramientas automáticamente",
@@ -3913,7 +3707,7 @@
       "productividad"
     ],
     "pricing": "freemium",
-    "pricingDetail": "1000 operaciones gratis/mes. Desde $9/mes",
+    "pricingDetail": "Gratis 1.000 créditos/mes. Core: ~$9/mes. Pro: ~$16/mes. Teams: ~$29/mes",
     "difficulty": 3,
     "rating": 4,
     "shortDescription": "Plataforma de automatización visual para crear flujos de trabajo complejos.",
@@ -3981,7 +3775,7 @@
       "productividad"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Plan gratis para individuos. Pro: $8/mes",
+    "pricingDetail": "Gratis (Lite). Starter: $8/usuario/mes. Business: $12/usuario/mes. Parte de Dropbox",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Asistente de calendario con IA que optimiza tu tiempo automáticamente.",
@@ -4046,7 +3840,7 @@
       "educacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Disponible con Khan Academy gratis. Premium: $44/año",
+    "pricingDetail": "Gratis para docentes (en inglés). Estudiantes y familias: $4/mes o $44/año",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Tutor de IA de Khan Academy que guía el aprendizaje paso a paso.",
@@ -4114,7 +3908,7 @@
       "traduccion"
     ],
     "pricing": "pago",
-    "pricingDetail": "Duolingo Max: $30/mes o $168/año",
+    "pricingDetail": "Max: ~$168/año (~$14/mes) o $29.99/mes. Video Call y Explain My Answer ya son gratis para todos",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Duolingo con IA para practicar conversaciones y obtener explicaciones personalizadas.",
@@ -4181,7 +3975,7 @@
       "educacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. Plus: $3/mes",
+    "pricingDetail": "Gratis con tope diario. Plus: ~$7.99/mes (~$35.99/año). Plus Unlimited: ~$44.99/año",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Plataforma de estudio con IA que crea flashcards y examenes de práctica.",
@@ -4245,7 +4039,7 @@
       "investigacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis básico. Pro: $5/mes. Pro Premium: $8/mes",
+    "pricingDetail": "Gratis (consultas básicas). Pro: $9.99/mes (~$5/mes anual). Pro Premium: ~$99/año",
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Motor de conocimiento computacional para matemáticas, ciencias y datos.",
@@ -4316,11 +4110,11 @@
       "negocios"
     ],
     "pricing": "freemium",
-    "pricingDetail": "CRM gratis. Herramientas de IA desde $20/mes",
+    "pricingDetail": "Breeze incluido en planes Hub. Créditos: $10 por 1.000. Agentes con precio por resultado (p.ej. $0.50 por conversación resuelta)",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "CRM con IA para automatizar ventas, marketing y atencion al cliente.",
-    "fullDescription": "HubSpot es el CRM más popular para pequeñas y medianas empresas, ahora potenciado con herramientas de IA. Permite automatizar emails de ventas, generar contenido de marketing, analizar datos de clientes y crear chatbots para atencion al cliente, todo integrado en una sola plataforma.",
+    "fullDescription": "HubSpot es el CRM más popular para pequeñas y medianas empresas, ahora potenciado con herramientas de IA. Permite automatizar emails de ventas, generar contenido de marketing, analizar datos de clientes y crear chatbots para atencion al cliente, todo integrado en una sola plataforma. Su marca de IA es Breeze (Copilot, Agents e Intelligence).",
     "useCases": [
       "Automatizar emails de seguimiento de ventas",
       "Generar contenido de marketing con IA",
@@ -4383,11 +4177,11 @@
       "negocios"
     ],
     "pricing": "pago",
-    "pricingDetail": "Incluido en planes Salesforce desde $25/usuario/mes",
+    "pricingDetail": "Agentforce: $2 por conversación, o Flex Credits ($500 por 100.000 créditos), o desde $125/usuario/mes",
     "difficulty": 3,
     "rating": 4,
     "shortDescription": "IA empresarial de Salesforce para predicciones de ventas y automatización.",
-    "fullDescription": "Salesforce Einstein es la capa de inteligencia artificial integrada en la plataforma Salesforce, el CRM lider del mercado empresarial. Ofrece predicciones de ventas, puntuacion de leads, recomendaciones automáticas, análisis de sentimiento y automatización inteligente para grandes equipos de ventas.",
+    "fullDescription": "Salesforce Einstein es la capa de inteligencia artificial integrada en la plataforma Salesforce, el CRM lider del mercado empresarial. Ofrece predicciones de ventas, puntuacion de leads, recomendaciones automáticas, análisis de sentimiento y automatización inteligente para grandes equipos de ventas. Evolucionó hacia Agentforce, su plataforma de agentes autónomos de IA.",
     "useCases": [
       "Predecir probabilidad de cierre de ventas",
       "Puntuar leads automáticamente por potencial",
@@ -4450,7 +4244,7 @@
       "escritura"
     ],
     "pricing": "pago",
-    "pricingDetail": "Desde $89/mes. Prueba de 7 días",
+    "pricingDetail": "Essential: $99/mes ($79 anual). Scale: $129/mes. Scale AI: $219/mes. Surfer AI add-on ~$19 por artículo",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Herramienta de SEO con IA para optimizar contenido y posicionar en Google.",
@@ -4517,7 +4311,7 @@
       "diseno"
     ],
     "pricing": "pago",
-    "pricingDetail": "Desde $29/mes. Prueba gratuita de 7 días",
+    "pricingDetail": "Desde $39/mes (~$20/mes anual). Escalones $59–249/mes según créditos. Prueba de 7 días",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Genera creatividades publicitarias con IA para redes sociales y Google Ads.",
@@ -4583,7 +4377,7 @@
       "traduccion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. Pro: $9/mes",
+    "pricingDetail": "Gratis con límites. Individual desde ~$8.74/mes. DeepL Write Pro desde ~$17.49/usuario/mes. DeepL Voice aparte",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "El traductor con IA más preciso del mercado, superior a Google Translate.",
@@ -4714,7 +4508,7 @@
       "traduccion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "10 reescrituras gratis/día. Plus: $10/mes",
+    "pricingDetail": "Gratis con límites. Advanced: $6.99/mes ($4.89 anual). Unlimited: $9.99/mes ($6.99 anual)",
     "difficulty": 1,
     "rating": 3,
     "shortDescription": "Herramienta de reescritura que mejora y adapta el tono de tus textos.",
@@ -4778,7 +4572,7 @@
       "automatizacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Plan gratis con acciones basicas. Pro: $10/mes",
+    "pricingDetail": "Gratis 100 créditos/mes. Professional: $10/mes. Business: $15/usuario/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Extensión de navegador para automatizar tareas web sin programar.",
@@ -4808,8 +4602,7 @@
     ],
     "alternatives": [
       "zapier-ai",
-      "make",
-      "respell"
+      "make"
     ],
     "keywords": [
       "automatizar",
@@ -4849,7 +4642,7 @@
       "datos"
     ],
     "pricing": "pago",
-    "pricingDetail": "Desde $19/mes. Prueba gratuita disponible",
+    "pricingDetail": "Gratis (200 acciones/mes + $2 en créditos). Pro: ~$19/mes. Team: ~$234/mes. Enterprise a medida",
     "difficulty": 3,
     "rating": 3,
     "shortDescription": "Plataforma para crear agentes de IA y automatizar flujos de trabajo complejos.",
@@ -4911,75 +4704,6 @@
     "bestFor": "Ideal para crear agentes de IA personalizados para tu negocio"
   },
   {
-    "id": "respell",
-    "name": "Respell",
-    "url": "https://respell.ai",
-    "categories": [
-      "automatizacion"
-    ],
-    "pricing": "freemium",
-    "pricingDetail": "Plan gratis limitado. Pro: $25/mes",
-    "difficulty": 2,
-    "rating": 3,
-    "shortDescription": "Crea flujos de trabajo con IA de forma visual, arrastrando y soltando.",
-    "fullDescription": "Respell es una plataforma de automatización con IA que permite crear flujos de trabajo de forma visual. Combina modelos de IA con acciones en aplicaciones populares para crear automatizaciones inteligentes. Su interfaz de arrastrar y soltar facilita la creación de procesos que incluyen generación de texto, análisis y toma de decisiones.",
-    "useCases": [
-      "Crear flujos de trabajo con IA integrada",
-      "Automatizar generación de contenido",
-      "Procesar y clasificar información automáticamente",
-      "Conectar herramientas con logica de IA",
-      "Crear asistentes automatizados para tareas repetitivas"
-    ],
-    "howToStart": [
-      "Registrate gratis en respell.ai",
-      "Explora los templates de flujos disponibles",
-      "Crea un flujo arrastrando componentes",
-      "Conecta tus aplicaciones y activa el flujo"
-    ],
-    "proTip": "Combina generación de texto con acciones en apps: por ejemplo, un flujo que genere respuestas a emails y las envie automáticamente.",
-    "pros": [
-      "Interfaz visual fácil de entender",
-      "IA integrada en los flujos",
-      "Templates para empezar rápido"
-    ],
-    "cons": [
-      "Menos integraciones que Zapier o Make",
-      "Comunidad pequeña"
-    ],
-    "alternatives": [
-      "zapier-ai",
-      "make",
-      "bardeen"
-    ],
-    "keywords": [
-      "automatizar",
-      "visual",
-      "flujo",
-      "IA",
-      "arrastrar",
-      "soltar",
-      "proceso",
-      "workflow",
-      "conectar apps",
-      "agentes",
-      "no-code",
-      "drag and drop",
-      "spell",
-      "flujo IA",
-      "sin codigo"
-    ],
-    "tags": [
-      "Automatización",
-      "Visual",
-      "Flujos"
-    ],
-    "useCaseIds": [
-      "automatizacion-workflow",
-      "automatizacion-agentes"
-    ],
-    "bestFor": "Ideal para crear flujos de IA arrastrando y soltando"
-  },
-  {
     "id": "photoroom",
     "name": "PhotoRoom",
     "url": "https://photoroom.com",
@@ -4987,7 +4711,7 @@
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con marca de agua. Pro: $10/mes",
+    "pricingDetail": "Gratis con marca de agua. Pro desde $7.50/mes (anual) o $12.99/mes. Max: $20.99/mes",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Elimina fondos de fotos y crea imágenes de producto profesionales con IA.",
@@ -5052,11 +4776,11 @@
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Herramientas gratis limitadas. Pro: $9/mes",
+    "pricingDetail": "Gratis (~15 imágenes/mes con marca de agua). Pro: $9/mes (sin marca, resolución completa)",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Suite de herramientas de IA para editar, limpiar y mejorar imágenes.",
-    "fullDescription": "Clipdrop es una suite de herramientas de edición de imágenes con IA creada por Stability AI. Incluye eliminación de fondos, borrado de objetos, mejora de resolución, rellenado generativo, reemplazo de fondos y generación de imágenes. Todo desde el navegador sin instalar nada.",
+    "fullDescription": "Clipdrop es una suite de herramientas de edición de imágenes con IA creada por Stability AI. Incluye eliminación de fondos, borrado de objetos, mejora de resolución, rellenado generativo, reemplazo de fondos y generación de imágenes. Todo desde el navegador sin instalar nada. Desde 2024 es propiedad de Jasper (ya no de Stability AI).",
     "useCases": [
       "Eliminar objetos no deseados de fotos",
       "Mejorar la resolución de imágenes",
@@ -5110,17 +4834,17 @@
   },
   {
     "id": "playground-ai",
-    "name": "Playground AI",
+    "name": "Playground",
     "url": "https://playground.com",
     "categories": [
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "500 imágenes gratis/día. Pro: $15/mes",
+    "pricingDetail": "Gratis (limitado). Pro: $15/mes ($12 anual). Turbo: $45/mes. Day Pass: $8 por 24 h",
     "difficulty": 1,
     "rating": 4,
-    "shortDescription": "Plataforma gratuita para generar y editar imágenes con múltiples modelos de IA.",
-    "fullDescription": "Playground AI es una plataforma de generación de imágenes con IA que ofrece un plan gratuito muy generoso. Permite generar cientos de imágenes al día usando múltiples modelos, editar imágenes existentes con IA, y combinar generación con edición manual en un canvas intuitivo.",
+    "shortDescription": "Suite de diseño gráfico con IA (logos, redes, productos) con múltiples modelos.",
+    "fullDescription": "Playground (antes Playground AI) pivotó de generador de imágenes puro a una suite de diseño gráfico con IA para crear logos, publicaciones para redes, camisetas y material de marca. Integra varios modelos de imagen (GPT Image, Seedream, Nano Banana, entre otros) y combina generación con edición en un canvas intuitivo.",
     "useCases": [
       "Generar imágenes en grandes cantidades",
       "Crear arte digital y conceptual",
@@ -5179,11 +4903,11 @@
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Créditos gratis limitados. Premium: $9/mes",
+    "pricingDetail": "Gratis (~20 generaciones/día). Premium: $20/mes ($14.50 anual). Premium+: $45/mes ($33.75 anual)",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Generador de imágenes de Freepik con edición en tiempo real y banco de recursos.",
-    "fullDescription": "Freepik AI, a través de su herramienta Pikaso, permite generar imágenes con IA, editar fotos en tiempo real y acceder al enorme banco de recursos de Freepik. Combina la generación de imágenes con IA con millones de vectores, fotos e ilustraciones editables, creando una plataforma completa para diseñadores.",
+    "fullDescription": "Freepik AI, a través de su herramienta Pikaso, permite generar imágenes con IA, editar fotos en tiempo real y acceder al enorme banco de recursos de Freepik. Combina la generación de imágenes con IA con millones de vectores, fotos e ilustraciones editables, creando una plataforma completa para diseñadores. Pikaso es ahora un hub multimodelo (Flux, Imagen, Nano Banana, Seedream, Ideogram, entre otros); en abril de 2026 la suite de imagen de Freepik se reorganizó bajo la marca Magnific.",
     "useCases": [
       "Generar imágenes y vectores con IA",
       "Editar diseños en tiempo real con bocetos",
@@ -5245,7 +4969,7 @@
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis en baja resolución. Desde $1.99 por imagen HD",
+    "pricingDetail": "Vista previa gratis y ~50 créditos/mes en baja resolución. Suscripciones desde $9/mes",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Elimina el fondo de cualquier imagen en 5 segundos con IA.",
@@ -5311,11 +5035,11 @@
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Plan gratis con créditos. Pro: $20/mes",
+    "pricingDetail": "Gratis 50 créditos/día. Desde $10/mes (1.000 créditos). Pro: $25/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Genera imágenes, vectores e ilustraciones con control preciso de estilo y marca.",
-    "fullDescription": "Recraft AI es una plataforma de generación de imágenes con IA enfocada en el control creativo profesional. Permite generar imágenes, vectores SVG, iconos e ilustraciones manteniendo consistencia de estilo y colores de marca. Su modelo Recraft V3 es considerado uno de los mejores para diseño gráfico profesional.",
+    "fullDescription": "Recraft AI es una plataforma de generación de imágenes con IA enfocada en el control creativo profesional. Permite generar imágenes, vectores SVG, iconos e ilustraciones manteniendo consistencia de estilo y colores de marca. Su modelo Recraft V4 es considerado uno de los mejores para diseño gráfico profesional. Su versión vigente es Recraft V4 (desde 2026), referente en generación vectorial (SVG) y texto en imagen.",
     "useCases": [
       "Generar vectores SVG e iconos con IA",
       "Crear ilustraciones con estilo consistente",
@@ -5375,11 +5099,11 @@
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Modelo gratuito y open source. Versiones Pro desde $0.01 por imagen",
+    "pricingDetail": "Modelos open source gratis. FLUX.2 Pro vía API desde ~$0.03–0.07 por megapíxel",
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Modelo de generación de imágenes de última generación por Black Forest Labs.",
-    "fullDescription": "Flux es una familia de modelos de generación de imágenes creada por Black Forest Labs (fundadores de Stable Diffusion). Se ha convertido en el estándar de la industria por su calidad excepcional, especialmente en realismo fotográfico, coherencia de texto y fidelidad a las instrucciones. Disponible en versiones open source y Pro.",
+    "fullDescription": "Flux es una familia de modelos de generación de imágenes creada por Black Forest Labs (fundadores de Stable Diffusion). Se ha convertido en el estándar de la industria por su calidad excepcional, especialmente en realismo fotográfico, coherencia de texto y fidelidad a las instrucciones. Disponible en versiones open source y Pro. Su generación vigente es FLUX.2 (Black Forest Labs).",
     "useCases": [
       "Generar imágenes fotorrealistas de alta calidad",
       "Crear imágenes con texto legible integrado",
@@ -5438,7 +5162,7 @@
       "diseno"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con anuncios. Premium: $8/mes",
+    "pricingDetail": "Gratis con anuncios. Plus: $2.49/mes. Premium: $9.99/mes. Ultra: $24.99/mes",
     "difficulty": 1,
     "rating": 3,
     "shortDescription": "Editor de fotos online gratuito con herramientas de IA integradas.",
@@ -5503,11 +5227,11 @@
       "escritura"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. Premium: $8/mes. SuperGrok: $30/mes",
+    "pricingDetail": "Gratis con límites. X Premium: $8/mes. SuperGrok Lite: $10/mes. SuperGrok: $30/mes. SuperGrok Heavy: $300/mes",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Asistente conversacional de xAI con acceso en tiempo real a X (Twitter) e integración multimodal.",
-    "fullDescription": "Grok es el asistente de IA desarrollado por xAI de Elon Musk. Su principal diferencial es el acceso en tiempo real a conversaciones y tendencias en X (Twitter), lo que lo hace útil para análisis de actualidad, monitoreo de reputación y búsquedas sobre temas emergentes. La versión Grok 3 (2026) incluye razonamiento avanzado, generación de imágenes con Aurora y modo agente.",
+    "fullDescription": "Grok es el asistente de IA desarrollado por xAI de Elon Musk. Su principal diferencial es el acceso en tiempo real a conversaciones y tendencias en X (Twitter), lo que lo hace útil para análisis de actualidad, monitoreo de reputación y búsquedas sobre temas emergentes. La versión Grok 3 (2026) incluye razonamiento avanzado, generación de imágenes con Aurora y modo agente. Su versión vigente es Grok 4.x (2026).",
     "useCases": [
       "Monitorear tendencias y conversaciones en redes sociales en tiempo real",
       "Analizar percepción pública sobre temas o marcas",
@@ -5572,11 +5296,11 @@
       "investigacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis ilimitado. API: ~$0.14 por millón de tokens (muy bajo costo)",
+    "pricingDetail": "Gratis ilimitado (modelo V4). API desde ~$0.14 por millón de tokens (muy bajo costo)",
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Modelo open-source chino con razonamiento avanzado a muy bajo costo — rival directo de GPT-4 y Claude.",
-    "fullDescription": "DeepSeek es un laboratorio chino que ha disrumpido el mercado con modelos de IA open-source (V3, R1) que igualan o superan a GPT-4 y Claude en muchas tareas — a una fracción del costo. DeepSeek R1 destaca en razonamiento matemático, programación y análisis técnico. El modelo es libre para uso personal y la API es 30x más barata que la de OpenAI.",
+    "fullDescription": "DeepSeek es un laboratorio chino que ha disrumpido el mercado con modelos de IA open-source (V3, R1) que igualan o superan a GPT-4 y Claude en muchas tareas — a una fracción del costo. DeepSeek R1 destaca en razonamiento matemático, programación y análisis técnico. El modelo es libre para uso personal y la API es 30x más barata que la de OpenAI. Su modelo vigente es DeepSeek V4, con ventana de contexto de 1M de tokens.",
     "useCases": [
       "Resolver problemas matemáticos complejos paso a paso",
       "Generar y depurar código en múltiples lenguajes",
@@ -5641,7 +5365,7 @@
       "productividad"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis en kimi.moonshot.cn y kimi.com. API (platform.moonshot.ai): desde USD 0,15/1M tokens entrada",
+    "pricingDetail": "Gratis en kimi.moonshot.cn y kimi.com. API (platform.moonshot.ai): USD 0,95/1M tokens de entrada (cache-hit 0,16) y 4,00 de salida",
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Asistente agéntico de Moonshot AI con 256K de contexto; K2.6 (abril 2026) ejecuta tareas largas de forma autónoma.",
@@ -5709,11 +5433,11 @@
       "escritura"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con cuenta Alibaba. API: $0.20–2 por millón de tokens",
+    "pricingDetail": "Gratis en Qwen Chat con cuenta Alibaba. API Qwen3.7: ~$0.30–7.50 por millón de tokens",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Modelo multilingüe de Alibaba con fortaleza en idiomas asiáticos y comprensión de documentos largos.",
-    "fullDescription": "Qwen (通义千问) es la familia de modelos de IA de Alibaba Cloud. Qwen2.5 y Qwen3 (2026) son referentes open-source con excelente rendimiento en traducciones, comprensión de documentos extensos (1M tokens de contexto) y procesamiento multilingüe — especialmente útil para empresas con operación en Asia o que manejen múltiples idiomas.",
+    "fullDescription": "Qwen (通义千问) es la familia de modelos de IA de Alibaba Cloud. Qwen2.5 y Qwen3 (2026) son referentes open-source con excelente rendimiento en traducciones, comprensión de documentos extensos (1M tokens de contexto) y procesamiento multilingüe — especialmente útil para empresas con operación en Asia o que manejen múltiples idiomas. Su serie vigente es Qwen3.7 (Max y Plus multimodal), con capacidades de agente visual.",
     "useCases": [
       "Traducir entre más de 100 idiomas con matices culturales",
       "Analizar documentos de hasta 1 millón de tokens",
@@ -5769,16 +5493,16 @@
   {
     "id": "sora",
     "name": "Sora",
-    "url": "https://sora.com",
+    "url": "https://chatgpt.com",
     "categories": [
       "video"
     ],
     "pricing": "pago",
-    "pricingDetail": "Incluido en ChatGPT Plus ($20/mes) y Pro ($200/mes). Créditos limitados por plan",
+    "pricingDetail": "Sin acceso de consumidor desde abril 2026 (app y web descontinuadas). Solo queda la API Sora 2 para desarrolladores, que cierra el 24 de septiembre de 2026",
     "difficulty": 2,
     "rating": 5,
-    "shortDescription": "Generador de video cinematográfico de OpenAI — crea clips de hasta 20 segundos desde texto.",
-    "fullDescription": "Sora es el modelo de generación de video de OpenAI, capaz de crear videos cinematográficos realistas desde prompts de texto o imágenes de referencia. Sora 2 (2026) genera videos de hasta 20 segundos en 1080p con audio sincronizado, coherencia de personajes y control de cámara. Disponible dentro del ecosistema ChatGPT.",
+    "shortDescription": "Generador de video cinematográfico de OpenAI (Sora 2); su acceso de consumidor se descontinuó en 2026.",
+    "fullDescription": "Sora es el modelo de generación de video de OpenAI. Sora 2 / Sora 2 Pro crean clips cinematográficos realistas desde texto o imágenes de referencia, con audio sincronizado, coherencia de personajes y control de cámara. Importante: en 2026 OpenAI descontinuó Sora para consumidores — la app y la web se cerraron el 26 de abril de 2026 y el video tampoco quedó disponible en ChatGPT Plus ni Pro. Solo persiste la API Sora 2 (para desarrolladores), que se apagará el 24 de septiembre de 2026.",
     "useCases": [
       "Crear videos publicitarios cortos sin producción",
       "Generar b-roll para YouTube y redes",
@@ -5833,17 +5557,17 @@
   },
   {
     "id": "veo",
-    "name": "Google Veo 3",
-    "url": "https://deepmind.google/technologies/veo",
+    "name": "Google Veo (Veo 3.1)",
+    "url": "https://labs.google/flow",
     "categories": [
       "video"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites en Gemini. Pro: $20/mes. Ultra: $250/mes",
+    "pricingDetail": "Vía Gemini/Flow: Google AI Plus $4.99/mes (Veo 3.1 Fast). AI Pro: $19.99/mes. AI Ultra: $99.99/mes",
     "difficulty": 2,
     "rating": 5,
-    "shortDescription": "Generador de video de Google DeepMind con audio nativo, física realista y resolución 4K.",
-    "fullDescription": "Veo 3 es el modelo de video de Google DeepMind — competencia directa de Sora. Genera clips de hasta 8 segundos (extensibles) en resolución 4K con audio dialogado y efectos de sonido sincronizados. Destaca por la física realista de objetos y personajes y por integrarse con el ecosistema Google (Gemini, Flow, YouTube Shorts).",
+    "shortDescription": "Generador de video de Google (Veo 3.1) con audio nativo, física realista y calidad cine.",
+    "fullDescription": "Veo 3.1 es el modelo de video de Google DeepMind, disponible dentro de Gemini y de la app de producción Flow. Genera clips realistas con audio dialogado y efectos de sonido sincronizados, en tres niveles (Lite para borradores, Fast balanceado y Quality para calidad cine), con buena consistencia de personajes y física. Se integra con el ecosistema Google y con Gemini 3.x.",
     "useCases": [
       "Videos con diálogos y efectos sonoros generados",
       "Animaciones con física realista",
@@ -5905,11 +5629,11 @@
       "video"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con créditos diarios. Pro: $10/mes. Premier: $37/mes",
+    "pricingDetail": "Gratis con créditos diarios. Standard: $6.99/mes. Pro: $25.99/mes. Premier: $64.99/mes. Ultra: $127.99/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Generador de video chino con clips largos (hasta 2 min) y control preciso de personajes.",
-    "fullDescription": "Kling AI, desarrollado por Kuaishou (china), es uno de los generadores de video más accesibles del mercado. Destaca por permitir clips largos (hasta 2 minutos), control preciso sobre personajes con Face Model, y precios accesibles. Su versión 2.0 (2026) alcanza calidad comparable a Sora y Veo en escenas realistas.",
+    "fullDescription": "Kling AI, desarrollado por Kuaishou (china), es uno de los generadores de video más accesibles del mercado. Destaca por permitir clips largos (hasta 2 minutos), control preciso sobre personajes con Face Model, y precios accesibles. Su versión 2.0 (2026) alcanza calidad comparable a Sora y Veo en escenas realistas. Conviven sus modelos Kling 2.5, 2.6 y 3.0.",
     "useCases": [
       "Clips largos para YouTube y TikTok",
       "Animar una foto o avatar propio",
@@ -5970,7 +5694,7 @@
       "automatizacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con 5 mensajes diarios. Starter: $25/mes. Scale: $100+/mes",
+    "pricingDetail": "Gratis (5 créditos/día). Pro: $25/mes. Business: $50/mes",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Crea aplicaciones web completas desde texto — frontend, backend, base de datos y deploy.",
@@ -6036,7 +5760,7 @@
       "programacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con 1M tokens diarios. Pro: $20/mes. Teams: $50/mes",
+    "pricingDetail": "Gratis (1M tokens/mes). Pro: $25/mes. Teams: $30/miembro/mes",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "IDE en el navegador que genera y ejecuta apps fullstack completas con un solo prompt.",
@@ -6103,7 +5827,7 @@
       "investigacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con 1000 créditos. Starter: $39/mes. Pro: $199/mes",
+    "pricingDetail": "Gratis (300 créditos diarios). Standard: $20/mes. Customizable: $40/mes. Extended: $200/mes",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Agente autónomo general que navega la web, analiza datos y ejecuta tareas completas sin supervisión.",
@@ -6171,7 +5895,7 @@
       "chatbots"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con créditos diarios. Plus: $24/mes. Pro: $250/mes",
+    "pricingDetail": "Gratis (créditos diarios). Plus: $24.99/mes ($19.99 anual). Pro: $249.99/mes",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Buscador agentic que responde investigaciones y genera hojas de cálculo, presentaciones y llamadas telefónicas.",
@@ -6231,19 +5955,19 @@
   },
   {
     "id": "finchat",
-    "name": "FinChat",
-    "url": "https://finchat.io",
+    "name": "Fiscal.ai (antes FinChat)",
+    "url": "https://fiscal.ai",
     "categories": [
       "finanzas",
       "investigacion",
       "datos"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. Plus: $49/mes. Pro: $139/mes",
+    "pricingDetail": "Gratis (con prueba Pro de 2 semanas). Pro: $39/mes (anual) o $49/mes. Max superior. API a medida",
     "difficulty": 2,
     "rating": 5,
-    "shortDescription": "ChatGPT para analistas financieros — acceso a datos de 100K+ empresas con gráficas automáticas.",
-    "fullDescription": "FinChat (ahora Stock Analysis AI) es un asistente de investigación financiera que combina modelos de lenguaje con bases de datos fundamentales de más de 100,000 empresas públicas. Permite hacer preguntas en lenguaje natural sobre estados financieros, ratios, guidance de CEO en transcripts, y genera gráficas automáticas y comparables. Es la herramienta preferida por analistas buy-side y fondos.",
+    "shortDescription": "ChatGPT para analistas financieros — datos de 100K+ empresas con gráficas automáticas (antes FinChat).",
+    "fullDescription": "Fiscal.ai (renombrado desde FinChat en 2025) es un asistente de investigación financiera que combina modelos de lenguaje con bases de datos fundamentales de más de 100.000 empresas públicas. Permite preguntar en lenguaje natural sobre estados financieros, ratios y guidance de transcripts, y genera gráficas automáticas y comparables. Es la herramienta preferida por analistas buy-side y fondos.",
     "useCases": [
       "Analizar fundamentales de una empresa en segundos",
       "Comparar ratios entre competidores del mismo sector",
@@ -6306,7 +6030,7 @@
       "investigacion"
     ],
     "pricing": "pago",
-    "pricingDetail": "Enterprise. Licencia estimada: $12K–40K USD/año por usuario",
+    "pricingDetail": "Empresarial a medida (no público). Contratos típicos $10K–20K por usuario/año",
     "difficulty": 3,
     "rating": 5,
     "shortDescription": "Plataforma de inteligencia de mercado para financieros — busca en millones de documentos con IA.",
@@ -6371,7 +6095,7 @@
       "datos"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. Plus: $39/mes. Pro: $79/mes",
+    "pricingDetail": "Gratis. Plus: $39/mes. Premium: $79/mes. Advisor/empresa a medida",
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Terminal financiera tipo Bloomberg — datos, gráficas y AI copilot a una fracción del precio.",
@@ -6437,7 +6161,7 @@
       "finanzas"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con 3 consultas. Pro: $15/mes. Platinum: $31/mes",
+    "pricingDetail": "Prueba gratis 14 días. Plus: $22/mes ($199/año). Pro: $59/mes ($499/año). API a medida",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "IA que puntúa acciones con el AI Score — probabilidad de superar al mercado en los próximos 3 meses.",
@@ -6495,19 +6219,19 @@
   },
   {
     "id": "copilot-finance",
-    "name": "Copilot for Finance",
-    "url": "https://microsoft.com/microsoft-365/copilot/copilot-for-finance",
+    "name": "Finance en Microsoft 365 Copilot",
+    "url": "https://www.microsoft.com/microsoft-365/copilot",
     "categories": [
       "finanzas",
       "productividad",
       "datos"
     ],
     "pricing": "pago",
-    "pricingDetail": "USD 30/mes por usuario (requiere Microsoft 365 Copilot)",
+    "pricingDetail": "Incluido en Microsoft 365 Copilot ($30/usuario/mes)",
     "difficulty": 2,
     "rating": 4,
-    "shortDescription": "IA de Microsoft en Excel y Outlook para equipos de finanzas — conciliación, variance y reportes.",
-    "fullDescription": "Copilot for Finance es una extensión de Microsoft 365 Copilot diseñada para equipos financieros. Vive dentro de Excel, Outlook y Teams, y automatiza tareas repetitivas como conciliación de cuentas, análisis de varianzas, creación de reportes ejecutivos, resumen de hilos de correo de aprobación y preparación de datos para close mensual.",
+    "shortDescription": "IA de Microsoft para finanzas dentro de M365 Copilot — conciliación, varianzas y reportes.",
+    "fullDescription": "La solución Finance (antes Copilot for Finance) se integró dentro de Microsoft 365 Copilot, en disponibilidad general desde octubre de 2025. Vive en Excel, Outlook y Teams y automatiza tareas como conciliación de cuentas, análisis de varianzas, reportes ejecutivos, resumen de hilos de aprobación y preparación de datos para el cierre mensual, con datos conectados al ERP y nuevos 'Finance agents'.",
     "useCases": [
       "Conciliar cuentas bancarias en Excel automáticamente",
       "Explicar varianzas presupuestales en lenguaje natural",
@@ -6534,8 +6258,7 @@
     ],
     "alternatives": [
       "finchat",
-      "julius",
-      "rows"
+      "julius"
     ],
     "keywords": [
       "copilot finance",
@@ -6570,7 +6293,7 @@
       "productividad"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Incluido en QuickBooks (desde $30/mes) y TurboTax. Asistencia humana adicional: $50+/mes",
+    "pricingDetail": "Incluido en QuickBooks Online; agentes avanzados según plan. (QBO sube precios 15-25% desde mayo 2026)",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "IA financiera personal y de pymes integrada en QuickBooks, TurboTax y Credit Karma.",
@@ -6635,11 +6358,11 @@
       "automatizacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis la plataforma (monetiza por interchange). Plus: $15/usuario/mes",
+    "pricingDetail": "Plan base gratis (monetiza por interchange). Plus y Enterprise a medida",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Tarjetas corporativas con IA que ahorra dinero automáticamente detectando gastos duplicados y negociando.",
-    "fullDescription": "Ramp es una plataforma fintech de tarjetas corporativas, gestión de gastos y contabilidad automatizada, con IA embebida en cada proceso. Detecta suscripciones duplicadas, alerta sobre upgrades/downgrades disponibles, auto-categoriza gastos, genera reportes y hasta negocia renovaciones de software en tu nombre. Pymes US reportan ahorrar 3–5% de OPEX en el primer año.",
+    "fullDescription": "Ramp es una plataforma fintech de tarjetas corporativas, gestión de gastos y contabilidad automatizada, con IA embebida en cada proceso. Detecta suscripciones duplicadas, alerta sobre upgrades/downgrades disponibles, auto-categoriza gastos, genera reportes y hasta negocia renovaciones de software en tu nombre. Pymes US reportan ahorrar 3–5% de OPEX en el primer año. Incorporó agentes de IA para controllers, cuentas por pagar y compras.",
     "useCases": [
       "Detectar y cancelar suscripciones SaaS duplicadas",
       "Automatizar reembolsos y aprobaciones de gastos",
@@ -6701,7 +6424,7 @@
       "datos"
     ],
     "pricing": "pago",
-    "pricingDetail": "Enterprise. Desde USD 500/mes por firma pequeña",
+    "pricingDetail": "Empresarial a medida (no público, sin plan gratis)",
     "difficulty": 3,
     "rating": 4,
     "shortDescription": "IA de auditoría y detección de fraude financiero — analiza el 100% de transacciones, no muestras.",
@@ -6768,7 +6491,7 @@
       "datos"
     ],
     "pricing": "pago",
-    "pricingDetail": "Incluido en Bloomberg Terminal: USD 31,500/año por usuario",
+    "pricingDetail": "Incluido en Bloomberg Terminal: ~$31.980 por usuario/año",
     "difficulty": 3,
     "rating": 5,
     "shortDescription": "IA nativa del Bloomberg Terminal entrenada con 40 años de datos financieros propios.",
@@ -6839,7 +6562,7 @@
     "difficulty": 3,
     "rating": 4,
     "shortDescription": "IA financiera de S&P Global — extracción de datos de documentos, transcripción financiera y link de entidades.",
-    "fullDescription": "Kensho (adquirida por S&P Global en 2018) ofrece módulos de IA especializados en finanzas: Extract (extracción de tablas y datos de PDFs financieros), Scribe (transcripción de earnings calls con jerga financiera), NERD (link de entidades a instrumentos), Classify (taxonomía GICS). Es la columna vertebral de IA detrás de S&P Capital IQ Pro.",
+    "fullDescription": "Kensho (adquirida por S&P Global en 2018) ofrece módulos de IA especializados en finanzas: Extract (extracción de tablas y datos de PDFs financieros), Scribe (transcripción de earnings calls con jerga financiera), NERD (link de entidades a instrumentos), Classify (taxonomía GICS). Es la columna vertebral de IA detrás de S&P Capital IQ Pro. Lanzó su LLM-Ready API y 'MCP Apps' con datos de S&P Global.",
     "useCases": [
       "Extraer tablas estructuradas de prospectos y 10-K",
       "Transcribir earnings calls con precisión de jerga",
@@ -6900,7 +6623,7 @@
       "productividad"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con 10 páginas. Pro: $14.99/mes. Team: $99/mes",
+    "pricingDetail": "Gratis 60 páginas/mes. Student: $1.99/mes. Expert: $9.99/mes. Team: $99/mes",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Pregunta a tus PDFs — sube contratos, leyes o informes y chatea con su contenido en español.",
@@ -6967,7 +6690,7 @@
       "educacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con 2 PDFs/día. Plus: $5/mes. Unlimited: $10/mes",
+    "pricingDetail": "Gratis (límites diarios). Plus: $19.99/mes o $139.99/año (PDFs hasta 2.000 páginas)",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Chatea con tus PDFs de forma simple y rápida — interfaz minimalista ideal para estudiantes y profesionales.",
@@ -7032,11 +6755,11 @@
       "productividad"
     ],
     "pricing": "pago",
-    "pricingDetail": "Enterprise. Estimado USD 250–500 por abogado/mes",
+    "pricingDetail": "Empresarial: ~$225–900 por usuario/mes. CoCounsel Core desde ~$4.500/usuario/año",
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Asistente legal con IA de Thomson Reuters — revisa contratos, investiga jurisprudencia y redacta memorandos.",
-    "fullDescription": "CoCounsel es el asistente legal con IA de Thomson Reuters (integrado con Westlaw). Automatiza revisión de contratos, investigación de jurisprudencia, resumen de depositions, due diligence documental y redacción de memorandos. Usado por firmas top-100 y departamentos legales corporativos. Entrenado sobre la base de datos legal más grande del mundo.",
+    "fullDescription": "CoCounsel es el asistente legal con IA de Thomson Reuters (integrado con Westlaw). Automatiza revisión de contratos, investigación de jurisprudencia, resumen de depositions, due diligence documental y redacción de memorandos. Originado en Casetext (cuyo producto independiente se descontinuó en marzo de 2025), en 2026 superó el millón de usuarios activos en 107 países. Usado por firmas top-100 y departamentos legales corporativos.",
     "useCases": [
       "Revisar contratos y extraer cláusulas riesgosas",
       "Investigar jurisprudencia con síntesis automática",
@@ -7087,5 +6810,1066 @@
       "productividad-organizar"
     ],
     "bestFor": "Ideal para firmas de abogados y departamentos legales corporativos"
+  },
+  {
+    "id": "glm-zai",
+    "name": "Z.ai (GLM)",
+    "url": "https://chat.z.ai",
+    "categories": [
+      "chatbots",
+      "programacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Chat gratis. API GLM-5.2 de bajo costo (~$1,40/$4,40 por 1M tokens). GLM Coding Plan desde $18/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Chatbot y agente gratuito de Zhipu (modelo GLM-5.2), líder open source en tareas de programación.",
+    "fullDescription": "Z.ai es el asistente conversacional de Zhipu AI, impulsado por la familia de modelos GLM-5 (flagship GLM-5.2, uno de los modelos open source más potentes de 2026, líder en benchmarks de ingeniería de software). Ofrece chat gratuito potente, capacidades de agente y una API de muy bajo costo, lo que lo vuelve una alternativa china seria a ChatGPT o Claude para quienes buscan rendimiento sin pagar tarifas altas.",
+    "useCases": [
+      "Resolver dudas y redactar textos gratis",
+      "Generar y depurar código",
+      "Tareas de agente (navegar, ejecutar pasos)",
+      "Alternativa económica vía API"
+    ],
+    "howToStart": [
+      "Entra a chat.z.ai y crea una cuenta",
+      "Escribe tu pregunta o tarea",
+      "Activa el modo agente para tareas de varios pasos",
+      "Para desarrolladores: usa la API de GLM por su bajo costo"
+    ],
+    "proTip": "Para programación, GLM-5 rinde a la altura de modelos frontier a una fracción del costo vía API.",
+    "pros": [
+      "Chat gratuito potente",
+      "Muy fuerte en código",
+      "API de bajo costo"
+    ],
+    "cons": [
+      "Interfaz menos pulida que líderes occidentales",
+      "Privacidad: revisa dónde se procesan tus datos"
+    ],
+    "alternatives": [
+      "deepseek",
+      "qwen",
+      "kimi"
+    ],
+    "keywords": [
+      "glm",
+      "zhipu",
+      "chatbot chino",
+      "open source",
+      "agente",
+      "código",
+      "gratis",
+      "alternativa chatgpt"
+    ],
+    "tags": [
+      "IA generativa",
+      "Open source",
+      "Agente",
+      "Económico"
+    ],
+    "useCaseIds": [
+      "chatbots-asistente",
+      "chatbots-consultas",
+      "programacion-escribir",
+      "automatizacion-agentes"
+    ],
+    "bestFor": "Ideal para quien quiere un chatbot potente y gratis, fuerte en programación"
+  },
+  {
+    "id": "nano-banana",
+    "name": "Nano Banana Pro (Google)",
+    "url": "https://gemini.google.com",
+    "categories": [
+      "diseno"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "En la app Gemini con límites gratis. API: ~$0.134 por imagen 1K/2K y ~$0.24 por 4K",
+    "difficulty": 1,
+    "rating": 5,
+    "shortDescription": "Generador y editor de imágenes de Google (modelo Gemini 3 Pro Image) con edición conversacional y salida 4K.",
+    "fullDescription": "Nano Banana Pro es el generador y editor de imágenes de Google, basado en el modelo Gemini 3 Pro Image. Se volvió uno de los modelos líderes de 2026 por su edición conversacional (le pides cambios en lenguaje natural), su consistencia entre imágenes y su salida de alta resolución hasta 4K. Está integrado dentro de la app Gemini y disponible por API.",
+    "useCases": [
+      "Crear imágenes desde una descripción",
+      "Editar fotos hablándole (cambiar fondo, objetos, estilo)",
+      "Mantener consistencia de personajes o producto",
+      "Generar gráficos en alta resolución (hasta 4K)"
+    ],
+    "howToStart": [
+      "Abre la app o web de Gemini con tu cuenta de Google",
+      "Pide una imagen o sube una para editar",
+      "Describe en lenguaje natural los cambios que quieres",
+      "Descarga en la resolución que necesites"
+    ],
+    "proTip": "Para editar, sé específico con lo que debe cambiar y lo que debe quedar igual; respeta muy bien las instrucciones.",
+    "pros": [
+      "Edición conversacional excelente",
+      "Hasta 4K",
+      "Integrado en Gemini"
+    ],
+    "cons": [
+      "Mejores funciones requieren plan de pago",
+      "Consumo de créditos en uso intensivo"
+    ],
+    "alternatives": [
+      "dall-e",
+      "midjourney",
+      "adobe-firefly"
+    ],
+    "keywords": [
+      "nano banana",
+      "gemini imagen",
+      "generar imagen",
+      "editar imagen",
+      "google",
+      "4k",
+      "edicion conversacional"
+    ],
+    "tags": [
+      "Generación de imágenes",
+      "Google",
+      "4K",
+      "Multimodal",
+      "Edición"
+    ],
+    "useCaseIds": [
+      "diseno-imagenes",
+      "diseno-editar",
+      "diseno-social",
+      "diseno-producto"
+    ],
+    "bestFor": "Ideal para generar y editar imágenes hablándole, con calidad hasta 4K"
+  },
+  {
+    "id": "hailuo",
+    "name": "Hailuo (MiniMax)",
+    "url": "https://hailuoai.video",
+    "categories": [
+      "video"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con créditos diarios. Planes de pago por suscripción/créditos (rango ~$15–200/mes)",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Generador de video de MiniMax (Hailuo 3.0): texto a video e imagen a video rápidos, con audio.",
+    "fullDescription": "Hailuo es el generador de video de MiniMax. Su modelo Hailuo 3.0 crea videos a partir de texto o de una imagen de referencia de forma rápida, con soporte de audio y música por prompt. Es muy popular por su capa gratuita generosa y su buena relación calidad-precio, lo que lo hace accesible para creadores en Latinoamérica.",
+    "useCases": [
+      "Generar clips desde una idea o imagen",
+      "Animar una foto fija",
+      "Crear contenido para redes rápido",
+      "Probar generación de video gratis"
+    ],
+    "howToStart": [
+      "Entra a hailuoai.video y crea una cuenta",
+      "Escribe un prompt o sube una imagen de referencia",
+      "Elige duración y estilo",
+      "Genera y descarga tu clip"
+    ],
+    "proTip": "Aprovecha los créditos diarios gratis para iterar prompts antes de pagar por más generaciones.",
+    "pros": [
+      "Capa gratuita generosa",
+      "Rápido",
+      "Buena relación calidad-precio"
+    ],
+    "cons": [
+      "Clips cortos",
+      "Cola de espera en horas pico"
+    ],
+    "alternatives": [
+      "kling",
+      "runway",
+      "pika"
+    ],
+    "keywords": [
+      "hailuo",
+      "minimax",
+      "video ia",
+      "texto a video",
+      "imagen a video",
+      "gratis",
+      "redes"
+    ],
+    "tags": [
+      "Generación de video",
+      "Video IA",
+      "Económico",
+      "Texto a video"
+    ],
+    "useCaseIds": [
+      "video-generar",
+      "video-clips",
+      "video-animacion"
+    ],
+    "bestFor": "Ideal para crear video con IA gratis y rápido para redes sociales"
+  },
+  {
+    "id": "seedance",
+    "name": "Seedance (ByteDance)",
+    "url": "https://seed.bytedance.com",
+    "categories": [
+      "video"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Acceso por créditos vía plataformas (Runway, fal.ai, API de terceros); precio por clip según resolución/duración",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Modelo imagen-a-video de ByteDance, favorito en pruebas ciegas de 2026 por su realismo y control.",
+    "fullDescription": "Seedance es el modelo de generación de video de ByteDance (creadores de TikTok). En 2026 se volvió uno de los favoritos de los creadores en comparativas ciegas por su realismo, fluidez de movimiento y control. Suele accederse a través de plataformas que lo integran (como Runway) o por API de terceros, más que con una app propia masiva.",
+    "useCases": [
+      "Convertir una imagen en video realista",
+      "Generar tomas con movimiento de cámara controlado",
+      "Producción de video de alta fidelidad",
+      "Comparar contra otros modelos en plataformas multimodelo"
+    ],
+    "howToStart": [
+      "Accede a Seedance a través de una plataforma que lo integre (p.ej. Runway o fal.ai)",
+      "Sube una imagen o escribe un prompt",
+      "Ajusta movimiento y duración",
+      "Genera y descarga"
+    ],
+    "proTip": "Si ya usas una plataforma multimodelo, prueba Seedance lado a lado con Veo y Kling para el mismo prompt.",
+    "pros": [
+      "Realismo destacado",
+      "Buen control de movimiento",
+      "Top en benchmarks 2026"
+    ],
+    "cons": [
+      "Sin app propia masiva (acceso vía terceros)",
+      "Curva un poco mayor"
+    ],
+    "alternatives": [
+      "kling",
+      "runway",
+      "veo"
+    ],
+    "keywords": [
+      "seedance",
+      "bytedance",
+      "imagen a video",
+      "video ia",
+      "realismo",
+      "tiktok"
+    ],
+    "tags": [
+      "Generación de video",
+      "Video IA",
+      "TikTok",
+      "Cinematográfico"
+    ],
+    "useCaseIds": [
+      "video-generar",
+      "video-clips",
+      "video-animacion"
+    ],
+    "bestFor": "Ideal para video imagen-a-video de alta fidelidad vía plataformas multimodelo"
+  },
+  {
+    "id": "openai-codex",
+    "name": "OpenAI Codex",
+    "url": "https://chatgpt.com/codex",
+    "categories": [
+      "programacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Incluido en planes ChatGPT: Plus $20/mes, Pro intermedio $100/mes, Pro $200/mes, Business ~$25/usuario/mes",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Agente de código de OpenAI (CLI + apps + nube) sobre GPT-5.5 que programa tareas de forma autónoma.",
+    "fullDescription": "OpenAI Codex es el agente de programación de OpenAI, disponible como CLI, apps de escritorio (Mac/Windows) y en la nube, impulsado por GPT-5.5. Ejecuta tareas de código de forma autónoma: entiende tu repositorio, escribe y modifica archivos, corre comandos y propone cambios. En 2026 es uno de los tres agentes de código dominantes junto a Claude Code y Cursor.",
+    "useCases": [
+      "Implementar funciones de principio a fin",
+      "Refactorizar y depurar código",
+      "Automatizar tareas repetitivas de programación",
+      "Revisar y explicar bases de código grandes"
+    ],
+    "howToStart": [
+      "Necesitas una suscripción ChatGPT (Plus o superior)",
+      "Instala el CLI de Codex o la app de escritorio",
+      "Apunta Codex a tu proyecto o repositorio",
+      "Describe la tarea en lenguaje natural y revisa los cambios propuestos"
+    ],
+    "proTip": "Pídele un plan antes de ejecutar cambios grandes y revisa siempre el diff antes de aceptar.",
+    "pros": [
+      "Agente de código muy capaz (GPT-5.5)",
+      "CLI + apps + nube",
+      "Incluido en tu plan ChatGPT"
+    ],
+    "cons": [
+      "Requiere suscripción ChatGPT",
+      "El uso intensivo consume tope de tokens"
+    ],
+    "alternatives": [
+      "claude-code",
+      "cursor",
+      "github-copilot"
+    ],
+    "keywords": [
+      "codex",
+      "openai",
+      "agente de codigo",
+      "gpt-5.5",
+      "programar",
+      "cli",
+      "automatizar codigo"
+    ],
+    "tags": [
+      "Programación",
+      "Agente IA",
+      "OpenAI",
+      "Terminal"
+    ],
+    "useCaseIds": [
+      "programacion-escribir",
+      "programacion-depurar",
+      "programacion-ide",
+      "automatizacion-agentes"
+    ],
+    "bestFor": "Ideal para programadores que ya pagan ChatGPT y quieren un agente de código autónomo"
+  },
+  {
+    "id": "antigravity",
+    "name": "Google Antigravity",
+    "url": "https://antigravity.google",
+    "categories": [
+      "programacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Nivel gratis con Gemini 3.5 Flash y límites. Acceso ampliado vía Google AI (~$20/mes; Ultra $100/mes)",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Plataforma agéntica de desarrollo de Google (IDE + CLI) sobre Gemini 3.x, con subagentes y tareas en segundo plano.",
+    "fullDescription": "Google Antigravity es la plataforma de desarrollo agéntico de Google, lanzada en 2026 como competidor directo de Cursor y Claude Code. Combina un IDE, una CLI (Antigravity CLI, que reemplazó a Gemini CLI) y un SDK público, todo sobre la familia Gemini 3.x. Permite orquestar subagentes dinámicos y dejar tareas corriendo en segundo plano.",
+    "useCases": [
+      "Desarrollar con agentes de IA en un IDE dedicado",
+      "Lanzar subagentes para tareas paralelas",
+      "Programar tareas de código en segundo plano",
+      "Construir flujos con el SDK"
+    ],
+    "howToStart": [
+      "Descarga Antigravity desde antigravity.google",
+      "Inicia sesión con tu cuenta de Google",
+      "Abre tu proyecto y usa el nivel gratis (Gemini 3.5 Flash)",
+      "Para más capacidad, conecta un plan Google AI"
+    ],
+    "proTip": "Usa los subagentes para dividir una tarea grande y deja las tareas largas corriendo en segundo plano.",
+    "pros": [
+      "IDE + CLI + SDK integrados",
+      "Sobre Gemini 3.x",
+      "Nivel gratuito disponible"
+    ],
+    "cons": [
+      "Producto reciente, en maduración",
+      "Mejor capacidad requiere plan Google AI"
+    ],
+    "alternatives": [
+      "cursor",
+      "claude-code",
+      "windsurf"
+    ],
+    "keywords": [
+      "antigravity",
+      "google",
+      "ide agentico",
+      "gemini",
+      "subagentes",
+      "cli",
+      "programar"
+    ],
+    "tags": [
+      "Programación",
+      "Google",
+      "Agente IA",
+      "IDE"
+    ],
+    "useCaseIds": [
+      "programacion-escribir",
+      "programacion-ide",
+      "programacion-depurar",
+      "automatizacion-agentes"
+    ],
+    "bestFor": "Ideal para desarrolladores del ecosistema Google que quieren un IDE agéntico"
+  },
+  {
+    "id": "kiro",
+    "name": "Kiro (Amazon)",
+    "url": "https://kiro.dev",
+    "categories": [
+      "programacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Free (50 créditos/mes). Pro: $20/mes. Pro+: $40/mes. Pro Max: $100/mes. Power: $200/mes. Créditos extra a $0.04 c/u",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "IDE agéntico de Amazon con desarrollo 'spec-driven': planifica la especificación antes de escribir el código.",
+    "fullDescription": "Kiro es el IDE agéntico de Amazon (AWS), sucesor de Amazon Q Developer. Su diferencial es el desarrollo 'spec-driven': antes de programar, ayuda a planear y escribir la especificación del cambio, y luego implementa el código a partir de ella. Usa un modo 'Auto' que mezcla modelos frontera (incluidos Sonnet/Opus 4.x).",
+    "useCases": [
+      "Planear una funcionalidad antes de codificarla",
+      "Implementar a partir de una especificación clara",
+      "Trabajar con agentes dentro del IDE",
+      "Reducir errores con enfoque spec-first"
+    ],
+    "howToStart": [
+      "Descarga Kiro desde kiro.dev (no requiere cuenta AWS)",
+      "Abre tu proyecto",
+      "Describe qué quieres y deja que genere la especificación",
+      "Revisa la spec y deja que implemente"
+    ],
+    "proTip": "Invierte tiempo en revisar la especificación: un buen spec produce código mucho más confiable.",
+    "pros": [
+      "Enfoque spec-driven único",
+      "Nivel gratis sin cuenta AWS",
+      "Modelos frontera incluidos"
+    ],
+    "cons": [
+      "Flujo distinto al de IDEs tradicionales",
+      "Límite bajo en el plan gratis"
+    ],
+    "alternatives": [
+      "cursor",
+      "windsurf",
+      "github-copilot"
+    ],
+    "keywords": [
+      "kiro",
+      "amazon",
+      "aws",
+      "ide agentico",
+      "spec driven",
+      "programar",
+      "especificacion"
+    ],
+    "tags": [
+      "Programación",
+      "IDE",
+      "Agente IA"
+    ],
+    "useCaseIds": [
+      "programacion-escribir",
+      "programacion-ide",
+      "programacion-web"
+    ],
+    "bestFor": "Ideal para equipos que quieren planear la spec antes de dejar que la IA programe"
+  },
+  {
+    "id": "devin",
+    "name": "Devin (Cognition)",
+    "url": "https://devin.ai",
+    "categories": [
+      "programacion"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Pro: $20/mes. Max: $200/mes. Teams: $80 base + $40/asiento. Enterprise a medida",
+    "difficulty": 3,
+    "rating": 4,
+    "shortDescription": "Ingeniero de software autónomo en la nube de Cognition que toma tareas de programación de principio a fin.",
+    "fullDescription": "Devin es el 'ingeniero de software autónomo' de Cognition. A diferencia de un copiloto, toma una tarea de programación completa y la ejecuta de extremo a extremo en la nube: planifica, escribe código, corre pruebas y abre pull requests. Tras la adquisición de Windsurf en 2025, Devin y Windsurf están bajo el mismo techo (Cognition).",
+    "useCases": [
+      "Delegar tareas de código completas",
+      "Resolver tickets y abrir pull requests",
+      "Trabajar en paralelo a tu equipo de desarrollo",
+      "Automatizar mantenimiento de software"
+    ],
+    "howToStart": [
+      "Crea una cuenta en devin.ai",
+      "Conecta tu repositorio (p.ej. GitHub)",
+      "Asígnale una tarea como lo harías con un desarrollador junior",
+      "Revisa el pull request que genera"
+    ],
+    "proTip": "Funciona mejor con tareas bien definidas y acotadas; revisa siempre sus PR antes de fusionar.",
+    "pros": [
+      "Autonomía de extremo a extremo",
+      "Trabaja en la nube",
+      "Abre pull requests listos para revisar"
+    ],
+    "cons": [
+      "Costo elevado",
+      "Requiere supervisión en tareas complejas"
+    ],
+    "alternatives": [
+      "claude-code",
+      "openai-codex",
+      "cursor"
+    ],
+    "keywords": [
+      "devin",
+      "cognition",
+      "agente autonomo",
+      "ingeniero de software ia",
+      "pull request",
+      "programar"
+    ],
+    "tags": [
+      "Programación",
+      "Agente autónomo",
+      "Enterprise"
+    ],
+    "useCaseIds": [
+      "programacion-escribir",
+      "programacion-depurar",
+      "automatizacion-agentes",
+      "automatizacion-workflow"
+    ],
+    "bestFor": "Ideal para delegar tareas de programación completas a un agente autónomo"
+  },
+  {
+    "id": "n8n",
+    "name": "n8n",
+    "url": "https://n8n.io",
+    "categories": [
+      "automatizacion",
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Self-hosted (Community) gratis y open source, ejecuciones ilimitadas. Cloud: Starter ~$24/mes, Pro ~$60/mes",
+    "difficulty": 2,
+    "rating": 5,
+    "shortDescription": "Plataforma de automatización open source con fuerte enfoque en agentes de IA; alternativa autohospedable a Zapier.",
+    "fullDescription": "n8n es la plataforma de automatización de flujos de trabajo open source que más creció en 2025-2026, especialmente por su enfoque en agentes de IA. Permite conectar apps y construir automatizaciones visuales con nodos nativos para Claude, Gemini, bases de datos vectoriales y más. Su gran ventaja es que puedes autohospedarla gratis con ejecuciones ilimitadas; solo pagas las APIs de los modelos que uses.",
+    "useCases": [
+      "Automatizar flujos entre apps sin pagar por paso",
+      "Construir agentes de IA con herramientas conectadas",
+      "Autohospedar tus automatizaciones (control total)",
+      "Integrar LLMs en procesos de negocio"
+    ],
+    "howToStart": [
+      "Usa n8n Cloud o autohospeda la versión Community gratis",
+      "Crea un workflow nuevo y arrastra nodos",
+      "Conecta tus apps y un nodo de IA (Claude/Gemini)",
+      "Activa el flujo para que corra automáticamente"
+    ],
+    "proTip": "Si tienes algo de perfil técnico, autohospedar n8n te da ejecuciones ilimitadas pagando solo las APIs de IA.",
+    "pros": [
+      "Open source y autohospedable",
+      "Sin recargo por paso al self-hostear",
+      "Fuerte en agentes de IA"
+    ],
+    "cons": [
+      "Curva mayor que Zapier para no técnicos",
+      "Autohospedar requiere mantenimiento"
+    ],
+    "alternatives": [
+      "make",
+      "zapier-ai",
+      "lindy"
+    ],
+    "keywords": [
+      "n8n",
+      "automatizacion",
+      "open source",
+      "self hosted",
+      "agentes ia",
+      "workflow",
+      "alternativa zapier"
+    ],
+    "tags": [
+      "Automatización",
+      "Open source",
+      "Agentes IA",
+      "No-code",
+      "Flujos"
+    ],
+    "useCaseIds": [
+      "automatizacion-workflow",
+      "automatizacion-agentes",
+      "automatizacion-datos",
+      "productividad-automatizar"
+    ],
+    "bestFor": "Ideal para automatizar flujos con IA con control total y sin pagar por paso"
+  },
+  {
+    "id": "lindy",
+    "name": "Lindy",
+    "url": "https://www.lindy.ai",
+    "categories": [
+      "automatizacion",
+      "negocios"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis (400 créditos + 400 tasks). Starter: $19.99/mes. Plus: $49.99/mes. Pro: $99.99/mes. Max: $199.99/mes",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Constructor sin código de agentes de IA autónomos (correo, reuniones, ventas, soporte y voz) con plantillas listas.",
+    "fullDescription": "Lindy es una plataforma para construir asistentes y agentes de IA autónomos sin escribir código. Puedes crear 'Lindys' que gestionan correo, agendan reuniones, hacen seguimiento de ventas, atienden soporte o incluso responden llamadas con agentes de voz. Trae plantillas listas y es uno de los builders de agentes más populares de 2026, competidor directo de los Zapier Agents.",
+    "useCases": [
+      "Crear un asistente que gestione tu correo",
+      "Automatizar seguimiento de ventas y CRM",
+      "Agentes de soporte al cliente",
+      "Agentes de voz que contestan llamadas"
+    ],
+    "howToStart": [
+      "Crea una cuenta en lindy.ai",
+      "Elige una plantilla de agente o empieza de cero",
+      "Conecta tus apps (correo, calendario, CRM)",
+      "Define las reglas y activa tu Lindy"
+    ],
+    "proTip": "Empieza con una plantilla y un caso de uso acotado antes de encadenar varios agentes.",
+    "pros": [
+      "Sin código",
+      "Plantillas listas",
+      "Incluye agentes de voz"
+    ],
+    "cons": [
+      "El uso intensivo consume créditos rápido",
+      "Agentes de voz suman costo aparte"
+    ],
+    "alternatives": [
+      "zapier-ai",
+      "n8n",
+      "relevance-ai"
+    ],
+    "keywords": [
+      "lindy",
+      "agentes ia",
+      "asistente ia",
+      "automatizacion",
+      "ventas",
+      "soporte",
+      "voz",
+      "no-code"
+    ],
+    "tags": [
+      "Automatización",
+      "Agentes IA",
+      "No-code",
+      "Ventas"
+    ],
+    "useCaseIds": [
+      "automatizacion-agentes",
+      "automatizacion-workflow",
+      "negocios-crm",
+      "productividad-email"
+    ],
+    "bestFor": "Ideal para crear agentes de IA que automatizan correo, ventas y soporte sin programar"
+  },
+  {
+    "id": "granola",
+    "name": "Granola",
+    "url": "https://www.granola.ai",
+    "categories": [
+      "transcripcion",
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Prueba gratuita. Planes de pago desde ~$18/usuario/mes (anual). Business y Enterprise a medida",
+    "difficulty": 1,
+    "rating": 5,
+    "shortDescription": "Bloc de notas de reuniones con IA que combina tus apuntes con la transcripción, sin meter un bot a la llamada.",
+    "fullDescription": "Granola es un bloc de notas de reuniones con IA que se volvió tendencia en 2025-2026. En lugar de meter un bot a tu videollamada, escucha desde tu computador y combina tus apuntes con la transcripción para generar notas limpias y accionables. Es una alternativa más privada y discreta a Otter o Fireflies, muy usada por equipos pequeños y profesionales.",
+    "useCases": [
+      "Tomar notas de reuniones sin un bot visible",
+      "Combinar tus apuntes con la transcripción automática",
+      "Generar resúmenes y tareas accionables",
+      "Buscar lo dicho en reuniones pasadas"
+    ],
+    "howToStart": [
+      "Descarga Granola en tu Mac/PC",
+      "Concede permiso de audio del sistema",
+      "Toma tus apuntes durante la reunión",
+      "Deja que genere las notas limpias al terminar"
+    ],
+    "proTip": "Escribe apuntes breves durante la reunión: Granola los enriquece con la transcripción para notas mucho mejores.",
+    "pros": [
+      "No mete bot a la llamada (más privado)",
+      "Notas limpias y accionables",
+      "Muy fácil de usar"
+    ],
+    "cons": [
+      "Funciona desde la app de escritorio",
+      "Plan gratis limitado a prueba"
+    ],
+    "alternatives": [
+      "otter",
+      "fireflies",
+      "notebooklm"
+    ],
+    "keywords": [
+      "granola",
+      "notas reuniones",
+      "transcripcion",
+      "sin bot",
+      "resumen reuniones",
+      "productividad"
+    ],
+    "tags": [
+      "Reuniones",
+      "Transcripción",
+      "Productividad"
+    ],
+    "useCaseIds": [
+      "transcripcion-reunion",
+      "transcripcion-audio",
+      "productividad-organizar"
+    ],
+    "bestFor": "Ideal para tomar notas de reuniones con IA de forma privada, sin un bot en la llamada"
+  },
+  {
+    "id": "research-rabbit",
+    "name": "ResearchRabbit",
+    "url": "https://www.researchrabbit.ai",
+    "categories": [
+      "investigacion"
+    ],
+    "pricing": "gratis",
+    "pricingDetail": "Completamente gratis (cuenta sin costo)",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Descubrimiento de literatura académica por redes de citas y co-autoría, gratis. El 'Spotify de los papers'.",
+    "fullDescription": "ResearchRabbit es una herramienta gratuita para descubrir y mapear literatura científica. A partir de unos papers semilla, explora redes de citas y co-autoría para recomendarte artículos relacionados, con visualizaciones interactivas, colecciones y alertas. Se autodenomina el 'Spotify de los papers' y es muy usada por estudiantes e investigadores hispanohablantes para revisiones de literatura sin costo.",
+    "useCases": [
+      "Encontrar papers relacionados a partir de uno",
+      "Mapear visualmente un campo de estudio",
+      "Seguir autores y recibir alertas",
+      "Armar revisiones de literatura"
+    ],
+    "howToStart": [
+      "Crea una cuenta gratuita en researchrabbit.ai",
+      "Agrega uno o varios papers semilla",
+      "Explora las recomendaciones y la red de citas",
+      "Guarda los relevantes en colecciones"
+    ],
+    "proTip": "Combínalo con Connected Papers y Semantic Scholar para cruzar distintos ángulos de la literatura.",
+    "pros": [
+      "100% gratis",
+      "Visualización de redes de citas",
+      "Ideal para estudiantes"
+    ],
+    "cons": [
+      "Solo descubrimiento (no lee/resume el paper)",
+      "Requiere papers semilla buenos"
+    ],
+    "alternatives": [
+      "connected-papers",
+      "semantic-scholar",
+      "consensus"
+    ],
+    "keywords": [
+      "research rabbit",
+      "papers",
+      "literatura academica",
+      "citas",
+      "investigacion",
+      "gratis",
+      "revision literatura"
+    ],
+    "tags": [
+      "Académico",
+      "Investigación",
+      "Grafos",
+      "Papers",
+      "Gratis"
+    ],
+    "useCaseIds": [
+      "investigacion-academica",
+      "investigacion-fuentes"
+    ],
+    "bestFor": "Ideal para estudiantes que mapean literatura académica gratis por redes de citas"
+  },
+  {
+    "id": "scispace",
+    "name": "SciSpace",
+    "url": "https://scispace.com",
+    "categories": [
+      "investigacion",
+      "escritura"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites. Premium desde ~$12/mes (anual)",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Asistente de investigación con IA para chatear con PDFs, extraer datos de papers y hacer revisiones de literatura.",
+    "fullDescription": "SciSpace (antes Typeset) es un asistente de investigación con IA que te deja 'chatear' con artículos científicos: explica párrafos complejos, extrae datos de papers a tablas comparativas y ayuda con revisiones de literatura sobre millones de artículos. Tiene buena interfaz en español, lo que lo vuelve un rival accesible de Elicit y Consensus para estudiantes e investigadores en Latinoamérica.",
+    "useCases": [
+      "Chatear con un PDF científico para entenderlo",
+      "Extraer datos de varios papers a una tabla",
+      "Hacer revisiones de literatura",
+      "Explicar fórmulas o párrafos complejos"
+    ],
+    "howToStart": [
+      "Entra a scispace.com y crea una cuenta",
+      "Sube un PDF o busca un tema",
+      "Hazle preguntas al artículo en lenguaje natural",
+      "Usa la extracción a tabla para comparar papers"
+    ],
+    "proTip": "Usa la función de tabla comparativa para sintetizar metodologías y resultados de varios papers a la vez.",
+    "pros": [
+      "Chat con PDF en español",
+      "Extracción de datos a tablas",
+      "Buena para literatura"
+    ],
+    "cons": [
+      "Funciones avanzadas son de pago",
+      "Verifica siempre las citas"
+    ],
+    "alternatives": [
+      "elicit",
+      "consensus",
+      "humata"
+    ],
+    "keywords": [
+      "scispace",
+      "typeset",
+      "chat con pdf",
+      "papers",
+      "investigacion",
+      "revision literatura",
+      "extraer datos"
+    ],
+    "tags": [
+      "Académico",
+      "Investigación",
+      "Análisis de documentos",
+      "Multilingüe"
+    ],
+    "useCaseIds": [
+      "investigacion-academica",
+      "investigacion-fuentes",
+      "investigacion-resumir",
+      "escritura-academica"
+    ],
+    "bestFor": "Ideal para chatear con papers y extraer datos de literatura científica en español"
+  },
+  {
+    "id": "pdf-ai",
+    "name": "PDF.ai",
+    "url": "https://pdf.ai",
+    "categories": [
+      "productividad",
+      "investigacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con límites. Planes desde ~$15/mes; tiers superiores ~$30–50/mes",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Chatea con tus PDFs: resúmenes, preguntas y extracción de datos de documentos largos.",
+    "fullDescription": "PDF.ai te permite 'conversar' con tus documentos PDF: subes un archivo y le haces preguntas, le pides resúmenes o extraes datos puntuales sin leerlo entero. Es una alternativa popular y muy buscada en español frente a ChatPDF o Humata, útil para contratos, informes, manuales y artículos largos.",
+    "useCases": [
+      "Resumir documentos largos",
+      "Hacer preguntas puntuales a un PDF",
+      "Extraer datos o cláusulas específicas",
+      "Entender contratos e informes rápido"
+    ],
+    "howToStart": [
+      "Entra a pdf.ai y crea una cuenta",
+      "Sube tu documento PDF",
+      "Hazle preguntas en lenguaje natural",
+      "Pide un resumen o los puntos clave"
+    ],
+    "proTip": "Para documentos legales o financieros, pídele que cite la página de donde sacó cada respuesta.",
+    "pros": [
+      "Muy fácil de usar",
+      "Buen soporte en español",
+      "Plan gratis para probar"
+    ],
+    "cons": [
+      "Límite de páginas en el plan gratis",
+      "Verifica datos sensibles"
+    ],
+    "alternatives": [
+      "chatpdf",
+      "humata",
+      "notebooklm"
+    ],
+    "keywords": [
+      "pdf ai",
+      "chat con pdf",
+      "resumir pdf",
+      "documentos",
+      "extraer datos",
+      "contratos"
+    ],
+    "tags": [
+      "Documentos",
+      "Análisis de documentos",
+      "Productividad",
+      "Multilingüe"
+    ],
+    "useCaseIds": [
+      "investigacion-resumir",
+      "productividad-organizar",
+      "investigacion-general"
+    ],
+    "bestFor": "Ideal para resumir y preguntarle a tus PDFs largos en español"
+  },
+  {
+    "id": "harvey",
+    "name": "Harvey",
+    "url": "https://www.harvey.ai",
+    "categories": [
+      "investigacion",
+      "negocios"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Empresarial a medida (no público); contratos por firma o equipo legal",
+    "difficulty": 3,
+    "rating": 4,
+    "shortDescription": "IA legal para grandes firmas y departamentos jurídicos: investigación, redacción y revisión de documentos.",
+    "fullDescription": "Harvey es una plataforma de IA legal enfocada en grandes firmas de abogados y departamentos jurídicos corporativos. Sobre modelos ajustados al dominio legal, asiste en investigación jurídica, redacción y revisión de documentos, due diligence y análisis de contratos. En 2025-2026 es el competidor enterprise más relevante de CoCounsel.",
+    "useCases": [
+      "Investigación jurídica a gran escala",
+      "Redacción y revisión de documentos legales",
+      "Due diligence documental",
+      "Análisis de contratos en firmas grandes"
+    ],
+    "howToStart": [
+      "Solicita una demo en harvey.ai",
+      "Define el caso de uso de tu firma con el equipo de ventas",
+      "Integra Harvey con tus repositorios documentales",
+      "Capacita a los equipos legales en su uso"
+    ],
+    "proTip": "Es una herramienta enterprise: el valor llega cuando se integra a los flujos y documentos de la firma.",
+    "pros": [
+      "Especializado en derecho",
+      "Pensado para grandes firmas",
+      "Cubre investigación + redacción + revisión"
+    ],
+    "cons": [
+      "Solo enterprise (precio a medida)",
+      "No apto para uso individual casual"
+    ],
+    "alternatives": [
+      "cocounsel"
+    ],
+    "keywords": [
+      "harvey",
+      "ia legal",
+      "abogados",
+      "firmas",
+      "investigacion juridica",
+      "contratos",
+      "due diligence"
+    ],
+    "tags": [
+      "Legal",
+      "Enterprise",
+      "Análisis de documentos",
+      "Empresarial"
+    ],
+    "useCaseIds": [
+      "investigacion-general",
+      "investigacion-resumir"
+    ],
+    "bestFor": "Ideal para grandes firmas y departamentos legales que automatizan trabajo jurídico"
+  },
+  {
+    "id": "stable-audio",
+    "name": "Stable Audio",
+    "url": "https://stableaudio.com",
+    "categories": [
+      "audio"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis con cuota limitada. Pro alrededor de $12/mes; planes superiores y Enterprise con más generaciones",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Genera música y efectos de sonido desde texto, con licencia comercial; ideal para video, juegos y publicidad.",
+    "fullDescription": "Stable Audio, de Stability AI, genera música y efectos de sonido a partir de descripciones de texto. Está enfocado en pistas instrumentales y audio para video, videojuegos y publicidad, con derechos comerciales claros. Es una alternativa a Suno/Udio centrada en lo instrumental y en uso comercial seguro (a diferencia de Udio, que restringió las descargas).",
+    "useCases": [
+      "Crear música instrumental para videos",
+      "Generar efectos de sonido (SFX)",
+      "Audio de fondo para juegos o anuncios",
+      "Pistas con licencia comercial clara"
+    ],
+    "howToStart": [
+      "Entra a stableaudio.com y crea una cuenta",
+      "Describe el estilo, instrumentos y duración que quieres",
+      "Genera y escucha las variantes",
+      "Descarga la pista para tu proyecto"
+    ],
+    "proTip": "Sé específico con género, tempo e instrumentos en el prompt para obtener pistas más usables.",
+    "pros": [
+      "Fuerte en instrumental y SFX",
+      "Derechos comerciales claros",
+      "Plan gratis para probar"
+    ],
+    "cons": [
+      "Menos orientado a canciones con voz",
+      "Cuota limitada en gratis"
+    ],
+    "alternatives": [
+      "suno",
+      "udio",
+      "elevenlabs"
+    ],
+    "keywords": [
+      "stable audio",
+      "musica ia",
+      "efectos de sonido",
+      "instrumental",
+      "sfx",
+      "licencia comercial",
+      "stability"
+    ],
+    "tags": [
+      "Música IA",
+      "Audio",
+      "Comercial"
+    ],
+    "useCaseIds": [
+      "audio-musica",
+      "audio-narrar"
+    ],
+    "bestFor": "Ideal para crear música instrumental y efectos de sonido con licencia comercial"
+  },
+  {
+    "id": "seedream",
+    "name": "Seedream (ByteDance)",
+    "url": "https://seed.bytedance.com",
+    "categories": [
+      "diseno"
+    ],
+    "pricing": "pago",
+    "pricingDetail": "Pago por uso vía plataformas (fal.ai, OpenRouter): ~$0.035–0.04 por imagen",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Modelo de imagen de ByteDance para generación y edición de alta fidelidad, fuerte en texto denso.",
+    "fullDescription": "Seedream es el modelo de generación y edición de imágenes de ByteDance (creadores de TikTok). Destaca por su alta fidelidad, el renderizado de texto denso dentro de la imagen y la edición multi-imagen. Sus versiones 4.5 y 5.0 Lite están vigentes en 2026 (con Seedream 5.0 completo anunciado a mediados de año) y se usan mucho vía API por su bajo costo, lo que lo hace atractivo para creadores en Latinoamérica.",
+    "useCases": [
+      "Generar imágenes de alta fidelidad",
+      "Crear gráficos con mucho texto bien renderizado",
+      "Edición multi-imagen",
+      "Producción de imagen económica vía API"
+    ],
+    "howToStart": [
+      "Accede a Seedream vía una plataforma que lo integre (fal.ai, OpenRouter)",
+      "Escribe tu prompt o sube imágenes a editar",
+      "Ajusta parámetros y genera",
+      "Descarga el resultado"
+    ],
+    "proTip": "Por su buen manejo de texto, es ideal para piezas con tipografía (afiches, posts con frases).",
+    "pros": [
+      "Excelente renderizado de texto",
+      "Bajo costo vía API",
+      "Edición multi-imagen"
+    ],
+    "cons": [
+      "Acceso principalmente por terceros/API",
+      "Sin app propia masiva"
+    ],
+    "alternatives": [
+      "nano-banana",
+      "dall-e",
+      "flux"
+    ],
+    "keywords": [
+      "seedream",
+      "bytedance",
+      "generar imagen",
+      "texto en imagen",
+      "edicion",
+      "api",
+      "economico"
+    ],
+    "tags": [
+      "Generación de imágenes",
+      "TikTok",
+      "Tipografía",
+      "Económico"
+    ],
+    "useCaseIds": [
+      "diseno-imagenes",
+      "diseno-editar",
+      "diseno-social"
+    ],
+    "bestFor": "Ideal para generar imágenes con texto bien renderizado a bajo costo vía API"
   }
 ]
