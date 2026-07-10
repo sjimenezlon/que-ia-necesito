@@ -9,6 +9,7 @@ import ToolDetailPage from './pages/ToolDetailPage'
 import RecommendPage from './pages/RecommendPage'
 import PromptRefiner from './pages/PromptRefiner'
 import SectorPublico from './pages/SectorPublico'
+import HerramientasAsiaticas from './pages/HerramientasAsiaticas'
 import NotFound from './pages/NotFound'
 import { useFavorites } from './hooks/useFavorites'
 
@@ -55,6 +56,7 @@ export default function App() {
           <Route path="/recomendador" element={<RecommendPage />} />
           <Route path="/prompt-lab" element={<PromptRefiner />} />
           <Route path="/sector-publico" element={<SectorPublico />} />
+          <Route path="/asia" element={<HerramientasAsiaticas />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

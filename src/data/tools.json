@@ -6951,8 +6951,8 @@
     "pricingDetail": "Gratis con créditos diarios. Planes de pago por suscripción/créditos (rango ~$15–200/mes)",
     "difficulty": 1,
     "rating": 4,
-    "shortDescription": "Generador de video de MiniMax (Hailuo 3.0): texto a video e imagen a video rápidos, con audio.",
-    "fullDescription": "Hailuo es el generador de video de MiniMax. Su modelo Hailuo 3.0 crea videos a partir de texto o de una imagen de referencia de forma rápida, con soporte de audio y música por prompt. Es muy popular por su capa gratuita generosa y su buena relación calidad-precio, lo que lo hace accesible para creadores en Latinoamérica.",
+    "shortDescription": "Generador de video de MiniMax (Hailuo 2.3): texto a video e imagen a video rápidos, con audio.",
+    "fullDescription": "Hailuo es el generador de video de MiniMax. Su modelo Hailuo 2.3 crea videos a partir de texto o de una imagen de referencia de forma rápida, con soporte de audio y música por prompt. Es muy popular por su capa gratuita generosa y su buena relación calidad-precio, lo que lo hace accesible para creadores en Latinoamérica.",
     "useCases": [
       "Generar clips desde una idea o imagen",
       "Animar una foto fija",
@@ -7871,5 +7871,572 @@
       "diseno-social"
     ],
     "bestFor": "Ideal para generar imágenes con texto bien renderizado a bajo costo vía API"
+  },
+  {
+    "id": "doubao",
+    "name": "Doubao (ByteDance)",
+    "url": "https://www.doubao.com",
+    "categories": [
+      "chatbots",
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis, con planes de pago introducidos en mayo 2026. API de muy bajo costo vía Volcano Engine.",
+    "difficulty": 3,
+    "rating": 4,
+    "shortDescription": "El chatbot de IA más usado de China (ByteDance): asistente multimodal con voz, imagen y video. Modelo Doubao Seed 2.0.",
+    "fullDescription": "Doubao (豆包) es el asistente conversacional de ByteDance —la matriz de TikTok— y el chatbot de IA de consumo más usado de China, con más de 300 millones de usuarios. Su familia Doubao Seed 2.0 (febrero 2026) es multimodal, con voz full-duplex, comprensión de video y generación de imagen (Seedream) y video (Seedance) integradas. Es una ventana al estado del arte del asistente masivo chino, aunque su interfaz está pensada para el mercado interno.",
+    "useCases": [
+      "Ver de cerca el asistente multimodal de consumo líder en China",
+      "Generar imagen y video desde el mismo chat (Seedream/Seedance)",
+      "Interacción por voz en tiempo real",
+      "Comparar el enfoque de producto chino frente a ChatGPT"
+    ],
+    "howToStart": [
+      "Entra a doubao.com o descarga la app",
+      "El registro suele pedir un número de teléfono chino (+86)",
+      "La interfaz está principalmente en chino",
+      "Para desarrolladores: API de bajo costo en Volcano Engine"
+    ],
+    "proTip": "Si no tienes número chino, es difícil de usar directamente; para acceder a sus modelos (Seedream/Seedance) desde LATAM conviene la suite internacional Dreamina o una API de terceros.",
+    "pros": [
+      "Multimodal de consumo excelente (voz, imagen, video)",
+      "Más de 300 millones de usuarios en China",
+      "API extremadamente económica"
+    ],
+    "cons": [
+      "Interfaz en chino y registro con teléfono +86",
+      "Datos en servidores en China (privacidad)",
+      "Censura de temas políticamente sensibles"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "qwen",
+      "deepseek"
+    ],
+    "keywords": [
+      "doubao",
+      "bytedance",
+      "chatbot chino",
+      "multimodal",
+      "seed",
+      "voz",
+      "china",
+      "tiktok"
+    ],
+    "tags": [
+      "IA generativa",
+      "Multimodal",
+      "Asistente"
+    ],
+    "useCaseIds": [
+      "chatbots-asistente",
+      "chatbots-consultas",
+      "chatbots-multimodelo"
+    ],
+    "bestFor": "Ideal para conocer el asistente multimodal más usado de China (acceso difícil desde LATAM)"
+  },
+  {
+    "id": "ernie",
+    "name": "ERNIE (Baidu)",
+    "url": "https://yiyan.baidu.com",
+    "categories": [
+      "chatbots",
+      "investigacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Consumo gratis/freemium. API en Baidu AI Cloud (Qianfan). La serie abierta ERNIE 4.5 es gratuita y autohospedable.",
+    "difficulty": 3,
+    "rating": 4,
+    "shortDescription": "Chatbot omnimodal de Baidu (ERNIE 5.1) integrado a su buscador; la serie abierta 4.5 es autohospedable.",
+    "fullDescription": "ERNIE (文心, Wenxin Yiyan) es el modelo de lenguaje de Baidu. La versión ERNIE 5.1 (mayo 2026), construida sobre el buque insignia omnimodal ERNIE 5.0, procesa texto, imagen, audio y video, y se apalanca en la búsqueda y los mapas de Baidu. El linaje anterior, ERNIE 4.5, fue liberado como código abierto (10 modelos) y sí puede autohospedarse. El acceso al chatbot está muy orientado al mercado chino.",
+    "useCases": [
+      "Consultas omnimodales integradas al buscador de Baidu",
+      "Autohospedar la serie abierta ERNIE 4.5",
+      "Investigación con contexto del ecosistema chino",
+      "Comparar el enfoque omnimodal de Baidu frente a Gemini"
+    ],
+    "howToStart": [
+      "Entra a yiyan.baidu.com (requiere cuenta Baidu, normalmente +86)",
+      "Para autohospedar, descarga ERNIE 4.5 desde sus repositorios",
+      "Desarrolladores: API en Baidu AI Cloud (Qianfan)",
+      "Para uso desde LATAM, la vía práctica es la serie abierta 4.5"
+    ],
+    "proTip": "Lo más aprovechable fuera de China es la familia abierta ERNIE 4.5; el chatbot 5.x y su API están pensados para el mercado interno.",
+    "pros": [
+      "Modelo omnimodal grande e integrado a la búsqueda de Baidu",
+      "Serie 4.5 de código abierto",
+      "Entrenamiento muy eficiente en costo"
+    ],
+    "cons": [
+      "El 5.x es cerrado y de acceso amurallado (cuenta Baidu / +86)",
+      "Datos en servidores en China",
+      "Censura de temas sensibles"
+    ],
+    "alternatives": [
+      "gemini",
+      "qwen",
+      "deepseek"
+    ],
+    "keywords": [
+      "ernie",
+      "baidu",
+      "wenxin",
+      "yiyan",
+      "omnimodal",
+      "chatbot chino",
+      "china",
+      "open source"
+    ],
+    "tags": [
+      "IA generativa",
+      "Multimodal",
+      "Buscador"
+    ],
+    "useCaseIds": [
+      "chatbots-consultas",
+      "investigacion-general",
+      "chatbots-multimodelo"
+    ],
+    "bestFor": "Ideal para conocer el omnimodal de Baidu; fuera de China, útil por su serie abierta 4.5"
+  },
+  {
+    "id": "vidu",
+    "name": "Vidu",
+    "url": "https://www.vidu.com",
+    "categories": [
+      "video"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Capa gratuita con créditos; planes de pago hasta ~$84/mes. API por segundo generado.",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Generador de video chino (Vidu Q3) enfocado en producción de cine/TV: consistencia de personajes por referencia.",
+    "fullDescription": "Vidu, de Shengshu Technology (生数), es un generador de video con IA orientado a la producción audiovisual. Su modelo Q3 (abril 2026) combina por referencia sujeto, entorno, vestuario, utilería y estilo para lograr consistencia de personajes a lo largo de una serie o animación, con efectos cinematográficos y audio. Es de los rivales chinos más accesibles desde Latinoamérica y destaca por su velocidad.",
+    "useCases": [
+      "Series y animación con personajes consistentes",
+      "Producción de cortos y drama con estilo cinematográfico",
+      "Imagen a video con referencias de vestuario y entorno",
+      "Iterar clips rápido para redes y publicidad"
+    ],
+    "howToStart": [
+      "Entra a vidu.com y crea cuenta con correo o Google (sin teléfono chino)",
+      "Sube imágenes de referencia (personaje, entorno, estilo)",
+      "Escribe el prompt y elige duración/estilo",
+      "Genera y descarga; explora el Vidu Agent para flujos guiados"
+    ],
+    "proTip": "Su fuerte es la consistencia por referencia: sube varias imágenes del mismo personaje para mantenerlo idéntico entre planos, algo clave para narrativas seriadas.",
+    "pros": [
+      "Consistencia de personajes por referencia",
+      "Rápido y accesible desde LATAM (sin +86)",
+      "Enfoque de producción de cine/TV"
+    ],
+    "cons": [
+      "Resolución/duración tope menores que Kling o Seedance",
+      "Datos en servidores en China"
+    ],
+    "alternatives": [
+      "kling",
+      "seedance",
+      "runway"
+    ],
+    "keywords": [
+      "vidu",
+      "shengshu",
+      "video ia",
+      "referencia",
+      "personajes",
+      "cine",
+      "china",
+      "animacion"
+    ],
+    "tags": [
+      "Generación de video",
+      "Video IA",
+      "Consistencia"
+    ],
+    "useCaseIds": [
+      "video-generar",
+      "video-clips",
+      "video-animacion"
+    ],
+    "bestFor": "Ideal para series y animación con personajes consistentes, a buen precio"
+  },
+  {
+    "id": "mureka",
+    "name": "Mureka",
+    "url": "https://www.mureka.ai",
+    "categories": [
+      "audio"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Gratis ~50 créditos/día (solo MP3, sin uso comercial). Pro $9/mes; Premier $27/mes (WAV, stems, MIDI, clonación de voz).",
+    "difficulty": 1,
+    "rating": 4,
+    "shortDescription": "Generador de música con IA (Mureka V9): canción completa con voz, exporta MIDI y stems, clona voz. Rival de Suno.",
+    "fullDescription": "Mureka, de Kunlun Tech (昆仑万维), es un generador de música con IA que crea canciones completas con voz a partir de un prompt. A diferencia de muchos rivales, exporta entregables profesionales —MIDI y stems separados— y permite clonar voz. Su modelo de \"razonamiento musical\" planifica la estructura de la canción antes de generarla. Es de los rivales chinos más directos de Suno y funciona globalmente con un correo.",
+    "useCases": [
+      "Crear una canción completa con voz desde un prompt",
+      "Exportar stems y MIDI para producir en un DAW",
+      "Clonar una voz para narración musical",
+      "Generar pistas para video, podcast o marca"
+    ],
+    "howToStart": [
+      "Entra a mureka.ai y crea cuenta con correo",
+      "Describe género, ánimo y letra (o deja que la escriba)",
+      "Genera y ajusta la estructura",
+      "En planes de pago, exporta WAV, stems y MIDI"
+    ],
+    "proTip": "Si vas a producir de verdad, el plan Premier vale la pena por los stems y el MIDI: te deja llevar la idea generada a tu DAW y editar cada instrumento por separado.",
+    "pros": [
+      "Exporta MIDI y stems (poco común)",
+      "Fuerte en voz y multilingüe",
+      "Acceso global con correo (sin +86)"
+    ],
+    "cons": [
+      "Suno suele superar en emoción vocal en inglés",
+      "La capa gratuita no permite uso comercial"
+    ],
+    "alternatives": [
+      "suno",
+      "udio",
+      "elevenlabs"
+    ],
+    "keywords": [
+      "mureka",
+      "kunlun",
+      "musica ia",
+      "cancion",
+      "stems",
+      "midi",
+      "clonar voz",
+      "suno",
+      "china"
+    ],
+    "tags": [
+      "Generación de música",
+      "Audio IA",
+      "Voz"
+    ],
+    "useCaseIds": [
+      "audio-musica",
+      "audio-voz",
+      "audio-narrar"
+    ],
+    "bestFor": "Ideal para crear canciones con voz y exportar stems/MIDI para producción real"
+  },
+  {
+    "id": "trae",
+    "name": "Trae (ByteDance)",
+    "url": "https://www.trae.ai",
+    "categories": [
+      "programacion",
+      "automatizacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Capa gratuita con modelos frontera incluidos. Planes ~$3 a ~$100/mes (Lite/Pro/Pro+/Ultra).",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "IDE con agente (modo SOLO) de ByteDance: alternativa gratuita y pulida a Cursor, con modelos frontera incluidos.",
+    "fullDescription": "Trae es el entorno de desarrollo con IA de ByteDance, construido como un fork de VS Code. Su modo SOLO convierte al asistente en un agente autónomo que planifica, elige herramientas y ejecuta la tarea de punta a punta, no solo autocompleta. Incluye acceso a modelos frontera (Claude, GPT) sin costo en el tier básico, lo que lo vuelve una de las alternativas gratuitas más pulidas a Cursor. La versión internacional se instala desde trae.ai sin teléfono chino.",
+    "useCases": [
+      "Programar con un IDE completo y agente integrado",
+      "Delegar tareas end-to-end al modo SOLO",
+      "Autocompletado y refactor con modelos frontera gratis",
+      "Prototipar apps sin salir del editor"
+    ],
+    "howToStart": [
+      "Descarga Trae en trae.ai (versión internacional)",
+      "Regístrate con Google o correo (sin +86)",
+      "Abre tu proyecto y activa el modo SOLO para tareas autónomas",
+      "Selecciona el modelo (Claude/GPT) incluido en el tier básico"
+    ],
+    "proTip": "Prueba el modo SOLO para tareas acotadas y bien descritas (crear un componente, migrar un archivo); para código corporativo sensible, recuerda que es ByteDance y evalúa la política de datos.",
+    "pros": [
+      "IDE gratis muy pulido (fork de VS Code)",
+      "Modelos frontera incluidos sin costo en el tier básico",
+      "Modo SOLO agéntico end-to-end"
+    ],
+    "cons": [
+      "Es ByteDance: precaución con código corporativo sensible",
+      "La disponibilidad de modelos premium gratis puede recortarse"
+    ],
+    "alternatives": [
+      "cursor",
+      "windsurf",
+      "github-copilot"
+    ],
+    "keywords": [
+      "trae",
+      "bytedance",
+      "ide",
+      "agente",
+      "solo",
+      "cursor",
+      "programacion",
+      "vscode"
+    ],
+    "tags": [
+      "Programación con IA",
+      "IDE",
+      "Agente"
+    ],
+    "useCaseIds": [
+      "programacion-ide",
+      "programacion-escribir",
+      "programacion-web"
+    ],
+    "bestFor": "Ideal para programar con un IDE-agente gratis y pulido, alternativa a Cursor"
+  },
+  {
+    "id": "metaso",
+    "name": "Metaso (秘塔)",
+    "url": "https://metaso.cn",
+    "categories": [
+      "investigacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Web y app gratis (modos rápido/profundo/académico). Deep Research ~4–5 usos gratis/día. API de bajo costo.",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Buscador con IA sin anuncios (el 'Perplexity chino'): modos rápido/profundo/académico y Deep Research gratis con fuentes citadas.",
+    "fullDescription": "Metaso (秘塔 AI Search) es el buscador con IA de referencia en China, conocido por no tener publicidad y por ofrecer investigación profunda gratuita. Trae tres modos —rápido, profundo y académico— y una función de Deep Research que genera informes estructurados con fuentes citadas y trazables. Es especialmente fuerte en literatura académica en chino e inglés. Su interfaz está principalmente en chino, pero la búsqueda básica abre desde cualquier país.",
+    "useCases": [
+      "Investigación académica con fuentes citadas",
+      "Deep Research: informes estructurados y trazables",
+      "Búsqueda sin publicidad ni ruido",
+      "Revisión de literatura en chino e inglés"
+    ],
+    "howToStart": [
+      "Entra a metaso.cn desde el navegador (abre desde cualquier país)",
+      "Elige modo: rápido, profundo o académico",
+      "Escribe tu consulta; usa Deep Research para un informe citado",
+      "Las funciones plenas y la app pueden pedir cuenta china"
+    ],
+    "proTip": "Para revisión de literatura, el modo académico + Deep Research entrega un informe con citas verificables; contrástalo con Perplexity para triangular fuentes en español.",
+    "pros": [
+      "Sin publicidad y con fuentes citadas",
+      "Deep Research gratuito",
+      "Fuerte en literatura académica CN/EN"
+    ],
+    "cons": [
+      "Interfaz principalmente en chino",
+      "Funciones plenas piden cuenta china"
+    ],
+    "alternatives": [
+      "perplexity",
+      "consensus",
+      "notebooklm"
+    ],
+    "keywords": [
+      "metaso",
+      "busqueda ia",
+      "perplexity chino",
+      "deep research",
+      "academico",
+      "fuentes",
+      "china"
+    ],
+    "tags": [
+      "Búsqueda con IA",
+      "Investigación",
+      "Sin anuncios"
+    ],
+    "useCaseIds": [
+      "investigacion-general",
+      "investigacion-academica",
+      "investigacion-fuentes"
+    ],
+    "bestFor": "Ideal para investigación académica sin anuncios y con fuentes citadas"
+  },
+  {
+    "id": "hyperclova-x",
+    "name": "HyperCLOVA X (Naver)",
+    "url": "https://clova.ai",
+    "categories": [
+      "chatbots",
+      "traduccion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "API comercial vía CLOVA Studio / NAVER Cloud. La línea abierta \"SEED\" (4B–33B) está en Hugging Face.",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "IA soberana coreana de Naver (HyperCLOVA X): optimizada para el idioma y contexto de Corea; línea abierta \"SEED\" en Hugging Face.",
+    "fullDescription": "HyperCLOVA X es el modelo de lenguaje de Naver, el buscador dominante de Corea del Sur, y el ejemplo emblemático de IA soberana coreana: optimizado para la lengua y el contexto local, e integrado al ecosistema Naver (búsqueda, mapas, comercio). Incluye un modelo insignia de razonamiento (THINK), una versión omnimodal \"any-to-any\" y una línea de pesos abiertos (SEED, de 4B a 33B) disponible en Hugging Face para uso desde cualquier país.",
+    "useCases": [
+      "Tareas en coreano con contexto cultural local",
+      "Autohospedar la línea abierta SEED",
+      "Traducción y comprensión de idiomas asiáticos",
+      "Comparar un modelo soberano frente a GPT/Gemini"
+    ],
+    "howToStart": [
+      "Para producto/API: CLOVA Studio en NAVER Cloud",
+      "Para pesos abiertos: descarga la serie SEED desde Hugging Face",
+      "Documentación clave en coreano (usa traductor)",
+      "Prueba los modelos SEED localmente desde LATAM"
+    ],
+    "proTip": "Si trabajas con coreano o quieres un modelo soberano autohospedable, la serie abierta SEED es la vía práctica desde Latinoamérica; el producto completo está orientado al mercado coreano.",
+    "pros": [
+      "IA soberana optimizada para coreano",
+      "Ecosistema Naver (buscador, mapas, comercio)",
+      "Línea SEED de pesos abiertos"
+    ],
+    "cons": [
+      "Documentación y producto orientados a Corea",
+      "Precios de API poco transparentes"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "gemini",
+      "qwen"
+    ],
+    "keywords": [
+      "hyperclova",
+      "naver",
+      "coreano",
+      "soberano",
+      "seed",
+      "corea",
+      "open source",
+      "omnimodal"
+    ],
+    "tags": [
+      "IA generativa",
+      "Soberano",
+      "Multilingüe"
+    ],
+    "useCaseIds": [
+      "chatbots-consultas",
+      "traduccion-documento",
+      "traduccion-aprender"
+    ],
+    "bestFor": "Ideal para tareas en coreano o para un modelo soberano abierto (serie SEED)"
+  },
+  {
+    "id": "upstage-solar",
+    "name": "Solar (Upstage)",
+    "url": "https://www.upstage.ai",
+    "categories": [
+      "chatbots",
+      "programacion"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "API vía Upstage Console, OpenRouter y otros gateways (usable desde LATAM). Precios competitivos por token.",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "LLM coreano de frontera 'pequeña' (Solar Pro 3) de Upstage: eficiente (31B), agéntico y fácil de usar vía OpenRouter.",
+    "fullDescription": "Solar, de la coreana Upstage, es un modelo de lenguaje que apuesta por la eficiencia: alrededor de 31B de parámetros que corren en una sola GPU con rendimiento cercano a la frontera. Solar Pro 3 (enero 2026) mejora seguimiento de instrucciones y razonamiento, y suma capacidades agénticas (uso de herramientas, generación de presentaciones). Es el LLM coreano más fácil de usar desde fuera, porque está disponible en OpenRouter y otros gateways sin fricción.",
+    "useCases": [
+      "Chat y razonamiento eficiente a bajo costo",
+      "Tareas agénticas con uso de herramientas",
+      "Programación y generación de contenido",
+      "Un modelo coreano accesible vía OpenRouter"
+    ],
+    "howToStart": [
+      "Crea cuenta en Upstage Console o usa OpenRouter",
+      "Selecciona el modelo Solar Pro 3",
+      "Intégralo por API (formato compatible con OpenAI)",
+      "Úsalo desde LATAM sin restricciones de acceso"
+    ],
+    "proTip": "Al ser tan accesible vía OpenRouter, Solar es un buen \"modelo coreano de prueba\" para comparar rendimiento y costo frente a DeepSeek o Qwen en tus propios flujos.",
+    "pros": [
+      "Eficiente (31B en 1 GPU), cercano a la frontera",
+      "Fácil de usar desde LATAM (OpenRouter)",
+      "Capacidades agénticas"
+    ],
+    "cons": [
+      "Empresa relativamente pequeña con roadmap acelerado",
+      "Menos ecosistema que los gigantes chinos"
+    ],
+    "alternatives": [
+      "deepseek",
+      "qwen",
+      "glm-zai"
+    ],
+    "keywords": [
+      "solar",
+      "upstage",
+      "coreano",
+      "eficiente",
+      "openrouter",
+      "agentico",
+      "corea",
+      "llm"
+    ],
+    "tags": [
+      "IA generativa",
+      "Eficiente",
+      "Agente"
+    ],
+    "useCaseIds": [
+      "chatbots-consultas",
+      "programacion-escribir",
+      "chatbots-multimodelo"
+    ],
+    "bestFor": "Ideal para probar un LLM coreano eficiente y agéntico, accesible por OpenRouter"
+  },
+  {
+    "id": "sea-lion",
+    "name": "SEA-LION (AI Singapore)",
+    "url": "https://sea-lion.ai",
+    "categories": [
+      "chatbots",
+      "traduccion",
+      "educacion"
+    ],
+    "pricing": "gratis",
+    "pricingDetail": "Código abierto (mayormente licencia MIT) en Hugging Face + API oficial en sea-lion.ai.",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Modelo abierto del sudeste asiático (SEA-LION v4): 11+ lenguas regionales (indonesio, tailandés, vietnamita, tagalo…), licencia MIT.",
+    "fullDescription": "SEA-LION (Southeast Asian Languages In One Network), de AI Singapore, es el modelo abierto de referencia para el sudeste asiático. Cubre más de 11 lenguas regionales —birmano, tagalo, indonesio, malayo, tamil, tailandés, vietnamita, entre otras— con contexto cultural local. Su versión v4 es multimodal y agéntica, con licencia mayormente MIT. Es un ejemplo claro de IA como inclusión: pone modelos capaces al alcance de lenguas poco representadas por los sistemas occidentales.",
+    "useCases": [
+      "Tareas en lenguas del sudeste asiático",
+      "Traducción y comprensión cultural regional",
+      "Investigación y educación multilingüe",
+      "Autohospedar un modelo abierto e inclusivo"
+    ],
+    "howToStart": [
+      "Descarga los modelos desde Hugging Face (licencia MIT)",
+      "O usa la API oficial en sea-lion.ai",
+      "Elige la variante (Gemma-SEA-LION o Qwen-SEA-LION)",
+      "Úsalo desde cualquier país, incluido LATAM"
+    ],
+    "proTip": "Es un gran caso de estudio de soberanía lingüística: si te interesa cómo se adapta un modelo a lenguas poco representadas, SEA-LION es abierto y bien documentado.",
+    "pros": [
+      "11+ lenguas del sudeste asiático",
+      "Código abierto (licencia MIT) y accesible",
+      "Multimodal y agéntico (v4)"
+    ],
+    "cons": [
+      "Se construye sobre modelos base externos (Gemma, Qwen)",
+      "Orientado a lenguas regionales, no a español"
+    ],
+    "alternatives": [
+      "qwen",
+      "deepseek",
+      "meta-ai"
+    ],
+    "keywords": [
+      "sea-lion",
+      "singapur",
+      "sudeste asiatico",
+      "multilingue",
+      "abierto",
+      "mit",
+      "soberano",
+      "lenguas"
+    ],
+    "tags": [
+      "IA generativa",
+      "Abierto",
+      "Multilingüe"
+    ],
+    "useCaseIds": [
+      "chatbots-consultas",
+      "traduccion-documento",
+      "educacion-idiomas"
+    ],
+    "bestFor": "Ideal para lenguas del sudeste asiático y como referente de IA abierta e inclusiva"
   }
 ]

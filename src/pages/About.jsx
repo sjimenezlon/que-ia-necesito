@@ -25,7 +25,7 @@ export default function About() {
       <div className="bg-surface rounded-2xl border border-border p-6 md:p-8 mb-10 shadow-sm">
         <h2 className="text-xl font-bold text-text mb-4 tracking-tight">¿Por qué existe esta app?</h2>
         <p className="text-text-light leading-relaxed mb-4">
-          A junio de 2026, existen cientos de herramientas de IA, pero la mayoría de personas no sabe cuál usar para qué.
+          A julio de 2026, existen cientos de herramientas de IA, pero la mayoría de personas no sabe cuál usar para qué.
           Cada semana aparecen nuevas opciones y es difícil mantenerse al día.
         </p>
         <p className="text-text-light leading-relaxed">
@@ -57,6 +57,7 @@ export default function About() {
             'Más de 100 herramientas de IA curadas y verificadas',
             '16 categorías: incluye finanzas, programación, diseño y automatización',
             'Capítulo especial para el sector público colombiano con casos de uso',
+            'Capítulo especial de herramientas de IA asiáticas (China, Corea, Japón, India) a julio 2026',
             'Información de precios, nivel de dificultad y casos de uso',
             'Guías paso a paso para empezar con cada herramienta',
             'Consejos prácticos de uso para cada herramienta',
