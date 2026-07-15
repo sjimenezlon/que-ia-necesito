@@ -7,6 +7,7 @@ import { useTheme } from '../hooks/useTheme'
 const navLinks = [
   { to: '/', label: 'Inicio' },
   { to: '/explorar', label: 'Explorar' },
+  { to: '/docentes', label: 'Docentes' },
   { to: '/sector-publico', label: 'Sector Público' },
   { to: '/asia', label: 'IA Asiática' },
   { to: '/prompt-lab', label: 'Prompt Lab' },
@@ -35,7 +36,7 @@ export default function Layout({ children }) {
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1">
             <nav className="flex items-center gap-0.5">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.to
@@ -68,7 +69,7 @@ export default function Layout({ children }) {
             </button>
           </div>
 
-          <div className="md:hidden flex items-center gap-1">
+          <div className="lg:hidden flex items-center gap-1">
             <button
               onClick={cycleTheme}
               aria-label={`Tema: ${themeLabels[theme]}`}
@@ -91,7 +92,7 @@ export default function Layout({ children }) {
         </div>
 
         {menuOpen && (
-          <nav className="md:hidden border-t border-border bg-surface animate-slide-down" role="dialog" aria-label="Menú de navegación">
+          <nav className="lg:hidden border-t border-border bg-surface animate-slide-down" role="dialog" aria-label="Menú de navegación">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
