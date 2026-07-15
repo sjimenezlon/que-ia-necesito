@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom'
 import {
   Accessibility,
   ArrowRight,
+  BarChart3,
   BookOpen,
+  Bot,
   Brain,
   BriefcaseBusiness,
   Check,
@@ -14,10 +16,12 @@ import {
   ExternalLink,
   FileText,
   FlaskConical,
+  Globe2,
   GraduationCap,
   Layers3,
   Lightbulb,
   MessageSquareText,
+  Palette,
   Presentation,
   School,
   Search,
@@ -28,36 +32,19 @@ import {
   University,
   Users,
   WandSparkles,
+  Workflow,
   XCircle,
 } from 'lucide-react'
 import { getToolById } from '../utils/recommender'
 import { ToolFavicon } from '../components/ToolCard'
 
-const METRICS = [
-  {
-    value: '22.612',
-    label: 'personas certificadas',
-    detail: 'ImpActo Maker · 2025',
-    url: 'https://www.mineducacion.gov.co/portal/salaprensa/Comunicados/429459:Mas-de-22-mil-estudiantes-y-docentes-se-formaron-en-IA-gracias-a-la-estrategia-ImpActo-Maker-del-Ministerio-de-Educacion',
-  },
-  {
-    value: '7.995',
-    label: 'docentes certificados',
-    detail: 'MEN · julio 2026',
-    url: 'https://www.mineducacion.gov.co/portal/salaprensa/Comunicados/429459:Mas-de-22-mil-estudiantes-y-docentes-se-formaron-en-IA-gracias-a-la-estrategia-ImpActo-Maker-del-Ministerio-de-Educacion',
-  },
-  {
-    value: '15',
-    label: 'competencias docentes',
-    detail: 'Marco UNESCO',
-    url: 'https://www.unesco.org/en/articles/ai-competency-framework-teachers',
-  },
-  {
-    value: '5',
-    label: 'dimensiones de desarrollo',
-    detail: 'Adquirir · profundizar · crear',
-    url: 'https://www.unesco.org/en/articles/ai-competency-framework-teachers',
-  },
+const SUITE_ORBIT = [
+  { label: 'Conversar', icon: Bot, to: '/herramienta/chatgpt', position: 'top-0 left-1/2 -translate-x-1/2' },
+  { label: 'Investigar', icon: Search, to: '/explorar?categoria=investigacion', position: 'top-[22%] right-0' },
+  { label: 'Presentar', icon: Presentation, to: '/explorar?categoria=presentaciones', position: 'bottom-[12%] right-[4%]' },
+  { label: 'Automatizar', icon: Workflow, to: '/explorar?categoria=automatizacion', position: 'bottom-0 left-1/2 -translate-x-1/2' },
+  { label: 'Analizar datos', icon: BarChart3, to: '/explorar?categoria=datos', position: 'bottom-[12%] left-[4%]' },
+  { label: 'Crear visuales', icon: Palette, to: '/explorar?categoria=diseno', position: 'top-[22%] left-0' },
 ]
 
 const PRINCIPLES = [
@@ -84,6 +71,80 @@ const PRINCIPLES = [
     title: 'Protege antes de probar',
     body: 'No subas datos personales, calificaciones ni trabajos identificables sin autorización y protocolo institucional.',
     icon: ShieldCheck,
+  },
+]
+
+const DECISION_ZONES = [
+  {
+    label: 'Conserva en tus manos',
+    title: 'Decisiones de alto impacto',
+    examples: 'Calificar, acompañar, priorizar, intervenir y decidir qué cuenta como aprendizaje.',
+    color: 'border-secondary/25 bg-secondary/[0.04]',
+    accent: 'text-secondary',
+  },
+  {
+    label: 'Co-crea con IA',
+    title: 'Trabajo pedagógico asistido',
+    examples: 'Diseñar variantes, anticipar errores, preparar preguntas y bosquejar retroalimentación.',
+    color: 'border-primary/25 bg-primary/[0.04]',
+    accent: 'text-primary',
+  },
+  {
+    label: 'Explora y contrasta',
+    title: 'Búsqueda de alternativas',
+    examples: 'Probar ejemplos, comparar enfoques, mapear fuentes y simular escenarios.',
+    color: 'border-accent/25 bg-accent/[0.04]',
+    accent: 'text-accent',
+  },
+  {
+    label: 'Automatiza con revisión',
+    title: 'Tareas repetitivas',
+    examples: 'Dar formato, resumir notas propias, transcribir, clasificar y convertir materiales.',
+    color: 'border-warm/25 bg-warm/[0.04]',
+    accent: 'text-warm',
+  },
+]
+
+const GLOBAL_EXAMPLES = [
+  {
+    step: '01',
+    flag: '🇸🇬',
+    place: 'Singapur',
+    idea: 'Asistentes distintos para tareas distintas',
+    practice: 'Su plataforma educativa integra asistentes para autoría, retroalimentación, aprendizaje guiado y rutas adaptativas, con salvaguardas por edad.',
+    replicate: 'Crea una carpeta por función: planear, preguntar, retroalimentar y adaptar. Usa un prompt estable y una herramienta adecuada para cada función.',
+    tools: ['chatgpt', 'notebooklm', 'quizlet'],
+    source: 'https://www.moe.gov.sg/education-in-sg/educational-technology-journey/edtech-masterplan/artificial-intelligence-in-education',
+  },
+  {
+    step: '02',
+    flag: '🇪🇪',
+    place: 'Estonia',
+    idea: 'Primero se prepara al profesorado',
+    practice: 'AI Leap comenzó combinando acceso a herramientas con formación docente, antes de escalar el uso autónomo del estudiantado.',
+    replicate: 'Haz un piloto entre pares: una tarea, dos herramientas, una rúbrica común y una conversación semanal sobre lo que funcionó y lo que falló.',
+    tools: ['claude', 'gemini', 'chatgpt'],
+    source: 'https://www.hm.ee/en/news/estonia-announces-groundbreaking-national-initiative-ai-leap-programme-bring-ai-tools-all',
+  },
+  {
+    step: '03',
+    flag: '🇦🇺',
+    place: 'Australia',
+    idea: 'Reglas compartidas antes de escalar',
+    practice: 'El marco nacional para escuelas articula enseñanza, bienestar, transparencia, equidad, responsabilidad y protección de datos.',
+    replicate: 'Publica una hoja de una página: qué está permitido, qué exige declaración, qué requiere autorización y qué no debe subirse.',
+    tools: ['notebooklm', 'canva', 'copilot'],
+    source: 'https://www.education.gov.au/schooling/resources/australian-framework-generative-artificial-intelligence-ai-schools',
+  },
+  {
+    step: '04',
+    flag: '🌍',
+    place: 'Marco global',
+    idea: 'Aprender en progresión, no de golpe',
+    practice: 'La referencia de UNESCO organiza el desarrollo docente en una progresión: adquirir fundamentos, profundizar la práctica y crear nuevas soluciones.',
+    replicate: 'Construye un portafolio con tres evidencias: un uso seguro, una mejora pedagógica verificable y un diseño propio que puedas enseñar a otra persona.',
+    tools: ['perplexity', 'elicit', 'gamma'],
+    source: 'https://www.unesco.org/en/articles/ai-competency-framework-teachers',
   },
 ]
 
@@ -379,7 +440,77 @@ const SOURCES = [
     org: 'Gestor Normativo de Función Pública',
     url: 'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981',
   },
+  {
+    label: 'IA en educación y Student Learning Space',
+    org: 'Ministerio de Educación de Singapur · 2025',
+    url: 'https://www.moe.gov.sg/education-in-sg/educational-technology-journey/edtech-masterplan/artificial-intelligence-in-education',
+  },
+  {
+    label: 'AI Leap: formación y herramientas para escuelas',
+    org: 'Ministerio de Educación e Investigación de Estonia · 2025',
+    url: 'https://www.hm.ee/en/news/estonia-announces-groundbreaking-national-initiative-ai-leap-programme-bring-ai-tools-all',
+  },
+  {
+    label: 'Marco australiano de IA generativa en escuelas',
+    org: 'Departamento de Educación de Australia · revisión 2025',
+    url: 'https://www.education.gov.au/schooling/resources/australian-framework-generative-artificial-intelligence-ai-schools',
+  },
 ]
+
+function ToolOrbit() {
+  return (
+    <div
+      className="relative w-full max-w-[430px] aspect-square mx-auto"
+    >
+      <p className="sr-only">Mapa de seis rutas para usar las herramientas de la página: conversar, investigar, presentar, automatizar, analizar datos y crear visuales.</p>
+      <div className="absolute inset-[17%] rounded-full border border-primary/15 bg-surface/55 backdrop-blur-sm shadow-xl pointer-events-none" />
+      <div className="absolute inset-[30%] rounded-full border border-dashed border-accent/25 animate-[spin_28s_linear_infinite] motion-reduce:animate-none pointer-events-none" />
+      <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 rounded-full bg-text text-white flex flex-col items-center justify-center text-center shadow-xl z-10">
+        <GraduationCap className="w-8 h-8 mb-2 text-amber-300" />
+        <span className="font-display font-bold text-sm leading-tight">Tu reto<br />docente</span>
+      </div>
+      {SUITE_ORBIT.map((item) => {
+        const Icon = item.icon
+        return (
+          <Link
+            key={item.label}
+            to={item.to}
+            className={`absolute ${item.position} z-20 group flex flex-col items-center gap-1.5 no-underline`}
+            aria-label={`${item.label}: explorar herramientas`}
+          >
+            <span className="w-14 h-14 rounded-2xl bg-surface border border-border shadow-md flex items-center justify-center group-hover:-translate-y-1 group-hover:border-primary/40 group-hover:shadow-lg transition-all">
+              <Icon className="w-6 h-6 text-primary" />
+            </span>
+            <span className="text-[11px] font-semibold text-text bg-bg/80 px-2 py-0.5 rounded-full">{item.label}</span>
+          </Link>
+        )
+      })}
+      <div className="absolute inset-[10%] rounded-full border border-border/70 pointer-events-none" />
+      <div className="absolute inset-[21%] rounded-full border border-dashed border-primary/15 pointer-events-none" />
+    </div>
+  )
+}
+
+function ToolPills({ ids }) {
+  return (
+    <div className="flex flex-wrap gap-1.5">
+      {ids.map((id) => {
+        const tool = getToolById(id)
+        if (!tool) return null
+        return (
+          <Link
+            key={id}
+            to={`/herramienta/${id}`}
+            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white/[0.06] border border-white/10 text-[11px] font-semibold text-white/70 no-underline hover:border-white/25 hover:text-white transition-colors"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-300" />
+            {tool.name}
+          </Link>
+        )
+      })}
+    </div>
+  )
+}
 
 function ToolMini({ id }) {
   const tool = getToolById(id)
@@ -427,59 +558,87 @@ export default function Docentes() {
         <div className="absolute -top-16 -left-24 w-80 h-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute top-24 -right-24 w-80 h-80 bg-warm/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-1.5 rounded-full text-sm font-semibold mb-8 border border-accent/15 shadow-sm">
-            <GraduationCap className="w-4 h-4" />
-            Capítulo especial · julio 2026
-          </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-text leading-[1.05] tracking-tight mb-6">
-            IA para <span className="text-gradient-primary">profesoras</span>
-            <br className="hidden sm:block" />
-            <span className="text-text-light font-bold"> y profesores</span>
-          </h1>
-          <p className="text-text-light text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-5">
-            Una guía para usar IA sin entregar el oficio de enseñar: planea mejor, crea apoyos, rediseña la evaluación y protege a tus estudiantes.
-          </p>
-          <p className="text-sm text-text-lighter max-w-2xl mx-auto mb-10">
-            Para educación básica, media, técnica, tecnológica y superior · con enfoque colombiano y marco UNESCO.
-          </p>
+        <div className="relative max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
+          <div className="text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-1.5 rounded-full text-sm font-semibold mb-7 border border-accent/15 shadow-sm">
+              <GraduationCap className="w-4 h-4" />
+              Una herramienta docente de Santiago Jiménez
+            </div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-text leading-[1.05] tracking-tight mb-6">
+              IA para <span className="text-gradient-primary">profesoras</span>
+              <br className="hidden sm:block" />
+              <span className="text-text-light font-bold"> y profesores</span>
+            </h1>
+            <p className="text-text-light text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-7">
+              Aprende a elegir, combinar y supervisar las herramientas de IA de esta página para resolver retos reales de enseñanza sin perder el criterio pedagógico.
+            </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto">
-            {METRICS.map((metric) => (
-              <a
-                key={metric.label}
-                href={metric.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-surface/80 backdrop-blur-sm border border-border rounded-2xl px-3 py-4 no-underline hover:border-accent/30 hover:shadow-md transition-all"
-              >
-                <div className="font-display font-extrabold text-text text-xl sm:text-2xl tracking-tight leading-none">{metric.value}</div>
-                <div className="text-[11px] text-text-lighter mt-1 font-medium">{metric.label}</div>
-                <div className="text-[10px] text-accent mt-0.5 font-semibold inline-flex items-center gap-1">
-                  {metric.detail}
-                  <ExternalLink className="w-2.5 h-2.5 opacity-0 group-hover:opacity-100" />
-                </div>
+            <a
+              href="https://sjimenezlon.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 bg-surface/75 backdrop-blur-sm border border-border rounded-2xl p-3 pr-4 no-underline hover:border-primary/30 hover:shadow-md transition-all mb-8"
+            >
+              <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent text-white font-display font-extrabold text-sm flex items-center justify-center shadow-sm">SJ</span>
+              <span className="text-left">
+                <span className="block text-[10px] uppercase tracking-[0.12em] font-bold text-text-lighter">Creada y curada por</span>
+                <span className="flex items-center gap-1 text-sm font-semibold text-text group-hover:text-primary transition-colors">
+                  Santiago Jiménez Londoño <ExternalLink className="w-3 h-3" />
+                </span>
+              </span>
+            </a>
+
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+              <a href="#ruta" className="inline-flex items-center gap-2 bg-text text-white px-5 py-2.5 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-lg transition-all text-sm">
+                <Compass className="w-4 h-4" />
+                Encuentra tu ruta
               </a>
-            ))}
+              <a href="#mundo" className="inline-flex items-center gap-2 bg-surface border border-border text-text px-5 py-2.5 rounded-xl font-semibold no-underline hover:border-accent/40 hover:shadow-md transition-all text-sm">
+                <Globe2 className="w-4 h-4 text-accent" />
+                Ejemplos globales
+              </a>
+              <a href="#prompts" className="inline-flex items-center gap-2 bg-surface border border-border text-text px-5 py-2.5 rounded-xl font-semibold no-underline hover:border-warm/40 hover:shadow-md transition-all text-sm">
+                <Copy className="w-4 h-4 text-warm" />
+                Prompts listos
+              </a>
+            </div>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-2 justify-center">
-            <a href="#ruta" className="inline-flex items-center gap-2 bg-text text-white px-5 py-2.5 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-lg transition-all text-sm">
-              <Compass className="w-4 h-4" />
-              Encuentra tu ruta
-            </a>
-            <a href="#ciclo" className="inline-flex items-center gap-2 bg-surface border border-border text-text px-5 py-2.5 rounded-xl font-semibold no-underline hover:border-primary/40 hover:shadow-md transition-all text-sm">
-              <Layers3 className="w-4 h-4 text-primary" />
-              Ciclo docente
-            </a>
-            <a href="#prompts" className="inline-flex items-center gap-2 bg-surface border border-border text-text px-5 py-2.5 rounded-xl font-semibold no-underline hover:border-warm/40 hover:shadow-md transition-all text-sm">
-              <Copy className="w-4 h-4 text-warm" />
-              Prompts listos
-            </a>
-            <a href="#datos" className="inline-flex items-center gap-2 bg-surface border border-rose-200 text-rose-700 px-5 py-2.5 rounded-xl font-semibold no-underline hover:bg-rose-50 hover:shadow-md transition-all text-sm">
-              <ShieldCheck className="w-4 h-4" />
-              Protección de datos
-            </a>
+          <div className="relative min-h-[360px] sm:min-h-[430px] flex items-center">
+            <div className="absolute inset-[12%] bg-gradient-to-br from-primary/10 via-accent/5 to-warm/10 rounded-full blur-2xl" />
+            <ToolOrbit />
+          </div>
+        </div>
+      </section>
+
+      <section className="relative z-10 max-w-5xl mx-auto px-4 -mt-5 md:-mt-8 pb-8">
+        <div className="bg-surface border border-border rounded-3xl p-6 md:p-8 shadow-lg">
+          <div className="grid lg:grid-cols-[1fr_1.15fr] gap-7 items-center">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-accent text-white font-display font-extrabold flex items-center justify-center shrink-0">SJ</div>
+              <div>
+                <p className="font-display font-semibold text-text text-lg md:text-xl leading-snug tracking-tight">
+                  “Construí esta herramienta para que ningún profesor tenga que perseguir cada novedad de IA. Lo importante es aprender a elegir, revisar y enseñar mejor.”
+                </p>
+                <p className="text-xs text-text-lighter mt-3">Santiago Jiménez Londoño · creador de ¿Qué IA necesito?</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-4 sm:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] gap-2 items-center" role="img" aria-label="Ruta de uso: empezar por el reto docente, elegir una herramienta, aplicar criterio profesional y llevar el resultado al aula">
+              {[
+                { n: '1', label: 'Reto docente', color: 'bg-primary/10 text-primary' },
+                { n: '2', label: 'Herramienta', color: 'bg-warm/10 text-warm' },
+                { n: '3', label: 'Tu criterio', color: 'bg-secondary/8 text-secondary' },
+                { n: '4', label: 'Mejor aula', color: 'bg-accent/10 text-accent' },
+              ].map((item, index) => (
+                <div key={item.n} className="contents">
+                  <div className="flex flex-col items-center text-center gap-1.5">
+                    <span className={`w-9 h-9 rounded-xl flex items-center justify-center font-display font-extrabold text-sm ${item.color}`}>{item.n}</span>
+                    <span className="text-[10px] font-semibold text-text-light leading-tight">{item.label}</span>
+                  </div>
+                  {index < 3 && <ArrowRight className="hidden sm:block w-4 h-4 text-text-lighter" />}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -509,6 +668,53 @@ export default function Docentes() {
               </article>
             )
           })}
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-4 py-8">
+        <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-8 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-secondary/8 text-secondary px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-secondary/10">
+              <Brain className="w-3 h-3" />
+              Gráfico de decisión
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-text tracking-tight mb-3">Qué delegar y qué conservar</h2>
+            <p className="text-sm text-text-light leading-relaxed mb-5">
+              Cuanto mayor sea el impacto de una decisión sobre el aprendizaje o el bienestar, mayor debe ser tu control. La IA gana terreno cuando la tarea es repetitiva y reversible.
+            </p>
+            <div className="flex items-start gap-3 bg-surface border border-border rounded-2xl p-4">
+              <div className="w-9 h-9 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                <Target className="w-4.5 h-4.5 text-accent" />
+              </div>
+              <p className="text-xs text-text-light leading-relaxed">
+                <span className="font-semibold text-text">Regla práctica:</span> si un error puede cambiar una nota, una oportunidad o la relación con un estudiante, la decisión final no se delega.
+              </p>
+            </div>
+          </div>
+
+          <div
+            className="relative pl-8 pb-8"
+            role="img"
+            aria-label="Matriz que cruza impacto pedagógico y repetición. Las decisiones de alto impacto se conservan en manos del docente; las tareas repetitivas se pueden automatizar con revisión."
+          >
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 origin-center text-[10px] font-bold uppercase tracking-[0.12em] text-text-lighter whitespace-nowrap">
+              Impacto pedagógico →
+            </div>
+            <div className="grid sm:grid-cols-2 gap-3 border-l-2 border-b-2 border-text/15 p-3 rounded-bl-xl">
+              {DECISION_ZONES.map((zone) => (
+                <div key={zone.label} className={`min-h-36 rounded-2xl border ${zone.color} p-4 flex flex-col justify-between`}>
+                  <div>
+                    <div className={`text-[10px] font-bold uppercase tracking-[0.12em] ${zone.accent} mb-1`}>{zone.label}</div>
+                    <h3 className="font-display font-bold text-text text-base tracking-tight">{zone.title}</h3>
+                  </div>
+                  <p className="text-xs text-text-light leading-relaxed mt-4">{zone.examples}</p>
+                </div>
+              ))}
+            </div>
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-[0.12em] text-text-lighter whitespace-nowrap">
+              Repetición de la tarea →
+            </div>
+          </div>
         </div>
       </section>
 
@@ -580,6 +786,65 @@ export default function Docentes() {
                 {profile.tools.map((tool) => <ToolMini key={tool} id={tool} />)}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mundo" className="relative overflow-hidden py-16 scroll-mt-20" style={{ background: 'linear-gradient(135deg, #111827 0%, #1e1b4b 52%, #102a2a 100%)' }}>
+        <div className="absolute inset-0 opacity-[0.08] dot-pattern pointer-events-none" />
+        <div className="absolute -top-28 -left-24 w-80 h-80 bg-primary/25 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -right-24 w-80 h-80 bg-accent/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="relative max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-white/10 text-white/90 px-4 py-1.5 rounded-full text-xs font-semibold mb-4 border border-white/15">
+              <Globe2 className="w-3 h-3" />
+              Ideas del mundo, prácticas para tu aula
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Cuatro modelos que puedes replicar</h2>
+            <p className="text-white/65 max-w-3xl mx-auto leading-relaxed">
+              No necesitas una plataforma nacional para empezar. Cada experiencia global se traduce aquí en una práctica pequeña que puedes ejecutar con la suite de esta página.
+            </p>
+          </div>
+
+          <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="hidden lg:block absolute top-7 left-[12%] right-[12%] h-px bg-gradient-to-r from-primary/20 via-white/25 to-accent/20" />
+            {GLOBAL_EXAMPLES.map((example) => (
+              <article key={example.place} className="relative bg-white/[0.055] backdrop-blur-sm border border-white/10 rounded-2xl p-5 flex flex-col hover:bg-white/[0.075] hover:border-white/20 transition-all">
+                <div className="relative z-10 flex items-center justify-between mb-5">
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center text-2xl shadow-lg">{example.flag}</div>
+                  <span className="font-display font-extrabold text-white/15 text-4xl tracking-tighter">{example.step}</span>
+                </div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-emerald-300 mb-1">{example.place}</div>
+                <h3 className="font-display font-bold text-white text-lg tracking-tight leading-tight mb-3">{example.idea}</h3>
+                <p className="text-xs text-white/55 leading-relaxed mb-4">{example.practice}</p>
+                <div className="bg-black/15 border border-white/8 rounded-xl p-3 mb-4 flex-1">
+                  <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-amber-300 mb-1.5">Repícalo así</div>
+                  <p className="text-xs text-white/70 leading-relaxed">{example.replicate}</p>
+                </div>
+                <div className="mb-4">
+                  <ToolPills ids={example.tools} />
+                </div>
+                <a href={example.source} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-white/40 hover:text-white/75 no-underline transition-colors">
+                  Fuente oficial <ExternalLink className="w-3 h-3" />
+                </a>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-2 max-w-3xl mx-auto" role="img" aria-label="Ruta de adopción en tres pasos: prueba docente, práctica compartida y autonomía del estudiante">
+            {[
+              { n: '1', label: 'Prueba docente', color: 'bg-primary' },
+              { n: '2', label: 'Práctica compartida', color: 'bg-warm' },
+              { n: '3', label: 'Autonomía con evidencia', color: 'bg-accent' },
+            ].map((item, index) => (
+              <div key={item.n} className="contents">
+                <div className="flex flex-col items-center text-center gap-2">
+                  <span className={`w-9 h-9 ${item.color} text-white rounded-full flex items-center justify-center font-display font-bold text-sm shadow-lg`}>{item.n}</span>
+                  <span className="text-[11px] font-semibold text-white/70">{item.label}</span>
+                </div>
+                {index < 2 && <ArrowRight className="w-5 h-5 text-white/25" />}
+              </div>
+            ))}
           </div>
         </div>
       </section>
