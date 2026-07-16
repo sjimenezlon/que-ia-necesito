@@ -23,6 +23,7 @@ import {
   MessageSquareText,
   Palette,
   Presentation,
+  Quote,
   School,
   Search,
   ShieldAlert,
@@ -728,6 +729,95 @@ const SOURCES = [
   },
 ]
 
+const BOOK_REFLECTIONS = [
+  {
+    id: 'educacion-bancaria',
+    kicker: 'Con Paulo Freire',
+    title: 'La educación bancaria, ahora automatizada',
+    body: 'Freire llamó «educación bancaria» a la que deposita respuestas en el estudiante como quien consigna dinero. Una IA usada sin criterio es su materialización tecnológica: un repositorio que dona respuestas prefabricadas sin comprensión genuina. El problema no nació con ChatGPT; la IA solo lo volvió imposible de ignorar.',
+    quote: 'No podemos esperar un cambio en el resultado si no estamos dispuestos a cambiar la entrada.',
+  },
+  {
+    id: 'formacion-informacion',
+    kicker: 'Con Hannah Arendt y Ortega y Gasset',
+    title: 'Formación, no información',
+    body: 'Cuando la información es omnipresente, transmitirla deja de ser el centro del oficio. Educar es formar personas capaces de discernir, valorar, cuestionar y crear: la integración existencial del conocimiento, eso que hace que un saber sea verdaderamente nuestro, sigue siendo un desafío profundamente humano.',
+    quote: 'Nuestra aspiración no deberá ser competir y derrotar a la máquina en su natural operación de repetición inagotable y memoria perfecta, sino promover la natural fertilidad del pensamiento humano.',
+  },
+  {
+    id: 'pedagogia-asombro',
+    kicker: 'Con Nussbaum, Maturana y Feynman',
+    title: 'Hacia una pedagogía del asombro',
+    body: 'Frente a la obsesión por detectar y castigar el plagio asistido, el libro propone cultivar lo que ningún modelo posee: el asombro ante lo inesperado, la curiosidad ante lo desconocido, la vulnerabilidad ante el fracaso y la perseverancia ante la dificultad. Capacidades de seres encarnados, situados y finitos.',
+    quote: 'Es precisamente en la imperfección, en la duda, en el error y en la búsqueda donde el ser humano expresa su humanidad más auténtica.',
+  },
+  {
+    id: 'andamiaje',
+    kicker: 'Con Lev Vygotsky',
+    title: 'La IA como andamiaje, no como amenaza',
+    body: 'El andamiaje permite alcanzar desempeños que el estudiante no lograría solo, y luego se retira. Bien utilizada, la IA puede liberar tiempo de la repetición para las actividades elevadas del pensamiento. Mal utilizada, retira el esfuerzo justo donde ocurre el aprendizaje.',
+    quote: 'Quizás podamos ver a la IA no como una amenaza, sino como un nuevo tipo de andamiaje, una herramienta que, bien utilizada, puede apoyar procesos de aprendizaje más ambiciosos.',
+  },
+]
+
+const GUIDING_QUESTIONS = [
+  {
+    tag: 'Cap. IV · La paradoja educativa',
+    question: '¿Nos preocupa la autenticidad del conocimiento, o mantener estructuras educativas que ya estaban fallando antes de la llegada de ChatGPT?',
+  },
+  {
+    tag: 'Cap. IV · El desafío evaluativo',
+    question: 'Si tu evaluación puede resolverla una IA, ¿el problema es la IA o es el método?',
+  },
+  {
+    tag: 'Cap. IV · De la repetición a la creación',
+    question: '¿Qué valoras más al calificar: la calidad de las respuestas o la calidad de las preguntas?',
+  },
+  {
+    tag: 'Algoritmos Deshumanizantes',
+    question: '¿Tu aula deja espacio para la duda, el error y la búsqueda, o solo premia la respuesta correcta a tiempo?',
+  },
+  {
+    tag: 'Columna · Elogio de la pregunta',
+    question: '¿Tus estudiantes le piden a la máquina que piense por ellos, o están aprendiendo a pensar con ella?',
+  },
+  {
+    tag: 'Columna · ¿Para qué la Universidad?',
+    question: '¿Qué hacen tú y tus estudiantes en clase durante esa hora que ninguna máquina necesita?',
+  },
+]
+
+const AUTHOR_READINGS = [
+  {
+    type: 'Libro',
+    outlet: 'Aún Humanos Editorial · 2025',
+    title: 'Algoritmos Deshumanizantes',
+    note: 'IA y la pérdida de la noción de individuo. Su capítulo IV piensa el aula: la educación bancaria, la formación frente a la información, la pedagogía del asombro y el desafío evaluativo.',
+    url: 'https://www.aunhumanos.com',
+  },
+  {
+    type: 'Ensayo',
+    outlet: 'Al Poniente',
+    title: 'Repeticiones en el aula en la era digital',
+    note: 'El capítulo educativo del libro, disponible en abierto: por qué seguir educando para la repetición es una batalla perdida contra la máquina.',
+    url: 'https://alponiente.com/algoritmos-deshumanizantes-repeticiones-en-el-aula-en-la-era-digital/',
+  },
+  {
+    type: 'Columna',
+    outlet: 'La República · julio 2026',
+    title: 'Elogio de la pregunta en tiempos de IA',
+    note: 'Por qué formular bien una pregunta cuesta más que contestarla, y qué se pierde cuando la saltamos. «La máquina contesta rápido. Pensar la pregunta sigue siendo trabajo humano».',
+    url: 'https://www.larepublica.co/analisis/santiago-jimenez-londono-4353436/elogio-de-la-pregunta-en-tiempos-de-ia-4434241',
+  },
+  {
+    type: 'Columna',
+    outlet: 'Al Poniente',
+    title: '¿Para qué la Universidad? Una defensa en tiempos de inteligencia artificial',
+    note: '«Mientras quede alguien capaz de preguntar, y alguien dispuesto a escucharle sin interrumpir, habrá universidad. Lo demás es mobiliario».',
+    url: 'https://alponiente.com/para-que-la-universidad-una-defensa-en-tiempos-de-inteligencia-artificial/',
+  },
+]
+
 function ToolOrbit() {
   return (
     <div
@@ -878,6 +968,10 @@ export default function Docentes() {
               <a href="#prompts" className="inline-flex items-center gap-2 bg-surface border border-border text-text px-5 py-2.5 rounded-xl font-semibold no-underline hover:border-warm/40 hover:shadow-md transition-all text-sm">
                 <Copy className="w-4 h-4 text-warm" />
                 Prompts listos
+              </a>
+              <a href="#reflexiones" className="inline-flex items-center gap-2 bg-surface border border-border text-text px-5 py-2.5 rounded-xl font-semibold no-underline hover:border-secondary/40 hover:shadow-md transition-all text-sm">
+                <BookOpen className="w-4 h-4 text-secondary" />
+                Reflexiones del autor
               </a>
             </div>
           </div>
@@ -1576,6 +1670,84 @@ export default function Docentes() {
               ))}
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section id="reflexiones" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-20">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 bg-secondary/8 text-secondary px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-secondary/10">
+            <BookOpen className="w-3 h-3" />
+            Del libro al aula
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-text tracking-tight mb-2">Reflexiones para enseñar en tiempos de IA</h2>
+          <p className="text-text-light text-sm max-w-3xl mx-auto">
+            Este capítulo no termina en las herramientas. Estas ideas vienen de <span className="italic">Algoritmos Deshumanizantes</span>, el libro de Santiago Jiménez Londoño, y de sus columnas sobre educación e IA: para pensar el oficio antes de abrir otra pestaña.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-4 mb-10">
+          {BOOK_REFLECTIONS.map((reflection) => (
+            <article key={reflection.id} className="group bg-surface border border-border rounded-2xl p-6 hover:shadow-md hover:border-secondary/25 transition-all flex flex-col">
+              <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-secondary mb-2">{reflection.kicker}</div>
+              <h3 className="font-display font-bold text-text text-xl tracking-tight leading-tight mb-3">{reflection.title}</h3>
+              <p className="text-sm text-text-light leading-relaxed mb-5">{reflection.body}</p>
+              <blockquote className="mt-auto m-0 border-l-2 border-secondary/30 pl-4 py-1">
+                <p className="font-display text-sm text-text italic leading-relaxed m-0">“{reflection.quote}”</p>
+                <cite className="block text-[10px] text-text-lighter not-italic mt-2">Algoritmos Deshumanizantes (2025)</cite>
+              </blockquote>
+            </article>
+          ))}
+        </div>
+
+        <div className="relative overflow-hidden rounded-3xl p-7 md:p-10 mb-10" style={{ background: 'linear-gradient(135deg, #111827 0%, #1e1b4b 55%, #2a1a33 100%)' }}>
+          <div className="absolute inset-0 opacity-[0.08] dot-pattern pointer-events-none" />
+          <div className="absolute -top-20 -right-20 w-64 h-64 bg-secondary/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="relative">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-8">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-white/10 text-white/90 px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-white/15">
+                  <Quote className="w-3 h-3" />
+                  Preguntas orientadoras
+                </div>
+                <h3 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">Seis preguntas sin respuesta rápida</h3>
+              </div>
+              <p className="text-white/55 text-xs max-w-xs leading-relaxed">Llévalas a una reunión de área, a un consejo académico o a tu propio diario docente. Que no se respondan en un minuto es la idea.</p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {GUIDING_QUESTIONS.map((item, index) => (
+                <div key={item.question} className="bg-white/[0.05] backdrop-blur-sm border border-white/10 rounded-2xl p-5 hover:border-white/25 transition-colors">
+                  <div className="flex items-center justify-between gap-3 mb-3">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-amber-300">{item.tag}</span>
+                    <span className="font-display font-extrabold text-white/15 text-2xl leading-none">0{index + 1}</span>
+                  </div>
+                  <p className="font-display text-white text-base md:text-lg leading-snug tracking-tight m-0">{item.question}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {AUTHOR_READINGS.map((reading) => (
+            <a
+              key={reading.title}
+              href={reading.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-surface border border-border rounded-2xl p-5 no-underline hover:shadow-md hover:-translate-y-0.5 hover:border-secondary/30 transition-all flex flex-col"
+            >
+              <div className="flex items-center justify-between gap-2 mb-3">
+                <span className="inline-flex items-center gap-1.5 bg-secondary/8 text-secondary px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.1em]">
+                  <BookOpen className="w-3 h-3" />
+                  {reading.type}
+                </span>
+                <ExternalLink className="w-3.5 h-3.5 text-text-lighter group-hover:text-secondary transition-colors shrink-0" />
+              </div>
+              <h3 className="font-display font-bold text-text text-base tracking-tight leading-snug mb-2">{reading.title}</h3>
+              <p className="text-xs text-text-light leading-relaxed mb-4 flex-1">{reading.note}</p>
+              <div className="text-[10px] text-text-lighter font-semibold">{reading.outlet}</div>
+            </a>
+          ))}
         </div>
       </section>
 
