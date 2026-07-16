@@ -729,6 +729,20 @@ const SOURCES = [
   },
 ]
 
+const CHAPTER_INDEX = [
+  { id: 'ruta', label: 'Tu ruta' },
+  { id: 'mundo', label: 'Modelos del mundo' },
+  { id: 'ciclo', label: 'Ciclo docente' },
+  { id: 'ejemplos', label: 'Ejemplos' },
+  { id: 'evaluacion', label: 'Evaluación' },
+  { id: 'buenas-practicas', label: 'Buenas prácticas' },
+  { id: 'datos', label: 'Datos y privacidad' },
+  { id: 'prompts', label: 'Prompts' },
+  { id: 'caja-herramientas', label: 'Herramientas' },
+  { id: 'piloto', label: 'Primera semana' },
+  { id: 'reflexiones', label: 'Reflexiones' },
+]
+
 const BOOK_REFLECTIONS = [
   {
     id: 'educacion-bancaria',
@@ -764,36 +778,48 @@ const GUIDING_QUESTIONS = [
   {
     tag: 'Cap. IV · La paradoja educativa',
     question: '¿Nos preocupa la autenticidad del conocimiento, o mantener estructuras educativas que ya estaban fallando antes de la llegada de ChatGPT?',
+    anchor: '#ciclo',
+    anchorLabel: 'Rediseña desde la evidencia',
   },
   {
     tag: 'Cap. IV · El desafío evaluativo',
     question: 'Si tu evaluación puede resolverla una IA, ¿el problema es la IA o es el método?',
+    anchor: '#evaluacion',
+    anchorLabel: 'Cambia la evidencia, no persigas al robot',
   },
   {
     tag: 'Cap. IV · De la repetición a la creación',
     question: '¿Qué valoras más al calificar: la calidad de las respuestas o la calidad de las preguntas?',
+    anchor: '#prompts',
+    anchorLabel: 'Prompt: preguntas que revelan comprensión',
   },
   {
     tag: 'Algoritmos Deshumanizantes',
     question: '¿Tu aula deja espacio para la duda, el error y la búsqueda, o solo premia la respuesta correcta a tiempo?',
+    anchor: '#ejemplos',
+    anchorLabel: 'Ejemplo: laboratorio de errores frecuentes',
   },
   {
     tag: 'Columna · Elogio de la pregunta',
     question: '¿Tus estudiantes le piden a la máquina que piense por ellos, o están aprendiendo a pensar con ella?',
+    anchor: '#prompts',
+    anchorLabel: 'Prompt: tutor socrático',
   },
   {
     tag: 'Columna · ¿Para qué la Universidad?',
     question: '¿Qué hacen tú y tus estudiantes en clase durante esa hora que ninguna máquina necesita?',
+    anchor: '#buenas-practicas',
+    anchorLabel: 'Protege el esfuerzo cognitivo',
   },
 ]
 
 const AUTHOR_READINGS = [
   {
     type: 'Libro',
-    outlet: 'Aún Humanos Editorial · 2025',
+    outlet: 'Aún Humanos Editorial · 2025 · disponible en Amazon',
     title: 'Algoritmos Deshumanizantes',
     note: 'IA y la pérdida de la noción de individuo. Su capítulo IV piensa el aula: la educación bancaria, la formación frente a la información, la pedagogía del asombro y el desafío evaluativo.',
-    url: 'https://www.aunhumanos.com',
+    url: 'https://www.amazon.com/Algoritmos-deshumanizantes-p%C3%A9rdida-individuo-Spanish-ebook/dp/B0FF2KQBYW',
   },
   {
     type: 'Ensayo',
@@ -889,6 +915,29 @@ function ToolMini({ id }) {
       </div>
       <ArrowRight className="w-4 h-4 text-text-lighter group-hover:text-primary transition-colors shrink-0" />
     </Link>
+  )
+}
+
+function TryLinks({ text }) {
+  const targets = [
+    { label: 'Probar en Claude', url: `https://claude.ai/new?q=${encodeURIComponent(text)}` },
+    { label: 'Probar en ChatGPT', url: `https://chatgpt.com/?q=${encodeURIComponent(text)}` },
+  ]
+  return (
+    <div className="flex flex-wrap gap-2">
+      {targets.map((target) => (
+        <a
+          key={target.label}
+          href={target.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-border bg-text/[0.035] text-[11px] font-semibold text-text-light no-underline hover:border-primary/30 hover:text-primary transition-colors"
+        >
+          {target.label}
+          <ExternalLink className="w-3 h-3" />
+        </a>
+      ))}
+    </div>
   )
 }
 
@@ -990,9 +1039,10 @@ export default function Docentes() {
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-accent text-white font-display font-extrabold flex items-center justify-center shrink-0">SJ</div>
               <div>
                 <p className="font-display font-semibold text-text text-lg md:text-xl leading-snug tracking-tight">
-                  “Construí esta herramienta para que ningún profesor tenga que perseguir cada novedad de IA. Lo importante es aprender a elegir, revisar y enseñar mejor.”
+                  “La arquitectura del conocimiento —la forma en que organizamos, interpretamos y aplicamos esos datos— sigue siendo irreductiblemente humana.”
                 </p>
-                <p className="text-xs text-text-lighter mt-3">Santiago Jiménez Londoño · creador de ¿Qué IA necesito?</p>
+                <p className="text-xs text-text-lighter mt-3">Santiago Jiménez Londoño · <span className="italic">Algoritmos Deshumanizantes</span> (2025) · creador de ¿Qué IA necesito?</p>
+                <p className="text-xs text-text-light mt-2">Esta guía existe para que ningún profesor tenga que perseguir cada novedad de IA: se trata de aprender a elegir, revisar y enseñar mejor.</p>
               </div>
             </div>
             <div className="grid grid-cols-4 sm:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] gap-2 items-center" role="img" aria-label="Ruta de uso: empezar por el reto docente, elegir una herramienta, aplicar criterio profesional y llevar el resultado al aula">
@@ -1014,6 +1064,21 @@ export default function Docentes() {
           </div>
         </div>
       </section>
+
+      <nav className="sticky top-16 z-40 bg-bg/85 backdrop-blur-md border-y border-border/70" aria-label="Índice del capítulo">
+        <div className="max-w-6xl mx-auto px-4 flex items-center gap-1.5 overflow-x-auto py-2.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-text-lighter shrink-0 mr-1.5">Índice</span>
+          {CHAPTER_INDEX.map((item) => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className="shrink-0 whitespace-nowrap px-3 py-1.5 rounded-full border border-border bg-surface text-xs font-semibold text-text-light no-underline hover:border-primary/40 hover:text-primary transition-colors"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </nav>
 
       <section className="max-w-6xl mx-auto px-4 py-14">
         <div className="text-center mb-8">
@@ -1090,7 +1155,7 @@ export default function Docentes() {
         </div>
       </section>
 
-      <section id="ruta" className="max-w-6xl mx-auto px-4 py-10 scroll-mt-20">
+      <section id="ruta" className="max-w-6xl mx-auto px-4 py-10 scroll-mt-28">
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-accent/15">
             <Users className="w-3 h-3" />
@@ -1162,7 +1227,7 @@ export default function Docentes() {
         </div>
       </section>
 
-      <section id="mundo" className="relative overflow-hidden py-16 scroll-mt-20" style={{ background: 'linear-gradient(135deg, #111827 0%, #1e1b4b 52%, #102a2a 100%)' }}>
+      <section id="mundo" className="relative overflow-hidden py-16 scroll-mt-28" style={{ background: 'linear-gradient(135deg, #111827 0%, #1e1b4b 52%, #102a2a 100%)' }}>
         <div className="absolute inset-0 opacity-[0.08] dot-pattern pointer-events-none" />
         <div className="absolute -top-28 -left-24 w-80 h-80 bg-primary/25 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-32 -right-24 w-80 h-80 bg-accent/20 rounded-full blur-3xl pointer-events-none" />
@@ -1221,7 +1286,7 @@ export default function Docentes() {
         </div>
       </section>
 
-      <section id="ciclo" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-20">
+      <section id="ciclo" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-28">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-warm/10 text-warm px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-warm/15">
             <WandSparkles className="w-3 h-3" />
@@ -1290,6 +1355,9 @@ export default function Docentes() {
                 </button>
               </div>
               <pre className="whitespace-pre-wrap font-sans text-sm text-text-light leading-relaxed bg-surface border border-border rounded-2xl p-5 flex-1 overflow-auto">{stage.prompt}</pre>
+              <div className="mt-3">
+                <TryLinks text={stage.prompt} />
+              </div>
               <p className="text-[11px] text-text-lighter mt-3 flex items-start gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-accent mt-0.5 shrink-0" />
                 Revisa precisión disciplinar, adecuación a la edad, accesibilidad y política institucional antes de usar el resultado.
@@ -1299,7 +1367,7 @@ export default function Docentes() {
         </div>
       </section>
 
-      <section id="ejemplos" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-20">
+      <section id="ejemplos" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-28">
         <div className="text-center mb-9">
           <div className="inline-flex items-center gap-2 bg-primary/8 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-primary/10">
             <Lightbulb className="w-3 h-3" />
@@ -1364,7 +1432,7 @@ export default function Docentes() {
         </div>
       </section>
 
-      <section id="evaluacion" className="relative overflow-hidden py-16" style={{ background: 'linear-gradient(135deg, #111827 0%, #1e1b4b 52%, #18252c 100%)' }}>
+      <section id="evaluacion" className="relative overflow-hidden py-16 scroll-mt-28" style={{ background: 'linear-gradient(135deg, #111827 0%, #1e1b4b 52%, #18252c 100%)' }}>
         <div className="absolute inset-0 opacity-[0.08] dot-pattern pointer-events-none" />
         <div className="relative max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -1400,7 +1468,7 @@ export default function Docentes() {
         </div>
       </section>
 
-      <section id="buenas-practicas" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-20">
+      <section id="buenas-practicas" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-28">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-accent/15">
             <ShieldCheck className="w-3 h-3" />
@@ -1459,7 +1527,7 @@ export default function Docentes() {
         </div>
       </section>
 
-      <section id="datos" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-20">
+      <section id="datos" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-28">
         <div className="text-center mb-9">
           <div className="inline-flex items-center gap-2 bg-rose-50 text-rose-700 px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-rose-200">
             <ShieldAlert className="w-3 h-3" />
@@ -1497,9 +1565,24 @@ export default function Docentes() {
             Recurso de la SIC <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </div>
+
+        <div className="mt-4 relative overflow-hidden bg-text rounded-2xl p-5 md:p-6 flex flex-col sm:flex-row sm:items-center gap-4">
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/25 rounded-full blur-3xl pointer-events-none" />
+          <div className="relative w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+            <FileText className="w-5 h-5 text-amber-300" />
+          </div>
+          <div className="relative flex-1">
+            <h3 className="font-display font-bold text-white text-lg tracking-tight mb-1">Kit imprimible para la sala de profesores</h3>
+            <p className="text-white/60 text-xs leading-relaxed m-0">El semáforo de datos, la declaración de uso de IA y las seis preguntas orientadoras en una hoja lista para imprimir, pegar en cartelera o compartir por WhatsApp.</p>
+          </div>
+          <a href="/kit-docente.html" target="_blank" rel="noopener noreferrer" className="relative inline-flex items-center gap-2 bg-white text-text px-5 py-2.5 rounded-xl font-semibold text-sm no-underline hover:bg-white/90 hover:shadow-lg transition-all shrink-0">
+            Abrir el kit
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
       </section>
 
-      <section id="prompts" className="max-w-6xl mx-auto px-4 py-12 scroll-mt-20">
+      <section id="prompts" className="max-w-6xl mx-auto px-4 py-12 scroll-mt-28">
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-primary/8 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-primary/10">
             <Sparkles className="w-3 h-3" />
@@ -1552,12 +1635,15 @@ export default function Docentes() {
                 </button>
               </div>
               <p className="text-sm text-text-light leading-relaxed bg-text/[0.025] border border-border/70 rounded-xl p-4 flex-1">{prompt.body}</p>
+              <div className="mt-3">
+                <TryLinks text={prompt.body} />
+              </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="caja-herramientas" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-20">
+      <section id="caja-herramientas" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-28">
         <div className="text-center mb-9">
           <div className="inline-flex items-center gap-2 bg-warm/10 text-warm px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-warm/15">
             <Workflow className="w-3 h-3" />
@@ -1627,7 +1713,7 @@ export default function Docentes() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 py-16">
+      <section id="piloto" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-28">
         <div className="grid lg:grid-cols-[1fr_360px] gap-6 items-start">
           <div>
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-accent/15">
@@ -1673,7 +1759,7 @@ export default function Docentes() {
         </div>
       </section>
 
-      <section id="reflexiones" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-20">
+      <section id="reflexiones" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-28">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-secondary/8 text-secondary px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-secondary/10">
             <BookOpen className="w-3 h-3" />
@@ -1715,12 +1801,16 @@ export default function Docentes() {
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
               {GUIDING_QUESTIONS.map((item, index) => (
-                <div key={item.question} className="bg-white/[0.05] backdrop-blur-sm border border-white/10 rounded-2xl p-5 hover:border-white/25 transition-colors">
+                <div key={item.question} className="bg-white/[0.05] backdrop-blur-sm border border-white/10 rounded-2xl p-5 hover:border-white/25 transition-colors flex flex-col">
                   <div className="flex items-center justify-between gap-3 mb-3">
                     <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-amber-300">{item.tag}</span>
                     <span className="font-display font-extrabold text-white/15 text-2xl leading-none">0{index + 1}</span>
                   </div>
-                  <p className="font-display text-white text-base md:text-lg leading-snug tracking-tight m-0">{item.question}</p>
+                  <p className="font-display text-white text-base md:text-lg leading-snug tracking-tight m-0 mb-4">{item.question}</p>
+                  <a href={item.anchor} className="mt-auto inline-flex items-center gap-1.5 text-[11px] font-semibold text-emerald-300 no-underline hover:text-white transition-colors">
+                    Llévala a la práctica: {item.anchorLabel}
+                    <ArrowRight className="w-3 h-3 shrink-0" />
+                  </a>
                 </div>
               ))}
             </div>
@@ -1770,7 +1860,15 @@ export default function Docentes() {
                 <Sparkles className="w-4 h-4 text-warm" />
                 Abrir Prompt Lab
               </Link>
+              <a
+                href="mailto:sjimenezlon@gmail.com?subject=Llev%C3%A9%20la%20IA%20a%20mi%20aula&body=Hola%20Santiago%2C%0A%0AProb%C3%A9%20esto%20en%20mi%20clase%3A%20%0AAs%C3%AD%20me%20fue%3A%20%0ALo%20que%20cambiar%C3%ADa%20o%20propondr%C3%ADa%3A%20"
+                className="inline-flex items-center gap-2 bg-surface border border-border text-text px-6 py-3 rounded-xl font-semibold no-underline hover:border-accent/40 hover:shadow-md transition-all"
+              >
+                <MessageSquareText className="w-4 h-4 text-accent" />
+                Cuéntame cómo te fue
+              </a>
             </div>
+            <p className="text-xs text-text-lighter mt-5">¿Llevaste uno de estos ejemplos al aula o tienes un caso que otros docentes deberían conocer? Escríbeme: este capítulo mejora con lo que pasa en clases reales.</p>
           </div>
         </div>
       </section>

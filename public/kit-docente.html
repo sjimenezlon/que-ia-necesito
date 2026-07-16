@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kit docente · IA en el aula — ¿Qué IA necesito?</title>
+  <meta name="description" content="Semáforo de datos, declaración de uso de IA y preguntas orientadoras para docentes. Imprimible. De que-ia-necesito.vercel.app/docentes" />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #4338CA; --secondary: #E11D48; --accent: #0D9488; --warm: #F97316;
+      --text: #1A1A2E; --text-light: #52525B; --text-lighter: #A1A1AA; --border: #E4E4E7; --bg: #FAFAF5;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Figtree', system-ui, sans-serif; color: var(--text); background: var(--bg); line-height: 1.45; }
+    .page { max-width: 8.5in; margin: 0 auto; padding: 28px 34px; background: #fff; }
+    h1, h2, h3 { font-family: 'Bricolage Grotesque', 'Figtree', sans-serif; letter-spacing: -0.02em; }
+    .masthead { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; border-bottom: 3px solid var(--text); padding-bottom: 12px; margin-bottom: 16px; }
+    .masthead .kicker { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--primary); margin-bottom: 4px; }
+    .masthead h1 { font-size: 26px; font-weight: 800; line-height: 1.05; }
+    .masthead .site { text-align: right; font-size: 11px; color: var(--text-light); }
+    .masthead .site strong { color: var(--text); }
+    .intro { font-size: 12px; color: var(--text-light); margin-bottom: 18px; max-width: 46em; }
+    section { margin-bottom: 20px; }
+    .sec-title { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px; }
+    .sec-title .num { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 18px; color: var(--text-lighter); }
+    .sec-title h2 { font-size: 17px; font-weight: 700; }
+    .sec-title .hint { font-size: 10.5px; color: var(--text-lighter); }
+    .semaforo { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .luz { border: 1.5px solid; border-radius: 12px; padding: 10px 12px; }
+    .luz h3 { font-size: 12.5px; margin-bottom: 7px; }
+    .luz ul { list-style: none; }
+    .luz li { font-size: 10.5px; color: var(--text-light); padding-left: 12px; position: relative; margin-bottom: 5px; }
+    .luz li::before { content: ''; position: absolute; left: 0; top: 5.5px; width: 5px; height: 5px; border-radius: 50%; }
+    .luz.roja { border-color: #fecdd3; background: #fff1f2; } .luz.roja h3 { color: #be123c; } .luz.roja li::before { background: #be123c; }
+    .luz.ambar { border-color: #fde68a; background: #fffbeb; } .luz.ambar h3 { color: #b45309; } .luz.ambar li::before { background: #b45309; }
+    .luz.verde { border-color: #a7f3d0; background: #ecfdf5; } .luz.verde h3 { color: #047857; } .luz.verde li::before { background: #047857; }
+    .declaracion { border: 1.5px solid var(--border); border-radius: 12px; padding: 12px 14px; }
+    .declaracion p.nota { font-size: 10.5px; color: var(--text-light); margin-bottom: 10px; }
+    .campo { display: flex; align-items: baseline; gap: 8px; margin-bottom: 11px; }
+    .campo label { font-size: 10.5px; font-weight: 700; white-space: nowrap; }
+    .campo .linea { flex: 1; border-bottom: 1px solid var(--text-lighter); min-height: 14px; }
+    .check { font-size: 10.5px; color: var(--text-light); margin-top: 2px; }
+    .check .box { display: inline-block; width: 10px; height: 10px; border: 1.2px solid var(--text-light); border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+    .preguntas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .pregunta { border: 1.5px solid var(--border); border-radius: 12px; padding: 10px 12px; background: #fff; }
+    .pregunta .tag { font-size: 8.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--warm); display: block; margin-bottom: 5px; }
+    .pregunta p { font-family: 'Bricolage Grotesque', sans-serif; font-size: 12.5px; font-weight: 600; line-height: 1.3; }
+    .cita { border-left: 3px solid var(--primary); padding: 6px 0 6px 14px; margin: 16px 0; }
+    .cita p { font-family: 'Bricolage Grotesque', sans-serif; font-size: 13px; font-style: italic; font-weight: 600; }
+    .cita cite { font-size: 10px; color: var(--text-light); font-style: normal; }
+    footer { border-top: 1.5px solid var(--border); padding-top: 10px; display: flex; justify-content: space-between; gap: 12px; font-size: 9.5px; color: var(--text-light); }
+    .print-bar { position: sticky; top: 0; background: var(--text); color: #fff; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .print-bar p { font-size: 12px; }
+    .print-bar button { font-family: 'Figtree', sans-serif; font-weight: 700; font-size: 13px; background: #fff; color: var(--text); border: none; border-radius: 10px; padding: 8px 16px; cursor: pointer; }
+    .print-bar a { color: #fcd34d; }
+    @media print {
+      .print-bar { display: none; }
+      body { background: #fff; }
+      .page { padding: 0; max-width: none; }
+      section { break-inside: avoid; }
+      @page { size: letter; margin: 14mm 12mm; }
+    }
+    @media (max-width: 640px) { .semaforo, .preguntas { grid-template-columns: 1fr; } .masthead { flex-direction: column; align-items: flex-start; } .masthead .site { text-align: left; } }
+  </style>
+</head>
+<body>
+  <div class="print-bar">
+    <p>Imprime esta hoja o guárdala como PDF (Archivo → Imprimir → Guardar como PDF).</p>
+    <button onclick="window.print()">Imprimir / guardar PDF</button>
+  </div>
+
+  <div class="page">
+    <div class="masthead">
+      <div>
+        <div class="kicker">Kit para la sala de profesores</div>
+        <h1>IA en el aula, con criterio</h1>
+      </div>
+      <div class="site">
+        <strong>¿Qué IA necesito?</strong> · capítulo docente<br />
+        que-ia-necesito.vercel.app/docentes
+      </div>
+    </div>
+
+    <p class="intro">Tres piezas para usar hoy: el semáforo de qué datos pueden entrar a una IA, una declaración de uso para acompañar entregas de estudiantes y seis preguntas para discutir en reunión de área. La guía completa, con ejemplos y prompts, está en la página.</p>
+
+    <section>
+      <div class="sec-title"><span class="num">01</span><h2>Semáforo de datos para el aula</h2><span class="hint">Ley 1581 de 2012 · cuidado reforzado con menores</span></div>
+      <div class="semaforo">
+        <div class="luz roja">
+          <h3>Nunca en una IA pública</h3>
+          <ul>
+            <li>Nombres, documentos o contactos de estudiantes</li>
+            <li>Calificaciones o historias académicas identificables</li>
+            <li>Información de salud, discapacidad o convivencia</li>
+            <li>Fotografías, voces o trabajos de menores sin autorización</li>
+          </ul>
+        </div>
+        <div class="luz ambar">
+          <h3>Solo con protocolo institucional</h3>
+          <ul>
+            <li>Cuentas creadas por estudiantes</li>
+            <li>Grabación y transcripción de clase</li>
+            <li>Integraciones con LMS o correo institucional</li>
+            <li>Analítica individual para decisiones de evaluación</li>
+          </ul>
+        </div>
+        <div class="luz verde">
+          <h3>Buen punto de partida</h3>
+          <ul>
+            <li>Material propio sin datos personales</li>
+            <li>Casos ficticios o datos anonimizados</li>
+            <li>Normas, lecturas y recursos de acceso autorizado</li>
+            <li>Ideas, estructuras y borradores que revisarás tú</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-title"><span class="num">02</span><h2>Declaración de uso de IA</h2><span class="hint">Para anexar a una entrega académica · convierte el uso oculto en una decisión discutible</span></div>
+      <div class="declaracion">
+        <p class="nota">Nombre: ____________________________________ &nbsp;·&nbsp; Curso: ____________________ &nbsp;·&nbsp; Fecha: ______________</p>
+        <div class="campo"><label>Herramienta utilizada:</label><span class="linea"></span></div>
+        <div class="campo"><label>Para qué la usé:</label><span class="linea"></span></div>
+        <div class="campo"><label>Prompts o acciones principales:</label><span class="linea"></span></div>
+        <div class="campo"><label>Qué modifiqué del resultado:</label><span class="linea"></span></div>
+        <div class="campo"><label>Qué fuentes o cálculos verifiqué:</label><span class="linea"></span></div>
+        <div class="campo"><label>Decisiones que conservé como autor(a):</label><span class="linea"></span></div>
+        <div class="campo"><label>Limitaciones o errores que encontré:</label><span class="linea"></span></div>
+        <p class="check"><span class="box"></span>Declaro que <strong>no utilicé IA</strong> en esta entrega.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-title"><span class="num">03</span><h2>Seis preguntas sin respuesta rápida</h2><span class="hint">Para reunión de área, consejo académico o diario docente</span></div>
+      <div class="preguntas">
+        <div class="pregunta"><span class="tag">Cap. IV · La paradoja educativa</span><p>¿Nos preocupa la autenticidad del conocimiento, o mantener estructuras educativas que ya estaban fallando antes de la llegada de ChatGPT?</p></div>
+        <div class="pregunta"><span class="tag">Cap. IV · El desafío evaluativo</span><p>Si tu evaluación puede resolverla una IA, ¿el problema es la IA o es el método?</p></div>
+        <div class="pregunta"><span class="tag">Cap. IV · De la repetición a la creación</span><p>¿Qué valoras más al calificar: la calidad de las respuestas o la calidad de las preguntas?</p></div>
+        <div class="pregunta"><span class="tag">Algoritmos Deshumanizantes</span><p>¿Tu aula deja espacio para la duda, el error y la búsqueda, o solo premia la respuesta correcta a tiempo?</p></div>
+        <div class="pregunta"><span class="tag">Columna · Elogio de la pregunta</span><p>¿Tus estudiantes le piden a la máquina que piense por ellos, o están aprendiendo a pensar con ella?</p></div>
+        <div class="pregunta"><span class="tag">Columna · ¿Para qué la Universidad?</span><p>¿Qué hacen tú y tus estudiantes en clase durante esa hora que ninguna máquina necesita?</p></div>
+      </div>
+    </section>
+
+    <div class="cita">
+      <p>“Nuestra aspiración no deberá ser competir y derrotar a la máquina en su natural operación de repetición inagotable y memoria perfecta, sino promover la natural fertilidad del pensamiento humano.”</p>
+      <cite>Santiago Jiménez Londoño, <em>Algoritmos Deshumanizantes</em> (Aún Humanos Editorial, 2025)</cite>
+    </div>
+
+    <footer>
+      <span>Guía completa, ejemplos replicables y prompts: <strong>que-ia-necesito.vercel.app/docentes</strong></span>
+      <span>Elaborado por Santiago Jiménez Londoño · sjimenezlon.co</span>
+    </footer>
+  </div>
+</body>
+</html>
