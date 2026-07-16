@@ -38,6 +38,7 @@ import {
 } from 'lucide-react'
 import { getToolById } from '../utils/recommender'
 import { ToolFavicon } from '../components/ToolCard'
+import TeacherStudio from '../components/TeacherStudio'
 
 const SUITE_ORBIT = [
   { label: 'Conversar', icon: Bot, to: '/herramienta/chatgpt', position: 'top-0 left-1/2 -translate-x-1/2' },
@@ -727,6 +728,16 @@ const SOURCES = [
     org: 'Ministerio de Educación de Nueva Zelanda',
     url: 'https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai',
   },
+  {
+    label: 'Guías de Diseño Universal para el Aprendizaje',
+    org: 'CAST · versión 3.0',
+    url: 'https://udlguidelines.cast.org/',
+  },
+  {
+    label: 'IA y educación: proteger los derechos de los estudiantes',
+    org: 'UNESCO · 2025',
+    url: 'https://www.unesco.org/en/articles/ai-and-education-protecting-rights-learners',
+  },
 ]
 
 const AI_DESIGN_LEVELS = [
@@ -886,6 +897,7 @@ const CHAPTER_INDEX = [
   { id: 'mundo', label: 'Modelos del mundo' },
   { id: 'ciclo', label: 'Ciclo docente' },
   { id: 'laboratorio', label: 'Diseña con IA' },
+  { id: 'acompanamiento', label: 'Acompañamiento' },
   { id: 'ejemplos', label: 'Ejemplos' },
   { id: 'evaluacion', label: 'Evaluación' },
   { id: 'buenas-practicas', label: 'Buenas prácticas' },
@@ -1694,6 +1706,8 @@ export default function Docentes() {
           </div>
         </div>
       </section>
+
+      <TeacherStudio copiedId={copiedId} onCopy={copyPrompt} />
 
       <section id="ejemplos" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-28">
         <div className="text-center mb-9">
