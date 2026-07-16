@@ -148,6 +148,267 @@ const GLOBAL_EXAMPLES = [
   },
 ]
 
+const SCENARIO_FILTERS = [
+  { id: 'todos', label: 'Todos' },
+  { id: 'escolar', label: 'Básica y media' },
+  { id: 'superior', label: 'Educación superior' },
+  { id: 'tecnica', label: 'Técnica y tecnológica' },
+  { id: 'transversal', label: 'Uso transversal' },
+]
+
+const REPLICABLE_SCENARIOS = [
+  {
+    id: 'lectura-multinivel',
+    group: 'escolar',
+    level: 'Primaria y secundaria',
+    area: 'Lenguaje',
+    icon: BookOpen,
+    title: 'Una lectura, tres niveles de apoyo',
+    challenge: 'El grupo comparte un objetivo, pero no el mismo punto de partida.',
+    steps: ['Carga un texto propio o autorizado', 'Genera apoyos gradual, esperado y avanzado', 'Pide al estudiante explicar qué apoyo utilizó'],
+    evidence: 'La respuesta final conserva el mismo objetivo y muestra comprensión, no solo simplificación.',
+    tools: ['chatgpt', 'canva', 'elevenlabs'],
+  },
+  {
+    id: 'laboratorio-error',
+    group: 'escolar',
+    level: 'Secundaria',
+    area: 'Ciencias y matemáticas',
+    icon: FlaskConical,
+    title: 'Laboratorio de errores frecuentes',
+    challenge: 'Los estudiantes llegan a una respuesta correcta sin comprender dónde podrían equivocarse.',
+    steps: ['Pide cinco soluciones con errores plausibles', 'Haz que el grupo detecte y explique cada error', 'Cierra con un problema nuevo sin IA'],
+    evidence: 'El estudiante identifica el principio que se viola y corrige el procedimiento.',
+    tools: ['chatgpt', 'wolfram', 'canva'],
+  },
+  {
+    id: 'conversacion-idiomas',
+    group: 'escolar',
+    level: 'Básica y media',
+    area: 'Idiomas',
+    icon: MessageSquareText,
+    title: 'Simulador de conversación con repreguntas',
+    challenge: 'Falta tiempo de práctica oral individual durante la clase.',
+    steps: ['Define rol, nivel y vocabulario permitido', 'Exige una pregunta a la vez y corrección diferida', 'Graba una reflexión oral de 60 segundos'],
+    evidence: 'Fluidez, uso del vocabulario objetivo y capacidad de autocorrección.',
+    tools: ['chatgpt', 'deepl', 'elevenlabs'],
+  },
+  {
+    id: 'fuentes-historia',
+    group: 'escolar',
+    level: 'Secundaria y media',
+    area: 'Ciencias sociales',
+    icon: Search,
+    title: 'Contraste de fuentes sobre un mismo hecho',
+    challenge: 'El resumen automático aplana perspectivas y oculta desacuerdos.',
+    steps: ['Carga tres fuentes de distinto origen', 'Compara tesis, evidencia y silencios', 'Construye una conclusión con citas verificadas'],
+    evidence: 'El estudiante diferencia hecho, interpretación e inferencia propia.',
+    tools: ['notebooklm', 'perplexity', 'canva'],
+  },
+  {
+    id: 'matriz-literatura',
+    group: 'superior',
+    level: 'Pregrado y posgrado',
+    area: 'Investigación',
+    icon: FlaskConical,
+    title: 'Matriz de literatura verificable',
+    challenge: 'La búsqueda produce listas de referencias sin criterio de selección.',
+    steps: ['Define pregunta y criterios de inclusión', 'Extrae método, muestra, hallazgo y limitación', 'Verifica DOI y texto original antes de citar'],
+    evidence: 'Matriz trazable y explicación de por qué cada fuente entra o sale.',
+    tools: ['elicit', 'consensus', 'notebooklm'],
+  },
+  {
+    id: 'auditoria-argumento',
+    group: 'superior',
+    level: 'Educación superior',
+    area: 'Seminarios',
+    icon: Brain,
+    title: 'Auditoría de un argumento generado por IA',
+    challenge: 'El texto parece convincente aunque mezcle evidencia débil y afirmaciones inventadas.',
+    steps: ['Genera una respuesta deliberadamente discutible', 'Marca cada afirmación verificable', 'Reconstruye el argumento con mejores fuentes'],
+    evidence: 'Mapa de afirmaciones, calidad de fuentes y justificación de cambios.',
+    tools: ['claude', 'perplexity', 'notebooklm'],
+  },
+  {
+    id: 'defensa-oral',
+    group: 'superior',
+    level: 'Pregrado y posgrado',
+    area: 'Evaluación auténtica',
+    icon: Presentation,
+    title: 'Defensa oral de decisiones',
+    challenge: 'Un buen producto final no permite saber qué comprende realmente su autor.',
+    steps: ['Permite IA con declaración de uso', 'Cambia una condición al azar durante la defensa', 'Pide justificar una decisión descartada'],
+    evidence: 'Transferencia, dominio conceptual y coherencia entre proceso y producto.',
+    tools: ['gamma', 'canva', 'otter'],
+  },
+  {
+    id: 'cliente-simulado',
+    group: 'tecnica',
+    level: 'Formación técnica',
+    area: 'Servicio y ventas',
+    icon: BriefcaseBusiness,
+    title: 'Cliente simulado con dificultad progresiva',
+    challenge: 'La práctica real es costosa o expone a clientes durante el aprendizaje inicial.',
+    steps: ['Define tres perfiles de cliente', 'Introduce objeciones y datos incompletos', 'Evalúa con lista de cotejo y repetición'],
+    evidence: 'Escucha, diagnóstico, respuesta técnica y cierre apropiado.',
+    tools: ['chatgpt', 'elevenlabs', 'descript'],
+  },
+  {
+    id: 'procedimiento-visual',
+    group: 'tecnica',
+    level: 'Técnica y tecnológica',
+    area: 'Operaciones',
+    icon: Workflow,
+    title: 'Procedimiento visual con puntos de seguridad',
+    challenge: 'Un manual largo no acompaña bien la ejecución en taller o laboratorio.',
+    steps: ['Divide el procedimiento en decisiones', 'Crea una pieza visual por etapa', 'Valida cada paso con una persona experta'],
+    evidence: 'Ejecución correcta, identificación de riesgos y capacidad de explicar el porqué.',
+    tools: ['canva', 'synthesia', 'capcut'],
+  },
+  {
+    id: 'material-accesible',
+    group: 'transversal',
+    level: 'Todos los niveles',
+    area: 'Accesibilidad',
+    icon: Accessibility,
+    title: 'Un contenido en cuatro formatos',
+    challenge: 'El material depende de una sola forma de representación.',
+    steps: ['Parte del contenido fuente validado', 'Crea versión clara, audio, visual y glosario', 'Prueba legibilidad y equivalencia conceptual'],
+    evidence: 'Todos los formatos conservan el objetivo y permiten demostrar el mismo aprendizaje.',
+    tools: ['canva', 'deepl', 'elevenlabs'],
+  },
+  {
+    id: 'datos-clase',
+    group: 'transversal',
+    level: 'Todos los niveles',
+    area: 'Analítica docente',
+    icon: BarChart3,
+    title: 'Mapa anónimo de dificultades del grupo',
+    challenge: 'Las respuestas de salida se revisan tarde y de forma aislada.',
+    steps: ['Anonimiza y agrupa respuestas', 'Clasifica patrones, no personas', 'Diseña la siguiente clase para los dos vacíos principales'],
+    evidence: 'Decisión pedagógica documentada y contraste con la siguiente evidencia de salida.',
+    tools: ['julius', 'polymer', 'chatgpt'],
+  },
+  {
+    id: 'arte-critico',
+    group: 'transversal',
+    level: 'Media y superior',
+    area: 'Artes y comunicación',
+    icon: Palette,
+    title: 'Crítica de imágenes generadas',
+    challenge: 'Generar una imagen es fácil; justificar elecciones visuales sigue siendo difícil.',
+    steps: ['Produce tres versiones con restricciones', 'Analiza composición, sesgos y referencias', 'Edita una versión y documenta las decisiones'],
+    evidence: 'Criterio visual, conciencia de autoría y reflexión sobre el proceso generativo.',
+    tools: ['ideogram', 'adobe-firefly', 'canva'],
+  },
+]
+
+const BEST_PRACTICES = [
+  {
+    phase: 'Antes',
+    icon: Compass,
+    color: 'text-primary',
+    bg: 'bg-primary/8',
+    items: [
+      ['Define la evidencia', 'Escribe qué debe comprender o hacer el estudiante antes de elegir una herramienta.'],
+      ['Lee las condiciones', 'Verifica edad mínima, uso de datos, propiedad intelectual y posibilidad de borrar información.'],
+      ['Declara la regla', 'Explica qué uso está permitido, qué debe citarse y qué debe realizarse sin IA.'],
+      ['Prepara alternativa', 'Nadie debería perder el aprendizaje por no tener cuenta, dispositivo o conexión.'],
+    ],
+  },
+  {
+    phase: 'Durante',
+    icon: WandSparkles,
+    color: 'text-warm',
+    bg: 'bg-warm/10',
+    items: [
+      ['Haz visible el proceso', 'Muestra el prompt, el resultado imperfecto y las decisiones de edición.'],
+      ['Exige verificación', 'Pide fuentes originales, cálculos reproducibles o contraste con el material del curso.'],
+      ['Protege el esfuerzo cognitivo', 'Incluye momentos para pensar, resolver o explicar sin asistencia.'],
+      ['Trabaja con borradores', 'Usa la IA para iniciar, tensionar o revisar; no para cerrar la tarea por el estudiante.'],
+    ],
+  },
+  {
+    phase: 'Después',
+    icon: ClipboardCheck,
+    color: 'text-accent',
+    bg: 'bg-accent/10',
+    items: [
+      ['Mide aprendizaje', 'Distingue un producto más bonito de una comprensión realmente más profunda.'],
+      ['Documenta fallos', 'Registra alucinaciones, sesgos, fricciones y tiempo real ahorrado o perdido.'],
+      ['Pide transparencia', 'Incluye una declaración breve de herramienta, propósito, cambios y verificaciones.'],
+      ['Comparte y ajusta', 'Convierte el piloto en aprendizaje colectivo antes de escalarlo.'],
+    ],
+  },
+]
+
+const GENERAL_TOOLKIT = [
+  {
+    id: 'asistentes',
+    label: 'Asistentes generales',
+    icon: Bot,
+    description: 'Para conversar, redactar, explicar, idear y transformar contenido. Son versátiles, pero requieren instrucciones y revisión disciplinar.',
+    example: 'Pídeles comparar tres maneras de explicar un concepto y señalar qué error frecuente previene cada una.',
+    tools: ['chatgpt', 'claude', 'gemini', 'copilot'],
+  },
+  {
+    id: 'investigar',
+    label: 'Investigar y leer',
+    icon: Search,
+    description: 'Para localizar fuentes, trabajar con un corpus cerrado y organizar literatura académica con trazabilidad.',
+    example: 'Empieza en Perplexity, valida artículos con Elicit o Consensus y conversa con tus fuentes en NotebookLM.',
+    tools: ['perplexity', 'notebooklm', 'elicit', 'consensus'],
+  },
+  {
+    id: 'presentar',
+    label: 'Presentaciones',
+    icon: Presentation,
+    description: 'Para estructurar una historia visual, producir un primer diseño y adaptar materiales a distintos formatos.',
+    example: 'Genera primero la secuencia argumental; diseña después. Una diapositiva debe sostener una idea, no un párrafo.',
+    tools: ['gamma', 'canva', 'beautiful-ai'],
+  },
+  {
+    id: 'visual',
+    label: 'Imagen y diseño',
+    icon: Palette,
+    description: 'Para ilustrar conceptos, crear variaciones visuales y producir materiales propios con instrucciones detalladas.',
+    example: 'Solicita tres metáforas visuales del mismo concepto y pide al grupo evaluar cuál explica mejor y por qué.',
+    tools: ['canva', 'ideogram', 'adobe-firefly', 'freepik-ai'],
+  },
+  {
+    id: 'audiovisual',
+    label: 'Audio y video',
+    icon: MessageSquareText,
+    description: 'Para editar, subtitular, narrar, convertir demostraciones en microcontenidos y mejorar accesibilidad.',
+    example: 'Convierte una demostración de 20 minutos en un video de 3 minutos, una transcripción y una lista de verificación.',
+    tools: ['capcut', 'descript', 'elevenlabs', 'synthesia'],
+  },
+  {
+    id: 'datos',
+    label: 'Datos y cálculo',
+    icon: BarChart3,
+    description: 'Para explorar archivos, crear gráficos, detectar patrones y explicar procedimientos cuantitativos.',
+    example: 'Analiza respuestas anónimas del grupo y pide patrones con ejemplos; valida el cálculo antes de intervenir.',
+    tools: ['julius', 'polymer', 'wolfram', 'chatgpt'],
+  },
+  {
+    id: 'automatizar',
+    label: 'Automatización',
+    icon: Workflow,
+    description: 'Para conectar formularios, documentos, correo y hojas de cálculo en tareas repetitivas y reversibles.',
+    example: 'Clasifica preguntas frecuentes del curso y prepara borradores, pero conserva la revisión antes de enviar.',
+    tools: ['zapier-ai', 'make', 'n8n', 'bardeen'],
+  },
+  {
+    id: 'comunicar',
+    label: 'Idiomas y comunicación',
+    icon: Accessibility,
+    description: 'Para traducir, ajustar tono, mejorar claridad y ofrecer versiones accesibles sin perder significado.',
+    example: 'Crea una versión clara de una instrucción, tradúcela y luego compara ambas con el objetivo original.',
+    tools: ['deepl', 'google-translate', 'wordtune', 'otter'],
+  },
+]
+
 const PROFILES = [
   {
     id: 'escolar',
@@ -455,6 +716,16 @@ const SOURCES = [
     org: 'Departamento de Educación de Australia · revisión 2025',
     url: 'https://www.education.gov.au/schooling/resources/australian-framework-generative-artificial-intelligence-ai-schools',
   },
+  {
+    label: 'Digital Education Outlook 2026',
+    org: 'OCDE · usos efectivos de IA generativa en educación',
+    url: 'https://www.oecd.org/en/publications/2026/01/oecd-digital-education-outlook-2026_940e0dd8.html',
+  },
+  {
+    label: 'Orientación práctica sobre IA generativa',
+    org: 'Ministerio de Educación de Nueva Zelanda',
+    url: 'https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai',
+  },
 ]
 
 function ToolOrbit() {
@@ -491,7 +762,7 @@ function ToolOrbit() {
   )
 }
 
-function ToolPills({ ids }) {
+function ToolPills({ ids, dark = false }) {
   return (
     <div className="flex flex-wrap gap-1.5">
       {ids.map((id) => {
@@ -501,9 +772,9 @@ function ToolPills({ ids }) {
           <Link
             key={id}
             to={`/herramienta/${id}`}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white/[0.06] border border-white/10 text-[11px] font-semibold text-white/70 no-underline hover:border-white/25 hover:text-white transition-colors"
+            className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-[11px] font-semibold no-underline transition-colors ${dark ? 'bg-white/[0.06] border-white/10 text-white/70 hover:border-white/25 hover:text-white' : 'bg-text/[0.035] border-border text-text-light hover:border-primary/30 hover:text-primary'}`}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-300" />
+            <span className={`w-1.5 h-1.5 rounded-full ${dark ? 'bg-emerald-300' : 'bg-primary'}`} />
             {tool.name}
           </Link>
         )
@@ -535,6 +806,8 @@ export default function Docentes() {
   const [activeProfile, setActiveProfile] = useState(PROFILES[0].id)
   const [activeStage, setActiveStage] = useState(CYCLE[0].id)
   const [promptGroup, setPromptGroup] = useState('clase')
+  const [scenarioFilter, setScenarioFilter] = useState('todos')
+  const [toolkitGroup, setToolkitGroup] = useState(GENERAL_TOOLKIT[0].id)
   const [copiedId, setCopiedId] = useState(null)
 
   const profile = PROFILES.find((item) => item.id === activeProfile) || PROFILES[0]
@@ -542,6 +815,11 @@ export default function Docentes() {
   const ProfileIcon = profile.icon
   const StageIcon = stage.icon
   const visiblePrompts = PROMPTS.filter((prompt) => prompt.group === promptGroup)
+  const visibleScenarios = scenarioFilter === 'todos'
+    ? REPLICABLE_SCENARIOS
+    : REPLICABLE_SCENARIOS.filter((scenario) => scenario.group === scenarioFilter)
+  const toolkit = GENERAL_TOOLKIT.find((group) => group.id === toolkitGroup) || GENERAL_TOOLKIT[0]
+  const ToolkitIcon = toolkit.icon
 
   function copyPrompt(text, id) {
     if (typeof navigator !== 'undefined' && navigator.clipboard) {
@@ -822,7 +1100,7 @@ export default function Docentes() {
                   <p className="text-xs text-white/70 leading-relaxed">{example.replicate}</p>
                 </div>
                 <div className="mb-4">
-                  <ToolPills ids={example.tools} />
+                  <ToolPills ids={example.tools} dark />
                 </div>
                 <a href={example.source} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-white/40 hover:text-white/75 no-underline transition-colors">
                   Fuente oficial <ExternalLink className="w-3 h-3" />
@@ -927,6 +1205,71 @@ export default function Docentes() {
         </div>
       </section>
 
+      <section id="ejemplos" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-20">
+        <div className="text-center mb-9">
+          <div className="inline-flex items-center gap-2 bg-primary/8 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-primary/10">
+            <Lightbulb className="w-3 h-3" />
+            Laboratorio de casos
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-text tracking-tight mb-2">Doce ejemplos listos para replicar</h2>
+          <p className="text-text-light text-sm max-w-3xl mx-auto">
+            Cada caso parte de una fricción real, propone una secuencia breve, sugiere herramientas generales y termina con la evidencia que conviene observar.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-2 mb-8" role="tablist" aria-label="Filtrar ejemplos por nivel">
+          {SCENARIO_FILTERS.map((filter) => {
+            const isActive = scenarioFilter === filter.id
+            return (
+              <button
+                key={filter.id}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => setScenarioFilter(filter.id)}
+                className={`px-4 py-2.5 rounded-xl border text-sm font-semibold cursor-pointer transition-all ${isActive ? 'bg-text text-white border-text shadow-md' : 'bg-surface text-text-light border-border hover:border-primary/30 hover:text-text'}`}
+              >
+                {filter.label}
+              </button>
+            )
+          })}
+        </div>
+
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4" role="tabpanel">
+          {visibleScenarios.map((scenario) => {
+            const Icon = scenario.icon
+            return (
+              <article key={scenario.id} className="group bg-surface border border-border rounded-2xl p-5 hover:shadow-lg hover:-translate-y-0.5 hover:border-primary/25 transition-all flex flex-col">
+                <div className="flex items-start justify-between gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-xl bg-primary/8 flex items-center justify-center ring-4 ring-primary/5">
+                    <Icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="text-right">
+                    <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-accent">{scenario.area}</div>
+                    <div className="text-[10px] text-text-lighter mt-0.5">{scenario.level}</div>
+                  </div>
+                </div>
+                <h3 className="font-display font-bold text-text text-lg tracking-tight leading-tight mb-2">{scenario.title}</h3>
+                <p className="text-xs text-text-light leading-relaxed mb-4">{scenario.challenge}</p>
+                <ol className="space-y-2 list-none p-0 m-0 mb-5">
+                  {scenario.steps.map((step, index) => (
+                    <li key={step} className="flex items-start gap-2 text-xs text-text-light">
+                      <span className="w-5 h-5 rounded-md bg-text/5 text-text-lighter flex items-center justify-center text-[10px] font-bold shrink-0">{index + 1}</span>
+                      <span className="leading-relaxed">{step}</span>
+                    </li>
+                  ))}
+                </ol>
+                <div className="bg-accent/5 border border-accent/15 rounded-xl p-3 mb-4 mt-auto">
+                  <div className="text-[10px] font-bold text-accent uppercase tracking-[0.1em] mb-1">Evidencia a observar</div>
+                  <p className="text-xs text-text-light leading-relaxed">{scenario.evidence}</p>
+                </div>
+                <ToolPills ids={scenario.tools} />
+              </article>
+            )
+          })}
+        </div>
+      </section>
+
       <section id="evaluacion" className="relative overflow-hidden py-16" style={{ background: 'linear-gradient(135deg, #111827 0%, #1e1b4b 52%, #18252c 100%)' }}>
         <div className="absolute inset-0 opacity-[0.08] dot-pattern pointer-events-none" />
         <div className="relative max-w-6xl mx-auto px-4">
@@ -960,6 +1303,65 @@ export default function Docentes() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="buenas-practicas" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-20">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-accent/15">
+            <ShieldCheck className="w-3 h-3" />
+            Protocolo de uso responsable
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-text tracking-tight mb-2">Doce buenas prácticas que sí cambian el resultado</h2>
+          <p className="text-text-light text-sm max-w-3xl mx-auto">
+            La OCDE advierte que mejorar un producto con IA no implica necesariamente aprender. Estas prácticas mantienen el esfuerzo cognitivo, la responsabilidad docente y la trazabilidad.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-5">
+          {BEST_PRACTICES.map((phase, phaseIndex) => {
+            const Icon = phase.icon
+            return (
+              <article key={phase.phase} className="relative bg-surface border border-border rounded-3xl p-6 shadow-sm overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-warm to-accent opacity-60" />
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className={`w-11 h-11 ${phase.bg} rounded-xl flex items-center justify-center`}>
+                      <Icon className={`w-5 h-5 ${phase.color}`} />
+                    </div>
+                    <div>
+                      <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-text-lighter">Momento {phaseIndex + 1}</div>
+                      <h3 className="font-display font-bold text-text text-xl tracking-tight">{phase.phase}</h3>
+                    </div>
+                  </div>
+                  <span className="font-display font-extrabold text-text-lighter/20 text-4xl">0{phaseIndex + 1}</span>
+                </div>
+                <div className="space-y-4">
+                  {phase.items.map(([title, body], index) => (
+                    <div key={title} className="grid grid-cols-[24px_1fr] gap-3">
+                      <span className={`w-6 h-6 rounded-lg ${phase.bg} ${phase.color} flex items-center justify-center text-[10px] font-bold`}>{index + 1}</span>
+                      <div>
+                        <h4 className="font-display font-semibold text-text text-sm tracking-tight mb-1">{title}</h4>
+                        <p className="text-xs text-text-light leading-relaxed">{body}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </article>
+            )
+          })}
+        </div>
+
+        <div className="mt-5 grid md:grid-cols-[1fr_auto] gap-4 items-center bg-text/[0.025] border border-border rounded-2xl p-5">
+          <div className="flex items-start gap-3">
+            <Brain className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+            <p className="text-sm text-text-light leading-relaxed">
+              <span className="font-semibold text-text">Prueba de transferencia:</span> después de usar IA, cambia una condición y pide resolver o explicar sin asistencia. Si el aprendizaje no se transfiere, mejoró el producto, no necesariamente la comprensión.
+            </p>
+          </div>
+          <a href="https://www.oecd.org/en/publications/2026/01/oecd-digital-education-outlook-2026_940e0dd8.html" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary font-semibold text-xs no-underline hover:underline whitespace-nowrap">
+            Evidencia OCDE 2026 <ExternalLink className="w-3.5 h-3.5" />
+          </a>
         </div>
       </section>
 
@@ -1058,6 +1460,76 @@ export default function Docentes() {
               <p className="text-sm text-text-light leading-relaxed bg-text/[0.025] border border-border/70 rounded-xl p-4 flex-1">{prompt.body}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section id="caja-herramientas" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-20">
+        <div className="text-center mb-9">
+          <div className="inline-flex items-center gap-2 bg-warm/10 text-warm px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-warm/15">
+            <Workflow className="w-3 h-3" />
+            Más allá de las herramientas educativas
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-text tracking-tight mb-2">Caja general de herramientas</h2>
+          <p className="text-text-light text-sm max-w-3xl mx-auto">
+            Las mejores herramientas para enseñar no siempre llevan la etiqueta “educación”. Explora la suite completa según la tarea que quieres resolver.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-[280px_1fr] gap-5 items-start">
+          <div className="bg-surface border border-border rounded-2xl p-2" role="tablist" aria-label="Categorías de herramientas generales">
+            {GENERAL_TOOLKIT.map((group) => {
+              const Icon = group.icon
+              const isActive = toolkitGroup === group.id
+              return (
+                <button
+                  key={group.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  onClick={() => setToolkitGroup(group.id)}
+                  className={`w-full flex items-center gap-3 p-3 rounded-xl border-none text-left cursor-pointer transition-all ${isActive ? 'bg-text text-white shadow-md' : 'bg-transparent text-text-light hover:bg-text/4 hover:text-text'}`}
+                >
+                  <Icon className={`w-4.5 h-4.5 shrink-0 ${isActive ? 'text-amber-300' : 'text-warm'}`} />
+                  <span className="font-semibold text-sm">{group.label}</span>
+                  <ArrowRight className={`w-4 h-4 ml-auto transition-opacity ${isActive ? 'opacity-100' : 'opacity-0'}`} />
+                </button>
+              )
+            })}
+          </div>
+
+          <div className="relative overflow-hidden bg-surface border border-border rounded-3xl p-6 md:p-8 shadow-sm" role="tabpanel">
+            <div className="absolute -top-16 -right-16 w-56 h-56 bg-warm/8 rounded-full blur-3xl pointer-events-none" />
+            <div className="relative">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-4 mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-warm/10 flex items-center justify-center shrink-0 ring-4 ring-warm/5">
+                  <ToolkitIcon className="w-7 h-7 text-warm" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-warm mb-1">Ruta de herramientas</div>
+                  <h3 className="text-2xl font-bold text-text tracking-tight mb-2">{toolkit.label}</h3>
+                  <p className="text-sm text-text-light leading-relaxed max-w-2xl">{toolkit.description}</p>
+                </div>
+              </div>
+
+              <div className="bg-warm/5 border border-warm/15 rounded-2xl p-4 mb-6 flex items-start gap-3">
+                <Lightbulb className="w-5 h-5 text-warm shrink-0 mt-0.5" />
+                <div>
+                  <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-warm mb-1">Ejemplo docente</div>
+                  <p className="text-sm text-text-light leading-relaxed">{toolkit.example}</p>
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-3">
+                {toolkit.tools.map((id) => <ToolMini key={id} id={id} />)}
+              </div>
+              <div className="mt-6 pt-5 border-t border-border flex flex-wrap gap-3 justify-between items-center">
+                <p className="text-xs text-text-lighter">Compara precio, dificultad, fortalezas y alternativas antes de elegir.</p>
+                <Link to="/explorar" className="inline-flex items-center gap-2 text-primary font-semibold text-sm no-underline hover:underline">
+                  Explorar las más de 100 herramientas <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
