@@ -39,6 +39,7 @@ import {
 import { getToolById } from '../utils/recommender'
 import { ToolFavicon } from '../components/ToolCard'
 import TeacherStudio from '../components/TeacherStudio'
+import SocraticAssessment from '../components/SocraticAssessment'
 
 const SUITE_ORBIT = [
   { label: 'Conversar', icon: Bot, to: '/herramienta/chatgpt', position: 'top-0 left-1/2 -translate-x-1/2' },
@@ -907,6 +908,7 @@ const CHAPTER_INDEX = [
   { id: 'caja-herramientas', label: 'Herramientas' },
   { id: 'piloto', label: 'Primera semana' },
   { id: 'reflexiones', label: 'Reflexiones' },
+  { id: 'socratico', label: 'Evaluación socrática' },
 ]
 
 const BOOK_REFLECTIONS = [
@@ -2263,6 +2265,8 @@ export default function Docentes() {
           ))}
         </div>
       </section>
+
+      <SocraticAssessment copiedId={copiedId} onCopy={copyPrompt} />
 
       <section className="max-w-5xl mx-auto px-4 py-14">
         <div className="relative overflow-hidden bg-surface rounded-3xl border border-border p-8 md:p-12 text-center shadow-sm">
