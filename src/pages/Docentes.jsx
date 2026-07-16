@@ -729,13 +729,167 @@ const SOURCES = [
   },
 ]
 
+const AI_DESIGN_LEVELS = [
+  {
+    id: 'basica-media',
+    label: 'Básica y media',
+    audience: 'un grupo de educación básica o media',
+    example: 'la fotosíntesis en grado sexto',
+    care: 'Usa lenguaje apropiado para la edad, evita datos de menores y ofrece apoyos visuales o ejemplos cotidianos.',
+  },
+  {
+    id: 'tecnica',
+    label: 'Técnica y tecnológica',
+    audience: 'un grupo de formación técnica o tecnológica',
+    example: 'el diagnóstico seguro de una falla en un sistema eléctrico',
+    care: 'Prioriza situaciones de desempeño, protocolos de seguridad y decisiones justificadas frente a casos reales.',
+  },
+  {
+    id: 'superior',
+    label: 'Superior y posgrado',
+    audience: 'un curso de educación superior o posgrado',
+    example: 'el análisis de alternativas para una política pública local',
+    care: 'Exige contraste de fuentes, precisión disciplinar, argumentación y declaración transparente del uso de IA.',
+  },
+  {
+    id: 'adultos',
+    label: 'Adultos e institucional',
+    audience: 'un proceso de formación de personas adultas o equipos institucionales',
+    example: 'la protección de datos personales en la atención ciudadana',
+    care: 'Conecta la actividad con decisiones laborales, saberes previos y un producto que pueda transferirse al trabajo.',
+  },
+]
+
+const AI_DESIGN_GOALS = [
+  {
+    id: 'planear',
+    label: 'Planear una clase',
+    role: 'co-diseñador crítico',
+    instruction: 'construir una secuencia breve que alinee objetivo, actividad y evidencia, y que incluya una alternativa sin IA',
+    steps: [
+      'Escribe un objetivo observable y una evidencia concreta antes de abrir la herramienta.',
+      'Pide dos secuencias alternativas y cuestiona qué supuesto pedagógico sostiene cada una.',
+      'Elige, adapta y deja por escrito qué cambiaste y por qué.',
+    ],
+    teacher: 'Define el objetivo, conoce el grupo y decide la secuencia final.',
+    ai: 'Propone alternativas, anticipa dificultades y ayuda a variar formatos.',
+    evidence: 'Una tabla corta que conecte objetivo, actividad, evidencia y ajuste docente.',
+    tools: ['chatgpt', 'claude', 'notebooklm'],
+  },
+  {
+    id: 'explicar',
+    label: 'Explicar mejor',
+    role: 'tutor socrático',
+    instruction: 'crear una explicación por capas, con una analogía, un contraejemplo y preguntas que comprueben comprensión sin revelar de inmediato la respuesta',
+    steps: [
+      'Identifica la idea difícil y el error frecuente que quieres hacer visible.',
+      'Genera una explicación, una analogía y un contraejemplo; verifica cada afirmación.',
+      'Cierra con una pregunta de transferencia que cambie el contexto.',
+    ],
+    teacher: 'Selecciona la idea esencial, valida la precisión y observa las respuestas del grupo.',
+    ai: 'Ofrece representaciones distintas y formula preguntas graduadas.',
+    evidence: 'Una explicación del estudiante con sus propias palabras y una aplicación en un caso nuevo.',
+    tools: ['chatgpt', 'claude', 'canva'],
+  },
+  {
+    id: 'practicar',
+    label: 'Practicar con casos',
+    role: 'simulador de situaciones',
+    instruction: 'diseñar tres casos progresivos, entregar pistas solo cuando se soliciten y registrar las decisiones que debe justificar el estudiante',
+    steps: [
+      'Define qué decisión auténtica debe practicar el estudiante.',
+      'Pide casos de dificultad creciente y revisa que no introduzcan riesgos o sesgos.',
+      'Haz que el estudiante compare su primer intento con el último y explique el cambio.',
+    ],
+    teacher: 'Fija el estándar, acompaña la práctica y decide cuándo intervenir.',
+    ai: 'Simula variaciones, responde según el caso y entrega pistas graduadas.',
+    evidence: 'Bitácora de intentos, decisiones, pistas usadas y mejora entre versiones.',
+    tools: ['chatgpt', 'claude', 'quizlet'],
+  },
+  {
+    id: 'evaluar',
+    label: 'Evaluar comprensión',
+    role: 'crítico de evidencias',
+    instruction: 'proponer una tarea auténtica difícil de resolver por copia, una rúbrica analítica y una breve defensa oral o práctica del proceso',
+    steps: [
+      'Decide qué comprensión debe quedar visible y qué uso de IA será permitido.',
+      'Diseña una evidencia situada: decisión, producto, bitácora y defensa.',
+      'Usa la IA para revisar la rúbrica, pero conserva la valoración y la conversación final.',
+    ],
+    teacher: 'Define criterios, interpreta evidencias y toma la decisión evaluativa.',
+    ai: 'Detecta ambigüedades, ensaya respuestas posibles y ayuda a revisar la rúbrica.',
+    evidence: 'Producto, huellas del proceso, declaración de uso de IA y defensa de decisiones.',
+    tools: ['claude', 'chatgpt', 'notebooklm'],
+  },
+  {
+    id: 'retroalimentar',
+    label: 'Retroalimentar',
+    role: 'lector de borradores',
+    instruction: 'organizar observaciones según una rúbrica, convertirlas en preguntas de mejora y evitar reescribir el trabajo por el estudiante',
+    steps: [
+      'Anonimiza el fragmento o trabaja con un ejemplo ficticio autorizado.',
+      'Pide observaciones vinculadas a criterios y verifica tono, precisión y equidad.',
+      'Entrega pocas prioridades y solicita una nueva versión acompañada de una nota de cambios.',
+    ],
+    teacher: 'Comprende la intención del estudiante, prioriza y firma la retroalimentación.',
+    ai: 'Agrupa patrones y bosqueja preguntas o sugerencias vinculadas a criterios.',
+    evidence: 'Versión revisada y explicación del estudiante sobre qué cambió, qué mantuvo y por qué.',
+    tools: ['claude', 'chatgpt', 'grammarly'],
+  },
+]
+
+const CRITERION_CASES = [
+  {
+    title: 'Un trabajo real necesita retroalimentación',
+    context: 'Quieres pedirle a una IA que sugiera comentarios sobre el ensayo de una estudiante. El archivo incluye nombre, curso y experiencias personales.',
+    question: '¿Cuál es el mejor primer paso?',
+    options: [
+      { label: 'Subirlo completo porque el uso es educativo.', correct: false, feedback: 'El propósito educativo no elimina el deber de proteger datos personales ni las reglas institucionales.' },
+      { label: 'Anonimizar un fragmento, revisar la política institucional y usar solo lo necesario.', correct: true, feedback: 'Reduce la exposición, conserva el control docente y aplica el principio de minimización de datos.' },
+      { label: 'Pedirle al estudiante que cree una cuenta personal en la herramienta.', correct: false, feedback: 'Trasladar el registro al estudiante no resuelve edad mínima, consentimiento, tratamiento de datos ni responsabilidad institucional.' },
+    ],
+  },
+  {
+    title: 'La IA propone una calificación',
+    context: 'Un modelo aplica tu rúbrica a 35 respuestas y entrega notas con comentarios convincentes. Algunas parecen correctas a primera vista.',
+    question: '¿Cómo usar ese resultado?',
+    options: [
+      { label: 'Publicar las notas y revisar solo si alguien reclama.', correct: false, feedback: 'La calificación es una decisión de alto impacto. La fluidez del comentario no garantiza una interpretación justa ni consistente.' },
+      { label: 'Promediar la nota de la IA con la tuya.', correct: false, feedback: 'Un promedio no corrige sesgos o errores; solo los mezcla con el juicio docente.' },
+      { label: 'Usarlo para detectar patrones y preguntas de revisión, mientras tú valoras la evidencia.', correct: true, feedback: 'La IA puede apoyar la lectura, pero el docente conserva la interpretación, la decisión y la conversación con el estudiante.' },
+    ],
+  },
+  {
+    title: 'Una fuente demasiado perfecta',
+    context: 'La IA entrega una cita académica que respalda exactamente la explicación que buscabas, pero el enlace no abre y no encuentras el artículo.',
+    question: '¿Qué haces antes de usarla en clase?',
+    options: [
+      { label: 'Mantenerla porque título, revista y autores parecen plausibles.', correct: false, feedback: 'Una referencia verosímil puede ser inventada. La forma académica no reemplaza la verificación.' },
+      { label: 'Buscar la fuente en un catálogo confiable y retirarla si no puede verificarse.', correct: true, feedback: 'La trazabilidad es parte del contenido: conserva solo fuentes que tú y tus estudiantes puedan localizar y examinar.' },
+      { label: 'Pedirle al mismo modelo que confirme si la cita es real.', correct: false, feedback: 'El modelo puede repetir el error con más seguridad. Verifica fuera de la conversación y, cuando sea posible, en la fuente primaria.' },
+    ],
+  },
+  {
+    title: 'El producto mejoró, ¿y el aprendizaje?',
+    context: 'Después de usar IA, los informes del grupo son más extensos y están mejor redactados, pero no sabes si aumentó la comprensión.',
+    question: '¿Qué evidencia conviene recoger?',
+    options: [
+      { label: 'La longitud y corrección del informe final.', correct: false, feedback: 'Mide calidad del producto, pero no permite distinguir asistencia técnica de comprensión transferible.' },
+      { label: 'El número de prompts escritos por cada estudiante.', correct: false, feedback: 'Contar interacciones no muestra por sí solo la calidad del razonamiento ni lo aprendido.' },
+      { label: 'Una explicación breve sin asistencia y la aplicación del concepto en una situación nueva.', correct: true, feedback: 'La explicación y la transferencia ayudan a observar qué puede hacer el estudiante más allá del producto asistido.' },
+    ],
+  },
+]
+
 const CHAPTER_INDEX = [
   { id: 'ruta', label: 'Tu ruta' },
   { id: 'mundo', label: 'Modelos del mundo' },
   { id: 'ciclo', label: 'Ciclo docente' },
+  { id: 'laboratorio', label: 'Diseña con IA' },
   { id: 'ejemplos', label: 'Ejemplos' },
   { id: 'evaluacion', label: 'Evaluación' },
   { id: 'buenas-practicas', label: 'Buenas prácticas' },
+  { id: 'criterio', label: 'Practica criterio' },
   { id: 'datos', label: 'Datos y privacidad' },
   { id: 'prompts', label: 'Prompts' },
   { id: 'caja-herramientas', label: 'Herramientas' },
@@ -947,6 +1101,11 @@ export default function Docentes() {
   const [promptGroup, setPromptGroup] = useState('clase')
   const [scenarioFilter, setScenarioFilter] = useState('todos')
   const [toolkitGroup, setToolkitGroup] = useState(GENERAL_TOOLKIT[0].id)
+  const [labLevel, setLabLevel] = useState(AI_DESIGN_LEVELS[0].id)
+  const [labGoal, setLabGoal] = useState(AI_DESIGN_GOALS[0].id)
+  const [labTopic, setLabTopic] = useState(AI_DESIGN_LEVELS[0].example)
+  const [criterionIndex, setCriterionIndex] = useState(0)
+  const [criterionChoice, setCriterionChoice] = useState(null)
   const [copiedId, setCopiedId] = useState(null)
 
   const profile = PROFILES.find((item) => item.id === activeProfile) || PROFILES[0]
@@ -959,6 +1118,11 @@ export default function Docentes() {
     : REPLICABLE_SCENARIOS.filter((scenario) => scenario.group === scenarioFilter)
   const toolkit = GENERAL_TOOLKIT.find((group) => group.id === toolkitGroup) || GENERAL_TOOLKIT[0]
   const ToolkitIcon = toolkit.icon
+  const designLevel = AI_DESIGN_LEVELS.find((item) => item.id === labLevel) || AI_DESIGN_LEVELS[0]
+  const designGoal = AI_DESIGN_GOALS.find((item) => item.id === labGoal) || AI_DESIGN_GOALS[0]
+  const criterionCase = CRITERION_CASES[criterionIndex]
+  const criterionResult = criterionChoice === null ? null : criterionCase.options[criterionChoice]
+  const designPrompt = `Actúa como ${designGoal.role}, no como reemplazo del docente.\n\nEstoy trabajando con ${designLevel.audience}. Tema o reto: ${labTopic || '[escribe aquí el tema]'}. Objetivo de aprendizaje: [escríbelo con un verbo observable]. Contexto del grupo: [saberes previos, tiempo, recursos y apoyos necesarios].\n\nAyúdame a ${designGoal.instruction}.\n\nAntes de proponer, hazme hasta 3 preguntas si falta información. Después entrega:\n1. Una secuencia aplicable de máximo 30 minutos.\n2. Qué hace el docente, qué hace el estudiante y qué puede apoyar la IA.\n3. La evidencia observable de aprendizaje y una pregunta de transferencia.\n4. Dos riesgos o errores posibles y cómo mitigarlos.\n5. Una alternativa equivalente que pueda realizarse sin IA.\n\nCuidado para este nivel: ${designLevel.care}\nNo inventes fuentes. No califiques ni tomes decisiones por mí. Señala qué debo verificar antes de usar tu propuesta.`
 
   function copyPrompt(text, id) {
     if (typeof navigator !== 'undefined' && navigator.clipboard) {
@@ -966,6 +1130,20 @@ export default function Docentes() {
     }
     setCopiedId(id)
     window.setTimeout(() => setCopiedId(null), 1600)
+  }
+
+  function chooseDesignLevel(level) {
+    setLabLevel(level.id)
+    setLabTopic(level.example)
+  }
+
+  function moveCriterion() {
+    if (criterionIndex === CRITERION_CASES.length - 1) {
+      setCriterionIndex(0)
+    } else {
+      setCriterionIndex((current) => current + 1)
+    }
+    setCriterionChoice(null)
   }
 
   return (
@@ -1367,6 +1545,156 @@ export default function Docentes() {
         </div>
       </section>
 
+      <section id="laboratorio" className="relative overflow-hidden bg-text/[0.025] border-y border-border py-16 scroll-mt-28">
+        <div className="absolute -top-24 -right-24 w-72 h-72 bg-primary/8 rounded-full blur-3xl pointer-events-none" />
+        <div className="relative max-w-6xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-primary/8 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-primary/10">
+              <FlaskConical className="w-3 h-3" />
+              Aprende haciendo
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-text tracking-tight mb-2">Diseña una experiencia de aprendizaje con IA</h2>
+            <p className="text-text-light text-sm max-w-3xl mx-auto">Elige tu nivel y propósito. El laboratorio convierte esa decisión en una guía de trabajo, un reparto claro de responsabilidades y un prompt que puedes adaptar.</p>
+          </div>
+
+          <div className="grid lg:grid-cols-[0.82fr_1.18fr] gap-5 items-start">
+            <div className="bg-surface border border-border rounded-3xl p-5 md:p-6 shadow-sm">
+              <div className="mb-6">
+                <div className="flex items-center justify-between gap-3 mb-3">
+                  <h3 className="font-display font-bold text-text tracking-tight">1. ¿Con quién trabajas?</h3>
+                  <span className="text-[10px] font-bold text-text-lighter uppercase tracking-[0.12em]">Nivel</span>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-2">
+                  {AI_DESIGN_LEVELS.map((level) => {
+                    const isActive = level.id === labLevel
+                    return (
+                      <button
+                        key={level.id}
+                        type="button"
+                        aria-pressed={isActive}
+                        onClick={() => chooseDesignLevel(level)}
+                        className={`text-left px-3.5 py-3 rounded-xl border text-xs font-semibold cursor-pointer transition-all ${isActive ? 'bg-text text-white border-text shadow-sm' : 'bg-surface text-text-light border-border hover:border-primary/30 hover:text-text'}`}
+                      >
+                        {level.label}
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <div className="flex items-center justify-between gap-3 mb-3">
+                  <h3 className="font-display font-bold text-text tracking-tight">2. ¿Qué quieres lograr?</h3>
+                  <span className="text-[10px] font-bold text-text-lighter uppercase tracking-[0.12em]">Propósito</span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {AI_DESIGN_GOALS.map((goal) => {
+                    const isActive = goal.id === labGoal
+                    return (
+                      <button
+                        key={goal.id}
+                        type="button"
+                        aria-pressed={isActive}
+                        onClick={() => setLabGoal(goal.id)}
+                        className={`px-3.5 py-2.5 rounded-xl border text-xs font-semibold cursor-pointer transition-all ${isActive ? 'bg-primary text-white border-primary shadow-sm' : 'bg-surface text-text-light border-border hover:border-primary/30 hover:text-text'}`}
+                      >
+                        {goal.label}
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+
+              <label htmlFor="lab-topic" className="block font-display font-bold text-text tracking-tight mb-2">3. Tema, habilidad o reto</label>
+              <input
+                id="lab-topic"
+                type="text"
+                value={labTopic}
+                onChange={(event) => setLabTopic(event.target.value)}
+                className="w-full bg-surface border border-border rounded-xl px-4 py-3 text-sm text-text outline-none focus:border-primary focus:ring-2 focus:ring-primary/10"
+                placeholder="Ej.: argumentar con evidencia"
+              />
+              <p className="text-[11px] text-text-lighter mt-2">Puedes reemplazar el ejemplo sugerido por un tema de tu próxima clase.</p>
+
+              <div className="mt-6 pt-5 border-t border-border">
+                <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-accent mb-2">Rol recomendado para la IA</div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                    <Bot className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <p className="font-display font-bold text-text capitalize">{designGoal.role}</p>
+                    <p className="text-xs text-text-light leading-relaxed mt-1">La IA asume una función delimitada; tú conservas el propósito, la lectura del grupo y la decisión final.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-surface border border-border rounded-3xl overflow-hidden shadow-sm" aria-live="polite">
+              <div className="p-5 md:p-7 border-b border-border">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+                  <div>
+                    <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-primary mb-1">Tu microguía aplicada</div>
+                    <h3 className="font-display font-bold text-text text-xl md:text-2xl tracking-tight">{designGoal.label}: {labTopic || 'tu próximo tema'}</h3>
+                    <p className="text-xs text-text-lighter mt-1">{designLevel.label} · IA como {designGoal.role}</p>
+                  </div>
+                  <ToolPills ids={designGoal.tools} />
+                </div>
+
+                <ol className="grid md:grid-cols-3 gap-3 list-none p-0 m-0">
+                  {designGoal.steps.map((step, index) => (
+                    <li key={step} className="bg-text/[0.025] border border-border rounded-2xl p-4">
+                      <span className="w-7 h-7 rounded-lg bg-primary/8 text-primary flex items-center justify-center text-xs font-bold mb-3">{index + 1}</span>
+                      <p className="text-xs text-text-light leading-relaxed">{step}</p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              <div className="grid md:grid-cols-3 border-b border-border">
+                {[
+                  { label: 'Conserva el docente', body: designGoal.teacher, icon: GraduationCap, color: 'text-secondary', bg: 'bg-secondary/8' },
+                  { label: 'Apoya la IA', body: designGoal.ai, icon: Sparkles, color: 'text-primary', bg: 'bg-primary/8' },
+                  { label: 'Evidencia a recoger', body: designGoal.evidence, icon: ClipboardCheck, color: 'text-accent', bg: 'bg-accent/8' },
+                ].map((item, index) => {
+                  const Icon = item.icon
+                  return (
+                    <div key={item.label} className={`p-5 ${index < 2 ? 'border-b md:border-b-0 md:border-r border-border' : ''}`}>
+                      <div className={`w-9 h-9 ${item.bg} rounded-xl flex items-center justify-center mb-3`}>
+                        <Icon className={`w-4 h-4 ${item.color}`} />
+                      </div>
+                      <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-text-lighter mb-1.5">{item.label}</div>
+                      <p className="text-xs text-text-light leading-relaxed">{item.body}</p>
+                    </div>
+                  )
+                })}
+              </div>
+
+              <div className="p-5 md:p-7 bg-text/[0.02]">
+                <div className="flex items-center justify-between gap-3 mb-3">
+                  <div>
+                    <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-warm">Prompt generado</div>
+                    <p className="text-xs text-text-lighter mt-1">Completa los campos entre corchetes antes de enviarlo.</p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => copyPrompt(designPrompt, 'design-lab')}
+                    className="inline-flex items-center gap-2 bg-surface text-text border border-border px-3 py-2 rounded-lg font-semibold text-xs cursor-pointer hover:border-primary/40 hover:text-primary transition-colors shrink-0"
+                  >
+                    {copiedId === 'design-lab' ? <Check className="w-3.5 h-3.5 text-accent" /> : <Copy className="w-3.5 h-3.5" />}
+                    {copiedId === 'design-lab' ? 'Copiado' : 'Copiar'}
+                  </button>
+                </div>
+                <pre className="whitespace-pre-wrap font-sans text-xs text-text-light leading-relaxed bg-surface border border-border rounded-2xl p-4 max-h-72 overflow-auto">{designPrompt}</pre>
+                <div className="mt-3">
+                  <TryLinks text={designPrompt} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="ejemplos" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-28">
         <div className="text-center mb-9">
           <div className="inline-flex items-center gap-2 bg-primary/8 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-primary/10">
@@ -1524,6 +1852,87 @@ export default function Docentes() {
           <a href="https://www.oecd.org/en/publications/2026/01/oecd-digital-education-outlook-2026_940e0dd8.html" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary font-semibold text-xs no-underline hover:underline whitespace-nowrap">
             Evidencia OCDE 2026 <ExternalLink className="w-3.5 h-3.5" />
           </a>
+        </div>
+      </section>
+
+      <section id="criterio" className="relative overflow-hidden py-16 scroll-mt-28" style={{ background: 'linear-gradient(135deg, #111827 0%, #1e1b4b 55%, #18252c 100%)' }}>
+        <div className="absolute inset-0 opacity-[0.08] dot-pattern pointer-events-none" />
+        <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-accent/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="relative max-w-5xl mx-auto px-4">
+          <div className="text-center mb-9">
+            <div className="inline-flex items-center gap-2 bg-white/10 text-white/90 px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-white/15">
+              <Brain className="w-3 h-3" />
+              Gimnasio de criterio docente
+            </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-3">Decide antes de automatizar</h2>
+            <p className="text-white/60 text-sm max-w-2xl mx-auto">Cuatro situaciones frecuentes para practicar privacidad, evaluación, verificación y evidencia de aprendizaje. No busca darte una nota: busca hacer visible el razonamiento.</p>
+          </div>
+
+          <div className="bg-white/[0.055] backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden shadow-2xl" aria-live="polite">
+            <div className="p-5 md:p-8 border-b border-white/10">
+              <div className="flex items-center justify-between gap-4 mb-6">
+                <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-amber-300">Caso {criterionIndex + 1} de {CRITERION_CASES.length}</span>
+                <div className="flex gap-1.5" aria-label={`Progreso: caso ${criterionIndex + 1} de ${CRITERION_CASES.length}`}>
+                  {CRITERION_CASES.map((item, index) => (
+                    <span key={item.title} className={`h-1.5 rounded-full transition-all ${index === criterionIndex ? 'w-8 bg-amber-300' : index < criterionIndex ? 'w-4 bg-emerald-300/60' : 'w-4 bg-white/15'}`} />
+                  ))}
+                </div>
+              </div>
+              <h3 className="font-display font-bold text-white text-xl md:text-2xl tracking-tight mb-3">{criterionCase.title}</h3>
+              <p className="text-white/60 text-sm leading-relaxed mb-5">{criterionCase.context}</p>
+              <p className="font-display font-semibold text-white">{criterionCase.question}</p>
+            </div>
+
+            <div className="p-5 md:p-8 space-y-3">
+              {criterionCase.options.map((option, index) => {
+                const isSelected = criterionChoice === index
+                const hasAnswered = criterionChoice !== null
+                const answerStyle = !hasAnswered
+                  ? 'border-white/10 bg-white/[0.035] hover:bg-white/[0.07] hover:border-white/25 text-white/80'
+                  : option.correct
+                    ? 'border-emerald-300/35 bg-emerald-300/10 text-white'
+                    : isSelected
+                      ? 'border-rose-300/35 bg-rose-300/10 text-white'
+                      : 'border-white/5 bg-white/[0.02] text-white/35'
+                return (
+                  <button
+                    key={option.label}
+                    type="button"
+                    disabled={hasAnswered}
+                    onClick={() => setCriterionChoice(index)}
+                    className={`w-full flex items-start gap-3 text-left border rounded-2xl p-4 text-sm leading-relaxed transition-all ${answerStyle} ${hasAnswered ? 'cursor-default' : 'cursor-pointer'}`}
+                  >
+                    <span className={`w-7 h-7 rounded-lg border flex items-center justify-center text-xs font-bold shrink-0 ${isSelected ? 'border-current' : 'border-white/15'}`}>
+                      {hasAnswered && option.correct ? <Check className="w-4 h-4 text-emerald-300" /> : hasAnswered && isSelected ? <XCircle className="w-4 h-4 text-rose-300" /> : String.fromCharCode(65 + index)}
+                    </span>
+                    <span>{option.label}</span>
+                  </button>
+                )
+              })}
+
+              {criterionResult && (
+                <div className={`mt-5 rounded-2xl border p-5 ${criterionResult.correct ? 'bg-emerald-300/10 border-emerald-300/25' : 'bg-amber-300/10 border-amber-300/25'}`}>
+                  <div className="flex items-start gap-3">
+                    {criterionResult.correct ? <CheckCircle2 className="w-5 h-5 text-emerald-300 shrink-0 mt-0.5" /> : <Lightbulb className="w-5 h-5 text-amber-300 shrink-0 mt-0.5" />}
+                    <div>
+                      <div className="font-display font-bold text-white text-sm mb-1">{criterionResult.correct ? 'Buen criterio' : 'Revisa el supuesto'}</div>
+                      <p className="text-white/65 text-xs leading-relaxed">{criterionResult.feedback}</p>
+                    </div>
+                  </div>
+                  <div className="flex justify-end mt-4">
+                    <button
+                      type="button"
+                      onClick={moveCriterion}
+                      className="inline-flex items-center gap-2 bg-white text-text px-4 py-2.5 rounded-xl font-semibold text-xs cursor-pointer hover:bg-white/90 transition-colors"
+                    >
+                      {criterionIndex === CRITERION_CASES.length - 1 ? 'Volver a practicar' : 'Siguiente caso'}
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </section>
 
