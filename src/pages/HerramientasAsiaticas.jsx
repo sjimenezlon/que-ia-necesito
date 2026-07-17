@@ -12,10 +12,117 @@ import {
    ══════════════════════════════════════════════════════════════════ */
 
 const METRICS = [
-  { v: '≈61%', l: 'de los tokens en OpenRouter', s: 'son de modelos chinos abiertos' },
-  { v: '$0,14', l: 'por 1M de tokens (DeepSeek)', s: '10–30× más barato que Occidente' },
-  { v: '4 de 5', l: 'modelos más usados del mundo', s: 'son chinos (may-2026)' },
-  { v: '7 países', l: 'con modelos propios', s: 'CN · KR · JP · IN · SG · ID · VN' },
+  { v: '1M', l: 'tokens de contexto', s: 'GLM-5.2 · MiniMax M3' },
+  { v: '300', l: 'subagentes coordinados', s: 'Kimi K2.6 Agent Swarm' },
+  { v: '15 s', l: 'audio y video multitrack', s: 'Seedance 2.0' },
+  { v: 'Jul 6', l: 'lanzamiento oficial de Hy3', s: 'Tencent · 2026' },
+]
+
+const LATEST_RELEASES = [
+  {
+    date: '9 jul 2026',
+    name: 'Qwen Code 0.19.8',
+    company: 'Alibaba · China',
+    icon: Code2,
+    color: 'text-accent',
+    bg: 'bg-accent/8',
+    tag: 'Producto abierto',
+    title: 'Fallback automático y subagentes anidados',
+    body: 'La actualización 0.19.6–0.19.8 permite cambiar de modelo cuando hay saturación, encadenar subagentes hasta cinco niveles y administrar sesiones paralelas desde Web Shell.',
+    use: 'Para equipos de desarrollo que quieren flujos agénticos observables y resistentes a fallos.',
+    url: 'https://qwenlm.github.io/qwen-code-docs/en/blog/weekly-update-2026-07-09/',
+  },
+  {
+    date: '6 jul 2026',
+    name: 'Hy3',
+    company: 'Tencent · China',
+    icon: Brain,
+    color: 'text-primary',
+    bg: 'bg-primary/8',
+    tag: 'Modelo oficial',
+    title: 'Tencent pasa del preview a producción',
+    body: 'Hy3 combina pensamiento rápido y lento en una arquitectura MoE de 295B parámetros totales y 21B activos, con contexto de hasta 256K e integración en Yuanbao, CodeBuddy y WorkBuddy.',
+    use: 'Para razonamiento, documentos, datos, búsqueda y agentes dentro del ecosistema Tencent.',
+    url: 'https://www.tencent.com/tencent-hunyuan-officially-releases-hy3-advancing-agent-capabilities-and-deeper-product-integration/',
+  },
+  {
+    date: '16 jun 2026',
+    name: 'GLM-5.2',
+    company: 'Z.ai · China',
+    icon: Code2,
+    color: 'text-secondary',
+    bg: 'bg-secondary/8',
+    tag: 'MIT · pesos abiertos',
+    title: 'Un millón de tokens para trabajo prolongado',
+    body: 'El nuevo buque insignia de Z.ai extiende el contexto a 1M, mejora programación de larga duración e introduce niveles de esfuerzo para equilibrar capacidad, latencia y costo.',
+    use: 'Para repositorios grandes, investigación automatizada, depuración compleja y agentes de varias horas.',
+    url: 'https://z.ai/blog/glm-5.2',
+  },
+  {
+    date: '1 jun 2026',
+    name: 'MiniMax M3',
+    company: 'MiniMax · China',
+    icon: Bot,
+    color: 'text-warm',
+    bg: 'bg-warm/8',
+    tag: 'Multimodal · 1M',
+    title: 'Código, agentes y visión en un solo modelo',
+    body: 'M3 combina contexto de hasta 1M tokens, comprensión nativa de imágenes y video, uso de computador y trabajo agéntico. Está disponible por API y en MiniMax Code.',
+    use: 'Para analizar documentos o video extensos y ejecutar flujos de programación con herramientas.',
+    url: 'https://www.minimax.io/blog/minimax-m3',
+  },
+  {
+    date: '24 abr 2026',
+    name: 'DeepSeek V4',
+    company: 'DeepSeek · China',
+    icon: Brain,
+    color: 'text-primary',
+    bg: 'bg-primary/8',
+    tag: 'Pro + Flash',
+    title: 'Nueva generación y cambio obligatorio de API',
+    body: 'V4-Pro y V4-Flash ya operan en la API. Los alias históricos deepseek-chat y deepseek-reasoner se retiran el 24 de julio de 2026 y deben migrarse a los nuevos nombres.',
+    use: 'Para equipos que ya usan DeepSeek: actualizar configuración y probar Pro frente a Flash antes del corte.',
+    url: 'https://api-docs.deepseek.com/updates/',
+  },
+  {
+    date: '20 abr 2026',
+    name: 'Kimi K2.6',
+    company: 'Moonshot AI · China',
+    icon: Bot,
+    color: 'text-accent',
+    bg: 'bg-accent/8',
+    tag: 'Código abierto',
+    title: 'Ejecución larga y enjambres más grandes',
+    body: 'K2.6 refuerza programación de larga duración y orquestación. Su Agent Swarm escala hasta 300 subagentes y 4.000 pasos coordinados, con acceso en Kimi, API y Kimi Code.',
+    use: 'Para investigación paralela, análisis masivo de archivos y proyectos de código de varias horas.',
+    url: 'https://www.kimi.com/blog/kimi-k2-6',
+  },
+  {
+    date: '13 feb 2026',
+    name: 'Seedream 5.0 Lite',
+    company: 'ByteDance Seed · China',
+    icon: ImageIcon,
+    color: 'text-secondary',
+    bg: 'bg-secondary/8',
+    tag: 'Imagen con razonamiento',
+    title: 'La imagen deja de limitarse a seguir instrucciones',
+    body: 'La nueva versión prioriza comprensión visual, razonamiento, edición precisa, consistencia y búsqueda en tiempo real para piezas que dependen de información reciente.',
+    use: 'Para infografías, edición por referencias, transferencia de estilo y contenido visual actualizado.',
+    url: 'https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite',
+  },
+  {
+    date: '12 feb 2026',
+    name: 'Seedance 2.0',
+    company: 'ByteDance Seed · China',
+    icon: Video,
+    color: 'text-warm',
+    bg: 'bg-warm/8',
+    tag: 'Audio + video',
+    title: 'Referencias multimodales y clips de 15 segundos',
+    body: 'Acepta texto, hasta nueve imágenes, tres videos y tres audios como referencias; genera hasta 15 segundos con varios planos y audio estéreo sincronizado.',
+    use: 'Para publicidad, storyboards, escenas con movimiento complejo y control por materiales de referencia.',
+    url: 'https://seed.bytedance.com/en/blog/seedance-2-0-official-launch',
+  },
 ]
 
 const FORCES = [
@@ -34,8 +141,8 @@ const FORCES = [
   {
     icon: Video,
     kicker: '03',
-    title: 'China domina el video generativo',
-    body: 'En los rankings ciegos de video de mediados de 2026, Seedance, Vidu, Kling y Wan ocupan los puestos que antes eran de Sora. Kling llegó al #1 en la App Store de decenas de mercados. El estado del arte en video e imagen ya se marca, en buena parte, desde Kuaishou, ByteDance y MiniMax.',
+    title: 'El video ya no tiene un solo centro',
+    body: 'Seedance, Vidu, Kling, Wan y Hailuo convirtieron a China en uno de los centros de la competencia global en video. Seedance 2.0, por ejemplo, ya integra referencias de texto, imagen, video y audio en una sola generación. El avance se mide ahora en control, coherencia y producción, no solo en resolución.',
   },
   {
     icon: Landmark,
@@ -89,39 +196,39 @@ const CHINA_SECTIONS = [
     tools: [
       {
         name: 'DeepSeek', company: 'High-Flyer (幻方)', version: 'V4 · abr-2026', ficha: 'deepseek',
-        what: 'Razonamiento y programación de frontera al costo más bajo del mercado. El modelo que en 2025 lo cambió todo.',
-        price: 'Gratis en web/app · API ≈$0,14 por 1M tokens', west: '≈ ChatGPT / Claude', open: 'Pesos abiertos',
+        what: 'Nueva familia para razonamiento y programación, disponible en variantes V4-Pro y V4-Flash para elegir entre mayor capacidad y velocidad.',
+        price: 'Gratis en web/app · API con tarifa por modelo y caché', west: '≈ ChatGPT / Claude', open: 'Pesos y licencia: confirmar por variante',
         access: 'chat.deepseek.com — correo, sin teléfono chino',
-        good: 'El mejor precio-rendimiento del planeta; pesos abiertos.',
-        watch: 'Datos en China y filtro de temas políticos sensibles.',
-        url: 'https://chat.deepseek.com',
+        good: 'Dos perfiles de rendimiento y una API que aprovecha caché de contexto.',
+        watch: 'Los alias históricos de API se retiran el 24 de julio de 2026.',
+        url: 'https://api-docs.deepseek.com/updates/',
       },
       {
-        name: 'Qwen', company: 'Alibaba', version: 'Qwen3.7-Max · may-2026', ficha: 'qwen',
-        what: 'El todoterreno con la familia de pesos abiertos más adoptada del mundo. Fuerte en agentes, código e idiomas asiáticos.',
-        price: 'Chat gratis · API insignia ≈$1,25/$3,75 por 1M', west: '≈ ChatGPT / Gemini', open: 'Abiertos (los tiers no-Max)',
+        name: 'Qwen', company: 'Alibaba', version: 'Qwen3-Max-Thinking · ene-2026', ficha: 'qwen',
+        what: 'El buque insignia de razonamiento de Qwen combina pensamiento adaptativo, búsqueda y ejecución de código. Convive con una familia amplia de modelos abiertos Qwen3 y Qwen3.5.',
+        price: 'Chat gratis · API en Alibaba Cloud Model Studio', west: '≈ ChatGPT / Gemini', open: 'Abiertos (los tiers no-Max)',
         access: 'chat.qwen.ai — internacional, sin teléfono chino',
-        good: 'Enorme ecosistema abierto + nube empresarial.',
-        watch: 'El modelo tope (Max) es cerrado.',
-        url: 'https://chat.qwen.ai',
+        good: 'Herramientas adaptativas + ecosistema abierto y empresarial.',
+        watch: 'Max es cerrado; no confundirlo con los modelos Qwen3/3.5 de pesos abiertos.',
+        url: 'https://qwen.ai/blog?id=qwen3-max-thinking',
       },
       {
-        name: 'Kimi', company: 'Moonshot AI (月之暗面)', version: 'K2.6 · K2.7-Code', ficha: 'kimi',
-        what: 'Rey del contexto larguísimo y de las tareas agénticas: coordina enjambres de sub-agentes durante horas.',
-        price: 'Chat con tier gratis · API ~80% más barata que rivales', west: '≈ Claude', open: 'Pesos abiertos (MIT modificada)',
+        name: 'Kimi', company: 'Moonshot AI (月之暗面)', version: 'K2.6 · abr-2026', ficha: 'kimi',
+        what: 'Modelo abierto para código, ejecución prolongada y tareas agénticas. Coordina hasta 300 subagentes y 4.000 pasos en paralelo desde Agent Swarm.',
+        price: 'Chat con tier gratis · API y Kimi Code', west: '≈ Claude', open: 'Pesos abiertos (MIT modificada)',
         access: 'kimi.com — internacional + API + Hugging Face',
-        good: 'Contexto y orquestación de agentes de primer nivel.',
-        watch: 'Correr el modelo de 1T localmente pide mucho cómputo.',
-        url: 'https://www.kimi.com',
+        good: 'Código de larga duración y orquestación paralela de gran escala.',
+        watch: 'Los resultados y cifras de Agent Swarm provienen de evaluaciones de la propia empresa.',
+        url: 'https://www.kimi.com/blog/kimi-k2-6',
       },
       {
         name: 'Z.ai (GLM)', company: 'Zhipu AI (智谱)', version: 'GLM-5.2 · jun-2026', ficha: 'glm-zai',
-        what: 'Chatbot y agente potente, fuerte en programación. GLM-5 salió con licencia MIT, de las más permisivas en frontera.',
-        price: 'Chat freemium · GLM Coding Plan desde ~$10/mes', west: '≈ Claude (más barato)', open: 'GLM-5 con licencia MIT',
+        what: 'Modelo abierto para programación y agentes de larga duración, con contexto de 1M tokens y niveles de esfuerzo configurables.',
+        price: 'Chat freemium · API y GLM Coding Plan', west: '≈ Claude (más barato)', open: 'GLM-5 con licencia MIT',
         access: 'chat.z.ai — global, interfaz en inglés',
-        good: 'Pesos de frontera con licencia MIT + acceso global limpio.',
-        watch: 'Los benchmarks que “ganan a todos” son marketing.',
-        url: 'https://chat.z.ai',
+        good: '1M de contexto, pesos MIT y acceso global por chat, API o Coding Plan.',
+        watch: 'El contexto máximo exige más memoria y costo; no siempre mejora tareas cortas.',
+        url: 'https://z.ai/blog/glm-5.2',
       },
       {
         name: 'Doubao (豆包)', company: 'ByteDance', version: 'Seed 2.0 · feb-2026', ficha: 'doubao',
@@ -142,22 +249,22 @@ const CHINA_SECTIONS = [
         url: 'https://yiyan.baidu.com',
       },
       {
-        name: 'Hunyuan / Yuanbao', company: 'Tencent', version: 'Hy3 · jul-2026',
-        what: 'Modelo de coding agéntico con licencia Apache 2.0 (295B MoE) y una app de consumo (Yuanbao) dentro de WeChat.',
-        price: 'App gratis · API en Tencent Cloud', west: '≈ Claude/GPT abierto (dev)', open: 'Apache 2.0',
-        access: 'Pesos en Hugging Face · Yuanbao ligado a WeChat',
-        good: 'Pesos de frontera con la licencia más permisiva + WeChat.',
-        watch: 'Autohospedarlo exige hardware de centro de datos.',
-        url: 'https://hunyuan.tencent.com',
+        name: 'Hunyuan / Yuanbao', company: 'Tencent', version: 'Hy3 oficial · 6 jul-2026',
+        what: 'Modelo híbrido de pensamiento rápido y lento (295B MoE, 21B activos, 256K) integrado en Yuanbao, CodeBuddy, WorkBuddy y otros productos de Tencent.',
+        price: 'App gratis · API en Tencent Cloud', west: '≈ Claude / GPT para agentes', open: 'Acceso por API y productos Tencent',
+        access: 'Tencent Cloud TokenHub · integraciones globales en despliegue progresivo',
+        good: 'Producto oficial estable y profundamente integrado al ecosistema Tencent.',
+        watch: 'La disponibilidad internacional varía según producto y proveedor.',
+        url: 'https://www.tencent.com/tencent-hunyuan-officially-releases-hy3-advancing-agent-capabilities-and-deeper-product-integration/',
       },
       {
         name: 'MiniMax', company: 'MiniMax (稀宇)', version: 'M3 · jun-2026',
-        what: 'Modelo agéntico de gran valor precio-rendimiento y contexto de 1M. Su brazo de medios es Hailuo (video) y MiniMax Audio (voz).',
-        price: 'API barata + promos gratis', west: '≈ GPT/Claude abierto', open: 'Pesos abiertos (licencia comunitaria)',
+        what: 'Modelo nativamente multimodal para código y agentes, con contexto de hasta 1M, entrada de imagen/video y capacidad de operar un computador.',
+        price: 'API + Token Plan + MiniMax Code', west: '≈ GPT / Claude para agentes', open: 'Apertura anunciada; publicación por etapas',
         access: 'minimax.io — global + Hugging Face + OpenRouter',
-        good: 'Líder en valor agéntico + stack de medios propio.',
-        watch: 'No confundir el LLM (M3) con el video (Hailuo).',
-        url: 'https://www.minimax.io',
+        good: 'Código, agentes y comprensión multimodal extensa en un solo modelo.',
+        watch: 'La publicación completa de pesos y herramientas puede desplegarse por etapas.',
+        url: 'https://www.minimax.io/blog/minimax-m3',
       },
     ],
     also: 'También activos: Yi (01.AI de Kai-Fu Lee, que abandonó la carrera de modelos base y pivotó a IA soberana y empresarial), iFlytek Spark (fuerte en voz, educación y traducción), StepFun, Baichuan (salud/empresa) y SenseTime (visión y espacial).',
@@ -170,22 +277,22 @@ const CHINA_SECTIONS = [
     lead: 'Los rivales chinos de Midjourney y GPT Image, especialmente fuertes en algo que Occidente sufre: renderizar texto y tipografía nítida dentro de la imagen. Varios son de pesos abiertos.',
     tools: [
       {
-        name: 'Seedream', company: 'ByteDance', version: '5.0 · 2026', ficha: 'seedream',
-        what: 'Imágenes en 4K con texto y tipografía nítidos, edición multi-imagen coherente. Líder en render de texto dentro de la imagen.',
-        price: 'Vía Dreamina (freemium) o API por generación', west: '≈ Nano Banana / GPT Image', open: 'Cerrado',
-        access: 'dreamina.capcut.com o API — sin teléfono chino',
-        good: 'El mejor en texto dentro de la imagen.',
-        watch: 'No hay web de consumo propia: depende de Dreamina/API.',
-        url: 'https://seed.bytedance.com/en/seedream4_5',
+        name: 'Seedream', company: 'ByteDance', version: '5.0 Lite · feb-2026', ficha: 'seedream',
+        what: 'Generación y edición con comprensión visual, razonamiento, búsqueda en tiempo real y control preciso por referencias. Prioriza consistencia y seguimiento de instrucciones ambiguas.',
+        price: 'Dreamina freemium · acceso empresarial en Volcano Engine', west: '≈ Nano Banana / GPT Image', open: 'Cerrado',
+        access: 'Dreamina AI y Volcano Engine — disponibilidad internacional variable',
+        good: 'Piezas informadas por búsqueda y edición compleja a partir de referencias.',
+        watch: '“Lite” prioriza inteligencia y control; no significa máxima resolución en todos los casos.',
+        url: 'https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite',
       },
       {
         name: 'Qwen-Image', company: 'Alibaba', version: '2.0 · feb-2026',
-        what: 'Modelo de imagen open-source y eficiente (7B), unifica generación y edición, fuerte en tipografía profesional.',
-        price: 'Gratis (open-source) + chat Qwen + API', west: '≈ FLUX.1', open: 'Open-source',
-        access: 'Hugging Face / ComfyUI o chat.qwen.ai — global',
-        good: 'Pesos abiertos + calidad de texto, ligero.',
-        watch: 'Correrlo local pide GPU decente.',
-        url: 'https://chat.qwen.ai',
+        what: 'Generación y edición unificadas con instrucciones de hasta 1.000 tokens, salida nativa 2K y especial fortaleza en tipografía, infografías, presentaciones y pósteres.',
+        price: 'Qwen Chat · servicios de Alibaba', west: '≈ GPT Image / FLUX', open: 'Cerrado / pesos no publicados',
+        access: 'chat.qwen.ai — global; API según región y servicio',
+        good: 'Tipografía y composiciones informativas complejas con instrucciones extensas.',
+        watch: 'Alibaba no anunció Qwen-Image 2.0 con los mismos pesos abiertos de versiones anteriores.',
+        url: 'https://qwen.ai/blog?id=qwen-image-2.0',
       },
       {
         name: 'Hunyuan Image', company: 'Tencent', version: '3.0 · 2026',
@@ -233,13 +340,13 @@ const CHINA_SECTIONS = [
         url: 'https://klingai.com',
       },
       {
-        name: 'Seedance', company: 'ByteDance', version: '2.0 (2.5 en despliegue)', ficha: 'seedance',
-        what: 'El retador técnico: #1 en varios rankings ciegos de video. La 2.5 promete planos nativos de 30s, 4K y audio-video conjunto.',
-        price: 'Vía Dreamina (freemium) o API por generación', west: '≈ Sora 2 / Veo 3.1', open: 'Cerrado',
-        access: 'dreamina.capcut.com o API — sin teléfono chino',
-        good: 'Puntero en benchmarks y en duración de plano.',
-        watch: 'Señalado en prensa por dudas de copyright en el training.',
-        url: 'https://seed.bytedance.com/en/seedance',
+        name: 'Seedance', company: 'ByteDance', version: '2.0 · feb-2026', ficha: 'seedance',
+        what: 'Genera clips multi-plano de hasta 15 segundos con audio estéreo. Acepta texto y hasta nueve imágenes, tres videos y tres audios como referencias combinables.',
+        price: 'Productos de ByteDance · acceso empresarial en Volcano Engine', west: '≈ Sora / Veo / Runway', open: 'Cerrado',
+        access: 'Jimeng AI, Doubao y Volcano Engine — disponibilidad internacional variable',
+        good: 'Control multimodal por referencias, continuidad narrativa y mejores físicas.',
+        watch: 'ByteDance reconoce fallas pendientes en detalle, hiperrealismo, audio y escenas con varios sujetos.',
+        url: 'https://seed.bytedance.com/en/blog/seedance-2-0-official-launch',
       },
       {
         name: 'Hailuo', company: 'MiniMax', version: '2.3 · 2026', ficha: 'hailuo',
@@ -324,6 +431,15 @@ const CHINA_SECTIONS = [
     title: 'Programación',
     lead: 'La carrera del "coding agéntico" china va a toda máquina: IDEs y modelos que no autocompletan, sino que planifican y ejecutan proyectos enteros. Compiten de frente con Cursor, Devin y Claude Code —muchos gratis o con pesos abiertos.',
     tools: [
+      {
+        name: 'Qwen Code', company: 'Alibaba', version: '0.19.8 · jul-2026',
+        what: 'Agente de programación abierto para terminal, IDE y navegador. La actualización de julio incorporó fallback automático de modelos, subagentes anidados y gestión de sesiones paralelas en Web Shell.',
+        price: 'Producto abierto · el consumo depende del modelo conectado', west: '≈ Claude Code / Gemini CLI', open: 'Código abierto',
+        access: 'Terminal, IDE y Web Shell — global',
+        good: 'Flujos agénticos observables, extensibles y más resistentes a la saturación de proveedores.',
+        watch: 'Evoluciona semanalmente: valida versión, modelo y permisos antes de usarlo en producción.',
+        url: 'https://qwenlm.github.io/qwen-code-docs/en/blog/weekly-update-2026-07-09/',
+      },
       {
         name: 'Trae', company: 'ByteDance', version: 'IDE + modo SOLO', ficha: 'trae',
         what: 'IDE completo (fork de VS Code) con agente autónomo. El modo SOLO planifica, elige herramientas y ejecuta la tarea de punta a punta. Incluye modelos frontera gratis en el tier básico.',
@@ -610,7 +726,7 @@ export default function HerramientasAsiaticas() {
         <div className="relative max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-secondary/8 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-8 border border-secondary/10 shadow-sm">
             <Globe2 className="w-3.5 h-3.5" />
-            Capítulo especial · julio 2026
+            Capítulo especial · actualizado 17 jul 2026
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-text leading-[1.05] tracking-tight mb-6">
             IA <span className="text-gradient-primary">asiática</span>
@@ -621,7 +737,7 @@ export default function HerramientasAsiaticas() {
             Mientras Occidente discute, Asia despliega. China convirtió la IA en una guerra de{' '}
             <span className="text-text font-semibold">precios y código abierto</span>; Corea, Japón e India construyen{' '}
             <span className="text-text font-semibold">modelos soberanos</span> en su propia lengua. Una guía práctica
-            —en español, verificada a julio 2026— para saber qué existe, qué sirve y cómo usarlo desde Colombia.
+            —en español, verificada al 17 de julio de 2026— para saber qué existe, qué sirve y cómo usarlo desde Colombia.
           </p>
 
           <div className="flex items-center justify-center gap-2 mb-10 text-sm">
@@ -652,6 +768,7 @@ export default function HerramientasAsiaticas() {
 
           <div className="mt-10 flex flex-wrap gap-2 justify-center">
             {[
+              { href: '#novedades', icon: Zap, label: 'Nuevos lanzamientos' },
               { href: '#fuerzas', icon: Sparkles, label: 'Lo que cambió' },
               { href: '#mapa', icon: MapPin, label: 'Mapa por país' },
               { href: '#categorias', icon: Boxes, label: 'Por categoría' },
@@ -695,6 +812,106 @@ export default function HerramientasAsiaticas() {
             herramienta asiática es la contraparte de la que ya usas, cuánto cuesta, cómo se accede desde Colombia y qué
             precauciones tomar antes de subir un solo dato.
           </p>
+        </div>
+      </section>
+
+      {/* ═══════════ NOVEDADES 2026 ═══════════ */}
+      <section id="novedades" className="max-w-6xl mx-auto px-4 pt-6 pb-12 scroll-mt-20">
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-surface shadow-sm">
+          <div className="absolute -top-24 -right-20 h-64 w-64 rounded-full bg-accent/8 blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-20 -left-24 h-56 w-56 rounded-full bg-secondary/8 blur-3xl pointer-events-none" />
+
+          <div className="relative px-5 py-7 md:px-8 md:py-10">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-7">
+              <div className="max-w-3xl">
+                <div className="inline-flex items-center gap-2 bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-accent/10">
+                  <Zap className="w-3 h-3" />
+                  Radar de lanzamientos · corte 17 jul 2026
+                </div>
+                <h2 className="text-2xl md:text-4xl font-bold text-text tracking-tight mb-2">
+                  Lo nuevo que sí cambia el mapa
+                </h2>
+                <p className="text-sm md:text-base text-text-light leading-relaxed">
+                  Ocho lanzamientos recientes, contrastados con las publicaciones oficiales de cada laboratorio.
+                  Aquí importa menos el anuncio y más la capacidad nueva, su acceso real y el trabajo que permite hacer.
+                </p>
+              </div>
+              <div className="shrink-0 inline-flex items-center gap-2 text-xs text-text-lighter bg-bg border border-border rounded-xl px-3 py-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                Fuentes primarias enlazadas
+              </div>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-4">
+              {LATEST_RELEASES.map((release, index) => {
+                const ReleaseIcon = release.icon
+                return (
+                  <article
+                    key={release.name}
+                    className="group relative rounded-2xl border border-border bg-bg/70 p-5 hover:bg-surface hover:border-accent/25 hover:shadow-md transition-all duration-300"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className={`w-11 h-11 ${release.bg} rounded-xl flex items-center justify-center shrink-0 ring-4 ring-white/70`}>
+                        <ReleaseIcon className={`w-5 h-5 ${release.color}`} />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+                          <span className="text-[10px] uppercase tracking-[0.12em] font-bold text-text-lighter">
+                            {release.date}
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-border" />
+                          <span className={`text-[10px] uppercase tracking-[0.1em] font-bold ${release.color}`}>
+                            {release.tag}
+                          </span>
+                        </div>
+                        <div className="flex flex-wrap items-baseline gap-x-2 mb-2">
+                          <h3 className="font-display font-bold text-text text-lg tracking-tight">{release.name}</h3>
+                          <span className="text-[11px] text-text-lighter">{release.company}</span>
+                        </div>
+                        <p className="font-semibold text-sm text-text leading-snug mb-2">{release.title}</p>
+                        <p className="text-xs text-text-light leading-relaxed mb-3">{release.body}</p>
+                        <div className="flex items-start gap-2 rounded-xl bg-surface border border-border/70 p-3 mb-3">
+                          <Compass className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                          <p className="text-[11px] leading-relaxed text-text-light">
+                            <span className="font-semibold text-text">Úsalo para: </span>{release.use}
+                          </p>
+                        </div>
+                        <a
+                          href={release.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent no-underline hover:underline"
+                        >
+                          Ver anuncio oficial
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
+                      </div>
+                    </div>
+                    <span className="absolute top-4 right-4 font-display text-4xl font-extrabold text-text-lighter/[0.08] tracking-tighter pointer-events-none">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  </article>
+                )
+              })}
+            </div>
+
+            <div className="mt-5 flex flex-col sm:flex-row sm:items-center gap-3 rounded-2xl border border-warm/20 bg-warm/5 px-4 py-3">
+              <AlertTriangle className="w-5 h-5 text-warm shrink-0" />
+              <p className="text-xs text-text-light leading-relaxed flex-1">
+                <span className="font-bold text-text">Acción para quienes usan la API de DeepSeek:</span>{' '}
+                los alias <code className="font-mono text-[11px] text-secondary">deepseek-chat</code> y{' '}
+                <code className="font-mono text-[11px] text-secondary">deepseek-reasoner</code> se retiran el 24 de julio de 2026.
+              </p>
+              <a
+                href="https://api-docs.deepseek.com/updates/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-warm no-underline hover:underline shrink-0"
+              >
+                Guía de migración <ArrowRight className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
