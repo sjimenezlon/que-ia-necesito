@@ -101,7 +101,7 @@ export default function ToolDetail({ tool, onToggleFavorite, isFavorite }) {
               href={tool.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-text text-white px-5 py-2.5 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-md active:scale-[0.98] transition-all duration-200 text-sm"
+              className="inline-flex items-center gap-2 bg-text text-bg px-5 py-2.5 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-md active:scale-[0.98] transition-all duration-200 text-sm"
             >
               Visitar sitio
               <ExternalLink className="w-4 h-4" />

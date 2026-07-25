@@ -74,7 +74,7 @@ export default function CompareTools({ toolIds, onRemove }) {
         </p>
         <Link
           to="/explorar"
-          className="inline-flex items-center gap-2 bg-text text-white px-6 py-3 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-md active:scale-[0.98] transition-all duration-200 text-sm"
+          className="inline-flex items-center gap-2 bg-text text-bg px-6 py-3 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-md active:scale-[0.98] transition-all duration-200 text-sm"
         >
           Explorar herramientas
         </Link>

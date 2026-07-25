@@ -429,7 +429,7 @@ export default function RecommendationFlow() {
           disabled={!canProceed}
           className={`inline-flex items-center gap-1.5 px-7 py-2.5 rounded-xl text-sm font-semibold border-none cursor-pointer transition-all duration-200 ${
             canProceed
-              ? 'bg-text text-white hover:bg-text/90 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]'
+              ? 'bg-text text-bg hover:bg-text/90 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]'
               : 'bg-black/8 text-text-lighter cursor-not-allowed'
           }`}
         >

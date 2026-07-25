@@ -69,7 +69,7 @@ export default function Hero({ query, onQueryChange, results }) {
           >
             <button
               onClick={() => navigate('/recomendador')}
-              className="inline-flex items-center gap-2 bg-text text-white px-6 py-3.5 rounded-xl font-semibold cursor-pointer hover:bg-text/90 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 border-none text-sm"
+              className="inline-flex items-center gap-2 bg-text text-bg px-6 py-3.5 rounded-xl font-semibold cursor-pointer hover:bg-text/90 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 border-none text-sm"
             >
               <Compass className="w-4 h-4" />
               Guíame paso a paso

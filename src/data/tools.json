@@ -14,7 +14,7 @@
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Asistente conversacional de OpenAI para escribir, investigar, programar y más.",
-    "fullDescription": "ChatGPT es el chatbot de inteligencia artificial más popular del mundo. Desarrollado por OpenAI, permite mantener conversaciones naturales para resolver dudas, redactar textos, generar código, analizar documentos y mucho más. Su interfaz es simple e intuitiva, ideal tanto para principiantes como para usuarios avanzados. Su modelo más reciente es GPT-5.5 (2026).",
+    "fullDescription": "ChatGPT es el chatbot de inteligencia artificial más popular del mundo. Desarrollado por OpenAI, permite mantener conversaciones naturales para resolver dudas, redactar textos, generar código, analizar documentos y mucho más. Su interfaz es simple e intuitiva, ideal tanto para principiantes como para usuarios avanzados. Su familia más reciente es GPT-5.6 (9 de julio de 2026), con tres variantes: Luna (rápida y económica), Terra (equilibrada para el día a día) y Sol (la más capaz, para el trabajo difícil). En el chat cotidiano el modelo por defecto sigue siendo GPT-5.5 Instant; Sol se activa desde los ajustes de razonamiento en los planes de pago.",
     "useCases": [
       "Redactar correos, informes y documentos",
       "Resolver dudas complejas con explicaciones claras",
@@ -28,7 +28,7 @@
       "Se específico: entre más contexto des, mejor respuesta obtienes",
       "Usa Proyectos para organizar conversaciones por tema"
     ],
-    "proTip": "Usa instrucciones personalizadas (Custom Instructions) para que ChatGPT siempre sepa tu contexto profesional y estilo preferido.",
+    "proTip": "Usa instrucciones personalizadas (Custom Instructions) para que ChatGPT siempre sepa tu contexto profesional y estilo preferido. Y si pagas plan, sube el nivel de razonamiento a GPT-5.6 Sol solo para lo difícil: en preguntas simples no mejora la respuesta y te consume el límite.",
     "pros": [
       "Muy versatil y fácil de usar",
       "Interfaz simple e intuitiva",
@@ -86,11 +86,11 @@
       "programacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. Pro: $20/mes. Max: $100/mes o $200/mes",
+    "pricingDetail": "Gratis con límites. Pro: $20/mes. Max: $100/mes o $200/mes. API: Opus 5 a $5/$25 por millón de tokens; Fable 5 a $10/$50",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Asistente de Anthropic especializado en análisis largo, escritura y programación.",
-    "fullDescription": "Claude es el asistente de IA de Anthropic, conocido por su capacidad de procesar documentos muy largos, generar texto de alta calidad y programar con precision. Destaca por ser más cauteloso y preciso que otros chatbots, con un enfoque en seguridad y utilidad. Su familia vigente es Claude 4.x, con Claude Opus 4.8 como modelo más capaz (2026).",
+    "fullDescription": "Claude es el asistente de IA de Anthropic, conocido por su capacidad de procesar documentos muy largos, generar texto de alta calidad y programar con precisión. Destaca por ser más cauteloso y preciso que otros chatbots, con un enfoque en seguridad y utilidad. Su familia vigente es Claude 5: Claude Opus 5 (24 de julio de 2026) es el modelo por defecto del plan Max y la mejor opción en Pro —se acerca a la inteligencia de Claude Fable 5 a la mitad del precio y trae un modo rápido 2,5 veces más veloz—, Claude Fable 5 (junio de 2026) sigue siendo el modelo más capaz de la casa para razonamiento extremo y trabajo agéntico largo, y Claude Sonnet 5 es el equilibrio entre velocidad y costo. Todos con ventana de contexto de 1 millón de tokens.",
     "useCases": [
       "Analizar documentos largos de hasta 200 páginas",
       "Escribir textos creativos y profesionales",
@@ -104,9 +104,10 @@
       "Para mejores resultados, da contexto detallado",
       "Usa Proyectos para agrupar conversaciones relacionadas"
     ],
-    "proTip": "Claude puede leer archivos PDF completos. Sube documentos largos y pídele que los analice, resuma o extraiga datos específicos.",
+    "proTip": "Claude puede leer archivos PDF completos: sube documentos largos y pídele que los analice, resuma o extraiga datos. En Pro y Max reserva Opus 5 para el trabajo difícil (código, análisis de expedientes) y deja Sonnet 5 para lo cotidiano: rinde igual y consume menos de tu límite.",
     "pros": [
       "Excelente para textos largos y análisis",
+      "Ventana de contexto de 1 millón de tokens",
       "Muy preciso y cauteloso con la información",
       "Gran capacidad de programación"
     ],
@@ -165,7 +166,7 @@
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Asistente de Google con acceso a búsqueda en tiempo real e integración con Google.",
-    "fullDescription": "Gemini es el asistente de IA de Google que combina capacidades conversacionales con acceso directo a la búsqueda de Google y sus servicios. Puede buscar información actualizada, generar texto, analizar imágenes y conectarse con Gmail, Drive y otros productos de Google. Su modelo vigente es la familia Gemini 3.x (con Gemini 3.1 Pro como flagship); el plan de pago se llama ahora Google AI Pro (antes Advanced).",
+    "fullDescription": "Gemini es el asistente de IA de Google que combina capacidades conversacionales con acceso directo a la búsqueda de Google y sus servicios. Puede buscar información actualizada, generar texto, analizar imágenes y conectarse con Gmail, Drive y otros productos de Google. Su familia vigente es Gemini 3.x: el plan gratuito ya llega a Gemini 3.6 Flash (21 de julio de 2026), el modelo «caballo de batalla» más barato y hasta 17 % más eficiente en tokens que su antecesor, mientras el modelo Pro de gama alta sigue siendo Gemini 3.1 Pro —Google retrasó Gemini 3.5 Pro y ya adelanta Gemini 4—. El plan de pago se llama Google AI Pro (antes Advanced).",
     "useCases": [
       "Buscar información actualizada en tiempo real",
       "Analizar imágenes y fotos",
@@ -301,11 +302,11 @@
       "productividad"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis (GPT-5.5 con límites). Copilot Pro: $20/mes. Microsoft 365 Copilot: $30/usuario/mes",
+    "pricingDetail": "Gratis con límites. Copilot Pro: $20/mes. Microsoft 365 Copilot: $30/usuario/mes (≈$18 promocional para pymes)",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Asistente de Microsoft integrado con Windows, Edge y Office 365.",
-    "fullDescription": "Microsoft Copilot es el asistente de IA de Microsoft que se integra con Windows, el navegador Edge y las aplicaciones de Office 365. Permite generar texto, imágenes, analizar documentos y automatizar tareas dentro del ecosistema Microsoft. Es especialmente útil para quienes ya usan Word, Excel y PowerPoint.",
+    "fullDescription": "Microsoft Copilot es el asistente de IA de Microsoft que se integra con Windows, el navegador Edge y las aplicaciones de Office 365. Permite generar texto, imágenes, analizar documentos y automatizar tareas dentro del ecosistema Microsoft. Es especialmente útil para quienes ya usan Word, Excel y PowerPoint. Desde el 9 de julio de 2026 su modelo preferido es GPT-5.6, que llegó a Word, Excel, PowerPoint, Chat y Cowork con menos rondas de prompt para llegar al mismo resultado.",
     "useCases": [
       "Crear documentos en Word con IA",
       "Analizar datos en Excel automáticamente",
@@ -322,7 +323,7 @@
     "proTip": "Si usas Microsoft 365, activa Copilot en Word para que te ayude a redactar y editar documentos directamente.",
     "pros": [
       "Integración perfecta con Microsoft Office",
-      "Genera imágenes gratis con DALL-E",
+      "Genera imágenes sin costo adicional",
       "Disponible en Windows directamente"
     ],
     "cons": [
@@ -509,7 +510,7 @@
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Chatbot europeo de código abierto con gran rendimiento en programación.",
-    "fullDescription": "Mistral Le Chat es el asistente conversacional de Mistral AI, una empresa francesa lider en IA de código abierto. Destaca por su rendimiento en tareas de programación y razonamiento logico, con modelos que compiten con los mejores del mercado manteniendo un enfoque en privacidad y transparencia. Su modelo insignia vigente es Mistral Large 3, y Le Chat ya tiene plan Pro de pago.",
+    "fullDescription": "Mistral Le Chat es el asistente conversacional de Mistral AI, una empresa francesa líder en IA de código abierto. Destaca por su rendimiento en tareas de programación y razonamiento lógico, con modelos que compiten con los mejores del mercado manteniendo un enfoque en privacidad y transparencia. Su modelo insignia vigente es Mistral Large 3 y el modelo liviano es Mistral Small 4; ambos se publican bajo licencia Apache 2.0, lo que permite usarlos y modificarlos incluso con fines comerciales. Le Chat ya tiene plan Pro de pago.",
     "useCases": [
       "Programar y depurar código",
       "Análisis de datos y razonamiento logico",
@@ -5231,7 +5232,7 @@
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Asistente conversacional de xAI con acceso en tiempo real a X (Twitter) e integración multimodal.",
-    "fullDescription": "Grok es el asistente de IA desarrollado por xAI de Elon Musk. Su principal diferencial es el acceso en tiempo real a conversaciones y tendencias en X (Twitter), lo que lo hace útil para análisis de actualidad, monitoreo de reputación y búsquedas sobre temas emergentes. La versión Grok 3 (2026) incluye razonamiento avanzado, generación de imágenes con Aurora y modo agente. Su versión vigente es Grok 4.x (2026).",
+    "fullDescription": "Grok es el asistente de IA desarrollado por xAI, la empresa de Elon Musk. Su principal diferencial es el acceso en tiempo real a conversaciones y tendencias en X (Twitter), lo que lo hace útil para análisis de actualidad, monitoreo de reputación y búsquedas sobre temas emergentes. Su versión vigente es Grok 4.5 (8 de julio de 2026), el primer modelo de la casa construido específicamente para programación y tareas agénticas: 500K de contexto, dial de esfuerzo de razonamiento por consulta (bajo, medio, alto) y API a USD 2/$6 por millón de tokens, bastante más barata que Claude Opus o GPT-5.5. Está disponible en la app de Grok, en la consola de xAI y dentro del editor Cursor.",
     "useCases": [
       "Monitorear tendencias y conversaciones en redes sociales en tiempo real",
       "Analizar percepción pública sobre temas o marcas",
@@ -5248,8 +5249,8 @@
     "proTip": "Usa el modo DeepSearch para investigaciones que requieran contexto actualizado de las últimas 24–48 horas; supera a Perplexity para eventos muy recientes.",
     "pros": [
       "Acceso en tiempo real a X (Twitter)",
-      "Menos filtros que otros chatbots",
-      "Modo razonamiento potente (Think)"
+      "Muy competitivo en precio para programación ($2/$6 por 1M de tokens)",
+      "Modo razonamiento potente con esfuerzo ajustable"
     ],
     "cons": [
       "Requiere cuenta de X",
@@ -5300,7 +5301,7 @@
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Modelo open-source chino con razonamiento avanzado a muy bajo costo — rival directo de GPT-4 y Claude.",
-    "fullDescription": "DeepSeek es un laboratorio chino que ha disrumpido el mercado con modelos de IA open-source (V3, R1) que igualan o superan a GPT-4 y Claude en muchas tareas — a una fracción del costo. DeepSeek R1 destaca en razonamiento matemático, programación y análisis técnico. El modelo es libre para uso personal y la API es 30x más barata que la de OpenAI. Su modelo vigente es DeepSeek V4, con ventana de contexto de 1M de tokens.",
+    "fullDescription": "DeepSeek es un laboratorio chino que ha disrumpido el mercado con modelos de IA de pesos abiertos que igualan o superan a los modelos cerrados en muchas tareas, a una fracción del costo. Destaca en razonamiento matemático, programación y análisis técnico, y su API es mucho más barata que la de OpenAI. Su familia vigente es DeepSeek V4, con ventana de contexto de 1M de tokens y variantes especializadas: V4-Pro para conocimiento, matemáticas y razonamiento difícil, y V4 Flash como la opción más económica.",
     "useCases": [
       "Resolver problemas matemáticos complejos paso a paso",
       "Generar y depurar código en múltiples lenguajes",
@@ -5365,11 +5366,11 @@
       "productividad"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis en kimi.moonshot.cn y kimi.com. API (platform.moonshot.ai): USD 0,95/1M tokens de entrada (cache-hit 0,16) y 4,00 de salida",
+    "pricingDetail": "Gratis en kimi.com (con límites). API (platform.moonshot.ai): USD 3,00/1M tokens de entrada (0,30 con cache-hit) y 15,00 de salida",
     "difficulty": 2,
     "rating": 5,
-    "shortDescription": "Asistente agéntico de Moonshot AI con 256K de contexto; K2.6 (abril 2026) ejecuta tareas largas de forma autónoma.",
-    "fullDescription": "Kimi es el asistente de Moonshot AI. La versión K2.6 (lanzada el 20 de abril de 2026) es un modelo MoE de 1T parámetros con 256K de contexto, multimodal (texto, imagen, video) y enfocado en ejecución agéntica de tareas largas. En benchmarks públicos supera a GPT-5.4 en SWE-Bench Pro (58,6) y en Humanity's Last Exam con herramientas (54,0). Ideal para expedientes voluminosos, investigación normativa y tareas que requieren analizar cientos de documentos sin perder contexto.",
+    "shortDescription": "Asistente agéntico de Moonshot AI; K3 (julio 2026) es el modelo de pesos abiertos más grande del mundo, con 1M de contexto.",
+    "fullDescription": "Kimi es el asistente de Moonshot AI. Su versión K3 (16 de julio de 2026) es un modelo MoE de 2,8 billones de parámetros —el más grande publicado con pesos abiertos hasta ahora—, con ventana de contexto de 1.048.576 tokens (1M) y comprensión visual nativa. En evaluaciones independientes de trabajo de largo horizonte supera a Claude Opus 4.8 y a GPT-5.5, aunque queda por debajo de Claude Fable 5 y GPT-5.6 Sol, y lidera la arena de código frontend. Moonshot prometió liberar los pesos completos el 27 de julio de 2026. Ideal para expedientes voluminosos, investigación normativa y tareas que exigen analizar cientos de documentos sin perder el hilo.",
     "useCases": [
       "Analizar expedientes de licitación completos (pliego, adendas, ofertas, evaluación)",
       "Investigar líneas jurisprudenciales cruzando sentencias completas",
@@ -5383,15 +5384,16 @@
       "Activa modo K2.6 para ejecución agéntica de tareas largas",
       "Para desarrolladores: usa la API en platform.moonshot.ai"
     ],
-    "proTip": "Cuando tengas un expediente de más de 500 páginas (varios PDFs de licitación, un plan de desarrollo completo, 30 sentencias), Kimi mantiene el hilo mejor que ChatGPT y Claude estándar gracias a sus 256K de contexto.",
+    "proTip": "Cuando tengas un expediente de más de 500 páginas (varios PDF de licitación, un plan de desarrollo completo, 30 sentencias), K3 mantiene el hilo mejor que un chat común gracias a su millón de tokens de contexto. Si lo usas por API, aprovecha el caché de contexto: repetir el mismo expediente baja el costo de entrada hasta 90 %.",
     "pros": [
-      "Contexto de 256K tokens sin degradación",
-      "Capacidad agéntica (ejecuta varios pasos)",
-      "Muy competitivo en precio y rendimiento"
+      "Ventana de contexto de 1 millón de tokens",
+      "Capacidad agéntica (ejecuta tareas de varios pasos)",
+      "Pesos abiertos: se puede autohospedar",
+      "Precio de API muy competitivo frente a modelos frontera"
     ],
     "cons": [
       "Servidores en China (considerar privacidad de datos sensibles)",
-      "Interfaz principal en chino (disponible en inglés)",
+      "Un solo nivel de razonamiento («max»): gasta muchos tokens de pensamiento",
       "Restricciones en temas políticos sensibles"
     ],
     "alternatives": [
@@ -6824,7 +6826,7 @@
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Chatbot y agente gratuito de Zhipu (modelo GLM-5.2), líder open source en tareas de programación.",
-    "fullDescription": "Z.ai es el asistente conversacional de Zhipu AI, impulsado por la familia de modelos GLM-5 (flagship GLM-5.2, uno de los modelos open source más potentes de 2026, líder en benchmarks de ingeniería de software). Ofrece chat gratuito potente, capacidades de agente y una API de muy bajo costo, lo que lo vuelve una alternativa china seria a ChatGPT o Claude para quienes buscan rendimiento sin pagar tarifas altas.",
+    "fullDescription": "Z.ai es el asistente conversacional de Zhipu AI, impulsado por la familia de modelos GLM-5 (flagship GLM-5.2, un MoE de 744.000 millones de parámetros que hoy encabeza la frontera de pesos abiertos, con 91,2 % en GPQA Diamond y liderazgo en benchmarks de ingeniería de software). Ofrece chat gratuito potente, capacidades de agente y una API de muy bajo costo, lo que lo vuelve una alternativa china seria a ChatGPT o Claude para quienes buscan rendimiento sin pagar tarifas altas. Los pesos salen con licencia MIT, una de las más permisivas de la frontera.",
     "useCases": [
       "Resolver dudas y redactar textos gratis",
       "Generar y depurar código",

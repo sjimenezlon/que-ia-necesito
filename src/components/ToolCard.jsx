@@ -136,7 +136,7 @@ export default function ToolCard({ tool, onCompare, isInCompare = false, onToggl
         <Link
           to={`/herramienta/${tool.id}`}
           aria-label={`Ver detalle de ${tool.name}`}
-          className="flex-1 bg-text text-white text-sm font-semibold py-2.5 px-4 rounded-xl text-center no-underline hover:bg-text/90 hover:shadow-md active:scale-[0.98] transition-all duration-200"
+          className="flex-1 bg-text text-bg text-sm font-semibold py-2.5 px-4 rounded-xl text-center no-underline hover:bg-text/90 hover:shadow-md active:scale-[0.98] transition-all duration-200"
         >
           Ver detalle
         </Link>

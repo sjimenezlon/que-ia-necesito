@@ -251,7 +251,7 @@ export default function TeacherStudio({ copiedId, onCopy }) {
               role="tab"
               aria-selected={isActive}
               onClick={() => setActiveTool(tab.id)}
-              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border text-sm font-semibold cursor-pointer transition-all ${isActive ? 'bg-text text-white border-text shadow-md' : 'bg-surface text-text-light border-border hover:border-primary/30 hover:text-text'}`}
+              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border text-sm font-semibold cursor-pointer transition-all ${isActive ? 'bg-text text-bg border-text shadow-md' : 'bg-surface text-text-light border-border hover:border-primary/30 hover:text-text'}`}
             >
               <Icon className="w-4 h-4" />
               {tab.label}
@@ -303,7 +303,7 @@ export default function TeacherStudio({ copiedId, onCopy }) {
                 <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-accent">Prompt refinado</div>
                 <p className="text-xs text-text-lighter mt-1">Añade contexto, aprendizaje activo, evidencia y límites sin cambiar tu intención.</p>
               </div>
-              <button type="button" onClick={() => onCopy(refinedPrompt, 'teacher-refiner')} className="inline-flex items-center gap-2 bg-text text-white px-3.5 py-2.5 rounded-xl font-semibold text-xs cursor-pointer hover:bg-text/90 transition-colors shrink-0">
+              <button type="button" onClick={() => onCopy(refinedPrompt, 'teacher-refiner')} className="inline-flex items-center gap-2 bg-text text-bg px-3.5 py-2.5 rounded-xl font-semibold text-xs cursor-pointer hover:bg-text/90 transition-colors shrink-0">
                 {copiedId === 'teacher-refiner' ? <Check className="w-3.5 h-3.5 text-emerald-300" /> : <Copy className="w-3.5 h-3.5" />}
                 {copiedId === 'teacher-refiner' ? 'Copiado' : 'Copiar'}
               </button>
@@ -396,7 +396,7 @@ export default function TeacherStudio({ copiedId, onCopy }) {
                   <ShieldCheck className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                   Esta herramienta diseña apoyos pedagógicos; no diagnostica. Coordina con orientación, familia y profesionales cuando corresponda, sin compartir datos sensibles con la IA.
                 </div>
-                <button type="button" onClick={() => onCopy(adaptivePrompt, 'adaptive-plan')} className="inline-flex items-center gap-2 bg-text text-white px-3.5 py-2.5 rounded-xl font-semibold text-xs cursor-pointer hover:bg-text/90 transition-colors shrink-0">
+                <button type="button" onClick={() => onCopy(adaptivePrompt, 'adaptive-plan')} className="inline-flex items-center gap-2 bg-text text-bg px-3.5 py-2.5 rounded-xl font-semibold text-xs cursor-pointer hover:bg-text/90 transition-colors shrink-0">
                   {copiedId === 'adaptive-plan' ? <Check className="w-3.5 h-3.5 text-emerald-300" /> : <Copy className="w-3.5 h-3.5" />}
                   {copiedId === 'adaptive-plan' ? 'Prompt copiado' : 'Copiar prompt del plan'}
                 </button>
@@ -432,7 +432,7 @@ export default function TeacherStudio({ copiedId, onCopy }) {
             <div className="text-xs font-semibold text-text mb-2">Duración orientativa</div>
             <div className="flex gap-2">
               {['5', '10', '15'].map((minutes) => (
-                <button key={minutes} type="button" aria-pressed={reinforcementMinutes === minutes} onClick={() => setReinforcementMinutes(minutes)} className={`flex-1 px-3 py-2.5 rounded-xl border text-xs font-semibold cursor-pointer transition-all ${reinforcementMinutes === minutes ? 'bg-text text-white border-text' : 'bg-surface text-text-light border-border hover:border-accent/30'}`}>
+                <button key={minutes} type="button" aria-pressed={reinforcementMinutes === minutes} onClick={() => setReinforcementMinutes(minutes)} className={`flex-1 px-3 py-2.5 rounded-xl border text-xs font-semibold cursor-pointer transition-all ${reinforcementMinutes === minutes ? 'bg-text text-bg border-text' : 'bg-surface text-text-light border-border hover:border-accent/30'}`}>
                   {minutes} min
                 </button>
               ))}

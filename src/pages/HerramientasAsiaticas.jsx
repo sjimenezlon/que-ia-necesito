@@ -13,12 +13,25 @@ import {
 
 const METRICS = [
   { v: '1M', l: 'tokens de contexto', s: 'GLM-5.2 · MiniMax M3' },
-  { v: '300', l: 'subagentes coordinados', s: 'Kimi K2.6 Agent Swarm' },
+  { v: '2,8', l: 'billones de parámetros abiertos', s: 'Kimi K3 · el mayor del mundo' },
   { v: '15 s', l: 'audio y video multitrack', s: 'Seedance 2.0' },
   { v: 'Jul 6', l: 'lanzamiento oficial de Hy3', s: 'Tencent · 2026' },
 ]
 
 const LATEST_RELEASES = [
+  {
+    date: '16 jul 2026',
+    name: 'Kimi K3',
+    company: 'Moonshot AI · China',
+    icon: Brain,
+    color: 'text-secondary',
+    bg: 'bg-secondary/8',
+    tag: 'Pesos abiertos · 2,8 billones',
+    title: 'El modelo abierto más grande del mundo',
+    body: 'MoE de 2,8 billones de parámetros con 1.048.576 tokens de contexto y visión nativa. En trabajo de largo horizonte supera a Claude Opus 4.8 y GPT-5.5, queda debajo de Claude Fable 5 y GPT-5.6 Sol, y lidera la arena de código frontend. API a $3/$15 por millón de tokens; pesos completos prometidos para el 27 de julio.',
+    use: 'Para expedientes de cientos de páginas, investigación normativa y agentes que trabajan durante horas.',
+    url: 'https://www.kimi.com',
+  },
   {
     date: '9 jul 2026',
     name: 'Qwen Code 0.19.8',
@@ -213,13 +226,13 @@ const CHINA_SECTIONS = [
         url: 'https://qwen.ai/blog?id=qwen3-max-thinking',
       },
       {
-        name: 'Kimi', company: 'Moonshot AI (月之暗面)', version: 'K2.6 · abr-2026', ficha: 'kimi',
-        what: 'Modelo abierto para código, ejecución prolongada y tareas agénticas. Coordina hasta 300 subagentes y 4.000 pasos en paralelo desde Agent Swarm.',
-        price: 'Chat con tier gratis · API y Kimi Code', west: '≈ Claude', open: 'Pesos abiertos (MIT modificada)',
+        name: 'Kimi', company: 'Moonshot AI (月之暗面)', version: 'K3 · jul-2026', ficha: 'kimi',
+        what: 'El modelo de pesos abiertos más grande del mundo (2,8 billones de parámetros, 1M de contexto, visión nativa). Rey de la ejecución prolongada: desde Agent Swarm coordina cientos de subagentes y miles de pasos en paralelo.',
+        price: 'Chat con tier gratis · API ≈$3/$15 por 1M tokens', west: '≈ Claude', open: 'Pesos abiertos (liberación prometida el 27-jul-2026)',
         access: 'kimi.com — internacional + API + Hugging Face',
-        good: 'Código de larga duración y orquestación paralela de gran escala.',
-        watch: 'Los resultados y cifras de Agent Swarm provienen de evaluaciones de la propia empresa.',
-        url: 'https://www.kimi.com/blog/kimi-k2-6',
+        good: 'Contexto y orquestación de agentes de primer nivel; #1 en la arena de código frontend.',
+        watch: 'Correr un modelo de 2,8T localmente pide cómputo fuera del alcance de casi cualquiera; varias cifras de Agent Swarm son de la propia empresa.',
+        url: 'https://www.kimi.com',
       },
       {
         name: 'Z.ai (GLM)', company: 'Zhipu AI (智谱)', version: 'GLM-5.2 · jun-2026', ficha: 'glm-zai',
@@ -1251,7 +1264,7 @@ export default function HerramientasAsiaticas() {
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
                 to="/explorar"
-                className="inline-flex items-center gap-2 bg-text text-white px-6 py-3 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all"
+                className="inline-flex items-center gap-2 bg-text text-bg px-6 py-3 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all"
               >
                 <Boxes className="w-4 h-4" />
                 Explorar el catálogo

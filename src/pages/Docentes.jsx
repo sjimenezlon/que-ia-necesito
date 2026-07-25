@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Accessibility,
@@ -10,6 +10,8 @@ import {
   BriefcaseBusiness,
   Check,
   CheckCircle2,
+  ChevronDown,
+  ChevronUp,
   ClipboardCheck,
   Compass,
   Copy,
@@ -1020,7 +1022,7 @@ function ToolOrbit() {
       <p className="sr-only">Mapa de seis rutas para usar las herramientas de la página: conversar, investigar, presentar, automatizar, analizar datos y crear visuales.</p>
       <div className="absolute inset-[17%] rounded-full border border-primary/15 bg-surface/55 backdrop-blur-sm shadow-xl pointer-events-none" />
       <div className="absolute inset-[30%] rounded-full border border-dashed border-accent/25 animate-[spin_28s_linear_infinite] motion-reduce:animate-none pointer-events-none" />
-      <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 rounded-full bg-text text-white flex flex-col items-center justify-center text-center shadow-xl z-10">
+      <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 rounded-full bg-text text-bg flex flex-col items-center justify-center text-center shadow-xl z-10">
         <GraduationCap className="w-8 h-8 mb-2 text-amber-300" />
         <span className="font-display font-bold text-sm leading-tight">Tu reto<br />docente</span>
       </div>
@@ -1121,6 +1123,50 @@ export default function Docentes() {
   const [criterionIndex, setCriterionIndex] = useState(0)
   const [criterionChoice, setCriterionChoice] = useState(null)
   const [copiedId, setCopiedId] = useState(null)
+  const [activeSection, setActiveSection] = useState(CHAPTER_INDEX[0].id)
+  const [readProgress, setReadProgress] = useState(0)
+  const navRef = useRef(null)
+
+  useEffect(() => {
+    const sections = CHAPTER_INDEX.map((item) => document.getElementById(item.id)).filter(Boolean)
+    if (sections.length === 0) return undefined
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting)
+        if (visible.length === 0) return
+        const topMost = visible.reduce((a, b) => (a.boundingClientRect.top < b.boundingClientRect.top ? a : b))
+        setActiveSection(topMost.target.id)
+      },
+      { rootMargin: '-15% 0px -70% 0px', threshold: 0 }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    function handleScroll() {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight
+      setReadProgress(scrollable > 0 ? Math.min(100, Math.max(0, (window.scrollY / scrollable) * 100)) : 0)
+    }
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const activePill = navRef.current?.querySelector(`[href="#${activeSection}"]`)
+    activePill?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
+  }, [activeSection])
+
+  function scrollToSection(id) {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  const activeIndex = CHAPTER_INDEX.findIndex((item) => item.id === activeSection)
+  const prevSection = activeIndex > 0 ? CHAPTER_INDEX[activeIndex - 1] : null
+  const nextSection = activeIndex >= 0 && activeIndex < CHAPTER_INDEX.length - 1 ? CHAPTER_INDEX[activeIndex + 1] : null
 
   const profile = PROFILES.find((item) => item.id === activeProfile) || PROFILES[0]
   const stage = CYCLE.find((item) => item.id === activeStage) || CYCLE[0]
@@ -1198,7 +1244,7 @@ export default function Docentes() {
             </a>
 
             <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-              <a href="#ruta" className="inline-flex items-center gap-2 bg-text text-white px-5 py-2.5 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-lg transition-all text-sm">
+              <a href="#ruta" className="inline-flex items-center gap-2 bg-text text-bg px-5 py-2.5 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-lg transition-all text-sm">
                 <Compass className="w-4 h-4" />
                 Encuentra tu ruta
               </a>
@@ -1258,17 +1304,30 @@ export default function Docentes() {
       </section>
 
       <nav className="sticky top-16 z-40 bg-bg/85 backdrop-blur-md border-y border-border/70" aria-label="Índice del capítulo">
-        <div className="max-w-6xl mx-auto px-4 flex items-center gap-1.5 overflow-x-auto py-2.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-text-lighter shrink-0 mr-1.5">Índice</span>
-          {CHAPTER_INDEX.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className="shrink-0 whitespace-nowrap px-3 py-1.5 rounded-full border border-border bg-surface text-xs font-semibold text-text-light no-underline hover:border-primary/40 hover:text-primary transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
+        <div className="h-0.5 bg-border/60">
+          <div className="h-full bg-primary transition-[width] duration-150" style={{ width: `${readProgress}%` }} />
+        </div>
+        <div ref={navRef} className="max-w-6xl mx-auto px-4 flex items-center gap-1.5 overflow-x-auto py-2.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-text-lighter shrink-0 mr-1.5">
+            {activeIndex >= 0 ? `${activeIndex + 1}/${CHAPTER_INDEX.length}` : 'Índice'}
+          </span>
+          {CHAPTER_INDEX.map((item) => {
+            const isCurrent = item.id === activeSection
+            return (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                aria-current={isCurrent ? 'true' : undefined}
+                className={`shrink-0 whitespace-nowrap px-3 py-1.5 rounded-full border text-xs font-semibold no-underline transition-colors ${
+                  isCurrent
+                    ? 'bg-text text-bg border-text'
+                    : 'border-border bg-surface text-text-light hover:border-primary/40 hover:text-primary'
+                }`}
+              >
+                {item.label}
+              </a>
+            )
+          })}
         </div>
       </nav>
 
@@ -1369,9 +1428,9 @@ export default function Docentes() {
                   role="tab"
                   aria-selected={isActive}
                   onClick={() => setActiveProfile(item.id)}
-                  className={`w-full flex items-center gap-3 p-3.5 rounded-xl border-none text-left cursor-pointer transition-all ${isActive ? 'bg-text text-white shadow-md' : 'bg-transparent text-text-light hover:bg-text/4 hover:text-text'}`}
+                  className={`w-full flex items-center gap-3 p-3.5 rounded-xl border-none text-left cursor-pointer transition-all ${isActive ? 'bg-text text-bg shadow-md' : 'bg-transparent text-text-light hover:bg-text/4 hover:text-text'}`}
                 >
-                  <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-white' : 'text-accent'}`} />
+                  <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-bg' : 'text-accent'}`} />
                   <span className="font-semibold text-sm">{item.label}</span>
                   <ArrowRight className={`w-4 h-4 ml-auto ${isActive ? 'opacity-100' : 'opacity-0'}`} />
                 </button>
@@ -1460,7 +1519,7 @@ export default function Docentes() {
             ))}
           </div>
 
-          <div className="mt-8 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-2 max-w-3xl mx-auto" role="img" aria-label="Ruta de adopción en tres pasos: prueba docente, práctica compartida y autonomía del estudiante">
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-3 sm:gap-2 max-w-3xl mx-auto" role="img" aria-label="Ruta de adopción en tres pasos: prueba docente, práctica compartida y autonomía del estudiante">
             {[
               { n: '1', label: 'Prueba docente', color: 'bg-primary' },
               { n: '2', label: 'Práctica compartida', color: 'bg-warm' },
@@ -1471,7 +1530,7 @@ export default function Docentes() {
                   <span className={`w-9 h-9 ${item.color} text-white rounded-full flex items-center justify-center font-display font-bold text-sm shadow-lg`}>{item.n}</span>
                   <span className="text-[11px] font-semibold text-white/70">{item.label}</span>
                 </div>
-                {index < 2 && <ArrowRight className="w-5 h-5 text-white/25" />}
+                {index < 2 && <ArrowRight className="w-5 h-5 text-white/25 rotate-90 sm:rotate-0 mx-auto" />}
               </div>
             ))}
           </div>
@@ -1499,7 +1558,7 @@ export default function Docentes() {
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActiveStage(item.id)}
-                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border text-sm font-semibold cursor-pointer transition-all ${isActive ? 'bg-text text-white border-text shadow-md' : 'bg-surface text-text-light border-border hover:border-primary/30 hover:text-text'}`}
+                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border text-sm font-semibold cursor-pointer transition-all ${isActive ? 'bg-text text-bg border-text shadow-md' : 'bg-surface text-text-light border-border hover:border-primary/30 hover:text-text'}`}
               >
                 <Icon className="w-4 h-4" />
                 {item.label}
@@ -1587,7 +1646,7 @@ export default function Docentes() {
                         type="button"
                         aria-pressed={isActive}
                         onClick={() => chooseDesignLevel(level)}
-                        className={`text-left px-3.5 py-3 rounded-xl border text-xs font-semibold cursor-pointer transition-all ${isActive ? 'bg-text text-white border-text shadow-sm' : 'bg-surface text-text-light border-border hover:border-primary/30 hover:text-text'}`}
+                        className={`text-left px-3.5 py-3 rounded-xl border text-xs font-semibold cursor-pointer transition-all ${isActive ? 'bg-text text-bg border-text shadow-sm' : 'bg-surface text-text-light border-border hover:border-primary/30 hover:text-text'}`}
                       >
                         {level.label}
                       </button>
@@ -1733,7 +1792,7 @@ export default function Docentes() {
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setScenarioFilter(filter.id)}
-                className={`px-4 py-2.5 rounded-xl border text-sm font-semibold cursor-pointer transition-all ${isActive ? 'bg-text text-white border-text shadow-md' : 'bg-surface text-text-light border-border hover:border-primary/30 hover:text-text'}`}
+                className={`px-4 py-2.5 rounded-xl border text-sm font-semibold cursor-pointer transition-all ${isActive ? 'bg-text text-bg border-text shadow-md' : 'bg-surface text-text-light border-border hover:border-primary/30 hover:text-text'}`}
               >
                 {filter.label}
               </button>
@@ -2092,9 +2151,9 @@ export default function Docentes() {
                   role="tab"
                   aria-selected={isActive}
                   onClick={() => setToolkitGroup(group.id)}
-                  className={`w-full flex items-center gap-3 p-3 rounded-xl border-none text-left cursor-pointer transition-all ${isActive ? 'bg-text text-white shadow-md' : 'bg-transparent text-text-light hover:bg-text/4 hover:text-text'}`}
+                  className={`w-full flex items-center gap-3 p-3 rounded-xl border-none text-left cursor-pointer transition-all ${isActive ? 'bg-text text-bg shadow-md' : 'bg-transparent text-text-light hover:bg-text/4 hover:text-text'}`}
                 >
-                  <Icon className={`w-4.5 h-4.5 shrink-0 ${isActive ? 'text-amber-300' : 'text-warm'}`} />
+                  <Icon className={`w-4.5 h-4.5 shrink-0 ${isActive ? 'text-bg' : 'text-warm'}`} />
                   <span className="font-semibold text-sm">{group.label}</span>
                   <ArrowRight className={`w-4 h-4 ml-auto transition-opacity ${isActive ? 'opacity-100' : 'opacity-0'}`} />
                 </button>
@@ -2279,7 +2338,7 @@ export default function Docentes() {
             <h2 className="text-2xl md:text-3xl font-extrabold text-text tracking-tight mb-3">La mejor IA del aula sigue siendo una buena pregunta</h2>
             <p className="text-text-light leading-relaxed max-w-2xl mx-auto mb-8">Explora las herramientas del catálogo con un problema pedagógico concreto, compara alternativas y conserva la que te ayude a observar mejor el aprendizaje.</p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link to="/explorar?categoria=educacion" className="inline-flex items-center gap-2 bg-text text-white px-6 py-3 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-lg transition-all">
+              <Link to="/explorar?categoria=educacion" className="inline-flex items-center gap-2 bg-text text-bg px-6 py-3 rounded-xl font-semibold no-underline hover:bg-text/90 hover:shadow-lg transition-all">
                 <Search className="w-4 h-4" />
                 Ver herramientas educativas
               </Link>
@@ -2299,6 +2358,32 @@ export default function Docentes() {
           </div>
         </div>
       </section>
+
+      {readProgress > 3 && (
+        <div className="fixed bottom-5 right-4 sm:right-6 z-40 flex flex-col items-stretch gap-0.5 bg-surface border border-border rounded-2xl shadow-lg p-1.5">
+          <button
+            type="button"
+            onClick={() => prevSection && scrollToSection(prevSection.id)}
+            disabled={!prevSection}
+            aria-label={prevSection ? `Sección anterior: ${prevSection.label}` : 'Ya estás en la primera sección'}
+            className="p-2 rounded-xl text-text-light hover:bg-text/5 hover:text-primary disabled:opacity-30 disabled:hover:bg-transparent disabled:cursor-not-allowed transition-colors"
+          >
+            <ChevronUp className="w-4 h-4" />
+          </button>
+          <div className="text-center text-[9px] font-bold text-text-lighter px-1 leading-tight">
+            {activeIndex >= 0 ? activeIndex + 1 : 1}/{CHAPTER_INDEX.length}
+          </div>
+          <button
+            type="button"
+            onClick={() => nextSection && scrollToSection(nextSection.id)}
+            disabled={!nextSection}
+            aria-label={nextSection ? `Siguiente sección: ${nextSection.label}` : 'Ya estás en la última sección'}
+            className="p-2 rounded-xl text-text-light hover:bg-text/5 hover:text-primary disabled:opacity-30 disabled:hover:bg-transparent disabled:cursor-not-allowed transition-colors"
+          >
+            <ChevronDown className="w-4 h-4" />
+          </button>
+        </div>
+      )}
     </div>
   )
 }
