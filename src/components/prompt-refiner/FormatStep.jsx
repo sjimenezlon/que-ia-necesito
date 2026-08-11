@@ -16,7 +16,7 @@ function Chip({ label, selected, onClick }) {
   )
 }
 
-const FORMAT_OPTIONS = ['Texto corrido', 'Lista con viñetas', 'Tabla comparativa', 'Código fuente', 'JSON / Datos estructurados', 'Paso a paso', 'Presentación / Slides', 'Documento formal', 'Guion / Script', 'Email / Mensaje', 'Post para redes', 'Infografía textual']
+const FORMAT_OPTIONS = ['Texto corrido', 'Lista con viñetas', 'Tabla comparativa', 'Markdown listo para pegar', 'Código fuente', 'JSON con esquema fijo', 'CSV / hoja de cálculo', 'Diagrama en Mermaid', 'Paso a paso', 'Presentación / Slides', 'Documento formal', 'Guion / Script', 'Email / Mensaje', 'Post para redes', 'Infografía textual']
 
 export default function FormatStep({ formats, toggleFormat, length, setLength, sections, setSections, onNext, onPrev }) {
   return (
@@ -25,6 +25,12 @@ export default function FormatStep({ formats, toggleFormat, length, setLength, s
         <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Paso 5 — Estructura</p>
         <h2 className="text-xl font-bold text-text mb-1">¿Qué forma debe tener el resultado?</h2>
         <p className="text-sm text-text-light">Especifica el formato, la extensión y la organización del output.</p>
+      </div>
+
+      <div className="mb-5 rounded-xl border border-border bg-text/[0.03] p-4 text-xs text-text-light leading-relaxed">
+        <span className="font-semibold text-text">Di lo que sí quieres, no lo que no quieres.</span> «Entrega una tabla
+        de tres columnas» funciona mejor que «no me escribas párrafos». Si el resultado alimenta otro sistema, pide
+        JSON con los campos exactos y sin texto alrededor.
       </div>
 
       <div className="space-y-5">

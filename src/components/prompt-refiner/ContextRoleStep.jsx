@@ -9,9 +9,16 @@ export default function ContextRoleStep({ role, setRole, audience, setAudience, 
         <p className="text-sm text-text-light">Establece quién eres, para quién y en qué contexto se ejecutará la tarea.</p>
       </div>
 
+      <div className="mb-5 rounded-xl border border-border bg-text/[0.03] p-4 text-xs text-text-light leading-relaxed">
+        <span className="font-semibold text-text">Nota de 2026:</span> el rol ya no «desbloquea» capacidades — los
+        modelos actuales no rinden más porque los llames experto. Sigue sirviendo, pero para otra cosa: fijar el
+        vocabulario, el criterio profesional y qué se da por obvio. <span className="font-semibold text-text">La
+        audiencia y el contexto pesan hoy más que el rol.</span>
+      </div>
+
       <div className="space-y-5">
         <div>
-          <label className="block text-sm font-medium text-text mb-1">¿Qué rol debe asumir la IA?</label>
+          <label className="block text-sm font-medium text-text mb-1">¿Qué rol debe asumir la IA? <span className="text-text-lighter font-normal">(opcional)</span></label>
           <p className="text-xs text-text-lighter italic mb-2">{domainData?.roleHint}</p>
           <textarea
             value={role}

@@ -1,18 +1,18 @@
-import { ChevronLeft, ChevronRight, Package, Landmark } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Package, Landmark, FileStack } from 'lucide-react'
 
-export default function TaskStep({ task, setTask, subtasks, setSubtasks, example, setExample, product, setProduct, domainData, isPublico, onNext, onPrev }) {
+export default function TaskStep({ task, setTask, subtasks, setSubtasks, sources, setSources, example, setExample, product, setProduct, domainData, isPublico, onNext, onPrev }) {
   return (
     <div>
       <div className="mb-6">
         <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Paso 3 — Requerimiento</p>
         <h2 className="text-xl font-bold text-text mb-1">¿Qué necesitas que haga la IA?</h2>
-        <p className="text-sm text-text-light">Describe la tarea concreta. <span className="text-text font-medium">Primero define el producto</span>, luego el trabajo.</p>
+        <p className="text-sm text-text-light">Describe la tarea concreta. <span className="text-text font-medium">Primero define el producto</span>, luego el trabajo y con qué material lo hará.</p>
       </div>
 
       {isPublico && (
-        <div className="mb-5 rounded-xl border border-indigo-200 bg-indigo-50/60 p-4 flex items-start gap-3">
-          <Landmark className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" />
-          <div className="text-xs text-indigo-900 leading-relaxed">
+        <div className="mb-5 rounded-xl border border-primary/25 bg-primary/5 p-4 flex items-start gap-3">
+          <Landmark className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+          <div className="text-xs text-text leading-relaxed">
             <span className="font-semibold">Sector público:</span> sé explícito con el entregable (memorando radicable,
             acta, ficha AIR, tabla comparativa de ofertas, boletín ciudadano en lenguaje claro). El tono institucional,
             las citas normativas y la trazabilidad se negocian en el paso de <span className="font-semibold">Filtros</span>.
@@ -51,8 +51,32 @@ export default function TaskStep({ task, setTask, subtasks, setSubtasks, example
           />
         </div>
 
+        <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
+          <label className="flex items-center gap-2 text-sm font-semibold text-text mb-1">
+            <FileStack className="w-4 h-4 text-primary" />
+            Materia prima y fuentes
+          </label>
+          <p className="text-xs text-text-lighter italic mb-2">
+            {domainData?.sourcesHint || 'Ej: el borrador anterior, los datos del último trimestre, el documento del cliente, la norma aplicable.'}
+          </p>
+          <textarea
+            value={sources}
+            onChange={(e) => setSources(e.target.value)}
+            rows={3}
+            placeholder="Enumera qué material vas a adjuntar o pegar, y cuál manda si dos fuentes se contradicen..."
+            className="w-full px-4 py-3 rounded-xl border border-border bg-surface text-sm text-text placeholder:text-text-lighter focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 resize-y"
+          />
+          <p className="text-[11px] text-text-lighter leading-relaxed mt-2">
+            Con ventanas de un millón de tokens ya cabe el expediente completo: pegar el material rinde más que pulir
+            adjetivos. Anonimiza datos personales antes de subirlos.
+          </p>
+        </div>
+
         <div>
           <label className="block text-sm font-medium text-text mb-1">Subtareas o pasos esperados <span className="text-text-lighter font-normal">(opcional)</span></label>
+          <p className="text-xs text-text-lighter italic mb-2">
+            Úsalo solo si el orden importa de verdad. El modelo ya sabe descomponer un problema: no le dictes cómo pensar.
+          </p>
           <textarea
             value={subtasks}
             onChange={(e) => setSubtasks(e.target.value)}
@@ -64,6 +88,9 @@ export default function TaskStep({ task, setTask, subtasks, setSubtasks, example
 
         <div>
           <label className="block text-sm font-medium text-text mb-1">Ejemplo de resultado deseado <span className="text-text-lighter font-normal">(opcional)</span></label>
+          <p className="text-xs text-text-lighter italic mb-2">
+            Un ejemplo bien elegido enseña lo que un párrafo de instrucciones no logra explicar. Con uno suele bastar.
+          </p>
           <textarea
             value={example}
             onChange={(e) => setExample(e.target.value)}

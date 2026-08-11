@@ -47,7 +47,7 @@ export default function Home({ onCompare, compareIds, favorites = [], onToggleFa
               <div className="text-xs font-bold text-text-lighter uppercase tracking-[0.14em] mb-1.5">Capítulos especiales</div>
               <h2 className="text-2xl font-bold text-text tracking-tight">IA aplicada a tu contexto</h2>
             </div>
-            <span className="hidden sm:block text-xs text-text-lighter">Guías prácticas · Colombia · Julio 2026</span>
+            <span className="hidden sm:block text-xs text-text-lighter">Guías prácticas · Colombia · Agosto 2026</span>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
             <Link to="/docentes" className="group relative overflow-hidden bg-surface border border-border rounded-2xl p-6 no-underline hover:shadow-lg hover:-translate-y-0.5 hover:border-accent/35 transition-all">

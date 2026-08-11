@@ -10,11 +10,11 @@
       "educacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites (GPT-5.5). Go: $8/mes. Plus: $20/mes. Pro intermedio: $100/mes. Pro: $200/mes",
+    "pricingDetail": "Gratis con chats de texto ilimitados (GPT-5.6 Luna). Go: $8/mes. Plus: $20/mes. Pro intermedio: $100/mes. Pro: $200/mes",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Asistente conversacional de OpenAI para escribir, investigar, programar y más.",
-    "fullDescription": "ChatGPT es el chatbot de inteligencia artificial más popular del mundo. Desarrollado por OpenAI, permite mantener conversaciones naturales para resolver dudas, redactar textos, generar código, analizar documentos y mucho más. Su interfaz es simple e intuitiva, ideal tanto para principiantes como para usuarios avanzados. Su familia más reciente es GPT-5.6 (9 de julio de 2026), con tres variantes: Luna (rápida y económica), Terra (equilibrada para el día a día) y Sol (la más capaz, para el trabajo difícil). En el chat cotidiano el modelo por defecto sigue siendo GPT-5.5 Instant; Sol se activa desde los ajustes de razonamiento en los planes de pago.",
+    "fullDescription": "ChatGPT es el chatbot de inteligencia artificial más popular del mundo. Desarrollado por OpenAI, permite mantener conversaciones naturales para resolver dudas, redactar textos, generar código, analizar documentos y mucho más. Su interfaz es simple e intuitiva, ideal tanto para principiantes como para usuarios avanzados. Su familia más reciente es GPT-5.6 (9 de julio de 2026), con tres variantes: Luna (rápida y económica), Terra (equilibrada para el día a día) y Sol (la más capaz, para el trabajo difícil). Desde agosto de 2026 el modelo por defecto en el plan gratuito y en Go es GPT-5.6 Luna, con chats de texto ilimitados y un botón «Think» para las preguntas difíciles; en Plus y Pro, GPT-5.6 Sol añadió un control deslizante para decidir cuánto razona antes de responder.",
     "useCases": [
       "Redactar correos, informes y documentos",
       "Resolver dudas complejas con explicaciones claras",
@@ -90,7 +90,7 @@
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Asistente de Anthropic especializado en análisis largo, escritura y programación.",
-    "fullDescription": "Claude es el asistente de IA de Anthropic, conocido por su capacidad de procesar documentos muy largos, generar texto de alta calidad y programar con precisión. Destaca por ser más cauteloso y preciso que otros chatbots, con un enfoque en seguridad y utilidad. Su familia vigente es Claude 5: Claude Opus 5 (24 de julio de 2026) es el modelo por defecto del plan Max y la mejor opción en Pro —se acerca a la inteligencia de Claude Fable 5 a la mitad del precio y trae un modo rápido 2,5 veces más veloz—, Claude Fable 5 (junio de 2026) sigue siendo el modelo más capaz de la casa para razonamiento extremo y trabajo agéntico largo, y Claude Sonnet 5 es el equilibrio entre velocidad y costo. Todos con ventana de contexto de 1 millón de tokens.",
+    "fullDescription": "Claude es el asistente de IA de Anthropic, conocido por su capacidad de procesar documentos muy largos, generar texto de alta calidad y programar con precisión. Destaca por ser más cauteloso y preciso que otros chatbots, con un enfoque en seguridad y utilidad. Su familia vigente es Claude 5: Claude Opus 5 (24 de julio de 2026) es el modelo por defecto del plan Max y la mejor opción en Pro —se acerca a la inteligencia de Claude Fable 5 a la mitad del precio y trae un modo rápido 2,5 veces más veloz—, Claude Fable 5 (junio de 2026) sigue siendo el modelo más capaz de la casa para razonamiento extremo y trabajo agéntico largo, y Claude Sonnet 5 es el equilibrio entre velocidad y costo. Todos con ventana de contexto de 1 millón de tokens, pensamiento adaptativo por defecto y un dial de esfuerzo de cinco niveles para graduar cuánto razona en cada consulta.",
     "useCases": [
       "Analizar documentos largos de hasta 200 páginas",
       "Escribir textos creativos y profesionales",
@@ -236,7 +236,7 @@
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Motor de búsqueda con IA que da respuestas con fuentes verificables.",
-    "fullDescription": "Perplexity es un motor de búsqueda potenciado por IA que responde preguntas citando fuentes verificables. A diferencia de los chatbots tradicionales, cada respuesta incluye enlaces a las fuentes originales, permitiendo verificar la información. Es ideal para investigación y consultas que requieren datos precisos y actualizados.",
+    "fullDescription": "Perplexity es un motor de búsqueda potenciado por IA que responde preguntas citando fuentes verificables. A diferencia de los chatbots tradicionales, cada respuesta incluye enlaces a las fuentes originales, permitiendo verificar la información. Es ideal para investigación y consultas que requieren datos precisos y actualizados. En el plan Pro se elige con qué modelo responde: Claude Sonnet 5, Gemini 3.1 Pro, GPT-5.6 Terra o Sonar 2, el modelo propio de la casa.",
     "useCases": [
       "Investigar temas con fuentes citadas",
       "Obtener respuestas actualizadas sobre cualquier tema",
@@ -5301,7 +5301,7 @@
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Modelo open-source chino con razonamiento avanzado a muy bajo costo — rival directo de GPT-4 y Claude.",
-    "fullDescription": "DeepSeek es un laboratorio chino que ha disrumpido el mercado con modelos de IA de pesos abiertos que igualan o superan a los modelos cerrados en muchas tareas, a una fracción del costo. Destaca en razonamiento matemático, programación y análisis técnico, y su API es mucho más barata que la de OpenAI. Su familia vigente es DeepSeek V4, con ventana de contexto de 1M de tokens y variantes especializadas: V4-Pro para conocimiento, matemáticas y razonamiento difícil, y V4 Flash como la opción más económica.",
+    "fullDescription": "DeepSeek es un laboratorio chino que ha disrumpido el mercado con modelos de IA de pesos abiertos que igualan o superan a los modelos cerrados en muchas tareas, a una fracción del costo. Destaca en razonamiento matemático, programación y análisis técnico, y su API es mucho más barata que la de OpenAI. Su familia vigente es DeepSeek V4, con ventana de contexto de 1M de tokens y variantes especializadas: V4-Pro para conocimiento, matemáticas y razonamiento difícil, y V4 Flash como la opción más económica: su reentrenamiento V4-Flash-0731 (31 de julio de 2026) cuesta USD 0,14 por millón de tokens de entrada y 0,28 de salida, hoy el piso de precio del mercado.",
     "useCases": [
       "Resolver problemas matemáticos complejos paso a paso",
       "Generar y depurar código en múltiples lenguajes",
@@ -5370,7 +5370,7 @@
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Asistente agéntico de Moonshot AI; K3 (julio 2026) es el modelo de pesos abiertos más grande del mundo, con 1M de contexto.",
-    "fullDescription": "Kimi es el asistente de Moonshot AI. Su versión K3 (16 de julio de 2026) es un modelo MoE de 2,8 billones de parámetros —el más grande publicado con pesos abiertos hasta ahora—, con ventana de contexto de 1.048.576 tokens (1M) y comprensión visual nativa. En evaluaciones independientes de trabajo de largo horizonte supera a Claude Opus 4.8 y a GPT-5.5, aunque queda por debajo de Claude Fable 5 y GPT-5.6 Sol, y lidera la arena de código frontend. Moonshot prometió liberar los pesos completos el 27 de julio de 2026. Ideal para expedientes voluminosos, investigación normativa y tareas que exigen analizar cientos de documentos sin perder el hilo.",
+    "fullDescription": "Kimi es el asistente de Moonshot AI. Su versión K3 (16 de julio de 2026) es un modelo MoE de 2,8 billones de parámetros —el más grande publicado con pesos abiertos hasta ahora—, con ventana de contexto de 1.048.576 tokens (1M) y comprensión visual nativa. En evaluaciones independientes de trabajo de largo horizonte supera a Claude Opus 4.8 y a GPT-5.5, aunque queda por debajo de Claude Fable 5 y GPT-5.6 Sol, y lidera la arena de código frontend. Moonshot liberó los pesos completos el 27 de julio de 2026. Ideal para expedientes voluminosos, investigación normativa y tareas que exigen analizar cientos de documentos sin perder el hilo.",
     "useCases": [
       "Analizar expedientes de licitación completos (pliego, adendas, ofertas, evaluación)",
       "Investigar líneas jurisprudenciales cruzando sentencias completas",

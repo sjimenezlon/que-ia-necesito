@@ -16,7 +16,7 @@ function Chip({ label, selected, onClick }) {
   )
 }
 
-const TONE_OPTIONS = ['Profesional', 'Conversacional', 'Académico', 'Persuasivo', 'Técnico', 'Inspirador', 'Directo', 'Humorístico', 'Poético', 'Periodístico', 'Minimalista', 'Provocador']
+const TONE_OPTIONS = ['Profesional', 'Conversacional', 'Académico', 'Persuasivo', 'Técnico', 'Inspirador', 'Directo', 'Humorístico', 'Poético', 'Periodístico', 'Minimalista', 'Provocador', 'Lenguaje claro', 'Institucional', 'Sin relleno ni superlativos']
 
 export default function ToneStyleStep({ tones, toggleTone, lang, setLang, complexity, setComplexity, styleRef, setStyleRef, onNext, onPrev }) {
   return (
@@ -25,6 +25,11 @@ export default function ToneStyleStep({ tones, toggleTone, lang, setLang, comple
         <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Paso 4 — Tono y Estilo</p>
         <h2 className="text-xl font-bold text-text mb-1">¿Cómo debe sonar el resultado?</h2>
         <p className="text-sm text-text-light">Define la voz, el registro y la personalidad del output.</p>
+      </div>
+
+      <div className="mb-5 rounded-xl border border-border bg-text/[0.03] p-4 text-xs text-text-light leading-relaxed">
+        <span className="font-semibold text-text">Una referencia concreta vale más que cinco adjetivos.</span> Si
+        tienes un texto tuyo que suena como quieres, pégalo: el modelo imita mejor un ejemplo que una descripción.
       </div>
 
       <div className="space-y-5">
