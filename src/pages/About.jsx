@@ -57,7 +57,7 @@ export default function About() {
             'Más de 100 herramientas de IA curadas y verificadas',
             '16 categorías: incluye finanzas, programación, diseño y automatización',
             'Capítulo especial para el sector público colombiano con casos de uso',
-            'Capítulo especial de herramientas de IA asiáticas (China, Corea, Japón, India) a julio 2026',
+            'Capítulo especial de herramientas de IA asiáticas (China, Corea, Japón, India) a agosto 2026',
             'Información de precios, nivel de dificultad y casos de uso',
             'Guías paso a paso para empezar con cada herramienta',
             'Consejos prácticos de uso para cada herramienta',

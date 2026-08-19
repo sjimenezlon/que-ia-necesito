@@ -14,7 +14,7 @@
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Asistente conversacional de OpenAI para escribir, investigar, programar y más.",
-    "fullDescription": "ChatGPT es el chatbot de inteligencia artificial más popular del mundo. Desarrollado por OpenAI, permite mantener conversaciones naturales para resolver dudas, redactar textos, generar código, analizar documentos y mucho más. Su interfaz es simple e intuitiva, ideal tanto para principiantes como para usuarios avanzados. Su familia más reciente es GPT-5.6 (9 de julio de 2026), con tres variantes: Luna (rápida y económica), Terra (equilibrada para el día a día) y Sol (la más capaz, para el trabajo difícil). Desde agosto de 2026 el modelo por defecto en el plan gratuito y en Go es GPT-5.6 Luna, con chats de texto ilimitados y un botón «Think» para las preguntas difíciles; en Plus y Pro, GPT-5.6 Sol añadió un control deslizante para decidir cuánto razona antes de responder.",
+    "fullDescription": "ChatGPT es el chatbot de inteligencia artificial más popular del mundo. Desarrollado por OpenAI, permite mantener conversaciones naturales para resolver dudas, redactar textos, generar código, analizar documentos y mucho más. Su familia más reciente es GPT-5.6 (9 de julio de 2026), con tres variantes: Luna (rápida y económica), Terra (equilibrada para el día a día) y Sol (la más capaz, para el trabajo difícil). Desde agosto de 2026 el modelo por defecto en el plan gratuito y en Go es GPT-5.6 Luna, con chats de texto ilimitados y un botón «Think» para las preguntas difíciles. El 6 de agosto OpenAI actualizó GPT-5.6 Sol para Plus y Pro: ajusta el nivel de detalle a cada pregunta, escribe más compacto y contradice más a menudo cuando corregir ayuda. El 13 de agosto estrenó en vista previa un modo Ultrafast que corre Sol hasta 14 veces más rápido. Ojo con el calendario: el modelo o3 se retira de ChatGPT el 26 de agosto de 2026 y el GPT oficial de DALL·E desaparece el 30.",
     "useCases": [
       "Redactar correos, informes y documentos",
       "Resolver dudas complejas con explicaciones claras",
@@ -28,7 +28,7 @@
       "Se específico: entre más contexto des, mejor respuesta obtienes",
       "Usa Proyectos para organizar conversaciones por tema"
     ],
-    "proTip": "Usa instrucciones personalizadas (Custom Instructions) para que ChatGPT siempre sepa tu contexto profesional y estilo preferido. Y si pagas plan, sube el nivel de razonamiento a GPT-5.6 Sol solo para lo difícil: en preguntas simples no mejora la respuesta y te consume el límite.",
+    "proTip": "Si una respuesta te sale demasiado larga o demasiado complaciente, prueba GPT-5.6 Sol actualizado: fue ajustado precisamente para escribir más corto y para llevarte la contraria cuando te equivocas. Y en el plan gratuito, el botón «Think» cambia el resultado en preguntas difíciles.",
     "pros": [
       "Muy versatil y fácil de usar",
       "Interfaz simple e intuitiva",
@@ -90,7 +90,7 @@
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Asistente de Anthropic especializado en análisis largo, escritura y programación.",
-    "fullDescription": "Claude es el asistente de IA de Anthropic, conocido por su capacidad de procesar documentos muy largos, generar texto de alta calidad y programar con precisión. Destaca por ser más cauteloso y preciso que otros chatbots, con un enfoque en seguridad y utilidad. Su familia vigente es Claude 5: Claude Opus 5 (24 de julio de 2026) es el modelo por defecto del plan Max y la mejor opción en Pro —se acerca a la inteligencia de Claude Fable 5 a la mitad del precio y trae un modo rápido 2,5 veces más veloz—, Claude Fable 5 (junio de 2026) sigue siendo el modelo más capaz de la casa para razonamiento extremo y trabajo agéntico largo, y Claude Sonnet 5 es el equilibrio entre velocidad y costo. Todos con ventana de contexto de 1 millón de tokens, pensamiento adaptativo por defecto y un dial de esfuerzo de cinco niveles para graduar cuánto razona en cada consulta.",
+    "fullDescription": "Claude es el asistente de IA de Anthropic, conocido por su capacidad de procesar documentos muy largos, generar texto de alta calidad y programar con precisión. Destaca por ser más cauteloso y preciso que otros chatbots, con un enfoque en seguridad y utilidad. Su familia vigente es Claude 5: Claude Opus 5 (24 de julio de 2026) es el modelo por defecto del plan Max y la mejor opción en Pro —se acerca a la inteligencia de Claude Fable 5 a la mitad del precio y trae un modo rápido 2,5 veces más veloz—, Claude Fable 5 (junio de 2026) sigue siendo el modelo más capaz de la casa para razonamiento extenso, Claude Sonnet 5 es el equilibrio de costo y velocidad, y Claude Haiku 4.5 el más económico. Toda la familia trabaja con 1 millón de tokens de contexto. Agosto de 2026 no trajo modelo nuevo sino plataforma: Claude adoptó la nueva especificación MCP del 28 de julio, con núcleo sin estado y autorización más fuerte por OAuth y OIDC, la base para conectar Claude a herramientas y datos propios.",
     "useCases": [
       "Analizar documentos largos de hasta 200 páginas",
       "Escribir textos creativos y profesionales",
@@ -162,11 +162,11 @@
       "escritura"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis. Google AI Plus: $4.99/mes. AI Pro: $19.99/mes. AI Ultra: $99.99/mes",
+    "pricingDetail": "Gratis. Google AI Plus: $4.99/mes. AI Pro: $19.99/mes. AI Ultra: $99.99/mes. API Gemini 3.7 Flash: $0,75/$3,75 por millón de tokens",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Asistente de Google con acceso a búsqueda en tiempo real e integración con Google.",
-    "fullDescription": "Gemini es el asistente de IA de Google que combina capacidades conversacionales con acceso directo a la búsqueda de Google y sus servicios. Puede buscar información actualizada, generar texto, analizar imágenes y conectarse con Gmail, Drive y otros productos de Google. Su familia vigente es Gemini 3.x: el plan gratuito ya llega a Gemini 3.6 Flash (21 de julio de 2026), el modelo «caballo de batalla» más barato y hasta 17 % más eficiente en tokens que su antecesor, mientras el modelo Pro de gama alta sigue siendo Gemini 3.1 Pro —Google retrasó Gemini 3.5 Pro y ya adelanta Gemini 4—. El plan de pago se llama Google AI Pro (antes Advanced).",
+    "fullDescription": "Gemini es el asistente de IA de Google que combina capacidades conversacionales con acceso directo a la búsqueda de Google y sus servicios. Puede buscar información actualizada, generar texto, analizar imágenes y conectarse con Gmail, Drive y otros productos de Google. Su familia vigente es Gemini 3.x: el 13 de agosto de 2026 llegó Gemini 3.7 Flash, el modelo «caballo de batalla», apenas tres semanas después de la versión anterior — mejor en depuración y en generar código desplegable a la primera, y con un precio de estreno de USD 0,75 por millón de tokens de entrada y 3,75 de salida, la mitad de lo que costó Gemini 3.6 Flash al lanzarse. El modelo Pro de gama alta sigue siendo Gemini 3.1 Pro: Google acumula retrasos con Gemini 3.5 Pro. El plan gratuito da acceso al Flash más reciente, y los planes de pago añaden límites más altos, Deep Research y el agente Gemini Spark.",
     "useCases": [
       "Buscar información actualizada en tiempo real",
       "Analizar imágenes y fotos",
@@ -5228,11 +5228,11 @@
       "escritura"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. X Premium: $8/mes. SuperGrok Lite: $10/mes. SuperGrok: $30/mes. SuperGrok Heavy: $300/mes",
+    "pricingDetail": "Gratis con límites. X Premium: $8/mes. SuperGrok: $30/mes. SuperGrok Heavy: $300/mes. API Grok 4.6: $2/$6 por millón de tokens (se duplica sobre 200K)",
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Asistente conversacional de xAI con acceso en tiempo real a X (Twitter) e integración multimodal.",
-    "fullDescription": "Grok es el asistente de IA desarrollado por xAI, la empresa de Elon Musk. Su principal diferencial es el acceso en tiempo real a conversaciones y tendencias en X (Twitter), lo que lo hace útil para análisis de actualidad, monitoreo de reputación y búsquedas sobre temas emergentes. Su versión vigente es Grok 4.5 (8 de julio de 2026), el primer modelo de la casa construido específicamente para programación y tareas agénticas: 500K de contexto, dial de esfuerzo de razonamiento por consulta (bajo, medio, alto) y API a USD 2/$6 por millón de tokens, bastante más barata que Claude Opus o GPT-5.5. Está disponible en la app de Grok, en la consola de xAI y dentro del editor Cursor.",
+    "fullDescription": "Grok es el asistente de IA desarrollado por xAI, la empresa de Elon Musk. Su principal diferencial es el acceso en tiempo real a conversaciones y tendencias en X (Twitter), lo que lo hace útil para análisis de actualidad, monitoreo de reputación y búsquedas sobre temas emergentes. Su versión vigente es Grok 4.6 (12 de agosto de 2026), enfocada en agentes de largo aliento, programación de varios pasos y trabajo visual: 500K de contexto y un modelo que, según xAI, se autoverifica más veces antes de seguir adelante. En el índice de Artificial Analysis empata con GPT-5.6 Sol y queda un punto debajo de Claude Fable 5, pero cuesta bastante menos: USD 2 por millón de tokens de entrada y 6 de salida por debajo de 200K tokens (el doble por encima de ese umbral), lo que hoy lo convierte en el modelo más barato de la frontera.",
     "useCases": [
       "Monitorear tendencias y conversaciones en redes sociales en tiempo real",
       "Analizar percepción pública sobre temas o marcas",
@@ -5297,11 +5297,11 @@
       "investigacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis ilimitado (modelo V4). API desde ~$0.14 por millón de tokens (muy bajo costo)",
+    "pricingDetail": "Gratis en web y app. API con tarifa pico/valle desde el 16-ago-2026 (la valle cuesta la mitad). V4-Flash desde ~$0,14 por millón de tokens de entrada",
     "difficulty": 2,
     "rating": 5,
-    "shortDescription": "Modelo open-source chino con razonamiento avanzado a muy bajo costo — rival directo de GPT-4 y Claude.",
-    "fullDescription": "DeepSeek es un laboratorio chino que ha disrumpido el mercado con modelos de IA de pesos abiertos que igualan o superan a los modelos cerrados en muchas tareas, a una fracción del costo. Destaca en razonamiento matemático, programación y análisis técnico, y su API es mucho más barata que la de OpenAI. Su familia vigente es DeepSeek V4, con ventana de contexto de 1M de tokens y variantes especializadas: V4-Pro para conocimiento, matemáticas y razonamiento difícil, y V4 Flash como la opción más económica: su reentrenamiento V4-Flash-0731 (31 de julio de 2026) cuesta USD 0,14 por millón de tokens de entrada y 0,28 de salida, hoy el piso de precio del mercado.",
+    "shortDescription": "Modelo chino de pesos abiertos con razonamiento avanzado a costo mínimo — hoy también con tarifa por hora del día.",
+    "fullDescription": "DeepSeek es un laboratorio chino que disrumpió el mercado con modelos de pesos abiertos que igualan o superan a los cerrados en muchas tareas, a una fracción del costo. Destaca en razonamiento matemático, programación y análisis técnico. Su familia vigente es DeepSeek V4, con ventana de 1M de tokens: V4-Pro (versión 0813, disponibilidad general el 13 de agosto de 2026) reforzó su capacidad de agente, estrenó soporte nativo de la Responses API, adaptación a Codex y tres niveles de esfuerzo de pensamiento (bajo, alto y máximo); V4-Flash, reentrenado el 31 de julio de 2026, sigue siendo el piso de precio del mercado con USD 0,14 por millón de tokens de entrada y 0,28 de salida. Desde el 16 de agosto de 2026 DeepSeek cobra distinto según la hora: tarifa pico y tarifa valle a la mitad del precio.",
     "useCases": [
       "Resolver problemas matemáticos complejos paso a paso",
       "Generar y depurar código en múltiples lenguajes",
@@ -5315,7 +5315,7 @@
       "Escribe tu consulta — muestra su cadena de razonamiento",
       "Para desarrolladores: usa la API desde platform.deepseek.com"
     ],
-    "proTip": "Activa DeepThink R1 cuando necesites ver el razonamiento explícito — es útil para entender errores matemáticos o depurar lógica compleja.",
+    "proTip": "Si corres agentes o procesos por lotes, prográmalos en horas valle: es el mismo modelo con la mitad de la factura. Y revisa tu integración — los endpoints heredados de DeepSeek se apagan el 24 de octubre de 2026.",
     "pros": [
       "Gratis sin límites significativos",
       "API extremadamente barata",
@@ -5324,12 +5324,13 @@
     "cons": [
       "Servidores en China (considerar privacidad)",
       "Censura en temas políticos sensibles",
-      "Menor soporte multimodal que GPT-4o"
+      "La factura ahora depende de la hora en que corras el trabajo"
     ],
     "alternatives": [
       "chatgpt",
       "claude",
-      "qwen"
+      "qwen",
+      "longcat"
     ],
     "keywords": [
       "deepseek",
@@ -5370,7 +5371,7 @@
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Asistente agéntico de Moonshot AI; K3 (julio 2026) es el modelo de pesos abiertos más grande del mundo, con 1M de contexto.",
-    "fullDescription": "Kimi es el asistente de Moonshot AI. Su versión K3 (16 de julio de 2026) es un modelo MoE de 2,8 billones de parámetros —el más grande publicado con pesos abiertos hasta ahora—, con ventana de contexto de 1.048.576 tokens (1M) y comprensión visual nativa. En evaluaciones independientes de trabajo de largo horizonte supera a Claude Opus 4.8 y a GPT-5.5, aunque queda por debajo de Claude Fable 5 y GPT-5.6 Sol, y lidera la arena de código frontend. Moonshot liberó los pesos completos el 27 de julio de 2026. Ideal para expedientes voluminosos, investigación normativa y tareas que exigen analizar cientos de documentos sin perder el hilo.",
+    "fullDescription": "Kimi es el asistente de Moonshot AI. Su versión K3 (16 de julio de 2026) es un modelo MoE de 2,8 billones de parámetros —el más grande publicado con pesos abiertos hasta ahora—, con ventana de contexto de 1.048.576 tokens (1M) y comprensión visual nativa. En evaluaciones independientes de trabajo de largo horizonte supera a Claude Opus 4.8 y a GPT-5.5, aunque queda por debajo de Claude Fable 5 y GPT-5.6 Sol, y lidera la arena de código frontend. Moonshot liberó los pesos completos el 27 de julio de 2026 con licencia MIT —una de las pocas aperturas chinas de agosto sin letra pequeña— y ese mismo día tuvo que pausar suscripciones por la saturación de su infraestructura. A mediados de agosto seguía encabezando los rankings de modelos chinos, con Qwen3.8-Max a un punto de distancia. Ideal para expedientes voluminosos, investigación normativa y tareas que exigen analizar cientos de documentos sin perder el hilo.",
     "useCases": [
       "Analizar expedientes de licitación completos (pliego, adendas, ofertas, evaluación)",
       "Investigar líneas jurisprudenciales cruzando sentencias completas",
@@ -5399,7 +5400,8 @@
     "alternatives": [
       "claude",
       "deepseek",
-      "chatgpt"
+      "chatgpt",
+      "longcat"
     ],
     "keywords": [
       "kimi",
@@ -5435,11 +5437,11 @@
       "escritura"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis en Qwen Chat con cuenta Alibaba. API Qwen3.7: ~$0.30–7.50 por millón de tokens",
+    "pricingDetail": "Gratis en Qwen Chat con cuenta Alibaba. API Qwen3.8-Max: $2/$6 por millón de tokens (caché desde $0,17). Qwen3.8-27B: gratis y autohospedable (Apache 2.0)",
     "difficulty": 2,
     "rating": 4,
-    "shortDescription": "Modelo multilingüe de Alibaba con fortaleza en idiomas asiáticos y comprensión de documentos largos.",
-    "fullDescription": "Qwen (通义千问) es la familia de modelos de IA de Alibaba Cloud. Qwen2.5 y Qwen3 (2026) son referentes open-source con excelente rendimiento en traducciones, comprensión de documentos extensos (1M tokens de contexto) y procesamiento multilingüe — especialmente útil para empresas con operación en Asia o que manejen múltiples idiomas. Su serie vigente es Qwen3.7 (Max y Plus multimodal), con capacidades de agente visual.",
+    "shortDescription": "Modelo multilingüe de Alibaba; Qwen3.8-Max (agosto 2026) es el mayor de la familia: 2,4 billones de parámetros y 1M de contexto.",
+    "fullDescription": "Qwen (通义千问) es la familia de modelos de IA de Alibaba Cloud, referente mundial del código abierto por su rendimiento en traducción, documentos extensos y procesamiento multilingüe — especialmente útil para empresas con operación en Asia o que manejen varios idiomas. Su buque insignia es Qwen3.8-Max (3 de agosto de 2026): un MoE de 2,4 billones de parámetros con 95.000 millones activos, ventana de 1 millón de tokens y entrada nativa de texto, imagen y video. El 12 de agosto Alibaba publicó sus pesos —el primer Max abierto de la familia— aunque con una licencia propia de reparto de ingresos, y el checkpoint descargable es solo de texto: pierde la visión y el contexto de 1M que sí trae la API. Al día siguiente llegó Qwen3.8-27B, un modelo denso con codificador de visión bajo Apache 2.0 que cabe en una sola GPU, hoy la vía realista para desplegar Qwen en tu propia infraestructura.",
     "useCases": [
       "Traducir entre más de 100 idiomas con matices culturales",
       "Analizar documentos de hasta 1 millón de tokens",
@@ -5453,21 +5455,24 @@
       "Sube documentos largos para análisis",
       "Para desarrolladores: usa la API en DashScope"
     ],
-    "proTip": "Usa Qwen cuando necesites traducir matices culturales entre idiomas asiáticos — supera a Google Translate y DeepL en chino, japonés y coreano.",
+    "proTip": "Si te importa la soberanía de los datos, no persigas el modelo de 2,4 billones: descarga Qwen3.8-27B, que corre en una sola GPU con licencia Apache 2.0 y conserva la visión. El Max abierto es una declaración estratégica, no una opción de despliegue.",
     "pros": [
       "Excelente multilingüe",
-      "Contexto muy largo (1M tokens)",
-      "Open-source con licencia permisiva"
+      "Contexto de 1M de tokens y entrada de imagen y video",
+      "Precio de API muy por debajo de los flagships occidentales",
+      "Versión 27B abierta con Apache 2.0 para autohospedar"
     ],
     "cons": [
-      "Interfaz mayormente en chino/inglés",
+      "La licencia del Max abierto no es Apache: incluye reparto de ingresos",
+      "El checkpoint descargable es solo texto y sin contexto de 1M",
       "Servidores chinos (privacidad)",
-      "Menor cobertura de español"
+      "Menor cobertura de español que los líderes occidentales"
     ],
     "alternatives": [
       "deepseek",
       "chatgpt",
-      "claude"
+      "claude",
+      "longcat"
     ],
     "keywords": [
       "qwen",
@@ -5861,7 +5866,8 @@
     "alternatives": [
       "zapier-ai",
       "relevance-ai",
-      "genspark"
+      "genspark",
+      "qwenwork"
     ],
     "keywords": [
       "manus",
@@ -5929,7 +5935,8 @@
     "alternatives": [
       "perplexity",
       "manus",
-      "chatgpt"
+      "chatgpt",
+      "qwenwork"
     ],
     "keywords": [
       "genspark",
@@ -6822,11 +6829,11 @@
       "programacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Chat gratis. API GLM-5.2 de bajo costo (~$1,40/$4,40 por 1M tokens). GLM Coding Plan desde $18/mes",
+    "pricingDetail": "Chat gratis. GLM Coding Plan desde ~$18/mes (con niveles a ~$72 y ~$160). API general de GLM-5.3: anunciada como «próximamente»",
     "difficulty": 1,
     "rating": 4,
-    "shortDescription": "Chatbot y agente gratuito de Zhipu (modelo GLM-5.2), líder open source en tareas de programación.",
-    "fullDescription": "Z.ai es el asistente conversacional de Zhipu AI, impulsado por la familia de modelos GLM-5 (flagship GLM-5.2, un MoE de 744.000 millones de parámetros que hoy encabeza la frontera de pesos abiertos, con 91,2 % en GPQA Diamond y liderazgo en benchmarks de ingeniería de software). Ofrece chat gratuito potente, capacidades de agente y una API de muy bajo costo, lo que lo vuelve una alternativa china seria a ChatGPT o Claude para quienes buscan rendimiento sin pagar tarifas altas. Los pesos salen con licencia MIT, una de las más permisivas de la frontera.",
+    "shortDescription": "Chatbot y agente de Zhipu (modelo GLM-5.3, agosto 2026), líder en programación y en hallazgo de vulnerabilidades.",
+    "fullDescription": "Z.ai es el asistente conversacional de Zhipu AI, impulsado por la familia GLM-5. Su versión vigente, GLM-5.3 (14 de agosto de 2026), es un caso raro: no creció de tamaño. Reutiliza la misma base de 743.000 millones de parámetros de GLM-5.2 y toda la ganancia viene del post-entrenamiento. Mantiene 1 millón de tokens de contexto y 128K de salida, y encabeza CyberGym —un banco de pruebas de búsqueda de vulnerabilidades en software real— con 84,5 %. Ofrece chat gratuito potente, capacidades de agente y un precio muy por debajo de Claude o ChatGPT, lo que lo vuelve una alternativa china seria para quienes buscan rendimiento sin tarifas altas.",
     "useCases": [
       "Resolver dudas y redactar textos gratis",
       "Generar y depurar código",
@@ -6839,20 +6846,23 @@
       "Activa el modo agente para tareas de varios pasos",
       "Para desarrolladores: usa la API de GLM por su bajo costo"
     ],
-    "proTip": "Para programación, GLM-5 rinde a la altura de modelos frontier a una fracción del costo vía API.",
+    "proTip": "Para programación, GLM rinde a la altura de modelos frontera a una fracción del costo. Si necesitas pesos abiertos hoy, usa GLM-5.2 (licencia MIT): los de la 5.3 salen por etapas tras la evaluación de seguridad.",
     "pros": [
       "Chat gratuito potente",
-      "Muy fuerte en código",
-      "API de bajo costo"
+      "Muy fuerte en código y en seguridad ofensiva",
+      "Costo muy por debajo de los líderes occidentales"
     ],
     "cons": [
+      "Los pesos de GLM-5.3 quedaron aplazados: solo la 5.2 es MIT hoy",
+      "Aún sin tarifa por token publicada para la 5.3",
       "Interfaz menos pulida que líderes occidentales",
       "Privacidad: revisa dónde se procesan tus datos"
     ],
     "alternatives": [
       "deepseek",
       "qwen",
-      "kimi"
+      "kimi",
+      "longcat"
     ],
     "keywords": [
       "glm",
@@ -6950,11 +6960,11 @@
       "video"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con créditos diarios. Planes de pago por suscripción/créditos (rango ~$15–200/mes)",
+    "pricingDetail": "Gratis con créditos diarios. Planes de pago por suscripción/créditos (~$15–200/mes). Pesos disponibles en Hugging Face con licencia comunitaria",
     "difficulty": 1,
     "rating": 4,
-    "shortDescription": "Generador de video de MiniMax (Hailuo 2.3): texto a video e imagen a video rápidos, con audio.",
-    "fullDescription": "Hailuo es el generador de video de MiniMax. Su modelo Hailuo 2.3 crea videos a partir de texto o de una imagen de referencia de forma rápida, con soporte de audio y música por prompt. Es muy popular por su capa gratuita generosa y su buena relación calidad-precio, lo que lo hace accesible para creadores en Latinoamérica.",
+    "shortDescription": "Generador de video de MiniMax; H3 / Hailuo 3.0 fue el primer modelo grande de video en publicar sus pesos.",
+    "fullDescription": "Hailuo es el generador de video de MiniMax. Su modelo H3 (Hailuo 3.0, 31 de julio de 2026) es omnimodal: con 33.000 millones de parámetros convierte texto, imagen, video o audio en un clip terminado de hasta 2K y 15 segundos, con sonido estéreo sincronizado, en una sola generación. El 3 de agosto MiniMax publicó sus pesos en Hugging Face — el primer modelo grande de video en hacerlo—, aunque con dos asteriscos: la licencia comunitaria prohíbe el despliegue local en Estados Unidos, la Unión Europea, el Reino Unido y Corea del Sur, y el checkpoint descargable llega solo a 768p (el 2K queda reservado a la API hospedada). Sigue siendo muy popular por su capa gratuita generosa y su relación calidad-precio, lo que lo hace accesible para creadores en Latinoamérica.",
     "useCases": [
       "Generar clips desde una idea o imagen",
       "Animar una foto fija",
@@ -7012,11 +7022,11 @@
       "video"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Acceso por créditos vía plataformas (Runway, fal.ai, API de terceros); precio por clip según resolución/duración",
+    "pricingDetail": "Acceso por créditos vía plataformas (BytePlus ModelArk, fal.ai, API de terceros); precio por clip según resolución y duración",
     "difficulty": 2,
     "rating": 4,
-    "shortDescription": "Modelo imagen-a-video de ByteDance, favorito en pruebas ciegas de 2026 por su realismo y control.",
-    "fullDescription": "Seedance es el modelo de generación de video de ByteDance (creadores de TikTok). En 2026 se volvió uno de los favoritos de los creadores en comparativas ciegas por su realismo, fluidez de movimiento y control. Suele accederse a través de plataformas que lo integran (como Runway) o por API de terceros, más que con una app propia masiva.",
+    "shortDescription": "Modelo de video de ByteDance; Seedance 2.5 genera 30 segundos con audio en una sola pasada.",
+    "fullDescription": "Seedance es el modelo de generación de video de ByteDance (creadores de TikTok), uno de los favoritos en comparativas ciegas de 2026 por su realismo, fluidez de movimiento y control. Su versión 2.5 (31 de julio de 2026) duplicó la duración: 30 segundos de audio y video en una sola generación, con soporte de hasta 50 referencias multimodales, edición por marca de tiempo, pantalla verde y sincronía labial en 20 idiomas. Se estrenó primero en el mercado chino (Jimeng y Doubao Pro) y luego llegó por API a BytePlus ModelArk; fuera de China suele accederse a través de plataformas que lo integran o por API de terceros, más que con una app propia masiva.",
     "useCases": [
       "Convertir una imagen en video realista",
       "Generar tomas con movimiento de cámara controlado",
@@ -7824,7 +7834,7 @@
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Modelo de imagen de ByteDance para generación y edición de alta fidelidad, fuerte en texto denso.",
-    "fullDescription": "Seedream es el modelo de generación y edición de imágenes de ByteDance (creadores de TikTok). Destaca por su alta fidelidad, el renderizado de texto denso dentro de la imagen y la edición multi-imagen. Sus versiones 4.5 y 5.0 Lite están vigentes en 2026 (con Seedream 5.0 completo anunciado a mediados de año) y se usan mucho vía API por su bajo costo, lo que lo hace atractivo para creadores en Latinoamérica.",
+    "fullDescription": "Seedream es el modelo de generación y edición de imágenes de ByteDance (creadores de TikTok). Destaca por su alta fidelidad, el renderizado de texto denso dentro de la imagen y la edición multi-imagen. Su versión 5.0 se presentó junto a Seedance en la conferencia Volcano Engine de 2026, y la variante 5.0 Lite añadió razonamiento visual y búsqueda en tiempo real para piezas que dependen de información reciente. Se usa mucho vía API por su bajo costo, lo que lo hace atractivo para creadores en Latinoamérica.",
     "useCases": [
       "Generar imágenes de alta fidelidad",
       "Crear gráficos con mucho texto bien renderizado",
@@ -7886,8 +7896,8 @@
     "pricingDetail": "Gratis, con planes de pago introducidos en mayo 2026. API de muy bajo costo vía Volcano Engine.",
     "difficulty": 3,
     "rating": 4,
-    "shortDescription": "El chatbot de IA más usado de China (ByteDance): asistente multimodal con voz, imagen y video. Modelo Doubao Seed 2.0.",
-    "fullDescription": "Doubao (豆包) es el asistente conversacional de ByteDance —la matriz de TikTok— y el chatbot de IA de consumo más usado de China, con más de 300 millones de usuarios. Su familia Doubao Seed 2.0 (febrero 2026) es multimodal, con voz full-duplex, comprensión de video y generación de imagen (Seedream) y video (Seedance) integradas. Es una ventana al estado del arte del asistente masivo chino, aunque su interfaz está pensada para el mercado interno.",
+    "shortDescription": "El chatbot de IA más usado de China (ByteDance): asistente multimodal con voz, imagen y video. Modelo Doubao Seed 2.1.",
+    "fullDescription": "Doubao (豆包) es el asistente conversacional de ByteDance —la matriz de TikTok— y el chatbot de IA de consumo más usado de China, con más de 300 millones de usuarios. Su familia vigente es Doubao Seed 2.1 (junio de 2026), multimodal, con voz full-duplex, comprensión de video y generación de imagen (Seedream) y video (Seedance) integradas. En agosto de 2026 ByteDance sumó SeedRealtime, un modelo nativo de audio y video full-duplex pensado para conversar sin turnos, con interrupciones naturales. Es una ventana al estado del arte del asistente masivo chino, aunque su interfaz está pensada para el mercado interno.",
     "useCases": [
       "Ver de cerca el asistente multimodal de consumo líder en China",
       "Generar imagen y video desde el mismo chat (Seedream/Seedance)",
@@ -8440,5 +8450,140 @@
       "educacion-idiomas"
     ],
     "bestFor": "Ideal para lenguas del sudeste asiático y como referente de IA abierta e inclusiva"
+  },
+  {
+    "id": "longcat",
+    "name": "LongCat",
+    "url": "https://longcat.chat",
+    "categories": [
+      "programacion",
+      "chatbots"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Pesos gratis con licencia MIT (Hugging Face). API por uso en longcat.chat y OpenRouter, sin suscripción",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Modelo abierto de Meituan para programación agéntica: 1,6 billones de parámetros entrenados solo con chips chinos.",
+    "fullDescription": "LongCat-2.0 es el modelo de lenguaje de Meituan, la empresa de domicilios más grande de China, y una de las sorpresas de 2026. Es un MoE de 1,6 billones de parámetros (48.000 millones activos por token) con ventana nativa de 1 millón de tokens, especializado en programación agéntica: planificar, escribir y depurar proyectos completos en vez de autocompletar líneas. Durante dos meses lideró los rankings de código de OpenRouter bajo el alias anónimo «Owl Alpha», antes de que Meituan revelara su identidad y publicara los pesos con licencia MIT, sin restricciones de uso comercial ni de redistribución. Su importancia va más allá del rendimiento: es el primer modelo de frontera entrenado e inferido de punta a punta en un clúster de 50.000 tarjetas de fabricación china, la señal más clara de que el bloqueo de semiconductores dejó de ser un techo.",
+    "useCases": [
+      "Escribir y depurar proyectos de código completos",
+      "Agentes de programación de larga duración",
+      "Analizar repositorios enteros con 1M de contexto",
+      "Desplegar un modelo de frontera en infraestructura propia"
+    ],
+    "howToStart": [
+      "La vía fácil: crea una cuenta en OpenRouter y elige el modelo LongCat-2.0",
+      "O entra a longcat.chat para probarlo en su propio chat",
+      "Conéctalo a tu editor apuntando la API compatible con OpenAI a OpenRouter",
+      "Para autohospedar: descarga los pesos de Hugging Face (meituan-longcat) y sírvelos con SGLang"
+    ],
+    "proTip": "Es de los pocos modelos de frontera con licencia MIT limpia: si tu institución necesita soberanía real sobre los datos, aquí no hay letra pequeña de reparto de ingresos ni países excluidos. Eso sí, autohospedarlo pide 16 GPU de gama alta — para uso normal, ve por OpenRouter.",
+    "pros": [
+      "Licencia MIT sin restricciones de uso comercial",
+      "1 millón de tokens de contexto nativo",
+      "Rendimiento líder en programación agéntica",
+      "Costo por token muy bajo vía OpenRouter"
+    ],
+    "cons": [
+      "Autohospedarlo exige hardware de centro de datos",
+      "Marca poco conocida fuera de China",
+      "Servidores en China si usas su API oficial (considerar privacidad)"
+    ],
+    "alternatives": [
+      "deepseek",
+      "glm-zai",
+      "qwen",
+      "kimi"
+    ],
+    "keywords": [
+      "longcat",
+      "meituan",
+      "owl alpha",
+      "modelo abierto",
+      "mit",
+      "programación",
+      "agente de código",
+      "chips chinos",
+      "open weights"
+    ],
+    "tags": [
+      "IA generativa",
+      "Open source",
+      "Agente",
+      "Económico"
+    ],
+    "useCaseIds": [
+      "programacion-escribir",
+      "programacion-depurar",
+      "automatizacion-agentes",
+      "chatbots-asistente"
+    ],
+    "bestFor": "Ideal para equipos de desarrollo que quieren un modelo de frontera sin lock-in ni licencias con letra pequeña"
+  },
+  {
+    "id": "qwenwork",
+    "name": "QwenWork",
+    "url": "https://qwenwork.cn",
+    "categories": [
+      "automatizacion",
+      "productividad"
+    ],
+    "pricing": "freemium",
+    "pricingDetail": "Beta público con créditos gratis de bienvenida. Planes de pago aún sin anunciar",
+    "difficulty": 2,
+    "rating": 4,
+    "shortDescription": "Plataforma de agentes de oficina de Alibaba, movida por Qwen3.8-Max: la respuesta china a Claude Cowork.",
+    "fullDescription": "QwenWork es la apuesta de Alibaba por el «agente de trabajo»: no un chatbot al que le preguntas, sino un asistente que ejecuta tareas de oficina completas —investigar, redactar, llenar hojas de cálculo, operar aplicaciones— sobre el modelo Qwen3.8-Max. Abrió beta público el 3 de agosto de 2026, el mismo día del lanzamiento del modelo, fusionando tres productos previos de Alibaba (QoderWork, MuleRun y Wukong) en una sola plataforma que la empresa presenta como la primera capaz de trabajar a la vez en escritorio, nube y colaboración empresarial. Su llegada marca el momento en que la competencia de la IA se mudó del chat a la jornada laboral: enfrente están Claude Cowork y ChatGPT Work, y a su lado Kimi Work y WorkBuddy de Tencent.",
+    "useCases": [
+      "Delegar tareas de oficina de varios pasos de punta a punta",
+      "Automatizar investigación y elaboración de informes",
+      "Operar aplicaciones de escritorio con un agente",
+      "Comparar agentes de trabajo chinos frente a los occidentales"
+    ],
+    "howToStart": [
+      "Entra a qwenwork.cn y crea una cuenta (verifica primero el acceso desde tu país)",
+      "Usa los créditos de bienvenida para probar una tarea real, no una demo",
+      "Empieza por un encargo acotado y con criterio de éxito claro",
+      "Revisa cada entregable: el agente ejecuta, pero la responsabilidad sigue siendo tuya"
+    ],
+    "proTip": "Antes de montar un flujo de trabajo encima, comprueba desde Colombia que el registro y el pago funcionen: el sitio apunta al mercado interno chino y varias funciones llegan primero a DingTalk. Y nunca le entregues datos personales o reservados a un agente cuyo procesamiento ocurre en otra jurisdicción.",
+    "pros": [
+      "Montado sobre Qwen3.8-Max, el modelo chino más capaz del momento",
+      "Cubre escritorio, nube y colaboración en una sola plataforma",
+      "Créditos gratis generosos durante el beta"
+    ],
+    "cons": [
+      "Interfaz y registro orientados al mercado chino",
+      "Precios definitivos aún sin anunciar",
+      "Servidores en China: no apto para datos personales o reservados"
+    ],
+    "alternatives": [
+      "manus",
+      "genspark",
+      "kimi",
+      "qwen"
+    ],
+    "keywords": [
+      "qwenwork",
+      "alibaba",
+      "agente de trabajo",
+      "agente de oficina",
+      "qwen",
+      "automatización",
+      "cowork",
+      "productividad"
+    ],
+    "tags": [
+      "Agente",
+      "Productividad",
+      "IA generativa"
+    ],
+    "useCaseIds": [
+      "automatizacion-agentes",
+      "automatizacion-workflow",
+      "productividad-organizar",
+      "productividad-automatizar"
+    ],
+    "bestFor": "Ideal para quien quiera probar un agente de oficina completo antes de pagar por Claude Cowork o ChatGPT Work"
   }
 ]
