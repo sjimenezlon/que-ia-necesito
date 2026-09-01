@@ -2189,7 +2189,7 @@ export default function Docentes() {
               <div className="mt-6 pt-5 border-t border-border flex flex-wrap gap-3 justify-between items-center">
                 <p className="text-xs text-text-lighter">Compara precio, dificultad, fortalezas y alternativas antes de elegir.</p>
                 <Link to="/explorar" className="inline-flex items-center gap-2 text-primary font-semibold text-sm no-underline hover:underline">
-                  Explorar las más de 100 herramientas <ArrowRight className="w-4 h-4" />
+                  Explorar las más de 130 herramientas <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>

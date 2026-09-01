@@ -7,18 +7,60 @@ import {
 } from 'lucide-react'
 
 /* ══════════════════════════════════════════════════════════════════
-   Datos — herramientas de IA asiáticas, verificadas a agosto 2026.
+   Datos — herramientas de IA asiáticas, verificadas a septiembre 2026.
    Precios y versiones cambian rápido: siempre confirmar en el sitio oficial.
    ══════════════════════════════════════════════════════════════════ */
 
 const METRICS = [
   { v: '2,8', l: 'billones de parámetros abiertos', s: 'Kimi K3 · pesos liberados el 27-jul' },
-  { v: '2,4', l: 'billones del nuevo Qwen', s: 'Qwen3.8-Max · 3-ago-2026' },
+  { v: '770 mil M', l: 'parámetros abiertos de Tencent', s: 'Hy4 preview · 28-ago-2026' },
   { v: '30 s', l: 'video en una sola pasada', s: 'Seedance 2.5 · con audio' },
   { v: '50 mil', l: 'chips chinos entrenaron un modelo', s: 'LongCat-2.0 · Meituan · MIT' },
 ]
 
 const LATEST_RELEASES = [
+  {
+    date: '28 ago 2026',
+    name: 'Hy4 preview',
+    company: 'Tencent · China',
+    icon: Boxes,
+    color: 'text-primary',
+    bg: 'bg-primary/8',
+    tag: 'Abierto · 770 mil millones',
+    title: 'Tencent entra a la frontera abierta por la puerta grande',
+    body: 'La dueña de WeChat publicó y abrió un MoE de 770.000 millones de parámetros totales (49.000 millones activos) con más de 1 millón de tokens de contexto, entrenado para trabajo real —programar, ofimática, análisis de datos, videojuegos, investigación— y no para conversar. En una evaluación ciega interna con 163 expertos sobre 203 tareas de ingeniería obtuvo 2,99 sobre 4, por encima de GLM-5.3 (2,92) y de Kimi K3 (2,94).',
+    use: 'Llega a Yuanbao, CodeBuddy, WorkBuddy e ima, con dos semanas de acceso gratuito; por fuera de China, la vía práctica es OpenRouter o los pesos en Hugging Face.',
+    url: 'https://huggingface.co/tencent',
+  }
+  ,
+  {
+    date: '26 ago 2026',
+    name: 'GLM-5.3-Flash · Qwen3.8-Flash-Next',
+    company: 'Z.ai y Alibaba · China',
+    icon: Zap,
+    color: 'text-warm',
+    bg: 'bg-warm/8',
+    tag: 'Dos abiertos el mismo día',
+    title: 'La pelea se mudó a la clase «Flash»',
+    body: 'En las mismas 24 horas Z.ai sacó GLM-5.3-Flash —320.000 millones de parámetros totales, 18.000 activos, el primero nativamente multimodal de la serie GLM-5— y Alibaba abrió Qwen3.8-Flash-Next, un MoE de 125.000 millones con apenas 6.000 activos por token que es en realidad un anticipo de la arquitectura Qwen4. Los dos con pesos abiertos, los dos multimodales, los dos vendidos por lo que cuesta servirlos.',
+    use: 'Es la señal de que la competencia ya no se juega en el modelo más grande sino en el más barato de mantener encendido: si vas a correr un agente miles de veces al día, empieza por aquí.',
+    url: 'https://huggingface.co/zai-org',
+  }
+  ,
+  {
+    date: '21 ago 2026',
+    name: 'DeepSeek V4-Flash-Vision',
+    company: 'DeepSeek · China',
+    icon: ImageIcon,
+    color: 'text-secondary',
+    bg: 'bg-secondary/8',
+    tag: 'Multimodal · mismo precio',
+    title: 'El modelo más barato del mercado aprende a ver',
+    body: 'DeepSeek le añadió comprensión de imágenes a V4-Flash —gráficas, tablas, documentos escaneados— sin subir un centavo la tarifa: sigue en USD 0,14 por millón de tokens de entrada y 0,28 de salida, y cada imagen se cobra como máximo 384 tokens. Es un MoE de 284.000 millones con 13.000 activos y, según la casa, su capacidad multimodal de agente se acerca a Claude Opus 4.8.',
+    use: 'Para digitalizar y leer archivos escaneados a escala —expedientes, formularios, tablas de informes— es hoy la opción más barata del mercado. Ojo: experimental, solo por API y sin pesos abiertos.',
+    url: 'https://api-docs.deepseek.com/news/news260821/',
+  }
+  ,
   {
     date: '14 ago 2026',
     name: 'GLM-5.3',
@@ -31,7 +73,8 @@ const LATEST_RELEASES = [
     body: 'GLM-5.3 no es un modelo más grande: reutiliza la base de 743.000 millones de parámetros de GLM-5.2 y toda la ganancia viene del post-entrenamiento. Mantiene 1M de contexto y 128K de salida, y encabeza CyberGym —un banco de pruebas de búsqueda de vulnerabilidades reales— con 84,5 %. Z.ai rompió su propia costumbre: los pesos abiertos quedaron aplazados unas dos semanas por evaluación de seguridad.',
     use: 'Para programación, auditoría de código y agentes largos; hoy se accede sobre todo por el GLM Coding Plan (desde ~$18/mes).',
     url: 'https://z.ai',
-  },
+  }
+  ,
   {
     date: '13 ago 2026',
     name: 'DeepSeek V4-Pro',
@@ -44,7 +87,8 @@ const LATEST_RELEASES = [
     body: 'V4-Pro (versión 0813) llega a app, web y API con capacidad de agente reforzada, soporte nativo de la Responses API, adaptación a Codex y tres niveles de esfuerzo de pensamiento (bajo / alto / máximo). Desde el 16 de agosto DeepSeek cobra distinto según la hora: tarifa pico y tarifa valle a la mitad del precio.',
     use: 'Para equipos que corren agentes por lotes: programar el trabajo pesado en horas valle cambia la factura, no el resultado.',
     url: 'https://api-docs.deepseek.com/updates/',
-  },
+  }
+  ,
   {
     date: '12 ago 2026',
     name: 'Qwen3.8-Max · pesos',
@@ -57,7 +101,8 @@ const LATEST_RELEASES = [
     body: 'Alibaba subió a Hugging Face el checkpoint de 2,4 billones de parámetros (95.000 millones activos) — pero no bajo Apache, sino con una licencia propia de reparto de ingresos, y el modelo descargable es solo de texto: pierde la visión y el contexto de 1M que sí tiene la API. Al día siguiente llegó Qwen3.8-27B, denso y con codificador de visión, ese sí Apache 2.0 y ejecutable en una sola GPU.',
     use: 'Si buscas soberanía de datos real, el 27B es la puerta práctica; el 2,4 B es una declaración estratégica más que una opción de despliegue.',
     url: 'https://huggingface.co/Qwen',
-  },
+  }
+  ,
   {
     date: '3 ago 2026',
     name: 'Qwen3.8-Max',
@@ -70,7 +115,8 @@ const LATEST_RELEASES = [
     body: 'MoE de 2,4 billones de parámetros con 95.000 millones activos, contexto de 1M y entrada nativa de texto, imagen y video. API a $2/$6 por millón de tokens (caché desde $0,17). El mismo día abrió el beta público de QwenWork, la plataforma de agentes de oficina que fusiona QoderWork, MuleRun y Wukong.',
     use: 'Para análisis multimodal de documentos y video largo, y para probar un agente de trabajo chino frente a Claude Cowork o ChatGPT Work.',
     url: 'https://qwen.ai',
-  },
+  }
+  ,
   {
     date: '31 jul 2026',
     name: 'Seedance 2.5',
@@ -83,7 +129,8 @@ const LATEST_RELEASES = [
     body: 'Pasa de 15 a 30 segundos en una sola pasada, acepta hasta 50 referencias multimodales, permite edición por marca de tiempo y sincronía labial en 20 idiomas. Se estrenó primero en el mercado chino (Jimeng y Doubao Pro); la API internacional llegó después por BytePlus.',
     use: 'Para piezas narrativas completas sin costura entre planos: publicidad, formación y storyboards con voz.',
     url: 'https://seed.bytedance.com',
-  },
+  }
+  ,
   {
     date: '31 jul 2026',
     name: 'MiniMax H3 (Hailuo 3.0)',
@@ -96,7 +143,8 @@ const LATEST_RELEASES = [
     body: 'Un modelo omnimodal de 33.000 millones de parámetros que convierte texto, imagen, video o audio en un clip con sonido estéreo sincronizado, hasta 2K y 15 segundos, en una sola generación. Los pesos salieron el 3 de agosto — con dos asteriscos: la licencia comunitaria prohíbe el despliegue local en EE. UU., la UE, el Reino Unido y Corea, y lo descargable llega a 768p (el 2K es solo por API).',
     use: 'Para quien quiera video generativo autohospedado; revisa antes si tu jurisdicción está excluida por la licencia.',
     url: 'https://www.minimax.io/blog/minimax-h3',
-  },
+  }
+  ,
   {
     date: '27 jul 2026',
     name: 'Kimi K3 · pesos',
@@ -110,45 +158,6 @@ const LATEST_RELEASES = [
     use: 'Referencia obligada para quien evalúe IA soberana: hoy la frontera abierta se publica en Pekín, no en San Francisco.',
     url: 'https://www.kimi.com',
   },
-  {
-    date: '16 jul 2026',
-    name: 'Kimi K3',
-    company: 'Moonshot AI · China',
-    icon: Brain,
-    color: 'text-secondary',
-    bg: 'bg-secondary/8',
-    tag: 'MoE · 2,8 billones',
-    title: 'El modelo abierto más grande del mundo',
-    body: 'MoE de 2,8 billones de parámetros con 1.048.576 tokens de contexto y visión nativa. En trabajo de largo horizonte supera a Claude Opus 4.8 y GPT-5.5, queda debajo de Claude Fable 5 y GPT-5.6 Sol, y lidera la arena de código frontend. API a $3/$15 por millón de tokens.',
-    use: 'Para expedientes de cientos de páginas, investigación normativa y agentes que trabajan durante horas.',
-    url: 'https://www.kimi.com',
-  },
-  {
-    date: '6 jul 2026',
-    name: 'Hy3',
-    company: 'Tencent · China',
-    icon: Brain,
-    color: 'text-primary',
-    bg: 'bg-primary/8',
-    tag: 'Modelo oficial',
-    title: 'Tencent pasa del preview a producción',
-    body: 'Hy3 combina pensamiento rápido y lento en una arquitectura MoE de 295B parámetros totales y 21B activos, con contexto de hasta 256K e integración en Yuanbao, CodeBuddy y WorkBuddy.',
-    use: 'Para razonamiento, documentos, datos, búsqueda y agentes dentro del ecosistema Tencent.',
-    url: 'https://www.tencent.com/tencent-hunyuan-officially-releases-hy3-advancing-agent-capabilities-and-deeper-product-integration/',
-  },
-  {
-    date: '30 jun 2026',
-    name: 'LongCat-2.0',
-    company: 'Meituan · China',
-    icon: Cpu,
-    color: 'text-warm',
-    bg: 'bg-warm/8',
-    tag: 'MIT · silicio nacional',
-    title: 'Un modelo de frontera entrenado sin un solo chip occidental',
-    body: 'La empresa de domicilios más grande de China liberó, con licencia MIT, un MoE de 1,6 billones de parámetros (48.000 millones activos) y 1M de contexto nativo — entrenado e inferido de punta a punta en un clúster de 50.000 tarjetas chinas. Antes de revelar su identidad ya lideraba los rankings de programación de OpenRouter bajo el alias "Owl Alpha".',
-    use: 'La prueba de que el bloqueo de chips dejó de ser un techo: úsalo por OpenRouter o descárgalo sin restricciones de licencia.',
-    url: 'https://huggingface.co/meituan-longcat/LongCat-2.0',
-  },
 ]
 
 const FORCES = [
@@ -156,13 +165,13 @@ const FORCES = [
     icon: Boxes,
     kicker: '01',
     title: 'Código abierto como estrategia',
-    body: 'China liberó los pesos de sus mejores modelos (DeepSeek, Qwen, GLM, Kimi, LongCat). No es filantropía: es volverse el estándar sobre el que todos construyen y erosionar la ventaja cerrada de Occidente. La estrategia funcionó: en menos de un año los modelos chinos pasaron de ser marginales a mover cerca de un tercio del tráfico de OpenRouter. Pero en agosto de 2026 apareció la letra pequeña: Qwen abrió su Max con licencia propia de reparto de ingresos, MiniMax prohibió el despliegue local en Occidente y Z.ai retuvo los pesos de GLM-5.3 dos semanas. Abierto empezó a tener grados.',
+    body: 'China liberó los pesos de sus mejores modelos (DeepSeek, Qwen, GLM, Kimi, LongCat). No es filantropía: es volverse el estándar sobre el que todos construyen y erosionar la ventaja cerrada de Occidente. La estrategia funcionó: en menos de un año los modelos chinos pasaron de ser marginales a mover cerca de un tercio del tráfico de OpenRouter. Pero en agosto de 2026 apareció la letra pequeña: Qwen abrió su Max con licencia propia de reparto de ingresos, MiniMax prohibió el despliegue local en Occidente y Z.ai retuvo los pesos de GLM-5.3 dos semanas. Abierto empezó a tener grados. Y a fin de mes entró un jugador nuevo con las manos abiertas: Tencent publicó los pesos de Hy4, 770.000 millones de parámetros, la primera vez que la dueña de WeChat compite en la frontera abierta.',
   },
   {
     icon: TrendingDown,
     kicker: '02',
     title: 'La guerra de precios',
-    body: 'Cuando un modelo de primer nivel cuesta centavos por millón de tokens, el costo deja de ser barrera. Los buques insignia chinos suelen quedar 2,5–8× por debajo de los de EE. UU., y algunos recortaron tarifas hasta 99%. La API más cara de Occidente puede costar 10–30× su equivalente chino.',
+    body: 'Cuando un modelo de primer nivel cuesta centavos por millón de tokens, el costo deja de ser barrera. Los buques insignia chinos suelen quedar 2,5–8× por debajo de los de EE. UU., y algunos recortaron tarifas hasta 99%. La API más cara de Occidente puede costar 10–30× su equivalente chino. En agosto de 2026 la competencia cambió de terreno: el 26 de agosto GLM-5.3-Flash y Qwen3.8-Flash-Next salieron el mismo día, los dos abiertos, los dos multimodales y los dos diseñados para ser baratos de mantener encendidos. Ya no se compite por el modelo más grande sino por el más económico de servir miles de veces al día.',
   },
   {
     icon: Video,
@@ -275,13 +284,13 @@ const CHINA_SECTIONS = [
         url: 'https://yiyan.baidu.com',
       },
       {
-        name: 'Hunyuan / Yuanbao', company: 'Tencent', version: 'Hy3 oficial · 6 jul-2026',
-        what: 'Modelo híbrido de pensamiento rápido y lento (295B MoE, 21B activos, 256K) integrado en Yuanbao, CodeBuddy, WorkBuddy y otros productos de Tencent.',
-        price: 'App gratis · API en Tencent Cloud', west: '≈ Claude / GPT para agentes', open: 'Acceso por API y productos Tencent',
-        access: 'Tencent Cloud TokenHub · integraciones globales en despliegue progresivo',
-        good: 'Producto oficial estable y profundamente integrado al ecosistema Tencent.',
-        watch: 'La disponibilidad internacional varía según producto y proveedor.',
-        url: 'https://www.tencent.com/tencent-hunyuan-officially-releases-hy3-advancing-agent-capabilities-and-deeper-product-integration/',
+        name: 'Hunyuan / Yuanbao', company: 'Tencent', version: 'Hy4 preview · 28 ago-2026', ficha: 'hunyuan',
+        what: 'MoE de 770.000 millones de parámetros totales (49.000 activos) y más de 1M de contexto, entrenado para trabajo real —código, ofimática, datos, videojuegos, ciencia— e integrado en Yuanbao, CodeBuddy, WorkBuddy e ima.',
+        price: 'App gratis · pesos abiertos · API en Tencent Cloud', west: '≈ Claude / GPT para agentes', open: 'Pesos publicados en Hugging Face',
+        access: 'Tencent Cloud TokenHub y OpenRouter · pesos descargables',
+        good: 'En evaluación ciega interna con 163 expertos superó a GLM-5.3 y a Kimi K3 en tareas de ingeniería.',
+        watch: 'Es una versión preview y la disponibilidad internacional varía según el producto.',
+        url: 'https://huggingface.co/tencent',
       },
       {
         name: 'MiniMax', company: 'MiniMax (稀宇)', version: 'M3 · jun-2026 (+ H3 · jul-2026)',
@@ -558,8 +567,8 @@ const CHINA_SECTIONS = [
       },
       {
         name: 'WorkBuddy', company: 'Tencent', version: 'app + ADP 4.0 · 2026',
-        what: 'El agente de trabajo de Tencent sobre Hy3, con app propia en iOS, Android y HarmonyOS. Su plataforma de desarrollo de agentes (ADP 4.0) salió a mercado global con conectores a LINE, Telegram y Google Workspace.',
-        price: 'Freemium · API en Tencent Cloud', west: '≈ Copilot / Claude Cowork', open: 'Cerrado (Hy3 con licencia Apache 2.0)',
+        what: 'El agente de trabajo de Tencent, ya sobre Hy4, con app propia en iOS, Android y HarmonyOS. Su plataforma de desarrollo de agentes (ADP 4.0) salió a mercado global con conectores a LINE, Telegram y Google Workspace.',
+        price: 'Freemium · API en Tencent Cloud', west: '≈ Copilot / Claude Cowork', open: 'Producto cerrado; el modelo Hy4 sí tiene pesos abiertos',
         access: 'App móvil + Tencent Cloud — despliegue internacional progresivo',
         good: 'De los pocos ecosistemas chinos que ya construye puentes hacia herramientas occidentales.',
         watch: 'La disponibilidad cambia según producto y país; no todo lo anunciado llega a LATAM.',
@@ -781,7 +790,7 @@ export default function HerramientasAsiaticas() {
         <div className="relative max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-secondary/8 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-8 border border-secondary/10 shadow-sm">
             <Globe2 className="w-3.5 h-3.5" />
-            Capítulo especial · actualizado 19 ago 2026
+            Capítulo especial · actualizado 1 sep 2026
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-text leading-[1.05] tracking-tight mb-6">
             IA <span className="text-gradient-primary">asiática</span>
@@ -792,7 +801,7 @@ export default function HerramientasAsiaticas() {
             Mientras Occidente discute, Asia despliega. China convirtió la IA en una guerra de{' '}
             <span className="text-text font-semibold">precios y código abierto</span>; Corea, Japón e India construyen{' '}
             <span className="text-text font-semibold">modelos soberanos</span> en su propia lengua. Una guía práctica
-            —en español, verificada al 19 de agosto de 2026— para saber qué existe, qué sirve y cómo usarlo desde Colombia.
+            —en español, verificada al 1 de septiembre de 2026— para saber qué existe, qué sirve y cómo usarlo desde Colombia.
           </p>
 
           <div className="flex items-center justify-center gap-2 mb-10 text-sm">
@@ -881,7 +890,7 @@ export default function HerramientasAsiaticas() {
               <div className="max-w-3xl">
                 <div className="inline-flex items-center gap-2 bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-accent/10">
                   <Zap className="w-3 h-3" />
-                  Radar de lanzamientos · corte 19 ago 2026
+                  Radar de lanzamientos · corte 1 sep 2026
                 </div>
                 <h2 className="text-2xl md:text-4xl font-bold text-text tracking-tight mb-2">
                   Lo nuevo que sí cambia el mapa

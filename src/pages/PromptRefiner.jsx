@@ -12,7 +12,7 @@ import FormatStep from '../components/prompt-refiner/FormatStep'
 import ConstraintsStep from '../components/prompt-refiner/ConstraintsStep'
 import GeneratedPrompt from '../components/prompt-refiner/GeneratedPrompt'
 
-const UPDATED_AT = '11 de agosto de 2026'
+const UPDATED_AT = '1 de septiembre de 2026'
 
 const DOMAINS = [
   { id: 'artes', label: 'Artes', icon: Palette, desc: 'Creación artística, visual, musical, literaria y escénica.', color: 'bg-red-50 text-red-600 border-red-200' },
@@ -243,12 +243,12 @@ const CLARITIES = [
 ]
 
 const MODEL_SNAPSHOT = [
-  { name: 'Claude Opus 5', house: 'Anthropic · 24 jul 2026', note: 'Un millón de tokens de contexto, pensamiento adaptativo por defecto y dial de esfuerzo de cinco niveles.' },
+  { name: 'Claude Fable 5.1', house: 'Anthropic · 1 sep 2026', note: 'El más capaz de la casa: 1M de contexto, 128K de salida y, en esfuerzo bajo o medio, el mismo resultado por menos dinero.' },
   { name: 'ChatGPT · GPT-5.6', house: 'OpenAI · agosto 2026', note: 'Luna quedó como modelo por defecto —gratis y con botón «Think»—; Sol añade un control de cuánto razona.' },
-  { name: 'Gemini 3.6 Flash', house: 'Google · 21 jul 2026', note: 'El caballo de batalla del plan gratuito; el tope sigue siendo 3.1 Pro, porque 3.5 Pro va retrasado.' },
-  { name: 'Grok 4.5', house: 'xAI · 8 jul 2026', note: '500K de contexto y dial de esfuerzo; su ventaja es el pulso en tiempo real de X.' },
+  { name: 'Gemini 3.7 Flash', house: 'Google · 13 ago 2026', note: 'El caballo de batalla, a mitad de precio del anterior; el tope sigue siendo 3.1 Pro, porque 3.5 Pro va retrasado.' },
+  { name: 'Grok 4.6', house: 'xAI · 12 ago 2026', note: '500K de contexto y el precio más bajo de la frontera; su ventaja sigue siendo el pulso en tiempo real de X.' },
   { name: 'Kimi K3', house: 'Moonshot · pesos abiertos 27 jul 2026', note: 'Un millón de tokens y el modelo de pesos abiertos más grande publicado hasta hoy.' },
-  { name: 'DeepSeek V4-Flash', house: 'DeepSeek · 31 jul 2026', note: 'USD 0,14 / 0,28 por millón de tokens: hoy marca el piso de precio del mercado.' },
+  { name: 'DeepSeek V4-Flash-Vision', house: 'DeepSeek · 21 ago 2026', note: 'Ya lee imágenes y gráficas sin subir la tarifa: USD 0,14 / 0,28 por millón de tokens, el piso del mercado.' },
 ]
 
 function MethodSidebar({ currentStep }) {
