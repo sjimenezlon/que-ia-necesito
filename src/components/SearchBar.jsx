@@ -1,135 +1,154 @@
-import { useState, useEffect, useRef } from 'react'
-import { Search, X } from 'lucide-react'
+import { useState, useId, useRef } from 'react'
+import { Search, X, ArrowRight } from 'lucide-react'
 import searchSuggestions from '../data/searchSuggestions'
 
-const placeholders = [
-  'Hacer una presentación profesional',
-  'Transcribir una reunión',
-  'Crear un video con IA',
-  'Analizar datos de Excel',
-  'Escribir un correo formal',
-  'Generar imágenes con IA',
-  'Traducir un documento',
-  'Crear música con IA',
-  'Programar una página web',
-  'Resumir un artículo largo',
-]
-
-export default function SearchBar({ value, onChange, large = false, hasResults = false }) {
-  const [placeholderIndex, setPlaceholderIndex] = useState(0)
+export default function SearchBar({
+  id,
+  value,
+  onChange,
+  large = false,
+  hasResults = false,
+  onSubmit,
+}) {
+  const generatedId = useId()
+  const listId = `${generatedId}-suggestions`
   const [focused, setFocused] = useState(false)
-  const [showSuggestions, setShowSuggestions] = useState(false)
+  const [dismissed, setDismissed] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(-1)
   const inputRef = useRef(null)
-  const containerRef = useRef(null)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPlaceholderIndex((i) => (i + 1) % placeholders.length)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
-
-  // Close suggestions on outside click
-  useEffect(() => {
-    const handleClick = (e) => {
-      if (containerRef.current && !containerRef.current.contains(e.target)) {
-        setShowSuggestions(false)
-      }
-    }
-    document.addEventListener('mousedown', handleClick)
-    return () => document.removeEventListener('mousedown', handleClick)
-  }, [])
-
-  const filteredSuggestions = searchSuggestions.filter((s) => {
-    if (!value) return true
-    return s.text.toLowerCase().includes(value.toLowerCase())
-  })
-
-  const handleFocus = () => {
-    setFocused(true)
-    setShowSuggestions(true)
-  }
-
-  const handleBlur = () => {
-    setFocused(false)
-  }
-
-  const handleSuggestionClick = (text) => {
+  const normalize = (text) =>
+    text
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+  const suggestions = searchSuggestions
+    .filter((s) => !value || normalize(s.text).includes(normalize(value)))
+    .slice(0, 5)
+  const open = focused && !dismissed && !hasResults && suggestions.length > 0
+  const choose = (text) => {
     onChange(text)
-    setShowSuggestions(false)
-    inputRef.current?.focus()
+    setDismissed(true)
+    setActiveIndex(-1)
   }
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Escape') {
-      setShowSuggestions(false)
-    }
+  const submit = () => {
+    setDismissed(true)
+    onSubmit?.()
   }
 
   return (
-    <div ref={containerRef} className={`relative w-full ${large ? 'max-w-2xl' : 'max-w-xl'}`}>
-      <Search
-        className={`absolute left-4 top-1/2 -translate-y-1/2 transition-colors duration-200 z-10 ${
-          focused ? 'text-primary' : 'text-text-lighter'
-        } ${large ? 'w-5 h-5' : 'w-4.5 h-4.5'}`}
-      />
-      <input
-        ref={inputRef}
-        type="text"
-        value={value}
-        onChange={(e) => {
-          onChange(e.target.value)
-          setShowSuggestions(true)
+    <div
+      className={`relative w-full ${large ? '' : 'max-w-xl'}`}
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget)) {
+          setFocused(false)
+          setActiveIndex(-1)
+        }
+      }}
+    >
+      <form
+        role="search"
+        onSubmit={(e) => {
+          e.preventDefault()
+          submit()
         }}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        onKeyDown={handleKeyDown}
-        placeholder={placeholders[placeholderIndex]}
-        className={`w-full bg-surface rounded-2xl outline-none transition-all duration-200 placeholder:text-text-lighter ${
-          focused
-            ? 'border-primary/60 ring-4 ring-primary/8 shadow-lg'
-            : 'border-border hover:border-text-lighter shadow-sm'
-        } ${
-          large
-            ? 'pl-13 pr-12 py-4 text-lg border-2'
-            : 'pl-11 pr-10 py-3 text-base border'
-        }`}
-      />
-      {value && (
-        <button
-          onClick={() => {
-            onChange('')
-            setShowSuggestions(false)
-            inputRef.current?.focus()
+        className="relative"
+      >
+        <Search
+          size={large ? 21 : 18}
+          className="absolute left-4 top-1/2 -translate-y-1/2 text-text-light pointer-events-none"
+        />
+        <input
+          ref={inputRef}
+          id={id || generatedId}
+          type="search"
+          role="combobox"
+          aria-label="Buscar herramientas de inteligencia artificial"
+          aria-expanded={open}
+          aria-controls={open ? listId : undefined}
+          aria-autocomplete="list"
+          aria-activedescendant={open && activeIndex >= 0 ? `${listId}-${activeIndex}` : undefined}
+          autoComplete="off"
+          value={value}
+          onFocus={() => {
+            setFocused(true)
+            setDismissed(false)
           }}
-          className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-full hover:bg-text/5 bg-transparent border-none cursor-pointer transition-colors z-10"
-          aria-label="Limpiar búsqueda"
-        >
-          <X className="w-4 h-4 text-text-lighter" />
-        </button>
-      )}
-
-      {/* Autocomplete dropdown — hide when search already has results */}
-      {showSuggestions && focused && !hasResults && filteredSuggestions.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-surface border border-border rounded-xl shadow-lg z-50 overflow-hidden animate-slide-down">
-          <div className="py-1.5">
-            <p className="px-4 py-1.5 text-[10px] font-semibold text-text-lighter uppercase tracking-wider">
-              Búsquedas populares
-            </p>
-            {filteredSuggestions.map((s) => (
-              <button
+          onChange={(e) => {
+            onChange(e.target.value)
+            setDismissed(false)
+            setActiveIndex(-1)
+          }}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') {
+              setDismissed(true)
+              setActiveIndex(-1)
+            }
+            if (open && ['ArrowDown', 'ArrowUp'].includes(e.key)) {
+              e.preventDefault()
+              setActiveIndex((i) =>
+                e.key === 'ArrowDown'
+                  ? (i + 1) % suggestions.length
+                  : i <= 0
+                    ? suggestions.length - 1
+                    : i - 1
+              )
+            }
+            if (open && e.key === 'Enter' && activeIndex >= 0) {
+              e.preventDefault()
+              choose(suggestions[activeIndex].text)
+            }
+          }}
+          placeholder="Ej.: crear una presentación sin pagar"
+          className={`search-input ${large ? 'large' : ''} ${onSubmit ? 'with-submit' : ''}`}
+        />
+        <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
+          {value && (
+            <button
+              type="button"
+              className="icon-button"
+              aria-label="Limpiar búsqueda"
+              onClick={() => {
+                onChange('')
+                setDismissed(true)
+                inputRef.current?.focus()
+              }}
+            >
+              <X size={17} />
+            </button>
+          )}
+          {onSubmit && (
+            <button
+              type="submit"
+              className="search-submit"
+              disabled={!value.trim()}
+              aria-label="Ver resultados de búsqueda"
+            >
+              <ArrowRight size={20} />
+            </button>
+          )}
+        </div>
+      </form>
+      {open && (
+        <div className="absolute top-full left-0 right-0 mt-2 bg-surface border border-border rounded-xl shadow-lg z-40 overflow-hidden">
+          <p className="px-4 pt-3 pb-2 text-xs text-text-light">
+            Ideas para empezar · usa ↑ ↓ y Enter
+          </p>
+          <ul id={listId} role="listbox" aria-label="Sugerencias de búsqueda" className="pb-2">
+            {suggestions.map((s, i) => (
+              <li
                 key={s.text}
-                onMouseDown={(e) => {
-                  e.preventDefault()
-                  handleSuggestionClick(s.text)
-                }}
-                className="w-full text-left px-4 py-2.5 text-sm text-text hover:bg-primary/5 cursor-pointer bg-transparent border-none flex items-center gap-3 transition-colors"
+                id={`${listId}-${i}`}
+                role="option"
+                aria-selected={i === activeIndex}
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={() => choose(s.text)}
+                className={`flex gap-3 items-center px-4 py-3 cursor-pointer text-sm hover:bg-primary/5 ${i === activeIndex ? 'bg-primary/8 text-primary' : ''}`}
               >
-                <Search className="w-3.5 h-3.5 text-text-lighter shrink-0" />
-                <span>{s.text}</span>
-              </button>
+                <Search size={14} />
+                {s.text}
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       )}
     </div>

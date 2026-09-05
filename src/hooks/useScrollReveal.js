@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react'
  * Returns a ref to attach to the target element.
  * The element should have className "scroll-reveal".
  */
-export function useScrollReveal(options = {}) {
+export function useScrollReveal({ threshold = 0.1, rootMargin = '0px 0px -40px 0px' } = {}) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -19,12 +19,12 @@ export function useScrollReveal(options = {}) {
           observer.unobserve(el)
         }
       },
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px', ...options }
+      { threshold, rootMargin }
     )
 
     observer.observe(el)
     return () => observer.disconnect()
-  }, [])
+  }, [threshold, rootMargin])
 
   return ref
 }

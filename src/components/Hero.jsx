@@ -1,101 +1,143 @@
-import { useNavigate } from 'react-router-dom'
-import { Sparkles, Compass } from 'lucide-react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import {
+  ArrowRight,
+  Compass,
+  Sparkles,
+  Check,
+  Presentation,
+  Mail,
+  GraduationCap,
+} from 'lucide-react'
 import SearchBar from './SearchBar'
-import CategoryGrid from './CategoryGrid'
+import tools from '../data/tools.json'
+import { practicalExamples } from '../data/practicalExamples'
 
-export default function Hero({ query, onQueryChange, results }) {
-  const navigate = useNavigate()
+const featured = [practicalExamples[0], practicalExamples[1], practicalExamples[3]]
+const icons = [Presentation, Mail, GraduationCap]
 
-  const hasQuery = query.length > 0
-
+export default function Hero({ query, onQueryChange, results, onSubmit }) {
+  const [selected, setSelected] = useState(0)
+  const example = featured[selected]
+  const hasQuery = !!query.trim()
   return (
-    <section
-      className={`relative px-4 hero-gradient noise-overlay overflow-x-clip transition-[padding] duration-300 ease-out ${
-        hasQuery ? 'py-8 md:py-14' : 'py-16 md:py-28'
-      }`}
-    >
-      {/* Dot pattern overlay */}
-      <div className="absolute inset-0 dot-pattern pointer-events-none" />
-
-      {/* Decorative blobs */}
-      <div className="absolute top-20 -left-32 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 -right-20 w-48 h-48 bg-warm/5 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="relative max-w-4xl mx-auto text-center">
-        <div
-          className={`inline-flex items-center gap-2 bg-primary/8 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-8 animate-fade-in border border-primary/10 transition-all duration-300 ${
-            hasQuery ? 'opacity-0 max-h-0 !mb-0 pointer-events-none' : 'opacity-100 max-h-12'
-          }`}
-        >
-          <Sparkles className="w-3.5 h-3.5" />
-          Más de 130 herramientas curadas · Septiembre 2026
-        </div>
-
-        <h1
-          className={`font-extrabold text-text leading-[1.08] tracking-tight animate-slide-up transition-all duration-300 ${
-            hasQuery
-              ? 'text-2xl sm:text-3xl md:text-4xl mb-3'
-              : 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-5'
-          }`}
-        >
-          ¿Qué <span className="text-gradient-primary">IA</span> necesitas?
-        </h1>
-
-        <div
-          className={`overflow-hidden transition-all duration-300 ease-out ${
-            hasQuery ? 'max-h-0 opacity-0' : 'max-h-24 opacity-100 mb-10'
-          }`}
-        >
-          <p className="text-text-light text-lg md:text-xl max-w-2xl mx-auto leading-relaxed animate-slide-up"
-            style={{ animationDelay: '80ms' }}
+    <section className={`discovery-hero ${hasQuery ? 'is-searching' : ''}`}>
+      <div
+        className={`max-w-6xl mx-auto px-4 grid gap-10 items-center ${hasQuery ? '' : 'lg:grid-cols-[1.1fr_0.9fr]'}`}
+      >
+        <div>
+          {!hasQuery && (
+            <div className="eyebrow flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-accent" />
+              {tools.length} herramientas · Tú eliges por dónde empezar
+            </div>
+          )}
+          <h1
+            className={`font-bold leading-[1.06] tracking-tight ${hasQuery ? 'text-3xl md:text-4xl mb-6' : 'text-4xl sm:text-5xl lg:text-6xl mt-5 mb-5'}`}
           >
-            Describe lo que quieres hacer y te recomendamos la herramienta perfecta.
-            <span className="text-text-lighter"> Sin jerga, sin complicaciones.</span>
-          </p>
+            ¿Qué quieres
+            <br className={hasQuery ? 'hidden' : ''} /> hacer{' '}
+            <span className="text-primary">con IA?</span>
+          </h1>
+          {!hasQuery && (
+            <p className="text-lg text-text-light max-w-lg mb-7 leading-relaxed">
+              Empieza por tu tarea. Encuentra herramientas, compara opciones y prueba con un ejemplo
+              que puedas hacer tuyo.
+            </p>
+          )}
+          <label htmlFor="home-search" className="block text-sm font-semibold mb-2">
+            Describe lo que necesitas
+          </label>
+          <SearchBar
+            id="home-search"
+            value={query}
+            onChange={onQueryChange}
+            large
+            hasResults={results.length > 0}
+            onSubmit={onSubmit}
+          />
+          {!hasQuery && (
+            <>
+              <div className="flex flex-wrap items-center gap-2 mt-4">
+                <span className="text-xs text-text-light">Prueba:</span>
+                {['Crear una presentación', 'Analizar datos de Excel', 'Resumir un documento'].map(
+                  (text) => (
+                    <button
+                      key={text}
+                      className="search-example"
+                      onClick={() => onQueryChange(text)}
+                    >
+                      {text}
+                      <ArrowRight size={12} />
+                    </button>
+                  )
+                )}
+              </div>
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mt-7">
+                <Link className="action-text" to="/recomendador">
+                  <Compass size={17} />
+                  Ayúdame a elegir <ArrowRight size={15} />
+                </Link>
+                <span className="text-xs text-text-light">Sin registro para explorar</span>
+              </div>
+            </>
+          )}
         </div>
-
-        <div className="relative z-30 flex justify-center mb-6 animate-slide-up" style={{ animationDelay: '160ms' }}>
-          <SearchBar value={query} onChange={onQueryChange} large hasResults={results.length > 0} />
-        </div>
-
-        <div
-          className={`relative z-10 overflow-hidden transition-all duration-300 ease-out ${
-            hasQuery ? 'max-h-0 opacity-0 pointer-events-none' : 'max-h-28 opacity-100 mb-14'
-          }`}
-        >
-          <div
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 animate-slide-up"
-            style={{ animationDelay: '240ms' }}
-          >
-            <button
-              onClick={() => navigate('/recomendador')}
-              className="inline-flex items-center gap-2 bg-text text-bg px-6 py-3.5 rounded-xl font-semibold cursor-pointer hover:bg-text/90 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 border-none text-sm"
-            >
-              <Compass className="w-4 h-4" />
-              Guíame paso a paso
-            </button>
-            <button
-              onClick={() => navigate('/prompt-lab')}
-              className="inline-flex items-center gap-2 bg-surface text-text border border-border px-6 py-3.5 rounded-xl font-semibold cursor-pointer hover:border-primary/40 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 text-sm"
-            >
-              <Sparkles className="w-4 h-4 text-warm" />
-              Mejora tus prompts
-            </button>
+        {!hasQuery && (
+          <div className="hero-example">
+            <div className="flex items-center justify-between mb-5">
+              <span className="eyebrow">Pruébalo con una tarea real</span>
+              <Sparkles size={18} className="text-primary" />
+            </div>
+            <div className="flex gap-2 mb-6" aria-label="Elegir un ejemplo rápido">
+              {featured.map((item, i) => {
+                const Icon = icons[i]
+                return (
+                  <button
+                    key={item.id}
+                    className={`filter-pill flex-1 justify-center !px-2 ${selected === i ? 'selected' : ''}`}
+                    aria-pressed={selected === i}
+                    onClick={() => setSelected(i)}
+                  >
+                    <Icon size={15} />
+                    {['Presentar', 'Escribir', 'Enseñar'][i]}
+                  </button>
+                )
+              })}
+            </div>
+            <div key={example.id} className="animate-fade-in">
+              <div className="hero-example-before">
+                <span className="text-xs text-text-light">De una idea general…</span>
+                <p className="mt-2">«{example.before}»</p>
+              </div>
+              <div className="hero-example-after">
+                <span className="text-xs font-semibold text-primary">
+                  …a una instrucción con dirección
+                </span>
+                <p className="font-semibold mt-3 leading-relaxed">
+                  {example.task} sobre {example.topic}.
+                </p>
+                <div className="flex flex-wrap gap-3 mt-4 text-xs text-text-light">
+                  {['Contexto', 'Entregable', 'Criterios'].map((item) => (
+                    <span key={item} className="flex gap-1 items-center">
+                      <Check size={13} className="text-accent" />
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <Link
+                className="action-primary w-full mt-5 justify-center"
+                to={`/ejemplos?caso=${example.id}`}
+              >
+                Personalizar este ejemplo <ArrowRight size={16} />
+              </Link>
+            </div>
+            <p className="text-xs text-text-light text-center mt-3">
+              Edita · Copia · Prueba en tu herramienta
+            </p>
           </div>
-        </div>
-
-        <div
-          className={`relative z-10 overflow-hidden transition-all duration-300 ease-out ${
-            hasQuery ? 'max-h-0 opacity-0 pointer-events-none' : 'max-h-[600px] opacity-100 mt-4'
-          }`}
-        >
-          <div className="animate-slide-up" style={{ animationDelay: '320ms' }}>
-            <h2 className="text-xs font-semibold text-text-lighter uppercase tracking-[0.15em] mb-5">
-              Explora por categoría
-            </h2>
-            <CategoryGrid />
-          </div>
-        </div>
+        )}
       </div>
     </section>
   )

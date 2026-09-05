@@ -1,5 +1,4 @@
 import { getUseCaseById } from '../data/useCaseOptions'
-import { getCategoryInfo } from './recommender'
 
 const pricingLabels = {
   gratis: 'Gratis',
@@ -17,7 +16,7 @@ const difficultyLabels = {
  * Generates a short reason string explaining why a tool is recommended.
  * Example: "Ideal para crear clips cortos — Gratis — Muy fácil de usar"
  */
-export function getMatchReason(tool, { useCase, category, context } = {}) {
+export function getMatchReason(tool, { useCase } = {}) {
   const parts = []
 
   // Use case match

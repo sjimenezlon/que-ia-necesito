@@ -11,7 +11,7 @@ const pricingStyles = {
 
 const pricingLabels = {
   gratis: 'Gratis',
-  freemium: 'Freemium',
+  freemium: 'Gratis + pago',
   pago: 'De pago',
 }
 
@@ -33,14 +33,15 @@ function getFaviconUrl(url) {
 function ToolFavicon({ tool, size = 'md' }) {
   const [imgError, setImgError] = useState(false)
   const faviconUrl = getFaviconUrl(tool.url)
-  const sizeClass = size === 'lg'
-    ? 'w-14 h-14 rounded-2xl text-xl'
-    : 'w-10 h-10 rounded-xl text-base'
+  const sizeClass =
+    size === 'lg' ? 'w-14 h-14 rounded-2xl text-xl' : 'w-10 h-10 rounded-xl text-base'
   const imgSize = size === 'lg' ? 'w-7 h-7' : 'w-5 h-5'
 
   if (faviconUrl && !imgError) {
     return (
-      <div className={`${sizeClass} bg-surface border border-border flex items-center justify-center shrink-0 transition-transform duration-300`}>
+      <div
+        className={`${sizeClass} bg-surface border border-border flex items-center justify-center shrink-0 transition-transform duration-300`}
+      >
         <img
           src={faviconUrl}
           alt={tool.name}
@@ -54,21 +55,25 @@ function ToolFavicon({ tool, size = 'md' }) {
 
   return (
     <div className={`${sizeClass} bg-primary/8 flex items-center justify-center shrink-0`}>
-      <span className="text-primary font-bold">
-        {tool.name.charAt(0)}
-      </span>
+      <span className="text-primary font-bold">{tool.name.charAt(0)}</span>
     </div>
   )
 }
 
-export { ToolFavicon, getFaviconUrl }
+export { ToolFavicon }
 
-export default function ToolCard({ tool, onCompare, isInCompare = false, onToggleFavorite, isFavorite }) {
+export default function ToolCard({
+  tool,
+  onCompare,
+  isInCompare = false,
+  onToggleFavorite,
+  isFavorite,
+}) {
   const favorited = isFavorite?.(tool.id)
   const primaryCategory = getCategoryInfo(tool.categories[0])
 
   return (
-    <div className="scroll-reveal group bg-surface rounded-2xl border border-border p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+    <div className="tool-card group bg-surface rounded-2xl border border-border p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
       {/* Left accent on hover */}
       <div className="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-2xl bg-gradient-to-b from-primary via-secondary to-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -94,14 +99,19 @@ export default function ToolCard({ tool, onCompare, isInCompare = false, onToggl
           {onToggleFavorite && (
             <button
               onClick={() => onToggleFavorite(tool.id)}
-              aria-label={favorited ? `Quitar ${tool.name} de favoritos` : `Agregar ${tool.name} a favoritos`}
-              className="p-1 rounded-lg bg-transparent border-none cursor-pointer hover:scale-110 active:scale-95 transition-transform"
+              aria-label={
+                favorited ? `Quitar ${tool.name} de favoritos` : `Agregar ${tool.name} a favoritos`
+              }
+              aria-pressed={!!favorited}
+              className="icon-button shrink-0"
             >
-              <Heart className={`w-4 h-4 transition-colors ${favorited ? 'text-secondary fill-secondary' : 'text-text-lighter hover:text-secondary'}`} />
+              <Heart
+                className={`w-4 h-4 transition-colors ${favorited ? 'text-secondary fill-secondary' : 'text-text-lighter hover:text-secondary'}`}
+              />
             </button>
           )}
           <span
-            className={`text-[11px] px-2.5 py-1 rounded-full font-semibold whitespace-nowrap border ${
+            className={`text-[10px] px-2 py-1 rounded-full font-semibold max-w-24 text-center border ${
               pricingStyles[tool.pricing]
             }`}
           >
@@ -110,9 +120,7 @@ export default function ToolCard({ tool, onCompare, isInCompare = false, onToggl
         </div>
       </div>
 
-      <p className="text-text-light text-sm leading-relaxed mb-4 flex-1">
-        {tool.shortDescription}
-      </p>
+      <p className="text-text-light text-sm leading-relaxed mb-4 flex-1">{tool.shortDescription}</p>
 
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-0.5" aria-label={`Calificación: ${tool.rating} de 5`}>
@@ -120,9 +128,7 @@ export default function ToolCard({ tool, onCompare, isInCompare = false, onToggl
             <Star
               key={i}
               className={`w-3.5 h-3.5 ${
-                i < tool.rating
-                  ? 'text-amber-400 fill-amber-400'
-                  : 'text-zinc-200 fill-zinc-200'
+                i < tool.rating ? 'text-amber-400 fill-amber-400' : 'text-zinc-200 fill-zinc-200'
               }`}
             />
           ))}
@@ -148,13 +154,12 @@ export default function ToolCard({ tool, onCompare, isInCompare = false, onToggl
                 ? 'bg-accent text-white border-accent'
                 : 'bg-surface text-text-light border-border hover:border-primary hover:text-primary'
             }`}
-            aria-label={isInCompare ? 'En el comparador' : 'Agregar al comparador'}
+            aria-label={
+              isInCompare ? `Quitar ${tool.name} del comparador` : `Comparar ${tool.name}`
+            }
+            aria-pressed={isInCompare}
           >
-            {isInCompare ? (
-              <Check className="w-4 h-4" />
-            ) : (
-              <Plus className="w-4 h-4" />
-            )}
+            {isInCompare ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
           </button>
         )}
         <a

@@ -1,9 +1,10 @@
 import { X, SlidersHorizontal } from 'lucide-react'
+import { useEffect, useRef } from 'react'
 import { CATEGORIES } from '../utils/recommender'
 
 const pricingOptions = [
   { value: 'gratis', label: 'Gratis' },
-  { value: 'freemium', label: 'Freemium' },
+  { value: 'freemium', label: 'Gratis + opciones de pago' },
   { value: 'pago', label: 'De pago' },
 ]
 
@@ -27,6 +28,12 @@ export default function FilterSidebar({
   isOpen,
   onClose,
 }) {
+  const dialogRef = useRef(null)
+  useEffect(() => {
+    const dialog = dialogRef.current
+    if (isOpen && !dialog.open) dialog.showModal()
+    if (!isOpen && dialog.open) dialog.close()
+  }, [isOpen])
   const content = (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -44,11 +51,7 @@ export default function FilterSidebar({
               Limpiar
             </button>
           )}
-          <button
-            onClick={onClose}
-            aria-label="Cerrar filtros"
-            className="md:hidden p-1 rounded-md hover:bg-text/5 bg-transparent border-none cursor-pointer"
-          >
+          <button onClick={onClose} aria-label="Cerrar filtros" className="md:hidden icon-button">
             <X className="w-5 h-5 text-text-light" />
           </button>
         </div>
@@ -116,7 +119,7 @@ export default function FilterSidebar({
 
       <div>
         <h4 className="text-sm font-semibold text-text mb-2">
-          Rating mínimo: {minRating > 0 ? `${minRating}+` : 'Todos'}
+          Valoración mínima: {minRating > 0 ? `${minRating}+` : 'Todas'}
         </h4>
         <input
           type="range"
@@ -138,17 +141,18 @@ export default function FilterSidebar({
   return (
     <>
       {/* Mobile overlay */}
-      {isOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
-          <div
-            className="absolute inset-0 bg-black/20 backdrop-blur-sm"
-            onClick={onClose}
-          />
-          <div className="absolute right-0 top-0 h-full w-80 bg-surface p-5 shadow-xl overflow-y-auto animate-slide-down border-l border-border">
-            {content}
-          </div>
-        </div>
-      )}
+      <dialog
+        ref={dialogRef}
+        aria-label="Filtrar herramientas"
+        className="filter-dialog"
+        onCancel={onClose}
+        onClose={onClose}
+      >
+        {isOpen && content}
+        <button className="action-primary w-full mt-6" onClick={onClose}>
+          Ver resultados
+        </button>
+      </dialog>
 
       {/* Desktop sidebar */}
       <div className="hidden md:block w-64 shrink-0">

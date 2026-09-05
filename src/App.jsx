@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from 'react'
+import { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
 import Layout from './components/Layout'
@@ -8,9 +8,12 @@ import Compare from './pages/Compare'
 import About from './pages/About'
 import ToolDetailPage from './pages/ToolDetailPage'
 import RecommendPage from './pages/RecommendPage'
-import PromptRefiner from './pages/PromptRefiner'
+const PromptRefiner = lazy(() => import('./pages/PromptRefiner'))
 import NotFound from './pages/NotFound'
 import { useFavorites } from './hooks/useFavorites'
+import { useCompare } from './hooks/useCompare'
+import CompareDock from './components/CompareDock'
+import Examples from './pages/Examples'
 
 const SectorPublico = lazy(() => import('./pages/SectorPublico'))
 const Docentes = lazy(() => import('./pages/Docentes'))
@@ -32,53 +35,88 @@ function ChapterFallback() {
 }
 
 export default function App() {
-  const [compareIds, setCompareIds] = useState([])
+  const {
+    ids: compareIds,
+    toggle: handleCompare,
+    remove: handleRemoveCompare,
+    message,
+  } = useCompare()
   const { favorites, toggle: toggleFavorite, isFavorite } = useFavorites()
-
-  const handleCompare = (toolId) => {
-    setCompareIds((prev) => {
-      if (prev.includes(toolId)) {
-        return prev.filter((id) => id !== toolId)
-      }
-      if (prev.length >= 3) return prev
-      return [...prev, toolId]
-    })
-  }
-
-  const handleRemoveCompare = (toolId) => {
-    setCompareIds((prev) => prev.filter((id) => id !== toolId))
-  }
 
   return (
     <BrowserRouter>
-      <Layout>
+      <Layout hasCompare={compareIds.length > 0}>
         <Routes>
           <Route
             path="/"
-            element={<Home onCompare={handleCompare} compareIds={compareIds} favorites={favorites} onToggleFavorite={toggleFavorite} isFavorite={isFavorite} />}
+            element={
+              <Home
+                onCompare={handleCompare}
+                compareIds={compareIds}
+                favorites={favorites}
+                onToggleFavorite={toggleFavorite}
+                isFavorite={isFavorite}
+              />
+            }
           />
           <Route
             path="/explorar"
             element={
-              <Explore onCompare={handleCompare} compareIds={compareIds} onToggleFavorite={toggleFavorite} isFavorite={isFavorite} />
+              <Explore
+                onCompare={handleCompare}
+                compareIds={compareIds}
+                onToggleFavorite={toggleFavorite}
+                isFavorite={isFavorite}
+              />
             }
           />
           <Route
             path="/comparar"
-            element={
-              <Compare compareIds={compareIds} onRemove={handleRemoveCompare} />
-            }
+            element={<Compare compareIds={compareIds} onRemove={handleRemoveCompare} />}
           />
           <Route path="/acerca" element={<About />} />
-          <Route path="/herramienta/:id" element={<ToolDetailPage onToggleFavorite={toggleFavorite} isFavorite={isFavorite} />} />
+          <Route path="/ejemplos" element={<Examples />} />
+          <Route
+            path="/herramienta/:id"
+            element={<ToolDetailPage onToggleFavorite={toggleFavorite} isFavorite={isFavorite} />}
+          />
           <Route path="/recomendador" element={<RecommendPage />} />
-          <Route path="/prompt-lab" element={<PromptRefiner />} />
-          <Route path="/sector-publico" element={<Suspense fallback={<ChapterFallback />}><SectorPublico /></Suspense>} />
-          <Route path="/docentes" element={<Suspense fallback={<ChapterFallback />}><Docentes /></Suspense>} />
-          <Route path="/asia" element={<Suspense fallback={<ChapterFallback />}><HerramientasAsiaticas /></Suspense>} />
+          <Route
+            path="/prompt-lab"
+            element={
+              <Suspense fallback={<ChapterFallback />}>
+                <PromptRefiner />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/sector-publico"
+            element={
+              <Suspense fallback={<ChapterFallback />}>
+                <SectorPublico />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/docentes"
+            element={
+              <Suspense fallback={<ChapterFallback />}>
+                <Docentes />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/asia"
+            element={
+              <Suspense fallback={<ChapterFallback />}>
+                <HerramientasAsiaticas />
+              </Suspense>
+            }
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
+      <CompareDock ids={compareIds} onRemove={handleRemoveCompare} message={message} />
       <Analytics />
     </BrowserRouter>
   )

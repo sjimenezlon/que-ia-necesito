@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react'
 import Fuse from 'fuse.js'
+import { useSearchParams } from 'react-router-dom'
 import tools from '../data/tools.json'
 import { processQuery } from '../utils/queryProcessor'
 
@@ -19,7 +20,8 @@ const fuse = new Fuse(tools, {
 })
 
 export function useSearch() {
-  const [query, setQuery] = useState('')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const query = searchParams.get('q') || ''
   const [overrides, setOverrides] = useState(null)
 
   const { results, meta } = useMemo(() => {
@@ -45,8 +47,10 @@ export function useSearch() {
     for (const term of processed.expandedTerms.slice(0, 3)) {
       const termResults = fuse.search(term)
       for (const r of termResults) {
-        if (!primaryResults.some((p) => p.item.id === r.item.id) &&
-            !expandedResults.some((e) => e.item.id === r.item.id)) {
+        if (
+          !primaryResults.some((p) => p.item.id === r.item.id) &&
+          !expandedResults.some((e) => e.item.id === r.item.id)
+        ) {
           expandedResults.push({ ...r, score: (r.score || 0) + 0.15 })
         }
       }
@@ -59,9 +63,7 @@ export function useSearch() {
     if (activeCategories.length > 0) {
       allResults = allResults.map((r) => {
         const matchesCategory = r.item.categories.some((c) => activeCategories.includes(c))
-        return matchesCategory
-          ? { ...r, score: (r.score || 0) * 0.7 }
-          : r
+        return matchesCategory ? { ...r, score: (r.score || 0) * 0.7 } : r
       })
     }
 
@@ -71,18 +73,19 @@ export function useSearch() {
     // Post-filter by pricing if detected
     if (activePricing) {
       const filtered = allResults.filter((r) => {
-        if (activePricing === 'gratis') return r.item.pricing === 'gratis' || r.item.pricing === 'freemium'
+        if (activePricing === 'gratis')
+          return r.item.pricing === 'gratis' || r.item.pricing === 'freemium'
         if (activePricing === 'pago') return r.item.pricing === 'pago'
         if (activePricing === 'freemium') return r.item.pricing === 'freemium'
         return true
       })
-      if (filtered.length > 0) allResults = filtered
+      allResults = filtered
     }
 
     // Post-filter by difficulty if detected
     if (activeDifficulty) {
       const filtered = allResults.filter((r) => r.item.difficulty <= activeDifficulty)
-      if (filtered.length > 0) allResults = filtered
+      allResults = filtered
     }
 
     // Cap results to avoid overwhelming the UI
@@ -117,7 +120,15 @@ export function useSearch() {
   }
 
   const handleSetQuery = (newQuery) => {
-    setQuery(newQuery)
+    setSearchParams(
+      (prev) => {
+        const next = new URLSearchParams(prev)
+        if (newQuery) next.set('q', newQuery)
+        else next.delete('q')
+        return next
+      },
+      { replace: true }
+    )
     setOverrides(null) // Reset overrides when query changes
   }
 
