@@ -177,14 +177,14 @@ export default function Home({
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="text-[10px] font-bold text-primary uppercase tracking-[0.13em] mb-1">
-                    Capítulo especial
+                    Actualizado · septiembre 2026
                   </div>
                   <h3 className="font-display font-bold text-text text-xl tracking-tight mb-2">
                     IA para el sector público
                   </h3>
                   <p className="text-sm text-text-light leading-relaxed">
-                    Casos colombianos, rutas por rol, contratación, PQRSD, datos, gobernanza y uso
-                    responsable.
+                    Ocho rutas con ejemplos editables, prompts por rol, novedades de 2026 y una ficha
+                    para preparar tu primer piloto.
                   </p>
                   <span className="inline-flex items-center gap-1.5 text-primary font-semibold text-sm mt-4">
                     Explorar la guía{' '}
