@@ -59,12 +59,11 @@ export function useSearch() {
     // Merge and score
     let allResults = [...primaryResults, ...expandedResults]
 
-    // Boost tools that match detected categories
+    // Category chips are actual filters, so unrelated tools don't fill the results.
     if (activeCategories.length > 0) {
-      allResults = allResults.map((r) => {
-        const matchesCategory = r.item.categories.some((c) => activeCategories.includes(c))
-        return matchesCategory ? { ...r, score: (r.score || 0) * 0.7 } : r
-      })
+      allResults = allResults.filter((r) =>
+        r.item.categories.some((c) => activeCategories.includes(c))
+      )
     }
 
     // Sort by score (lower is better in Fuse.js)
