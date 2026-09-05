@@ -26,3 +26,13 @@
 ## Alcance
 
 Se conserva el catálogo editorial existente. Esta intervención no es una auditoría de la vigencia de cada precio, modelo o producto. La biblioteca prepara instrucciones; el visitante decide qué compartir con su herramienta de IA.
+
+## Segunda iteración: dominio y recorrido de uso
+
+- Dominio de referencia y enlaces compartidos: `https://queianecesitas.dev/`.
+- Compartir ejemplo y ficha: copia verificada en el portapapeles con las rutas correctas. El enlace del ejemplo no incluye el borrador personalizado.
+- Fichas con ejemplos relacionados y acceso al comparador. Los ejemplos incluyen enlaces para abrir la herramienta directamente.
+- Lista de revisión con progreso; cambiar la instrucción reinicia los criterios marcados.
+- Vista previa de redes en PNG de 1200 × 630, metadatos actualizados y sitemap con 141 rutas únicas.
+- Verificación de móvil a 390 px sin desbordamiento de página y consola sin errores en el recorrido probado.
+- Story promocional generada y guardada en `marketing/story-queianecesitas-v1.png`; prompt y uso del sticker Enlace documentados junto a ella.

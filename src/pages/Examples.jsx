@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { ArrowRight, Check, SlidersHorizontal, RotateCcw, Search } from 'lucide-react'
+import { ArrowRight, ExternalLink, SlidersHorizontal, RotateCcw, Search } from 'lucide-react'
 import { practicalExamples, exampleGroups, buildExamplePrompt } from '../data/practicalExamples'
 import { getToolById } from '../utils/recommender'
 import CopyButton from '../components/CopyButton'
+import ShareLink from '../components/ShareLink'
+import { exampleUrl } from '../utils/site'
 
 function ExampleEditor({ example }) {
   const [draft] = useState(() => {
@@ -26,6 +28,7 @@ function ExampleEditor({ example }) {
     'Creativo y expresivo',
   ]
   const [tone, setTone] = useState(tones.includes(draft.tone) ? draft.tone : tones[0])
+  const [reviewed, setReviewed] = useState([])
   useEffect(() => {
     try {
       sessionStorage.setItem(
@@ -39,12 +42,12 @@ function ExampleEditor({ example }) {
   const prompt = buildExamplePrompt(example, { topic, audience, tone })
   return (
     <article className="example-editor" aria-label={`Personalizar: ${example.title}`}>
-      <div className="flex justify-between items-start gap-4">
+      <div className="flex flex-wrap justify-between items-start gap-4">
         <div>
           <span className="eyebrow">Tu punto de partida</span>
           <h2 className="text-2xl md:text-3xl font-bold mt-2">{example.title}</h2>
         </div>
-        <span className="step-badge">01 → 03</span>
+        <ShareLink url={exampleUrl(example.id)} label="Compartir ejemplo" />
       </div>
       <p className="text-text-light mt-3 mb-6">{example.description}</p>
       <div className="example-material">
@@ -63,7 +66,10 @@ function ExampleEditor({ example }) {
             rows={3}
             maxLength={2000}
             value={topic}
-            onChange={(e) => setTopic(e.target.value)}
+            onChange={(e) => {
+              setTopic(e.target.value)
+              setReviewed([])
+            }}
           />
         </label>
         <div className="grid sm:grid-cols-2 gap-4">
@@ -73,12 +79,22 @@ function ExampleEditor({ example }) {
               className="field-input"
               maxLength={300}
               value={audience}
-              onChange={(e) => setAudience(e.target.value)}
+              onChange={(e) => {
+                setAudience(e.target.value)
+                setReviewed([])
+              }}
             />
           </label>
           <label className="field-label">
             Tono
-            <select className="field-input" value={tone} onChange={(e) => setTone(e.target.value)}>
+            <select
+              className="field-input"
+              value={tone}
+              onChange={(e) => {
+                setTone(e.target.value)
+                setReviewed([])
+              }}
+            >
               {tones.map((t) => (
                 <option key={t}>{t}</option>
               ))}
@@ -110,6 +126,7 @@ function ExampleEditor({ example }) {
             setTopic(example.topic)
             setAudience(example.audience)
             setTone('Claro y cercano')
+            setReviewed([])
           }}
         >
           <RotateCcw size={15} />
@@ -125,23 +142,50 @@ function ExampleEditor({ example }) {
         {example.tools.map((item) => {
           const tool = getToolById(item.id)
           return (
-            <Link key={item.id} to={`/herramienta/${item.id}`} className="example-tool">
-              <span className="flex items-center justify-between font-semibold">
+            <div key={item.id} className="example-tool">
+              <Link
+                to={`/herramienta/${item.id}`}
+                className="flex items-center justify-between font-semibold text-text no-underline hover:text-primary"
+              >
                 {tool.name}
                 <ArrowRight size={16} />
-              </span>
+              </Link>
               <span className="text-sm text-text-light mt-1 block">{item.reason}</span>
-            </Link>
+              <a
+                className="action-text mt-2"
+                href={tool.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Abrir herramienta <ExternalLink size={14} />
+              </a>
+            </div>
           )
         })}
       </div>
       <div className="mt-6 border-t border-border pt-5">
         <h3 className="font-semibold text-sm mb-3">Antes de usar el resultado, revisa</h3>
+        <p className="text-xs text-text-light mb-3" role="status">
+          {reviewed.length} de {example.check.length} criterios revisados
+        </p>
         <ul className="space-y-2">
-          {example.check.map((item) => (
-            <li key={item} className="flex gap-2 text-sm text-text-light">
-              <Check size={16} className="text-accent shrink-0 mt-0.5" />
-              {item}
+          {example.check.map((item, index) => (
+            <li key={item}>
+              <label className="flex gap-3 items-start text-sm text-text-light min-h-11 p-2 rounded-lg hover:bg-primary/5 cursor-pointer">
+                <input
+                  type="checkbox"
+                  className="mt-0.5 w-4 h-4 shrink-0 accent-[#4338CA]"
+                  checked={reviewed.includes(index)}
+                  onChange={() =>
+                    setReviewed((previous) =>
+                      previous.includes(index)
+                        ? previous.filter((value) => value !== index)
+                        : [...previous, index]
+                    )
+                  }
+                />
+                {item}
+              </label>
             </li>
           ))}
         </ul>

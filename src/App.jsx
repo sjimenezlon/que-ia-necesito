@@ -78,7 +78,14 @@ export default function App() {
           <Route path="/ejemplos" element={<Examples />} />
           <Route
             path="/herramienta/:id"
-            element={<ToolDetailPage onToggleFavorite={toggleFavorite} isFavorite={isFavorite} />}
+            element={
+              <ToolDetailPage
+                onToggleFavorite={toggleFavorite}
+                isFavorite={isFavorite}
+                onCompare={handleCompare}
+                compareIds={compareIds}
+              />
+            }
           />
           <Route path="/recomendador" element={<RecommendPage />} />
           <Route

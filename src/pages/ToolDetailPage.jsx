@@ -2,7 +2,12 @@ import { useParams } from 'react-router-dom'
 import { getToolById } from '../utils/recommender'
 import ToolDetail from '../components/ToolDetail'
 
-export default function ToolDetailPage({ onToggleFavorite, isFavorite }) {
+export default function ToolDetailPage({
+  onToggleFavorite,
+  isFavorite,
+  onCompare,
+  compareIds = [],
+}) {
   const { id } = useParams()
   const tool = getToolById(id)
 
@@ -16,7 +21,13 @@ export default function ToolDetailPage({ onToggleFavorite, isFavorite }) {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <ToolDetail tool={tool} onToggleFavorite={onToggleFavorite} isFavorite={isFavorite} />
+      <ToolDetail
+        tool={tool}
+        onToggleFavorite={onToggleFavorite}
+        isFavorite={isFavorite}
+        onCompare={onCompare}
+        isInCompare={compareIds.includes(id)}
+      />
     </div>
   )
 }

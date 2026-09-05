@@ -1,10 +1,21 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {
-  Star, ExternalLink, ArrowLeft, Lightbulb,
-  CheckCircle, Zap, ChevronRight, Heart,
+  Star,
+  ExternalLink,
+  ArrowLeft,
+  Lightbulb,
+  CheckCircle,
+  Zap,
+  ChevronRight,
+  Heart,
+  Columns3,
+  ArrowRight,
 } from 'lucide-react'
 import { getToolById, getCategoryInfo } from '../utils/recommender'
 import { ToolFavicon } from './ToolCard'
+import { practicalExamples } from '../data/practicalExamples'
+import ShareLink from './ShareLink'
+import { SITE_URL } from '../utils/site'
 
 const pricingStyles = {
   gratis: 'bg-emerald-50 text-emerald-700 border-emerald-200',
@@ -14,31 +25,29 @@ const pricingStyles = {
 
 const pricingLabels = {
   gratis: 'Gratis',
-  freemium: 'Freemium',
+  freemium: 'Gratis + opciones de pago',
   pago: 'De pago',
 }
 
-export default function ToolDetail({ tool, onToggleFavorite, isFavorite }) {
+export default function ToolDetail({ tool, onToggleFavorite, isFavorite, onCompare, isInCompare }) {
+  const navigate = useNavigate()
   if (!tool) return null
   const favorited = isFavorite?.(tool.id)
+  const examples = practicalExamples
+    .filter((example) => example.tools.some((item) => item.id === tool.id))
+    .slice(0, 3)
 
-  const alternatives = (tool.alternatives || [])
-    .map(getToolById)
-    .filter(Boolean)
+  const alternatives = (tool.alternatives || []).map(getToolById).filter(Boolean)
 
   return (
     <div className="max-w-3xl mx-auto animate-fade-in">
-      <Link
-        to={-1}
-        onClick={(e) => {
-          e.preventDefault()
-          window.history.back()
-        }}
-        className="inline-flex items-center gap-1.5 text-text-light text-sm mb-6 no-underline hover:text-primary transition-colors font-medium"
+      <button
+        onClick={() => (window.history.state?.idx > 0 ? navigate(-1) : navigate('/explorar'))}
+        className="action-text mb-6"
       >
         <ArrowLeft className="w-4 h-4" />
         Volver
-      </Link>
+      </button>
 
       <div className="bg-surface rounded-2xl border border-border p-6 md:p-8 shadow-sm">
         <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
@@ -78,16 +87,18 @@ export default function ToolDetail({ tool, onToggleFavorite, isFavorite }) {
                   />
                 ))}
               </div>
-              <span className="text-sm text-text-lighter">
-                {tool.pricingDetail}
-              </span>
+              <span className="text-sm text-text-lighter">{tool.pricingDetail}</span>
             </div>
           </div>
           <div className="flex items-center gap-2 shrink-0">
             {onToggleFavorite && (
               <button
                 onClick={() => onToggleFavorite(tool.id)}
-                aria-label={favorited ? `Quitar ${tool.name} de favoritos` : `Agregar ${tool.name} a favoritos`}
+                aria-label={
+                  favorited
+                    ? `Quitar ${tool.name} de favoritos`
+                    : `Agregar ${tool.name} a favoritos`
+                }
                 className={`p-2.5 rounded-xl border transition-all duration-200 cursor-pointer hover:scale-105 active:scale-95 ${
                   favorited
                     ? 'bg-secondary/10 border-secondary text-secondary'
@@ -109,9 +120,47 @@ export default function ToolDetail({ tool, onToggleFavorite, isFavorite }) {
           </div>
         </div>
 
-        <p className="text-text-light leading-relaxed mb-8">
-          {tool.fullDescription}
-        </p>
+        <div className="flex flex-wrap gap-x-6 gap-y-2 border-t border-border pt-3 mb-5">
+          {onCompare && (
+            <button
+              className="action-text"
+              aria-pressed={!!isInCompare}
+              onClick={() => onCompare(tool.id)}
+            >
+              <Columns3 size={16} />
+              {isInCompare ? 'Quitar del comparador' : 'Comparar esta herramienta'}
+            </button>
+          )}
+          <ShareLink
+            key={tool.id}
+            url={`${SITE_URL}/herramienta/${tool.id}`}
+            label="Compartir ficha"
+          />
+        </div>
+
+        <p className="text-text-light leading-relaxed mb-8">{tool.fullDescription}</p>
+
+        {examples.length > 0 && (
+          <section className="mb-8 rounded-2xl border border-primary/20 bg-primary/5 p-5">
+            <span className="eyebrow">Del catálogo a la práctica</span>
+            <h2 className="font-bold text-xl mt-2 mb-2">Prueba {tool.name} con una tarea real</h2>
+            <p className="text-sm text-text-light mb-4">
+              Elige un ejemplo y adapta la instrucción a tu situación.
+            </p>
+            <div className="space-y-2">
+              {examples.map((example) => (
+                <Link
+                  key={example.id}
+                  to={`/ejemplos?caso=${example.id}`}
+                  className="flex items-center justify-between gap-3 bg-surface rounded-xl px-4 py-3 no-underline text-text hover:text-primary border border-border"
+                >
+                  <span className="text-sm font-semibold">{example.title}</span>
+                  <ArrowRight size={16} className="shrink-0" />
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
 
         <div className="space-y-6">
           <div>
@@ -121,10 +170,7 @@ export default function ToolDetail({ tool, onToggleFavorite, isFavorite }) {
             </h2>
             <ul className="space-y-2">
               {tool.useCases.map((uc, i) => (
-                <li
-                  key={i}
-                  className="flex items-start gap-2 text-text-light text-sm"
-                >
+                <li key={i} className="flex items-start gap-2 text-text-light text-sm">
                   <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                   {uc}
                 </li>
@@ -139,10 +185,7 @@ export default function ToolDetail({ tool, onToggleFavorite, isFavorite }) {
             </h2>
             <ol className="space-y-2">
               {tool.howToStart.map((step, i) => (
-                <li
-                  key={i}
-                  className="flex items-start gap-3 text-text-light text-sm"
-                >
+                <li key={i} className="flex items-start gap-3 text-text-light text-sm">
                   <span className="w-6 h-6 bg-primary/8 text-primary rounded-full flex items-center justify-center text-xs font-bold shrink-0">
                     {i + 1}
                   </span>
@@ -162,30 +205,20 @@ export default function ToolDetail({ tool, onToggleFavorite, isFavorite }) {
 
           <div className="grid md:grid-cols-2 gap-4">
             <div className="bg-emerald-50 rounded-xl p-4 border border-emerald-100">
-              <h3 className="font-semibold text-emerald-800 text-sm mb-2">
-                Ventajas
-              </h3>
+              <h3 className="font-semibold text-emerald-800 text-sm mb-2">Ventajas</h3>
               <ul className="space-y-1">
                 {tool.pros.map((pro, i) => (
-                  <li
-                    key={i}
-                    className="text-emerald-700 text-sm flex items-start gap-1"
-                  >
+                  <li key={i} className="text-emerald-700 text-sm flex items-start gap-1">
                     <span>+</span> {pro}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="bg-rose-50 rounded-xl p-4 border border-rose-100">
-              <h3 className="font-semibold text-rose-800 text-sm mb-2">
-                Limitaciones
-              </h3>
+              <h3 className="font-semibold text-rose-800 text-sm mb-2">Limitaciones</h3>
               <ul className="space-y-1">
                 {tool.cons.map((con, i) => (
-                  <li
-                    key={i}
-                    className="text-rose-700 text-sm flex items-start gap-1"
-                  >
+                  <li key={i} className="text-rose-700 text-sm flex items-start gap-1">
                     <span>-</span> {con}
                   </li>
                 ))}
@@ -219,9 +252,7 @@ export default function ToolDetail({ tool, onToggleFavorite, isFavorite }) {
                     <span className="w-6 h-6 bg-primary/8 rounded-lg flex items-center justify-center text-primary text-xs font-bold">
                       {alt.name.charAt(0)}
                     </span>
-                    <span className="text-sm text-text font-medium">
-                      {alt.name}
-                    </span>
+                    <span className="text-sm text-text font-medium">{alt.name}</span>
                   </Link>
                 ))}
               </div>
