@@ -28,7 +28,7 @@ const EFFORT_OPTIONS = [
 const AI_TOOLS = [
   { value: 'universal', label: 'Universal — Compatible con cualquier IA' },
   { value: 'claude', label: 'Claude (Opus 5 / Sonnet 5)' },
-  { value: 'chatgpt', label: 'ChatGPT (GPT-5.6 Luna / Terra / Sol)' },
+  { value: 'chatgpt', label: 'ChatGPT (GPT-5.6 / GPT-6 Astra)' },
   { value: 'gemini', label: 'Gemini (3.6 Flash / 3.1 Pro)' },
   { value: 'perplexity', label: 'Perplexity — Búsqueda con fuentes' },
   { value: 'grok', label: 'Grok 4.5 — Actualidad en tiempo real' },

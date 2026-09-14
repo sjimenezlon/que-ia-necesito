@@ -139,6 +139,22 @@ export default function ToolDetail({ tool, onToggleFavorite, isFavorite, onCompa
         </div>
 
         <p className="text-text-light leading-relaxed mb-8">{tool.fullDescription}</p>
+        {tool.releaseReview && (
+          <div className="border-l-2 border-primary/30 pl-4 mb-8 text-sm text-text-light">
+            <p className="font-semibold mb-2">
+              Novedades revisadas el <time dateTime={tool.releaseReview.date}>{tool.releaseReview.label}</time>
+            </p>
+            <ul className="space-y-1">
+              {tool.releaseReview.sources.map((source) => (
+                <li key={source.url}>
+                  <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4">
+                    {source.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {examples.length > 0 && (
           <section className="mb-8 rounded-2xl border border-primary/20 bg-primary/5 p-5">

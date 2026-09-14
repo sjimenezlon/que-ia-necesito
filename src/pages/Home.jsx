@@ -135,7 +135,7 @@ export default function Home({
               </h2>
             </div>
             <span className="hidden sm:block text-xs text-text-lighter">
-              Guías prácticas · Colombia · Agosto 2026
+              Guías prácticas · Colombia · Septiembre 2026
             </span>
           </div>
           <div className="grid md:grid-cols-2 gap-4">

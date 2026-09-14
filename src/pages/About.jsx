@@ -1,4 +1,5 @@
 import { Bot, Heart, Search, GitCompare, Compass, Sparkles, ShieldCheck, ExternalLink, AlertCircle } from 'lucide-react'
+import tools from '../data/tools.json'
 
 const features = [
   { icon: Search, color: 'text-primary', bg: 'bg-primary/8', title: 'Busca por necesidad', desc: 'Escribe lo que quieres hacer en lenguaje natural y encuentra la herramienta ideal.' },
@@ -18,7 +19,7 @@ export default function About() {
           ¿Qué <span className="text-gradient-primary">IA</span> necesito?
         </h1>
         <p className="text-text-light text-lg leading-relaxed max-w-lg mx-auto">
-          Tu guía práctica para encontrar la herramienta de inteligencia artificial perfecta.
+          La herramienta para saber qué IA usar. Empieza por la tarea que necesitas resolver.
         </p>
       </div>
 
@@ -54,8 +55,10 @@ export default function About() {
         <h2 className="text-xl font-bold text-text mb-4 tracking-tight">¿Qué incluye?</h2>
         <ul className="space-y-2.5 text-text-light">
           {[
-            'Más de 130 herramientas de IA curadas y verificadas',
+            `${tools.length} herramientas de IA organizadas por necesidad`,
             '16 categorías: incluye finanzas, programación, diseño y automatización',
+            'Ocho ejemplos editables para pasar de una idea a una instrucción concreta',
+            'Guía para docentes con actividades, evaluación y ejemplos de uso',
             'Capítulo especial para el sector público colombiano con casos de uso',
             'Capítulo especial de herramientas de IA asiáticas (China, Corea, Japón, India) a septiembre 2026',
             'Información de precios, nivel de dificultad y casos de uso',
@@ -115,7 +118,7 @@ export default function About() {
           </a>
         </p>
         <p className="text-text-lighter text-sm mt-2">
-          Septiembre 2026 ·{' '}
+          Edición del <time dateTime="2026-09-14">14 de septiembre de 2026</time> ·{' '}
           <a
             href="https://sjimenezlon.co/"
             target="_blank"
