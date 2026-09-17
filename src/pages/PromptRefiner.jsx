@@ -12,7 +12,7 @@ import FormatStep from '../components/prompt-refiner/FormatStep'
 import ConstraintsStep from '../components/prompt-refiner/ConstraintsStep'
 import GeneratedPrompt from '../components/prompt-refiner/GeneratedPrompt'
 
-const UPDATED_AT = '14 de septiembre de 2026'
+const UPDATED_AT = '17 de septiembre de 2026'
 
 const DOMAINS = [
   { id: 'artes', label: 'Artes', icon: Palette, desc: 'Creación artística, visual, musical, literaria y escénica.', color: 'bg-red-50 text-red-600 border-red-200' },
@@ -244,9 +244,9 @@ const CLARITIES = [
 
 const MODEL_SNAPSHOT = [
   { name: 'Claude Fable 5.1', house: 'Anthropic · 1 sep 2026', note: 'El más capaz de la casa: 1M de contexto, 128K de salida y, en esfuerzo bajo o medio, el mismo resultado por menos dinero.' },
-  { name: 'GPT-6 Astra', house: 'OpenAI · 3 sep 2026', note: 'Nueva generación para trabajo profesional, programación y uso del computador. Disponible en ChatGPT Work, Codex y API según plan y despliegue.' },
-  { name: 'Gemini 3.8 Flash', house: 'Google · 2 sep 2026', note: 'Mejoras en programación y tareas de varios pasos; disponible en la app para AI Pro y Ultra, además de la API. La variante Cyber tiene acceso restringido.' },
-  { name: 'Grok 4.6', house: 'xAI · 12 ago 2026', note: '500K de contexto y el precio más bajo de la frontera; su ventaja sigue siendo el pulso en tiempo real de X.' },
+  { name: 'GPT-6 Astra', house: 'OpenAI · 3 sep 2026', note: '1,05M de contexto a USD 10/50 por millón, igual que Fable 5.1. En el chat solo lo ven Pro, Business y Enterprise; Plus lo tiene en Work y Codex.' },
+  { name: 'Gemini 3.8 Flash', house: 'Google · 2 sep 2026', note: 'El caballo de batalla barato: USD 0,75/3,75 por millón, pero con fecha de vencimiento —el 1 de enero de 2027 dobla la tarifa—.' },
+  { name: 'Grok 4.6', house: 'xAI · 12 ago 2026', note: '500K de contexto por USD 2/6. Grok 4.7 se anunció para comienzos de septiembre, se aplazó y a la fecha xAI no ha publicado ficha.' },
   { name: 'Kimi K3', house: 'Moonshot · pesos abiertos 27 jul 2026', note: 'Un millón de tokens y el modelo de pesos abiertos más grande publicado hasta hoy.' },
   { name: 'DeepSeek V4-Flash-Vision', house: 'DeepSeek · 21 ago 2026', note: 'Ya lee imágenes y gráficas sin subir la tarifa: USD 0,14 / 0,28 por millón de tokens, el piso del mercado.' },
 ]

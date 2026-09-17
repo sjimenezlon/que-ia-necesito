@@ -60,7 +60,7 @@ export default function About() {
             'Ocho ejemplos editables para pasar de una idea a una instrucción concreta',
             'Guía para docentes con actividades, evaluación y ejemplos de uso',
             'Capítulo especial para el sector público colombiano con casos de uso',
-            'Capítulo especial de herramientas de IA asiáticas (China, Corea, Japón, India) a septiembre 2026',
+            'Capítulo especial de herramientas de IA asiáticas (China, Corea, Japón, India), verificado al 17 de septiembre de 2026',
             'Información de precios, nivel de dificultad y casos de uso',
             'Guías paso a paso para empezar con cada herramienta',
             'Consejos prácticos de uso para cada herramienta',
@@ -118,7 +118,7 @@ export default function About() {
           </a>
         </p>
         <p className="text-text-lighter text-sm mt-2">
-          Edición del <time dateTime="2026-09-14">14 de septiembre de 2026</time> ·{' '}
+          Edición del <time dateTime="2026-09-17">17 de septiembre de 2026</time> ·{' '}
           <a
             href="https://sjimenezlon.co/"
             target="_blank"
