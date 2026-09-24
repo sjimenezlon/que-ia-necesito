@@ -12,7 +12,7 @@ import FormatStep from '../components/prompt-refiner/FormatStep'
 import ConstraintsStep from '../components/prompt-refiner/ConstraintsStep'
 import GeneratedPrompt from '../components/prompt-refiner/GeneratedPrompt'
 
-const UPDATED_AT = '17 de septiembre de 2026'
+const UPDATED_AT = '24 de septiembre de 2026'
 
 const DOMAINS = [
   { id: 'artes', label: 'Artes', icon: Palette, desc: 'Creación artística, visual, musical, literaria y escénica.', color: 'bg-red-50 text-red-600 border-red-200' },
@@ -201,7 +201,7 @@ const CLARITIES = [
     kicker: 'Claridad 1 · Ya razonan solos',
     body: (
       <>
-        Claude Opus 5, GPT-5.6, Gemini y Kimi K3 piensan paso a paso por cuenta propia y traen su propio control de
+        Claude Opus 5.5, GPT-6, Gemini y Kimi K3 piensan paso a paso por cuenta propia y traen su propio control de
         esfuerzo. <span className="font-semibold">Escribir «piensa paso a paso» hoy estorba más de lo que ayuda</span>:
         en vez de dictarle el razonamiento, dale un encargo claro y súbele el esfuerzo si la tarea lo pide.
       </>
@@ -243,12 +243,12 @@ const CLARITIES = [
 ]
 
 const MODEL_SNAPSHOT = [
-  { name: 'Claude Fable 5.1', house: 'Anthropic · 1 sep 2026', note: 'El más capaz de la casa: 1M de contexto, 128K de salida y, en esfuerzo bajo o medio, el mismo resultado por menos dinero.' },
-  { name: 'GPT-6 Astra', house: 'OpenAI · 3 sep 2026', note: '1,05M de contexto a USD 10/50 por millón, igual que Fable 5.1. En el chat solo lo ven Pro, Business y Enterprise; Plus lo tiene en Work y Codex.' },
-  { name: 'Gemini 3.8 Flash', house: 'Google · 2 sep 2026', note: 'El caballo de batalla barato: USD 0,75/3,75 por millón, pero con fecha de vencimiento —el 1 de enero de 2027 dobla la tarifa—.' },
-  { name: 'Grok 4.6', house: 'xAI · 12 ago 2026', note: '500K de contexto por USD 2/6. Grok 4.7 se anunció para comienzos de septiembre, se aplazó y a la fecha xAI no ha publicado ficha.' },
-  { name: 'Kimi K3', house: 'Moonshot · pesos abiertos 27 jul 2026', note: 'Un millón de tokens y el modelo de pesos abiertos más grande publicado hasta hoy.' },
-  { name: 'DeepSeek V4-Flash-Vision', house: 'DeepSeek · 21 ago 2026', note: 'Ya lee imágenes y gráficas sin subir la tarifa: USD 0,14 / 0,28 por millón de tokens, el piso del mercado.' },
+  { name: 'Claude Opus 5.5', house: 'Anthropic · 22 sep 2026', note: 'Rinde cerca de Fable 5.1 por USD 4/20 por millón, un 40 % menos que Opus 5. Ya es el modelo por defecto en Claude y Claude Code; Sonnet 5.5 y Haiku 5.5 vienen «en semanas».' },
+  { name: 'GPT-6 Sol y Luna', house: 'OpenAI · 22 sep 2026', note: 'La mitad del precio de la serie 5.6 (USD 2/10 y 0,10/0,50). Por ahora solo en ChatGPT Work y Codex, no en el chat; GPT-6 Astra sigue arriba para Pro, Business y Enterprise.' },
+  { name: 'Gemini 3.8 Flash', house: 'Google · 2 sep 2026', note: 'El caballo de batalla barato: USD 0,75/3,75 por millón hasta fin de año. Gemini 3.5 Pro quedó aparcado y Google ya apunta a Gemini 4, sin fecha.' },
+  { name: 'Grok 4.7', house: 'xAI · 21 sep 2026', note: 'Salió por fin, tras dos aplazamientos: 500K de contexto al mismo precio del 4.6, USD 2/6. Musk ya promete un 4.8.' },
+  { name: 'Xiaomi MiMo-V2.6-Pro', house: 'Xiaomi · 22 sep 2026', note: 'Cerca de un billón de parámetros con pesos MIT y 1M de contexto, por USD 0,435/0,87: la apertura más grande de la semana.' },
+  { name: 'DeepSeek V4.1-Flash', house: 'DeepSeek · 10 sep 2026', note: 'Multimodal y con pesos MIT, USD 0,30/1,20 en hora pico y la mitad en valle. Bajo investigación del regulador chino desde el 22 de septiembre.' },
 ]
 
 function MethodSidebar({ currentStep }) {

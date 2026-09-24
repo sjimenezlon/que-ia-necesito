@@ -27,16 +27,16 @@ const EFFORT_OPTIONS = [
 
 const AI_TOOLS = [
   { value: 'universal', label: 'Universal — Compatible con cualquier IA' },
-  { value: 'claude', label: 'Claude (Fable 5.1 / Opus 5 / Sonnet 5)' },
-  { value: 'chatgpt', label: 'ChatGPT (GPT-5.6 / GPT-6 Astra)' },
+  { value: 'claude', label: 'Claude (Opus 5.5 / Fable 5.1 / Sonnet 5)' },
+  { value: 'chatgpt', label: 'ChatGPT (GPT-6 Sol / GPT-6 Astra / GPT-5.6)' },
   { value: 'gemini', label: 'Gemini (3.8 Flash / 3.1 Pro)' },
   { value: 'perplexity', label: 'Perplexity — Búsqueda con fuentes' },
-  { value: 'grok', label: 'Grok 4.6 — Actualidad en tiempo real' },
+  { value: 'grok', label: 'Grok 4.7 — Actualidad en tiempo real' },
   { value: 'abiertos', label: 'Modelos abiertos (Kimi K3, DeepSeek V4, GLM, Qwen)' },
   { value: 'agentes', label: 'Agentes de código (Claude Code, Codex, Cursor)' },
   { value: 'appbuilders', label: 'Constructores de apps (Lovable, v0, Bolt)' },
   { value: 'imagen', label: 'Imagen (GPT Image 2, Nano Banana Pro, Midjourney)' },
-  { value: 'video', label: 'Video (Veo 3.1, Kling, Seedance, Sora)' },
+  { value: 'video', label: 'Video (Veo 3.1, Gemini Omni, Kling, Seedance, Runway)' },
 ]
 
 export default function ConstraintsStep({ avoid, setAvoid, quality, toggleQuality, effort, setEffort, allowUncertainty, setAllowUncertainty, aiTool, setAiTool, onPrev, onGenerate, isPublico, constraintsHint }) {
@@ -107,7 +107,7 @@ export default function ConstraintsStep({ avoid, setAvoid, quality, toggleQualit
             Esfuerzo de razonamiento
           </label>
           <p className="text-xs text-text-lighter italic mb-2">
-            Los modelos de 2026 (Opus 5, GPT-5.6 Sol, Grok 4.5) traen su propio dial de esfuerzo. Deja "automático"
+            Los modelos de 2026 (Opus 5.5, GPT-6 Sol, Grok 4.7) traen su propio dial de esfuerzo. Deja "automático"
             salvo que sepas que la tarea es trivial o especialmente dura.
           </p>
           <select

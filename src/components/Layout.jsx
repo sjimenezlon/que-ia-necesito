@@ -9,6 +9,7 @@ const navLinks = [
   { to: '/explorar', label: 'Explorar' },
   { to: '/ejemplos', label: 'Ejemplos' },
   { to: '/docentes', label: 'Docentes' },
+  { to: '/investigadores', label: 'Investigadores' },
   { to: '/sector-publico', label: 'Sector Público' },
   { to: '/asia', label: 'IA Asiática' },
   { to: '/prompt-lab', label: 'Prompt Lab' },

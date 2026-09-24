@@ -38,7 +38,7 @@ export default function Footer() {
                 </a>
               </p>
               <p className="text-text-lighter text-xs mt-0.5">
-                Actualización editorial: <time dateTime="2026-09-17">17 de septiembre de 2026</time> ·{' '}
+                Actualización editorial: <time dateTime="2026-09-24">24 de septiembre de 2026</time> ·{' '}
                 <a
                   href="https://sjimenezlon.co/"
                   target="_blank"

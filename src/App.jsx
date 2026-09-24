@@ -17,6 +17,7 @@ import Examples from './pages/Examples'
 
 const SectorPublico = lazy(() => import('./pages/SectorPublico'))
 const Docentes = lazy(() => import('./pages/Docentes'))
+const Investigadores = lazy(() => import('./pages/Investigadores'))
 const HerramientasAsiaticas = lazy(() => import('./pages/HerramientasAsiaticas'))
 
 function ChapterFallback() {
@@ -109,6 +110,14 @@ export default function App() {
             element={
               <Suspense fallback={<ChapterFallback />}>
                 <Docentes />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/investigadores"
+            element={
+              <Suspense fallback={<ChapterFallback />}>
+                <Investigadores />
               </Suspense>
             }
           />

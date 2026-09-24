@@ -5,7 +5,7 @@ import { getPopularTools, getCategoryInfo, getToolById } from '../utils/recommen
 import Hero from '../components/Hero'
 import ToolCard from '../components/ToolCard'
 import SearchContextChips from '../components/SearchContextChips'
-import { ArrowRight, Compass, GraduationCap, Heart, Landmark, Search } from 'lucide-react'
+import { ArrowRight, Compass, GraduationCap, Heart, Landmark, Microscope, Search } from 'lucide-react'
 import tools from '../data/tools.json'
 import CategoryGrid from '../components/CategoryGrid'
 import { practicalExamples } from '../data/practicalExamples'
@@ -138,7 +138,34 @@ export default function Home({
               Guías prácticas · Colombia · Septiembre 2026
             </span>
           </div>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Link
+              to="/investigadores"
+              className="group relative overflow-hidden bg-surface border border-border rounded-2xl p-6 no-underline hover:shadow-lg hover:-translate-y-0.5 hover:border-warm/35 transition-all"
+            >
+              <div className="absolute -top-12 -right-12 w-36 h-36 bg-warm/8 rounded-full blur-2xl" />
+              <div className="relative flex items-start gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-warm/10 flex items-center justify-center shrink-0">
+                  <Microscope className="w-6 h-6 text-warm" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="text-[10px] font-bold text-warm uppercase tracking-[0.13em] mb-1">
+                    Nuevo capítulo
+                  </div>
+                  <h3 className="font-display font-bold text-text text-xl tracking-tight mb-2">
+                    IA para jóvenes investigadores
+                  </h3>
+                  <p className="text-sm text-text-light leading-relaxed">
+                    Herramientas por momento de la investigación, qué exigen las revistas, un kit
+                    gratuito y tu declaración de uso de IA lista para copiar.
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 text-warm font-semibold text-sm mt-4">
+                    Explorar la guía{' '}
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </div>
+            </Link>
             <Link
               to="/docentes"
               className="group relative overflow-hidden bg-surface border border-border rounded-2xl p-6 no-underline hover:shadow-lg hover:-translate-y-0.5 hover:border-accent/35 transition-all"
@@ -150,7 +177,7 @@ export default function Home({
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="text-[10px] font-bold text-accent uppercase tracking-[0.13em] mb-1">
-                    Nuevo capítulo
+                    Para docentes
                   </div>
                   <h3 className="font-display font-bold text-text text-xl tracking-tight mb-2">
                     IA para profesoras y profesores
