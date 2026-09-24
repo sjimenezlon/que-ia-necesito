@@ -13,19 +13,19 @@ export const EXTERNAL_TOOLS = {
     name: 'Zotero',
     url: 'https://www.zotero.org/',
     free: 'si',
-    note: 'Gestor de referencias libre. Zotero 10 (17-ago-2026) busca sin importar tildes y avisa si citas un artículo retractado. Sin IA propia: la IA llega por complementos de terceros.',
+    note: 'Gestor de referencias libre. Zotero 10 (17-ago-2026) busca sin importar tildes, y Zotero te avisa si un artículo de tu biblioteca fue retractado. Sin IA propia: la IA llega por complementos de terceros.',
   },
   openalex: {
     name: 'OpenAlex',
     url: 'https://openalex.org/',
     free: 'si',
-    note: 'Índice abierto (CC0) de la producción científica mundial. Desde febrero de 2026 la API pide llave y regala USD 1 de consultas al día.',
+    note: 'Índice abierto (CC0) de la producción científica mundial. La API funciona sin llave para consultas básicas; con una llave gratuita tienes USD 1 de consultas al día.',
   },
   litmaps: {
     name: 'Litmaps',
     url: 'https://www.litmaps.com/',
     free: 'limitado',
-    note: 'Mapas de citación y alertas. Gratis: un mapa de hasta 100 artículos. Pro: USD 10/mes, con descuento para países de ingreso medio.',
+    note: 'Mapas de citación y alertas. Plan gratis con un mapa pequeño (hasta 100 artículos). Pro: USD 10/mes, con descuentos según el país.',
   },
   undermind: {
     name: 'Undermind',
@@ -49,7 +49,7 @@ export const EXTERNAL_TOOLS = {
     name: 'Asta (Ai2)',
     url: 'https://asta.allen.ai/',
     free: 'si',
-    note: 'Asistente abierto del Allen Institute sobre Semantic Scholar: busca artículos, resume literatura con citas en las que se puede hacer clic y analiza datos (beta).',
+    note: 'Asistente abierto del Allen Institute sobre Semantic Scholar: busca artículos, resume literatura con citas en las que se puede hacer clic y analiza datos (beta para socios seleccionados).',
   },
   overleaf: {
     name: 'Overleaf',
@@ -61,7 +61,7 @@ export const EXTERNAL_TOOLS = {
     name: 'Paperpal',
     url: 'https://paperpal.com/',
     free: 'limitado',
-    note: 'Corrección de lenguaje académico en Word, Google Docs y Overleaf. Plan gratis limitado; Prime desde USD 12/mes pagando el año.',
+    note: 'Corrección de lenguaje académico en Word, Google Docs y Overleaf. Plan gratis limitado y planes de pago (consulta el precio para tu país).',
   },
   trinka: {
     name: 'Trinka',
@@ -73,7 +73,7 @@ export const EXTERNAL_TOOLS = {
     name: 'Google Colab + Gemini',
     url: 'https://colab.research.google.com/',
     free: 'si',
-    note: 'Cuadernos de Python en la nube con asistente y un agente de ciencia de datos que arma el cuaderno a partir de una descripción. Gratis, para mayores de 18 años.',
+    note: 'Cuadernos de Python en la nube con asistente y un agente de ciencia de datos que arma el cuaderno a partir de una descripción. Gratis; el agente de IA es para mayores de 18 años y no está en todos los países.',
   },
   jupyterai: {
     name: 'Jupyter AI',
@@ -91,19 +91,19 @@ export const EXTERNAL_TOOLS = {
     name: 'ATLAS.ti',
     url: 'https://atlasti.com/',
     free: 'no',
-    note: 'Codificación cualitativa con IA: declaras tu intención y la IA propone códigos que tú apruebas. Tiene un «modo privacidad» que no envía nada afuera. Licencias por semestre para estudiantes.',
+    note: 'Codificación cualitativa con IA: declaras tu intención y la IA propone códigos que tú apruebas. La IA solo se activa si la pides y ATLAS.ti declara que no entrena con tus datos. Licencias por semestre para estudiantes.',
   },
   nvivo: {
     name: 'NVivo',
     url: 'https://lumivero.com/products/nvivo/',
     free: 'no',
-    note: 'Resúmenes y autocodificación con IA como complemento de pago, con retención cero de datos. Anuncia NVivo AI Cloud para el 6 de octubre de 2026.',
+    note: 'Resúmenes y sugerencia de subcódigos con IA como complemento de pago, con retención cero de datos. Anuncia NVivo AI Cloud para el 6 de octubre de 2026.',
   },
   maxqda: {
     name: 'MAXQDA',
     url: 'https://www.maxqda.com/',
     free: 'no',
-    note: 'AI Assist resume, sugiere códigos y conversa sobre tus datos, con servidores en la Unión Europea y sin entrenar con ellos. Es un complemento sobre una licencia de pago.',
+    note: 'AI Assist resume, sugiere códigos y conversa sobre tus datos, con servidores en la Unión Europea y sin entrenar con ellos. AI Assist tiene una versión gratis con pocas consultas, siempre sobre una licencia de pago.',
   },
 }
 
@@ -263,7 +263,7 @@ export const RISK_LIGHTS = [
     title: 'Sustituir',
     tone: 'rose',
     rule: 'No permitido.',
-    items: ['Generar hipótesis, análisis o conclusiones y presentarlos como propios', 'Fabricar datos, citas o resultados', 'Poner a la IA como autora', 'Delegar la revisión por pares a un modelo', 'Crear imágenes fotorrealistas de investigación'],
+    items: ['Generar hipótesis, análisis o conclusiones y presentarlos como propios', 'Fabricar datos, citas o resultados', 'Poner a la IA como autora', 'Delegar la revisión por pares a un modelo', 'Crear imágenes fotorrealistas falsas (deepfakes)'],
   },
 ]
 
@@ -368,7 +368,7 @@ export const COLOMBIA = {
     {
       kicker: 'Datos personales',
       title: 'Ley 1581 de 2012: anonimiza antes de subir',
-      body: 'Salud, vida sexual, origen étnico, convicciones políticas o religiosas y datos biométricos son datos sensibles. La ley permite tratarlos con fines científicos, pero exige suprimir la identidad de los titulares. Y su artículo 26 prohíbe transferir datos personales a países sin protección adecuada, salvo autorización expresa: subir una entrevista a un chat con servidores en el exterior cae ahí.',
+      body: 'Salud, vida sexual, origen étnico, convicciones políticas o religiosas y datos biométricos son datos sensibles. La ley permite tratarlos con fines científicos, pero exige suprimir la identidad de los titulares. Y su artículo 26 prohíbe transferir datos personales a países sin protección adecuada, salvo excepciones como la autorización expresa del titular: subir una entrevista a un chat con servidores en el exterior puede caer ahí.',
       action: 'Anonimiza primero y, si vas a usar IA con los datos, dilo en el consentimiento informado: qué herramienta, dónde guarda los datos y si entrena con ellos.',
       url: 'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981',
     },
@@ -451,10 +451,10 @@ export const RISKS = [
   },
   {
     title: 'Datos que se van a entrenar un modelo',
-    evidence: 'En los planes Gratis, Go, Plus y Pro de ChatGPT el contenido se usa para entrenar, salvo que lo desactives. Elsevier lo resume así: muchas herramientas gratuitas no son privadas por defecto. En el otro extremo, Overleaf, NVivo y MAXQDA declaran que no entrenan con tus datos.',
+    evidence: 'En los planes individuales de ChatGPT el contenido puede usarse para entrenar, salvo que lo desactives; en Business, Enterprise y Edu no. Elsevier lo resume así: muchas herramientas gratuitas no son privadas por defecto. En el otro extremo, Overleaf, NVivo y MAXQDA declaran que no entrenan con tus datos.',
     defense: 'Desactiva el entrenamiento en la configuración, prefiere licencias institucionales o modelos locales y nunca subas datos identificables de participantes.',
     sources: [
-      { title: 'ChatGPT: planes', url: 'https://chatgpt.com/pricing' },
+      { title: 'OpenAI: cómo se usan tus datos', url: 'https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance' },
       { title: 'Elsevier: política de IA', url: 'https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals' },
     ],
   },
@@ -479,7 +479,7 @@ export const SOURCES = [
   { title: 'Taylor & Francis: política de IA', url: 'https://taylorandfrancis.com/our-policies/ai-policy/' },
   { title: 'IEEE: contenido generado por IA', url: 'https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/guidelines-and-policies/submission-and-peer-review-policies/' },
   { title: 'arXiv: moderación y uso de IA', url: 'https://info.arxiv.org/help/moderation/index.html' },
-  { title: 'NIH: prohibición de IA en la revisión por pares (NOT-OD-23-149)', url: 'https://grants.nih.gov/grants/guide/notice-files/NOT-OD-23-149.html' },
+  { title: 'NIH: prohibición de IA en la evaluación de propuestas (NOT-OD-23-149)', url: 'https://grants.nih.gov/grants/guide/notice-files/NOT-OD-23-149.html' },
   { title: 'APA Style: formatos de referencia para IA generativa', url: 'https://apastyle.apa.org/blog/cite-generative-ai-references' },
   { title: 'CONPES 4144: Política Nacional de IA', url: 'https://colaboracion.dnp.gov.co/CDT/Conpes/Econ%C3%B3micos/4144.pdf' },
   { title: 'Ley 1581 de 2012', url: 'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981' },
@@ -494,4 +494,212 @@ export const SOURCES = [
   { title: 'Overleaf: funciones de IA', url: 'https://docs.overleaf.com/integrations-and-add-ons/ai-features' },
   { title: 'Nature: «Regenerate response» en un artículo publicado', url: 'https://www.nature.com/articles/d41586-023-02477-w' },
   { title: 'Kobak et al.: escritura asistida por LLM en PubMed', url: 'https://doi.org/10.1126/sciadv.adt3813' },
+]
+
+/* ── Entusiasmo con responsabilidad ─────────────────────────────── */
+export const POSSIBILITIES = [
+  {
+    title: 'Leer el mundo en tu idioma',
+    body: 'Un artículo en alemán, un informe en portugués o una tesis en chino ya no son una barrera: puedes entender de qué hablan y decidir si vale la pena leerlos a fondo.',
+    care: 'Cita el original, no la traducción automática, y verifica los pasajes clave con alguien que lea la lengua.',
+    tools: ['deepl', 'notebooklm'],
+  },
+  {
+    title: 'Un semillero con músculo de laboratorio',
+    body: 'Un grupo de cuatro estudiantes en un municipio puede mapear literatura, limpiar datos abiertos y hacer análisis que hace una década exigían un equipo con presupuesto.',
+    care: 'La escala no reemplaza el rigor: la pregunta, el diseño y la interpretación siguen siendo del grupo.',
+    tools: ['elicit', 'julius'],
+  },
+  {
+    title: 'Aprender a programar programando',
+    body: 'Si nunca escribiste código, hoy puedes pedir un análisis en R o Python, correrlo, romperlo y preguntar por qué falló. Es un tutor paciente a cualquier hora.',
+    care: 'Pide que te explique cada línea y córrelo tú. Si no entiendes el código, todavía no es tu análisis.',
+    tools: ['claude', 'chatgpt'],
+  },
+  {
+    title: 'Ensayar antes del jurado',
+    body: 'Puedes simular una sustentación, recibir las preguntas más incómodas y practicar tus respuestas tantas veces como quieras antes del día real.',
+    care: 'Úsalo para prepararte, no para memorizar respuestas ajenas: el jurado quiere escuchar cómo piensas tú.',
+    tools: ['claude', 'gemini'],
+  },
+  {
+    title: 'Llevar tu investigación a la calle',
+    body: 'Convertir un artículo en una infografía, un podcast o una charla para la comunidad que participó en el estudio es hoy mucho más fácil. La apropiación social del conocimiento deja de ser un trámite.',
+    care: 'Revisa que la versión divulgativa no prometa más de lo que encontraste y dale el crédito a quienes participaron.',
+    tools: ['canva', 'notebooklm', 'gamma'],
+  },
+  {
+    title: 'Atreverte a preguntas más grandes',
+    body: 'Cuando lo repetitivo pesa menos, queda tiempo para lo que ninguna máquina hace por ti: ir a campo, escuchar, dudar y formular la pregunta que nadie se había hecho en tu territorio.',
+    care: 'El tiempo que te ahorra la IA vale lo que hagas con él. Inviértelo en pensar, no en producir más de lo mismo.',
+    tools: ['perplexity', 'research-rabbit'],
+  },
+]
+
+/* ── Seis investigaciones de principio a fin (ejemplos ilustrativos) ── */
+export const EXAMPLES = [
+  {
+    id: 'salud',
+    area: 'Salud pública',
+    level: 'Semillero de pregrado',
+    title: 'Barreras para el control prenatal en veredas rurales',
+    question: '¿Qué impide que las gestantes de veredas alejadas asistan a sus controles prenatales?',
+    steps: [
+      { who: 'IA', text: 'Mapear literatura latinoamericana sobre barreras de acceso y armar una tabla de hallazgos con Elicit.', tools: ['elicit'] },
+      { who: 'Tú', text: 'Leer completos los diez estudios más cercanos a tu contexto y descartar los que no aplican.' },
+      { who: 'Tú', text: 'Hacer las entrevistas en campo y anonimizarlas antes de cualquier procesamiento.' },
+      { who: 'IA', text: 'Proponer códigos iniciales sobre las transcripciones anonimizadas, en modo privacidad.', external: ['atlasti'] },
+      { who: 'Tú', text: 'Construir las categorías finales con el grupo y validarlas con una partera o líder comunitaria.' },
+    ],
+    ethics: 'Las voces de las participantes son datos sensibles de salud. El consentimiento debe decir si una IA procesará las transcripciones y dónde.',
+    disclosure: 'Se usó Elicit para identificar literatura, luego leída en su fuente, y ATLAS.ti en modo privacidad para sugerir códigos iniciales, revisados por el equipo.',
+  },
+  {
+    id: 'ambiental',
+    area: 'Ingeniería ambiental',
+    level: 'Maestría',
+    title: 'Calidad del agua en quebradas urbanas con datos abiertos',
+    question: '¿Cómo cambian los indicadores de calidad del agua de una quebrada entre la época seca y la de lluvias?',
+    steps: [
+      { who: 'Tú', text: 'Definir los indicadores y el análisis antes de abrir los datos, y dejarlo por escrito.' },
+      { who: 'IA', text: 'Escribir en Colab el código para descargar, limpiar y graficar las series de datos abiertos.', external: ['colab'] },
+      { who: 'Tú', text: 'Correr el código paso a paso, revisar cada supuesto y guardar el cuaderno en el repositorio del grupo.' },
+      { who: 'IA', text: 'Explicar las pruebas estadísticas candidatas y sus supuestos.', tools: ['claude'] },
+      { who: 'Tú', text: 'Interpretar los resultados con conocimiento del territorio: una obra, una lluvia atípica, un vertimiento.' },
+    ],
+    ethics: 'Si faltan datos de algunos meses, no los rellenes con valores simulados sin declararlo: lo raro, como un vertimiento, es justo lo que desaparece.',
+    disclosure: 'Se usó Gemini en Google Colab para generar código de limpieza y visualización, que los autores ejecutaron y verificaron. El cuaderno está disponible en el repositorio.',
+  },
+  {
+    id: 'educacion',
+    area: 'Educación',
+    level: 'Semillero de licenciatura',
+    title: 'Cómo usan la IA los estudiantes de un colegio público',
+    question: '¿Para qué tareas escolares usan la IA los estudiantes de grado once y qué aprenden de ese uso?',
+    steps: [
+      { who: 'IA', text: 'Ayudar a redactar preguntas de encuesta claras y detectar preguntas que sesgan la respuesta.', tools: ['chatgpt'] },
+      { who: 'Tú', text: 'Pilotear la encuesta con cinco estudiantes y ajustar el lenguaje con el docente.' },
+      { who: 'Tú', text: 'Gestionar el asentimiento de los estudiantes y el consentimiento de sus acudientes.' },
+      { who: 'IA', text: 'Sugerir categorías para las respuestas abiertas, ya sin nombres ni cursos.', tools: ['claude'] },
+      { who: 'Tú', text: 'Devolver los resultados al colegio en un taller con los estudiantes.' },
+    ],
+    ethics: 'Son menores de edad: la Ley 1581 restringe el tratamiento de sus datos. Nada identificable se sube a ninguna herramienta.',
+    disclosure: 'Se usó ChatGPT para revisar la claridad del cuestionario y Claude para proponer categorías de respuestas abiertas anonimizadas, validadas por el equipo.',
+  },
+  {
+    id: 'historia',
+    area: 'Historia',
+    level: 'Pregrado',
+    title: 'La prensa regional del siglo XIX ante una epidemia',
+    question: '¿Cómo narró la prensa local una epidemia y a quién culpó?',
+    steps: [
+      { who: 'Tú', text: 'Seleccionar los periódicos en el archivo digital y registrar la procedencia de cada imagen.' },
+      { who: 'IA', text: 'Transcribir páginas escaneadas con tipografía antigua y marcar las palabras dudosas.', tools: ['gemini'] },
+      { who: 'Tú', text: 'Cotejar la transcripción con el original en los fragmentos que vas a citar.' },
+      { who: 'IA', text: 'Cruzar todas las transcripciones para encontrar menciones y términos recurrentes.', tools: ['notebooklm'] },
+      { who: 'Tú', text: 'Interpretar el discurso en su contexto histórico: esa lectura es la contribución.' },
+    ],
+    ethics: 'La IA puede modernizar la ortografía o completar palabras ilegibles con lo más probable. En historia, lo probable no es lo que dice la fuente.',
+    disclosure: 'Se usó Gemini para una transcripción preliminar de fuentes hemerográficas; los fragmentos citados se cotejaron con los originales.',
+  },
+  {
+    id: 'economia',
+    area: 'Economía',
+    level: 'Doctorado',
+    title: 'Informalidad laboral juvenil con microdatos',
+    question: '¿Qué características se asocian con la informalidad de los jóvenes en las ciudades intermedias?',
+    steps: [
+      { who: 'Tú', text: 'Registrar el plan de análisis antes de ver los resultados (preregistro interno o público).' },
+      { who: 'IA', text: 'Escribir y documentar el código en R para unir módulos y construir variables.', external: ['posit'] },
+      { who: 'Tú', text: 'Revisar los factores de expansión y las definiciones oficiales de cada variable.' },
+      { who: 'IA', text: 'Revisar tu código en busca de errores y proponer pruebas de robustez.', tools: ['claude'] },
+      { who: 'Tú', text: 'Decidir qué resultados reportas, incluidos los que no salieron significativos.' },
+    ],
+    ethics: 'Pedirle a la IA «encuentra una relación significativa» es p-hacking asistido. El análisis que reportas es el que planeaste.',
+    disclosure: 'Se usó Posit Assistant para generar y documentar código en R y Claude para revisarlo; los autores ejecutaron todo el análisis y verificaron cada paso.',
+  },
+  {
+    id: 'biodiversidad',
+    area: 'Biología',
+    level: 'Joven investigador',
+    title: 'Registros de anfibios en un corredor de bosque',
+    question: '¿Cómo cambió la presencia de especies de anfibios en un corredor de bosque en la última década?',
+    steps: [
+      { who: 'IA', text: 'Buscar literatura y registros previos de las especies en la región.', tools: ['consensus', 'semantic-scholar'] },
+      { who: 'Tú', text: 'Descargar los registros de bases abiertas de biodiversidad y depurar los dudosos con un taxónomo.' },
+      { who: 'IA', text: 'Ayudar a escribir el código de mapas y análisis de ocurrencias.', tools: ['chatgpt'] },
+      { who: 'Tú', text: 'Conversar con la comunidad local, que conoce el territorio y sus cambios.' },
+      { who: 'Tú', text: 'Decidir qué información de ubicación publicas y cuál no.' },
+    ],
+    ethics: 'Las coordenadas exactas de una especie amenazada pueden facilitar su tráfico. Y el saber de la comunidad merece crédito, no solo agradecimiento.',
+    disclosure: 'Se usó Consensus para búsqueda preliminar de literatura y ChatGPT para asistencia en código de análisis espacial, revisado por los autores.',
+  },
+]
+
+/* ── Dilemas éticos: ¿qué harías? ───────────────────────────────── */
+export const DILEMMAS = [
+  {
+    situation: 'Tu asesor te pide terminar el estado del arte para el viernes. Un chat te entrega un texto impecable con veinte referencias.',
+    options: [
+      { text: 'Lo uso: el texto está bien escrito y las referencias se ven reales.', verdict: 'Riesgoso', feedback: 'Un texto bien escrito no garantiza referencias reales: estudios medidos encontraron entre 18 % y más de la mitad de citas inventadas. Y el estado del arte es donde tu asesor ve si entendiste el campo.' },
+      { text: 'Lo uso como mapa: busco cada referencia, leo las centrales y escribo mi propia síntesis.', verdict: 'Responsable', feedback: 'Usaste la IA para orientarte y conservaste lo que te forma: leer, seleccionar y conectar. Tarda más, pero es tuyo y lo puedes defender.' },
+      { text: 'No uso nada de IA para no arriesgarme.', verdict: 'Válido, pero te pierdes algo', feedback: 'Es una decisión legítima. Pero usar un buscador académico con IA para encontrar literatura, verificándola, es un uso aceptado por todas las editoriales.' },
+    ],
+  },
+  {
+    situation: 'A tu base le faltan datos de tres municipios. Un compañero propone pedirle a la IA que los «complete» con valores plausibles.',
+    options: [
+      { text: 'Aceptamos: son pocos datos y el resultado casi no cambia.', verdict: 'No aceptable', feedback: 'Datos inventados presentados como reales son fabricación, la falta más grave en integridad científica, aunque sean pocos. Springer Nature lo pone en rojo.' },
+      { text: 'Los dejamos como faltantes, usamos un método de imputación estándar y lo declaramos.', verdict: 'Responsable', feedback: 'Existen métodos documentados para datos faltantes. Lo clave es que sean reproducibles, que se declaren y que se reporte cómo cambian los resultados.' },
+      { text: 'Excluimos esos municipios sin mencionarlo.', verdict: 'Problemático', feedback: 'Excluir puede ser legítimo, pero ocultarlo sesga la lectura. Decláralo y explica por qué.' },
+    ],
+  },
+  {
+    situation: 'Una compañera del semillero subió las transcripciones completas de las entrevistas, con nombres, a un chat gratuito para resumirlas.',
+    options: [
+      { text: 'No pasa nada: el chat solo resumió.', verdict: 'No aceptable', feedback: 'Los planes gratuitos pueden usar el contenido para entrenar, y los servidores suelen estar fuera del país. Eso puede violar la Ley 1581 y lo que firmaron las personas.' },
+      { text: 'Hablamos con ella y con el tutor, borramos el historial, revisamos el consentimiento y definimos un protocolo del grupo.', verdict: 'Responsable', feedback: 'El error se corrige mejor en grupo que en silencio. Un protocolo claro (anonimizar primero, qué herramientas sí) evita que se repita.' },
+      { text: 'Lo reportamos al comité de ética sin hablar con ella.', verdict: 'Depende', feedback: 'Si hay riesgo real para las personas, el comité debe saberlo. Pero empezar por la conversación y el tutor suele ser más justo y más formativo.' },
+    ],
+  },
+  {
+    situation: 'La IA te propone una hipótesis brillante que no se te había ocurrido y que cambia el enfoque de tu tesis.',
+    options: [
+      { text: 'La presento como mía: al fin y al cabo yo le hice la pregunta.', verdict: 'No aceptable', feedback: 'Presentar hipótesis generadas por IA como propias está en rojo en el marco de Springer Nature. Además, si no sabes de dónde salió, no sabes si ya está publicada.' },
+      { text: 'La exploro: busco si alguien ya la estudió, la discuto con mi asesor y, si la uso, declaro cómo surgió.', verdict: 'Responsable', feedback: 'Las buenas ideas pueden venir de cualquier conversación. Lo que la vuelve investigación es que la contrastes, la fundamentes y seas transparente sobre su origen.' },
+      { text: 'La descarto porque vino de una máquina.', verdict: 'Te pierdes algo', feedback: 'No hace falta descartarla. Tratarla como la sugerencia de un colega, que se verifica y se cita, es más útil.' },
+    ],
+  },
+  {
+    situation: 'Te invitan a tu primera revisión por pares. No tienes tiempo y piensas pedirle a un modelo un primer borrador del informe.',
+    options: [
+      { text: 'Pego el manuscrito y pido el informe; después lo edito.', verdict: 'No aceptable', feedback: 'El manuscrito es confidencial. Elsevier, Wiley, Taylor & Francis e IEEE prohíben subirlo a herramientas de IA, y Springer Nature pone en rojo delegar la revisión a un modelo.' },
+      { text: 'Declino con tiempo o pido una prórroga, y hago la revisión yo.', verdict: 'Responsable', feedback: 'Declinar a tiempo es una forma de respeto con los autores y la revista. Revisar bien es parte de tu formación.' },
+      { text: 'Escribo mi informe y uso la IA solo para pulir mi propia redacción, sin pegar nada del manuscrito, y lo declaro.', verdict: 'Aceptable si la revista lo permite', feedback: 'Varias editoriales permiten este uso limitado. Revisa la política de la revista y decláralo al editor.' },
+    ],
+  },
+]
+
+export const GROUP_QUESTIONS = [
+  '¿Qué parte de nuestra investigación no queremos delegar nunca, aunque la IA lo haga bien? ¿Por qué?',
+  'Si una persona que participó en nuestro estudio leyera cómo usamos la IA con sus datos, ¿estaría tranquila?',
+  '¿Quién se beneficia y quién queda por fuera si nuestra investigación depende de herramientas de pago en inglés?',
+  '¿Qué sabe nuestra comunidad que ningún modelo entrenado en otro lugar puede saber?',
+  '¿Estamos usando la IA para pensar mejor o para producir más rápido lo mismo?',
+  '¿Cómo le contaríamos a un jurado, sin vergüenza y sin exagerar, qué hizo la IA y qué hicimos nosotros?',
+]
+
+export const REFLECTION_PROMPTS = [
+  '¿Qué parte de mi investigación quiero que sea completamente mía y por qué?',
+  '¿En qué momento la IA me ayudó a pensar mejor y en cuál me ahorró pensar?',
+  '¿Qué haría distinto si tuviera que explicarle a las personas de mi estudio cómo usé la IA?',
+]
+
+export const COMMITMENTS = [
+  'Verificaré en su fuente cada referencia, dato y cita antes de usarlos.',
+  'Declararé con honestidad qué herramientas usé, para qué y cómo las revisé.',
+  'No subiré datos personales, entrevistas identificables ni manuscritos ajenos a herramientas que no los protejan.',
+  'Mantendré en mis manos la pregunta, la interpretación y las conclusiones.',
+  'Compartiré con mi grupo lo que aprenda, incluidos mis errores.',
+  'Usaré el tiempo que me ahorre la IA para pensar, ir a campo y escuchar.',
 ]

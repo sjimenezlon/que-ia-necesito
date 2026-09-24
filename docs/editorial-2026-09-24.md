@@ -35,3 +35,15 @@ Políticas de IA de universidades colombianas (UNAL, UdeA, EAFIT, Andes, Javeria
 ## Validación
 
 `npm run build` y `npm run lint` sin errores. Revisado en escritorio (1440 y 1280 px) y en móvil (390 px con Playwright, sin desborde horizontal).
+
+## Segunda pasada (24 de septiembre, tarde): verificación y ampliación de `/investigadores`
+
+**Nuevas secciones:** «Lo que hoy sí puedes hacer» (seis posibilidades, cada una con su contrapeso de responsabilidad), «Seis investigaciones, de la pregunta a la declaración» (ejemplos ilustrativos por disciplina: salud pública, ingeniería ambiental, educación, historia, economía y biología), «¿Qué harías?» (cinco dilemas éticos interactivos y seis preguntas para el semillero) y «Tu espacio de trabajo» (`src/components/ResearchWorkspace.jsx`: bitácora de uso de IA, reflexiones y compromiso de uso responsable; todo en `localStorage`, descargable en Markdown).
+
+**Verificación afirmación por afirmación** contra fuente primaria (Europe PMC, web.archive.org y Chrome para páginas bloqueadas). Confirmados los estudios (Walters y Wilder, Chelli, Liang, Kobak, Chen), las políticas editoriales, la APA y todo lo de Colombia. Corregido:
+- NIH NOT-OD-23-149 aplica a la evaluación de **propuestas de financiación**, no de manuscritos.
+- OpenAlex: la API **no exige llave** para consultas básicas; con llave gratuita, USD 1 al día. Se retiró la fecha de febrero de 2026, que no aparece en fuentes oficiales.
+- Zotero 10 no introdujo el aviso de retractaciones (existe desde hace años).
+- Consensus gratis: búsqueda básica sin análisis de IA, 10 mensajes Pro y hasta 3 revisiones profundas al mes (también en la ficha).
+- ATLAS.ti: no se encontró un «modo privacidad»; sí que la IA se activa a pedido y que no entrena con tus datos.
+- NVivo: su autocodificación no es IA. Springer Nature: el rojo es «imágenes fotorrealistas falsas (deepfakes)». Colab: el límite de edad es del agente, no de Colab. Asta, Litmaps y MAXQDA con precisiones; Ley 1581 art. 26 matizado; precio de Paperpal retirado (no verificable).

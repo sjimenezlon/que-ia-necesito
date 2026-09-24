@@ -21,6 +21,9 @@ import {
   Lock,
   MessageSquareText,
   Microscope,
+  NotebookPen,
+  Rocket,
+  Scale,
   PenLine,
   Quote,
   Search,
@@ -32,10 +35,15 @@ import {
   Users,
 } from 'lucide-react'
 import { getToolById } from '../utils/recommender'
+import ResearchWorkspace from '../components/ResearchWorkspace'
 import {
   BOOK_QUOTES,
   CHECKLIST,
   COLOMBIA,
+  DILEMMAS,
+  EXAMPLES,
+  GROUP_QUESTIONS,
+  POSSIBILITIES,
   DECISION_ZONES,
   DISCLOSURE_TOOLS,
   DISCLOSURE_USES,
@@ -70,16 +78,20 @@ const CYCLE_ORBIT = [
 ]
 
 const CHAPTER_INDEX = [
+  { id: 'posible', label: 'Lo que ya puedes hacer' },
   { id: 'principios', label: 'Principios' },
   { id: 'delegar', label: 'Qué delegar' },
   { id: 'ciclo', label: 'Tu investigación' },
+  { id: 'ejemplos', label: 'Ejemplos' },
   { id: 'kit', label: 'Kit gratuito' },
   { id: 'editoriales', label: 'Qué piden las revistas' },
   { id: 'declaracion', label: 'Tu declaración' },
   { id: 'revision', label: 'Cuando revisas' },
   { id: 'colombia', label: 'Colombia' },
   { id: 'riesgos', label: 'Riesgos' },
+  { id: 'dilemas', label: '¿Qué harías?' },
   { id: 'prompts', label: 'Prompts' },
+  { id: 'espacio', label: 'Tu espacio' },
   { id: 'antes-de-enviar', label: 'Antes de enviar' },
   { id: 'reflexiones', label: 'Reflexiones' },
 ]
@@ -101,7 +113,7 @@ const CATALOG_FREE = {
   elicit: { free: 'si', note: 'Búsqueda y resúmenes ilimitados sobre 138 millones de artículos; el agente y los informes tienen cupo.' },
   'semantic-scholar': { free: 'si', note: 'Todo gratis, con API abierta.' },
   notebooklm: { free: 'si', note: '100 cuadernos, 50 fuentes por cuaderno, 50 chats y 3 resúmenes de audio al día.' },
-  consensus: { free: 'limitado', note: 'Búsqueda ilimitada; funciones Pro y búsquedas profundas con cupo mensual.' },
+  consensus: { free: 'limitado', note: 'Búsqueda básica de artículos sin análisis de IA; 10 mensajes Pro y hasta 3 revisiones profundas al mes.' },
   scispace: { free: 'limitado', note: '100 créditos al mes para el agente; el chat con PDF no los consume.' },
   'research-rabbit': { free: 'limitado', note: 'Hasta 50 artículos semilla y un proyecto.' },
   'connected-papers': { free: 'limitado', note: '5 grafos al mes con todas las funciones.' },
@@ -239,6 +251,9 @@ export default function Investigadores() {
   const [discUses, setDiscUses] = useState(['lenguaje'])
   const [discLang, setDiscLang] = useState('es')
   const [checked, setChecked] = useState([])
+  const [exampleId, setExampleId] = useState(EXAMPLES[0].id)
+  const [dilemmaIndex, setDilemmaIndex] = useState(0)
+  const [dilemmaChoice, setDilemmaChoice] = useState(null)
   const [activeSection, setActiveSection] = useState(CHAPTER_INDEX[0].id)
   const [readProgress, setReadProgress] = useState(0)
   const navRef = useRef(null)
@@ -321,6 +336,15 @@ export default function Investigadores() {
     : discLang === 'es'
       ? `Durante la preparación de este trabajo, los autores usaron ${toolLabel} para ${joinList(selectedUses.map((use) => use.es), 'y')}. Después de usar esta herramienta, los autores revisaron y editaron el contenido según fue necesario y asumen plena responsabilidad por el contenido de la publicación.`
       : `During the preparation of this work, the author(s) used ${toolLabel} in order to ${joinList(selectedUses.map((use) => use.en), 'and')}. After using this tool, the author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the publication.`
+
+  const example = EXAMPLES.find((item) => item.id === exampleId) || EXAMPLES[0]
+  const dilemma = DILEMMAS[dilemmaIndex]
+  const dilemmaResult = dilemmaChoice === null ? null : dilemma.options[dilemmaChoice]
+
+  function nextDilemma() {
+    setDilemmaIndex((current) => (current + 1) % DILEMMAS.length)
+    setDilemmaChoice(null)
+  }
 
   const checkProgress = Math.round((checked.length / CHECKLIST.length) * 100)
 
@@ -430,6 +454,25 @@ export default function Investigadores() {
           })}
         </div>
       </nav>
+
+      {/* Lo que ya puedes hacer */}
+      <section id="posible" className="max-w-6xl mx-auto px-4 pt-14 pb-4 scroll-mt-28">
+        <SectionHeader icon={Rocket} kicker="Buenas noticias primero" title="Lo que hoy sí puedes hacer" lead="Nunca un semillero había tenido tanto a su alcance. La IA bien usada no te quita la investigación: te devuelve tiempo para la parte que más importa. Cada posibilidad trae su contrapeso, porque el entusiasmo y el cuidado van juntos." tone="warm" />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {POSSIBILITIES.map((item) => (
+            <article key={item.title} className="group relative overflow-hidden bg-surface rounded-2xl border border-border p-5 hover:shadow-md hover:-translate-y-0.5 hover:border-warm/35 transition-all flex flex-col">
+              <div className="absolute -top-10 -right-10 w-28 h-28 bg-warm/8 rounded-full blur-2xl pointer-events-none" />
+              <h3 className="relative font-display font-bold text-text text-lg tracking-tight mb-2">{item.title}</h3>
+              <p className="relative text-sm text-text-light leading-relaxed mb-4 flex-1">{item.body}</p>
+              <div className="relative flex items-start gap-2 rounded-xl bg-accent/[0.06] border border-accent/20 p-3 mb-4">
+                <Scale className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                <p className="text-xs text-text leading-relaxed">{item.care}</p>
+              </div>
+              <ToolPills ids={item.tools} />
+            </article>
+          ))}
+        </div>
+      </section>
 
       {/* Principios */}
       <section id="principios" className="max-w-6xl mx-auto px-4 py-14 scroll-mt-28">
@@ -575,6 +618,59 @@ export default function Investigadores() {
             </div>
           </article>
         </div>
+      </section>
+
+      {/* Ejemplos */}
+      <section id="ejemplos" className="max-w-6xl mx-auto px-4 py-16 scroll-mt-28">
+        <SectionHeader icon={FlaskConical} kicker="Ejemplos ilustrativos" title="Seis investigaciones, de la pregunta a la declaración" lead="Casos pensados para contextos colombianos, en distintas disciplinas y niveles. Muestran qué hace la IA, qué hace la persona, dónde aparece el dilema ético y cómo quedaría la declaración. Tómalos como plantilla para el tuyo." tone="primary" />
+        <div className="flex flex-wrap justify-center gap-2 mb-6" role="tablist" aria-label="Disciplina del ejemplo">
+          {EXAMPLES.map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              role="tab"
+              aria-selected={exampleId === item.id}
+              onClick={() => setExampleId(item.id)}
+              className={`px-3.5 py-1.5 rounded-full border text-xs font-semibold cursor-pointer transition-colors ${exampleId === item.id ? 'bg-text text-bg border-text' : 'bg-surface border-border text-text-light hover:border-primary/40 hover:text-primary'}`}
+            >
+              {item.area}
+            </button>
+          ))}
+        </div>
+        <article className="bg-surface border border-border rounded-3xl p-6 md:p-8 shadow-sm" role="tabpanel">
+          <div className="flex flex-wrap items-center gap-2 mb-2">
+            <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-primary bg-primary/8 px-2 py-0.5 rounded-full">{example.area}</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-text-lighter">{example.level}</span>
+          </div>
+          <h3 className="font-display font-bold text-text text-2xl tracking-tight mb-2">{example.title}</h3>
+          <p className="text-sm text-text-light italic mb-6">Pregunta: {example.question}</p>
+          <ol className="relative border-l-2 border-border ml-3 space-y-4 mb-6">
+            {example.steps.map((step, index) => (
+              <li key={index} className="pl-6 relative">
+                <span className={`absolute -left-[13px] top-0.5 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold ${step.who === 'IA' ? 'bg-primary text-white' : 'bg-secondary text-white'}`}>{step.who === 'IA' ? 'IA' : 'Tú'}</span>
+                <p className="text-sm text-text leading-relaxed mb-1.5">{step.text}</p>
+                {step.tools && <ToolPills ids={step.tools} />}
+                {step.external && <ExternalPills ids={step.external} />}
+              </li>
+            ))}
+          </ol>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="flex items-start gap-3 rounded-2xl border border-warm/25 bg-warm/[0.05] p-4">
+              <Scale className="w-4 h-4 text-warm shrink-0 mt-0.5" />
+              <p className="text-xs text-text-light leading-relaxed"><span className="font-semibold text-text">El dilema ético: </span>{example.ethics}</p>
+            </div>
+            <div className="rounded-2xl border border-border bg-text/[0.035] p-4">
+              <div className="flex items-center justify-between gap-2 mb-1.5">
+                <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-text-lighter">Así quedaría su declaración</span>
+                <button type="button" onClick={() => copyText(example.disclosure, `ex-${example.id}`)} className="inline-flex items-center gap-1 text-[11px] font-semibold text-text-light cursor-pointer hover:text-primary">
+                  {copiedId === `ex-${example.id}` ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
+                  {copiedId === `ex-${example.id}` ? 'Copiada' : 'Copiar'}
+                </button>
+              </div>
+              <p className="text-xs text-text leading-relaxed">{example.disclosure}</p>
+            </div>
+          </div>
+        </article>
       </section>
 
       {/* Kit gratuito */}
@@ -780,7 +876,7 @@ export default function Investigadores() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-text tracking-tight mb-3">Cuando el manuscrito es de otro</h2>
             <p className="text-sm text-text-light leading-relaxed">
-              Tarde o temprano una revista te invitará a revisar. Es la regla más clara de todas: el manuscrito ajeno es confidencial y no se pega en un chat. Los NIH de Estados Unidos lo prohíben expresamente desde 2023, y Elsevier, Wiley, Taylor &amp; Francis, Springer Nature e IEEE dicen lo mismo con palabras distintas.
+              Tarde o temprano una revista te invitará a revisar. Es la regla más clara de todas: el manuscrito ajeno es confidencial y no se pega en un chat. Elsevier, Wiley, Taylor &amp; Francis, Springer Nature e IEEE lo dicen con palabras distintas, y los NIH de Estados Unidos prohíben desde 2023 usar IA generativa para evaluar propuestas de financiación. Si algún día evalúas proyectos de convocatorias, aplica el mismo cuidado.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 gap-3">
@@ -849,6 +945,56 @@ export default function Investigadores() {
         </div>
       </section>
 
+      {/* Dilemas */}
+      <section id="dilemas" className="relative overflow-hidden py-16 scroll-mt-28" style={{ background: 'linear-gradient(135deg, #111827 0%, #1e1b4b 55%, #18252c 100%)' }}>
+        <div className="max-w-5xl mx-auto px-4">
+          <SectionHeader icon={Scale} kicker="Ética en la práctica" title="¿Qué harías?" lead="La ética de la investigación no se aprende con una lista de prohibiciones, sino decidiendo en situaciones concretas. Cinco dilemas que ya viven los semilleros. No hay trampa: hay razones." dark />
+          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8">
+            <div className="text-[11px] font-bold uppercase tracking-[0.12em] text-white/50 mb-3">Dilema {dilemmaIndex + 1} de {DILEMMAS.length}</div>
+            <p className="font-display text-lg md:text-xl text-white leading-snug mb-6">{dilemma.situation}</p>
+            <div className="space-y-2.5">
+              {dilemma.options.map((option, index) => {
+                const chosen = dilemmaChoice === index
+                return (
+                  <button
+                    key={option.text}
+                    type="button"
+                    onClick={() => setDilemmaChoice(index)}
+                    className={`w-full text-left rounded-2xl border p-4 text-sm cursor-pointer transition-colors ${chosen ? 'border-emerald-300/60 bg-emerald-300/10 text-white' : 'border-white/15 bg-transparent text-white/80 hover:border-white/35 hover:text-white'}`}
+                  >
+                    {option.text}
+                  </button>
+                )
+              })}
+            </div>
+            {dilemmaResult && (
+              <div className="mt-5 rounded-2xl bg-white text-gray-900 p-5" aria-live="polite">
+                <div className="text-[11px] font-bold uppercase tracking-[0.12em] text-gray-500 mb-1">{dilemmaResult.verdict}</div>
+                <p className="text-sm leading-relaxed">{dilemmaResult.feedback}</p>
+              </div>
+            )}
+            <div className="flex justify-end mt-5">
+              <button type="button" onClick={nextDilemma} className="inline-flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-xl text-sm font-semibold cursor-pointer hover:bg-white/90">
+                Siguiente dilema <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <h3 className="text-center font-display font-bold text-white text-xl tracking-tight mb-2">Para conversar en tu semillero</h3>
+            <p className="text-center text-sm text-white/60 mb-6 max-w-2xl mx-auto">Seis preguntas sin respuesta única. Llévenlas a la próxima reunión y dejen por escrito lo que acuerden: ese es el comienzo de su protocolo.</p>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {GROUP_QUESTIONS.map((question) => (
+                <div key={question} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                  <MessageSquareText className="w-4 h-4 text-amber-300 shrink-0 mt-0.5" />
+                  <p className="text-sm text-white/85 leading-relaxed">{question}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Prompts */}
       <section id="prompts" className="max-w-6xl mx-auto px-4 py-12 scroll-mt-28">
         <SectionHeader icon={MessageSquareText} kicker="Listos para copiar" title="Prompts que te hacen pensar, no que piensan por ti" lead="Todos piden a la IA que pregunte, que señale lo que falta o que marque lo que debes verificar. Cambia lo que está entre corchetes." tone="warm" />
@@ -884,6 +1030,14 @@ export default function Investigadores() {
               <TryLinks text={prompt.text} />
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* Tu espacio */}
+      <section id="espacio" className="relative overflow-hidden bg-text/[0.025] border-y border-border py-16 scroll-mt-28">
+        <div className="max-w-6xl mx-auto px-4">
+          <SectionHeader icon={NotebookPen} kicker="Para usar mientras investigas" title="Tu espacio de trabajo" lead="Una bitácora para registrar cada uso de IA, un lugar para tus reflexiones y un compromiso para ti o para tu semillero. Tres hábitos pequeños que hacen fácil la declaración y honesta la conversación con tu jurado." tone="accent" />
+          <ResearchWorkspace />
         </div>
       </section>
 
