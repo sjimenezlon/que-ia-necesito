@@ -12,7 +12,7 @@ import FormatStep from '../components/prompt-refiner/FormatStep'
 import ConstraintsStep from '../components/prompt-refiner/ConstraintsStep'
 import GeneratedPrompt from '../components/prompt-refiner/GeneratedPrompt'
 
-const UPDATED_AT = '24 de septiembre de 2026'
+const UPDATED_AT = '30 de septiembre de 2026'
 
 const DOMAINS = [
   { id: 'artes', label: 'Artes', icon: Palette, desc: 'Creación artística, visual, musical, literaria y escénica.', color: 'bg-red-50 text-red-600 border-red-200' },
@@ -243,12 +243,12 @@ const CLARITIES = [
 ]
 
 const MODEL_SNAPSHOT = [
-  { name: 'Claude Opus 5.5', house: 'Anthropic · 22 sep 2026', note: 'Rinde cerca de Fable 5.1 por USD 4/20 por millón, un 40 % menos que Opus 5. Ya es el modelo por defecto en Claude y Claude Code; Sonnet 5.5 y Haiku 5.5 vienen «en semanas».' },
-  { name: 'GPT-6 Sol y Luna', house: 'OpenAI · 22 sep 2026', note: 'La mitad del precio de la serie 5.6 (USD 2/10 y 0,10/0,50). Por ahora solo en ChatGPT Work y Codex, no en el chat; GPT-6 Astra sigue arriba para Pro, Business y Enterprise.' },
-  { name: 'Gemini 3.8 Flash', house: 'Google · 2 sep 2026', note: 'El caballo de batalla barato: USD 0,75/3,75 por millón hasta fin de año. Gemini 3.5 Pro quedó aparcado y Google ya apunta a Gemini 4, sin fecha.' },
-  { name: 'Grok 4.7', house: 'xAI · 21 sep 2026', note: 'Salió por fin, tras dos aplazamientos: 500K de contexto al mismo precio del 4.6, USD 2/6. Musk ya promete un 4.8.' },
-  { name: 'Xiaomi MiMo-V2.6-Pro', house: 'Xiaomi · 22 sep 2026', note: 'Cerca de un billón de parámetros con pesos MIT y 1M de contexto, por USD 0,435/0,87: la apertura más grande de la semana.' },
-  { name: 'DeepSeek V4.1-Flash', house: 'DeepSeek · 10 sep 2026', note: 'Multimodal y con pesos MIT, USD 0,30/1,20 en hora pico y la mitad en valle. Bajo investigación del regulador chino desde el 22 de septiembre.' },
+  { name: 'Claude Sonnet 5.5', house: 'Anthropic · 28 sep 2026', note: 'Mismo precio que Sonnet 5 (USD 2/10 por millón, caché a 0,20), 1M de contexto y 128K de salida; según Anthropic, un 30 % más rápido y hasta un 30 % más barato por tarea. Opus 5.5 (22-sep, USD 4/20) sigue siendo el modelo por defecto; Haiku 5.5 aún «en semanas».' },
+  { name: 'GPT-6.1 Sol', house: 'OpenAI · 29 sep 2026 (DevDay)', note: 'Cerca de Astra a una quinta parte del precio: USD 2/10 por millón, entrada cacheada a 0,10. Solo en ChatGPT Work y Codex —donde ya es el modelo por defecto del CLI—, no en el chat. GPT-5.5 se retira el 14 de octubre.' },
+  { name: 'Gemini 4 Argon', house: 'Google · 30 sep 2026', note: 'Anunciado con salida de 1M de tokens y precio de USD 2/10 (4/20 al terminar la introducción), pero por ahora solo lo prueban defensores de ciberseguridad del programa Fairwind. Para el resto, el Pro sigue siendo 3.1 y el caballo de batalla, 3.8 Flash.' },
+  { name: 'Grok 4.7', house: 'xAI · 21 sep 2026', note: '500K de contexto al mismo precio del 4.6, USD 2/6. A 30 de septiembre el 4.8 que promete Musk sigue sin aparecer en la lista oficial de modelos.' },
+  { name: 'Xiaomi MiMo-V2.6 (MOPD)', house: 'Xiaomi · 27 sep 2026', note: 'Casi un billón de parámetros con pesos MIT y 1M de contexto por USD 0,435/0,87. El 27 Xiaomi publicó checkpoints corregidos que eliminan la repetición de llamadas a herramientas, sin cambiar nombres ni precio.' },
+  { name: 'DeepSeek V4.1-Flash', house: 'DeepSeek · 10 sep 2026', note: 'Multimodal y con pesos MIT, USD 0,30/1,20 en hora pico y la mitad en valle. Semana sin modelo nuevo en China; Moonshot (Kimi) suma una segunda acusación de destilación, ahora de OpenAI (30-sep).' },
 ]
 
 function MethodSidebar({ currentStep }) {

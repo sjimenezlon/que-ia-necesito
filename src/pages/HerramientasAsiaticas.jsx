@@ -14,11 +14,63 @@ import {
 const METRICS = [
   { v: '2,8', l: 'billones de parámetros abiertos', s: 'Kimi K3 · pesos liberados el 27-jul' },
   { v: '≈1 billón', l: 'de parámetros con licencia MIT', s: 'MiMo-V2.6-Pro · Xiaomi · 22-sep-2026' },
-  { v: '2', l: 'laboratorios bajo investigación del regulador chino', s: 'DeepSeek y Moonshot · CAC · 22-sep-2026' },
+  { v: '2', l: 'laboratorios de EE.UU. acusan a Moonshot de destilación', s: 'Anthropic 10-sep · OpenAI 30-sep · el CAC investiga desde el 22-sep' },
   { v: '50 mil', l: 'chips chinos entrenaron un modelo', s: 'LongCat-2.0 · Meituan · MIT' },
 ]
 
 const LATEST_RELEASES = [
+  {
+    date: '27 sep 2026',
+    name: 'MiMo-V2.6 Pro y Flash (MOPD)',
+    company: 'Xiaomi · China',
+    icon: Boxes,
+    color: 'text-accent',
+    bg: 'bg-accent/8',
+    tag: 'MIT · corrección',
+    title: 'Xiaomi corrige su modelo de un billón a los cinco días, y lo vuelve a abrir',
+    body: 'Cinco días después de MiMo-V2.6, Xiaomi publicó checkpoints corregidos con el sufijo MOPD para arreglar un defecto que los usuarios notaron enseguida: en flujos de agente el modelo repetía la misma llamada a herramientas una y otra vez, quemando tiempo y contexto. Según el blog oficial, la tasa de repetición «cayó sustancialmente» sin mover los resultados en las pruebas. Los nombres de la API no cambian —mimo-v2.6-pro y mimo-v2.6-flash sirven la versión nueva desde el 25— y los pesos siguen en Hugging Face con MIT: 1,02 billones de parámetros con 42.000 millones activos el Pro, 309.000 millones con 15.000 activos el Flash, 1 millón de contexto.',
+    use: 'Si descargaste los pesos del 22 de septiembre, cámbialos por los MOPD antes de montar un agente. Y toma nota del ritmo: la corrección tardó menos de una semana y salió con la misma licencia.',
+    url: 'https://mimo.xiaomi.com/blog/mimo-v2-6-tool-call-repetition',
+  },
+  {
+    date: '27 sep 2026',
+    name: 'M3.1-Flash-Preview',
+    company: 'MiniMax · China',
+    icon: Code2,
+    color: 'text-primary',
+    bg: 'bg-primary/8',
+    tag: 'Solo en MiniMax Code',
+    title: 'MiniMax enciende un modelo nuevo sin ficha, sin precio y sin pesos',
+    body: 'MiniMax activó M3.1-Flash-Preview dentro de su agente de programación MiniMax Code: 1 millón de tokens de contexto y cinco niveles de esfuerzo de razonamiento, «hecho para el desarrollo de todos los días». Eso es todo lo que se sabe. No hay ficha técnica, ni resultados en pruebas, ni endpoint público, ni precio por token, ni pesos en Hugging Face —los últimos de la casa son de agosto—, y las fuentes discrepan sobre si ve imágenes. Hasta el 7 de octubre hay créditos dobles para probarlo.',
+    use: 'Es una vista previa dentro de un producto, no un modelo que puedas evaluar: pruébalo si ya usas MiniMax Code y no lo pongas en una lista corta hasta que publiquen la ficha.',
+    url: 'https://x.com/minimaxagent/status/2104930709572116521',
+  },
+  {
+    date: '24 sep 2026',
+    name: 'Sarvam Vision 2.1',
+    company: 'Sarvam AI · India',
+    icon: Languages,
+    color: 'text-warm',
+    bg: 'bg-warm/8',
+    tag: 'Cerrado · por API',
+    title: 'India entra al radar con lectura de documentos en 22 lenguas',
+    body: 'Sarvam, el laboratorio de Bengaluru escogido por la misión IndiaAI para construir modelos soberanos, publicó Vision 2.1, un modelo de visión y lenguaje para «inteligencia documental»: OCR, tablas, formularios y escritura a mano en inglés y en las 22 lenguas oficiales del país. Cifras de la casa: 87,3 % en olmOCR-Bench y 94,97 en OmniDocBench. Se usa por API —Digitize, Extract y los agentes documentales Akshar— y desde un playground; no hay pesos ni parámetros publicados y el anuncio no dice precio.',
+    use: 'Para Colombia el valor es la señal, no la herramienta: la IA aplicada a documentos en lenguas con poco corpus ya es un frente de competencia estatal. Si trabajas con archivos en hindi, tamil o bengalí, es la primera opción a mirar.',
+    url: 'https://www.sarvam.ai/blogs/sarvam-vision-2-1',
+  },
+  {
+    date: '24 sep 2026',
+    name: 'Yuanbao para HarmonyOS',
+    company: 'Tencent · China',
+    icon: Bot,
+    color: 'text-accent',
+    bg: 'bg-accent/8',
+    tag: 'Hy4 preview de serie',
+    title: 'El Hy4 «preview» ya es el modelo de serie de la app de Tencent',
+    body: 'La edición de Yuanbao para HarmonyOS, el sistema operativo de Huawei, entró a su tienda de aplicaciones con Hy4 preview incorporado desde la primera versión y un «modo experto» que responde con el razonamiento completo en lugar de la respuesta breve. Lee documentos en 36 formatos, genera imágenes con Hy Image 3.5 preview, hace llamadas de voz y entra con la cuenta de WeChat o QQ. En Hugging Face no hay pesos nuevos: Hy4 sigue oficialmente en vista previa, sin versión final anunciada.',
+    use: 'Una etiqueta «preview» ya no significa experimento: Tencent lo puso a servir a cientos de millones de usuarios. Para autohospedar siguen valiendo los pesos Apache 2.0 del 28 de agosto y las ocho tarjetas gráficas que pide la ficha oficial.',
+    url: 'https://www.nbd.com.cn/articles/2026-09-24/4591605.html',
+  },
   {
     date: '22 sep 2026',
     name: 'MiMo-V2.6-Pro y Flash',
@@ -31,8 +83,7 @@ const LATEST_RELEASES = [
     body: 'Xiaomi sacó dos modelos omnimodales —texto, imagen, video y audio— con 1 millón de tokens de contexto: el Pro, de unos 1,02 billones de parámetros con 42.000 millones activos, y el Flash, de 309.000 millones con 15.000 activos. Los dos con pesos MIT en Hugging Face, y Xiaomi publicó además más de 7.000 entornos de aprendizaje por refuerzo con los que los entrenó. Por API cuestan USD 0,435 / 0,87 (Pro) y 0,14 / 0,28 (Flash) por millón de tokens.',
     use: 'Es la apertura más grande y limpia de la semana: si necesitas un modelo potente que puedas descargar y usar comercialmente sin letra pequeña, entra en la lista corta. Las cifras de rendimiento son de Xiaomi.',
     url: 'https://mimo.mi.com/docs/en-US/updates/model',
-  }
-  ,
+  },
   {
     date: '22 sep 2026',
     name: 'Xing4.0-29B-A4B',
@@ -45,8 +96,7 @@ const LATEST_RELEASES = [
     body: 'La operadora estatal China Telecom abrió un MoE de 29.000 millones de parámetros que activa solo 4.000 por token y corre en una GPU de unos 15 GB. Está pensado para agentes y la casa le atribuye 75 en SWE-bench Verified, una prueba de reparación de código real.',
     use: 'Para equipos que quieren un agente de programación local, sin nube. Revisa la licencia antes de usarlo comercialmente: no está detallada en el anuncio.',
     url: 'https://www.globenewswire.com/news-release/2026/09/22/3365958/0/en/china-telecom-ai-officially-releases-xing4-0-29b-agentic-large-model-for-single-gpu-deployment.html',
-  }
-  ,
+  },
   {
     date: '22 sep 2026',
     name: 'Solar Mini 4 · Solar Jev',
@@ -59,8 +109,7 @@ const LATEST_RELEASES = [
     body: 'Upstage lanzó Solar Mini 4, un MoE compacto de 35.000 millones de parámetros con 3.000 activos, orientado a agentes, junto con Solar Jev, un servicio de decisión que no genera texto. Solo por API, a USD 0,10 / 0,40 por millón de tokens, con precio promocional de la mitad.',
     use: 'Una opción para automatizaciones de alto volumen donde el costo por llamada importa más que la última décima de rendimiento.',
     url: 'https://openrouter.ai/upstage/solar-mini4',
-  }
-  ,
+  },
   {
     date: '20 sep 2026',
     name: 'Step 5 Preview',
@@ -73,8 +122,7 @@ const LATEST_RELEASES = [
     body: 'Un MoE de unos 600.000 millones de parámetros con 27.000 millones activos, 1 millón de contexto y entrada de texto, imagen y video, diseñado para agentes de horizonte largo: código, finanzas y trabajo de conocimiento. Por ahora solo por API, a USD 1 / 2,70 por millón de tokens; los pesos están anunciados para el 15 de octubre, sin licencia publicada todavía.',
     use: 'Pruébalo por API si trabajas con agentes largos; para decidir si lo autohospedas, espera a ver la licencia.',
     url: 'https://platform.stepfun.ai',
-  }
-  ,
+  },
   {
     date: '20 sep 2026',
     name: 'Qwen-Image-2.1',
@@ -87,8 +135,7 @@ const LATEST_RELEASES = [
     body: 'Modelo de imagen de 7.000 millones de parámetros que genera y edita en uno solo, con transparencia nativa. Los pesos están publicados, pero bajo una licencia de investigación: el uso comercial exige un acuerdo aparte con Alibaba. Es un giro frente a la generación anterior, que salió con Apache 2.0.',
     use: 'Sirve para experimentar y para investigación académica; para piezas de cliente, usa otro modelo o negocia la licencia.',
     url: 'https://qwen.ai/blog?id=qwen-image-2.1',
-  }
-  ,
+  },
   {
     date: '18 sep 2026',
     name: 'Qwen3.8-Omni-Flash · LiveTranslate',
@@ -98,65 +145,9 @@ const LATEST_RELEASES = [
     bg: 'bg-accent/8',
     tag: 'Cerrados · por API',
     title: 'Qwen para agentes que ven, oyen e interpretan',
-    body: 'Dos modelos de API en la antesala de Apsara: Qwen3.8-Omni-Flash, el primer omnimodal de Qwen pensado para agentes —ve, oye, planifica y usa herramientas, con 1 millón de contexto—, y Qwen3.8-LiveTranslate, de interpretación simultánea, que baja la latencia media de 2,8 a 2,3 segundos. En Apsara (22–24 de septiembre) Qwen4 apareció solo como hoja de ruta, sin fecha.',
+    body: 'Dos modelos de API en la antesala de Apsara: Qwen3.8-Omni-Flash, el primer omnimodal de Qwen pensado para agentes —ve, oye, planifica y usa herramientas, con 1 millón de contexto—, y Qwen3.8-LiveTranslate, de interpretación simultánea, que baja la latencia media de 2,8 a 2,3 segundos. En Apsara (22 de septiembre) Qwen4 apareció solo como hoja de ruta, sin fecha; Alibaba prometió Qwen4.5 y Qwen5 de 5 a 10 billones de parámetros.',
     use: 'LiveTranslate interesa a quien organiza eventos o atención en varios idiomas; Omni-Flash, a quien arma agentes con voz y cámara.',
     url: 'https://qwen.ai/research',
-  }
-  ,
-  {
-    date: '18 sep 2026',
-    name: 'Nemotron-SEA-LION-v4.8',
-    company: 'AI Singapore + NVIDIA · Singapur',
-    icon: Globe2,
-    color: 'text-primary',
-    bg: 'bg-primary/8',
-    tag: 'Abierto · 7 lenguas',
-    title: 'La IA soberana del sudeste asiático adopta MoE',
-    body: 'Los primeros SEA-LION con arquitectura de mezcla de expertos, en dos tamaños (30.000 y 120.000 millones de parámetros, con 3.000 y 12.000 activos), entrenados para siete lenguas del sudeste asiático. Pesos abiertos en Hugging Face y Ollama.',
-    use: 'Un buen modelo mental para América Latina: un Estado y un fabricante de chips construyendo juntos un modelo para su propia región y sus idiomas.',
-    url: 'https://sea-lion.ai/blog/uplifting-ai-in-southeast-asia-sea-announcing-nemotron-sea-lion-v4-8-in-collaboration-with-nvidia/',
-  }
-  ,
-  {
-    date: '17 sep 2026',
-    name: 'Kimi para finanzas',
-    company: 'Moonshot AI · China',
-    icon: Coins,
-    color: 'text-secondary',
-    bg: 'bg-secondary/8',
-    tag: 'Producto sobre K3',
-    title: 'Kimi se vuelve una terminal financiera conversacional',
-    body: 'Moonshot montó sobre K3 una interfaz única con datos de S&P Global Market Intelligence, Crunchbase, Wind, SEC EDGAR, FMI, Banco Mundial y FRED, con suscripciones de 49 a 699 yuanes al mes. Cinco días después, el regulador chino de internet abrió una investigación a Moonshot y DeepSeek por seguridad de datos.',
-    use: 'Muestra hacia dónde van los asistentes: de conversar a especializarse por sector. Antes de adoptarlo, pesa la investigación abierta y dónde quedan tus datos.',
-    url: 'https://www.briefs.co/news/chinese-ai-upstart-moonshot-unveils-kimi-for-finance-with-ci/',
-  }
-  ,
-  {
-    date: '16 sep 2026',
-    name: 'Vidu S2',
-    company: 'Shengshu (生数) · China',
-    icon: Video,
-    color: 'text-warm',
-    bg: 'bg-warm/8',
-    tag: 'Video en tiempo real',
-    title: 'El video generado deja de ser un archivo y pasa a ser una conversación',
-    body: 'Vidu abrió una línea distinta a la del clip por encargo: S2-Avatar sostiene un personaje digital en interacción continua —se le puede mostrar una imagen nueva mientras habla y reacciona a ella— y S2-Editing edita un flujo de video entrante en vivo. La resolución en tiempo real subió de 540p a 720p, y la empresa dice estar explorando lo mismo para visores de realidad virtual.',
-    use: 'Para atención, formación o presentación de producto con un presentador digital que responde en el momento, no para piezas grabadas.',
-    url: 'https://www.vidu.com',
-  }
-  ,
-  {
-    date: '10 sep 2026',
-    name: 'DeepSeek V4.1-Flash',
-    company: 'DeepSeek · China',
-    icon: Brain,
-    color: 'text-secondary',
-    bg: 'bg-secondary/8',
-    tag: 'MIT · multimodal',
-    title: 'El modelo económico de DeepSeek se abre y aprende a ver',
-    body: 'DeepSeek fundió V4-Flash y su variante de visión en un solo modelo multimodal de 552.000 millones de parámetros que activa 8.000 millones al leer y 16.000 al escribir, con 1 millón de contexto, y publicó los pesos con licencia MIT sin permisos ni registro. Según su registro oficial, los precios de la API bajaron con el lanzamiento: hoy son USD 0,30 / 1,20 por millón de tokens en hora pico y la mitad en hora valle.',
-    use: 'Sigue siendo de lo más barato del mercado y ahora se puede autohospedar. Desde el 22 de septiembre DeepSeek está bajo investigación del regulador chino por seguridad de datos: tenlo en cuenta si vas a usar su API oficial.',
-    url: 'https://api-docs.deepseek.com/updates/',
   },
 ]
 
@@ -165,7 +156,7 @@ const FORCES = [
     icon: Boxes,
     kicker: '01',
     title: 'Código abierto como estrategia',
-    body: 'China liberó los pesos de sus mejores modelos (DeepSeek, Qwen, GLM, Kimi, LongCat). No es filantropía: es volverse el estándar sobre el que todos construyen y erosionar la ventaja cerrada de Occidente. Pero a mediados de 2026 la etiqueta «pesos abiertos» se partió en tres regímenes distintos. Hay licencias limpias —DeepSeek V4.1-Flash, GLM-5.3-Flash, Kimi K3 y LongCat con MIT, Hy4 de Tencent con Apache 2.0—; hay licencias con condición, como la del insignia GLM-5.3, que exige revisión de seguridad a los grandes proveedores de nube, o la de Qwen3.8-Max, con reparto de ingresos y solo texto; y hay licencias con veto geográfico, como la de MiniMax H3, que prohíbe el despliegue local en Estados Unidos, la Unión Europea, el Reino Unido y Corea. En septiembre la tendencia se acentuó en las dos direcciones: Xiaomi publicó con MIT un modelo de casi un billón de parámetros (MiMo-V2.6-Pro), mientras Alibaba sacó Qwen-Image-2.1 con licencia de solo investigación, cuando la generación anterior era Apache 2.0.',
+    body: 'China liberó los pesos de sus mejores modelos (DeepSeek, Qwen, GLM, Kimi, LongCat). No es filantropía: es volverse el estándar sobre el que todos construyen y erosionar la ventaja cerrada de Occidente. Pero a mediados de 2026 la etiqueta «pesos abiertos» se partió en tres regímenes distintos. Hay licencias limpias —DeepSeek V4.1-Flash, GLM-5.3-Flash, Kimi K3 y LongCat con MIT, Hy4 de Tencent con Apache 2.0—; hay licencias con condición, como la del insignia GLM-5.3, que exige revisión de seguridad a los grandes proveedores de nube, o la de Qwen3.8-Max, con reparto de ingresos y solo texto; y hay licencias con veto geográfico, como la de MiniMax H3, que prohíbe el despliegue local en Estados Unidos, la Unión Europea, el Reino Unido y Corea. En septiembre la tendencia se acentuó en las dos direcciones: Xiaomi publicó con MIT un modelo de casi un billón de parámetros (MiMo-V2.6-Pro), mientras Alibaba sacó Qwen-Image-2.1 con licencia de solo investigación, cuando la generación anterior era Apache 2.0. Y el 27 de septiembre Xiaomi repitió la jugada con los checkpoints corregidos de MiMo-V2.6, también MIT.',
   },
   {
     icon: TrendingDown,
@@ -790,7 +781,7 @@ export default function HerramientasAsiaticas() {
         <div className="relative max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-secondary/8 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-8 border border-secondary/10 shadow-sm">
             <Globe2 className="w-3.5 h-3.5" />
-            Capítulo especial · actualizado 24 sep 2026
+            Capítulo especial · actualizado 30 sep 2026
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-text leading-[1.05] tracking-tight mb-6">
             IA <span className="text-gradient-primary">asiática</span>
@@ -801,7 +792,7 @@ export default function HerramientasAsiaticas() {
             Mientras Occidente discute, Asia despliega. China convirtió la IA en una guerra de{' '}
             <span className="text-text font-semibold">precios y código abierto</span>; Corea, Japón e India construyen{' '}
             <span className="text-text font-semibold">modelos soberanos</span> en su propia lengua. Una guía práctica
-            —en español, verificada al 24 de septiembre de 2026— para saber qué existe, qué sirve y cómo usarlo desde Colombia.
+            —en español, verificada al 30 de septiembre de 2026— para saber qué existe, qué sirve y cómo usarlo desde Colombia.
           </p>
 
           <div className="flex items-center justify-center gap-2 mb-10 text-sm">
@@ -890,7 +881,7 @@ export default function HerramientasAsiaticas() {
               <div className="max-w-3xl">
                 <div className="inline-flex items-center gap-2 bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-accent/10">
                   <Zap className="w-3 h-3" />
-                  Radar de lanzamientos · corte 24 sep 2026
+                  Radar de lanzamientos · corte 30 sep 2026
                 </div>
                 <h2 className="text-2xl md:text-4xl font-bold text-text tracking-tight mb-2">
                   Lo nuevo que sí cambia el mapa
