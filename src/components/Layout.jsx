@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Bot, Sun, Moon, Monitor } from 'lucide-react'
+import { Menu, X, Bot, Sun, Moon, Monitor, ChevronDown } from 'lucide-react'
 import Footer from './Footer'
 import { useTheme } from '../hooks/useTheme'
 
 const navLinks = [
   { to: '/', label: 'Inicio' },
+  { to: '/aprender', label: 'Aprender' },
+  { to: '/pymes', label: 'PyMEs' },
   { to: '/explorar', label: 'Explorar' },
   { to: '/ejemplos', label: 'Ejemplos' },
   { to: '/docentes', label: 'Docentes' },
@@ -52,26 +54,64 @@ export default function Layout({ children, hasCompare }) {
 
           <div className="hidden xl:flex items-center gap-1">
             <nav aria-label="Navegación principal" className="flex items-center gap-0.5">
-              {navLinks.map((link) => {
-                const isActive = location.pathname === link.to
-                return (
-                  <Link
-                    key={link.to}
-                    to={link.to}
-                    aria-current={isActive ? 'page' : undefined}
-                    className={`relative px-2.5 py-2 rounded-lg text-sm font-medium no-underline transition-all duration-200 ${
-                      isActive
-                        ? 'text-primary bg-primary/8'
-                        : 'text-text-light hover:text-text hover:bg-text/4'
-                    }`}
-                  >
-                    {link.label}
-                    {isActive && (
-                      <span className="absolute -bottom-[1px] left-1/2 -translate-x-1/2 w-5 h-[3px] bg-primary rounded-full" />
-                    )}
-                  </Link>
+              {navLinks
+                .filter((link) =>
+                  ['/', '/aprender', '/pymes', '/explorar', '/ejemplos'].includes(link.to)
                 )
-              })}
+                .map((link) => {
+                  const isActive = location.pathname === link.to
+                  return (
+                    <Link
+                      key={link.to}
+                      to={link.to}
+                      aria-current={isActive ? 'page' : undefined}
+                      className={`relative px-2.5 py-2 rounded-lg text-sm font-medium no-underline transition-all duration-200 ${
+                        isActive
+                          ? 'text-primary bg-primary/8'
+                          : 'text-text-light hover:text-text hover:bg-text/4'
+                      }`}
+                    >
+                      {link.label}
+                      {isActive && (
+                        <span className="absolute -bottom-[1px] left-1/2 -translate-x-1/2 w-5 h-[3px] bg-primary rounded-full" />
+                      )}
+                    </Link>
+                  )
+                })}
+              <details
+                className="relative"
+                onKeyDown={(e) => {
+                  if (e.key === 'Escape') {
+                    e.currentTarget.removeAttribute('open')
+                    e.currentTarget.querySelector('summary')?.focus()
+                  }
+                }}
+              >
+                <summary className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-text-light cursor-pointer rounded-lg hover:bg-text/4">
+                  Más guías <ChevronDown size={14} />
+                </summary>
+                <nav
+                  aria-label="Guías y recursos"
+                  className="absolute right-0 top-full mt-2 w-60 p-2 bg-surface border border-border rounded-xl shadow-lg"
+                >
+                  {navLinks
+                    .filter(
+                      (link) =>
+                        !['/', '/aprender', '/pymes', '/explorar', '/ejemplos'].includes(link.to)
+                    )
+                    .map((link) => (
+                      <Link
+                        key={link.to}
+                        to={link.to}
+                        onClick={(e) => e.currentTarget.closest('details').removeAttribute('open')}
+                        aria-current={location.pathname === link.to ? 'page' : undefined}
+                        className="block px-4 py-2.5 text-sm rounded-lg text-text-light hover:bg-primary/8 hover:text-primary no-underline"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                </nav>
+              </details>
             </nav>
             <button
               onClick={cycleTheme}

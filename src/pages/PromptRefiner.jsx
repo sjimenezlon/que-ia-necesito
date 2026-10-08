@@ -11,8 +11,9 @@ import ToneStyleStep from '../components/prompt-refiner/ToneStyleStep'
 import FormatStep from '../components/prompt-refiner/FormatStep'
 import ConstraintsStep from '../components/prompt-refiner/ConstraintsStep'
 import GeneratedPrompt from '../components/prompt-refiner/GeneratedPrompt'
+import { updates } from '../data/editorial'
 
-const UPDATED_AT = '30 de septiembre de 2026'
+const UPDATED_AT = '8 de octubre de 2026'
 
 const DOMAINS = [
   { id: 'artes', label: 'Artes', icon: Palette, desc: 'Creación artística, visual, musical, literaria y escénica.', color: 'bg-red-50 text-red-600 border-red-200' },
@@ -243,12 +244,21 @@ const CLARITIES = [
 ]
 
 const MODEL_SNAPSHOT = [
-  { name: 'Claude Sonnet 5.5', house: 'Anthropic · 28 sep 2026', note: 'Mismo precio que Sonnet 5 (USD 2/10 por millón, caché a 0,20), 1M de contexto y 128K de salida; según Anthropic, un 30 % más rápido y hasta un 30 % más barato por tarea. Opus 5.5 (22-sep, USD 4/20) sigue siendo el modelo por defecto; Haiku 5.5 aún «en semanas».' },
-  { name: 'GPT-6.1 Sol', house: 'OpenAI · 29 sep 2026 (DevDay)', note: 'Cerca de Astra a una quinta parte del precio: USD 2/10 por millón, entrada cacheada a 0,10. Solo en ChatGPT Work y Codex —donde ya es el modelo por defecto del CLI—, no en el chat. GPT-5.5 se retira el 14 de octubre.' },
-  { name: 'Gemini 4 Argon', house: 'Google · 30 sep 2026', note: 'Anunciado con salida de 1M de tokens y precio de USD 2/10 (4/20 al terminar la introducción), pero por ahora solo lo prueban defensores de ciberseguridad del programa Fairwind. Para el resto, el Pro sigue siendo 3.1 y el caballo de batalla, 3.8 Flash.' },
-  { name: 'Grok 4.7', house: 'xAI · 21 sep 2026', note: '500K de contexto al mismo precio del 4.6, USD 2/6. A 30 de septiembre el 4.8 que promete Musk sigue sin aparecer en la lista oficial de modelos.' },
-  { name: 'Xiaomi MiMo-V2.6 (MOPD)', house: 'Xiaomi · 27 sep 2026', note: 'Casi un billón de parámetros con pesos MIT y 1M de contexto por USD 0,435/0,87. El 27 Xiaomi publicó checkpoints corregidos que eliminan la repetición de llamadas a herramientas, sin cambiar nombres ni precio.' },
-  { name: 'DeepSeek V4.1-Flash', house: 'DeepSeek · 10 sep 2026', note: 'Multimodal y con pesos MIT, USD 0,30/1,20 en hora pico y la mitad en valle. Semana sin modelo nuevo en China; Moonshot (Kimi) suma una segunda acusación de destilación, ahora de OpenAI (30-sep).' },
+  {
+    name: 'GPT-6 en ChatGPT',
+    house: 'OpenAI · 7–8 oct 2026',
+    note: 'GPT-6 Sol y Luna llegan al chat con elementos interactivos, con despliegue por etapas. Work y Codex mantienen sus modelos, incluido GPT-6.1 Sol. Comprueba disponibilidad en tu cuenta.',
+  },
+  {
+    name: 'Claude Haiku 5.5',
+    house: 'Anthropic · 7 oct 2026',
+    note: 'Ya disponible para tareas rápidas y repetitivas. Evalúa con tus propios casos si su calidad es suficiente antes de automatizar.',
+  },
+  {
+    name: 'Skills en Gemini',
+    house: 'Google · 30 sep, revisado 8 oct',
+    note: 'Instrucciones reutilizables que comienzan a reemplazar a los Gems. Una forma de conservar el contexto y los criterios de una tarea recurrente.',
+  },
 ]
 
 function MethodSidebar({ currentStep }) {
@@ -299,16 +309,21 @@ function ModelSnapshot() {
           <CalendarCheck className="w-4 h-4 text-primary" />
         </div>
         <div>
-          <h2 className="text-sm font-bold text-text">Panorama de modelos · {UPDATED_AT}</h2>
+          <h2 className="text-sm font-bold text-text">
+            Novedades para trabajar con IA · {UPDATED_AT}
+          </h2>
           <p className="text-xs text-text-light">
-            Con qué estás hablando hoy. Sirve para decidir a cuál le mandas el prompt que vas a construir.
+            Cambios revisados para decidir cómo usar la instrucción que vas a construir.
           </p>
         </div>
       </div>
 
       <ul className="space-y-2.5 list-none p-0 m-0">
         {MODEL_SNAPSHOT.map((m) => (
-          <li key={m.name} className="grid sm:grid-cols-[minmax(0,10rem)_1fr] gap-1 sm:gap-4 py-2 border-t border-border first:border-t-0">
+          <li
+            key={m.name}
+            className="grid sm:grid-cols-[minmax(0,10rem)_1fr] gap-1 sm:gap-4 py-2 border-t border-border first:border-t-0"
+          >
             <div>
               <p className="text-sm font-semibold text-text leading-tight">{m.name}</p>
               <p className="text-[11px] text-text-lighter">{m.house}</p>
@@ -321,6 +336,19 @@ function ModelSnapshot() {
       <p className="text-[11px] text-text-lighter mt-4 pt-3 border-t border-border leading-relaxed">
         Versiones y precios cambian cada pocas semanas: verifica antes de citarlos en un documento.
       </p>
+      <div className="flex flex-wrap gap-4 mt-3 text-xs">
+        {updates.map((item) => (
+          <a
+            key={item.url}
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline"
+          >
+            {item.source}
+          </a>
+        ))}
+      </div>
     </section>
   )
 }

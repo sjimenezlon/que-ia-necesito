@@ -16,6 +16,8 @@ import CompareDock from './components/CompareDock'
 import Examples from './pages/Examples'
 
 const SectorPublico = lazy(() => import('./pages/SectorPublico'))
+const Pymes = lazy(() => import('./pages/Pymes'))
+const Aprender = lazy(() => import('./pages/Aprender'))
 const Docentes = lazy(() => import('./pages/Docentes'))
 const Investigadores = lazy(() => import('./pages/Investigadores'))
 const HerramientasAsiaticas = lazy(() => import('./pages/HerramientasAsiaticas'))
@@ -77,6 +79,8 @@ export default function App() {
           />
           <Route path="/acerca" element={<About />} />
           <Route path="/ejemplos" element={<Examples />} />
+          <Route path="/pymes" element={<Suspense fallback={<ChapterFallback />}><Pymes /></Suspense>} />
+          <Route path="/aprender" element={<Suspense fallback={<ChapterFallback />}><Aprender /></Suspense>} />
           <Route
             path="/herramienta/:id"
             element={

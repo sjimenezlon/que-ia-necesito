@@ -10,11 +10,11 @@
       "educacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con chats de texto ilimitados (GPT-5.6 Luna). Go: $8/mes. Plus: $20/mes. Pro intermedio: $100/mes. Pro: $200/mes",
+    "pricingDetail": "Plan gratuito con límites y planes Go, Plus, Pro, Business y Enterprise. Pro tiene niveles de USD 100, 200 y 500 al mes; Ultrafast solo en Pro 500. Verifica el precio local, los impuestos y el cupo en la página oficial.",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Asistente conversacional de OpenAI para escribir, investigar, programar y más.",
-    "fullDescription": "ChatGPT es el asistente de OpenAI para redactar, investigar, analizar documentos y programar. El 3 de septiembre de 2026 OpenAI lanzó GPT-6 Astra, su nueva generación para trabajo profesional, programación y uso del computador, y el primer modelo de la casa que cruza el nivel «crítico» de capacidad cibernética de su propio marco de preparación: la versión comercial recorta las capacidades ofensivas más avanzadas y la menos restringida solo se entrega a organizaciones aprobadas. Ojo con el acceso, porque depende del plan: en el chat aparece como «GPT-6 Pro» para Pro, Business y Enterprise; los usuarios Plus lo tienen únicamente dentro de ChatGPT Work y Codex; en Free y Go no está. El 22 de septiembre llegaron GPT-6 Sol, para trabajo diario, código y agentes, y GPT-6 Luna, para tareas rápidas, a la mitad del precio de la serie 5.6 por API ($2/$10 y $0,10/$0,50), y el 29, en DevDay, GPT-6.1 Sol, que según OpenAI se acerca a Astra en programación agéntica, uso del computador y trabajo profesional a una quinta parte de su precio ($2/$10, con entrada cacheada a $0,10). Los tres están solo en ChatGPT Work y Codex para Plus, Pro, Business, Enterprise y Edu —Free y Go reciben Luna en la app de escritorio— y ninguno en el modo Chat, donde GPT-5.6 sigue siendo la base; GPT-5.5 se retira de ChatGPT, Work y Codex el 14 de octubre de 2026. En DevDay OpenAI presentó además los «dots», agentes siempre activos con computador propio en la nube que se despliegan a Pro y Business Premium en mercados elegibles —el primero va incluido—, y un nivel Ultrafast para GPT-6 Astra que por API cuesta seis veces la tarifa estándar. Según The Wall Street Journal, OpenAI canceló un GPT-6.1 Astra por reparos de seguridad; no hay confirmación oficial. Desde el 14 de septiembre Plus y Pro ya no cambian solos de Instant a Thinking: el modo se elige a mano. Lo demás de la quincena: ChatGPT Images 2.5 para crear y editar imágenes (8 de septiembre), una voz que puede buscar y razonar con GPT-5.6 o GPT-6 Astra (9 de septiembre) y el plugin Data más las conexiones de Box, Dropbox y SharePoint a Library (10 de septiembre). Para elegir, distingue entre conversar, trabajar con archivos y encargar tareas que actúan sobre otras aplicaciones. El 21 de septiembre OpenAI reunió en un Centro de privacidad los controles de memoria, personalización y aplicaciones conectadas: conviene revisarlo antes de subir documentos de trabajo.",
+    "fullDescription": "ChatGPT es el asistente de OpenAI para redactar, estudiar, analizar archivos y trabajar con herramientas. Desde el 7 de octubre de 2026, GPT-6 llega al modo Chat con Intelligent UI: puede combinar texto, gráficos y elementos interactivos según la pregunta. El despliegue comienza en Plus, Pro, Business y Enterprise con GPT-6 Sol, y se amplía a Free y Go desde el 8 de octubre con GPT-6 Luna. La opción de razonamiento Pro usa Astra sin Intelligent UI; Work y Codex mantienen sus modelos, incluido GPT-6.1 Sol. Desde el 6 de octubre, las suscripciones de pago permiten subir audio para transcribir y resumir; la disponibilidad depende del espacio de trabajo, región y versión. Para una empresa, empieza con una tarea concreta y datos autorizados. Revisa el resultado antes de enviarlo o incorporarlo a un proceso.",
     "useCases": [
       "Redactar correos, informes y documentos",
       "Resolver dudas complejas con explicaciones claras",
@@ -28,7 +28,7 @@
       "Sé específico: entre más contexto des, mejor respuesta obtienes",
       "Usa Proyectos para organizar conversaciones por tema"
     ],
-    "proTip": "Antes de comparar resultados, mira qué modelo estás usando: desde el 14 de septiembre ChatGPT ya no pasa solo a modo de razonamiento en Plus y Pro, así que para preguntas difíciles elige Thinking en el selector. En el plan gratuito, el botón «Think» cumple esa función.",
+    "proTip": "Pide un entregable pequeño, adjunta datos confirmados y define qué debe comprobarse. Las novedades se despliegan por etapas: revisa qué funciones aparecen en tu cuenta.",
     "pros": [
       "Muy versatil y fácil de usar",
       "Interfaz simple e intuitiva",
@@ -75,28 +75,16 @@
     ],
     "bestFor": "Ideal para resolver dudas, redactar textos y aprender de todo",
     "releaseReview": {
-      "date": "2026-09-30",
-      "label": "30 de septiembre de 2026",
+      "date": "2026-10-08",
+      "label": "8 de octubre de 2026",
       "sources": [
         {
-          "title": "OpenAI: precios de la API (GPT-6.1 Sol, Ultrafast)",
-          "url": "https://developers.openai.com/api/docs/pricing"
+          "title": "OpenAI: notas de versión de ChatGPT (6–8 de octubre)",
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
         },
         {
-          "title": "OpenAI: hub de seguridad de GPT-6.1 Sol",
-          "url": "https://deploymentsafety.openai.com/gpt-6-1-sol"
-        },
-        {
-          "title": "OpenAI: presentación de GPT-6.1 Sol",
-          "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
-        },
-        {
-          "title": "TechCrunch: GPT-6.1 Sol y disponibilidad por plan",
-          "url": "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/"
-        },
-        {
-          "title": "OpenAI: deprecaciones de la API",
-          "url": "https://developers.openai.com/api/docs/deprecations"
+          "title": "OpenAI: planes de ChatGPT",
+          "url": "https://chatgpt.com/pricing/"
         }
       ]
     }
@@ -112,11 +100,11 @@
       "programacion"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis con límites. Pro: $20/mes ($17 si pagas el año). Max: $100/mes o $200/mes. Team: $25 por puesto al mes. API: Fable 5.1 a $10/$50 por millón de tokens, Opus 5.5 a $4/$20, Sonnet 5.5 a $2/$10 y Haiku 4.5 a $1/$5; Sonnet 5 y Opus 5 siguen disponibles como modelos heredados",
+    "pricingDetail": "Planes Free, Pro, Max y Team; consulta la tarifa local de suscripción. API Haiku 5.5: USD 0,10 de entrada / 0,50 de salida por millón de tokens hasta 100.000 tokens de entrada; por encima, USD 0,50 / 2,50. Sonnet 5.5: USD 2 / 10; lectura de caché USD 0,10 por millón. La API se factura por uso, separada de los límites del chat.",
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Asistente de Anthropic especializado en análisis largo, escritura y programación.",
-    "fullDescription": "Claude es el asistente de IA de Anthropic, conocido por procesar documentos muy largos, escribir con calidad y programar con precisión, con un enfoque declarado en seguridad y utilidad. El 16 de septiembre de 2026 Anthropic fusionó Cowork con el chat: ya no eliges modo, sino que Claude decide si responde en la conversación o si se lleva el trabajo largo —informes, hojas de cálculo, presentaciones— y te devuelve archivos editables. Con esa fusión llegan en beta, para planes de pago, Claude Docs y Claude Slides (que exporta a PowerPoint y PDF), y Claude Design pasa a funcionar dentro de la conversación; el despliegue empieza por Pro y Max y sigue con Team y Free. Su familia vigente es Claude 5, toda con 1 millón de tokens de contexto. La novedad es Claude Opus 5.5 (22 de septiembre de 2026), el primero de la generación 5.5: según Anthropic rinde al nivel de Fable 5.1 en la mayoría del trabajo, cuesta un 40 % menos que Opus 5 —$4/$20 por millón de tokens—, trae 128K de salida y ya es el modelo por defecto en la app y en Claude Code; el plan gratuito no lo incluye. El 28 de septiembre le siguió Claude Sonnet 5.5, al mismo precio que Sonnet 5 —$2/$10, lectura de caché a $0,20—, con 1 millón de contexto y 128K de salida: según Anthropic genera un 30 % más rápido y cuesta hasta un 30 % menos por tarea porque gasta menos tokens, y es el primer Sonnet que, ante tareas de ciberseguridad de alto riesgo, retrocede visiblemente a Sonnet 5. Haiku 5.5 sigue anunciado «para las próximas semanas», sin fecha, y Sonnet 4.5 quedó marcado para retiro de la API el 30 de noviembre de 2026. Por encima sigue Claude Fable 5.1 (1 de septiembre de 2026), el modelo más capaz de la casa —128K de salida y lectura de caché un 75 % más barata, a $0,25 por millón—; Claude Sonnet 5.5 es hoy el equilibrio de costo y velocidad; Opus 5 y Sonnet 5 quedan como modelos heredados, todavía disponibles por API; y Claude Haiku 4.5 sigue siendo el más económico. Claude Mythos 5.1, el modelo de ciberdefensa y ciencias de la vida, sigue restringido a un grupo de organizaciones verificadas de Estados Unidos. En la misma quincena aparecieron el conector de Salesforce en beta (15 de septiembre), Claude for Small Business con 27 integraciones nuevas —Shopify, Xero, Stripe, Zapier, Square— y Claude for Financial Advisors. El 23 de septiembre abrió Claude Marketplace —el directorio de Claude—, un catálogo de complementos, conectores y agentes de terceros disponible en todos los planes, y desde el 25 cualquier desarrollador con plan de pago puede enviar el suyo por un portal con escaneo de seguridad automático y analítica de uso.",
+    "fullDescription": "Claude es el asistente de Anthropic para escribir, analizar documentos, programar y preparar entregables. El 7 de octubre de 2026 se lanzó Haiku 5.5, orientado a tareas breves y repetitivas como resúmenes y clasificación, con control de esfuerzo. Está disponible en Claude Platform y en AWS, Google Cloud y Microsoft Azure. Ese día también bajó el precio de lectura de caché de Sonnet 5.5. Para una PyME, prueba primero borradores de respuestas o clasificación de solicitudes con ejemplos anonimizados y mide errores y tiempo de revisión. Usa modelos de mayor capacidad para tareas complejas; consulta en tu cuenta qué modelos y límites están incluidos.",
     "useCases": [
       "Analizar documentos largos de hasta 200 páginas",
       "Escribir textos creativos y profesionales",
@@ -130,7 +118,7 @@
       "Para mejores resultados, da contexto detallado",
       "Usa Proyectos para agrupar conversaciones relacionadas"
     ],
-    "proTip": "Claude lee PDF completos: sube documentos largos y pídele que los analice, resuma o extraiga datos. Y desde la fusión con Cowork conviene pedir el entregable, no la respuesta: «arma la presentación con estos datos» hace que trabaje en segundo plano y devuelva el archivo. Opus 5.5 es ahora el modelo por defecto en los planes de pago; deja Sonnet 5.5 para lo cotidiano si quieres estirar tu límite de uso.",
+    "proTip": "Conserva una instrucción y un conjunto pequeño de casos de prueba. Compara calidad, tiempo total y costo antes de usar un modelo económico a gran escala.",
     "pros": [
       "Excelente para textos largos y análisis",
       "Ventana de contexto de 1 millón de tokens",
@@ -178,28 +166,16 @@
     ],
     "bestFor": "Ideal para análisis profundo de documentos largos y programación",
     "releaseReview": {
-      "date": "2026-09-30",
-      "label": "30 de septiembre de 2026",
+      "date": "2026-10-08",
+      "label": "8 de octubre de 2026",
       "sources": [
         {
-          "title": "Anthropic: Claude Sonnet 5.5",
-          "url": "https://www.anthropic.com/claude-sonnet-5-5"
+          "title": "Anthropic: Haiku 5.5, disponibilidad y precios",
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
         },
         {
-          "title": "Claude Platform: tabla de modelos vigentes",
+          "title": "Anthropic: modelos vigentes y capacidades",
           "url": "https://platform.claude.com/docs/en/models/overview"
-        },
-        {
-          "title": "Claude Platform: deprecaciones (Sonnet 4.5)",
-          "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
-        },
-        {
-          "title": "Anthropic: portal de envío de plugins",
-          "url": "https://claude.com/blog/build-plugins-for-claude"
-        },
-        {
-          "title": "Anthropic: planes y precios",
-          "url": "https://claude.com/pricing"
         }
       ]
     }
@@ -4236,11 +4212,11 @@
       "productividad"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Gratis 1.000 créditos/mes. Core: ~$9/mes. Pro: ~$16/mes. Teams: ~$29/mes",
+    "pricingDetail": "Free: hasta 1.000 créditos/mes. Referencia de la página para 10.000 créditos/mes: Core USD 9, Pro USD 16 y Teams USD 29, con facturación anual. Verifica tarifa según periodicidad e impuestos. La IA puede consumir créditos adicionales y un proveedor externo puede facturar su propia API.",
     "difficulty": 3,
     "rating": 4,
     "shortDescription": "Plataforma de automatización visual para crear flujos de trabajo complejos.",
-    "fullDescription": "Make (antes Integromat) es una plataforma de automatización visual que permite crear flujos de trabajo complejos conectando cientos de aplicaciones. Su interfaz visual de arrastrar y soltar muestra cada paso de la automatización como un nodo en un diagrama, facilitando la creación de procesos sofisticados.",
+    "fullDescription": "Make permite diseñar automatizaciones visuales entre aplicaciones. Una PyME puede recibir una solicitud, validar campos, preparar un borrador y detener el proceso para revisión. Los AI Agents están en beta; se puede usar el proveedor de IA de Make y, según el plan, una conexión propia. El consumo combina acciones del flujo y, en funciones de IA, procesamiento de tokens. Antes de activar un escenario, prueba datos incompletos y duplicados, fija límites de gasto y conserva una aprobación humana para acciones externas.",
     "useCases": [
       "Crear flujos de automatización complejos visualmente",
       "Conectar herramientas de negocio entre si",
@@ -4252,13 +4228,13 @@
       "Registrate gratis en make.com",
       "Crea un nuevo escenario",
       "Elige el trigger y las aplicaciones a conectar",
-      "Configura los pasos visualmente y activa el escenario"
+      "Prueba el escenario con datos ficticios, revisa el consumo y activa acciones externas solo tras la aprobación del responsable"
     ],
-    "proTip": "Make permite flujos mucho más complejos que Zapier: usa condiciones, bucles y ramificaciones para automatizaciones sofisticadas.",
+    "proTip": "Diseña primero un flujo que prepare borradores. Prueba casos incompletos y duplicados antes de habilitar envíos; registra costo por ejecución y errores.",
     "pros": [
       "Interfaz visual muy clara",
       "Más flexible que Zapier para flujos complejos",
-      "Plan gratis con 1000 operaciones"
+      "Plan gratis con 1.000 créditos mensuales"
     ],
     "cons": [
       "Curva de aprendizaje más pronunciada",
@@ -4294,7 +4270,21 @@
       "automatizacion-workflow",
       "automatizacion-datos"
     ],
-    "bestFor": "Ideal para automatizaciones visuales complejas y detalladas"
+    "bestFor": "Ideal para automatizaciones visuales complejas y detalladas",
+    "releaseReview": {
+      "date": "2026-10-08",
+      "label": "8 de octubre de 2026",
+      "sources": [
+        {
+          "title": "Make: planes y créditos",
+          "url": "https://www.make.com/en/pricing"
+        },
+        {
+          "title": "Make: consumo de créditos de AI Agents",
+          "url": "https://help.make.com/credit-usage-for-ai-agents"
+        }
+      ]
+    }
   },
   {
     "id": "reclaim",

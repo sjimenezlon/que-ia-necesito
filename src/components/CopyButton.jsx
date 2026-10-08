@@ -4,11 +4,20 @@ import { Copy, Check } from 'lucide-react'
 export default function CopyButton({ text, label = 'Copiar prompt' }) {
   const [status, setStatus] = useState('')
   const copy = async () => {
+    let timeout
+    setStatus('Copiando…')
     try {
-      await navigator.clipboard.writeText(text)
+      await Promise.race([
+        navigator.clipboard.writeText(text),
+        new Promise((_, reject) => {
+          timeout = setTimeout(() => reject(new Error('Clipboard unavailable')), 2000)
+        }),
+      ])
       setStatus('Copiado. Ya puedes pegarlo en tu IA.')
     } catch {
       setStatus('No se pudo copiar. Selecciona el texto y cópialo manualmente.')
+    } finally {
+      clearTimeout(timeout)
     }
   }
   return (

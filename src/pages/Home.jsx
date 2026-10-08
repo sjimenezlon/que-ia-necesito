@@ -5,10 +5,20 @@ import { getPopularTools, getCategoryInfo, getToolById } from '../utils/recommen
 import Hero from '../components/Hero'
 import ToolCard from '../components/ToolCard'
 import SearchContextChips from '../components/SearchContextChips'
-import { ArrowRight, Compass, GraduationCap, Heart, Landmark, Microscope, Search } from 'lucide-react'
+import {
+  ArrowRight,
+  Compass,
+  GraduationCap,
+  Heart,
+  Landmark,
+  Microscope,
+  Search,
+} from 'lucide-react'
 import tools from '../data/tools.json'
 import CategoryGrid from '../components/CategoryGrid'
 import { practicalExamples } from '../data/practicalExamples'
+import { EDITION, updates } from '../data/editorial'
+import './learning.css'
 
 const popularTools = getPopularTools(6)
 
@@ -90,6 +100,38 @@ export default function Home({
       />
 
       {!query && (
+        <section
+          className="learning-page max-w-6xl mx-auto px-4 pt-10"
+          aria-label="Rutas para aprender"
+        >
+          <div className="learning-entry">
+            <Link to="/aprender">
+              <span className="lab-kicker">Empieza aquí · 10 minutos</span>
+              <h2>De preguntar a comprender.</h2>
+              <p>
+                Cuatro lecciones breves para definir una tarea, dar contexto, comprobar y mejorar.
+                Practica con preguntas y recibe una explicación.
+              </p>
+              <strong>
+                Empezar mi ruta <ArrowRight size={17} />
+              </strong>
+            </Link>
+            <Link to="/pymes">
+              <span className="lab-kicker">Nuevo · Para pequeñas y medianas empresas</span>
+              <h2>IA que cabe en tu negocio.</h2>
+              <p>
+                Seis talleres de ventas, servicio, marketing, inventario, caja y procesos. Termina
+                con un piloto de siete días que puedas medir.
+              </p>
+              <strong>
+                Explorar los talleres para PyMEs <ArrowRight size={17} />
+              </strong>
+            </Link>
+          </div>
+        </section>
+      )}
+
+      {!query && (
         <section className="max-w-6xl mx-auto px-4 pt-12 pb-5">
           <div className="flex flex-wrap items-end justify-between gap-3 mb-5">
             <div>
@@ -135,7 +177,7 @@ export default function Home({
               </h2>
             </div>
             <span className="hidden sm:block text-xs text-text-lighter">
-              Guías prácticas · Colombia · Septiembre 2026
+              Guías prácticas · Colombia · Octubre 2026
             </span>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -210,8 +252,8 @@ export default function Home({
                     IA para el sector público
                   </h3>
                   <p className="text-sm text-text-light leading-relaxed">
-                    Ocho rutas con ejemplos editables, prompts por rol, novedades de 2026 y una ficha
-                    para preparar tu primer piloto.
+                    Ocho rutas con ejemplos editables, prompts por rol, novedades de 2026 y una
+                    ficha para preparar tu primer piloto.
                   </p>
                   <span className="inline-flex items-center gap-1.5 text-primary font-semibold text-sm mt-4">
                     Explorar la guía{' '}
@@ -225,6 +267,31 @@ export default function Home({
       )}
 
       {/* Context chips — only render wrapper when chips will actually show */}
+      {!query && (
+        <section
+          className="learning-page max-w-6xl mx-auto px-4 py-10"
+          aria-labelledby="edition-title"
+        >
+          <span className="lab-kicker">Edición {EDITION.label}</span>
+          <h2 id="edition-title">Novedades que puedes llevar a la práctica.</h2>
+          <div className="lab-three-col">
+            {updates.map((item) => (
+              <article className="lab-update" key={item.title}>
+                <span className="lab-small">{item.date}</span>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  {item.source} <ArrowRight size={14} />
+                </a>
+              </article>
+            ))}
+          </div>
+          <p className="lab-small">
+            Revisamos estas novedades y las fichas de ChatGPT, Claude y Make. Cada capítulo conserva
+            su propia fecha de revisión.
+          </p>
+        </section>
+      )}
       {query &&
         meta &&
         meta.hasStrongIntent &&

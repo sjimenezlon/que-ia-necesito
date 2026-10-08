@@ -1,0 +1,708 @@
+.learning-page {
+  --lab-green: #146253;
+  --lab-mint: #edf4ed;
+  --lab-ink: #193d36;
+}
+.dark .learning-page {
+  --lab-green: #8ddac5;
+  --lab-mint: #172f2a;
+  --lab-ink: #d8f4ea;
+}
+.lab-container {
+  max-width: 1152px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+.learning-page h1 {
+  font-size: clamp(2.5rem, 4.9vw, 4.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+  margin: 22px 0;
+}
+.learning-page h1 em {
+  color: var(--lab-green);
+  font-style: normal;
+}
+.learning-page h2 {
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin: 12px 0;
+}
+.learning-page h3 {
+  font-size: 1.2rem;
+  font-weight: 650;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.learning-page h4 {
+  font-size: 1.5rem;
+  font-weight: 650;
+  line-height: 1.25;
+  margin: 12px 0 20px;
+}
+.learning-page p {
+  color: var(--color-text-light);
+  line-height: 1.65;
+  margin: 10px 0 18px;
+}
+.lab-kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lab-green);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.learning-page .lab-small {
+  font-size: 12px;
+  line-height: 1.6;
+  display: block;
+}
+.lab-two-col {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+}
+.lab-three-col {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+.business-hero {
+  padding: 68px 0 58px;
+  background: linear-gradient(125deg, var(--color-bg) 45%, var(--lab-mint));
+  border-bottom: 1px solid var(--color-border);
+}
+.business-hero > .lab-two-col {
+  align-items: center;
+  gap: 60px;
+}
+.business-hero p {
+  max-width: 550px;
+}
+.lab-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  margin: 28px 0 18px;
+}
+.lab-primary,
+.lab-secondary,
+.lab-text-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 12px 18px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: background 0.2s;
+}
+.lab-primary {
+  background: #146253;
+  color: #fff;
+}
+.lab-primary:hover {
+  background: #0b4d40;
+}
+.lab-secondary {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+.lab-secondary:hover {
+  border-color: var(--lab-green);
+}
+.lab-text-button {
+  background: none;
+  color: var(--lab-green);
+  padding-inline: 0;
+}
+.learning-page button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.learning-page :is(button, a, input, textarea, select):focus-visible {
+  outline: 3px solid var(--lab-green);
+  outline-offset: 4px;
+}
+.business-route {
+  padding: 30px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  box-shadow: 0 14px 45px #193d3608;
+}
+.business-route-row {
+  display: flex;
+  gap: 20px;
+  padding-top: 25px;
+}
+.business-route-row > span {
+  font-family: var(--font-display);
+  font-size: 27px;
+  color: var(--lab-green);
+  line-height: 1.1;
+}
+.business-route-row h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+.business-route-row p {
+  font-size: 13px;
+  margin: 0;
+}
+.lab-progress-copy {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 28px 0 8px;
+  font-size: 12px;
+  color: var(--color-text-light);
+}
+.learning-page progress {
+  display: block;
+  width: 100%;
+  height: 7px;
+  border: 0;
+  border-radius: 5px;
+  background: var(--color-border);
+  accent-color: var(--lab-green);
+}
+.learning-page progress::-webkit-progress-bar {
+  border-radius: 5px;
+  background: var(--color-border);
+}
+.learning-page progress::-webkit-progress-value {
+  background: var(--lab-green);
+  border-radius: 5px;
+}
+.lab-section {
+  padding-top: 64px;
+  padding-bottom: 20px;
+  scroll-margin-top: 88px;
+}
+.lab-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.lab-counter {
+  font-size: 12px;
+  white-space: nowrap;
+  padding: 9px 14px;
+  background: var(--lab-mint);
+  color: var(--lab-green);
+  border-radius: 30px;
+}
+.lab-profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.65fr;
+  gap: 22px;
+  padding: 22px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  margin: 18px 0 24px;
+  align-items: center;
+}
+.learning-page label,
+.lab-label {
+  font-size: 13px;
+  font-weight: 600;
+  display: block;
+}
+.lab-label {
+  margin: 20px 0 8px;
+}
+.lab-profile p {
+  margin: 0;
+  font-size: 13px;
+}
+.learning-page :is(select, textarea, input:not([type='radio']):not([type='checkbox'])) {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  min-width: 0;
+  margin-top: 7px;
+}
+.learning-page textarea {
+  resize: vertical;
+}
+.lab-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0;
+}
+.lab-filters button {
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  padding: 9px 15px;
+  min-height: 42px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  color: var(--color-text-light);
+}
+.lab-filters button[aria-pressed='true'] {
+  background: var(--lab-ink);
+  color: var(--color-bg);
+  border-color: var(--lab-ink);
+}
+.lab-exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+.lab-exercise-card {
+  text-align: left;
+  padding: 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  color: var(--color-text);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.lab-exercise-card:hover,
+.lab-exercise-card.selected {
+  border-color: var(--lab-green);
+  box-shadow: 0 0 0 1px var(--lab-green);
+}
+.lab-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--lab-green);
+  font-size: 11px;
+  font-weight: 650;
+  margin-bottom: 26px;
+}
+.lab-card-meta > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-light);
+}
+.lab-exercise-card p {
+  font-size: 14px;
+  margin-top: 0;
+  flex: 1;
+}
+.lab-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border);
+  padding-top: 16px;
+  color: var(--lab-green);
+  font-size: 12px;
+  width: 100%;
+}
+.lab-anchor {
+  scroll-margin-top: 90px;
+  padding-top: 28px;
+}
+.lab-workshop {
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+.lab-workshop-header {
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: var(--lab-mint);
+}
+.lab-workshop-header h3 {
+  margin: 12px 0 0;
+  font-size: 23px;
+}
+.lab-complete {
+  color: var(--lab-green);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+}
+.lab-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-bottom: 1px solid var(--color-border);
+}
+.lab-steps button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: var(--color-surface);
+  color: var(--color-text-light);
+  padding: 18px 8px;
+  font: inherit;
+  font-size: 13px;
+}
+.lab-steps button[aria-current='step'] {
+  color: var(--lab-green);
+  border-bottom-color: var(--lab-green);
+  font-weight: 700;
+  background: var(--lab-mint);
+}
+.lab-steps button > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.lab-workshop-body {
+  padding: 32px;
+  min-height: 380px;
+}
+.lab-note {
+  padding: 20px;
+  background: var(--lab-mint);
+  border-radius: 12px;
+  margin: 20px 0;
+  color: var(--lab-ink);
+  font-size: 14px;
+}
+.lab-note p {
+  margin-bottom: 0;
+}
+.lab-note strong {
+  display: block;
+}
+.lab-note ol {
+  list-style: decimal;
+  padding-left: 20px;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+.lab-prompt {
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-bg);
+  margin: 20px 0;
+}
+.lab-prompt pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0;
+}
+.lab-tool-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 22px 0 8px;
+}
+.lab-tool-links :is(a, button),
+.lab-update a,
+.lab-toolkit a,
+.lab-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--lab-green);
+  font-weight: 650;
+  text-decoration: none;
+  font-size: 13px;
+  min-height: 40px;
+}
+.lab-tool-links button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+.lab-tool-links a:hover,
+.lab-update a:hover,
+.lab-toolkit a:hover {
+  text-decoration: underline;
+}
+.lab-reference {
+  margin-top: 22px;
+  border-left: 3px solid var(--lab-green);
+  padding: 16px 22px;
+  background: var(--lab-mint);
+  border-radius: 0 10px 10px 0;
+}
+.lab-checklist,
+.lab-quiz {
+  margin: 28px 0 0;
+  padding: 0;
+  border: 0;
+}
+.learning-page legend {
+  font-weight: 650;
+  margin-bottom: 12px;
+}
+.lab-checklist label,
+.lab-quiz label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 15px;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  margin-bottom: 9px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.learning-page input:is([type='checkbox'], [type='radio']) {
+  margin-top: 3px;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  accent-color: var(--lab-green);
+}
+.learning-page .lab-feedback {
+  background: var(--color-bg);
+  border-left: 3px solid #d97706;
+  padding: 15px;
+  font-size: 14px;
+}
+.learning-page .lab-feedback.good {
+  border-color: var(--lab-green);
+  background: var(--lab-mint);
+}
+.lab-step-footer {
+  padding: 16px 32px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.lab-step-footer > span {
+  font-size: 12px;
+  color: var(--color-text-light);
+}
+.lab-pilot {
+  margin: 28px 0;
+  align-items: start;
+}
+.lab-pilot .lab-note {
+  margin-top: 0;
+}
+.lab-calculator {
+  border: 1px solid var(--color-border);
+  padding: 26px;
+  border-radius: 14px;
+  background: var(--color-surface);
+}
+.lab-calculator h3 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.lab-input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+.lab-estimate {
+  background: var(--lab-mint);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--lab-green);
+}
+.lab-estimate > strong {
+  font-size: 38px;
+  font-family: var(--font-display);
+  line-height: 1;
+}
+.lab-estimate p {
+  margin: 5px 0 16px;
+}
+.lab-estimate > span {
+  font-size: 14px;
+  font-weight: 600;
+}
+.lab-toolkit article {
+  border-top: 2px solid var(--lab-green);
+  padding: 22px 0;
+}
+.lab-toolkit h3 {
+  margin-top: 15px;
+}
+.lab-update {
+  border: 1px solid var(--color-border);
+  padding: 22px;
+  border-radius: 12px;
+  background: var(--color-surface);
+}
+.lab-update p,
+.lab-toolkit article p {
+  font-size: 14px;
+}
+.learn-intro {
+  max-width: 800px;
+  padding-bottom: 38px;
+}
+.learn-comparison {
+  margin-top: 28px;
+  gap: 20px;
+}
+.learn-comparison > div {
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+.learn-comparison > div:last-child {
+  background: var(--lab-mint);
+}
+.learning-entry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.learning-entry > a {
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  text-decoration: none;
+}
+.learning-entry > a:last-child {
+  background: var(--lab-mint);
+  border-color: color-mix(in srgb, var(--lab-green) 25%, transparent);
+}
+.learning-entry h2 {
+  font-size: 25px;
+}
+.learning-entry p {
+  font-size: 14px;
+}
+.learning-entry strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--lab-green);
+}
+@media (max-width: 900px) {
+  .lab-two-col,
+  .business-hero > .lab-two-col {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .lab-exercise-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lab-three-col {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .lab-profile {
+    grid-template-columns: 1fr 1fr;
+  }
+  .lab-profile p {
+    grid-column: 1 / -1;
+  }
+  .business-hero {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .lab-container {
+    padding-inline: 18px;
+  }
+  .lab-exercise-grid,
+  .learning-entry {
+    grid-template-columns: 1fr;
+  }
+  .lab-section {
+    padding-top: 42px;
+  }
+  .lab-workshop-header,
+  .lab-workshop-body {
+    padding: 22px 18px;
+  }
+  .lab-workshop-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .lab-steps button {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+    padding-block: 12px;
+  }
+  .lab-step-footer {
+    padding: 15px 18px;
+  }
+  .business-route {
+    padding: 24px;
+  }
+  .lab-counter {
+    display: none;
+  }
+  .lab-profile {
+    padding: 16px;
+    gap: 15px;
+  }
+  .lab-profile label {
+    min-width: 0;
+  }
+  .lab-input-grid {
+    grid-template-columns: 1fr;
+  }
+  .lab-calculator {
+    padding: 20px;
+  }
+  .lab-primary {
+    text-align: center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .learning-page * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

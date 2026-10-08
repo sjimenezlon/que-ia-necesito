@@ -12,6 +12,7 @@ import {
 import SearchBar from './SearchBar'
 import tools from '../data/tools.json'
 import { practicalExamples } from '../data/practicalExamples'
+import { EDITION } from '../data/editorial'
 
 const featured = [practicalExamples[0], practicalExamples[1], practicalExamples[3]]
 const icons = [Presentation, Mail, GraduationCap]
@@ -29,7 +30,7 @@ export default function Hero({ query, onQueryChange, results, onSubmit }) {
           {!hasQuery && (
             <div className="eyebrow flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-accent" />
-              {tools.length} herramientas · Tú eliges por dónde empezar
+              {tools.length} herramientas · Edición {EDITION.label}
             </div>
           )}
           <h1
@@ -41,8 +42,8 @@ export default function Hero({ query, onQueryChange, results, onSubmit }) {
           </h1>
           {!hasQuery && (
             <p className="text-lg text-text-light max-w-lg mb-7 leading-relaxed">
-              Empieza por tu tarea. Encuentra herramientas, compara opciones y prueba con un ejemplo
-              que puedas hacer tuyo.
+              Aprende con una tarea real. Encuentra una herramienta, prueba una instrucción y
+              comprueba el resultado antes de usarlo.
             </p>
           )}
           <label htmlFor="home-search" className="block text-sm font-semibold mb-2">
@@ -74,10 +75,11 @@ export default function Hero({ query, onQueryChange, results, onSubmit }) {
                 )}
               </div>
               <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mt-7">
-                <Link className="action-text" to="/recomendador">
+                <Link className="action-text" to="/aprender">
                   <Compass size={17} />
-                  Ayúdame a elegir <ArrowRight size={15} />
+                  Aprender desde cero <ArrowRight size={15} />
                 </Link>
+                <Link className="action-text" to="/pymes">IA para mi PyME <ArrowRight size={15} /></Link>
                 <span className="text-xs text-text-light">Sin registro para explorar</span>
               </div>
             </>

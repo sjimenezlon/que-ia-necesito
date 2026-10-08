@@ -26,7 +26,7 @@ export default function About() {
       <div className="bg-surface rounded-2xl border border-border p-6 md:p-8 mb-10 shadow-sm">
         <h2 className="text-xl font-bold text-text mb-4 tracking-tight">¿Por qué existe esta app?</h2>
         <p className="text-text-light leading-relaxed mb-4">
-          A septiembre de 2026, existen cientos de herramientas de IA, pero la mayoría de personas no sabe cuál usar para qué.
+          A octubre de 2026, existen cientos de herramientas de IA, pero la mayoría de personas no sabe cuál usar para qué.
           Cada semana aparecen nuevas opciones y es difícil mantenerse al día.
         </p>
         <p className="text-text-light leading-relaxed">
@@ -57,6 +57,8 @@ export default function About() {
           {[
             `${tools.length} herramientas de IA organizadas por necesidad`,
             '16 categorías: incluye finanzas, programación, diseño y automatización',
+            'Ruta Aprender: cuatro lecciones con preguntas, retroalimentación y progreso guardado',
+            'Talleres para PyMEs: seis ejercicios, datos ficticios, revisión guiada y plan de piloto de siete días',
             'Ocho ejemplos editables para pasar de una idea a una instrucción concreta',
             'Guía para docentes con actividades, evaluación y ejemplos de uso',
             'Capítulo para jóvenes investigadores: herramientas por momento de la investigación, políticas editoriales, contexto colombiano y generador de la declaración de uso de IA',
@@ -119,7 +121,7 @@ export default function About() {
           </a>
         </p>
         <p className="text-text-lighter text-sm mt-2">
-          Edición del <time dateTime="2026-09-30">30 de septiembre de 2026</time> ·{' '}
+          Edición del <time dateTime="2026-10-08">8 de octubre de 2026</time> ·{' '}
           <a
             href="https://sjimenezlon.co/"
             target="_blank"
