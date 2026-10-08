@@ -1,4 +1,12 @@
-export const sectors = ['Comercio', 'Servicios', 'Alimentos y turismo', 'Manufactura']
+import { regionalCases } from './regionalCases.js'
+
+export const sectors = [
+  'Comercio',
+  'Servicios',
+  'Alimentos y turismo',
+  'Manufactura',
+  'Agro y producción rural',
+]
 export const sizes = ['1–10 personas', '11–50 personas', '51–200 personas']
 export const sizeAdvice = [
   'Empieza con una tarea del dueño o de una persona del equipo. Una herramienta y una revisión son suficientes para el primer piloto.',
@@ -6,7 +14,7 @@ export const sizeAdvice = [
   'Prueba en una sola área. Define responsables, permisos y un criterio de calidad antes de extenderlo a otros equipos.',
 ]
 
-export const exercises = [
+const foundationExercises = [
   {
     id: 'ventas',
     area: 'Ventas',
@@ -196,6 +204,14 @@ export const exercises = [
   },
 ]
 
+export const exercises = [
+  ...regionalCases.map((exercise) => ({ ...exercise, collection: 'regional' })),
+  ...foundationExercises.map((exercise) => ({ ...exercise, collection: 'fundamentos' })),
+]
+
 export function buildBusinessPrompt(exercise, profile, data, goal) {
-  return `CONTEXTO\nEstoy aprendiendo a aplicar IA en una PyME de ${profile.sector.toLowerCase()}, con un equipo de ${profile.size}. El caso de práctica puede pertenecer a otro sector: conserva sus hechos y usa mi perfil solo para adaptar la explicación.\n\nOBJETIVO\n${goal || exercise.outcome}\n\nDATOS DEL EJERCICIO\n${data}\n\nTAREA Y ENTREGABLE\n${exercise.task}\n\nCRITERIOS\nUsa únicamente los datos proporcionados. No inventes precios, políticas, testimonios ni resultados. Si falta información, señálala y pregunta. Muestra operaciones comprobables cuando haya cifras. No publiques, envíes, compres ni modifiques sistemas. Devuelve un borrador para revisión humana.\n\nAL TERMINAR\nIndica qué debo comprobar y hazme una pregunta para verificar que comprendí el resultado.`
+  const location = exercise.country
+    ? `Practico con un caso ficticio de ${exercise.business.toLowerCase()} en ${exercise.city}, ${exercise.country}. `
+    : ''
+  return `CONTEXTO\n${location}Mi equipo es de ${profile.size}, en el sector ${profile.sector.toLowerCase()}. Conserva los hechos del caso; usa mi perfil solo para adaptar la explicación.\n\nOBJETIVO\n${goal || exercise.outcome}\n\nDATOS DEL EJERCICIO\n${data}\n\nTAREA Y ENTREGABLE\n${exercise.task}\n\nCRITERIOS\nUsa únicamente los datos proporcionados. Conserva la moneda y las unidades originales; no conviertas precios ni supongas impuestos, normas o condiciones de otro país. No inventes precios, políticas, testimonios ni resultados. Si falta información, señálala y pregunta. Muestra operaciones comprobables cuando haya cifras. No publiques, envíes, compres ni modifiques sistemas. Devuelve un borrador breve, en español claro, para revisión humana.\n\nAL TERMINAR\nIndica qué debo comprobar y hazme una pregunta para verificar que comprendí el resultado.`
 }

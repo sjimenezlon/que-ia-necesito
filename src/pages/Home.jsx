@@ -120,8 +120,9 @@ export default function Home({
               <span className="lab-kicker">Nuevo · Para pequeñas y medianas empresas</span>
               <h2>IA que cabe en tu negocio.</h2>
               <p>
-                Seis talleres de ventas, servicio, marketing, inventario, caja y procesos. Termina
-                con un piloto de siete días que puedas medir.
+                Panaderías, ferreterías, turismo y negocios rurales: ocho casos de Colombia y
+                Latinoamérica, más seis prácticas de fundamentos. Aprende y prepara un piloto de
+                siete días.
               </p>
               <strong>
                 Explorar los talleres para PyMEs <ArrowRight size={17} />

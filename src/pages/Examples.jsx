@@ -232,6 +232,22 @@ export default function Examples() {
           Elige un ejemplo, hazlo tuyo y llévate una instrucción lista para probar.
         </p>
       </div>
+      <Link
+        to="/pymes"
+        className="block rounded-2xl border border-border bg-surface p-5 mb-8 hover:border-primary transition-colors"
+      >
+        <span className="eyebrow">Para tu negocio · Colombia y Latinoamérica</span>
+        <h2 className="text-xl font-bold mt-2">
+          ¿Pedidos por WhatsApp, cotizaciones o cierre de caja?
+        </h2>
+        <p className="text-text-light mt-2">
+          Mira cómo se vería un resultado útil en una panadería, ferretería, hospedaje, taller o
+          negocio rural.
+        </p>
+        <span className="action-text mt-3">
+          Ver los 8 casos locales <ArrowRight size={16} />
+        </span>
+      </Link>
       <div className="flex flex-wrap gap-2 mb-7" aria-label="Filtrar ejemplos por contexto">
         {exampleGroups.map((g) => (
           <button

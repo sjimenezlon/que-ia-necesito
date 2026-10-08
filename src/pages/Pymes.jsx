@@ -3,9 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom'
 import {
   ArrowRight,
   ArrowLeft,
-  Check,
   CheckCircle2,
-  Clock3,
   Download,
   ExternalLink,
   Store,
@@ -14,6 +12,7 @@ import {
   TrendingUp,
 } from 'lucide-react'
 import CopyButton from '../components/CopyButton'
+import BusinessCaseFinder from '../components/BusinessCaseFinder'
 import tools from '../data/tools.json'
 import { EDITION, updates } from '../data/editorial'
 import { sectors, sizes, sizeAdvice, exercises, buildBusinessPrompt } from '../data/pymes'
@@ -59,7 +58,64 @@ function validState(value) {
   )
 }
 
-function Workshop({ exercise, profile, draft, onChange }) {
+function CaseResult({ exercise }) {
+  if (!exercise.result)
+    return (
+      <div className="lab-reference">
+        <span className="lab-kicker">Un resultado de referencia</span>
+        <p>{exercise.expected}</p>
+      </div>
+    )
+  return (
+    <div className="case-output">
+      <div
+        className="case-table-scroll"
+        role="region"
+        aria-label="Resultado de referencia"
+        tabIndex={0}
+      >
+        <table>
+          <caption>Así se vería un resultado útil · caso ficticio</caption>
+          <thead>
+            <tr>
+              {exercise.result.columns.map((column) => (
+                <th key={column} scope="col">
+                  {column}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {exercise.result.rows.map((row, i) => (
+              <tr key={i}>
+                {row.map((cell, j) => (
+                  <td key={j}>{cell}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="lab-small">{exercise.result.note}</p>
+      {exercise.sampleMessage && (
+        <div className="case-message">
+          <span className="lab-kicker">Así podría sonar por WhatsApp</span>
+          <p>{exercise.sampleMessage}</p>
+          <CopyButton
+            text={exercise.sampleMessage}
+            label="Copiar mensaje de ejemplo"
+            successMessage="Copiado. Adapta y verifica los datos antes de enviarlo."
+          />
+          <span className="lab-small">
+            Caso ficticio: adapta y verifica los datos antes de enviarlo.
+          </span>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function Workshop({ exercise, profile, draft, onChange, onProfileChange }) {
   const panelRef = useRef(null)
   const data = draft || {
     data: exercise.data,
@@ -107,30 +163,36 @@ function Workshop({ exercise, profile, draft, onChange }) {
       </nav>
       <div className="lab-workshop-body" ref={panelRef} tabIndex={-1}>
         {step === 0 && (
-          <div className="lab-two-col">
-            <div>
-              <span className="lab-kicker">01 / Entiende el reto</span>
-              <h4>{exercise.learn}</h4>
-              <p>{exercise.outcome}</p>
-              <div className="lab-note">
-                <strong>Antes de pedir ayuda</strong>
-                <p>
-                  Piensa qué entregarías sin IA y qué dato necesitarías confirmar. Puedes completar
-                  toda la práctica con este caso ficticio.
+          <>
+            <div className="case-worked-example">
+              <div>
+                <span className="lab-kicker">
+                  01 /{' '}
+                  {exercise.country ? `${exercise.city}, ${exercise.country}` : 'Entiende el reto'}
+                </span>
+                <h4>{exercise.learn}</h4>
+                <p>{exercise.pain || exercise.outcome}</p>
+                {exercise.preview && (
+                  <blockquote className="case-input">
+                    <span>Lo que llega al negocio</span>
+                    {exercise.preview}
+                  </blockquote>
+                )}
+                <p className="lab-small">
+                  Este resultado está escrito para aprender. Puedes recorrer el ejemplo sin abrir
+                  una herramienta ni crear una cuenta.
                 </p>
               </div>
-              <p className="lab-small">
-                El perfil adapta las instrucciones; los hechos del caso se mantienen para que puedas
-                contrastar tu respuesta.
-              </p>
+              <CaseResult exercise={exercise} />
             </div>
-            <div>
+            <details className="case-disclosure">
+              <summary>Ver o adaptar los datos del ejercicio{edited ? ' · editados' : ''}</summary>
               <label className="lab-label" htmlFor="business-data">
                 Datos de práctica · puedes editarlos
               </label>
               <textarea
                 id="business-data"
-                rows={9}
+                rows={6}
                 value={data.data}
                 maxLength={8000}
                 onChange={(e) =>
@@ -156,16 +218,58 @@ function Workshop({ exercise, profile, draft, onChange }) {
                 Restaurar datos de ejemplo
               </button>
               <p className="lab-small">
-                Usa información ficticia o anonimizada. El borrador se guarda en este navegador;
-                evita datos confidenciales en equipos compartidos.
+                Usa información ficticia o anonimizada. El borrador se guarda en este navegador. La
+                referencia muestra siempre el caso original; si editas las cifras, recalcula el
+                resultado.
               </p>
+            </details>
+            <div className="lab-actions">
+              <button className="lab-primary" onClick={() => move(1)}>
+                Practicar con este caso <ArrowRight size={17} />
+              </button>
+              <a className="lab-text-button" href="#talleres">
+                Ver otro ejemplo
+              </a>
             </div>
-          </div>
+          </>
         )}
         {step === 1 && (
           <>
             <span className="lab-kicker">02 / Da una instrucción concreta</span>
             <h4>Un objetivo, unos datos y un entregable.</h4>
+            <details className="case-disclosure">
+              <summary>Adaptar la instrucción a mi equipo</summary>
+              <div className="lab-profile">
+                <label>
+                  Mi sector
+                  <select
+                    value={profile.sector}
+                    onChange={(e) => onProfileChange({ ...profile, sector: e.target.value })}
+                  >
+                    {sectors.map((s) => (
+                      <option key={s}>{s}</option>
+                    ))}
+                  </select>
+                </label>
+                <label>
+                  Tamaño del equipo
+                  <select
+                    value={profile.size}
+                    onChange={(e) => onProfileChange({ ...profile, size: e.target.value })}
+                  >
+                    {sizes.map((s) => (
+                      <option key={s}>{s}</option>
+                    ))}
+                  </select>
+                </label>
+                <p>
+                  {sizeAdvice[sizes.indexOf(profile.size)]}
+                  <span className="lab-small">
+                    La adaptación conserva los hechos y la moneda del ejercicio.
+                  </span>
+                </p>
+              </div>
+            </details>
             <label className="lab-label" htmlFor="business-goal">
               ¿Qué resultado necesitas?
             </label>
@@ -207,8 +311,8 @@ function Workshop({ exercise, profile, draft, onChange }) {
             <span className="lab-kicker">03 / Revisa antes de usar</span>
             <h4>¿El resultado resiste una comprobación?</h4>
             <p>
-              Intenta resolver el caso antes de abrir la referencia. Después, compara las cifras,
-              los compromisos y los datos que faltan.
+              Compara tu intento con la referencia. Revisa las cifras, los compromisos y los datos
+              que faltan antes de usar una respuesta en tu negocio.
             </p>
             {edited && (
               <div className="lab-note">
@@ -330,7 +434,12 @@ function Workshop({ exercise, profile, draft, onChange }) {
         </button>
         <span>{step + 1} de 4</span>
         <button className="lab-secondary" disabled={step === 3} onClick={() => move(step + 1)}>
-          Siguiente <ArrowRight size={16} />
+          {
+            ['Preparar instrucción', 'Comprobar resultado', 'Llevar a mi negocio', 'Último paso'][
+              step
+            ]
+          }{' '}
+          <ArrowRight size={16} />
         </button>
       </div>
     </section>
@@ -341,7 +450,6 @@ export default function Pymes() {
   const [saved, setSaved] = useState(() => readProgress(STORAGE_KEY, initial, validState))
   const [storageOk, setStorageOk] = useState(true)
   const [params, setParams] = useSearchParams()
-  const [area, setArea] = useState('Todas')
   const workshopRef = useRef(null)
   const exercise = exercises.find((e) => e.id === params.get('caso')) || exercises[0]
   const completed = exercises.filter((e) => saved.drafts[e.id]?.complete).length
@@ -350,19 +458,37 @@ export default function Pymes() {
     setStorageOk(saveProgress(STORAGE_KEY, next))
   }
   const choose = (item) => {
-    setParams({ caso: item.id }, { replace: true })
-    workshopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    setParams((prev) => {
+      const next = new URLSearchParams(prev)
+      next.set('caso', item.id)
+      next.set('biblioteca', item.collection)
+      return next
+    })
+    const draft = saved.drafts[item.id]
+    set({
+      ...saved,
+      profile: { ...saved.profile, sector: item.sector || saved.profile.sector },
+      drafts: draft ? { ...saved.drafts, [item.id]: { ...draft, step: 0 } } : saved.drafts,
+    })
+    workshopRef.current?.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        ? 'instant'
+        : 'smooth',
+      block: 'start',
+    })
     workshopRef.current?.focus({ preventScroll: true })
   }
   const pilot = saved.pilot
+  const currency = ['COP', 'MXN', 'PEN', 'USD'].includes(pilot.currency) ? pilot.currency : 'COP'
   const estimate = calculatePilot(pilot)
   const money = (value) =>
     new Intl.NumberFormat('es-CO', {
       style: 'currency',
-      currency: 'COP',
+      currency,
+      currencyDisplay: 'code',
       maximumFractionDigits: 0,
     }).format(value)
-  const plan = `MI PILOTO DE IA · PYME\nEdición: ${EDITION.label}\nSector: ${saved.profile.sector}\nEquipo: ${saved.profile.size}\nTarea: ${pilot.task || exercise.title}\nResponsable: ${pilot.owner || 'Por asignar'}\n\nDía 1: medir cinco casos sin IA.\nDías 2–3: preparar datos anonimizados y cinco borradores con IA.\nDías 4–5: revisar calidad y probar excepciones; registrar errores y tiempo total.\nDía 6: comparar tiempos, errores y costo.\nDía 7: decidir si continuar, ajustar o detener.\n\nMétrica: ${exercise.metric}\nTiempo sin IA: ${pilot.before} min/caso\nTiempo con IA, incluida revisión: ${pilot.after} min/caso\nCasos por semana: ${pilot.weekly}\nValor estimado de una hora: COP ${pilot.hourly}\nCosto del piloto para 4 semanas: COP ${pilot.cost}\n${estimate ? `Horas liberadas en 4 semanas: ${estimate.hours.toFixed(1)}\nValor de capacidad menos costo: ${money(estimate.capacity)}` : 'Estimación pendiente: revisar los campos numéricos.'}\n\nEl valor de capacidad no es ahorro de caja garantizado. Continuar solo si se mantiene la calidad, los datos están autorizados y el responsable aprueba el proceso. Nunca activar envíos, compras o cambios sin permiso.`
+  const plan = `MI PILOTO DE IA · PYME\nEdición: ${EDITION.label}\nSector: ${saved.profile.sector}\nEquipo: ${saved.profile.size}\nTarea: ${pilot.task || exercise.title}\nResponsable: ${pilot.owner || 'Por asignar'}\n\nDía 1: medir cinco casos sin IA.\nDías 2–3: preparar datos anonimizados y cinco borradores con IA.\nDías 4–5: revisar calidad y probar excepciones; registrar errores y tiempo total.\nDía 6: comparar tiempos, errores y costo.\nDía 7: decidir si continuar, ajustar o detener.\n\nMétrica: ${exercise.metric}\nTiempo sin IA: ${pilot.before} min/caso\nTiempo con IA, incluida revisión: ${pilot.after} min/caso\nCasos por semana: ${pilot.weekly}\nValor estimado de una hora: ${currency} ${pilot.hourly}\nCosto del piloto para 4 semanas: ${currency} ${pilot.cost}\n${estimate ? `Horas liberadas en 4 semanas: ${estimate.hours.toFixed(1)}\nValor de capacidad menos costo: ${money(estimate.capacity)}` : 'Estimación pendiente: revisar los campos numéricos.'}\n\nEl valor de capacidad no es ahorro de caja garantizado. Continuar solo si se mantiene la calidad, los datos están autorizados y el responsable aprueba el proceso. Nunca activar envíos, compras o cambios sin permiso.`
 
   return (
     <div className="learning-page">
@@ -373,47 +499,51 @@ export default function Pymes() {
               <Store size={16} /> IA para pequeñas y medianas empresas
             </div>
             <h1>
-              Menos tareas pendientes.
+              IA para el negocio
               <br />
-              <em>Más tiempo para tu negocio.</em>
+              <em>que tienes.</em>
             </h1>
             <p>
-              No necesitas un equipo de tecnología para empezar. Elige una tarea cotidiana, practica
-              con un caso y aprende a revisar lo que produce la IA.
+              Pedidos por WhatsApp, cotizaciones, caja y entregas. Aprende con situaciones de
+              Colombia y Latinoamérica, datos de ejemplo y resultados que puedes comprobar.
             </p>
             <div className="lab-actions">
               <a className="lab-primary" href="#talleres">
-                Encontrar mi primer ejercicio <ArrowRight size={17} />
+                Ver ejemplos para mi negocio <ArrowRight size={17} />
               </a>
               <Link className="lab-text-button" to="/aprender">
                 Soy nuevo en IA <BookOpen size={17} />
               </Link>
             </div>
             <p className="lab-small">
-              Sin registro en esta guía · 15–25 minutos por taller · Edición{' '}
+              Sin registro en esta guía · 15–25 minutos por práctica · Edición{' '}
               <time dateTime={EDITION.iso}>{EDITION.label}</time>
             </p>
           </div>
           <div className="business-route">
-            <span className="lab-kicker">Del primer intento a una mejora medible</span>
-            {[
-              ['01', 'Elige una tarea', 'Una cotización, una queja o un reporte.'],
-              ['02', 'Practica y comprueba', 'Datos de ejemplo y respuestas para contrastar.'],
-              ['03', 'Prueba en tu empresa', 'Un piloto de siete días, con responsable y métrica.'],
-            ].map(([n, title, text]) => (
-              <div className="business-route-row" key={n}>
-                <span>{n}</span>
-                <div>
-                  <h2>{title}</h2>
-                  <p>{text}</p>
-                </div>
+            <span className="lab-kicker">Por ejemplo / Una panadería en Medellín</span>
+            <h2 className="case-hero-title">Del chat a la lista de producción.</h2>
+            <div className="case-chat">
+              <p>«Me dejas 12 pandebonos para las 8»</p>
+              <p>«Mejor 18, del mismo pedido»</p>
+            </div>
+            <div className="case-hero-answer">
+              <CheckCircle2 size={20} />
+              <div>
+                <strong>18 pandebonos. Un solo pedido.</strong>
+                <span>La IA organiza. Tú verificas cantidades y pagos.</span>
               </div>
-            ))}
+            </div>
+            <button className="lab-text-button" onClick={() => choose(exercises[0])}>
+              Abrir este ejemplo <ArrowRight size={16} />
+            </button>
             <div className="lab-progress-copy">
               <span>Tu avance</span>
-              <strong>{completed} de 6 talleres</strong>
+              <strong>
+                {completed} de {exercises.length} prácticas
+              </strong>
             </div>
-            <progress value={completed} max={6} aria-label="Talleres completados" />
+            <progress value={completed} max={exercises.length} aria-label="Talleres completados" />
             <p className="lab-small" role="status">
               {storageOk
                 ? 'Tu progreso y tus borradores se guardan en este navegador.'
@@ -423,92 +553,21 @@ export default function Pymes() {
         </div>
       </section>
 
-      <section
-        id="talleres"
-        className="lab-container lab-section"
-        aria-labelledby="workshops-title"
-      >
-        <div className="lab-section-heading">
-          <div>
-            <span className="lab-kicker">01 / Encuentra una oportunidad</span>
-            <h2 id="workshops-title">¿Qué quieres mejorar primero?</h2>
-            <p>Empieza con algo frecuente, fácil de revisar y de bajo riesgo.</p>
-          </div>
-          <span className="lab-counter">6 talleres prácticos</span>
-        </div>
-        <div className="lab-profile">
-          <label>
-            Tu sector
-            <select
-              value={saved.profile.sector}
-              onChange={(e) =>
-                set({ ...saved, profile: { ...saved.profile, sector: e.target.value } })
-              }
-            >
-              {sectors.map((s) => (
-                <option key={s}>{s}</option>
-              ))}
-            </select>
-          </label>
-          <label>
-            Tamaño del equipo
-            <select
-              value={saved.profile.size}
-              onChange={(e) =>
-                set({ ...saved, profile: { ...saved.profile, size: e.target.value } })
-              }
-            >
-              {sizes.map((s) => (
-                <option key={s}>{s}</option>
-              ))}
-            </select>
-          </label>
-          <p>
-            {sizeAdvice[sizes.indexOf(saved.profile.size)]}
-            <span className="lab-small">Rangos orientativos para adaptar el ejercicio.</span>
-          </p>
-        </div>
-        <div className="lab-filters" aria-label="Filtrar por área">
-          {['Todas', ...new Set(exercises.map((e) => e.area))].map((label) => (
-            <button key={label} aria-pressed={area === label} onClick={() => setArea(label)}>
-              {label}
-            </button>
-          ))}
-        </div>
-        <div className="lab-exercise-grid">
-          {exercises
-            .filter((e) => area === 'Todas' || e.area === area)
-            .map((item) => (
-              <button
-                className={`lab-exercise-card ${exercise.id === item.id ? 'selected' : ''}`}
-                key={item.id}
-                onClick={() => choose(item)}
-                aria-pressed={exercise.id === item.id}
-              >
-                <span className="lab-card-meta">
-                  {item.area}
-                  <span>
-                    {saved.drafts[item.id]?.complete ? (
-                      <CheckCircle2 size={18} aria-label="Completado" />
-                    ) : (
-                      <Clock3 size={16} />
-                    )}
-                    {item.minutes} min
-                  </span>
-                </span>
-                <h3>{item.title}</h3>
-                <p>{item.outcome}</p>
-                <span className="lab-card-bottom">
-                  {item.level}
-                  <ArrowRight size={18} />
-                </span>
-              </button>
-            ))}
-        </div>
-        {params.get('caso') && !exercises.some((e) => e.id === params.get('caso')) && (
-          <p role="status">Ese taller no existe. Te mostramos el de ventas para empezar.</p>
-        )}
-      </section>
+      <nav className="lab-container case-page-nav" aria-label="Navegar por PyMEs">
+        <a href="#talleres">1. Encuentra un ejemplo</a>
+        <a href="#mesa-de-trabajo">2. Practica paso a paso</a>
+        <a href="#piloto">3. Pruébalo en tu negocio</a>
+      </nav>
+      <BusinessCaseFinder
+        selectedId={exercise.id}
+        completedIds={exercises.filter((e) => saved.drafts[e.id]?.complete).map((e) => e.id)}
+        onChoose={choose}
+      />
+      {params.get('caso') && !exercises.some((e) => e.id === params.get('caso')) && (
+        <p className="lab-container" role="status">
+          Ese taller no existe. Te mostramos el de la panadería para empezar.
+        </p>
+      )}
 
       <div
         id="mesa-de-trabajo"
@@ -521,6 +580,7 @@ export default function Pymes() {
           exercise={exercise}
           profile={saved.profile}
           draft={saved.drafts[exercise.id]}
+          onProfileChange={(profile) => set({ ...saved, profile })}
           onChange={(draft) => set({ ...saved, drafts: { ...saved.drafts, [exercise.id]: draft } })}
         />
       </div>
@@ -580,13 +640,40 @@ export default function Pymes() {
             <h3>
               <TrendingUp size={20} /> ¿Cuánto tiempo podrías recuperar?
             </h3>
+            <label className="lab-label">
+              Moneda del piloto
+              <select
+                value={currency}
+                onChange={(e) =>
+                  set({
+                    ...saved,
+                    pilot: { ...pilot, currency: e.target.value, hourly: '', cost: '' },
+                  })
+                }
+              >
+                {[
+                  ['COP', 'COP · Peso colombiano'],
+                  ['MXN', 'MXN · Peso mexicano'],
+                  ['PEN', 'PEN · Sol peruano'],
+                  ['USD', 'USD · Dólar estadounidense'],
+                ].map(([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <p className="lab-small">
+              Al cambiar de moneda, ingresa de nuevo los montos. No se convierten con una tasa de
+              cambio.
+            </p>
             <div className="lab-input-grid">
               {[
                 ['before', 'Minutos por caso sin IA'],
                 ['after', 'Minutos con IA + revisión'],
                 ['weekly', 'Casos por semana'],
-                ['hourly', 'Valor de una hora (COP)'],
-                ['cost', 'Costo total en 4 semanas (COP)'],
+                ['hourly', `Valor de una hora (${currency})`],
+                ['cost', `Costo total en 4 semanas (${currency})`],
               ].map(([key, label]) => (
                 <label key={key}>
                   {label}
@@ -632,7 +719,12 @@ export default function Pymes() {
           <div className="lab-prompt">
             <pre>{plan}</pre>
           </div>
-          <CopyButton key={plan} text={plan} label="Copiar plan" />
+          <CopyButton
+            key={plan}
+            text={plan}
+            label="Copiar plan"
+            successMessage="Copiado. Ya puedes guardar o compartir tu plan."
+          />
         </details>
       </section>
 

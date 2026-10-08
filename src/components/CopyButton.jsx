@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import { Copy, Check } from 'lucide-react'
 
-export default function CopyButton({ text, label = 'Copiar prompt' }) {
+export default function CopyButton({
+  text,
+  label = 'Copiar prompt',
+  successMessage = 'Copiado. Ya puedes pegarlo en tu IA.',
+}) {
   const [status, setStatus] = useState('')
   const copy = async () => {
     let timeout
@@ -13,7 +17,7 @@ export default function CopyButton({ text, label = 'Copiar prompt' }) {
           timeout = setTimeout(() => reject(new Error('Clipboard unavailable')), 2000)
         }),
       ])
-      setStatus('Copiado. Ya puedes pegarlo en tu IA.')
+      setStatus(successMessage)
     } catch {
       setStatus('No se pudo copiar. Selecciona el texto y cópialo manualmente.')
     } finally {

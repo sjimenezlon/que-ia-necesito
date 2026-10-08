@@ -706,3 +706,301 @@
     transition: none !important;
   }
 }
+
+/* Regional cases: make the input and useful output visible before practicing. */
+.case-hero-title {
+  font-size: 1.7rem !important;
+  margin-top: 18px !important;
+}
+.case-chat {
+  display: grid;
+  gap: 8px;
+  margin: 22px 0;
+}
+.learning-page .case-chat p {
+  padding: 12px 16px;
+  border-radius: 12px 12px 12px 2px;
+  background: var(--lab-mint);
+  color: var(--lab-ink);
+  font-size: 14px;
+  margin: 0;
+}
+.learning-page .case-chat p + p {
+  margin-left: 28px;
+}
+.case-hero-answer {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: var(--lab-green);
+}
+.case-hero-answer svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.case-hero-answer span {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--color-text-light);
+}
+.case-page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+.case-page-nav a {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--lab-green);
+  padding-block: 7px;
+}
+.case-library-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0;
+}
+.case-library-switch button {
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  padding: 12px 18px;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-light);
+  background: var(--color-surface);
+}
+.case-library-switch button[aria-pressed='true'] {
+  color: var(--lab-ink);
+  background: var(--lab-mint);
+  border-color: var(--lab-green);
+}
+.case-search-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 18px;
+  align-items: end;
+}
+.learning-page .case-search {
+  position: relative;
+}
+.case-search > svg {
+  position: absolute;
+  bottom: 16px;
+  left: 15px;
+  color: var(--color-text-light);
+  pointer-events: none;
+}
+.learning-page label.case-search input[type='search'] {
+  padding-left: 44px;
+}
+.case-result-count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  margin-bottom: 12px;
+}
+.case-result-count p {
+  font-size: 13px;
+  margin: 0;
+}
+.case-card {
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: 15px;
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.case-card.selected {
+  border-color: var(--lab-green);
+  box-shadow: 0 0 0 1px var(--lab-green);
+}
+.case-card .lab-card-meta {
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.case-card h3 {
+  margin-top: 8px;
+}
+.case-business {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.065em;
+  font-weight: 650;
+  color: var(--lab-green);
+}
+.case-card > p {
+  font-size: 14px;
+  margin-top: 0;
+  flex: 1;
+}
+.case-deliverable {
+  border-top: 1px solid var(--color-border);
+  padding-top: 14px;
+}
+.case-deliverable > span {
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+.case-deliverable p {
+  font-size: 13px;
+  margin: 5px 0 14px;
+}
+.case-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.case-card-actions > span {
+  font-size: 11px;
+  color: var(--color-text-light);
+  text-align: right;
+}
+.case-card-actions button {
+  flex-shrink: 0;
+}
+.case-empty {
+  text-align: center;
+  border: 1px dashed var(--color-border);
+  border-radius: 16px;
+  padding: 44px 24px;
+}
+.case-empty > svg {
+  margin: 0 auto 16px;
+  color: var(--lab-green);
+}
+.learning-page .case-fiction-note {
+  max-width: 850px;
+  margin-top: 22px;
+}
+.case-worked-example {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 32px;
+  align-items: start;
+}
+.case-input {
+  padding: 18px 20px;
+  margin: 22px 0;
+  border-left: 3px solid var(--lab-green);
+  background: var(--lab-mint);
+  color: var(--lab-ink);
+  font-size: 16px;
+  line-height: 1.6;
+  border-radius: 0 10px 10px 0;
+}
+.case-input span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.case-output {
+  min-width: 0;
+}
+.case-table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+.case-output table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+.case-output caption {
+  text-align: left;
+  padding: 18px;
+  font-weight: 650;
+  font-size: 14px;
+  background: var(--lab-mint);
+  color: var(--lab-ink);
+}
+.case-output :is(th, td) {
+  padding: 13px 14px;
+  border-top: 1px solid var(--color-border);
+  line-height: 1.5;
+  vertical-align: top;
+}
+.case-output th {
+  color: var(--lab-green);
+  font-size: 11px;
+}
+.case-output td {
+  min-width: 90px;
+}
+.case-disclosure {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-top: 24px;
+}
+.case-disclosure summary {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.5;
+  padding-block: 4px;
+}
+.learning-page :is(summary, .case-table-scroll):focus-visible {
+  outline: 3px solid var(--lab-green);
+  outline-offset: 4px;
+}
+@media (max-width: 900px) {
+  .case-worked-example {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .case-search-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .case-library-switch {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .case-page-nav {
+    gap: 2px;
+    flex-direction: column;
+  }
+  .case-output :is(th, td) {
+    padding: 11px;
+  }
+  .lab-step-footer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .lab-step-footer .lab-secondary {
+    font-size: 12px;
+    padding-inline: 10px;
+  }
+}
+
+.case-message {
+  padding: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  margin-top: 18px;
+}
+.case-message p {
+  font-size: 13px;
+}
+.case-message .lab-small {
+  margin-top: 12px;
+}
