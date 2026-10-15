@@ -7,7 +7,7 @@ import {
 } from 'lucide-react'
 
 /* ══════════════════════════════════════════════════════════════════
-   Datos — herramientas de IA asiáticas, verificadas a septiembre 2026.
+   Datos — herramientas de IA asiáticas, verificadas a octubre 2026.
    Precios y versiones cambian rápido: siempre confirmar en el sitio oficial.
    ══════════════════════════════════════════════════════════════════ */
 
@@ -19,6 +19,71 @@ const METRICS = [
 ]
 
 const LATEST_RELEASES = [
+  {
+    date: '15 oct 2026',
+    name: 'Step 5 Preview (pesos)',
+    company: 'StepFun · China',
+    icon: Brain,
+    color: 'text-primary',
+    bg: 'bg-primary/8',
+    tag: 'Pesos · licencia propia',
+    title: 'StepFun cumple y suelta los pesos de su modelo de 600.000 millones',
+    body: 'StepFun anunció Step 5 Preview el 20 de septiembre y prometió los pesos para el 15 de octubre: ya están en Hugging Face, en FP8, BF16 y NVFP4, unos 650 GB el repositorio principal. Es un MoE de 600.000 millones de parámetros con 27.000 millones activos por token, 1 millón de tokens de contexto (entrada más salida) y entrada de texto e imagen. La licencia no es Apache como la de sus modelos Flash, sino la StepFun Model License 1.0: uso comercial libre en general, pero exige licencia aparte a fabricantes de hardware que lo integren y a quienes lo vendan como servicio con más de 20 millones de dólares de ingresos al año. La ficha no publica cifras de pruebas en texto ni precio por token, y para servirlo pide un nodo de 8 H200.',
+    use: 'Es una alternativa abierta de tamaño medio para comparar con DeepSeek V4.1-Flash o Qwen3.8 en tareas de agente. Para una universidad o empresa colombiana, la licencia es más amplia de lo que parece: las restricciones solo tocan a fabricantes de aparatos y grandes revendedores.',
+    url: 'https://huggingface.co/stepfun-ai/Step-5-Preview',
+  },
+  {
+    date: '15 oct 2026',
+    name: 'Apple Intelligence con Qwen en China',
+    company: 'Alibaba y Baidu · China',
+    icon: Landmark,
+    color: 'text-warm',
+    bg: 'bg-warm/8',
+    tag: 'Aprobación regulatoria',
+    title: 'Qwen pasa a ser el cerebro de Apple Intelligence en China',
+    body: 'Según China Daily, Apple confirmó en Shanghái que Apple Intelligence y los modelos Qwen asociados ya tienen aprobación regulatoria en China, con una versión de prueba prevista para finales de octubre que trae traducción en vivo y herramientas de escritura. Alibaba aportará los modelos de comprensión y generación de texto e imagen; Baidu, la búsqueda y funciones ligadas a Siri e Inteligencia Visual. La nueva Siri queda fuera. Bloomberg, citado por MacRumors, sitúa el lanzamiento al público en diciembre con iOS 27.3, y el acuerdo incluye que el Gobierno apruebe las actualizaciones de los modelos; esa fecha no la confirmó Apple.',
+    use: 'Es la prueba de que un modelo chino puede ser el motor bajo una marca occidental. Para Latam no cambia nada en el teléfono, pero sí en el argumento: el mismo producto corre sobre modelos distintos según el regulador de cada país.',
+    url: 'https://www.chinadaily.com.cn/a/202610/15/WS6ad0bab9e4b06d4aa0563074.html',
+  },
+  {
+    date: '12 oct 2026',
+    name: 'GLM-Legal',
+    company: 'Z.ai (Zhipu) · China',
+    icon: Briefcase,
+    color: 'text-accent',
+    bg: 'bg-accent/8',
+    tag: 'Acceso con solicitud',
+    title: 'Zhipu entrena un abogado sobre su modelo barato',
+    body: 'Z.ai presentó GLM-Legal, un modelo especializado en trabajo jurídico construido sobre GLM-5.3-Flash (320.000 millones de parámetros, 18.000 millones activos). Según la empresa triplica a su base en el Harvey Legal Agent Benchmark —de 6,7 % a 19,2 %—. En LegalBench y en PLawBench, una prueba de derecho chino, dice estar a la par de los sistemas cerrados de frontera, pero no publica las cifras ni nombra con quién se compara. El acceso es por formulario de solicitud y dentro de AutoClaw, su agente de escritorio. No hay precio publicado, no hay pesos en Hugging Face y el anuncio no nombra licencia. La única medición es la de la propia Z.ai: nadie ha replicado el 19,2 %.',
+    use: 'Interesa como señal: los modelos jurídicos verticales ya salen de laboratorios chinos y no solo de Harvey o Thomson Reuters. Para derecho colombiano no está probado en nada; no le entregues expedientes reales.',
+    url: 'https://z.ai/blog/glm-legal',
+  },
+  {
+    date: '9 oct 2026',
+    name: 'Qwen-Image-2.1-Turbo',
+    company: 'Alibaba · China',
+    icon: ImageIcon,
+    color: 'text-primary',
+    bg: 'bg-primary/8',
+    tag: 'Pesos · solo investigación',
+    title: 'Alibaba acelera su modelo de imagen a 8 pasos, pero no lo suelta para uso comercial',
+    body: 'Alibaba publicó en Hugging Face Qwen-Image-2.1-Turbo, una versión acelerada de su modelo de imagen y edición de 7.000 millones de parámetros que genera en 8 pasos de difusión y reutiliza el contexto de texto e imagen entre pasos. Funciona con Diffusers y produce ejemplos de hasta 1696×2528 píxeles. La licencia es la Qwen Research License, la misma del modelo base: para uso comercial hace falta un acuerdo aparte. La ficha no da cifras de velocidad ni requisitos de memoria de video.',
+    use: 'Sirve para prototipar flujos de imagen en una GPU propia, en un laboratorio o un curso. Si la pieza va para un cliente, revisa la licencia antes: no es Apache.',
+    url: 'https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo',
+  },
+  {
+    date: '7 oct 2026',
+    name: 'Vidu Q4 Preview',
+    company: 'ShengShu · China',
+    icon: Video,
+    color: 'text-warm',
+    bg: 'bg-warm/8',
+    tag: 'Web y API · pago por segundo',
+    title: 'Vidu adelanta su próximo modelo insignia y lo pone a 0,014 dólares el segundo',
+    body: 'ShengShu lanzó Vidu Q4 Preview, la primera vista pública de su siguiente modelo de video con audio. Promete mejor actuación de personajes —rostro, emoción, cuerpo y voz coordinados—, movimientos de cámara y cortes de acción más limpios, y efectos como explosiones o partículas. Acepta hasta 15 imágenes y 3 audios de referencia y entrega de 540p a 4K, con 10 bits de color en 2K y 4K. Está en la web y en la API desde 0,014 dólares por segundo como precio de lanzamiento, y la empresa dice que rinde «hasta cinco veces más» por el mismo presupuesto. No hay cifras en pruebas públicas, la duración máxima no está en el comunicado y el modelo Q4 definitivo no tiene fecha.',
+    use: 'Si produces piezas seriadas con personajes recurrentes, pruébalo contra Kling y Seedance con las mismas referencias: el precio por segundo hace barata la comparación. No lo uses para trabajos con cliente hasta que salga la versión final.',
+    url: 'https://www.prnewswire.com/news-releases/vidu-launches-q4-preview-making-flagship-ai-video-creation-accessible-to-everyone-302901266.html',
+  },
   {
     date: '27 sep 2026',
     name: 'MiMo-V2.6 Pro y Flash (MOPD)',
@@ -83,72 +148,7 @@ const LATEST_RELEASES = [
     body: 'Xiaomi sacó dos modelos omnimodales —texto, imagen, video y audio— con 1 millón de tokens de contexto: el Pro, de unos 1,02 billones de parámetros con 42.000 millones activos, y el Flash, de 309.000 millones con 15.000 activos. Los dos con pesos MIT en Hugging Face, y Xiaomi publicó además más de 7.000 entornos de aprendizaje por refuerzo con los que los entrenó. Por API cuestan USD 0,435 / 0,87 (Pro) y 0,14 / 0,28 (Flash) por millón de tokens.',
     use: 'Es la apertura más grande y limpia de la semana: si necesitas un modelo potente que puedas descargar y usar comercialmente sin letra pequeña, entra en la lista corta. Las cifras de rendimiento son de Xiaomi.',
     url: 'https://mimo.mi.com/docs/en-US/updates/model',
-  },
-  {
-    date: '22 sep 2026',
-    name: 'Xing4.0-29B-A4B',
-    company: 'China Telecom AI · China',
-    icon: Cpu,
-    color: 'text-primary',
-    bg: 'bg-primary/8',
-    tag: 'Una sola GPU',
-    title: 'Un agente de código que cabe en una tarjeta gráfica',
-    body: 'La operadora estatal China Telecom abrió un MoE de 29.000 millones de parámetros que activa solo 4.000 por token y corre en una GPU de unos 15 GB. Está pensado para agentes y la casa le atribuye 75 en SWE-bench Verified, una prueba de reparación de código real.',
-    use: 'Para equipos que quieren un agente de programación local, sin nube. Revisa la licencia antes de usarlo comercialmente: no está detallada en el anuncio.',
-    url: 'https://www.globenewswire.com/news-release/2026/09/22/3365958/0/en/china-telecom-ai-officially-releases-xing4-0-29b-agentic-large-model-for-single-gpu-deployment.html',
-  },
-  {
-    date: '22 sep 2026',
-    name: 'Solar Mini 4 · Solar Jev',
-    company: 'Upstage · Corea del Sur',
-    icon: Zap,
-    color: 'text-warm',
-    bg: 'bg-warm/8',
-    tag: 'USD 0,10 / 0,40',
-    title: 'Corea compite en la clase barata',
-    body: 'Upstage lanzó Solar Mini 4, un MoE compacto de 35.000 millones de parámetros con 3.000 activos, orientado a agentes, junto con Solar Jev, un servicio de decisión que no genera texto. Solo por API, a USD 0,10 / 0,40 por millón de tokens, con precio promocional de la mitad.',
-    use: 'Una opción para automatizaciones de alto volumen donde el costo por llamada importa más que la última décima de rendimiento.',
-    url: 'https://openrouter.ai/upstage/solar-mini4',
-  },
-  {
-    date: '20 sep 2026',
-    name: 'Step 5 Preview',
-    company: 'StepFun (阶跃星辰) · China',
-    icon: Brain,
-    color: 'text-secondary',
-    bg: 'bg-secondary/8',
-    tag: 'Pesos el 15 oct',
-    title: 'StepFun salta directo a la quinta generación',
-    body: 'Un MoE de unos 600.000 millones de parámetros con 27.000 millones activos, 1 millón de contexto y entrada de texto, imagen y video, diseñado para agentes de horizonte largo: código, finanzas y trabajo de conocimiento. Por ahora solo por API, a USD 1 / 2,70 por millón de tokens; los pesos están anunciados para el 15 de octubre, sin licencia publicada todavía.',
-    use: 'Pruébalo por API si trabajas con agentes largos; para decidir si lo autohospedas, espera a ver la licencia.',
-    url: 'https://platform.stepfun.ai',
-  },
-  {
-    date: '20 sep 2026',
-    name: 'Qwen-Image-2.1',
-    company: 'Alibaba · China',
-    icon: ImageIcon,
-    color: 'text-warm',
-    bg: 'bg-warm/8',
-    tag: 'Solo investigación',
-    title: 'Un Qwen abierto que ya no es para usarlo en tu negocio',
-    body: 'Modelo de imagen de 7.000 millones de parámetros que genera y edita en uno solo, con transparencia nativa. Los pesos están publicados, pero bajo una licencia de investigación: el uso comercial exige un acuerdo aparte con Alibaba. Es un giro frente a la generación anterior, que salió con Apache 2.0.',
-    use: 'Sirve para experimentar y para investigación académica; para piezas de cliente, usa otro modelo o negocia la licencia.',
-    url: 'https://qwen.ai/blog?id=qwen-image-2.1',
-  },
-  {
-    date: '18 sep 2026',
-    name: 'Qwen3.8-Omni-Flash · LiveTranslate',
-    company: 'Alibaba · China',
-    icon: Languages,
-    color: 'text-accent',
-    bg: 'bg-accent/8',
-    tag: 'Cerrados · por API',
-    title: 'Qwen para agentes que ven, oyen e interpretan',
-    body: 'Dos modelos de API en la antesala de Apsara: Qwen3.8-Omni-Flash, el primer omnimodal de Qwen pensado para agentes —ve, oye, planifica y usa herramientas, con 1 millón de contexto—, y Qwen3.8-LiveTranslate, de interpretación simultánea, que baja la latencia media de 2,8 a 2,3 segundos. En Apsara (22 de septiembre) Qwen4 apareció solo como hoja de ruta, sin fecha; Alibaba prometió Qwen4.5 y Qwen5 de 5 a 10 billones de parámetros.',
-    use: 'LiveTranslate interesa a quien organiza eventos o atención en varios idiomas; Omni-Flash, a quien arma agentes con voz y cámara.',
-    url: 'https://qwen.ai/research',
-  },
+  }
 ]
 
 const FORCES = [
@@ -781,7 +781,7 @@ export default function HerramientasAsiaticas() {
         <div className="relative max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-secondary/8 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-8 border border-secondary/10 shadow-sm">
             <Globe2 className="w-3.5 h-3.5" />
-            Capítulo especial · actualizado 30 sep 2026
+            Capítulo especial · actualizado 15 oct 2026
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-text leading-[1.05] tracking-tight mb-6">
             IA <span className="text-gradient-primary">asiática</span>
@@ -792,7 +792,7 @@ export default function HerramientasAsiaticas() {
             Mientras Occidente discute, Asia despliega. China convirtió la IA en una guerra de{' '}
             <span className="text-text font-semibold">precios y código abierto</span>; Corea, Japón e India construyen{' '}
             <span className="text-text font-semibold">modelos soberanos</span> en su propia lengua. Una guía práctica
-            —en español, verificada al 30 de septiembre de 2026— para saber qué existe, qué sirve y cómo usarlo desde Colombia.
+            —en español, verificada al 15 de octubre de 2026— para saber qué existe, qué sirve y cómo usarlo desde Colombia.
           </p>
 
           <div className="flex items-center justify-center gap-2 mb-10 text-sm">
@@ -881,7 +881,7 @@ export default function HerramientasAsiaticas() {
               <div className="max-w-3xl">
                 <div className="inline-flex items-center gap-2 bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-accent/10">
                   <Zap className="w-3 h-3" />
-                  Radar de lanzamientos · corte 30 sep 2026
+                  Radar de lanzamientos · corte 15 oct 2026
                 </div>
                 <h2 className="text-2xl md:text-4xl font-bold text-text tracking-tight mb-2">
                   Lo nuevo que sí cambia el mapa

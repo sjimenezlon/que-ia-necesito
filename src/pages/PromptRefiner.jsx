@@ -13,7 +13,7 @@ import ConstraintsStep from '../components/prompt-refiner/ConstraintsStep'
 import GeneratedPrompt from '../components/prompt-refiner/GeneratedPrompt'
 import { updates } from '../data/editorial'
 
-const UPDATED_AT = '8 de octubre de 2026'
+const UPDATED_AT = '15 de octubre de 2026'
 
 const DOMAINS = [
   { id: 'artes', label: 'Artes', icon: Palette, desc: 'Creación artística, visual, musical, literaria y escénica.', color: 'bg-red-50 text-red-600 border-red-200' },
@@ -245,19 +245,19 @@ const CLARITIES = [
 
 const MODEL_SNAPSHOT = [
   {
-    name: 'GPT-6 en ChatGPT',
-    house: 'OpenAI · 7–8 oct 2026',
-    note: 'GPT-6 Sol y Luna llegan al chat con elementos interactivos, con despliegue por etapas. Work y Codex mantienen sus modelos, incluido GPT-6.1 Sol. Comprueba disponibilidad en tu cuenta.',
+    name: 'Gemini 4 Argon',
+    house: 'Google · 13 oct 2026',
+    note: 'Ya en la app y en AI Mode para AI Pro y Ultra; por API cuesta USD 2/10 por millón de tokens hasta el 30 de noviembre y USD 4/20 desde diciembre. No está en el plan gratuito.',
   },
   {
     name: 'Claude Haiku 5.5',
     house: 'Anthropic · 7 oct 2026',
-    note: 'Ya disponible para tareas rápidas y repetitivas. Evalúa con tus propios casos si su calidad es suficiente antes de automatizar.',
+    note: 'El modelo rápido y barato de la familia 5.5. Desde el 7 de octubre, Max y Team incluyen créditos mensuales de API (no cubren Claude Code). Evalúa con tus propios casos antes de automatizar.',
   },
   {
-    name: 'Skills en Gemini',
-    house: 'Google · 30 sep, revisado 8 oct',
-    note: 'Instrucciones reutilizables que comienzan a reemplazar a los Gems. Una forma de conservar el contexto y los criterios de una tarea recurrente.',
+    name: 'Mistral Large 4',
+    house: 'Mistral · 6 oct 2026',
+    note: 'Vista previa por API: 1 billón de parámetros (52.000 millones activos) a USD 1,36/4,18 por millón de tokens. Mistral promete los pesos para finales de octubre.',
   },
 ]
 

@@ -121,7 +121,7 @@ export default function About() {
           </a>
         </p>
         <p className="text-text-lighter text-sm mt-2">
-          Edición del <time dateTime="2026-10-08">8 de octubre de 2026</time> ·{' '}
+          Edición del <time dateTime="2026-10-15">15 de octubre de 2026</time> ·{' '}
           <a
             href="https://sjimenezlon.co/"
             target="_blank"
