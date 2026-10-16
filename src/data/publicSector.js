@@ -1,7 +1,17 @@
-// Editorial review: 2026-09-05. Practice examples are fictional, not model output.
-export const REVIEW_DATE = '5 de septiembre de 2026'
+// Editorial review: 2026-10-15. Practice examples are fictional, not model output.
+export const REVIEW_DATE = '15 de octubre de 2026'
+export const REVIEW_DATE_ISO = '2026-10-15'
 
 export const PUBLIC_SOURCES = [
+  {
+    id: 'pl025',
+    kind: 'Proyecto de ley · en trámite',
+    date: 'Radicado 21 jul 2026 · ponencia sep 2026',
+    title: 'Cámara · Proyecto de Ley 025 de 2026',
+    description:
+      'Retoma la propuesta de MinCiencias y MinTIC que se hundió en junio sin debate. Tiene ponentes en la Comisión Sexta e informe para primer debate. A octubre de 2026 Colombia sigue sin una ley de IA: no lo cites como norma vigente.',
+    url: 'https://www.camara.gov.co/wp-content/uploads/2026/07/proyectos-ley/documentos/proyecto-36127/P.L.025-2026SC-INTELIGENCIA-ARTIFICIAL.pdf',
+  },
   {
     id: 'cce',
     kind: 'Concepto · contratación',
@@ -10,6 +20,24 @@ export const PUBLIC_SOURCES = [
     description:
       'Orienta el uso de IA en el ciclo contractual: revisión humana, información verificable y responsabilidad de quien suscribe. Es un concepto de la Agencia; no equivale a una nueva ley.',
     url: 'https://relatoria.colombiacompra.gov.co/conceptos/c-1015-de-2026/',
+  },
+  {
+    id: 'igd',
+    kind: 'Medición · gobierno digital',
+    date: 'Ago 2026 · resultados 2025',
+    title: 'MinTIC · Índice de Gobierno Digital 2025',
+    description:
+      'Promedio de 82,69 en el orden nacional (236 entidades) y de 59,94 en el territorial. La brecha entre ambos órdenes es el punto de partida para cualquier piloto de IA fuera de Bogotá y las capitales.',
+    url: 'https://www.mintic.gov.co/portal/715/w3-article-440318.html',
+  },
+  {
+    id: 'cce-diagnostico',
+    kind: 'Estudio · compra pública de IA',
+    date: '30 jun 2026',
+    title: 'CCE · Diagnóstico de la contratación de IA',
+    description:
+      'Estudio de la línea 6.1 del CONPES 4144: revisa compras con componentes de IA en SECOP, advierte el peso de la contratación directa ante la falta de lineamientos y propone recomendaciones para cualquier adquisición de IA.',
+    url: 'https://www.colombiacompra.gov.co/archivos/manual/diagnostico-sobre-la-contratacion-publica-de-soluciones-tecnologicas-que-incorporan-inteligencia-artificial',
   },
   {
     id: 'mspi',
@@ -55,6 +83,15 @@ export const PUBLIC_SOURCES = [
     description:
       'Fija criterios para IA en la actividad judicial: no sustituir el razonamiento del juez y atender transparencia, responsabilidad y privacidad. Su contexto es judicial; no declara automáticamente nulo cualquier acto administrativo que use IA.',
     url: 'https://www.corteconstitucional.gov.co/Relatoria/2024/T-323-24.htm',
+  },
+  {
+    id: 'rama',
+    kind: 'Acuerdo · Rama Judicial',
+    date: '16 dic 2024',
+    title: 'CSJ · Acuerdo PCSJA24-12243',
+    description:
+      'El Consejo Superior de la Judicatura adoptó lineamientos para el uso responsable y seguro de la IA por servidores judiciales, en desarrollo de la T-323. Aplica a la Rama Judicial; para entidades del Ejecutivo sirve como referencia, no como obligación.',
+    url: 'https://www.ramajudicial.gov.co/web/consejo-superior-de-la-judicatura/-/consejo-superior-de-la-judicatura-expidi%C3%B3-lineamientos-para-el-uso-responsable-y-seguro-de-la-ia-generativa-en-la-rama-judicial',
   },
   {
     id: 'peticiones',
@@ -139,7 +176,7 @@ export const PUBLIC_TASKS = [
     measure:
       'Vacíos sustentados que se corrigieron y tiempo total, incluida la revisión jurídica.',
     tools: ['claude', 'notebooklm'],
-    sources: ['cce', 'sic'],
+    sources: ['cce', 'cce-diagnostico', 'sic'],
   },
   {
     id: 'planeacion',
@@ -165,7 +202,7 @@ export const PUBLIC_TASKS = [
     measure:
       'Indicadores trazables, vacíos resueltos y tiempo de preparación del comité.',
     tools: ['chatgpt', 'copilot'],
-    sources: ['conpes', 'etica'],
+    sources: ['conpes', 'igd', 'etica'],
   },
   {
     id: 'control',
@@ -269,7 +306,7 @@ export const PUBLIC_TASKS = [
     measure:
       'Citas comprobadas, errores detectados y preguntas jurídicas delimitadas.',
     tools: ['notebooklm', 'claude'],
-    sources: ['t323', 'cce', 'etica'],
+    sources: ['t323', 'rama', 'cce', 'etica'],
   },
   {
     id: 'tecnologia',
@@ -390,12 +427,14 @@ export const DOCUMENTED_CASES = [
   {
     title: 'Bogotá Te Escucha',
     entity: 'Alcaldía de Bogotá',
-    status: 'Lanzamiento comunicado · 25 mar 2026',
-    body: 'El Distrito describe un asistente que consulta fuentes oficiales para orientar sobre trámites y servicios. Para actuaciones formales o respuestas jurídicas, dirige a la radicación de la petición.',
+    status: 'Lanzamiento 24 mar 2026 · balance 28 abr 2026',
+    body: 'El Distrito describe un asistente que consulta fuentes oficiales para orientar sobre trámites y servicios. Para actuaciones formales o respuestas jurídicas, dirige a la radicación de la petición. En su primer balance, la Secretaría General reportó más de 37.000 consultas atendidas, cerca del 47 % de las solicitudes del periodo, con un modelo que responde desde fuentes oficiales (RAG).',
     takeaway:
       'Aprendizaje: diseñar desde el inicio cuándo orientar y cuándo llevar al canal formal.',
     scope:
-      'La nota informa mejora continua y el alcance del servicio; no aporta una evaluación independiente de precisión o impacto.',
+      'Las cifras son autorreportadas por la Alcaldía en el espacio «IA Sin Filtro»; miden volumen y rapidez, no precisión de las respuestas. No hay evaluación independiente publicada.',
+    related:
+      'https://secretariageneral.gov.co/noticias/alcaldia-de-bogota-abre-el-debate-sobre-inteligencia-artificial-en-lo-publico-con-ia-sin-filtro',
     url: 'https://bogota.gov.co/mi-ciudad/gestion-publica/bogota-lanzo-canal-de-conversacion-y-atencion-ciudadania-con-ia',
   },
   {

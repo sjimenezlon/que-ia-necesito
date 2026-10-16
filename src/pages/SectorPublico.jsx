@@ -26,6 +26,7 @@ import { getToolById } from '../utils/recommender'
 import { SITE_URL } from '../utils/site'
 import {
   REVIEW_DATE,
+  REVIEW_DATE_ISO,
   PUBLIC_SOURCES,
   PUBLIC_TASKS,
   DATA_OPTIONS,
@@ -52,6 +53,15 @@ const AUDIENCES = [
   'Ciudadanía',
   'Comité directivo',
   'Equipo jurídico o de control',
+]
+
+const NEWS = [
+  { id: 'pl025', heading: 'Una ley de IA, otra vez en trámite' },
+  { id: 'cce', heading: 'IA en contratación pública' },
+  { id: 'igd', heading: 'La brecha digital entre órdenes' },
+  { id: 'cce-diagnostico', heading: 'Cómo compra IA el Estado' },
+  { id: 'mspi', heading: 'Seguridad durante todo el ciclo' },
+  { id: 'etica', heading: 'Una guía ética para entidades' },
 ]
 
 function SourceLink({ id }) {
@@ -422,7 +432,7 @@ export default function SectorPublico() {
               Santiago Jiménez Londoño
             </a>
             <span>
-              Revisión: <time dateTime="2026-09-05">{REVIEW_DATE}</time>
+              Revisión: <time dateTime={REVIEW_DATE_ISO}>{REVIEW_DATE}</time>
             </span>
           </div>
         </div>
@@ -688,13 +698,14 @@ export default function SectorPublico() {
         <section id="novedades" className="public-section">
           <SectionHeading
             number="02"
-            title="Tres novedades para poner al día a tu equipo"
+            title="Seis novedades para poner al día a tu equipo"
           >
-            Fuentes de 2026 que complementan el marco de protección de datos y
-            la política nacional de IA.
+            Lo que se movió en 2026, del más reciente al más antiguo. Colombia
+            sigue sin ley de IA: estas fuentes complementan el marco de
+            protección de datos y la política nacional.
           </SectionHeading>
           <div className="public-news-grid">
-            {['etica', 'mspi', 'cce'].map((id, index) => {
+            {NEWS.map(({ id, heading }) => {
               const source = PUBLIC_SOURCES.find((item) => item.id === id)
               return (
                 <article key={id} className="public-news-card">
@@ -702,15 +713,7 @@ export default function SectorPublico() {
                     <CalendarDays size={14} aria-hidden="true" />
                     {source.date}
                   </span>
-                  <h3>
-                    {
-                      [
-                        'Una guía ética para entidades',
-                        'Seguridad durante todo el ciclo',
-                        'IA en contratación pública',
-                      ][index]
-                    }
-                  </h3>
+                  <h3>{heading}</h3>
                   <p>{source.description}</p>
                   <SourceLink id={id} />
                 </article>
@@ -745,6 +748,17 @@ export default function SectorPublico() {
                   Leer el comunicado oficial
                   <ArrowUpRight size={14} aria-hidden="true" />
                 </a>
+                {item.related && (
+                  <a
+                    className="public-source-link"
+                    href={item.related}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ver el balance publicado
+                    <ArrowUpRight size={14} aria-hidden="true" />
+                  </a>
+                )}
               </article>
             ))}
           </div>
@@ -884,11 +898,12 @@ export default function SectorPublico() {
           <div className="public-editorial-note">
             <Sparkles size={18} aria-hidden="true" />
             <p>
-              Actualización editorial: nuevas referencias de 2026, ejemplos
-              ficticios editables y métricas para cada piloto. Se retiraron
-              cifras sin respaldo en la fuente enlazada y el reproductor
-              simulado. El laboratorio ahora explica qué puedes hacer y cómo
-              verificarlo.
+              Actualización del 15 de octubre de 2026: se agregan el Proyecto
+              de Ley 025 de 2026 (en trámite, no vigente), el diagnóstico de
+              Colombia Compra Eficiente sobre compras de IA, el Índice de
+              Gobierno Digital 2025 y el acuerdo de la Rama Judicial; Bogotá
+              Te Escucha suma su primer balance de uso. Todos los enlaces se
+              revisaron en esta fecha.
             </p>
           </div>
         </section>
