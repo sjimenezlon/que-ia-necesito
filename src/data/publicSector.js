@@ -105,6 +105,15 @@ export const PUBLIC_SOURCES = [
       'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=8426',
   },
   {
+    id: 'transparencia',
+    kind: 'Ley estatutaria · transparencia y acceso a la información',
+    date: '2014 · arts. 9, 18, 19, 21 y 26',
+    title: 'Ley 1712 de 2014',
+    description:
+      'Parte de la máxima publicidad: la información en poder de la entidad es pública salvo excepción legal. Antes de pegar un documento en una herramienta de IA, distingue lo público de lo clasificado (art. 18) y lo reservado (art. 19); si respondes una solicitud, entrega una versión pública que solo tache lo indispensable (art. 21). La IA puede ayudar a redactar, pero negar información exige motivación escrita.',
+    url: 'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=56882',
+  },
+  {
     id: 'datos',
     kind: 'Ley estatutaria · protección de datos',
     date: '2012',
@@ -150,7 +159,7 @@ export const PUBLIC_TASKS = [
     measure:
       'Minutos por borrador, correcciones del revisor y solicitudes respondidas de fondo.',
     tools: ['chatgpt', 'claude'],
-    sources: ['peticiones', 'datos'],
+    sources: ['peticiones', 'transparencia', 'datos'],
   },
   {
     id: 'secop',
@@ -254,7 +263,7 @@ export const PUBLIC_TASKS = [
     measure:
       'Personas que identifican correctamente el siguiente paso y dudas recurrentes.',
     tools: ['chatgpt', 'claude'],
-    sources: ['accesibilidad', 'peticiones'],
+    sources: ['accesibilidad', 'peticiones', 'transparencia'],
   },
   {
     id: 'directivo',
@@ -331,7 +340,7 @@ export const PUBLIC_TASKS = [
     measure:
       'Respuestas sustentadas, errores críticos, escalamiento correcto y accesibilidad.',
     tools: ['notebooklm', 'copilot'],
-    sources: ['mspi', 'sic', 'accesibilidad'],
+    sources: ['mspi', 'sic', 'transparencia', 'accesibilidad'],
   },
 ]
 
