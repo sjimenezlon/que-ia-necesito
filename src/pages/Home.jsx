@@ -12,6 +12,7 @@ import {
   Heart,
   Landmark,
   Microscope,
+  Backpack,
   Search,
 } from 'lucide-react'
 import tools from '../data/tools.json'
@@ -182,6 +183,35 @@ export default function Home({
             </span>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Link
+              to="/para-estudiantes"
+              className="group relative overflow-hidden md:col-span-2 lg:col-span-3 bg-surface border border-primary/20 rounded-2xl p-6 md:p-7 no-underline hover:shadow-lg hover:-translate-y-0.5 hover:border-primary/40 transition-all"
+            >
+              <div className="absolute -top-16 -right-10 w-56 h-56 bg-primary/10 rounded-full blur-3xl" />
+              <div className="absolute -bottom-20 left-1/3 w-56 h-56 bg-secondary/8 rounded-full blur-3xl" />
+              <div className="relative grid md:grid-cols-[auto_minmax(0,1fr)_auto] gap-5 items-center">
+                <div className="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center shrink-0 shadow-md">
+                  <Backpack className="w-7 h-7" />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-[10px] font-bold text-primary uppercase tracking-[0.13em] mb-1">
+                    Nuevo · Capítulo especial para estudiantes
+                  </div>
+                  <h3 className="font-display font-bold text-text text-2xl tracking-tight mb-2">
+                    La IA no vino a reemplazarte. Llegó a retarte.
+                  </h3>
+                  <p className="text-sm text-text-light leading-relaxed max-w-3xl">
+                    Para colegio y primeros semestres: cómo funciona la IA por dentro, el semáforo de
+                    cuándo usarla, prompts en modo entrenador, cómo declarar su uso y qué hace tu feed
+                    con tu atención.
+                  </p>
+                </div>
+                <span className="inline-flex items-center gap-1.5 text-primary font-semibold text-sm whitespace-nowrap">
+                  Entrar al capítulo{' '}
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </Link>
             <Link
               to="/investigadores"
               className="group relative overflow-hidden bg-surface border border-border rounded-2xl p-6 no-underline hover:shadow-lg hover:-translate-y-0.5 hover:border-warm/35 transition-all"

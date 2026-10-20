@@ -10,6 +10,7 @@ const navLinks = [
   { to: '/pymes', label: 'PyMEs' },
   { to: '/explorar', label: 'Explorar' },
   { to: '/ejemplos', label: 'Ejemplos' },
+  { to: '/para-estudiantes', label: 'Estudiantes' },
   { to: '/docentes', label: 'Docentes' },
   { to: '/investigadores', label: 'Investigadores' },
   { to: '/sector-publico', label: 'Sector Público' },

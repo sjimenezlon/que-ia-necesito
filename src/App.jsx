@@ -20,6 +20,7 @@ const Pymes = lazy(() => import('./pages/Pymes'))
 const Aprender = lazy(() => import('./pages/Aprender'))
 const Docentes = lazy(() => import('./pages/Docentes'))
 const Investigadores = lazy(() => import('./pages/Investigadores'))
+const Estudiantes = lazy(() => import('./pages/Estudiantes'))
 const HerramientasAsiaticas = lazy(() => import('./pages/HerramientasAsiaticas'))
 
 function ChapterFallback() {
@@ -114,6 +115,14 @@ export default function App() {
             element={
               <Suspense fallback={<ChapterFallback />}>
                 <Docentes />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/para-estudiantes"
+            element={
+              <Suspense fallback={<ChapterFallback />}>
+                <Estudiantes />
               </Suspense>
             }
           />
