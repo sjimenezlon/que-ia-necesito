@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Check, Copy, ExternalLink, Phone, Printer, RotateCcw } from 'lucide-react'
+import { ArrowRight, Check, Copy, ExternalLink, Phone, Printer, RotateCcw, ShieldCheck } from 'lucide-react'
 import { getToolById } from '../../utils/recommender'
 import { LIGHTS } from './lights'
+import { AGE_TABLE, AGES_VERIFIED } from '../../data/students-ages'
 
-export function TryLinks({ text }) {
+// minor: la página la leen menores de edad. Claude exige 18 años, así que no se ofrece.
+export function TryLinks({ text, minor = false }) {
   const targets = [
-    { label: 'Probar en Claude', url: `https://claude.ai/new?q=${encodeURIComponent(text)}` },
+    !minor && { label: 'Probar en Claude', url: `https://claude.ai/new?q=${encodeURIComponent(text)}` },
     { label: 'Probar en ChatGPT', url: `https://chatgpt.com/?q=${encodeURIComponent(text)}` },
-  ]
+  ].filter(Boolean)
   return (
     <div className="flex flex-wrap gap-2">
       {targets.map((target) => (
@@ -48,11 +50,11 @@ export function CopyChip({ text, label = 'Copiar' }) {
   )
 }
 
-export function PromptActions({ text }) {
+export function PromptActions({ text, minor = false }) {
   return (
     <div className="flex flex-wrap items-center gap-2 mt-4">
       <CopyChip text={text} />
-      <TryLinks text={text} />
+      <TryLinks text={text} minor={minor} />
     </div>
   )
 }
@@ -138,7 +140,7 @@ export function ToolChips({ ids }) {
   )
 }
 
-export function PromptGrid({ items, color = 'text-warm' }) {
+export function PromptGrid({ items, color = 'text-warm', minor = false }) {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
       {items.map((item) => (
@@ -146,7 +148,7 @@ export function PromptGrid({ items, color = 'text-warm' }) {
           <h3 className={`font-display font-bold mb-1 ${color}`}>{item.title}</h3>
           {(item.why || item.body) && <p className="text-xs text-text-light mb-3">{item.why || item.body}</p>}
           <p className="font-mono text-[13px] text-text-light leading-relaxed flex-1">{item.text}</p>
-          <PromptActions text={item.text} />
+          <PromptActions text={item.text} minor={minor} />
         </article>
       ))}
     </div>
@@ -330,6 +332,46 @@ export function HelpLines({ items }) {
           </span>
         </a>
       ))}
+    </div>
+  )
+}
+
+const AGE_STYLES = {
+  ok: 'bg-accent/10 text-accent',
+  warn: 'bg-warm/10 text-warm',
+  adult: 'bg-secondary/10 text-secondary',
+}
+
+export function AgeTable({ title = '¿Desde qué edad se puede usar cada herramienta?' }) {
+  return (
+    <div className="bg-surface border border-border rounded-2xl shadow-sm overflow-hidden">
+      <div className="p-5 md:p-6 border-b border-border flex items-start gap-3">
+        <ShieldCheck className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+        <div>
+          <h3 className="font-display font-bold text-lg text-text">{title}</h3>
+          <p className="text-sm text-text-light mt-1">
+            Según los términos que publica cada empresa, revisados el {AGES_VERIFIED}. Cambian con frecuencia: abre la
+            fuente antes de crear una cuenta. Si tu país exige una edad mayor, manda la de tu país.
+          </p>
+        </div>
+      </div>
+      <ul className="divide-y divide-border">
+        {AGE_TABLE.map((row) => (
+          <li key={row.tool} className="grid grid-cols-[minmax(0,1fr)_auto] sm:grid-cols-[200px_110px_minmax(0,1fr)_auto] gap-x-4 gap-y-1 items-center px-5 md:px-6 py-3">
+            <span className="font-semibold text-sm text-text">{row.tool}</span>
+            <span className={`justify-self-end sm:justify-self-start text-xs font-bold px-2.5 py-1 rounded-full whitespace-nowrap ${AGE_STYLES[row.level]}`}>{row.age}</span>
+            <span className="col-span-2 sm:col-span-1 text-sm text-text-light">{row.note}</span>
+            <a
+              href={row.source}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1 text-xs font-semibold text-text-lighter no-underline hover:text-primary"
+            >
+              Fuente <ExternalLink className="w-3 h-3" />
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

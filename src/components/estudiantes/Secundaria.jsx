@@ -16,6 +16,7 @@ import {
   Wrench,
 } from 'lucide-react'
 import { getToolById } from '../../utils/recommender'
+import { TOOL_AGE } from '../../data/students-ages'
 import {
   AGREEMENT_SECUNDARIA,
   BOOK_QUOTES,
@@ -42,7 +43,7 @@ import {
   TEEN_PARENT_SIGNS,
   TOOL_GROUPS,
 } from '../../data/students'
-import { Agreement, ChapterNav, CopyChip, HelpLines, PromptGrid, Section, SectionHead, Semaphore, TryLinks } from './shared'
+import { AgeTable, Agreement, ChapterNav, CopyChip, HelpLines, PromptGrid, Section, SectionHead, Semaphore, TryLinks } from './shared'
 
 const PRICING = { gratis: 'Gratis', freemium: 'Gratis con límites', pago: 'De pago' }
 
@@ -191,7 +192,7 @@ export default function Secundaria() {
             <p className="text-xs text-text-light mt-3">Cambia lo que está entre corchetes por tu caso.</p>
             <div className="flex flex-wrap items-center gap-2 mt-4">
               <CopyChip text={route.prompt} />
-              <TryLinks text={route.prompt} />
+              <TryLinks minor text={route.prompt} />
             </div>
           </div>
         </div>
@@ -348,7 +349,7 @@ export default function Secundaria() {
               {builtPrompt && (
                 <div className="flex flex-wrap items-center gap-2 mt-4">
                   <CopyChip text={builtPrompt} />
-                  <TryLinks text={builtPrompt} />
+                  <TryLinks minor text={builtPrompt} />
                 </div>
               )}
             </div>
@@ -375,7 +376,7 @@ export default function Secundaria() {
               <p className="font-mono text-[13px] text-text-light leading-relaxed flex-1">{item.text}</p>
               <div className="flex flex-wrap items-center gap-2 mt-4">
                 <CopyChip text={item.text} />
-                <TryLinks text={item.text} />
+                <TryLinks minor text={item.text} />
               </div>
             </article>
           ))}
@@ -385,8 +386,8 @@ export default function Secundaria() {
       <section id="herramientas" className="bg-surface/60 border-y border-border scroll-mt-32" aria-labelledby="herramientas-title">
         <div className="max-w-6xl mx-auto px-4 py-16">
           <SectionHead id="herramientas" kicker="Caja de herramientas" title="Para cada tarea, una herramienta">
-            Muchas tienen versión gratuita. Antes de crear una cuenta, revisa en sus términos la edad mínima y si
-            necesitas permiso de tus papás o acudientes.
+            Solo te mostramos herramientas que permiten usuarios de tu edad. Casi todas piden 13 años y, si eres menor de
+            18, permiso de tu mamá, papá o acudiente. Créalas con ellos.
           </SectionHead>
           <div className="flex flex-wrap gap-2 mb-6">
             {TOOL_GROUPS.map((item) => (
@@ -410,7 +411,11 @@ export default function Secundaria() {
                 <Link key={id} to={`/herramienta/${id}`} className="starter-card">
                   <span className="flex items-center justify-between text-xs text-text-light">
                     <span>{PRICING[found.pricing] || found.pricing}</span>
-                    <Wrench className="w-3.5 h-3.5" />
+                    {TOOL_AGE[id] ? (
+                      <span className="font-semibold text-accent bg-accent/10 px-2 py-0.5 rounded-full">{TOOL_AGE[id]}</span>
+                    ) : (
+                      <Wrench className="w-3.5 h-3.5" />
+                    )}
                   </span>
                   <h3 className="font-semibold text-lg mt-5 mb-2">{found.name}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{found.shortDescription}</p>
@@ -556,7 +561,7 @@ export default function Secundaria() {
         {challenge !== null && (
           <div className="flex flex-wrap items-center gap-2 mt-4">
             <CopyChip text={CHALLENGES[challenge].prompt} />
-            <TryLinks text={CHALLENGES[challenge].prompt} />
+            <TryLinks minor text={CHALLENGES[challenge].prompt} />
           </div>
         )}
 
@@ -618,6 +623,10 @@ export default function Secundaria() {
             </ul>
             <p className="text-xs text-text-light mt-4">Ninguna prueba nada por sí sola. Son razones para preguntar, no para acusar.</p>
           </div>
+        </div>
+
+        <div className="mt-12">
+          <AgeTable title="Edades mínimas de las herramientas que más usan" />
         </div>
 
         <h3 className="font-display font-bold text-2xl text-text mt-12 mb-2 flex items-center gap-2">

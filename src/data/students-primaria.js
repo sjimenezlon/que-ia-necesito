@@ -115,7 +115,7 @@ export const UNPLUGGED = [
 export const PARENT_KEYS = [
   {
     title: 'Revisa la edad mínima',
-    body: 'La mayoría de asistentes de IA generales están pensados para mayores de 13 años y piden permiso de los padres para menores de edad. Algunos ofrecen cuentas supervisadas para niños. Lee los términos antes de crear una cuenta.',
+    body: 'ChatGPT, Gemini y Perplexity piden 13 años o más, y permiso de la familia para menores de 18; Claude exige 18. Gemini solo admite menores de 13 si los padres lo activan en Family Link. Abajo está la tabla con las fuentes.',
   },
   {
     title: 'Acompaña más de lo que prohíbes',
@@ -200,6 +200,8 @@ export const AGREEMENT_PRIMARIA = [
 ]
 
 export const HELP_LINES = [
-  { name: 'Te Protejo', body: 'Canal para reportar contenido de abuso sexual infantil, ciberacoso y otras situaciones que afectan a niños y adolescentes en internet.', url: 'https://www.teprotejo.org/' },
-  { name: 'Línea 141 del ICBF', body: 'Línea gratuita y nacional para reportar situaciones que ponen en riesgo a niñas, niños y adolescentes.', url: 'https://www.icbf.gov.co/' },
+  { name: 'Línea 141 del ICBF', body: 'Gratuita, nacional y las 24 horas. Para reportar maltrato, violencia sexual o acoso escolar. Pueden llamar niños y adultos.', url: 'https://www.icbf.gov.co/noticias/linea-141' },
+  { name: 'Te Protejo', body: 'Reporte confidencial de situaciones de violencia sexual en entornos digitales contra menores de 18 años.', url: 'https://www.teprotejo.org/' },
+  { name: 'Línea 192, opción 4', body: 'Línea nacional de salud mental del Ministerio de Salud. Gratuita y las 24 horas.', url: 'https://www.minsalud.gov.co/' },
+  { name: 'Línea 123', body: 'Emergencias. Si un niño corre peligro inmediato, llama primero aquí.', url: 'https://www.policia.gov.co/' },
 ]

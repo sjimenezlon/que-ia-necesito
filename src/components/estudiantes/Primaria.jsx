@@ -17,7 +17,7 @@ import {
   STORY_OPTIONS,
   UNPLUGGED,
 } from '../../data/students-primaria'
-import { Agreement, ChapterNav, HelpLines, PromptActions, PromptGrid, Section, SectionHead } from './shared'
+import { AgeTable, Agreement, ChapterNav, HelpLines, PromptActions, PromptGrid, Section, SectionHead } from './shared'
 
 const SHARE_LABELS = {
   si: { label: 'Sí', className: 'bg-accent text-white' },
@@ -341,6 +341,10 @@ export default function Primaria() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12">
+          <AgeTable />
         </div>
 
         <div className="grid lg:grid-cols-2 gap-4 mt-12">

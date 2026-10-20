@@ -121,7 +121,8 @@ export const STUDY_SYSTEM = [
 export const BRAIN = [
   {
     title: 'Descarga cognitiva',
-    body: 'Cuando la IA piensa por ti, tu cerebro deja de practicar. Un estudio preliminar del MIT Media Lab (2025) encontró que quienes escribían ensayos con un asistente desde el inicio recordaban menos lo que habían escrito y lo sentían menos suyo.',
+    body: 'Cuando la IA piensa por ti, tu cerebro deja de practicar. En un estudio del MIT Media Lab (2025, aún sin revisión de pares, con 54 estudiantes), quienes escribieron ensayos con ChatGPT mostraron menor actividad cerebral, les costó citar lo que acababan de escribir y lo sintieron menos suyo. Es una señal, no una sentencia: sus autores aclaran que no midieron daño cerebral.',
+    source: 'https://arxiv.org/abs/2506.08872',
   },
   {
     title: 'La regla: primero tú',

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Brain, Briefcase, Check, FileText, FlaskConical, Lock, Rocket, Scale } from 'lucide-react'
+import { ArrowRight, Brain, Briefcase, Check, FileText, FlaskConical, Lock, Rocket, Scale, ShieldCheck } from 'lucide-react'
 import {
   BRAIN,
   CAREERS,
@@ -15,14 +15,14 @@ import {
   UNI_SEMAPHORE,
   UNI_USES,
 } from '../../data/students-universidad'
-import { ChapterNav, CopyChip, PromptActions, PromptGrid, Section, SectionHead, Semaphore, ToolChips } from './shared'
+import { AgeTable, ChapterNav, CopyChip, PromptActions, PromptGrid, Section, SectionHead, Semaphore, ToolChips } from './shared'
 
 const TOOL_OWNERS = {
-  ChatGPT: { company: 'OpenAI', url: 'https://chatgpt.com' },
-  Claude: { company: 'Anthropic', url: 'https://claude.ai' },
-  Gemini: { company: 'Google', url: 'https://gemini.google.com' },
-  Copilot: { company: 'Microsoft', url: 'https://copilot.microsoft.com' },
-  Perplexity: { company: 'Perplexity AI', url: 'https://www.perplexity.ai' },
+  ChatGPT: { company: 'OpenAI', url: 'https://chatgpt.com/' },
+  Claude: { company: 'Anthropic', url: 'https://claude.ai/' },
+  Gemini: { company: 'Google', url: 'https://gemini.google.com/' },
+  Copilot: { company: 'Microsoft', url: 'https://copilot.microsoft.com/' },
+  Perplexity: { company: 'Perplexity AI', url: 'https://www.perplexity.ai/' },
 }
 
 const MONTHS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
@@ -32,10 +32,15 @@ function CitationBuilder() {
   const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10))
   const [uses, setUses] = useState(['explicar', 'estilo'])
   const [course, setCourse] = useState('')
+  const [chatTitle, setChatTitle] = useState('')
+  const [chatUrl, setChatUrl] = useState('')
   const owner = TOOL_OWNERS[tool]
   const [y, m, d] = date.split('-').map(Number)
   const dateText = y ? `${d} de ${MONTHS[m - 1]} de ${y}` : '[fecha]'
-  const reference = `${owner.company}. (${y || 'año'}). ${tool} (versión del ${dateText}) [Modelo de lenguaje de gran tamaño]. ${owner.url}`
+  // Plantillas de la guía de APA de septiembre de 2025: la herramienta en general, o una conversación compartida.
+  const reference = chatTitle.trim()
+    ? `${owner.company}. (${y || 'año'}, ${d} de ${MONTHS[m - 1]}). ${chatTitle.trim()} [Chat de IA generativa]. ${tool}. ${chatUrl.trim() || '[enlace para compartir la conversación]'}`
+    : `${owner.company}. (${y || 'año'}). ${tool} [Modelo de lenguaje de gran tamaño]. ${owner.url}`
   const statement = `Declaración de uso de IA${course ? ` · ${course}` : ''}: En este trabajo usé ${tool} (${owner.company}) el ${dateText} para ${
     UNI_USES.filter((item) => uses.includes(item.id))
       .map((item) => item.label.toLowerCase())
@@ -74,6 +79,16 @@ function CitationBuilder() {
             <input className="field-input" value={course} onChange={(e) => setCourse(e.target.value)} placeholder="Ej.: Microeconomía · Taller 3" />
           </label>
         </div>
+        <div className="grid sm:grid-cols-2 gap-3">
+          <label className="block">
+            <span className="field-label">Título de la conversación (opcional)</span>
+            <input className="field-input" value={chatTitle} onChange={(e) => setChatTitle(e.target.value)} placeholder="Ej.: Explicación de elasticidad" />
+          </label>
+          <label className="block">
+            <span className="field-label">Enlace para compartir (opcional)</span>
+            <input className="field-input" value={chatUrl} onChange={(e) => setChatUrl(e.target.value)} placeholder="https://..." />
+          </label>
+        </div>
         <fieldset>
           <legend className="field-label">¿Para qué la usaste?</legend>
           <div className="flex flex-wrap gap-2 mt-1">
@@ -96,7 +111,9 @@ function CitationBuilder() {
       </div>
       <div className="space-y-4">
         <div className="bg-primary/[0.04] border border-primary/15 rounded-2xl p-5">
-          <span className="text-[11px] font-bold uppercase tracking-[0.13em] text-primary">Referencia en formato APA 7</span>
+          <span className="text-[11px] font-bold uppercase tracking-[0.13em] text-primary">
+            Referencia APA 7 · {chatTitle.trim() ? 'conversación compartida' : 'herramienta'}
+          </span>
           <p className="text-sm text-text leading-relaxed mt-2 font-mono">{reference}</p>
           <div className="mt-3">
             <CopyChip text={reference} label="Copiar referencia" />
@@ -110,7 +127,11 @@ function CitationBuilder() {
           </div>
         </div>
         <p className="text-xs text-text-light">
-          Formato basado en la guía de APA para citar modelos de IA. Si tu curso usa otra norma (Chicago, IEEE, Vancouver) o la universidad tiene un formato propio, ese manda.
+          Basado en la{' '}
+          <a href="https://apastyle.apa.org/blog/cite-generative-ai-references" target="_blank" rel="noopener noreferrer" className="text-primary">
+            guía de APA para citar IA generativa
+          </a>{' '}
+          (septiembre de 2025). El nombre de la herramienta y el título del chat van en cursiva. Si compartes la conversación, cita el chat; si no, la herramienta. Si tu curso usa otra norma o tu universidad tiene un formato propio, ese manda.
         </p>
       </div>
     </div>
@@ -124,6 +145,18 @@ export default function Universidad() {
   return (
     <>
       <ChapterNav items={UNI_INDEX} />
+
+      <div className="max-w-6xl mx-auto px-4 pt-10">
+        <div className="flex items-start gap-3 bg-warm/[0.06] border border-warm/25 rounded-2xl p-4 text-sm">
+          <ShieldCheck className="w-5 h-5 text-warm shrink-0 mt-0.5" />
+          <p className="text-text">
+            <b>¿Entraste a la universidad con 16 o 17 años?</b>{' '}
+            <span className="text-text-light">
+              Claude exige 18. ChatGPT, Gemini y Perplexity permiten desde 13, con permiso de tu familia mientras seas menor de edad. Mira la tabla de edades más abajo.
+            </span>
+          </p>
+        </div>
+      </div>
 
       <Section id="u-carrera">
         <SectionHead id="u-carrera" kicker="Tu carrera" title="¿Qué cambia en tu profesión y qué sigue siendo tuyo?">
@@ -184,6 +217,11 @@ export default function Universidad() {
               <Brain className={`w-5 h-5 ${i === 1 ? 'text-bg' : 'text-secondary'}`} />
               <h3 className="font-display font-bold text-xl mt-3">{item.title}</h3>
               <p className={`leading-relaxed mt-2 text-sm ${i === 1 ? 'text-bg/80' : 'text-text-light'}`}>{item.body}</p>
+              {item.source && (
+                <a href={item.source} target="_blank" rel="noopener noreferrer" className="inline-block text-xs font-semibold text-secondary mt-3">
+                  Leer el estudio
+                </a>
+              )}
             </div>
           ))}
         </div>
@@ -242,6 +280,10 @@ export default function Universidad() {
           <ArrowRight className="w-5 h-5 text-warm group-hover:translate-x-1 transition-transform shrink-0" />
         </Link>
       </Section>
+
+      <div className="max-w-6xl mx-auto px-4 pb-4">
+        <AgeTable />
+      </div>
 
       <Section id="u-datos">
         <SectionHead id="u-datos" kicker="Datos ajenos" title="Lo que no es tuyo no se sube" color="text-secondary">

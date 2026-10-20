@@ -27,7 +27,7 @@ export const ROUTES = [
     ],
     prompt:
       'Sé mi entrenador para el examen de [materia] sobre [tema]. Hazme una pregunta a la vez, espera mi respuesta y después explícame por qué está bien o mal. No me des la respuesta antes de que yo lo intente.',
-    tools: ['khanmigo', 'quizlet', 'notebooklm', 'gemini'],
+    tools: ['quizlet', 'notebooklm', 'gemini', 'chatgpt'],
   },
   {
     id: 'escribir',
@@ -41,7 +41,7 @@ export const ROUTES = [
     ],
     prompt:
       'Esta es la idea central de mi ensayo: [tu idea]. No escribas el ensayo. Hazme 3 preguntas difíciles que un profesor me haría y dame los 2 mejores argumentos en contra para que yo los responda.',
-    tools: ['claude', 'chatgpt', 'grammarly', 'deepl'],
+    tools: ['chatgpt', 'gemini', 'grammarly', 'deepl'],
   },
   {
     id: 'entender',
@@ -55,7 +55,7 @@ export const ROUTES = [
     ],
     prompt:
       'No entiendo [tema], sobre todo [la parte que te enreda]. Explícamelo con un ejemplo de fútbol, música o cocina. Después pídeme que te lo explique con mis palabras y dime qué me faltó.',
-    tools: ['khanmigo', 'wolfram', 'perplexity', 'notebooklm'],
+    tools: ['notebooklm', 'wolfram', 'perplexity', 'gemini'],
   },
   {
     id: 'crear',
@@ -69,7 +69,7 @@ export const ROUTES = [
     ],
     prompt:
       'Quiero crear [una canción, un afiche, un video] sobre [tema]. Antes de proponer nada, hazme 5 preguntas sobre lo que quiero decir, para quién es y qué me gustaría que sintieran.',
-    tools: ['canva', 'suno', 'gamma', 'chatgpt'],
+    tools: ['canva', 'suno', 'chatgpt', 'gemini'],
   },
   {
     id: 'programar',
@@ -83,7 +83,7 @@ export const ROUTES = [
     ],
     prompt:
       'Quiero hacer un juego de adivinar números en el navegador. Guíame paso a paso, dame una parte a la vez y no avances hasta que yo te explique qué hace.',
-    tools: ['replit-ai', 'claude', 'chatgpt', 'github-copilot'],
+    tools: ['chatgpt', 'gemini', 'github-copilot', 'replit-ai'],
   },
   {
     id: 'carrera',
@@ -97,7 +97,7 @@ export const ROUTES = [
     ],
     prompt:
       'Entrevístame como orientador vocacional. Una pregunta a la vez. Al final no me digas qué estudiar: muéstrame qué patrones ves en mis respuestas y qué preguntas debería hacerle a alguien que trabaje en eso.',
-    tools: ['claude', 'chatgpt', 'perplexity', 'gemini'],
+    tools: ['chatgpt', 'gemini', 'perplexity'],
   },
 ]
 
@@ -138,7 +138,7 @@ export const SEMAPHORE = [
   { text: 'Preguntarle qué remedio tomar para un dolor fuerte', answer: 'y', why: 'Orientación general sí; la decisión es con un médico.' },
   { text: 'Pedirle preguntas tipo Saber 11 y que te corrija', answer: 'g', why: 'Modo entrenador: ella pregunta, tú respondes.' },
   { text: 'Subir la foto del salón para que la «mejore» y publicarla', answer: 'r', why: 'Sin permiso de quienes salen, no. Sus caras no son tuyas.' },
-  { text: 'Contarle lo que te pasa cuando estás muy mal, en vez de a alguien', answer: 'y', why: 'Puede sonar comprensiva, pero no reemplaza a una persona de confianza ni a orientación escolar.' },
+  { text: 'Contarle lo que te pasa cuando estás muy mal, en vez de a alguien', answer: 'y', why: 'Puede sonar comprensiva, pero no reemplaza a una persona. Habla con alguien de confianza u orientación escolar, o llama gratis a la Línea 192, opción 4, o a la 141 del ICBF.' },
 ]
 
 export const PROMPT_PIECES = [
@@ -159,9 +159,9 @@ export const COACH_PROMPTS = [
 ]
 
 export const TOOL_GROUPS = [
-  { id: 'estudiar', label: 'Estudiar y practicar', ids: ['khanmigo', 'quizlet', 'notebooklm', 'wolfram'] },
-  { id: 'conversar', label: 'Asistentes para conversar', ids: ['chatgpt', 'gemini', 'claude', 'perplexity'] },
-  { id: 'crear', label: 'Crear y presentar', ids: ['canva', 'gamma', 'suno'] },
+  { id: 'estudiar', label: 'Estudiar y practicar', ids: ['notebooklm', 'quizlet', 'wolfram', 'gemini'] },
+  { id: 'conversar', label: 'Asistentes para conversar', ids: ['chatgpt', 'gemini', 'perplexity'] },
+  { id: 'crear', label: 'Crear y presentar', ids: ['canva', 'suno', 'chatgpt'] },
   { id: 'idiomas', label: 'Idiomas y escritura', ids: ['duolingo-max', 'deepl', 'grammarly'] },
   { id: 'programar', label: 'Programar', ids: ['replit-ai', 'github-copilot'] },
 ]
@@ -211,7 +211,7 @@ export const TEEN_PARENT_CONTEXT = [
   },
   {
     title: 'Los «amigos virtuales»',
-    body: 'Hay apps de IA diseñadas para conversar como pareja o mejor amigo, siempre disponibles y siempre de acuerdo. Para alguien que se siente solo pueden volverse un refugio que aísla más.',
+    body: 'Hay apps de IA diseñadas para conversar como pareja o mejor amigo, siempre disponibles y siempre de acuerdo. Para alguien que se siente solo pueden volverse un refugio que aísla más. Character.AI cerró en noviembre de 2025 los chats abiertos para menores de 18.',
   },
   {
     title: 'Montajes y desnudos falsos',
@@ -242,16 +242,17 @@ export const DEEPFAKE_PROTOCOL = [
   { title: 'No lo compartas', body: 'Ni para avisar ni para preguntar. Cada reenvío multiplica el daño.' },
   { title: 'Guarda evidencia', body: 'Capturas con fecha, enlaces y nombres de cuentas. Sin reenviar la imagen.' },
   { title: 'Reporta en la plataforma', body: 'Todas las redes tienen opción para denunciar imágenes íntimas o falsas.' },
-  { title: 'Avisa al colegio', body: 'El colegio debe activar su ruta de atención de convivencia escolar (Ley 1620 de 2013).' },
-  { title: 'Denuncia', body: 'En Te Protejo, en el CAI Virtual de la Policía o ante la Fiscalía.' },
+  { title: 'Avisa al colegio', body: 'El colegio debe activar la Ruta de Atención Integral para la Convivencia Escolar (Ley 1620 de 2013, que incluye el ciberacoso).' },
+  { title: 'Reporta y denuncia', body: 'Reporta en Te Protejo y denuncia en ADenunciar (Policía y Fiscalía). Si hay peligro inmediato, llama al 123.' },
   { title: 'Acompaña', body: 'Lo primero es que tu hijo o hija sepa que no es su culpa. Busca apoyo psicológico si lo necesita.' },
 ]
 
 export const TEEN_HELP_LINES = [
-  { name: 'Te Protejo', body: 'Reporte de contenido sexual con menores de edad, ciberacoso y otras violencias en internet.', url: 'https://www.teprotejo.org/' },
-  { name: 'CAI Virtual · Policía Nacional', body: 'Denuncia de delitos informáticos en línea.', url: 'https://caivirtual.policia.gov.co/' },
-  { name: 'Línea 141 del ICBF', body: 'Línea gratuita para reportar situaciones de riesgo de niñas, niños y adolescentes.', url: 'https://www.icbf.gov.co/' },
-  { name: 'Línea 192, opción 4', body: 'Orientación en salud mental del Ministerio de Salud.', url: 'https://www.minsalud.gov.co/' },
+  { name: 'Te Protejo', body: 'Reporte confidencial de situaciones de violencia sexual en entornos digitales contra menores de 18 años.', url: 'https://www.teprotejo.org/' },
+  { name: 'ADenunciar · Policía y Fiscalía', body: 'Denuncia virtual, también de material de explotación sexual infantil y delitos informáticos.', url: 'https://adenunciar.policia.gov.co/Adenunciar/Login.aspx' },
+  { name: 'Línea 141 del ICBF', body: 'Gratuita, nacional y las 24 horas. Para reportar maltrato, violencia sexual o acoso escolar. Pueden llamar niños y adultos.', url: 'https://www.icbf.gov.co/noticias/linea-141' },
+  { name: 'Línea 192, opción 4', body: 'Línea nacional de salud mental del Ministerio de Salud. Gratuita, las 24 horas, desde cualquier operador.', url: 'https://www.minsalud.gov.co/' },
+  { name: 'Línea 123', body: 'Emergencias. Si alguien corre peligro inmediato, llama primero aquí.', url: 'https://www.policia.gov.co/' },
 ]
 
 export const TEEN_PARENT_PROMPTS = [
