@@ -15,7 +15,7 @@ import {
   UNI_SEMAPHORE,
   UNI_USES,
 } from '../../data/students-universidad'
-import { AgeTable, ChapterNav, CopyChip, PromptActions, PromptGrid, Section, SectionHead, Semaphore, ToolChips } from './shared'
+import { AgeTable, ChapterNav, ClaudePick, CopyChip, PromptActions, PromptGrid, Section, SectionHead, Semaphore, ToolChips } from './shared'
 
 const TOOL_OWNERS = {
   ChatGPT: { company: 'OpenAI', url: 'https://chatgpt.com/' },
@@ -28,7 +28,7 @@ const TOOL_OWNERS = {
 const MONTHS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
 
 function CitationBuilder() {
-  const [tool, setTool] = useState('ChatGPT')
+  const [tool, setTool] = useState('Claude')
   const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10))
   const [uses, setUses] = useState(['explicar', 'estilo'])
   const [course, setCourse] = useState('')
@@ -152,10 +152,14 @@ export default function Universidad() {
           <p className="text-text">
             <b>¿Entraste a la universidad con 16 o 17 años?</b>{' '}
             <span className="text-text-light">
-              Claude exige 18. ChatGPT, Gemini y Perplexity permiten desde 13, con permiso de tu familia mientras seas menor de edad. Mira la tabla de edades más abajo.
+              Claude, nuestra recomendación, pide 18: mientras tanto úsalo con un adulto o empieza con ChatGPT, Gemini o Perplexity, que permiten desde 13 con permiso de tu familia.
             </span>
           </p>
         </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 pt-6">
+        <ClaudePick audience="universidad" />
       </div>
 
       <Section id="u-carrera">

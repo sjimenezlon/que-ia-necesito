@@ -18,7 +18,7 @@ export const CAREERS = [
     human: 'El juicio clínico, el examen físico, comunicar malas noticias y responder por la decisión.',
     practice: 'Pídele a la IA un caso clínico ficticio y que te evalúe el razonamiento diagnóstico, no solo la respuesta.',
     prompt: 'Actúa como docente de semiología. Preséntame un caso clínico ficticio por partes (motivo de consulta, antecedentes, examen). Después de cada parte pregúntame qué diagnósticos diferenciales considero y por qué. No me des el diagnóstico hasta el final.',
-    tools: ['notebooklm', 'consensus', 'elicit', 'claude'],
+    tools: ['claude', 'notebooklm', 'consensus', 'elicit'],
   },
   {
     id: 'ingenieria',
@@ -27,7 +27,7 @@ export const CAREERS = [
     human: 'Definir bien el problema, diseñar la arquitectura, decidir con seguridad y responder por lo que falla.',
     practice: 'Escribe tú la primera versión. Después pídele una revisión de código como si fuera un ingeniero senior y defiende tus decisiones.',
     prompt: 'Revisa este código como un ingeniero senior en una revisión de pares. No lo reescribas. Señala errores, riesgos de seguridad y problemas de legibilidad, y hazme preguntas sobre las decisiones que no entiendas: [pega tu código]',
-    tools: ['cursor', 'github-copilot', 'claude-code', 'replit-ai'],
+    tools: ['claude-code', 'cursor', 'github-copilot', 'replit-ai'],
   },
   {
     id: 'derecho',
@@ -45,7 +45,7 @@ export const CAREERS = [
     human: 'Leer el contexto, negociar, liderar personas y decidir con información incompleta.',
     practice: 'Analiza tú un conjunto de datos y pídele a la IA que busque supuestos débiles en tus conclusiones.',
     prompt: 'Estas son las conclusiones de mi análisis sobre [tema] y los datos que usé: [pega]. Actúa como un comité evaluador exigente: ¿qué supuestos son débiles, qué datos faltan y qué explicación alternativa no consideré?',
-    tools: ['julius', 'chatgpt', 'gamma', 'claude'],
+    tools: ['claude', 'julius', 'chatgpt', 'gamma'],
   },
   {
     id: 'comunicacion',
@@ -54,7 +54,7 @@ export const CAREERS = [
     human: 'La voz propia, el concepto, el gusto, la ética con las imágenes de personas reales y el oficio.',
     practice: 'Haz diez bocetos a mano antes de abrir una herramienta. Usa la IA para explorar variaciones de tu idea, no para tenerla.',
     prompt: 'Este es el concepto de mi proyecto: [describe]. No generes nada todavía. Hazme 5 preguntas que me obliguen a precisar qué quiero decir, para quién y qué lo hace distinto de lo que ya existe.',
-    tools: ['canva', 'adobe-firefly', 'runway', 'elevenlabs'],
+    tools: ['claude', 'canva', 'adobe-firefly', 'runway'],
   },
   {
     id: 'educacion',
@@ -63,7 +63,7 @@ export const CAREERS = [
     human: 'El vínculo con los estudiantes, leer el aula, cuidar y decidir qué vale la pena enseñar.',
     practice: 'Diseña una clase sin IA. Después pídele que la adapte a tres estudiantes distintos y evalúa si las adaptaciones son buenas.',
     prompt: 'Diseñé esta actividad para grado 7: [pega]. Adáptala para un estudiante que va adelantado, uno con dificultades de lectura y uno que no tiene internet en casa. Explica qué cambiaste y por qué.',
-    tools: ['khanmigo', 'notebooklm', 'canva', 'claude'],
+    tools: ['claude', 'notebooklm', 'canva', 'gemini'],
   },
   {
     id: 'sociales',
@@ -72,7 +72,7 @@ export const CAREERS = [
     human: 'El trabajo de campo, la ética con las comunidades, la interpretación y la pregunta de investigación.',
     practice: 'Codifica tú una entrevista y compárala con la codificación de la IA: ¿qué vio ella que tú no, y qué se le escapó?',
     prompt: 'Esta es mi pregunta de investigación: [pega]. Hazme de jurado: ¿es demasiado amplia? ¿Qué supuestos tiene? ¿Qué tres preguntas me haría un evaluador antes de aprobarla?',
-    tools: ['elicit', 'notebooklm', 'otter', 'claude'],
+    tools: ['claude', 'elicit', 'notebooklm', 'otter'],
   },
   {
     id: 'ciencias',
@@ -81,7 +81,7 @@ export const CAREERS = [
     human: 'Diseñar el experimento, dudar de un resultado demasiado bonito y entender por qué funciona.',
     practice: 'Resuelve el problema a mano y usa la IA solo para verificar el último paso. Si no coinciden, encuentra quién se equivocó.',
     prompt: 'Resolví este problema así: [pega tu desarrollo]. No me des la solución completa. Dime en qué paso está el primer error, si lo hay, y dame una pista para corregirlo.',
-    tools: ['wolfram', 'julius', 'semantic-scholar', 'chatgpt'],
+    tools: ['claude', 'wolfram', 'julius', 'semantic-scholar'],
   },
 ]
 
@@ -164,7 +164,7 @@ export const UNI_USES = [
 export const RESEARCH_STEPS = [
   { title: 'Pregunta', body: 'Afina tu pregunta con la IA como jurado, no como autora.', tools: ['claude', 'chatgpt'] },
   { title: 'Buscar', body: 'Usa buscadores académicos que muestran artículos reales.', tools: ['consensus', 'elicit', 'semantic-scholar'] },
-  { title: 'Leer', body: 'Conversa con tus PDF y pide que te muestre dónde dice cada cosa.', tools: ['notebooklm', 'scispace'] },
+  { title: 'Leer', body: 'Conversa con tus PDF y pide que te muestre dónde dice cada cosa.', tools: ['claude', 'notebooklm', 'scispace'] },
   { title: 'Mapear', body: 'Mira cómo se conectan los autores y las ideas.', tools: ['connected-papers', 'research-rabbit'] },
   { title: 'Escribir', body: 'Tú escribes; la IA revisa coherencia y señala huecos.', tools: ['claude', 'grammarly'] },
 ]

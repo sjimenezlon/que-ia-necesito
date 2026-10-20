@@ -336,6 +336,57 @@ export function HelpLines({ items }) {
   )
 }
 
+const CLAUDE_COPY = {
+  adultos: {
+    kicker: 'Nuestra recomendación para usted',
+    title: 'Claude, para las familias que acompañan',
+    body: 'Explica con paciencia, admite cuando no sabe y es especialmente bueno para preparar conversaciones, explicar tareas sin resolverlas y escribir con cuidado. Úselo usted, al lado de su hijo o hija: sus términos piden 18 años.',
+  },
+  colegio: {
+    kicker: 'Nuestra recomendación para cuando cumplas 18',
+    title: 'Claude, para estudiar en serio',
+    body: 'Es de las mejores IA para que te explique paso a paso, te haga preguntas y te lleve la contraria con argumentos. Por ahora sus términos piden 18 años: pídele a tu mamá, papá o profe que lo usen contigo desde su cuenta, y apúntalo para la universidad.',
+  },
+  universidad: {
+    kicker: 'Nuestra recomendación',
+    title: 'Claude, tu compañero de estudio y de escritura',
+    body: 'Destaca en textos largos, razonamiento cuidadoso y en decir cuándo no está seguro. Súbele tus apuntes o un PDF y pídele que te pregunte, que revise tu argumento o que encuentre el error en tu código. Plan gratuito disponible; sus términos piden 18 años.',
+  },
+}
+
+export function ClaudePick({ audience = 'universidad' }) {
+  const copy = CLAUDE_COPY[audience]
+  return (
+    <div className="relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/[0.07] via-surface to-secondary/[0.05] p-6 md:p-7 shadow-sm">
+      <div className="grid md:grid-cols-[minmax(0,1fr)_auto] gap-5 items-center">
+        <div>
+          <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-primary">{copy.kicker}</span>
+          <h3 className="font-display font-bold text-2xl text-text tracking-tight mt-1.5">{copy.title}</h3>
+          <p className="text-text-light leading-relaxed mt-2 max-w-3xl">{copy.body}</p>
+        </div>
+        <div className="flex flex-wrap md:flex-col gap-2">
+          {audience !== 'colegio' && (
+            <a
+              href="https://claude.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-primary text-white text-sm font-semibold no-underline hover:bg-primary-dark shadow-sm"
+            >
+              Abrir Claude <ExternalLink className="w-4 h-4" />
+            </a>
+          )}
+          <Link
+            to="/herramienta/claude"
+            className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl border border-border bg-surface text-text text-sm font-semibold no-underline hover:border-primary/30"
+          >
+            Ver la ficha <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const AGE_STYLES = {
   ok: 'bg-accent/10 text-accent',
   warn: 'bg-warm/10 text-warm',

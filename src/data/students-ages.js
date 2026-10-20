@@ -75,7 +75,7 @@ export const AGE_TABLE = [
   {
     tool: 'Claude',
     age: '18+',
-    note: 'Solo para mayores de edad. No es para estudiantes de colegio.',
+    note: 'Para mayores de edad: nuestra recomendación para familias, docentes y universitarios. En el colegio, úsenlo con un adulto desde su cuenta.',
     source: 'https://www.anthropic.com/legal/consumer-terms',
     level: 'adult',
   },

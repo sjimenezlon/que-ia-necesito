@@ -43,7 +43,7 @@ import {
   TEEN_PARENT_SIGNS,
   TOOL_GROUPS,
 } from '../../data/students'
-import { AgeTable, Agreement, ChapterNav, CopyChip, HelpLines, PromptGrid, Section, SectionHead, Semaphore, TryLinks } from './shared'
+import { AgeTable, Agreement, ClaudePick, ChapterNav, CopyChip, HelpLines, PromptGrid, Section, SectionHead, Semaphore, TryLinks } from './shared'
 
 const PRICING = { gratis: 'Gratis', freemium: 'Gratis con límites', pago: 'De pago' }
 
@@ -386,9 +386,12 @@ export default function Secundaria() {
       <section id="herramientas" className="bg-surface/60 border-y border-border scroll-mt-32" aria-labelledby="herramientas-title">
         <div className="max-w-6xl mx-auto px-4 py-16">
           <SectionHead id="herramientas" kicker="Caja de herramientas" title="Para cada tarea, una herramienta">
-            Solo te mostramos herramientas que permiten usuarios de tu edad. Casi todas piden 13 años y, si eres menor de
-            18, permiso de tu mamá, papá o acudiente. Créalas con ellos.
+            Estas permiten usuarios de tu edad. Casi todas piden 13 años y, si eres menor de 18, permiso de tu mamá, papá o
+            acudiente. Créalas con ellos.
           </SectionHead>
+          <div className="mb-6">
+            <ClaudePick audience="colegio" />
+          </div>
           <div className="flex flex-wrap gap-2 mb-6">
             {TOOL_GROUPS.map((item) => (
               <button
@@ -649,6 +652,9 @@ export default function Secundaria() {
         <h3 className="font-display font-bold text-2xl text-text mt-12 mb-4 flex items-center gap-2">
           <Users className="w-5 h-5 text-primary" /> Prompts para familias
         </h3>
+        <div className="mb-5">
+          <ClaudePick audience="adultos" />
+        </div>
         <PromptGrid items={TEEN_PARENT_PROMPTS} color="text-primary" />
 
         <h3 className="font-display font-bold text-2xl text-text mt-12 mb-2 flex items-center gap-2">

@@ -17,7 +17,7 @@ import {
   STORY_OPTIONS,
   UNPLUGGED,
 } from '../../data/students-primaria'
-import { AgeTable, Agreement, ChapterNav, HelpLines, PromptActions, PromptGrid, Section, SectionHead } from './shared'
+import { AgeTable, Agreement, ClaudePick, ChapterNav, HelpLines, PromptActions, PromptGrid, Section, SectionHead } from './shared'
 
 const SHARE_LABELS = {
   si: { label: 'Sí', className: 'bg-accent text-white' },
@@ -378,6 +378,9 @@ export default function Primaria() {
         <h3 className="font-display font-bold text-2xl text-text mt-12 mb-4 flex items-center gap-2">
           <Sparkles className="w-5 h-5 text-warm" /> La IA también le ayuda a usted
         </h3>
+        <div className="mb-5">
+          <ClaudePick audience="adultos" />
+        </div>
         <PromptGrid items={PARENT_PROMPTS} />
 
         <h3 className="font-display font-bold text-2xl text-text mt-12 mb-4 flex items-center gap-2">
