@@ -60,7 +60,7 @@ export default function About() {
             'Ruta Aprender: cuatro lecciones con preguntas, retroalimentación y progreso guardado',
             'Talleres para PyMEs: ocho casos de Colombia y Latinoamérica, seis ejercicios de fundamentos, datos ficticios y un plan de piloto de siete días',
             'Ocho ejemplos editables para pasar de una idea a una instrucción concreta',
-            'Capítulo para estudiantes: cómo funciona la IA por dentro, semáforo de usos, prompts en modo entrenador, declaración de uso de IA y reflexión sobre el feed',
+            'Capítulo para estudiantes en tres recorridos: primaria y sus familias (juegos y acuerdo familiar), secundaria y sus familias (semáforo, prompts en modo entrenador, protocolo ante montajes falsos y reflexiones) y universidad (estudio, integridad, cita APA de la IA y primer empleo)',
             'Guía para docentes con actividades, evaluación y ejemplos de uso',
             'Capítulo para jóvenes investigadores: herramientas por momento de la investigación, políticas editoriales, contexto colombiano y generador de la declaración de uso de IA',
             'Capítulo especial para el sector público colombiano con casos de uso',

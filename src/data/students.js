@@ -10,6 +10,8 @@ export const CHAPTER_INDEX = [
   { id: 'honestidad', label: 'Declarar el uso' },
   { id: 'feed', label: 'Tu feed' },
   { id: 'reto', label: 'El reto' },
+  { id: 'familias', label: 'Para familias' },
+  { id: 'reflexiones', label: 'Reflexiones' },
 ]
 
 export const ROUTES = [
@@ -200,4 +202,129 @@ export const CHALLENGES = [
   { title: 'Tu plan Saber 11', body: 'En modo entrenador: que te pregunte, te corrija y te mida.', prompt: 'Sé mi entrenador para el Saber 11. Hazme un diagnóstico de 10 preguntas y con mis resultados arma un plan de 4 semanas.' },
   { title: 'Una mano a tu familia', body: 'El logo, el afiche o los precios del negocio de alguien cercano.', prompt: 'Mi tía vende empanadas en el barrio. Hazme preguntas sobre el negocio y propón 3 ideas de afiche que suenen a ella, no a una cadena.' },
   { title: 'Que te entreviste', body: 'Diez preguntas sobre qué quieres estudiar. Las respuestas son tuyas.', prompt: 'Entrevístame como orientador vocacional. Una pregunta a la vez, y al final no me digas qué estudiar: muéstrame qué patrones ves en mis respuestas.' },
+]
+
+export const TEEN_PARENT_CONTEXT = [
+  {
+    title: 'La IA ya está en las tareas',
+    body: 'Prohibirla no funciona y hacerse el de la vista gorda tampoco. Lo que sirve es preguntar cómo la usan y pedirles que te muestren.',
+  },
+  {
+    title: 'Los «amigos virtuales»',
+    body: 'Hay apps de IA diseñadas para conversar como pareja o mejor amigo, siempre disponibles y siempre de acuerdo. Para alguien que se siente solo pueden volverse un refugio que aísla más.',
+  },
+  {
+    title: 'Montajes y desnudos falsos',
+    body: 'Con una foto pública se puede fabricar una imagen sexual falsa. No es una broma: es violencia, hace un daño real y tiene consecuencias legales.',
+  },
+  {
+    title: 'El feed decide qué ven',
+    body: 'Lo que les aparece no es neutral: lo elige un algoritmo que aprende qué los mantiene pegados. Hablar de eso vale más que un bloqueo.',
+  },
+]
+
+export const TEEN_PARENT_SIGNS = [
+  'Pasa mucho tiempo conversando con un chatbot y lo esconde',
+  'Dice que «la IA lo entiende mejor que nadie»',
+  'Cambios fuertes de sueño, ánimo o apetito',
+  'Angustia cuando le llega una notificación o una imagen',
+  'Se aleja de amigos con los que antes salía',
+]
+
+export const TEEN_PARENT_DO = [
+  { title: 'Pregunta con curiosidad, no con sospecha', body: '«¿Qué app de IA usas más? ¿Me muestras algo que hayas hecho?» abre más puertas que «¿estás haciendo trampa?».' },
+  { title: 'Acompaña, no vigiles', body: 'Revisar el celular a escondidas rompe la confianza que vas a necesitar el día que haya un problema de verdad.' },
+  { title: 'Habla de los montajes antes de que pasen', body: 'Que sepan que, si alguien hace o comparte una imagen falsa de ellos, tú vas a estar de su lado y no los vas a culpar.' },
+  { title: 'Pon el ejemplo', body: 'Si tú no sueltas el celular en la mesa, la regla no va a durar.' },
+]
+
+export const DEEPFAKE_PROTOCOL = [
+  { title: 'No lo compartas', body: 'Ni para avisar ni para preguntar. Cada reenvío multiplica el daño.' },
+  { title: 'Guarda evidencia', body: 'Capturas con fecha, enlaces y nombres de cuentas. Sin reenviar la imagen.' },
+  { title: 'Reporta en la plataforma', body: 'Todas las redes tienen opción para denunciar imágenes íntimas o falsas.' },
+  { title: 'Avisa al colegio', body: 'El colegio debe activar su ruta de atención de convivencia escolar (Ley 1620 de 2013).' },
+  { title: 'Denuncia', body: 'En Te Protejo, en el CAI Virtual de la Policía o ante la Fiscalía.' },
+  { title: 'Acompaña', body: 'Lo primero es que tu hijo o hija sepa que no es su culpa. Busca apoyo psicológico si lo necesita.' },
+]
+
+export const TEEN_HELP_LINES = [
+  { name: 'Te Protejo', body: 'Reporte de contenido sexual con menores de edad, ciberacoso y otras violencias en internet.', url: 'https://www.teprotejo.org/' },
+  { name: 'CAI Virtual · Policía Nacional', body: 'Denuncia de delitos informáticos en línea.', url: 'https://caivirtual.policia.gov.co/' },
+  { name: 'Línea 141 del ICBF', body: 'Línea gratuita para reportar situaciones de riesgo de niñas, niños y adolescentes.', url: 'https://www.icbf.gov.co/' },
+  { name: 'Línea 192, opción 4', body: 'Orientación en salud mental del Ministerio de Salud.', url: 'https://www.minsalud.gov.co/' },
+]
+
+export const TEEN_PARENT_PROMPTS = [
+  {
+    title: 'Entender qué usan',
+    text: 'Mi hijo de 15 años usa [nombre de la app]. Explícame en lenguaje sencillo qué hace, qué datos recoge, qué edad mínima piden sus términos y qué riesgos y usos buenos tiene. Dime qué debo verificar en la página oficial.',
+  },
+  {
+    title: 'Preparar una conversación difícil',
+    text: 'Quiero hablar con mi hija de 14 años sobre las imágenes falsas hechas con IA sin asustarla ni sermonearla. Dame 5 preguntas abiertas para empezar y 3 frases que le dejen claro que puede contar conmigo.',
+  },
+  {
+    title: 'Acompañar el estudio',
+    text: 'Mi hijo de grado 10 tiene examen de química. No quiero que la IA le haga el trabajo. Dame un plan de una semana donde la IA le haga preguntas y yo pueda revisar su avance sin saber química.',
+  },
+]
+
+export const AGREEMENT_SECUNDARIA = [
+  { id: 'mostrar', text: 'Nos mostramos qué apps de IA usamos y para qué, sin juzgar.' },
+  { id: 'tareas', text: 'La IA explica, pregunta y revisa; el trabajo que se entrega lo hacemos nosotros.' },
+  { id: 'declarar', text: 'Si usamos IA en una tarea, lo decimos y respetamos lo que el profe permita.' },
+  { id: 'fotos', text: 'No subimos fotos de otras personas sin su permiso, ni para «mejorarlas».' },
+  { id: 'montajes', text: 'Si aparece un montaje de alguien, no lo reenviamos y lo contamos.' },
+  { id: 'apoyo', text: 'Si algo nos pasa en internet, lo contamos sabiendo que no habrá castigo por contarlo.' },
+  { id: 'noche', text: 'El celular duerme fuera del cuarto a partir de una hora acordada.' },
+  { id: 'mesa', text: 'En la mesa no hay pantallas, tampoco para los adultos.' },
+]
+
+// Citas textuales de Algoritmos deshumanizantes (2025). Páginas del PDF de la edición digital.
+export const REFLECTIONS = [
+  {
+    theme: 'Desconectarse',
+    quote: 'No perder la humanidad implica también aprender a desconectarnos y entender que la realidad trasciende lo digital haciendo pedagogía ciudadana acerca de los riesgos que implica la hiperconectividad.',
+    page: 34,
+  },
+  {
+    theme: 'Estar presentes',
+    quote: 'Subimos fotos sonrientes con amigos, pero estamos ausentes en el momento mismo que pretendemos capturar; compartimos pensamientos íntimos con miles de desconocidos, pero nos volvemos incapaces de una conversación honesta con quienes tenemos al lado.',
+    page: 75,
+  },
+  {
+    theme: 'La atención',
+    quote: '«La atención es la forma más rara y pura de generosidad», escribió Weil desde la experiencia del compromiso total, y es precisamente esta generosidad atencional la que se ve socavada por el constante bombardeo de notificaciones, actualizaciones y estímulos digitales que nos alejan del presente compartido con el otro.',
+    page: 75,
+  },
+  {
+    theme: 'La amistad',
+    quote: 'Esto requiere no solo cambios en el diseño de plataformas y algoritmos, sino también un trabajo interior para recuperar capacidades como la atención sostenida, la presencia plena y la vulnerabilidad auténtica que constituyen el fundamento de toda amistad verdadera.',
+    page: 82,
+  },
+  {
+    theme: 'Pensar por ti',
+    quote: 'Para Arendt, la educación no debe limitarse a transmitir información, sino que debe formar personas capaces de pensar por sí mismas y renovar un mundo común.',
+    page: 120,
+  },
+  {
+    theme: 'Una oportunidad',
+    quote: 'La irrupción de la inteligencia artificial en el ámbito educativo no debe verse como el ocaso de la educación humanista, sino como la oportunidad de su renacimiento.',
+    page: 128,
+  },
+]
+
+export const TALK_CARDS = [
+  { for: 'En familia', q: '¿Qué app te roba más tiempo del que quisieras darle?' },
+  { for: 'En familia', q: '¿Cuándo fue la última vez que estuvimos juntos sin ningún celular en la mesa?' },
+  { for: 'En familia', q: 'Si pudieras cambiar una regla del algoritmo de tu red favorita, ¿cuál sería?' },
+  { for: 'En familia', q: '¿Alguna vez una IA te dio una respuesta que te sorprendió? ¿Era verdad?' },
+  { for: 'En clase', q: '¿Qué diferencia hay entre un amigo y un seguidor?' },
+  { for: 'En clase', q: 'Si la IA escribe mejor que tú, ¿para qué sirve aprender a escribir?' },
+  { for: 'En clase', q: '¿Qué sabes hacer tú que ninguna máquina podría copiar?' },
+  { for: 'En clase', q: '¿Es trampa usar IA en una tarea? ¿Depende de qué?' },
+  { for: 'Contigo', q: '¿Cómo te sientes después de una hora en redes? ¿Y después de una hora con amigos?' },
+  { for: 'Contigo', q: '¿Qué cosa rara, tuya, nunca le pedirías a una IA que hiciera por ti?' },
+  { for: 'Contigo', q: '¿A quién le escribirías hoy si el feed no existiera?' },
+  { for: 'Contigo', q: '¿Qué quieres aprender este año que no tenga nada que ver con una pantalla?' },
 ]

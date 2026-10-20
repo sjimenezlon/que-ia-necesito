@@ -119,7 +119,7 @@ export default function App() {
             }
           />
           <Route
-            path="/para-estudiantes"
+            path="/para-estudiantes/:nivel?"
             element={
               <Suspense fallback={<ChapterFallback />}>
                 <Estudiantes />

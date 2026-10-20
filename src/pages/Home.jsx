@@ -201,9 +201,9 @@ export default function Home({
                     La IA no vino a reemplazarte. Llegó a retarte.
                   </h3>
                   <p className="text-sm text-text-light leading-relaxed max-w-3xl">
-                    Para colegio y primeros semestres: cómo funciona la IA por dentro, el semáforo de
-                    cuándo usarla, prompts en modo entrenador, cómo declarar su uso y qué hace tu feed
-                    con tu atención.
+                    Tres recorridos: primaria con juegos y guía para familias, secundaria con familias y
+                    reflexiones sobre el feed, y universidad con estudio, integridad, cómo citar la IA y
+                    primer empleo.
                   </p>
                 </div>
                 <span className="inline-flex items-center gap-1.5 text-primary font-semibold text-sm whitespace-nowrap">
