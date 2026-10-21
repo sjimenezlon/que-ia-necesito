@@ -1,4 +1,4 @@
-export const EDITION = { iso: '2026-10-15', label: '15 de octubre de 2026' }
+export const EDITION = { iso: '2026-10-21', label: '21 de octubre de 2026' }
 
 export const updates = [
   {

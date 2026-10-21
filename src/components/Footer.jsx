@@ -37,6 +37,7 @@ export default function Footer() {
                   Santiago Jiménez Londoño
                   <ExternalLink className="w-3 h-3" />
                 </a>
+                , profesor de la Universidad EAFIT
               </p>
               <p className="text-text-lighter text-xs mt-0.5">
                 Actualización editorial: <time dateTime={EDITION.iso}>{EDITION.label}</time> ·{' '}

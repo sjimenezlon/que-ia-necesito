@@ -120,9 +120,10 @@ export default function About() {
             Santiago Jiménez Londoño
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
+          , profesor de la Universidad EAFIT
         </p>
         <p className="text-text-lighter text-sm mt-2">
-          Edición del <time dateTime="2026-10-15">15 de octubre de 2026</time> ·{' '}
+          Edición del <time dateTime="2026-10-21">21 de octubre de 2026</time> ·{' '}
           <a
             href="https://sjimenezlon.co/"
             target="_blank"

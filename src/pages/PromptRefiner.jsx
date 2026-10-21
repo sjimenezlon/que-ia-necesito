@@ -13,7 +13,7 @@ import ConstraintsStep from '../components/prompt-refiner/ConstraintsStep'
 import GeneratedPrompt from '../components/prompt-refiner/GeneratedPrompt'
 import { updates } from '../data/editorial'
 
-const UPDATED_AT = '15 de octubre de 2026'
+const UPDATED_AT = '21 de octubre de 2026'
 
 const DOMAINS = [
   { id: 'artes', label: 'Artes', icon: Palette, desc: 'Creación artística, visual, musical, literaria y escénica.', color: 'bg-red-50 text-red-600 border-red-200' },

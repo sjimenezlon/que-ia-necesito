@@ -795,7 +795,7 @@ export default function HerramientasAsiaticas() {
             —en español, verificada al 15 de octubre de 2026— para saber qué existe, qué sirve y cómo usarlo desde Colombia.
           </p>
 
-          <div className="flex items-center justify-center gap-2 mb-10 text-sm">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-sm">
             <span className="text-text-lighter">Por</span>
             <a
               href="https://sjimenezlon.co/"
@@ -806,6 +806,7 @@ export default function HerramientasAsiaticas() {
               Santiago Jiménez Londoño
               <ExternalLink className="w-3 h-3" />
             </a>
+            <span className="text-text-lighter">· profesor de la Universidad EAFIT</span>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">

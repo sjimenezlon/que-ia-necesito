@@ -431,6 +431,7 @@ export default function SectorPublico() {
             >
               Santiago Jiménez Londoño
             </a>
+            <span>profesor de la Universidad EAFIT</span>
             <span>
               Revisión: <time dateTime={REVIEW_DATE_ISO}>{REVIEW_DATE}</time>
             </span>

@@ -382,6 +382,7 @@ export default function Investigadores() {
                 <span className="flex items-center gap-1 text-sm font-semibold text-text group-hover:text-primary transition-colors">
                   Santiago Jiménez Londoño <ExternalLink className="w-3 h-3" />
                 </span>
+                <span className="block text-xs text-text-lighter">Profesor de la Universidad EAFIT</span>
               </span>
             </a>
 
