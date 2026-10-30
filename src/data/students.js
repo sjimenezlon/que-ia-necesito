@@ -1,4 +1,4 @@
-export const STUDENTS_UPDATED = '20 de octubre de 2026'
+export const STUDENTS_UPDATED = '1 de noviembre de 2026'
 
 export const CHAPTER_INDEX = [
   { id: 'ruta', label: 'Tu ruta' },

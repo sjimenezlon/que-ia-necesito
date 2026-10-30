@@ -108,7 +108,7 @@ const LIGHT_STYLES = {
   rose: { dot: 'bg-rose-500', border: 'border-rose-500/25', bg: 'bg-rose-500/[0.05]', text: 'text-rose-700 dark:text-rose-300' },
 }
 
-/* Estado real del plan gratuito de las fichas del catálogo, verificado al 24-sep-2026 */
+/* Estado real del plan gratuito de las fichas del catálogo, verificado al 1-nov-2026 (las no revisadas conservan el dato del 24-sep) */
 const CATALOG_FREE = {
   elicit: { free: 'si', note: 'Búsqueda y resúmenes ilimitados sobre 138 millones de artículos; el agente y los informes tienen cupo.' },
   'semantic-scholar': { free: 'si', note: 'Todo gratis, con API abierta.' },
@@ -810,7 +810,7 @@ export default function Investigadores() {
                   id="disc-version"
                   value={discVersion}
                   onChange={(event) => setDiscVersion(event.target.value)}
-                  placeholder="por ejemplo, Claude Opus 5.5, septiembre de 2026"
+                  placeholder="por ejemplo, Claude Opus 5.5, noviembre de 2026"
                   className="w-full rounded-xl border border-white/15 bg-white/10 text-white text-sm p-2.5 placeholder:text-white/35"
                 />
               </div>
@@ -858,7 +858,7 @@ export default function Investigadores() {
               </div>
               <div className="mt-6 pt-5 border-t border-gray-200">
                 <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-gray-500 mb-2">Y si debes citarla en APA 7 (guía de septiembre de 2025)</div>
-                <p className="text-xs text-gray-700 leading-relaxed mb-1.5"><span className="font-semibold">Chat compartido:</span> Anthropic. (2026, 24 de septiembre). <span className="italic">Título del chat</span> [Chat de IA generativa]. Claude Opus 5.5. https://claude.ai/share/…</p>
+                <p className="text-xs text-gray-700 leading-relaxed mb-1.5"><span className="font-semibold">Chat compartido:</span> Anthropic. (2026, 1 de noviembre). <span className="italic">Título del chat</span> [Chat de IA generativa]. Claude Opus 5.5. https://claude.ai/share/…</p>
                 <p className="text-xs text-gray-700 leading-relaxed mb-1.5"><span className="font-semibold">Herramienta:</span> OpenAI. (2026). <span className="italic">ChatGPT</span> [Modelo de lenguaje grande]. https://chatgpt.com/</p>
                 <p className="text-[11px] text-gray-500 leading-relaxed">Los prompts no van en la referencia: guárdalos y, si ayudan al lector, ponlos en Métodos o en un anexo. Citar un chat no reemplaza citar la literatura: las recomendaciones ICMJE no aceptan material generado por IA como fuente primaria.</p>
               </div>

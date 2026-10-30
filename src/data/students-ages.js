@@ -33,7 +33,7 @@ export const AGE_TABLE = [
   {
     tool: 'Gemini Notebook (NotebookLM)',
     age: '13+',
-    note: 'Con cuenta personal desde 13. Con la cuenta educativa del colegio, cualquier edad, con filtros más estrictos.',
+    note: 'Con cuenta personal desde 13. Con la cuenta educativa del colegio, cualquier edad, con filtros más estrictos. Ojo: en los cuadernos que asigna el docente por Classroom, él puede ver tus conversaciones (desde oct-2026).',
     source: 'https://blog.google/feed/notebooklm-is-now-available-to-younger-users/',
     level: 'ok',
   },

@@ -1,16 +1,43 @@
-// Editorial review: 2026-10-15. Practice examples are fictional, not model output.
-export const REVIEW_DATE = '15 de octubre de 2026'
-export const REVIEW_DATE_ISO = '2026-10-15'
+// Editorial review: 2026-11-01. Practice examples are fictional, not model output.
+export const REVIEW_DATE = '1 de noviembre de 2026'
+export const REVIEW_DATE_ISO = '2026-11-01'
 
 export const PUBLIC_SOURCES = [
   {
+    id: 'inspeccion-inteligente',
+    kind: 'Agenda interministerial · inspección laboral',
+    date: '28 oct 2026',
+    title: 'MinTrabajo y MinCiencias · inspección inteligente',
+    description:
+      'Las ministras de Trabajo y de Ciencia acordaron una agenda conjunta de ocho líneas; las tres primeras son formalización laboral, «inspección inteligente» y economía plateada. En inspección se promoverá el uso de IA, herramientas tecnológicas y análisis de datos para unificar criterios técnicos y mejorar la prevención. No hay herramientas, plazos ni presupuesto definidos: cada cartera designó enlaces técnicos. Es un acuerdo de trabajo, no una norma.',
+    url: 'https://minciencias.gov.co/sala_de_prensa/mintrabajo-y-minciencias-unen-esfuerzos-para-modernizar-la-inspeccion-laboral-e',
+  },
+  {
+    id: 'pl216-salud',
+    kind: 'Proyecto de ley · audiencia pública',
+    date: '19 oct 2026',
+    title: 'Senado · Proyecto de Ley 216 de 2026, IA en salud',
+    description:
+      'La Comisión Séptima del Senado hizo una audiencia pública sobre el proyecto de la senadora Nadia Blel, que fija reglas éticas y de integridad científica para la IA en salud: seguridad del paciente, datos sanitarios y autonomía profesional. No se votó; se pidieron observaciones por escrito para la ponencia de primer debate. Varios congresistas recordaron que hay más de diez proyectos sobre IA en trámite y pidieron armonizarlos. No es norma vigente.',
+    url: 'https://www.senado.gov.co/index.php/el-senado/noticias/7657-comision-septima-del-senado-avanza-en-la-regulacion-de-la-inteligencia-artificial-en-salud',
+  },
+  {
+    id: 'control-sat',
+    kind: 'Caso de uso · territorial',
+    date: '9 oct 2026',
+    title: 'Medellín · CONTROL-SAT, satélites e IA',
+    description:
+      'La Secretaría de Gestión y Control Territorial combina imágenes satelitales e IA para detectar construcciones sin licencia y ocupaciones ilegales. El piloto de 2025 cubrió 77 polígonos críticos (1.198 hectáreas) y, según la Alcaldía, generó cerca de 1.321 alertas efectivas, 1.079 posibles infracciones urbanísticas y unos 107 procesos constructivos evitados. Está en preproducción y se presentará en noviembre. Sirve como referencia de un caso territorial con cifras publicadas.',
+    url: 'https://www.medellin.gov.co/es/sala-de-prensa/noticias/con-imagenes-satelitales-e-inteligencia-artificial-la-alcaldia-de-medellin-identifica-cambios-en-el-territorio/',
+  },
+  {
     id: 'pl025',
     kind: 'Proyecto de ley · en trámite',
-    date: 'Radicado 21 jul 2026 · ponencia sep 2026',
+    date: 'Radicado 21 jul 2026 · ponencia sep 2026 · sin primer debate a oct 2026',
     title: 'Cámara · Proyecto de Ley 025 de 2026',
     description:
-      'Retoma la propuesta de MinCiencias y MinTIC que se hundió en junio sin debate. Tiene ponentes en la Comisión Sexta e informe para primer debate. A octubre de 2026 Colombia sigue sin una ley de IA: no lo cites como norma vigente.',
-    url: 'https://www.camara.gov.co/wp-content/uploads/2026/07/proyectos-ley/documentos/proyecto-36127/P.L.025-2026SC-INTELIGENCIA-ARTIFICIAL.pdf',
+      'Retoma la propuesta de MinCiencias y MinTIC que se hundió en junio sin debate. Tiene ponentes en la Comisión Sexta e informe para primer debate, pero al cierre de octubre de 2026 sigue en trámite en comisión, sin votar. No es el único: en el Congreso hay más de diez proyectos sobre IA (regulación integral, uso responsable, trabajo, salud, defensa). Colombia sigue sin una ley de IA: no cites ninguno como norma vigente.',
+    url: 'https://www.camara.gov.co/inteligencia-artificial-2/',
   },
   {
     id: 'cce',

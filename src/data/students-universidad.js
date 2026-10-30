@@ -209,7 +209,7 @@ export const SKILLS = [
 ]
 
 export const SEMESTER_PROJECTS = [
-  { title: 'Un tutor para tu materia más difícil', body: 'Arma con NotebookLM un cuaderno con tus apuntes y úsalo cada semana para practicar. Mide tu nota antes y después.' },
+  { title: 'Un tutor para tu materia más difícil', body: 'Arma con Gemini Notebook (antes NotebookLM) un cuaderno con tus apuntes y úsalo cada semana para practicar. Mide tu nota antes y después.' },
   { title: 'Un tablero de datos de tu ciudad', body: 'Toma datos abiertos de datos.gov.co y cuenta una historia con ellos. La IA te ayuda con el código; las preguntas son tuyas.' },
   { title: 'Una herramienta para alguien real', body: 'Un formulario, una página o un bot sencillo para una tienda, una fundación o tu propio programa.' },
   { title: 'Una guía para quien viene detrás', body: 'Escribe la guía que te hubiera servido en primer semestre y publícala para los nuevos.' },

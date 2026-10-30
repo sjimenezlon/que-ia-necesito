@@ -179,7 +179,7 @@ export default function Home({
               </h2>
             </div>
             <span className="hidden sm:block text-xs text-text-lighter">
-              Guías prácticas · Colombia · Octubre 2026
+              Guías prácticas · Colombia · Noviembre 2026
             </span>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -277,7 +277,7 @@ export default function Home({
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="text-[10px] font-bold text-primary uppercase tracking-[0.13em] mb-1">
-                    Actualizado · septiembre 2026
+                    Actualizado · noviembre 2026
                   </div>
                   <h3 className="font-display font-bold text-text text-xl tracking-tight mb-2">
                     IA para el sector público

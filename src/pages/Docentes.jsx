@@ -361,7 +361,7 @@ const GENERAL_TOOLKIT = [
     label: 'Investigar y leer',
     icon: Search,
     description: 'Para localizar fuentes, trabajar con un corpus cerrado y organizar literatura académica con trazabilidad.',
-    example: 'Empieza en Perplexity, valida artículos con Elicit o Consensus y conversa con tus fuentes en NotebookLM.',
+    example: 'Empieza en Perplexity, valida artículos con Elicit o Consensus y conversa con tus fuentes en Gemini Notebook (antes NotebookLM).',
     tools: ['perplexity', 'notebooklm', 'elicit', 'consensus'],
   },
   {
@@ -686,6 +686,16 @@ const WEEK_PLAN = [
 ]
 
 const SOURCES = [
+  {
+    label: 'Ruta de formación en IA: 12.030 docentes y directivos inscritos en 959 municipios',
+    org: 'Computadores para Educar · octubre 2026',
+    url: 'https://www.computadoresparaeducar.gov.co/publicaciones/5811/avanzamos-con-la-formacion-virtual-para-docentes-en-el-uso-pedagogico-de-la-ia/',
+  },
+  {
+    label: 'Talento ColombIA: 15.000 becas del certificado de IA de Google y Workspace for Education para colegios públicos',
+    org: 'MinTIC, MinEducación y SENA · octubre 2026',
+    url: 'https://www.mintic.gov.co/portal/inicio/Sala-de-prensa/Noticias/441270:Gobierno-nacional-y-Google-se-unen-para-transformar-la-educacion-en-Colombia-con-nuevas-rutas-formativas-en-inteligencia-artificial',
+  },
   {
     label: 'Marco de competencias en IA para docentes',
     org: 'UNESCO · actualizado en 2026',

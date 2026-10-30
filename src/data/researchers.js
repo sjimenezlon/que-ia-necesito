@@ -1,10 +1,10 @@
 /* ══════════════════════════════════════════════════════════════════
    Capítulo «IA para jóvenes investigadores» — datos verificados al
-   24 de septiembre de 2026. Precios y cupos cambian rápido: cada
+   1 de noviembre de 2026. Precios y cupos cambian rápido: cada
    entrada lleva su fuente y conviene confirmarla antes de pagar.
    ══════════════════════════════════════════════════════════════════ */
 
-export const RESEARCH_UPDATED = { iso: '2026-09-24', label: '24 de septiembre de 2026' }
+export const RESEARCH_UPDATED = { iso: '2026-11-01', label: '1 de noviembre de 2026' }
 
 /* Herramientas que no están en el catálogo general: se enlazan afuera.
    free: 'si' (plan gratuito real) · 'limitado' (gratis con cupo corto) · 'no' */
@@ -13,7 +13,7 @@ export const EXTERNAL_TOOLS = {
     name: 'Zotero',
     url: 'https://www.zotero.org/',
     free: 'si',
-    note: 'Gestor de referencias libre. Zotero 10 (17-ago-2026) busca sin importar tildes, y Zotero te avisa si un artículo de tu biblioteca fue retractado. Sin IA propia: la IA llega por complementos de terceros.',
+    note: 'Gestor de referencias libre. Zotero 10 (17-ago-2026) busca sin importar tildes, te avisa si un artículo de tu biblioteca fue retractado y, en iOS, lee los PDF en voz alta (oct-2026). Sin IA propia: la IA llega por complementos de terceros.',
   },
   openalex: {
     name: 'OpenAlex',
@@ -49,7 +49,7 @@ export const EXTERNAL_TOOLS = {
     name: 'Asta (Ai2)',
     url: 'https://asta.allen.ai/',
     free: 'si',
-    note: 'Asistente abierto del Allen Institute sobre Semantic Scholar: busca artículos, resume literatura con citas en las que se puede hacer clic y analiza datos (beta para socios seleccionados).',
+    note: 'Asistente abierto del Allen Institute sobre Semantic Scholar: busca artículos, resume literatura con citas en las que se puede hacer clic y analiza datos (beta para socios seleccionados). Desde octubre de 2026 el informe tiene un modo rápido (AstaBrief, modelo abierto de 8.000 millones de parámetros) que tarda unos 51 segundos frente a 179 del modo con razonamiento.',
   },
   overleaf: {
     name: 'Overleaf',
@@ -97,7 +97,7 @@ export const EXTERNAL_TOOLS = {
     name: 'NVivo',
     url: 'https://lumivero.com/products/nvivo/',
     free: 'no',
-    note: 'Resúmenes y sugerencia de subcódigos con IA como complemento de pago, con retención cero de datos. Anuncia NVivo AI Cloud para el 6 de octubre de 2026.',
+    note: 'Resúmenes y sugerencia de subcódigos con IA como complemento de pago, con retención cero de datos. NVivo AI Cloud, la versión en la nube con el asistente AURA (codifica, responde con citas y busca evidencia en contra), ya se vende para licencias individuales; los equipos están en lista de espera y la edición simultánea llegará a inicios de 2027. Precio no publicado.',
   },
   maxqda: {
     name: 'MAXQDA',

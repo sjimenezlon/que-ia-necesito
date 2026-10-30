@@ -13,7 +13,7 @@ import ConstraintsStep from '../components/prompt-refiner/ConstraintsStep'
 import GeneratedPrompt from '../components/prompt-refiner/GeneratedPrompt'
 import { updates } from '../data/editorial'
 
-const UPDATED_AT = '21 de octubre de 2026'
+const UPDATED_AT = '1 de noviembre de 2026'
 
 const DOMAINS = [
   { id: 'artes', label: 'Artes', icon: Palette, desc: 'Creación artística, visual, musical, literaria y escénica.', color: 'bg-red-50 text-red-600 border-red-200' },
@@ -245,19 +245,19 @@ const CLARITIES = [
 
 const MODEL_SNAPSHOT = [
   {
+    name: 'Mistral Large 4',
+    house: 'Mistral · 29 oct 2026',
+    note: 'Pesos publicados bajo licencia MIT modificada (uso comercial permitido, salvo revenderlo como servicio): 1 billón de parámetros, 52.000 millones activos, texto e imagen, 1 millón de contexto. Por API cuesta USD 0,70 de entrada y 2,10 de salida por millón de tokens. Correrlo exige varias GPU de centro de datos.',
+  },
+  {
+    name: 'GPT-6.1 Terra',
+    house: 'OpenAI · 26 oct 2026',
+    note: 'Modelo intermedio para entender la pantalla y operar aplicaciones; está en ChatGPT Work, Codex y la API, no en el modo Chat. USD 1 de entrada y 5 de salida por millón de tokens (0,05 en caché), la mitad que GPT-6.1 Sol. Pruébalo en automatizaciones con revisión humana.',
+  },
+  {
     name: 'Gemini 4 Argon',
     house: 'Google · 13 oct 2026',
-    note: 'Ya en la app y en AI Mode para AI Pro y Ultra; por API cuesta USD 2/10 por millón de tokens hasta el 30 de noviembre y USD 4/20 desde diciembre. No está en el plan gratuito.',
-  },
-  {
-    name: 'Claude Haiku 5.5',
-    house: 'Anthropic · 7 oct 2026',
-    note: 'El modelo rápido y barato de la familia 5.5. Desde el 7 de octubre, Max y Team incluyen créditos mensuales de API (no cubren Claude Code). Evalúa con tus propios casos antes de automatizar.',
-  },
-  {
-    name: 'Mistral Large 4',
-    house: 'Mistral · 6 oct 2026',
-    note: 'Vista previa por API: 1 billón de parámetros (52.000 millones activos) a USD 1,36/4,18 por millón de tokens. Mistral promete los pesos para finales de octubre.',
+    note: 'En la app y en AI Mode para Google AI Pro y Ultra; en Antigravity también para Pro. Por API, USD 2/10 por millón de tokens hasta el 30 de noviembre y USD 4/20 desde diciembre; no existe en el nivel gratuito. Desde el 9 de octubre el plan gratuito de la app usa sobre todo Flash-Lite.',
   },
 ]
 

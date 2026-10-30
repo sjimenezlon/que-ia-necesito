@@ -56,7 +56,10 @@ const AUDIENCES = [
 ]
 
 const NEWS = [
-  { id: 'pl025', heading: 'Una ley de IA, otra vez en trámite' },
+  { id: 'inspeccion-inteligente', heading: 'IA para inspeccionar el trabajo, sin reglas todavía' },
+  { id: 'pl216-salud', heading: 'IA en salud: el Senado escucha antes de votar' },
+  { id: 'control-sat', heading: 'Vigilar el territorio desde el satélite' },
+  { id: 'pl025', heading: 'Una ley de IA, todavía en trámite' },
   { id: 'cce', heading: 'IA en contratación pública' },
   { id: 'igd', heading: 'La brecha digital entre órdenes' },
   { id: 'cce-diagnostico', heading: 'Cómo compra IA el Estado' },
@@ -275,7 +278,7 @@ function NotebookLab() {
           <br />a una conversación útil.
         </h2>
         <p>
-          Explora cómo trabajar con NotebookLM y documentos autorizados. Las
+          Explora cómo trabajar con Gemini Notebook (antes NotebookLM) y documentos autorizados. Las
           citas ayudan a verificar; la revisión sigue siendo necesaria.
         </p>
         <Link to="/herramienta/notebooklm" className="action-text">
@@ -294,7 +297,7 @@ function NotebookLab() {
       </div>
       <div className="public-notebook-workspace">
         <p className="public-demo-label">
-          Guía interactiva · sin conexión a NotebookLM
+          Guía interactiva · sin conexión a Gemini Notebook
         </p>
         <div
           className="public-step-buttons"
@@ -489,7 +492,7 @@ export default function SectorPublico() {
         <a href="#roles">Casos y prompts</a>
         <a href="#novedades">Novedades 2026</a>
         <a href="#madurez">Preparar un piloto</a>
-        <a href="#notebook-lab">NotebookLM</a>
+        <a href="#notebook-lab">Gemini Notebook</a>
         <a href="#primera-semana">Primera semana</a>
         <a href="#fuentes">Fuentes</a>
       </nav>
@@ -899,12 +902,13 @@ export default function SectorPublico() {
           <div className="public-editorial-note">
             <Sparkles size={18} aria-hidden="true" />
             <p>
-              Actualización del 15 de octubre de 2026: se agregan el Proyecto
-              de Ley 025 de 2026 (en trámite, no vigente), el diagnóstico de
-              Colombia Compra Eficiente sobre compras de IA, el Índice de
-              Gobierno Digital 2025 y el acuerdo de la Rama Judicial; Bogotá
-              Te Escucha suma su primer balance de uso. Todos los enlaces se
-              revisaron en esta fecha.
+              Actualización del 1 de noviembre de 2026: el Proyecto de Ley 025
+              de 2026 sigue en comisión sin primer debate y se suman la
+              audiencia del Senado sobre IA en salud (PL 216 de 2026), la
+              agenda de «inspección inteligente» de MinTrabajo y MinCiencias y
+              el piloto CONTROL-SAT de Medellín. La SIC, Colombia Compra
+              Eficiente, la Rama Judicial y el DNP no publicaron lineamientos
+              nuevos en octubre. Todos los enlaces se revisaron en esta fecha.
             </p>
           </div>
         </section>

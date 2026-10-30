@@ -31,7 +31,7 @@ const lessons = [
       'Un prompt es una instrucción. Incluye la información necesaria, el formato que esperas y las reglas que debe respetar. Si un dato falta, pide que lo señale.',
     before: 'Escribe algo amable y profesional.',
     after:
-      'Redacta un correo de máximo 80 palabras. Cita: martes 13 de octubre de 2026, 10:00 a. m., por videollamada. El enlace está pendiente. No lo inventes. Pide confirmar disponibilidad.',
+      'Redacta un correo de máximo 80 palabras. Cita: martes 10 de noviembre de 2026, 10:00 a. m., por videollamada. El enlace está pendiente. No lo inventes. Pide confirmar disponibilidad.',
     question: 'Si no tienes el enlace de la reunión, ¿qué debes pedir?',
     options: [
       'Que invente uno verosímil.',
