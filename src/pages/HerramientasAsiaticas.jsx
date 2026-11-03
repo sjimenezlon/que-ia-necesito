@@ -20,6 +20,19 @@ const METRICS = [
 
 const LATEST_RELEASES = [
   {
+    date: '31 oct 2026',
+    name: 'dsh-superagent',
+    company: 'DeepSeek · China',
+    icon: Code2,
+    color: 'text-primary',
+    bg: 'bg-primary/8',
+    tag: 'Código MIT · prototipo',
+    title: 'DeepSeek suelta un agente que escucha al equipo y responde con pull requests',
+    body: 'DeepSeek abrió en GitHub, con licencia MIT, dsh-superagent: un agente de programación «proactivo» que vive en un solo repositorio, se empaqueta para su DeepSeek Harness y recibe pedidos por GitHub o, si se configura, por Feishu, el chat de trabajo de ByteDance. Cuando una persona autorizada le pide algo, abre su propio ítem de trabajo, trabaja en una sesión aparte y contesta en el hilo original, por ejemplo con un pull request; un panel web muestra lo que necesita a un humano. Por defecto no fusiona código con su cuenta, ningún mensaje puede ampliarle los permisos y los pedidos que no van dirigidos a él solo se registran. Bloomberg lo leyó como un tiro a Claude Code de Anthropic; en tres días pasó de 16.000 estrellas. Lo que no está: el README no dice qué modelo usa, no hay puntajes ni precio, y DeepSeek advierte que es «un prototipo de investigación», «no un producto oficial» y «no idéntico» a su versión interna.',
+    use: 'Para equipos de software que quieran estudiar cómo se diseña un agente con permisos acotados y trazabilidad, en un repositorio de prueba. Cautela: es código de un solo commit y sin soporte; no lo conectes a repositorios con secretos ni a chats con datos de clientes, y revisa cada pull request a mano.',
+    url: 'https://github.com/deepseek-ai/dsh-superagent-prototype',
+  },
+  {
     date: '27 oct 2026',
     name: 'Unlimited OCR 2',
     company: 'Baidu · China',
@@ -104,9 +117,9 @@ const LATEST_RELEASES = [
     icon: Landmark,
     color: 'text-warm',
     bg: 'bg-warm/8',
-    tag: 'Aprobación regulatoria',
+    tag: 'Beta 4-nov · público en diciembre',
     title: 'Qwen pasa a ser el cerebro de Apple Intelligence en China',
-    body: 'Según China Daily, Apple confirmó en Shanghái que Apple Intelligence y los modelos Qwen asociados ya tienen aprobación regulatoria en China, con una versión de prueba anunciada para finales de octubre —sin publicar al cierre del mes— que traería traducción en vivo y herramientas de escritura. Alibaba aportará los modelos de comprensión y generación de texto e imagen; Baidu, la búsqueda y funciones ligadas a Siri e Inteligencia Visual. La nueva Siri queda fuera. Bloomberg, citado por MacRumors, sitúa el lanzamiento al público en diciembre con iOS 27.3, y el acuerdo incluye que el Gobierno apruebe las actualizaciones de los modelos; esa fecha no la confirmó Apple.',
+    body: 'Según China Daily, Apple confirmó en Shanghái que Apple Intelligence y los modelos Qwen asociados ya tienen aprobación regulatoria en China, con traducción en vivo y herramientas de escritura. Alibaba aportará los modelos de comprensión y generación de texto e imagen; Baidu, la búsqueda y funciones ligadas a Siri e Inteligencia Visual. La nueva Siri queda fuera. El acuerdo incluye que el Gobierno apruebe las actualizaciones de los modelos. La prueba de finales de octubre no salió, pero el 2 de noviembre China Daily informó que Apple fijó el calendario: las funciones con Qwen entran a prueba el 4 de noviembre en la beta para desarrolladores de iOS y llegan al público en diciembre con iOS 27.3, sin la Siri avanzada.',
     use: 'Es la prueba de que un modelo chino puede ser el motor bajo una marca occidental. Para Latam no cambia nada en el teléfono, pero sí en el argumento: el mismo producto corre sobre modelos distintos según el regulador de cada país.',
     url: 'https://www.chinadaily.com.cn/a/202610/15/WS6ad0bab9e4b06d4aa0563074.html',
   },
@@ -135,19 +148,6 @@ const LATEST_RELEASES = [
     body: 'Alibaba publicó en Hugging Face Qwen-Image-2.1-Turbo, una versión acelerada de su modelo de imagen y edición de 7.000 millones de parámetros que genera en 8 pasos de difusión y reutiliza el contexto de texto e imagen entre pasos. Funciona con Diffusers y produce ejemplos de hasta 1696×2528 píxeles. La licencia es la Qwen Research License, la misma del modelo base: para uso comercial hace falta un acuerdo aparte. La ficha no da cifras de velocidad ni requisitos de memoria de video.',
     use: 'Sirve para prototipar flujos de imagen en una GPU propia, en un laboratorio o un curso. Si la pieza va para un cliente, revisa la licencia antes: no es Apache.',
     url: 'https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo',
-  },
-  {
-    date: '7 oct 2026',
-    name: 'Vidu Q4 Preview',
-    company: 'ShengShu · China',
-    icon: Video,
-    color: 'text-warm',
-    bg: 'bg-warm/8',
-    tag: 'Web y API · pago por segundo',
-    title: 'Vidu adelanta su próximo modelo insignia y lo pone a 0,014 dólares el segundo',
-    body: 'ShengShu lanzó Vidu Q4 Preview, la primera vista pública de su siguiente modelo de video con audio. Promete mejor actuación de personajes —rostro, emoción, cuerpo y voz coordinados—, movimientos de cámara y cortes de acción más limpios, y efectos como explosiones o partículas. Acepta hasta 15 imágenes y 3 audios de referencia y entrega de 540p a 4K, con 10 bits de color en 2K y 4K. Está en la web y en la API desde 0,014 dólares por segundo como precio de lanzamiento, y la empresa dice que rinde «hasta cinco veces más» por el mismo presupuesto. No hay cifras en pruebas públicas, la duración máxima no está en el comunicado y el modelo Q4 definitivo no tiene fecha.',
-    use: 'Si produces piezas seriadas con personajes recurrentes, pruébalo contra Kling y Seedance con las mismas referencias: el precio por segundo hace barata la comparación. No lo uses para trabajos con cliente hasta que salga la versión final.',
-    url: 'https://www.prnewswire.com/news-releases/vidu-launches-q4-preview-making-flagship-ai-video-creation-accessible-to-everyone-302901266.html',
   }
 ]
 
@@ -781,7 +781,7 @@ export default function HerramientasAsiaticas() {
         <div className="relative max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-secondary/8 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-8 border border-secondary/10 shadow-sm">
             <Globe2 className="w-3.5 h-3.5" />
-            Capítulo especial · actualizado 1 nov 2026
+            Capítulo especial · actualizado 3 nov 2026
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-text leading-[1.05] tracking-tight mb-6">
             IA <span className="text-gradient-primary">asiática</span>
@@ -792,7 +792,7 @@ export default function HerramientasAsiaticas() {
             Mientras Occidente discute, Asia despliega. China convirtió la IA en una guerra de{' '}
             <span className="text-text font-semibold">precios y código abierto</span>; Corea, Japón e India construyen{' '}
             <span className="text-text font-semibold">modelos soberanos</span> en su propia lengua. Una guía práctica
-            —en español, verificada al 1 de noviembre de 2026— para saber qué existe, qué sirve y cómo usarlo desde Colombia.
+            —en español, verificada al 3 de noviembre de 2026— para saber qué existe, qué sirve y cómo usarlo desde Colombia.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-sm">
@@ -882,7 +882,7 @@ export default function HerramientasAsiaticas() {
               <div className="max-w-3xl">
                 <div className="inline-flex items-center gap-2 bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-accent/10">
                   <Zap className="w-3 h-3" />
-                  Radar de lanzamientos · corte 1 nov 2026
+                  Radar de lanzamientos · corte 3 nov 2026
                 </div>
                 <h2 className="text-2xl md:text-4xl font-bold text-text tracking-tight mb-2">
                   Lo nuevo que sí cambia el mapa

@@ -64,7 +64,7 @@ export default function About() {
             'Guía para docentes con actividades, evaluación y ejemplos de uso',
             'Capítulo para jóvenes investigadores: herramientas por momento de la investigación, políticas editoriales, contexto colombiano y generador de la declaración de uso de IA',
             'Capítulo especial para el sector público colombiano con casos de uso',
-            'Capítulo especial de herramientas de IA asiáticas (China, Corea, Japón, India), verificado al 1 de noviembre de 2026',
+            'Capítulo especial de herramientas de IA asiáticas (China, Corea, Japón, India), verificado al 3 de noviembre de 2026',
             'Información de precios, nivel de dificultad y casos de uso',
             'Guías paso a paso para empezar con cada herramienta',
             'Consejos prácticos de uso para cada herramienta',
@@ -123,7 +123,7 @@ export default function About() {
           , profesor de la Universidad EAFIT
         </p>
         <p className="text-text-lighter text-sm mt-2">
-          Edición del <time dateTime="2026-11-01">1 de noviembre de 2026</time> ·{' '}
+          Edición del <time dateTime="2026-11-03">3 de noviembre de 2026</time> ·{' '}
           <a
             href="https://sjimenezlon.co/"
             target="_blank"

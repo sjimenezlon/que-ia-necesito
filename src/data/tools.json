@@ -14,7 +14,7 @@
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Asistente conversacional de OpenAI para escribir, investigar, programar y más.",
-    "fullDescription": "ChatGPT es el asistente de OpenAI para redactar, estudiar, analizar archivos y trabajar con herramientas. Desde el 7 de octubre de 2026, GPT-6 llega al modo Chat con Intelligent UI: puede combinar texto, gráficos y elementos interactivos según la pregunta. El despliegue comienza en Plus, Pro, Business y Enterprise con GPT-6 Sol, y se amplía a Free y Go desde el 8 de octubre con GPT-6 Luna. La opción de razonamiento Pro usa Astra sin Intelligent UI. En Work y Codex el modelo de referencia es GPT-6.1 Sol y, desde el 26 de octubre, se suma GPT-6.1 Terra, un modelo intermedio que entiende lo que hay en pantalla y opera aplicaciones; está en Plus, Pro, Business, Enterprise y Edu, no en el modo Chat, y por API cuesta USD 1 de entrada y 5 de salida por millón de tokens, la mitad que Sol. GPT-5.5 salió de Codex el 14 de octubre. Desde el 6 de octubre, las suscripciones de pago permiten subir audio para transcribir y resumir; la disponibilidad depende del espacio de trabajo, región y versión. Para una empresa, empieza con una tarea concreta y datos autorizados. Revisa el resultado antes de enviarlo o incorporarlo a un proceso. Desde el 29 de septiembre los planes Pro y Business Premium incluyen un Dot, un agente personal que trabaja en segundo plano con su propio computador en la nube; desde el 28 de octubre puede escribirte por mensaje de texto (beta, solo EE. UU.).",
+    "fullDescription": "ChatGPT es el asistente de OpenAI para redactar, estudiar, analizar archivos y trabajar con herramientas. Desde el 7 de octubre de 2026, GPT-6 llega al modo Chat con Intelligent UI: puede combinar texto, gráficos y elementos interactivos según la pregunta. El despliegue comienza en Plus, Pro, Business y Enterprise con GPT-6 Sol, y se amplía a Free y Go desde el 8 de octubre con GPT-6 Luna. La opción de razonamiento Pro usa Astra sin Intelligent UI. En Work y Codex el modelo de referencia es GPT-6.1 Sol y, desde el 26 de octubre, se suma GPT-6.1 Terra, un modelo intermedio que entiende lo que hay en pantalla y opera aplicaciones; está en Plus, Pro, Business, Enterprise y Edu, no en el modo Chat, y por API cuesta USD 1 de entrada y 5 de salida por millón de tokens, la mitad que Sol. GPT-5.5 salió de Codex el 14 de octubre. Desde el 6 de octubre, las suscripciones de pago permiten subir audio para transcribir y resumir; la disponibilidad depende del espacio de trabajo, región y versión. Para una empresa, empieza con una tarea concreta y datos autorizados. Revisa el resultado antes de enviarlo o incorporarlo a un proceso. Desde el 29 de septiembre los planes Pro y Business Premium incluyen un Dot, un agente personal que trabaja en segundo plano con su propio computador en la nube; desde el 28 de octubre puede escribirte por mensaje de texto (beta, solo EE. UU.). El 29 de octubre OpenAI actualizó GPT-6 Luna: responde más corto y adula menos, con mejoras de seguridad para menores, pero su propia ficha reconoce más errores factuales que la versión del 7 de octubre y peores resultados en preguntas de salud; verifica cifras, fechas y cualquier consejo médico.",
     "useCases": [
       "Redactar correos, informes y documentos",
       "Resolver dudas complejas con explicaciones claras",
@@ -75,20 +75,12 @@
     ],
     "bestFor": "Ideal para resolver dudas, redactar textos y aprender de todo",
     "releaseReview": {
-      "date": "2026-11-01",
-      "label": "1 de noviembre de 2026",
+      "date": "2026-11-03",
+      "label": "3 de noviembre de 2026",
       "sources": [
         {
-          "title": "ChatGPT changelog (Codex y Work)",
-          "url": "https://learn.chatgpt.com/docs/changelog"
-        },
-        {
-          "title": "OpenAI API pricing",
-          "url": "https://developers.openai.com/api/docs/pricing"
-        },
-        {
-          "title": "OpenAI API deprecations",
-          "url": "https://developers.openai.com/api/docs/deprecations"
+          "title": "Addendum to GPT-6 Luna System Card: October 29, 2026 Update",
+          "url": "https://deploymentsafety.openai.com/gpt-6-luna-october-28-2026-addendum"
         }
       ]
     }
@@ -108,7 +100,7 @@
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Asistente de Anthropic especializado en análisis largo, escritura y programación.",
-    "fullDescription": "Claude es el asistente de Anthropic para escribir, analizar documentos, programar y preparar entregables. El 7 de octubre de 2026 se lanzó Haiku 5.5, orientado a tareas breves y repetitivas como resúmenes y clasificación, con control de esfuerzo. Está disponible en Claude Platform y en AWS, Google Cloud y Microsoft Azure. Ese día también bajó el precio de lectura de caché de Sonnet 5.5, y los planes Max y Team empezaron a incluir créditos mensuales para la API: USD 100 en Max 5x, USD 200 en Max 20x y, en Team, USD 20 por puesto Standard y USD 100 por puesto Premium, con un tope conjunto de USD 500. No cubren Claude Code y vencen cada mes sin acumularse. Para una PyME, prueba primero borradores de respuestas o clasificación de solicitudes con ejemplos anonimizados y mide errores y tiempo de revisión. El 21 de octubre Anthropic abrió la vista previa de Claude Duet, una app aparte en la que Claude actúa como agente proactivo: revisa el correo y el calendario conectados, prepara borradores y tareas en segundo plano y pide permiso antes de enviar, pagar, firmar o borrar. Por ahora solo para Pro y Max en Estados Unidos, con lista de espera, y consume los mismos límites del plan. En paralelo, Cowork dejó de ser un producto aparte: «ahora es simplemente Claude», primero en Pro y Max. Si usas la API, Sonnet 4.5 se apaga el 30 de noviembre de 2026; migra a Sonnet 5.5. Usa modelos de mayor capacidad para tareas complejas; consulta en tu cuenta qué modelos y límites están incluidos.",
+    "fullDescription": "Claude es el asistente de Anthropic para escribir, analizar documentos, programar y preparar entregables. El 7 de octubre de 2026 se lanzó Haiku 5.5, orientado a tareas breves y repetitivas como resúmenes y clasificación, con control de esfuerzo. Está disponible en Claude Platform y en AWS, Google Cloud y Microsoft Azure. Ese día también bajó el precio de lectura de caché de Sonnet 5.5, y los planes Max y Team empezaron a incluir créditos mensuales para la API: USD 100 en Max 5x, USD 200 en Max 20x y, en Team, USD 20 por puesto Standard y USD 100 por puesto Premium, con un tope conjunto de USD 500. No cubren Claude Code y vencen cada mes sin acumularse. Para una PyME, prueba primero borradores de respuestas o clasificación de solicitudes con ejemplos anonimizados y mide errores y tiempo de revisión. El 21 de octubre Anthropic abrió la vista previa de Claude Duet, una app aparte en la que Claude actúa como agente proactivo: revisa el correo y el calendario conectados, prepara borradores y tareas en segundo plano y pide permiso antes de enviar, pagar, firmar o borrar. Por ahora solo para Pro y Max en Estados Unidos, con lista de espera, y consume los mismos límites del plan. En paralelo, Cowork dejó de ser un producto aparte: «ahora es simplemente Claude», primero en Pro y Max. Si usas la API, Sonnet 4.5 se apaga el 30 de noviembre de 2026 (migra a Sonnet 5.5) y ese mismo día deja de funcionar el modo rápido de Opus 4.8 (migra a Opus 5.5). Desde el 2 de noviembre la API ofrece en beta los hilos de mensajes: el servidor guarda la conversación y cada petición envía solo lo nuevo, de modo que en chats largos y agentes la respuesta empieza antes; no cambia nada en claude.ai. Usa modelos de mayor capacidad para tareas complejas; consulta en tu cuenta qué modelos y límites están incluidos.",
     "useCases": [
       "Analizar documentos largos de hasta 200 páginas",
       "Escribir textos creativos y profesionales",
@@ -170,20 +162,16 @@
     ],
     "bestFor": "Ideal para análisis profundo de documentos largos y programación",
     "releaseReview": {
-      "date": "2026-11-01",
-      "label": "1 de noviembre de 2026",
+      "date": "2026-11-03",
+      "label": "3 de noviembre de 2026",
       "sources": [
-        {
-          "title": "Introducing Claude Duet",
-          "url": "https://claude.com/resources/articles/claude-duet"
-        },
-        {
-          "title": "Claude pricing",
-          "url": "https://claude.com/pricing"
-        },
         {
           "title": "Claude Platform release notes",
           "url": "https://platform.claude.com/docs/en/release-notes/overview"
+        },
+        {
+          "title": "Claude models overview",
+          "url": "https://platform.claude.com/docs/en/about-claude/models/overview"
         }
       ]
     }
@@ -202,7 +190,7 @@
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Asistente de Google con acceso a búsqueda en tiempo real e integración con Google.",
-    "fullDescription": "Gemini es el asistente de Google para buscar información, redactar, analizar imágenes y trabajar con servicios de su ecosistema. Su modelo de frontera es Gemini 4 Argon, presentado el 30 de septiembre de 2026 y abierto el 13 de octubre: está en la app de Gemini y en AI Mode para suscriptores de Google AI Pro y Ultra, en Antigravity para Pro y Ultra, y en la API de pago como gemini-4-argon, a USD 2 de entrada y USD 10 de salida por millón de tokens hasta el 30 de noviembre de 2026 (USD 4 y USD 20 desde el 1 de diciembre); en la API no existe en el nivel gratuito. El plan gratuito va en sentido contrario: desde el 9 de octubre, quien usa la app con cuenta personal y sin plan Google AI recibe por defecto la selección automática, que manda la mayoría de las respuestas a Flash-Lite y solo algunas a Flash o Pro. Gemini 3.8 Flash (2 de septiembre) sigue siendo el modelo de trabajo para desarrolladores y empresas, con tarifa de lanzamiento de USD 0,75/3,75 por millón de tokens hasta el 31 de diciembre de 2026 (USD 1,50/7,50 desde enero de 2027); el Pro vigente es Gemini 3.1 Pro, porque 3.5 Pro se canceló. Completan el cuadro la app para Windows (Alt + Espacio), Gemini 3.8 Live para voz en tiempo real y las «Skills», instrucciones reutilizables que reemplazan a los Gems: su despliegue en la app empezó el 13 de octubre y debe terminar a mediados de noviembre; en Google Workspace quedó aplazado sin fecha.",
+    "fullDescription": "Gemini es el asistente de Google para buscar información, redactar, analizar imágenes y trabajar con servicios de su ecosistema. Su modelo de frontera es Gemini 4 Argon, presentado el 30 de septiembre de 2026 y abierto el 13 de octubre: está en la app de Gemini y en AI Mode para suscriptores de Google AI Pro y Ultra, en Antigravity para Pro y Ultra, y en la API de pago como gemini-4-argon, a USD 2 de entrada y USD 10 de salida por millón de tokens hasta el 30 de noviembre de 2026 (USD 4 y USD 20 desde el 1 de diciembre); en la API no existe en el nivel gratuito. El plan gratuito va en sentido contrario: desde el 9 de octubre, quien usa la app con cuenta personal y sin plan Google AI recibe por defecto la selección automática, que manda la mayoría de las respuestas a Flash-Lite y solo algunas a Flash o Pro. Gemini 3.8 Flash (2 de septiembre) sigue siendo el modelo de trabajo para desarrolladores y empresas, con tarifa de lanzamiento de USD 0,75/3,75 por millón de tokens hasta el 31 de diciembre de 2026 (USD 1,50/7,50 desde enero de 2027); el Pro vigente es Gemini 3.1 Pro, porque 3.5 Pro se canceló. Completan el cuadro la app para Windows (Alt + Espacio), Gemini 3.8 Live para voz en tiempo real y las «Skills», instrucciones reutilizables que reemplazan a los Gems: su despliegue en la app empezó el 13 de octubre y debe terminar a mediados de noviembre; en Google Workspace quedó aplazado sin fecha. Dos fechas que cambian la cuenta: desde el 13 de noviembre de 2026 el plan Google AI Plus (USD 4,99) deja de incluir los modelos Pro en la app y en AI Mode, y se queda con Flash y Flash-Lite (para Pro o Argon hace falta Google AI Pro, USD 19,99); y en la API, desde el 1 de diciembre, las llamadas a Gemini 2.5 Pro y 2.5 Flash —ya retirados de AI Studio el 2 de noviembre— pasan solas a Gemini 3.8 Flash y 3.5 Flash-Lite, y se cobran a esas tarifas. El uso de computadora (el modelo maneja un navegador o escritorio) salió de beta en la API el 30 de octubre.",
     "useCases": [
       "Buscar información actualizada en tiempo real",
       "Analizar imágenes y fotos",
@@ -259,20 +247,20 @@
     ],
     "bestFor": "Ideal para búsquedas actualizadas e integración con Google",
     "releaseReview": {
-      "date": "2026-11-01",
-      "label": "1 de noviembre de 2026",
+      "date": "2026-11-03",
+      "label": "3 de noviembre de 2026",
       "sources": [
         {
-          "title": "Gemini Apps release notes",
-          "url": "https://gemini.google/release-notes/"
+          "title": "Gemini API changelog",
+          "url": "https://aistudio.google.com/docs/changelog"
         },
         {
           "title": "Gemini API pricing",
-          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+          "url": "https://aistudio.google.com/docs/pricing"
         },
         {
-          "title": "Ayuda de Google: cambios de modelos en la app de Gemini",
-          "url": "https://support.google.com/gemini/answer/17004136"
+          "title": "Google AI Plus loses Gemini Pro models in November (9to5Google)",
+          "url": "https://9to5google.com/2026/10/14/gemini-ai-plus-loses-pro-november/"
         }
       ]
     }
@@ -370,7 +358,7 @@
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Asistente de Microsoft integrado con Windows, Edge y Office 365.",
-    "fullDescription": "Microsoft Copilot es el asistente de IA de Microsoft integrado con Windows, el navegador Edge y las aplicaciones de Office. Permite generar texto e imágenes, analizar documentos y automatizar tareas dentro del ecosistema Microsoft, y es especialmente útil para quien ya vive en Word, Excel y PowerPoint. Su rasgo actual es que dejó de depender de un solo proveedor: en el selector de Word, Excel, PowerPoint, Copilot Chat, Cowork y Copilot Studio conviven modelos de OpenAI (GPT-6 Astra, GPT-6.1 Sol), Anthropic (Claude Opus 5.5, Sonnet 5.5, Fable 5.1) y xAI (Grok, por el programa Frontier), «según licencia, acceso y región»; Sonnet 5.5 exige que el administrador tenga habilitado a Anthropic como subprocesador, y los modelos Grok no están en la Unión Europea, la EFTA ni el Reino Unido durante la vista previa. El 25 de septiembre de 2026 Microsoft anunció «el nuevo Copilot» en tres piezas: Home, que junta el chat y Cowork con Word, Excel y PowerPoint; Code, para que quien no programa arme aplicaciones, tableros y automatizaciones describiéndolas, con la tecnología de GitHub Copilot; y Autopilot, un agente persistente con nombre, rol y objetivo que sigue trabajando cuando no estás. Al cierre de octubre de 2026, Home y Code ya están disponibles dentro del programa Frontier —incluido sin costo en Microsoft 365 Personal, Family, Premium y Pro y en las licencias empresariales de Copilot— y Autopilot sigue en vista previa privada. En las licencias, el chat va por puesto y el trabajo agéntico (Code, Autopilot, las API de Work IQ) se cobra por uso contra el cupo de Copilot, con límites de gasto que fija el administrador. Desde el 2 de noviembre las nuevas licencias Copilot Business compradas por revendedor traen la facturación por uso activada por defecto: revisa ese interruptor al renovar.",
+    "fullDescription": "Microsoft Copilot es el asistente de IA de Microsoft integrado con Windows, el navegador Edge y las aplicaciones de Office. Permite generar texto e imágenes, analizar documentos y automatizar tareas dentro del ecosistema Microsoft, y es especialmente útil para quien ya vive en Word, Excel y PowerPoint. Su rasgo actual es que dejó de depender de un solo proveedor: en el selector de Word, Excel, PowerPoint, Copilot Chat, Cowork y Copilot Studio conviven modelos de OpenAI (GPT-6 Astra, GPT-6.1 Sol), Anthropic (Claude Opus 5.5, Sonnet 5.5, Fable 5.1) y xAI (Grok, por el programa Frontier), «según licencia, acceso y región»; Sonnet 5.5 exige que el administrador tenga habilitado a Anthropic como subprocesador, y los modelos Grok no están en la Unión Europea, la EFTA ni el Reino Unido durante la vista previa. El 25 de septiembre de 2026 Microsoft anunció «el nuevo Copilot» en tres piezas: Home, que junta el chat y Cowork con Word, Excel y PowerPoint; Code, para que quien no programa arme aplicaciones, tableros y automatizaciones describiéndolas, con la tecnología de GitHub Copilot; y Autopilot, un agente persistente con nombre, rol y objetivo que sigue trabajando cuando no estás. Al cierre de octubre de 2026, Home y Code ya están disponibles dentro del programa Frontier —incluido sin costo en Microsoft 365 Personal, Family, Premium y Pro y en las licencias empresariales de Copilot— y Autopilot sigue en vista previa privada. En las licencias, el chat va por puesto y el trabajo agéntico (Code, Autopilot, las API de Work IQ) se cobra por uso contra el cupo de Copilot, con límites de gasto que fija el administrador. Desde el 2 de noviembre las nuevas licencias Copilot Business compradas por revendedor traen la facturación por uso activada por defecto: revisa ese interruptor al renovar. Según el resumen oficial de octubre (30-oct), en noviembre Microsoft 365 Copilot une Chat y Cowork en una sola pantalla de inicio, lleva Proyectos y Skills a Copilot Chat y suma habilidades contables y un lienzo interactivo en Excel; Autopilot entra a Frontier ese mismo mes.",
     "useCases": [
       "Crear documentos en Word con IA",
       "Analizar datos en Excel automáticamente",
@@ -426,20 +414,12 @@
     ],
     "bestFor": "Ideal para usuarios de Microsoft que quieren IA en Office",
     "releaseReview": {
-      "date": "2026-11-01",
-      "label": "1 de noviembre de 2026",
+      "date": "2026-11-03",
+      "label": "3 de noviembre de 2026",
       "sources": [
         {
-          "title": "Microsoft Copilot (disponibilidad de Home, Code y Autopilot)",
-          "url": "https://www.microsoft.com/en/copilot"
-        },
-        {
-          "title": "Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/release-notes"
-        },
-        {
-          "title": "Manage Copilot Code for your organization (Frontier)",
-          "url": "https://learn.microsoft.com/en-us/copilot/code/code-admin"
+          "title": "What's New in Microsoft Copilot – October 2026",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/what%E2%80%99s-new-in-microsoft-copilot--october-2026/4568528"
         }
       ]
     }
@@ -1170,7 +1150,7 @@
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "IA integrada en Notion para escribir, resumir y organizar información.",
-    "fullDescription": "Notion AI es la inteligencia artificial integrada en Notion: genera textos, resume notas, crea tablas, traduce y busca dentro de tu espacio de trabajo. En septiembre y octubre de 2026 dejó de ser solo un asistente de escritura: la versión 3.7 trajo «skills» compartidas, subagentes, resúmenes de reuniones, selector de modelo y un kit para agentes propios, y la 3.8 (13 de octubre) sumó siete modelos —GPT-6.1 Sol, GPT-6 Luna, Claude Opus 5.5 y Sonnet 5.5, entre otros—, conexiones MCP con más de 150 herramientas como HubSpot o Stripe y una API para sincronizar skills con ChatGPT, Claude y otros agentes. El 19 de octubre de 2026 rehízo los agentes y el cobro: los agentes de Notion tienen ahora computador y navegador propios y un modo «Review for me» con verificaciones antes de actuar; un enrutador llamado Auto elige el modelo por tarea y, según Notion, logra resultados parecidos a Opus 5.5 y Astra con un costo promedio un 90 % menor; y todo el uso de IA pasa a un solo sistema de créditos: cada asiento Business o Enterprise trae 1.500 créditos Standard al mes (Notion elige el modelo) y 500 Select (tú eliges el modelo o corres tus agentes personalizados), con créditos adicionales a USD 10 por cada 1.000. Vigente para clientes nuevos desde ese día; los existentes pasan el 2 de noviembre de 2026. Si pagas ChatGPT Plus o Pro, puedes conectarlo a tu agente personal sin gastar créditos; traer tu propia llave de modelo está en alfa privada para Enterprise.",
+    "fullDescription": "Notion AI es la inteligencia artificial integrada en Notion: genera textos, resume notas, crea tablas, traduce y busca dentro de tu espacio de trabajo. En septiembre y octubre de 2026 dejó de ser solo un asistente de escritura: la versión 3.7 trajo «skills» compartidas, subagentes, resúmenes de reuniones, selector de modelo y un kit para agentes propios, y la 3.8 (13 de octubre) sumó siete modelos —GPT-6.1 Sol, GPT-6 Luna, Claude Opus 5.5 y Sonnet 5.5, entre otros—, conexiones MCP con más de 150 herramientas como HubSpot o Stripe y una API para sincronizar skills con ChatGPT, Claude y otros agentes. El 19 de octubre de 2026 rehízo los agentes y el cobro: los agentes de Notion tienen ahora computador y navegador propios y un modo «Review for me» con verificaciones antes de actuar; un enrutador llamado Auto elige el modelo por tarea y, según Notion, logra resultados parecidos a Opus 5.5 y Astra con un costo promedio un 90 % menor; y todo el uso de IA pasa a un solo sistema de créditos: cada asiento Business o Enterprise trae 1.500 créditos Standard al mes (Notion elige el modelo) y 500 Select (tú eliges el modelo o corres tus agentes personalizados), con créditos adicionales a USD 10 por cada 1.000. Vigente para clientes nuevos desde ese día; los existentes pasan el 2 de noviembre de 2026. Si pagas ChatGPT Plus o Pro, puedes conectarlo a tu agente personal sin gastar créditos; traer tu propia llave de modelo está en alfa privada para Enterprise. Desde el 1 de diciembre de 2026, las notas de reunión con IA también empiezan a gastar créditos Standard.",
     "useCases": [
       "Resumir notas de reuniones",
       "Generar borradores de documentos",
@@ -1227,20 +1207,16 @@
     ],
     "bestFor": "Ideal para equipos que ya usan Notion y quieren IA integrada",
     "releaseReview": {
-      "date": "2026-11-01",
-      "label": "1 de noviembre de 2026",
+      "date": "2026-11-03",
+      "label": "3 de noviembre de 2026",
       "sources": [
         {
-          "title": "Notion releases: Agents, rebuilt to do more for less (19-oct-2026)",
+          "title": "Standard, Select and Notion credits: eligible features",
+          "url": "https://www.notion.com/help/standard-select-and-notion-credits-eligible-features"
+        },
+        {
+          "title": "Notion releases",
           "url": "https://www.notion.com/releases"
-        },
-        {
-          "title": "Notion blog: Notion AI, more for less (19-oct-2026)",
-          "url": "https://www.notion.com/blog/notion-ai-more-for-less"
-        },
-        {
-          "title": "Notion: pricing",
-          "url": "https://www.notion.com/pricing"
         }
       ]
     }
@@ -1666,7 +1642,7 @@
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Generador de imágenes de Adobe con integración en Photoshop e Illustrator.",
-    "fullDescription": "Adobe Firefly es el motor de IA generativa de Adobe que permite crear y editar imágenes, vectores, texturas, video y efectos de texto. Se integra directamente con Photoshop, Illustrator y el resto de la suite, de modo que la IA entra en flujos de trabajo profesionales. Su modelo propio vigente es Firefly Image Model 5, disponible para todos desde marzo de 2026, con modelos personalizados en beta. Firefly también funciona como plataforma: reúne más de treinta modelos de terceros —Nano Banana, Veo 3.1, Kling, Runway y Luma Ray, entre otros— para que elijas cuál usar sin salir de la herramienta, y desde marzo existe un plan Pro Plus de USD 49,99 al mes con generación ilimitada de imagen. En octubre de 2026 sumó, todo en beta, un espacio nuevo de generación y edición, reencuadre automático de video para cambiar de formato sin perder al sujeto, modelos de terceros dentro del editor de video y Custom Models para usuarios de Creative Cloud: entrenas un modelo con tu propio estilo y lo usas en Firefly y en Boards. Adobe MAX, donde suele presentar modelos nuevos, se celebra en noviembre de 2026 en Miami Beach y en línea, así que la próxima tanda llega después de esta edición.",
+    "fullDescription": "Adobe Firefly es el motor de IA generativa de Adobe que permite crear y editar imágenes, vectores, texturas, video y efectos de texto. Se integra directamente con Photoshop, Illustrator y el resto de la suite, de modo que la IA entra en flujos de trabajo profesionales. Su modelo propio vigente es Firefly Image Model 5, disponible para todos desde marzo de 2026, con modelos personalizados en beta. Firefly también funciona como plataforma: reúne más de treinta modelos de terceros —Nano Banana, Veo 3.1, Kling, Runway y Luma Ray, entre otros— para que elijas cuál usar sin salir de la herramienta, y desde marzo existe un plan Pro Plus de USD 49,99 al mes con generación ilimitada de imagen. En octubre de 2026 sumó, todo en beta, un espacio nuevo de generación y edición, reencuadre automático de video para cambiar de formato sin perder al sujeto, modelos de terceros dentro del editor de video y Custom Models para usuarios de Creative Cloud: entrenas un modelo con tu propio estilo y lo usas en Firefly y en Boards. El 3 de noviembre abrió Adobe for Startups: las empresas de menos de cinco años y menos de USD 15 millones de financiación pueden pedir 12 meses gratis de Firefly Pro Plus, Acrobat Studio con Express Premium y Semrush (la disponibilidad depende del país; revisa si el tuyo está habilitado). Adobe MAX, donde suele presentar modelos nuevos, será del 10 al 12 de noviembre de 2026 en Miami Beach y en línea.",
     "useCases": [
       "Generar imágenes comercialmente seguras",
       "Editar fotos en Photoshop con IA generativa",
@@ -1721,20 +1697,16 @@
     ],
     "bestFor": "Ideal para profesionales de Adobe que necesitan IA integrada",
     "releaseReview": {
-      "date": "2026-11-01",
-      "label": "1 de noviembre de 2026",
+      "date": "2026-11-03",
+      "label": "3 de noviembre de 2026",
       "sources": [
         {
-          "title": "What's new in Adobe Firefly",
-          "url": "https://helpx.adobe.com/firefly/web/whats-new/new-features/whats-new.html"
+          "title": "Adobe for Startups",
+          "url": "https://business.adobe.com/solutions/startups.html"
         },
         {
-          "title": "Adobe Firefly plans",
-          "url": "https://www.adobe.com/products/firefly/plans.html"
-        },
-        {
-          "title": "Adobe MAX 2026: Register Today!",
-          "url": "https://community.adobe.com/announcements-327/adobe-max-2026-register-today-1645281"
+          "title": "Adobe MAX 2026",
+          "url": "https://www.adobe.com/es/max.html"
         }
       ]
     }
@@ -2216,7 +2188,7 @@
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Generador de videos con IA fácil de usar para todos los niveles.",
-    "fullDescription": "Pika es una herramienta de generación de video con IA pensada para que cualquiera la use: crea videos cortos a partir de texto, imágenes o video existente. Sus modelos propios son Pika 2.5 y, desde el 29 de octubre de 2026, Pika H3 Flex, pero hoy funciona sobre todo como plataforma multimodelo: desde la misma cuenta corres Seedance 2.5, Gemini Omni 1.1 Flash, Nano Banana 2, MiniMax H3 o los modelos de imagen de OpenAI y xAI. En agosto de 2026 sumó tres modelos de audio propios: banda sonora sincronizada para un video —efectos, ambiente y voz—, música a partir de texto, letra o una pista de referencia, y efectos de sonido en tiempo real. El 17 de septiembre presentó «New Pika»: una sola plataforma para video, imagen y sonido, con modelos de terceros por debajo y aplicaciones creativas por encima. El 16 de octubre entró en ChatGPT como extensión, con sus aplicaciones y más de cien modelos, y el 29 presentó Pika H3 Flex: una versión reentrenada de MiniMax H3 que genera 15 segundos de video con audio estéreo sincronizado en seis pasos, acepta hasta doce archivos de referencia (imagen, video y audio), separa el audio en cinco pistas —diálogo, música, efectos, foley y ambiente— por API y publica sus pesos en Hugging Face; llega a la app el 2 de noviembre.",
+    "fullDescription": "Pika es una herramienta de generación de video con IA pensada para que cualquiera la use: crea videos cortos a partir de texto, imágenes o video existente. Sus modelos propios son Pika 2.5 y, desde el 29 de octubre de 2026, Pika H3 Flex, pero hoy funciona sobre todo como plataforma multimodelo: desde la misma cuenta corres Seedance 2.5, Gemini Omni 1.1 Flash, Nano Banana 2, MiniMax H3 o los modelos de imagen de OpenAI y xAI. En agosto de 2026 sumó tres modelos de audio propios: banda sonora sincronizada para un video —efectos, ambiente y voz—, música a partir de texto, letra o una pista de referencia, y efectos de sonido en tiempo real. El 17 de septiembre presentó «New Pika»: una sola plataforma para video, imagen y sonido, con modelos de terceros por debajo y aplicaciones creativas por encima. El 16 de octubre entró en ChatGPT como extensión, con sus aplicaciones y más de cien modelos, y el 29 presentó Pika H3 Flex: una versión reentrenada de MiniMax H3 que genera 15 segundos de video con audio estéreo sincronizado en seis pasos, acepta hasta doce archivos de referencia (imagen, video y audio), separa el audio en cinco pistas —diálogo, música, efectos, foley y ambiente— por API y publica sus pesos en Hugging Face; Pika anunció que llegaría a su app el 2 de noviembre.",
     "useCases": [
       "Crear videos cortos para redes sociales",
       "Animar imágenes estaticas",
@@ -2276,20 +2248,12 @@
     ],
     "bestFor": "Ideal para crear videos cortos y animaciones de forma sencilla",
     "releaseReview": {
-      "date": "2026-11-01",
-      "label": "1 de noviembre de 2026",
+      "date": "2026-11-03",
+      "label": "3 de noviembre de 2026",
       "sources": [
         {
-          "title": "Introducing Pika H3 Flex",
+          "title": "Pika H3 Flex",
           "url": "https://pika.art/blog/pika-h3-flex"
-        },
-        {
-          "title": "Pika Is Now Inside ChatGPT",
-          "url": "https://pika.art/blog/pika-chatgpt-plugin"
-        },
-        {
-          "title": "Pika Pricing",
-          "url": "https://pika.art/pricing"
         }
       ]
     }
@@ -6175,7 +6139,7 @@
     "difficulty": 1,
     "rating": 4,
     "shortDescription": "Asistente conversacional de xAI con acceso en tiempo real a X (Twitter) e integración multimodal.",
-    "fullDescription": "Grok es el asistente de IA desarrollado por xAI, la empresa de Elon Musk. Su principal diferencial es el acceso en tiempo real a conversaciones y tendencias en X (Twitter), lo que lo hace útil para análisis de actualidad, monitoreo de reputación y búsquedas sobre temas emergentes. Su versión vigente es Grok 4.7, publicada el 21 de septiembre de 2026 tras dos aplazamientos: xAI la presenta como una mejora notable sobre Grok 4.6 al mismo precio y velocidad —USD 2 por millón de tokens de entrada y 6 de salida, el doble por encima de 200K—, con 500K de contexto, entrada de texto e imagen y cuatro niveles de esfuerzo de razonamiento. Llegó el mismo día a la app, a la API, a Cursor y a GitHub Copilot. Musk ya habla de un Grok 4.8 de 2,5 billones de parámetros que «termina de entrenarse esta semana», pero eso es una declaración, no un lanzamiento: a 30 de octubre de 2026 la lista oficial de modelos de xAI sigue terminando en Grok 4.7. Lo nuevo de octubre es Grok Voice 3.0 (14 de octubre), el modelo de voz a voz que usan la app, Grok Bot y la API, a USD 0,08 por minuto. En la empresa sigue Grok Bot para clientes Enterprise, agentes autónomos con controles de gobierno, desde el 3 de septiembre.",
+    "fullDescription": "Grok es el asistente de IA desarrollado por xAI, la empresa de Elon Musk. Su principal diferencial es el acceso en tiempo real a conversaciones y tendencias en X (Twitter), lo que lo hace útil para análisis de actualidad, monitoreo de reputación y búsquedas sobre temas emergentes. Su versión vigente es Grok 4.7, publicada el 21 de septiembre de 2026 tras dos aplazamientos: xAI la presenta como una mejora notable sobre Grok 4.6 al mismo precio y velocidad —USD 2 por millón de tokens de entrada y 6 de salida, el doble por encima de 200K—, con 500K de contexto, entrada de texto e imagen y cuatro niveles de esfuerzo de razonamiento. Llegó el mismo día a la app, a la API, a Cursor y a GitHub Copilot. Musk ya habla de un Grok 4.8 de 2,5 billones de parámetros que «termina de entrenarse esta semana», pero eso es una declaración, no un lanzamiento: a 3 de noviembre de 2026 la lista oficial de modelos de xAI sigue terminando en Grok 4.7. Lo nuevo de octubre es Grok Voice 3.0 (14 de octubre), el modelo de voz a voz que usan la app, Grok Bot y la API, a USD 0,08 por minuto. En la empresa sigue Grok Bot para clientes Enterprise, agentes autónomos con controles de gobierno, desde el 3 de septiembre. El 1 de noviembre Musk dijo que servir Grok Bot costaba «insosteniblemente» más de lo que ingresa y xAI recortó el uso semanal, sin publicar los nuevos cupos: si dependes de él, cuenta con menos margen. En la API, desde el 2 de noviembre las llamadas a grok-imagine-image-quality van a grok-imagine-image-2.0 en calidad baja, a menor precio por imagen.",
     "useCases": [
       "Monitorear tendencias y conversaciones en redes sociales en tiempo real",
       "Analizar percepción pública sobre temas o marcas",
@@ -6230,16 +6194,16 @@
     ],
     "bestFor": "Ideal para monitorear tendencias y conversaciones en X en tiempo real",
     "releaseReview": {
-      "date": "2026-11-01",
-      "label": "1 de noviembre de 2026",
+      "date": "2026-11-03",
+      "label": "3 de noviembre de 2026",
       "sources": [
         {
-          "title": "xAI Models and pricing",
-          "url": "https://docs.x.ai/docs/models"
+          "title": "xAI release notes",
+          "url": "https://docs.x.ai/developers/release-notes"
         },
         {
-          "title": "Introducing Grok Voice 3.0",
-          "url": "https://x.ai/news/grok-voice-3"
+          "title": "Grok Bot costs unsustainably high, Musk says (The Next Web)",
+          "url": "https://thenextweb.com/news/grok-bot-costs-unsustainably-high-musk-usage-limits"
         }
       ]
     }
@@ -6258,7 +6222,7 @@
     "difficulty": 2,
     "rating": 5,
     "shortDescription": "Modelo chino de pesos abiertos con razonamiento avanzado a bajo costo — y desde septiembre, multimodal con licencia MIT.",
-    "fullDescription": "DeepSeek es un laboratorio chino que disrumpió el mercado con modelos de pesos abiertos que igualan o superan a los cerrados en muchas tareas, a una fracción del costo. Destaca en razonamiento matemático, programación y análisis técnico. Su modelo económico es DeepSeek V4.1-Flash (10 de septiembre de 2026): 552.000 millones de parámetros que activa 8.000 millones al leer y 16.000 al escribir, multimodal de nacimiento, con 1 millón de tokens de contexto y pesos bajo licencia MIT, sin registro ni permisos. Cuesta $0,30 de entrada y $1,20 de salida por millón de tokens en hora pico y la mitad en hora valle. Al lado sigue V4-Pro, el modelo de trabajo pesado, con tres niveles de esfuerzo de pensamiento. El 17 de octubre llegó una actualización, no un modelo nuevo: DeepSeek-V4.1-Flash-1017, que según el registro oficial de cambios «mantiene el método de llamada y los precios» (el identificador sigue siendo deepseek-flash), responde con menos tokens y en menos tiempo, y sube en sus propias pruebas de ingeniería de software (DeepSWE de 74,2 a 77,0); los pesos están en Hugging Face con licencia MIT. Ese mismo día DeepSeek abrió por API su buscador propio. Al cierre de octubre no hay rastro de V4.1-Pro, V4.2 ni R3; la investigación del regulador chino de internet (CAC) por seguridad de datos, abierta el 22 de septiembre, sigue sin resolución pública, y la ronda de inversión de la que habló Bloomberg el 6 de octubre no ha sido confirmada por la empresa. Un dato para equipos de seguridad: evaluadores independientes (Artificial Analysis) sitúan a Flash-1017 como el modelo abierto con mayor capacidad cibernética y anotan que no rechaza peticiones; ya circulan variantes de terceros sin filtros. Úsalo con una política de uso clara.",
+    "fullDescription": "DeepSeek es un laboratorio chino que disrumpió el mercado con modelos de pesos abiertos que igualan o superan a los cerrados en muchas tareas, a una fracción del costo. Destaca en razonamiento matemático, programación y análisis técnico. Su modelo económico es DeepSeek V4.1-Flash (10 de septiembre de 2026): 552.000 millones de parámetros que activa 8.000 millones al leer y 16.000 al escribir, multimodal de nacimiento, con 1 millón de tokens de contexto y pesos bajo licencia MIT, sin registro ni permisos. Cuesta $0,30 de entrada y $1,20 de salida por millón de tokens en hora pico y la mitad en hora valle. Al lado sigue V4-Pro, el modelo de trabajo pesado, con tres niveles de esfuerzo de pensamiento. El 17 de octubre llegó una actualización, no un modelo nuevo: DeepSeek-V4.1-Flash-1017, que según el registro oficial de cambios «mantiene el método de llamada y los precios» (el identificador sigue siendo deepseek-flash), responde con menos tokens y en menos tiempo, y sube en sus propias pruebas de ingeniería de software (DeepSWE de 74,2 a 77,0); los pesos están en Hugging Face con licencia MIT. Ese mismo día DeepSeek abrió por API su buscador propio. El 31 de octubre publicó en GitHub, con licencia MIT, dsh-superagent: un prototipo de agente de programación que atiende pedidos por GitHub o Feishu y responde con pull requests; la propia empresa advierte que es un prototipo de investigación, no un producto oficial ni idéntico a su versión interna, y no dice qué modelo usa. A comienzos de noviembre sigue sin haber rastro de V4.1-Pro, V4.2 ni R3; la investigación del regulador chino de internet (CAC) por seguridad de datos, abierta el 22 de septiembre, sigue sin resolución pública, y la ronda de inversión de la que habló Bloomberg el 6 de octubre no ha sido confirmada por la empresa. Un dato para equipos de seguridad: evaluadores independientes (Artificial Analysis) sitúan a Flash-1017 como el modelo abierto con mayor capacidad cibernética y anotan que no rechaza peticiones; ya circulan variantes de terceros sin filtros. Úsalo con una política de uso clara.",
     "useCases": [
       "Resolver problemas matemáticos complejos paso a paso",
       "Generar y depurar código en múltiples lenguajes",
@@ -6316,20 +6280,16 @@
     ],
     "bestFor": "Ideal para razonamiento avanzado y programación con costo casi cero",
     "releaseReview": {
-      "date": "2026-11-01",
-      "label": "1 de noviembre de 2026",
+      "date": "2026-11-03",
+      "label": "3 de noviembre de 2026",
       "sources": [
         {
-          "title": "DeepSeek API Docs · Change Log (2026-10-17 V4.1-Flash-1017)",
+          "title": "deepseek-ai/dsh-superagent-prototype (GitHub)",
+          "url": "https://github.com/deepseek-ai/dsh-superagent-prototype"
+        },
+        {
+          "title": "DeepSeek API · actualizaciones",
           "url": "https://api-docs.deepseek.com/updates"
-        },
-        {
-          "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017 · Hugging Face",
-          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
-        },
-        {
-          "title": "DeepSeek releases updated V4.1-Flash model it says completes tasks faster · SiliconANGLE",
-          "url": "https://siliconangle.com/2026/10/18/deepseek-releases-updated-v4-1-flash-model-it-says-completes-tasks-faster/"
         }
       ]
     }
@@ -6439,7 +6399,7 @@
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Modelo multilingüe de Alibaba; Qwen3.8-Max (agosto 2026) es el mayor de la familia: 2,4 billones de parámetros y 1M de contexto.",
-    "fullDescription": "Qwen (通义千问) es la familia de modelos de IA de Alibaba Cloud, referente mundial del código abierto por su rendimiento en traducción, documentos extensos y procesamiento multilingüe — especialmente útil para empresas con operación en Asia o que manejen varios idiomas. Su buque insignia es Qwen3.8-Max: un MoE de 2,4 billones de parámetros con 95.000 millones activos, ventana de 1 millón de tokens y entrada nativa de texto, imagen y video; Alibaba publicó sus pesos en agosto, aunque con una licencia propia de reparto de ingresos y solo de texto. La puerta práctica para desplegar en casa siguen siendo Qwen3.8-27B (Apache 2.0, cabe en una GPU) y Qwen3.8-Flash-Next, un MoE multimodal de 125.000 millones de parámetros con apenas 6.000 activos por token, anticipo de la arquitectura Qwen4. Qwen4 todavía no existe: en la conferencia Apsara (22 de septiembre) Alibaba lo presentó solo como hoja de ruta, «en entrenamiento», y anunció Qwen-Image 3.1 para finales de 2026 y el chip propio Zhenwu V900 para el primer trimestre de 2027. En imagen, Qwen-Image-2.1 y su versión Turbo (9 de octubre) tienen pesos abiertos pero licencia solo de investigación. El 15 de octubre, según China Daily, Apple confirmó en Shanghái que Apple Intelligence y los modelos Qwen asociados ya tienen aprobación regulatoria en China: Alibaba aportará los modelos de texto e imagen, sin la nueva Siri. Se habló de una versión de prueba para finales de octubre; Bloomberg sitúa el lanzamiento en diciembre, con iOS 27.3. El 26 de octubre la canadiense Cohere reportó que, en una prueba de ciberseguridad en un entorno aislado, Qwen3.8-Flash-Next intentó enviar una cadena de prueba a un servidor de Alibaba Cloud en Beijing; el intento fue bloqueado, Cohere dice que ocurre en menos de una de cada 100.000 llamadas y que no tiene evidencia de que sea deliberado, y Alibaba no ha respondido.",
+    "fullDescription": "Qwen (通义千问) es la familia de modelos de IA de Alibaba Cloud, referente mundial del código abierto por su rendimiento en traducción, documentos extensos y procesamiento multilingüe — especialmente útil para empresas con operación en Asia o que manejen varios idiomas. Su buque insignia es Qwen3.8-Max: un MoE de 2,4 billones de parámetros con 95.000 millones activos, ventana de 1 millón de tokens y entrada nativa de texto, imagen y video; Alibaba publicó sus pesos en agosto, aunque con una licencia propia de reparto de ingresos y solo de texto. La puerta práctica para desplegar en casa siguen siendo Qwen3.8-27B (Apache 2.0, cabe en una GPU) y Qwen3.8-Flash-Next, un MoE multimodal de 125.000 millones de parámetros con apenas 6.000 activos por token, anticipo de la arquitectura Qwen4. Qwen4 todavía no existe: en la conferencia Apsara (22 de septiembre) Alibaba lo presentó solo como hoja de ruta, «en entrenamiento», y anunció Qwen-Image 3.1 para finales de 2026 y el chip propio Zhenwu V900 para el primer trimestre de 2027. En imagen, Qwen-Image-2.1 y su versión Turbo (9 de octubre) tienen pesos abiertos pero licencia solo de investigación. El 15 de octubre, según China Daily, Apple confirmó en Shanghái que Apple Intelligence y los modelos Qwen asociados ya tienen aprobación regulatoria en China: Alibaba aportará los modelos de texto e imagen, sin la nueva Siri. La prueba de finales de octubre no salió, pero según China Daily (2 de noviembre) Apple ya fijó el calendario: las funciones con Qwen entran a prueba el 4 de noviembre en la beta para desarrolladores de iOS y llegan al público en diciembre con iOS 27.3, sin la Siri avanzada. Lo de un Qwen4 «la próxima semana», atribuido al CTO de Alibaba Cloud en Ámsterdam el 29 de octubre, sigue sin ficha ni pesos: tómalo como rumor. El 26 de octubre la canadiense Cohere reportó que, en una prueba de ciberseguridad en un entorno aislado, Qwen3.8-Flash-Next intentó enviar una cadena de prueba a un servidor de Alibaba Cloud en Beijing; el intento fue bloqueado, Cohere dice que ocurre en menos de una de cada 100.000 llamadas y que no tiene evidencia de que sea deliberado, y Alibaba no ha respondido.",
     "useCases": [
       "Traducir entre más de 100 idiomas con matices culturales",
       "Analizar documentos de hasta 1 millón de tokens",
@@ -6496,20 +6456,12 @@
     ],
     "bestFor": "Ideal para traducción multilingüe avanzada y documentos muy largos",
     "releaseReview": {
-      "date": "2026-11-01",
-      "label": "1 de noviembre de 2026",
+      "date": "2026-11-03",
+      "label": "3 de noviembre de 2026",
       "sources": [
         {
-          "title": "Cohere says Alibaba's Qwen model tried to send a file to Beijing · TechCrunch",
-          "url": "https://techcrunch.com/2026/10/26/cohere-says-alibabas-qwen-model-tried-to-send-a-file-to-beijing/"
-        },
-        {
-          "title": "Alibaba Cloud's 2026 Apsara Conference: Full-Stack AI Roadmap · Alibaba Group",
-          "url": "https://www.alibabagroup.com/en-US/document-2041268239081668608"
-        },
-        {
-          "title": "Qwen · Hugging Face (sin repos nuevos en la ventana)",
-          "url": "https://huggingface.co/Qwen"
+          "title": "Alibaba's Qwen-powered Apple AI to launch in China in December (China Daily / ANN)",
+          "url": "https://asianews.network/alibabas-qwen-powered-apple-ai-to-launch-in-china-in-december/"
         }
       ]
     }
@@ -7376,7 +7328,7 @@
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Agente de finanzas de Microsoft 365 Copilot: conciliación, cobranza y reportes en Excel y Outlook, por ahora solo en inglés.",
-    "fullDescription": "Finance Agent (antes Copilot for Finance) es el agente de finanzas de Microsoft 365 Copilot, en disponibilidad general desde octubre de 2025 y con su última versión mayor en mayo de 2026. Vive en Excel, Outlook y Teams y automatiza tareas como conciliación de cuentas, análisis de varianzas, reportes ejecutivos, resumen de hilos de aprobación y preparación de datos para el cierre mensual, con datos conectados al ERP y nuevos 'Finance agents'.",
+    "fullDescription": "Finance Agent (antes Copilot for Finance) es el agente de finanzas de Microsoft 365 Copilot, en disponibilidad general desde octubre de 2025 y con su última versión mayor en mayo de 2026. Vive en Excel, Outlook y Teams y automatiza tareas como conciliación de cuentas, análisis de varianzas, reportes ejecutivos, resumen de hilos de aprobación y preparación de datos para el cierre mensual, con datos conectados al ERP y nuevos 'Finance agents'. Desde noviembre de 2026 Excel suma en todo el mundo las habilidades contables de Copilot, que complementan al agente en conciliaciones y cierres.",
     "useCases": [
       "Conciliar cuentas bancarias en Excel automáticamente",
       "Explicar varianzas presupuestales en lenguaje natural",
@@ -7430,16 +7382,12 @@
     ],
     "bestFor": "Ideal para equipos corporativos de finanzas que trabajan en Excel y Microsoft 365",
     "releaseReview": {
-      "date": "2026-11-01",
-      "label": "1 de noviembre de 2026",
+      "date": "2026-11-03",
+      "label": "3 de noviembre de 2026",
       "sources": [
         {
-          "title": "Welcome to Finance Agent",
-          "url": "https://learn.microsoft.com/en-us/copilot/finance/welcome"
-        },
-        {
-          "title": "What's new or changed in Finance Agent",
-          "url": "https://learn.microsoft.com/en-us/copilot/finance/whats-new"
+          "title": "What's New in Microsoft Copilot – October 2026",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/what%E2%80%99s-new-in-microsoft-copilot--october-2026/4568528"
         }
       ]
     }
@@ -8845,7 +8793,7 @@
     "difficulty": 1,
     "rating": 5,
     "shortDescription": "Bloc de notas de reuniones con IA que combina tus apuntes con la transcripción, sin meter un bot a la llamada.",
-    "fullDescription": "Granola es un bloc de notas de reuniones con IA que se volvió tendencia en 2025 y 2026. En lugar de meter un bot a tu videollamada, escucha desde tu computador y combina tus apuntes con la transcripción para producir notas limpias y accionables: una alternativa más discreta a Otter o Fireflies, muy usada por equipos pequeños. Tiene plan gratuito permanente —con tope de historial y la opción de excluir tus datos del entrenamiento—, aplicación para Apple Watch y un conector que permite a otras herramientas de IA consultar tus reuniones.",
+    "fullDescription": "Granola es un bloc de notas de reuniones con IA que se volvió tendencia en 2025 y 2026. En lugar de meter un bot a tu videollamada, escucha desde tu computador y combina tus apuntes con la transcripción para producir notas limpias y accionables: una alternativa más discreta a Otter o Fireflies, muy usada por equipos pequeños. Tiene plan gratuito permanente —con tope de historial y la opción de excluir tus datos del entrenamiento—, aplicación para Apple Watch y un conector que permite a otras herramientas de IA consultar tus reuniones. Desde el 29 de octubre de 2026 también dicta en Mac: mantienes presionada la tecla Fn, hablas y el texto llega limpio a cualquier aplicación, sin límite y en todos los planes (iOS y Windows vendrán después).",
     "useCases": [
       "Tomar notas de reuniones sin un bot visible",
       "Combinar tus apuntes con la transcripción automática",
@@ -8893,16 +8841,12 @@
     ],
     "bestFor": "Ideal para tomar notas de reuniones con IA de forma privada, sin un bot en la llamada",
     "releaseReview": {
-      "date": "2026-11-01",
-      "label": "1 de noviembre de 2026",
+      "date": "2026-11-03",
+      "label": "3 de noviembre de 2026",
       "sources": [
         {
-          "title": "Granola: pricing",
-          "url": "https://www.granola.ai/pricing"
-        },
-        {
-          "title": "Granola: changelog",
-          "url": "https://www.granola.ai/docs/changelog"
+          "title": "Granola crunches up a dictation feature to compete with Wispr (TechCrunch)",
+          "url": "https://techcrunch.com/2026/10/29/granola-crunches-up-a-dictation-feature-to-compete-with-wispr/"
         }
       ]
     }
@@ -9521,11 +9465,11 @@
       "video"
     ],
     "pricing": "freemium",
-    "pricingDetail": "Capa gratuita con créditos; planes de pago hasta ~USD 84/mes. API por segundo generado (Q4 Preview desde USD 0,014 por segundo en 540p como oferta de lanzamiento; el 4K cuesta más).",
+    "pricingDetail": "Capa gratuita con créditos; planes de pago hasta ~USD 84/mes. API por segundo generado (Q4 Preview: un comunicado oficial dice «desde USD 0,014 por segundo» y otro da USD 0,045 por segundo en 540p hasta 0,39 en 4K, con 30 % de descuento en imagen a video hasta el 30 de noviembre; confirma en la consola antes de presupuestar).",
     "difficulty": 2,
     "rating": 4,
     "shortDescription": "Generador de video chino enfocado en producción audiovisual, y desde septiembre también en video en tiempo real.",
-    "fullDescription": "Vidu, de Shengshu Technology (生数), es un generador de video con IA orientado a la producción audiovisual. Su modelo Q3 combina por referencia sujeto, entorno, vestuario, utilería y estilo para lograr consistencia de personajes a lo largo de una serie o animación, con efectos cinematográficos y audio. El 16 de septiembre de 2026 abrió una línea distinta con Vidu S2: video interactivo en tiempo real a 720p, donde un personaje digital sostiene una interacción continua y reacciona a imágenes nuevas mientras habla, y donde se puede editar un flujo de video entrante en vivo. El 7 de octubre lanzó Vidu Q4 Preview, el anticipo de su próximo modelo insignia: mejor actuación de personajes, movimiento de cámara y efectos, hasta 15 imágenes y 3 audios de referencia, y salida de 540p a 4K (10 bits en 2K y 4K), en la web y por API desde 0,014 dólares por segundo como precio de lanzamiento. Es de los rivales chinos más accesibles desde Latinoamérica y destaca por su velocidad.",
+    "fullDescription": "Vidu, de Shengshu Technology (生数), es un generador de video con IA orientado a la producción audiovisual. Su modelo Q3 combina por referencia sujeto, entorno, vestuario, utilería y estilo para lograr consistencia de personajes a lo largo de una serie o animación, con efectos cinematográficos y audio. El 16 de septiembre de 2026 abrió una línea distinta con Vidu S2: video interactivo en tiempo real a 720p, donde un personaje digital sostiene una interacción continua y reacciona a imágenes nuevas mientras habla, y donde se puede editar un flujo de video entrante en vivo. El 7 de octubre lanzó Vidu Q4 Preview, el anticipo de su próximo modelo insignia: mejor actuación de personajes, movimiento de cámara y efectos, hasta 15 imágenes y 3 audios de referencia, y salida de 540p a 4K (10 bits en 2K y 4K), en la web y por API (sus dos comunicados oficiales no coinciden en el precio: «desde 0,014 dólares por segundo» en uno, de 0,045 en 540p a 0,39 en 4K en el otro). Es de los rivales chinos más accesibles desde Latinoamérica y destaca por su velocidad.",
     "useCases": [
       "Series y animación con personajes consistentes",
       "Producción de cortos y drama con estilo cinematográfico",
@@ -9575,12 +9519,12 @@
     ],
     "bestFor": "Ideal para series y animación con personajes consistentes, a buen precio",
     "releaseReview": {
-      "date": "2026-11-01",
-      "label": "1 de noviembre de 2026",
+      "date": "2026-11-03",
+      "label": "3 de noviembre de 2026",
       "sources": [
         {
-          "title": "Shengshu Technology Launches Vidu Q4 Preview · GlobeNewswire (comunicado, 7-oct-2026)",
-          "url": "https://www.globenewswire.com/news-release/2026/10/07/3376813/0/en/shengshu-technology-launches-vidu-q4-preview-a-next-generation-ai-video-model-built-for-lifelike-performances.html"
+          "title": "ShengShu launches Vidu Q4 Preview (GlobeNewswire)",
+          "url": "https://www.manilatimes.net/2026/10/08/tmt-newswire/globenewswire/shengshu-technology-launches-vidu-q4-preview-a-next-generation-ai-video-model-built-for-lifelike-performances/2441237"
         }
       ]
     }
