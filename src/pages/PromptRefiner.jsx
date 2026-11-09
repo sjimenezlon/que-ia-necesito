@@ -13,7 +13,7 @@ import ConstraintsStep from '../components/prompt-refiner/ConstraintsStep'
 import GeneratedPrompt from '../components/prompt-refiner/GeneratedPrompt'
 import { updates } from '../data/editorial'
 
-const UPDATED_AT = '3 de noviembre de 2026'
+const UPDATED_AT = '9 de noviembre de 2026'
 
 const DOMAINS = [
   { id: 'artes', label: 'Artes', icon: Palette, desc: 'Creación artística, visual, musical, literaria y escénica.', color: 'bg-red-50 text-red-600 border-red-200' },
@@ -244,6 +244,11 @@ const CLARITIES = [
 ]
 
 const MODEL_SNAPSHOT = [
+  {
+    name: 'Claude Fable 5.2',
+    house: 'Anthropic · 9 nov 2026',
+    note: 'El modelo de Anthropic para razonamiento exigente y tareas largas: un millón de tokens de contexto, hasta 128.000 de salida y razonamiento siempre activo. Por API cuesta USD 8 de entrada y 40 de salida por millón de tokens, un 20 % menos que Fable 5.1. En claude.ai llega a los planes de pago con ofertas de lanzamiento; no está en el plan gratuito. Para el día a día, Opus 5.5 sigue siendo la opción recomendada.',
+  },
   {
     name: 'Mistral Large 4',
     house: 'Mistral · 29 oct 2026',

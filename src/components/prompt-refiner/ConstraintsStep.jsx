@@ -27,7 +27,7 @@ const EFFORT_OPTIONS = [
 
 const AI_TOOLS = [
   { value: 'universal', label: 'Universal — Compatible con cualquier IA' },
-  { value: 'claude', label: 'Claude (Opus 5.5 / Fable 5.1 / Sonnet 5)' },
+  { value: 'claude', label: 'Claude (Opus 5.5 / Fable 5.2 / Sonnet 5.5)' },
   { value: 'chatgpt', label: 'ChatGPT (GPT-6 Sol / GPT-6 Astra / GPT-5.6)' },
   { value: 'gemini', label: 'Gemini (3.8 Flash / 3.1 Pro)' },
   { value: 'perplexity', label: 'Perplexity — Búsqueda con fuentes' },

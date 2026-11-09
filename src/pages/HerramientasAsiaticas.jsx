@@ -12,13 +12,65 @@ import {
    ══════════════════════════════════════════════════════════════════ */
 
 const METRICS = [
-  { v: '2,8', l: 'billones de parámetros abiertos', s: 'Kimi K3 · 27-jul · K3.1 Pro (≈3 billones) promete los suyos el 4-nov' },
+  { v: '2,8', l: 'billones de parámetros abiertos', s: 'Kimi K3.1 Pro · pesos el 2-nov · 104.000 millones activos' },
   { v: '≈1 billón', l: 'de parámetros con licencia MIT', s: 'MiMo-V2.6-Pro · Xiaomi · 22-sep-2026' },
   { v: '<1 en 100.000', l: 'llamadas en que Qwen3.8-Flash-Next intentó conectarse a Beijing, según Cohere', s: 'Prueba del 23-oct · publicada el 26-oct · Alibaba no ha respondido' },
   { v: '50 mil', l: 'chips chinos entrenaron un modelo', s: 'LongCat-2.0 · Meituan · MIT' },
 ]
 
 const LATEST_RELEASES = [
+  {
+    date: '4 nov 2026',
+    name: 'Hy4',
+    company: 'Tencent · China',
+    icon: Brain,
+    color: 'text-primary',
+    bg: 'bg-primary/8',
+    tag: 'API · pesos «pronto»',
+    title: 'Tencent saca de preview a Hy4: ve imágenes y opera el computador',
+    body: 'Tencent lanzó la versión completa de Hy4, su modelo insignia de 770.000 millones de parámetros, que ahora entiende imágenes y puede operar un computador. Cuesta 0,83 dólares por millón de tokens de entrada y 2,50 de salida, igual que la preview, con 50 % de descuento en TokenHub hasta el 31 de diciembre; en OpenRouter aparece a la mitad. Lo que no está: los pesos y la ficha técnica de esta versión, que Tencent promete «pronto». Lo único descargable sigue siendo Hy4-preview, con licencia Apache 2.0. También anunció una variante Flash, sin fecha.',
+    use: 'Para agentes que leen pantallas o documentos con imágenes a bajo costo, por OpenRouter. Cautela: las cifras son de Tencent y no hay ficha publicada; no le entregues datos personales y espera los pesos antes de planear un despliegue propio.',
+    url: 'https://openrouter.ai/tencent/hy4',
+  },
+  {
+    date: '4 nov 2026',
+    name: 'LongCat-2.5',
+    company: 'Meituan · China',
+    icon: Code2,
+    color: 'text-accent',
+    bg: 'bg-accent/8',
+    tag: 'Pesos MIT · 1,6 billones',
+    title: 'Meituan libera LongCat-2.5 con licencia MIT y ahora también ve',
+    body: 'Meituan anunció el 1 de noviembre LongCat-2.5 y publicó los pesos el 4 en Hugging Face, con licencia MIT y una variante comprimida W4A4. Es un modelo de mezcla de expertos de 1,6 billones de parámetros (unos 48.000 millones activos) que pasa a ser multimodal de origen y está pensado para agentes de largo aliento y programación visual. Su API cuesta, con precio promocional, 0,30 dólares por millón de tokens de entrada y 1,20 de salida.',
+    use: 'Para equipos que quieren un modelo de agentes de pesos abiertos sin condiciones de licencia. Cautela: autohospedarlo exige un servidor con muchas GPU; para probarlo, usa la API o OpenRouter con datos de prueba.',
+    url: 'https://huggingface.co/meituan-longcat/LongCat-2.5',
+  },
+  {
+    date: '2 nov 2026',
+    name: 'Kimi K3.1 Pro',
+    company: 'Moonshot AI · China',
+    icon: Brain,
+    color: 'text-primary',
+    bg: 'bg-primary/8',
+    tag: 'Pesos · licencia tipo MIT',
+    title: 'Moonshot publica antes de lo prometido los pesos de K3.1 Pro: 2,8 billones',
+    body: 'Moonshot subió a Hugging Face los pesos de Kimi K3.1 Pro el 2 de noviembre, dos días antes de la fecha prometida. La ficha resuelve lo que faltaba en el anuncio del 23 de octubre: 2,8 billones de parámetros, 104.000 millones activos, un millón de tokens de contexto y entrada de texto e imagen. La licencia es propia, tipo MIT modificada: quien venda el modelo como servicio y facture más de 20 millones de dólares al año necesita un acuerdo aparte, y los productos muy grandes deben mostrar el nombre del modelo. La API sigue en 2 dólares por millón de tokens de entrada y 10 de salida (0,20 con acierto de caché); la variante Highspeed cuesta el doble.',
+    use: 'Para expedientes largos y agentes de código a bajo precio, por API con tarjeta internacional, o para laboratorios con cómputo propio. Cautela: Moonshot sigue bajo investigación del regulador chino y señalado por Anthropic y OpenAI; no le entregues datos personales ni reservados.',
+    url: 'https://huggingface.co/moonshotai/Kimi-K3.1-Pro',
+  },
+  {
+    date: '4 nov 2026',
+    name: 'Apple Intelligence con Qwen en China',
+    company: 'Alibaba y Baidu · China',
+    icon: Landmark,
+    color: 'text-warm',
+    bg: 'bg-warm/8',
+    tag: 'Beta en curso · público en diciembre',
+    title: 'Apple Intelligence con Qwen ya corre en la beta de iOS 27.3 en China',
+    body: 'Apple lo confirmó en su sala de prensa de China: desde el 4 de noviembre, hora china, la beta para desarrolladores de iOS 27.3 trae Apple Intelligence con Qwen. Qwen atiende algunas peticiones de Siri, las herramientas de escritura (con la función Componer) y la inteligencia visual sobre fotos, PDF y presentaciones; el usuario entra con su cuenta Qwen o con Iniciar sesión con Apple. La beta incluye traducción en vivo, Genmoji, limpieza de fotos, resúmenes de correo y notificaciones y escribir a Siri. Funciona en iPhone 15 Pro, iPhone 16 o posteriores y iPhone Air, con Siri y el equipo en chino simplificado. La nueva Siri anunciada en la WWDC 2026 no está. El lanzamiento público es en diciembre con iOS 27.3, sin día fijado.',
+    use: 'Es la prueba de que un modelo chino puede ser el motor bajo una marca occidental. Para Latam no cambia nada en el teléfono, pero sí en el argumento: el mismo producto corre sobre modelos distintos según el regulador de cada país.',
+    url: 'https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/',
+  },
   {
     date: '31 oct 2026',
     name: 'dsh-superagent',
@@ -44,19 +96,6 @@ const LATEST_RELEASES = [
     body: 'Segunda versión del modelo de análisis de documentos de Baidu, publicada en Hugging Face con licencia MIT y 3.000 millones de parámetros. Su apuesta es la «era OCR-3.0»: pasar del horizonte largo al ilimitado. Con una atención de ventana deslizante con referencias dispersas (SR-SWA) mantiene la latencia por paso y la memoria casi constantes aunque el documento crezca, y acepta varias páginas en una sola solicitud. Corre con Transformers o SGLang. Baidu afirma «desempeño de estado del arte» en bancos de prueba de decenas de páginas como MPDocBench y de cientos como MarathonDocBench, pero los puntajes están solo en una imagen, no en texto. No publica precio de API ni lista de idiomas probados. Llega la misma semana en que Baidu confirmó la salida de Wu Tian, la vicepresidenta que dirigió ERNIE.',
     use: 'Para digitalizar expedientes escaneados largos —contratos, historias clínicas, licitaciones— en un servidor propio y sin tarifa por página. Cautela: pruébalo con español y con escaneos reales colombianos antes de confiar; es un modelo pequeño y sus puntajes no están publicados en texto.',
     url: 'https://huggingface.co/baidu/Unlimited-OCR-2',
-  },
-  {
-    date: '23 oct 2026',
-    name: 'Kimi K3.1 Pro',
-    company: 'Moonshot AI · China',
-    icon: Brain,
-    color: 'text-primary',
-    bg: 'bg-primary/8',
-    tag: 'API · pesos prometidos 4-nov',
-    title: 'Moonshot baja el precio y promete pesos: K3.1 Pro, de clase 3 billones',
-    body: 'Primer modelo de la serie K3.1: un post-entrenamiento de Kimi K3 que Moonshot describe como «de clase 3T» —no da la cifra exacta— con ventana de 1 millón de tokens y mejoras, según la empresa, en programación, creación 3D, investigación financiera y tareas agénticas largas. Sale con una variante Highspeed «2-3 veces más rápida». La API cuesta 2 dólares por millón de tokens de entrada y 10 de salida (0,20 con acierto de caché), un tercio menos que K3; Highspeed, el doble. Se desbloquea con una recarga mínima de 1 dólar y hay procesamiento por lotes al 60 %. El razonamiento va siempre activo, con tres niveles de esfuerzo. Lo que no está: los pesos. Moonshot promete publicarlos «para el 4 de noviembre» y al cierre de octubre no hay repositorio en Hugging Face. Tampoco publica parámetros activos, licencia de esos pesos ni puntajes en texto (la tabla del anuncio es una imagen).',
-    use: 'Para expedientes largos y agentes de código a bajo precio desde Colombia, por API con tarjeta internacional. Cautela: Moonshot sigue bajo investigación del regulador chino y señalado por Anthropic y OpenAI; no le entregues datos personales ni reservados, y espera los pesos antes de planear un despliegue propio.',
-    url: 'https://forum.moonshot.ai/t/kimi-k3-1-pro-has-launched-start-exploring-now/629',
   },
   {
     date: '23 oct 2026',
@@ -98,32 +137,6 @@ const LATEST_RELEASES = [
     url: 'https://api-docs.deepseek.com/updates',
   },
   {
-    date: '15 oct 2026',
-    name: 'Step 5 Preview (pesos)',
-    company: 'StepFun · China',
-    icon: Brain,
-    color: 'text-primary',
-    bg: 'bg-primary/8',
-    tag: 'Pesos · licencia propia',
-    title: 'StepFun cumple y suelta los pesos de su modelo de 600.000 millones',
-    body: 'StepFun anunció Step 5 Preview el 20 de septiembre y prometió los pesos para el 15 de octubre: ya están en Hugging Face, en FP8, BF16 y NVFP4, unos 650 GB el repositorio principal. Es un MoE de 600.000 millones de parámetros con 27.000 millones activos por token, 1 millón de tokens de contexto (entrada más salida) y entrada de texto e imagen. La licencia no es Apache como la de sus modelos Flash, sino la StepFun Model License 1.0: uso comercial libre en general, pero exige licencia aparte a fabricantes de hardware que lo integren y a quienes lo vendan como servicio con más de 20 millones de dólares de ingresos al año. La ficha no publica cifras de pruebas en texto ni precio por token, y para servirlo pide un nodo de 8 H200.',
-    use: 'Es una alternativa abierta de tamaño medio para comparar con DeepSeek V4.1-Flash o Qwen3.8 en tareas de agente. Para una universidad o empresa colombiana, la licencia es más amplia de lo que parece: las restricciones solo tocan a fabricantes de aparatos y grandes revendedores.',
-    url: 'https://huggingface.co/stepfun-ai/Step-5-Preview',
-  },
-  {
-    date: '15 oct 2026',
-    name: 'Apple Intelligence con Qwen en China',
-    company: 'Alibaba y Baidu · China',
-    icon: Landmark,
-    color: 'text-warm',
-    bg: 'bg-warm/8',
-    tag: 'Beta 4-nov · público en diciembre',
-    title: 'Qwen pasa a ser el cerebro de Apple Intelligence en China',
-    body: 'Según China Daily, Apple confirmó en Shanghái que Apple Intelligence y los modelos Qwen asociados ya tienen aprobación regulatoria en China, con traducción en vivo y herramientas de escritura. Alibaba aportará los modelos de comprensión y generación de texto e imagen; Baidu, la búsqueda y funciones ligadas a Siri e Inteligencia Visual. La nueva Siri queda fuera. El acuerdo incluye que el Gobierno apruebe las actualizaciones de los modelos. La prueba de finales de octubre no salió, pero el 2 de noviembre China Daily informó que Apple fijó el calendario: las funciones con Qwen entran a prueba el 4 de noviembre en la beta para desarrolladores de iOS y llegan al público en diciembre con iOS 27.3, sin la Siri avanzada.',
-    use: 'Es la prueba de que un modelo chino puede ser el motor bajo una marca occidental. Para Latam no cambia nada en el teléfono, pero sí en el argumento: el mismo producto corre sobre modelos distintos según el regulador de cada país.',
-    url: 'https://www.chinadaily.com.cn/a/202610/15/WS6ad0bab9e4b06d4aa0563074.html',
-  },
-  {
     date: '12 oct 2026',
     name: 'GLM-Legal',
     company: 'Z.ai (Zhipu) · China',
@@ -135,19 +148,6 @@ const LATEST_RELEASES = [
     body: 'Z.ai presentó GLM-Legal, un modelo especializado en trabajo jurídico construido sobre GLM-5.3-Flash (320.000 millones de parámetros, 18.000 millones activos). Según la empresa triplica a su base en el Harvey Legal Agent Benchmark —de 6,7 % a 19,2 %—. En LegalBench y en PLawBench, una prueba de derecho chino, dice estar a la par de los sistemas cerrados de frontera, pero no publica las cifras ni nombra con quién se compara. El acceso es por formulario de solicitud y dentro de AutoClaw, su agente de escritorio. A finales de octubre ya figura en la lista oficial de precios como GLM-5.3-FlashX-Legal, a 0,37 dólares de entrada y 1,25 de salida por millón de tokens; no hay pesos en Hugging Face y el anuncio no nombra licencia. La única medición es la de la propia Z.ai: nadie ha replicado el 19,2 %.',
     use: 'Interesa como señal: los modelos jurídicos verticales ya salen de laboratorios chinos y no solo de Harvey o Thomson Reuters. Para derecho colombiano no está probado en nada; no le entregues expedientes reales.',
     url: 'https://z.ai/blog/glm-legal',
-  },
-  {
-    date: '9 oct 2026',
-    name: 'Qwen-Image-2.1-Turbo',
-    company: 'Alibaba · China',
-    icon: ImageIcon,
-    color: 'text-primary',
-    bg: 'bg-primary/8',
-    tag: 'Pesos · solo investigación',
-    title: 'Alibaba acelera su modelo de imagen a 8 pasos, pero no lo suelta para uso comercial',
-    body: 'Alibaba publicó en Hugging Face Qwen-Image-2.1-Turbo, una versión acelerada de su modelo de imagen y edición de 7.000 millones de parámetros que genera en 8 pasos de difusión y reutiliza el contexto de texto e imagen entre pasos. Funciona con Diffusers y produce ejemplos de hasta 1696×2528 píxeles. La licencia es la Qwen Research License, la misma del modelo base: para uso comercial hace falta un acuerdo aparte. La ficha no da cifras de velocidad ni requisitos de memoria de video.',
-    use: 'Sirve para prototipar flujos de imagen en una GPU propia, en un laboratorio o un curso. Si la pieza va para un cliente, revisa la licencia antes: no es Apache.',
-    url: 'https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo',
   }
 ]
 
@@ -239,9 +239,9 @@ const CHINA_SECTIONS = [
         url: 'https://qwen.ai',
       },
       {
-        name: 'Kimi', company: 'Moonshot AI (月之暗面)', version: 'K3 · jul-2026 (+ K2.8 · 11 sep)', ficha: 'kimi',
+        name: 'Kimi', company: 'Moonshot AI (月之暗面)', version: 'K3.1 Pro · pesos 2 nov-2026', ficha: 'kimi',
         what: 'El modelo de pesos abiertos más grande del mundo (2,8 billones de parámetros, 1M de contexto, visión nativa). Rey de la ejecución prolongada: desde Agent Swarm coordina cientos de subagentes y miles de pasos en paralelo.',
-        price: 'Chat con tier gratis · API ≈$3/$15 por 1M tokens', west: '≈ Claude', open: 'Pesos completos publicados el 27-jul-2026 (MIT)',
+        price: 'Chat con tier gratis · API K3.1 Pro $2/$10 por 1M tokens', west: '≈ Claude', open: 'Pesos de K3 (27-jul, MIT) y de K3.1 Pro (2-nov, licencia tipo MIT con condiciones para grandes proveedores)',
         access: 'kimi.com — internacional + API + Hugging Face',
         good: 'Contexto y orquestación de agentes de primer nivel; #1 en la arena de código frontend y aún en la cima de los rankings chinos, con Qwen3.8-Max pisándole los talones.',
         watch: 'Correr un modelo de 2,8T localmente pide cómputo fuera del alcance de casi cualquiera. Y una polémica abierta: Anthropic afirmó el 10 de septiembre que Moonshot desviaba solicitudes de usuarios de Kimi hacia Claude con cuentas falsas; Moonshot lo negó y lo denunció ante la policía. Acusación de parte, no hecho probado.',
@@ -275,12 +275,12 @@ const CHINA_SECTIONS = [
         url: 'https://yiyan.baidu.com',
       },
       {
-        name: 'Hunyuan / Yuanbao', company: 'Tencent', version: 'Hy4 preview · 28 ago-2026', ficha: 'hunyuan',
+        name: 'Hunyuan / Yuanbao', company: 'Tencent', version: 'Hy4 · 4 nov-2026', ficha: 'hunyuan',
         what: 'MoE de 770.000 millones de parámetros totales (49.000 activos) y más de 1M de contexto, entrenado para trabajo real —código, ofimática, datos, videojuegos, ciencia— e integrado en Yuanbao, CodeBuddy, WorkBuddy e ima.',
-        price: 'App gratis · pesos abiertos · API en Tencent Cloud', west: '≈ Claude / GPT para agentes', open: 'Apache 2.0 · también en FP8',
+        price: 'App gratis · pesos abiertos · API en Tencent Cloud', west: '≈ Claude / GPT para agentes', open: 'Hy4-preview en Apache 2.0; pesos de la versión final «pronto»',
         access: 'Tencent Cloud TokenHub y OpenRouter · pesos descargables',
         good: 'Uno de los modelos de frontera abiertos con la licencia más permisiva: Apache 2.0 para 770.000 millones de parámetros, sin condiciones de ingresos ni vetos geográficos.',
-        watch: 'Sigue siendo preview, sin versión final anunciada, y autohospedarlo exige un servidor con varias tarjetas gráficas: la ficha oficial recomienda ocho.',
+        watch: 'La versión final del 4 de noviembre (con visión y uso de computador) aún no tiene pesos ni ficha técnica; lo abierto es la preview, y autohospedarla exige un servidor con varias tarjetas gráficas: la ficha oficial recomienda ocho.',
         url: 'https://huggingface.co/tencent',
       },
       {
@@ -293,13 +293,13 @@ const CHINA_SECTIONS = [
         url: 'https://www.minimax.io/blog/minimax-m3',
       },
       {
-        name: 'LongCat', company: 'Meituan (美团)', version: '2.0 · jun-2026', ficha: 'longcat',
+        name: 'LongCat', company: 'Meituan (美团)', version: '2.5 · 4 nov-2026', ficha: 'longcat',
         what: 'El modelo de la empresa de domicilios más grande de China: MoE de 1,6 billones de parámetros (48.000 millones activos) con 1M de contexto nativo, especializado en programación agéntica. Antes de revelar su nombre ya lideraba los rankings de código de OpenRouter bajo el alias "Owl Alpha".',
         price: 'Gratis con pesos MIT · API por uso en longcat.chat y OpenRouter', west: '≈ Claude Code / Codex', open: 'Licencia MIT, sin restricciones',
         access: 'longcat.chat + Hugging Face + OpenRouter — global',
         good: 'Primer modelo de frontera entrenado e inferido de punta a punta en 50.000 chips chinos: el bloqueo de semiconductores dejó de ser un techo.',
         watch: 'Autohospedarlo pide 16 GPU de gama alta; para uso normal, ve por OpenRouter.',
-        url: 'https://huggingface.co/meituan-longcat/LongCat-2.0',
+        url: 'https://huggingface.co/meituan-longcat/LongCat-2.5',
       },
     ],
     also: 'También activos: MiMo (Xiaomi, que ya se cuela en el top 5 chino), Yi (01.AI de Kai-Fu Lee, que abandonó la carrera de modelos base y pivotó a IA soberana y empresarial), iFlytek Spark (fuerte en voz, educación y traducción), StepFun, Baichuan (salud/empresa) y SenseTime (visión y espacial).',
@@ -781,7 +781,7 @@ export default function HerramientasAsiaticas() {
         <div className="relative max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-secondary/8 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-8 border border-secondary/10 shadow-sm">
             <Globe2 className="w-3.5 h-3.5" />
-            Capítulo especial · actualizado 3 nov 2026
+            Capítulo especial · actualizado 9 nov 2026
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-text leading-[1.05] tracking-tight mb-6">
             IA <span className="text-gradient-primary">asiática</span>
@@ -792,7 +792,7 @@ export default function HerramientasAsiaticas() {
             Mientras Occidente discute, Asia despliega. China convirtió la IA en una guerra de{' '}
             <span className="text-text font-semibold">precios y código abierto</span>; Corea, Japón e India construyen{' '}
             <span className="text-text font-semibold">modelos soberanos</span> en su propia lengua. Una guía práctica
-            —en español, verificada al 3 de noviembre de 2026— para saber qué existe, qué sirve y cómo usarlo desde Colombia.
+            —en español, verificada al 9 de noviembre de 2026— para saber qué existe, qué sirve y cómo usarlo desde Colombia.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-sm">
@@ -882,7 +882,7 @@ export default function HerramientasAsiaticas() {
               <div className="max-w-3xl">
                 <div className="inline-flex items-center gap-2 bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-accent/10">
                   <Zap className="w-3 h-3" />
-                  Radar de lanzamientos · corte 3 nov 2026
+                  Radar de lanzamientos · corte 9 nov 2026
                 </div>
                 <h2 className="text-2xl md:text-4xl font-bold text-text tracking-tight mb-2">
                   Lo nuevo que sí cambia el mapa
