@@ -299,9 +299,9 @@ export const cases = [
   ],
   [
     'PIB potencial de Colombia',
-    'Crecimiento potencial y brecha del producto estimados por función de producción.',
-    'https://pib-potencial.vercel.app',
-    'pib-potencial.vercel.app',
+    'Crecimiento potencial estimado por función de producción, con un deslizador para mover la productividad.',
+    'https://sjimenezlon.co/economia#17',
+    'sjimenezlon.co/economia · lámina 17',
   ],
   [
     'Charla «Predecir no es decidir»',
