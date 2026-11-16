@@ -1,0 +1,240 @@
+/* Capítulo «Decisiones económicas»: solo lo que learning.css no trae. */
+.eco-page [hidden] {
+  display: none !important;
+}
+.eco-ideas {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  gap: 18px;
+}
+.eco-ideas li {
+  padding-left: 16px;
+  border-left: 2px solid var(--lab-green);
+}
+.eco-ideas strong {
+  display: block;
+  color: var(--color-text);
+}
+.eco-ideas span {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+.eco-ideas em {
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+}
+.eco-moment {
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+}
+.eco-moment p {
+  font-size: 14px;
+  margin: 8px 0 0 !important;
+}
+.eco-moment b {
+  color: var(--color-text);
+}
+.eco-tabs button[aria-selected='true'] {
+  background: var(--lab-ink);
+  color: var(--color-bg);
+  border-color: var(--lab-ink);
+}
+.eco-panel {
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: var(--color-surface);
+  min-width: 0;
+}
+.eco-panel h4 {
+  font-size: 0.95rem !important;
+  margin: 22px 0 10px !important;
+}
+.learning-page .eco-question {
+  font-size: 1.5rem;
+  margin: 8px 0 4px;
+}
+.eco-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 36px;
+}
+.eco-list,
+.eco-data {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 9px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--color-text-light);
+}
+.eco-list li {
+  display: flex;
+  gap: 9px;
+}
+.eco-list svg {
+  flex: none;
+  margin-top: 3px;
+  color: var(--lab-green);
+}
+.eco-data li {
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--color-border);
+}
+.eco-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.eco-tools a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 6px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--lab-green);
+  text-decoration: none;
+}
+.eco-tools a:hover {
+  border-color: var(--lab-green);
+}
+.eco-ladder,
+.eco-errors {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+.eco-ladder li,
+.eco-errors li {
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-top: 1px solid var(--color-border);
+}
+.eco-ladder b,
+.eco-errors b {
+  flex: none;
+  width: 2.2em;
+  font-weight: 700;
+  color: var(--lab-green);
+  font-variant-numeric: tabular-nums;
+}
+.eco-ladder strong {
+  display: block;
+}
+.eco-ladder span {
+  font-size: 14px;
+  color: var(--color-text-light);
+}
+.eco-errors h3 {
+  margin-bottom: 4px;
+}
+.eco-errors p {
+  margin: 0 !important;
+  font-size: 14px;
+}
+.eco-figures {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 28px 0;
+}
+.eco-figures strong {
+  display: block;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--lab-green);
+  margin-bottom: 8px;
+}
+.eco-figures span {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-light);
+}
+.eco-table th,
+.eco-table td {
+  padding: 12px 14px;
+  border-top: 1px solid var(--color-border);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.eco-table thead th {
+  white-space: normal;
+  font-size: 12px;
+  border-top: 0;
+}
+.eco-table caption {
+  padding: 12px 14px;
+  font-size: 12px;
+  color: var(--color-text-light);
+}
+.eco-bar {
+  display: inline-block;
+  vertical-align: middle;
+  width: 90px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 4px;
+  background: var(--color-border);
+  overflow: hidden;
+}
+.eco-bar i {
+  display: block;
+  height: 100%;
+  background: var(--lab-green);
+}
+.eco-bar-l3 i {
+  background: var(--color-warm);
+}
+.eco-acta .lab-label:first-child {
+  margin-top: 0;
+}
+.eco-cases {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 36px;
+  margin-top: 20px;
+}
+.eco-cases article {
+  padding: 20px 0;
+  border-top: 1px solid var(--color-border);
+}
+.eco-cases p {
+  margin: 0 0 6px !important;
+  font-size: 14px;
+}
+.eco-next a {
+  color: var(--lab-green);
+  font-weight: 650;
+}
+.learning-page .eco-firma {
+  margin: 40px 0 30px;
+  font-size: 12px;
+  color: var(--color-text-lighter);
+}
+@media (max-width: 760px) {
+  .eco-grid,
+  .eco-figures,
+  .eco-cases {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .eco-panel {
+    padding: 18px;
+  }
+  .eco-bar {
+    width: 48px;
+  }
+}

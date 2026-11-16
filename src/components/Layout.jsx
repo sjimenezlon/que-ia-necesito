@@ -14,6 +14,7 @@ const navLinks = [
   { to: '/docentes', label: 'Docentes' },
   { to: '/investigadores', label: 'Investigadores' },
   { to: '/sector-publico', label: 'Sector Público' },
+  { to: '/economia', label: 'Decisiones económicas' },
   { to: '/asia', label: 'IA Asiática' },
   { to: '/prompt-lab', label: 'Prompt Lab' },
   { to: '/comparar', label: 'Comparar' },

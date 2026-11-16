@@ -64,6 +64,7 @@ export default function About() {
             'Guía para docentes con actividades, evaluación y ejemplos de uso',
             'Capítulo para jóvenes investigadores: herramientas por momento de la investigación, políticas editoriales, contexto colombiano y generador de la declaración de uso de IA',
             'Capítulo especial para el sector público colombiano con casos de uso',
+            'Capítulo de decisiones económicas: siete decisiones (precio, demanda, inversión, talento, riesgo, mercado y entorno macro) con datos abiertos de Colombia, prompts y un acta de decisión',
             'Capítulo especial de herramientas de IA asiáticas (China, Corea, Japón, India), verificado al 9 de noviembre de 2026',
             'Información de precios, nivel de dificultad y casos de uso',
             'Guías paso a paso para empezar con cada herramienta',

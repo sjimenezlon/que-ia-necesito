@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
 import Layout from './components/Layout'
 import Home from './pages/Home'
@@ -17,6 +17,7 @@ import Examples from './pages/Examples'
 
 const SectorPublico = lazy(() => import('./pages/SectorPublico'))
 const Pymes = lazy(() => import('./pages/Pymes'))
+const Economia = lazy(() => import('./pages/Economia'))
 const Aprender = lazy(() => import('./pages/Aprender'))
 const Docentes = lazy(() => import('./pages/Docentes'))
 const Investigadores = lazy(() => import('./pages/Investigadores'))
@@ -81,6 +82,8 @@ export default function App() {
           <Route path="/acerca" element={<About />} />
           <Route path="/ejemplos" element={<Examples />} />
           <Route path="/pymes" element={<Suspense fallback={<ChapterFallback />}><Pymes /></Suspense>} />
+          <Route path="/economia" element={<Suspense fallback={<ChapterFallback />}><Economia /></Suspense>} />
+          <Route path="/decisiones-economicas" element={<Navigate to="/economia" replace />} />
           <Route path="/aprender" element={<Suspense fallback={<ChapterFallback />}><Aprender /></Suspense>} />
           <Route
             path="/herramienta/:id"

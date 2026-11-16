@@ -11,6 +11,7 @@ import {
   GraduationCap,
   Heart,
   Landmark,
+  Scale,
   Microscope,
   Backpack,
   Search,
@@ -287,6 +288,33 @@ export default function Home({
                     ficha para preparar tu primer piloto.
                   </p>
                   <span className="inline-flex items-center gap-1.5 text-primary font-semibold text-sm mt-4">
+                    Explorar la guía{' '}
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </div>
+            </Link>
+            <Link
+              to="/economia"
+              className="group relative overflow-hidden bg-surface border border-border rounded-2xl p-6 no-underline hover:shadow-lg hover:-translate-y-0.5 hover:border-accent/35 transition-all"
+            >
+              <div className="absolute -top-12 -right-12 w-36 h-36 bg-accent/8 rounded-full blur-2xl" />
+              <div className="relative flex items-start gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center shrink-0">
+                  <Scale className="w-6 h-6 text-accent" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="text-[10px] font-bold text-accent uppercase tracking-[0.13em] mb-1">
+                    Nuevo capítulo
+                  </div>
+                  <h3 className="font-display font-bold text-text text-xl tracking-tight mb-2">
+                    IA para decisiones económicas
+                  </h3>
+                  <p className="text-sm text-text-light leading-relaxed">
+                    Predecir no es decidir: siete decisiones de precio, inversión, talento, riesgo y
+                    mercado, con datos abiertos de Colombia, prompts y un acta de decisión.
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 text-accent font-semibold text-sm mt-4">
                     Explorar la guía{' '}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
