@@ -1,6 +1,6 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Download, ExternalLink, Scale, CheckCircle2 } from 'lucide-react'
+import { ArrowRight, Download, ExternalLink, Scale, CheckCircle2, Gauge, Map } from 'lucide-react'
 import CopyButton from '../components/CopyButton'
 import tools from '../data/tools.json'
 import {
@@ -14,10 +14,12 @@ import {
   buildActa,
 } from '../data/economia'
 import { technical } from '../data/economiaTecnica'
+import IndicatorBuilder from '../components/economia/IndicatorBuilder'
 import { readProgress, saveProgress, downloadText } from '../utils/learning'
 import './learning.css'
 import './economia.css'
 
+const MapBuilder = lazy(() => import('../components/economia/MapBuilder'))
 const STORAGE_KEY = 'qia-economia-v1'
 const emptyActa = Object.fromEntries(actaFields.map(([k]) => [k, '']))
 const validActa = (value) => actaFields.every(([k]) => typeof value[k] === 'string')
@@ -84,7 +86,10 @@ function DecisionPanel({ decision }) {
 }
 
 const num = (n, d = 1) =>
-  n.toLocaleString('es-CO', { minimumFractionDigits: d, maximumFractionDigits: d })
+  n.toLocaleString('es-CO', {
+    minimumFractionDigits: d,
+    maximumFractionDigits: d,
+  })
 const signed = (n, d = 1) => (n > 0 ? '+' : n < 0 ? '−' : '') + num(Math.abs(n), d)
 
 function PricingCalc() {
@@ -219,6 +224,7 @@ function TechPanel({ item }) {
 }
 
 export default function Economia() {
+  const [taller, setTaller] = useState('indicador')
   const [tech, setTech] = useState(technical[0].id)
   const techRefs = useRef({})
   const techItem = technical.find((t) => t.id === tech)
@@ -277,8 +283,8 @@ export default function Economia() {
               <a className="lab-primary" href="#decisiones">
                 Ir a mi decisión <ArrowRight size={17} />
               </a>
-              <a className="lab-text-button" href="#acta">
-                Llenar un acta de decisión <ArrowRight size={17} />
+              <a className="lab-text-button" href="#taller">
+                Construir un indicador o un mapa <ArrowRight size={17} />
               </a>
             </div>
             <p className="lab-small">
@@ -321,7 +327,8 @@ export default function Economia() {
         <a href="#errores">4. Cinco errores</a>
         <a href="#acta">5. Acta de decisión</a>
         <a href="#tecnica">6. Caja técnica</a>
-        <a href="#casos">7. Casos</a>
+        <a href="#taller">7. Indicadores y mapas</a>
+        <a href="#casos">8. Casos</a>
       </nav>
 
       <section id="momentos" className="lab-container lab-section" aria-labelledby="eco-momentos">
@@ -545,7 +552,9 @@ export default function Economia() {
 
       <section id="tecnica" className="lab-container lab-section" aria-labelledby="eco-tecnica">
         <span className="lab-kicker">06 / Caja técnica</span>
-        <h2 id="eco-tecnica">Cuatro oficios que conviene dominar: precio, datos, Markdown y monitoreo.</h2>
+        <h2 id="eco-tecnica">
+          Cuatro oficios que conviene dominar: precio, datos, Markdown y monitoreo.
+        </h2>
         <p>Conceptos, código y plantillas para pasar de conversar con la IA a trabajar con ella.</p>
         <div className="lab-filters eco-tabs" role="tablist" aria-label="Caja técnica">
           {technical.map((t, i) => (
@@ -573,8 +582,57 @@ export default function Economia() {
         </p>
       </section>
 
+      <section id="taller" className="lab-container lab-section" aria-labelledby="eco-taller">
+        <span className="lab-kicker">07 / Taller para quien decide</span>
+        <h2 id="eco-taller">Construye un indicador y un mapa que sirvan para decidir.</h2>
+        <p>
+          Dos herramientas que funcionan aquí mismo, sin registro. La primera te lleva de una
+          decisión a un indicador con meta, alerta y responsable. La segunda pinta un mapa de
+          Colombia con datos del DANE o con los tuyos, y te muestra cómo cambia el mensaje según la
+          forma de colorearlo.
+        </p>
+        <div className="lab-filters eco-tabs tal-tabs" role="tablist" aria-label="Taller">
+          <button
+            role="tab"
+            id="tal-tab-indicador"
+            aria-selected={taller === 'indicador'}
+            aria-controls="tal-panel"
+            onClick={() => setTaller('indicador')}
+          >
+            <Gauge size={16} aria-hidden="true" /> Construir un indicador
+          </button>
+          <button
+            role="tab"
+            id="tal-tab-mapa"
+            aria-selected={taller === 'mapa'}
+            aria-controls="tal-panel"
+            onClick={() => setTaller('mapa')}
+          >
+            <Map size={16} aria-hidden="true" /> Construir un mapa
+          </button>
+        </div>
+        <div
+          className="eco-panel tal-panel"
+          role="tabpanel"
+          id="tal-panel"
+          aria-labelledby={`tal-tab-${taller}`}
+        >
+          {taller === 'indicador' ? (
+            <IndicatorBuilder />
+          ) : (
+            <Suspense fallback={<p className="lab-small">Cargando el mapa…</p>}>
+              <MapBuilder />
+            </Suspense>
+          )}
+        </div>
+        <p className="lab-small">
+          Lo que escribas se queda en este navegador. La ficha y el mapa son tuyos: descárgalos y
+          llévalos al comité. La meta, el umbral y la lectura final los pone una persona.
+        </p>
+      </section>
+
       <section id="casos" className="lab-container lab-section" aria-labelledby="eco-casos">
-        <span className="lab-kicker">07 / Para ver en funcionamiento</span>
+        <span className="lab-kicker">08 / Para ver en funcionamiento</span>
         <h2 id="eco-casos">Cuatro trabajos donde esto ya se hizo con datos públicos.</h2>
         <div className="eco-cases">
           {cases.map(([title, text, url, label]) => (

@@ -337,3 +337,359 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* ---------- taller: indicadores y mapas ---------- */
+.tal-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.tal-panel fieldset {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  padding: 18px 0 6px;
+  margin: 0;
+  min-width: 0;
+}
+.tal-panel legend {
+  padding: 0 10px 0 0;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.tal-panel legend b {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--lab-ink);
+  color: var(--color-bg);
+  font-size: 13px;
+}
+.tal-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 0 40px;
+  align-items: start;
+}
+.tal-out {
+  position: sticky;
+  top: 84px;
+  min-width: 0;
+}
+.tal-presets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.tal-presets .lab-small {
+  margin: 0 !important;
+}
+.tal-presets button {
+  min-height: 36px;
+  padding: 4px 13px;
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--lab-green);
+  cursor: pointer;
+}
+.tal-presets button:hover {
+  border-color: var(--lab-green);
+}
+.tal-presets .tal-clear {
+  color: var(--color-text-light);
+}
+.tal-field {
+  min-width: 0;
+}
+.tal-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 16px;
+}
+.tal-formula {
+  margin: 12px 0 0 !important;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+.tal-formula span,
+.tal-formula em {
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--color-text-light);
+}
+.tal-formula span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.tal-light {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-left: 6px solid var(--color-text-lighter);
+  border-radius: 12px;
+}
+.tal-light.tal-meta {
+  border-left-color: #1f7a55;
+}
+.tal-light.tal-seguimiento {
+  border-left-color: #b7791f;
+}
+.tal-light.tal-alerta {
+  border-left-color: #c2410c;
+}
+.learning-page .tal-value {
+  margin: 14px 0 0;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+.tal-value span {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--color-text-light);
+}
+.learning-page .tal-state {
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: 650;
+  color: var(--color-text);
+}
+.tal-meta .tal-state b {
+  color: #1f7a55;
+}
+.tal-seguimiento .tal-state b {
+  color: #b7791f;
+}
+.tal-alerta .tal-state b {
+  color: #c2410c;
+}
+.tal-checks {
+  margin: 22px 0;
+}
+.tal-checks ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: grid;
+  gap: 10px;
+}
+.tal-checks li {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--color-text-light);
+}
+.tal-checks svg {
+  flex: none;
+  margin-top: 2px;
+}
+.tal-checks li.ok svg {
+  color: var(--lab-green);
+}
+.tal-checks strong {
+  display: block;
+  color: var(--color-text);
+  font-weight: 650;
+}
+.tal-switch {
+  margin-bottom: 10px;
+}
+.tal-switch button[aria-pressed='true'] {
+  background: var(--lab-ink);
+  color: var(--color-bg);
+  border-color: var(--lab-ink);
+}
+.tal-pre pre {
+  max-height: 340px;
+  overflow: auto;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+.tal-map-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 40px;
+}
+.tal-own textarea {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+}
+.tal-check {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.tal-check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--lab-ink);
+}
+.lab-note.tal-warn,
+.lab-note.tal-method {
+  margin-top: 14px;
+  font-size: 14px;
+}
+.tal-map-view {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 40px;
+  margin: 24px 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+  align-items: start;
+}
+.tal-map-fig svg {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  margin: 0 auto;
+  touch-action: manipulation;
+}
+.tal-map-fig path {
+  cursor: pointer;
+  transition: fill 0.35s;
+}
+.learning-page .tal-map-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.learning-page .tal-map-tip {
+  margin: 4px 0 8px;
+  min-height: 1.5em;
+  font-size: 14px;
+  font-weight: 650;
+  color: var(--lab-green);
+  font-variant-numeric: tabular-nums;
+}
+.tal-legend {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+}
+.tal-legend li {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  color: var(--color-text-light);
+}
+.tal-legend i {
+  width: 22px;
+  height: 14px;
+  border-radius: 3px;
+}
+.tal-legend .tal-hatch {
+  background: repeating-linear-gradient(45deg, #eceef0 0 3px, #9aa3ab 3px 5px);
+}
+.tal-legend b {
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+.tal-reading ul {
+  margin: 8px 0 22px;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+.tal-rank {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  max-height: 420px;
+  overflow-y: auto;
+  border-top: 1px solid var(--color-border);
+}
+.tal-rank button {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1.3fr) minmax(0, 1fr) 52px;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  min-height: 34px;
+  padding: 4px 6px;
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  background: transparent;
+  font-size: 13px;
+  text-align: left;
+  color: var(--color-text);
+  cursor: default;
+}
+.tal-rank button.on {
+  background: color-mix(in srgb, var(--lab-green) 12%, transparent);
+}
+.tal-rank-n {
+  color: var(--color-text-light);
+  font-variant-numeric: tabular-nums;
+}
+.tal-rank-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tal-rank-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--color-border);
+  overflow: hidden;
+}
+.tal-rank-bar i {
+  display: block;
+  height: 100%;
+}
+.tal-rank-v {
+  text-align: right;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+.tal-map-out {
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+@media (max-width: 860px) {
+  .tal-grid,
+  .tal-map-controls,
+  .tal-map-view {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .tal-out {
+    position: static;
+    margin-top: 24px;
+  }
+}
+.tal-panel .lab-small a svg {
+  display: inline;
+  vertical-align: -1px;
+}
+.tal-panel fieldset .lab-label {
+  margin-top: 14px;
+}
+.tal-panel fieldset > .lab-filters {
+  margin-top: 12px;
+}
