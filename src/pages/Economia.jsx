@@ -1,6 +1,15 @@
 import { useState, useRef, lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Download, ExternalLink, Scale, CheckCircle2, Gauge, Map } from 'lucide-react'
+import {
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Scale,
+  CheckCircle2,
+  Gauge,
+  Map,
+  Globe,
+} from 'lucide-react'
 import CopyButton from '../components/CopyButton'
 import tools from '../data/tools.json'
 import {
@@ -20,6 +29,7 @@ import './learning.css'
 import './economia.css'
 
 const MapBuilder = lazy(() => import('../components/economia/MapBuilder'))
+const GlobalCompare = lazy(() => import('../components/economia/GlobalCompare'))
 const STORAGE_KEY = 'qia-economia-v1'
 const emptyActa = Object.fromEntries(actaFields.map(([k]) => [k, '']))
 const validActa = (value) => actaFields.every(([k]) => typeof value[k] === 'string')
@@ -327,7 +337,7 @@ export default function Economia() {
         <a href="#errores">4. Cinco errores</a>
         <a href="#acta">5. Acta de decisión</a>
         <a href="#tecnica">6. Caja técnica</a>
-        <a href="#taller">7. Indicadores y mapas</a>
+        <a href="#taller">7. Indicadores, mapas y mundo</a>
         <a href="#casos">8. Casos</a>
       </nav>
 
@@ -584,12 +594,15 @@ export default function Economia() {
 
       <section id="taller" className="lab-container lab-section" aria-labelledby="eco-taller">
         <span className="lab-kicker">07 / Taller para quien decide</span>
-        <h2 id="eco-taller">Construye un indicador y un mapa que sirvan para decidir.</h2>
+        <h2 id="eco-taller">
+          Construye indicadores, mapas y comparaciones que sirvan para decidir.
+        </h2>
         <p>
-          Dos herramientas que funcionan aquí mismo, sin registro. La primera te lleva de una
-          decisión a un indicador con meta, alerta y responsable. La segunda pinta un mapa de
-          Colombia con datos del DANE o con los tuyos, y te muestra cómo cambia el mensaje según la
-          forma de colorearlo.
+          Tres herramientas que funcionan aquí mismo, sin registro. La primera te lleva de una
+          decisión de empresa, de finanzas o de sector a un indicador con meta, alerta y
+          responsable, y lo guarda en un tablero de seguimiento. La segunda pinta un mapa de
+          Colombia con datos del DANE o con los tuyos. La tercera compara tu supuesto de presupuesto
+          con las proyecciones del FMI para doce economías.
         </p>
         <div className="lab-filters eco-tabs tal-tabs" role="tablist" aria-label="Taller">
           <button
@@ -610,6 +623,15 @@ export default function Economia() {
           >
             <Map size={16} aria-hidden="true" /> Construir un mapa
           </button>
+          <button
+            role="tab"
+            id="tal-tab-mundo"
+            aria-selected={taller === 'mundo'}
+            aria-controls="tal-panel"
+            onClick={() => setTaller('mundo')}
+          >
+            <Globe size={16} aria-hidden="true" /> Comparar con el mundo
+          </button>
         </div>
         <div
           className="eco-panel tal-panel"
@@ -620,8 +642,8 @@ export default function Economia() {
           {taller === 'indicador' ? (
             <IndicatorBuilder />
           ) : (
-            <Suspense fallback={<p className="lab-small">Cargando el mapa…</p>}>
-              <MapBuilder />
+            <Suspense fallback={<p className="lab-small">Cargando…</p>}>
+              {taller === 'mapa' ? <MapBuilder /> : <GlobalCompare />}
             </Suspense>
           )}
         </div>

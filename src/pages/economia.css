@@ -693,3 +693,93 @@
 .tal-panel fieldset > .lab-filters {
   margin-top: 12px;
 }
+
+/* ---------- tablero de seguimiento y comparación global ---------- */
+.tal-board {
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid var(--color-border);
+}
+.tal-board-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 30px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.tal-board-head .lab-small {
+  margin: 4px 0 0 !important;
+  max-width: 52ch;
+}
+.tal-board-table small {
+  display: block;
+  font-weight: 400;
+  color: var(--color-text-light);
+}
+.tal-board-table .tal-state {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 650;
+}
+.tal-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+  color: var(--lab-green);
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.tal-x {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-text-light);
+  cursor: pointer;
+}
+.tal-rank-open {
+  max-height: none;
+  overflow: visible;
+}
+.tal-rank-open button {
+  cursor: pointer;
+  min-height: 40px;
+  font-size: 14px;
+}
+.tal-rank-bar {
+  position: relative;
+  overflow: visible;
+}
+.tal-rank-bar i {
+  border-radius: 4px;
+}
+.tal-rank-bar u {
+  position: absolute;
+  top: -5px;
+  width: 3px;
+  height: 18px;
+  margin-left: -1px;
+  background: #d9480f;
+  border-radius: 2px;
+}
+.tal-glob .lab-filters + .lab-filters {
+  margin-top: 8px;
+}
+.tal-glob .tal-reading .lab-kicker + .tal-pre {
+  margin-top: 8px;
+}
+.tal-board-table {
+  width: 100%;
+}
+.tal-board-table th,
+.tal-board-table td {
+  text-align: left;
+}

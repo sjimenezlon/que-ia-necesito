@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Download, CheckCircle2, Circle } from 'lucide-react'
+import { Download, CheckCircle2, Circle, Plus, X } from 'lucide-react'
 import CopyButton from '../CopyButton'
 import { readProgress, saveProgress, downloadText } from '../../utils/learning'
 import {
@@ -13,9 +13,13 @@ import {
   indicatorChecks,
   buildIndicatorSheet,
   buildIndicatorPrompt,
+  boardRow,
+  buildBoardSheet,
 } from '../../data/economiaTaller'
 
 const STORAGE_KEY = 'qia-economia-indicador-v1'
+const BOARD_KEY = 'qia-economia-tablero-v1'
+const validBoard = (b) => Array.isArray(b) && b.every((r) => r && typeof r.nombre === 'string')
 const valid = (v) => Object.keys(emptyIndicator).every((k) => typeof v[k] === 'string')
 
 function Field({ id, label, hint, value, onChange, rows }) {
@@ -40,6 +44,11 @@ function Field({ id, label, hint, value, onChange, rows }) {
 export default function IndicatorBuilder() {
   const [v, setV] = useState(() => readProgress(STORAGE_KEY, emptyIndicator, valid))
   const [out, setOut] = useState('ficha')
+  const [board, setBoard] = useState(() => readProgress(BOARD_KEY, [], validBoard))
+  const saveBoard = (next) => {
+    setBoard(next)
+    saveProgress(BOARD_KEY, next)
+  }
   const set = (key, value) => {
     const next = { ...v, [key]: value }
     setV(next)
@@ -57,236 +66,328 @@ export default function IndicatorBuilder() {
   const prompt = buildIndicatorPrompt(v, r)
   const state = states[r.state]
 
+  const boardText = buildBoardSheet(board)
+
   return (
-    <div className="tal-grid">
-      <div className="tal-form">
-        <div className="tal-presets">
-          <span className="lab-small">Empieza con un ejemplo:</span>
-          {indicatorPresets.map((p) => (
-            <button key={p.id} type="button" onClick={() => load(p.values)}>
-              {p.label}
-            </button>
-          ))}
-          <button type="button" className="tal-clear" onClick={() => load({})}>
-            Vaciar
-          </button>
-        </div>
-
-        <fieldset>
-          <legend>
-            <b>1</b> La decisión
-          </legend>
-          <Field
-            id="ind-decision"
-            label="¿Qué decisión va a informar este indicador?"
-            hint="Ej.: si se endurece la política de crédito a clientes"
-            value={v.decision}
-            onChange={(x) => set('decision', x)}
-            rows={2}
-          />
-          <Field
-            id="ind-nombre"
-            label="Nombre corto del indicador"
-            hint="Ej.: cartera vencida"
-            value={v.nombre}
-            onChange={(x) => set('nombre', x)}
-          />
-        </fieldset>
-
-        <fieldset>
-          <legend>
-            <b>2</b> La cuenta
-          </legend>
-          <div className="lab-filters tal-types" role="group" aria-label="Tipo de indicador">
-            {indicatorTypes.map((t) => (
-              <button
-                key={t.id}
-                type="button"
-                aria-pressed={v.tipo === t.id}
-                onClick={() => set('tipo', t.id)}
-              >
-                {t.label}
+    <>
+      <div className="tal-grid">
+        <div className="tal-form">
+          <div className="tal-presets">
+            <span className="lab-small">Empieza con un ejemplo:</span>
+            {indicatorPresets.map((p) => (
+              <button key={p.id} type="button" onClick={() => load(p.values)}>
+                {p.label}
               </button>
             ))}
+            <button type="button" className="tal-clear" onClick={() => load({})}>
+              Vaciar
+            </button>
           </div>
-          <p className="tal-formula">
-            <span>Fórmula</span> {r.type.formula} <em>· {r.type.unit}</em>
-          </p>
-          <Field
-            id="ind-a"
-            label={r.type.a}
-            hint="Qué se cuenta arriba"
-            value={v.a}
-            onChange={(x) => set('a', x)}
-          />
-          <Field
-            id="ind-b"
-            label={r.type.b}
-            hint="Contra qué se compara"
-            value={v.b}
-            onChange={(x) => set('b', x)}
-          />
-        </fieldset>
 
-        <fieldset>
-          <legend>
-            <b>3</b> La fuente
-          </legend>
-          <Field
-            id="ind-fuente"
-            label="¿De dónde salen A y B?"
-            hint="Sistema, encuesta o registro, con quien lo produce"
-            value={v.fuente}
-            onChange={(x) => set('fuente', x)}
-          />
-          <div className="tal-field">
-            <label className="lab-label" htmlFor="ind-frecuencia">
-              ¿Cada cuánto se actualiza?
-            </label>
-            <select
-              id="ind-frecuencia"
-              value={v.frecuencia}
-              onChange={(e) => set('frecuencia', e.target.value)}
-            >
-              {frequencies.map((f) => (
-                <option key={f}>{f}</option>
+          <fieldset>
+            <legend>
+              <b>1</b> La decisión
+            </legend>
+            <Field
+              id="ind-decision"
+              label="¿Qué decisión va a informar este indicador?"
+              hint="Ej.: si se endurece la política de crédito a clientes"
+              value={v.decision}
+              onChange={(x) => set('decision', x)}
+              rows={2}
+            />
+            <Field
+              id="ind-nombre"
+              label="Nombre corto del indicador"
+              hint="Ej.: cartera vencida"
+              value={v.nombre}
+              onChange={(x) => set('nombre', x)}
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <b>2</b> La cuenta
+            </legend>
+            <div className="lab-filters tal-types" role="group" aria-label="Tipo de indicador">
+              {indicatorTypes.map((t) => (
+                <button
+                  key={t.id}
+                  type="button"
+                  aria-pressed={v.tipo === t.id}
+                  onClick={() => set('tipo', t.id)}
+                >
+                  {t.label}
+                </button>
               ))}
-            </select>
-          </div>
-        </fieldset>
+            </div>
+            <p className="tal-formula">
+              <span>Fórmula</span> {r.type.formula} <em>· {r.type.unit}</em>
+            </p>
+            <Field
+              id="ind-a"
+              label={r.type.a}
+              hint="Qué se cuenta arriba"
+              value={v.a}
+              onChange={(x) => set('a', x)}
+            />
+            <Field
+              id="ind-b"
+              label={r.type.b}
+              hint="Contra qué se compara"
+              value={v.b}
+              onChange={(x) => set('b', x)}
+            />
+          </fieldset>
 
-        <fieldset>
-          <legend>
-            <b>4</b> La regla
-          </legend>
-          <div className="lab-filters" role="group" aria-label="Sentido del indicador">
-            <button
-              type="button"
-              aria-pressed={v.sentido === 'sube'}
-              onClick={() => set('sentido', 'sube')}
-            >
-              Más es mejor
-            </button>
-            <button
-              type="button"
-              aria-pressed={v.sentido === 'baja'}
-              onClick={() => set('sentido', 'baja')}
-            >
-              Menos es mejor
-            </button>
-          </div>
-          <div className="tal-pair">
+          <fieldset>
+            <legend>
+              <b>3</b> La fuente
+            </legend>
             <Field
-              id="ind-meta"
-              label={`Meta (${r.type.unit})`}
-              hint="Donde quieres estar"
-              value={v.meta}
-              onChange={(x) => set('meta', x)}
+              id="ind-fuente"
+              label="¿De dónde salen A y B?"
+              hint="Sistema, encuesta o registro, con quien lo produce"
+              value={v.fuente}
+              onChange={(x) => set('fuente', x)}
+            />
+            <div className="tal-field">
+              <label className="lab-label" htmlFor="ind-frecuencia">
+                ¿Cada cuánto se actualiza?
+              </label>
+              <select
+                id="ind-frecuencia"
+                value={v.frecuencia}
+                onChange={(e) => set('frecuencia', e.target.value)}
+              >
+                {frequencies.map((f) => (
+                  <option key={f}>{f}</option>
+                ))}
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <b>4</b> La regla
+            </legend>
+            <div className="lab-filters" role="group" aria-label="Sentido del indicador">
+              <button
+                type="button"
+                aria-pressed={v.sentido === 'sube'}
+                onClick={() => set('sentido', 'sube')}
+              >
+                Más es mejor
+              </button>
+              <button
+                type="button"
+                aria-pressed={v.sentido === 'baja'}
+                onClick={() => set('sentido', 'baja')}
+              >
+                Menos es mejor
+              </button>
+            </div>
+            <div className="tal-pair">
+              <Field
+                id="ind-meta"
+                label={`Meta (${r.type.unit})`}
+                hint="Donde quieres estar"
+                value={v.meta}
+                onChange={(x) => set('meta', x)}
+              />
+              <Field
+                id="ind-alerta"
+                label={`Alerta (${r.type.unit})`}
+                hint="Donde alguien debe actuar"
+                value={v.alerta}
+                onChange={(x) => set('alerta', x)}
+              />
+            </div>
+            <Field
+              id="ind-responsable"
+              label="¿Quién responde por el indicador?"
+              hint="Un cargo o un nombre, no un comité"
+              value={v.responsable}
+              onChange={(x) => set('responsable', x)}
             />
             <Field
-              id="ind-alerta"
-              label={`Alerta (${r.type.unit})`}
-              hint="Donde alguien debe actuar"
-              value={v.alerta}
-              onChange={(x) => set('alerta', x)}
+              id="ind-accion"
+              label="¿Qué hace si cruza la alerta?"
+              hint="Ej.: revisa los diez clientes con más mora y propone ajuste de cupos"
+              value={v.accion}
+              onChange={(x) => set('accion', x)}
+              rows={2}
+            />
+          </fieldset>
+        </div>
+
+        <div className="tal-out">
+          <div className={`tal-light tal-${r.state}`} aria-live="polite">
+            <span className="lab-kicker">Pruébalo con dos cifras</span>
+            <div className="tal-pair">
+              <Field
+                id="ind-va"
+                label="Valor de A"
+                hint="Ej.: 1.240"
+                value={v.va}
+                onChange={(x) => set('va', x)}
+              />
+              <Field
+                id="ind-vb"
+                label="Valor de B"
+                hint="Ej.: 15.300"
+                value={v.vb}
+                onChange={(x) => set('vb', x)}
+              />
+            </div>
+            <p className="tal-value">
+              {r.value === null ? '—' : fmt(r.value)} <span>{r.type.unit}</span>
+            </p>
+            <p className="tal-state">
+              <b aria-hidden="true">{state.mark}</b> {state.label}
+              {r.state === 'sin-dato' && r.value !== null && ' · falta fijar meta o alerta'}
+              {r.value === null && ' · escribe A y B para ver el resultado'}
+            </p>
+          </div>
+
+          <div className="tal-checks">
+            <span className="lab-kicker">
+              {done} de {checks.length} · lo que hace que sirva para decidir
+            </span>
+            <ul>
+              {checks.map(([label, ok, why]) => (
+                <li key={label} className={ok ? 'ok' : ''}>
+                  {ok ? (
+                    <CheckCircle2 size={17} aria-hidden="true" />
+                  ) : (
+                    <Circle size={17} aria-hidden="true" />
+                  )}
+                  <div>
+                    <strong>{label}</strong>
+                    {!ok && <span>{why}</span>}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="lab-filters eco-tabs tal-switch" role="group" aria-label="Qué te llevas">
+            <button type="button" aria-pressed={out === 'ficha'} onClick={() => setOut('ficha')}>
+              Ficha del indicador
+            </button>
+            <button type="button" aria-pressed={out === 'prompt'} onClick={() => setOut('prompt')}>
+              Prompt para calcularlo con IA
+            </button>
+          </div>
+          <div className="lab-prompt tal-pre">
+            <pre>{out === 'ficha' ? sheet : prompt}</pre>
+          </div>
+          <div className="lab-actions">
+            {out === 'ficha' && (
+              <button
+                className="lab-primary"
+                onClick={() => downloadText('ficha-de-indicador.md', sheet)}
+              >
+                <Download size={17} /> Descargar .md
+              </button>
+            )}
+            <CopyButton
+              key={out === 'ficha' ? sheet : prompt}
+              text={out === 'ficha' ? sheet : prompt}
+              label={out === 'ficha' ? 'Copiar ficha' : 'Copiar prompt'}
+              successMessage="Copiado."
             />
           </div>
-          <Field
-            id="ind-responsable"
-            label="¿Quién responde por el indicador?"
-            hint="Un cargo o un nombre, no un comité"
-            value={v.responsable}
-            onChange={(x) => set('responsable', x)}
-          />
-          <Field
-            id="ind-accion"
-            label="¿Qué hace si cruza la alerta?"
-            hint="Ej.: revisa los diez clientes con más mora y propone ajuste de cupos"
-            value={v.accion}
-            onChange={(x) => set('accion', x)}
-            rows={2}
-          />
-        </fieldset>
+        </div>
       </div>
-
-      <div className="tal-out">
-        <div className={`tal-light tal-${r.state}`} aria-live="polite">
-          <span className="lab-kicker">Pruébalo con dos cifras</span>
-          <div className="tal-pair">
-            <Field
-              id="ind-va"
-              label="Valor de A"
-              hint="Ej.: 1.240"
-              value={v.va}
-              onChange={(x) => set('va', x)}
-            />
-            <Field
-              id="ind-vb"
-              label="Valor de B"
-              hint="Ej.: 15.300"
-              value={v.vb}
-              onChange={(x) => set('vb', x)}
-            />
+      <div className="tal-board">
+        <div className="tal-board-head">
+          <div>
+            <span className="lab-kicker">Mi tablero de seguimiento</span>
+            <p className="lab-small">
+              Guarda cada indicador que construyas. Tres por frente suele ser suficiente: finanzas,
+              comercial, sector y entorno.
+            </p>
           </div>
-          <p className="tal-value">
-            {r.value === null ? '—' : fmt(r.value)} <span>{r.type.unit}</span>
-          </p>
-          <p className="tal-state">
-            <b aria-hidden="true">{state.mark}</b> {state.label}
-            {r.state === 'sin-dato' && r.value !== null && ' · falta fijar meta o alerta'}
-            {r.value === null && ' · escribe A y B para ver el resultado'}
-          </p>
-        </div>
-
-        <div className="tal-checks">
-          <span className="lab-kicker">
-            {done} de {checks.length} · lo que hace que sirva para decidir
-          </span>
-          <ul>
-            {checks.map(([label, ok, why]) => (
-              <li key={label} className={ok ? 'ok' : ''}>
-                {ok ? (
-                  <CheckCircle2 size={17} aria-hidden="true" />
-                ) : (
-                  <Circle size={17} aria-hidden="true" />
-                )}
-                <div>
-                  <strong>{label}</strong>
-                  {!ok && <span>{why}</span>}
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="lab-filters eco-tabs tal-switch" role="group" aria-label="Qué te llevas">
-          <button type="button" aria-pressed={out === 'ficha'} onClick={() => setOut('ficha')}>
-            Ficha del indicador
-          </button>
-          <button type="button" aria-pressed={out === 'prompt'} onClick={() => setOut('prompt')}>
-            Prompt para calcularlo con IA
+          <button
+            className="lab-primary"
+            type="button"
+            disabled={board.length >= 12}
+            onClick={() => saveBoard([...board, boardRow(v, r)])}
+          >
+            <Plus size={17} /> Guardar este indicador
           </button>
         </div>
-        <div className="lab-prompt tal-pre">
-          <pre>{out === 'ficha' ? sheet : prompt}</pre>
-        </div>
-        <div className="lab-actions">
-          {out === 'ficha' && (
-            <button
-              className="lab-primary"
-              onClick={() => downloadText('ficha-de-indicador.md', sheet)}
-            >
-              <Download size={17} /> Descargar .md
-            </button>
-          )}
-          <CopyButton
-            key={out === 'ficha' ? sheet : prompt}
-            text={out === 'ficha' ? sheet : prompt}
-            label={out === 'ficha' ? 'Copiar ficha' : 'Copiar prompt'}
-            successMessage="Copiado."
-          />
-        </div>
+        {board.length === 0 ? (
+          <p className="lab-small">Todavía no has guardado ninguno.</p>
+        ) : (
+          <>
+            <div className="case-table-scroll" role="region" aria-label="Tablero" tabIndex={0}>
+              <table className="eco-table tal-board-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Indicador</th>
+                    <th scope="col">Último valor</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Meta · alerta</th>
+                    <th scope="col">Responsable</th>
+                    <th scope="col">
+                      <span className="sr-only">Acciones</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {board.map((row) => (
+                    <tr key={row.id}>
+                      <th scope="row">
+                        <button type="button" className="tal-link" onClick={() => load(row.def)}>
+                          {row.nombre}
+                        </button>
+                        <small>{row.frecuencia}</small>
+                      </th>
+                      <td>{row.valor}</td>
+                      <td className={`tal-${row.estado}`}>
+                        <span className="tal-state">
+                          <b aria-hidden="true">{states[row.estado].mark}</b>{' '}
+                          {states[row.estado].label}
+                        </span>
+                      </td>
+                      <td>
+                        {row.meta} · {row.alerta}
+                      </td>
+                      <td>{row.responsable}</td>
+                      <td>
+                        <button
+                          type="button"
+                          className="tal-x"
+                          aria-label={`Quitar ${row.nombre}`}
+                          onClick={() => saveBoard(board.filter((x) => x.id !== row.id))}
+                        >
+                          <X size={16} />
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="lab-actions">
+              <button
+                className="lab-text-button"
+                onClick={() => downloadText('tablero-de-seguimiento.md', boardText)}
+              >
+                <Download size={17} /> Descargar tablero (.md)
+              </button>
+              <CopyButton
+                key={boardText}
+                text={boardText}
+                label="Copiar tablero"
+                successMessage="Copiado."
+              />
+            </div>
+          </>
+        )}
       </div>
-    </div>
+    </>
   )
 }

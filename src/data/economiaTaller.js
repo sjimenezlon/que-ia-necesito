@@ -145,6 +145,65 @@ export const indicatorPresets = [
   },
 ]
 
+indicatorPresets.push(
+  {
+    id: 'intereses',
+    label: 'Cobertura de intereses',
+    values: {
+      decision: 'Si la empresa toma más deuda este año',
+      nombre: 'Cobertura de intereses',
+      tipo: 'razon',
+      a: 'Utilidad operativa del periodo',
+      b: 'Intereses pagados en el periodo',
+      fuente: 'Estados financieros de la empresa',
+      frecuencia: 'Trimestral',
+      sentido: 'sube',
+    },
+  },
+  {
+    id: 'margen',
+    label: 'Margen de contribución',
+    values: {
+      decision: 'Qué línea de producto crece y cuál se cierra',
+      nombre: 'Margen de contribución de la línea',
+      tipo: 'porcentaje',
+      a: 'Ventas menos costos variables de la línea',
+      b: 'Ventas de la línea',
+      fuente: 'Ventas y costos del sistema de la empresa',
+      frecuencia: 'Mensual',
+      sentido: 'sube',
+    },
+  },
+  {
+    id: 'sector',
+    label: 'Ventas frente al sector',
+    values: {
+      decision: 'Si la caída de ventas pide un plan propio o es de todo el sector',
+      nombre: 'Brecha de crecimiento frente al sector',
+      tipo: 'brecha',
+      a: 'Variación anual de las ventas de la empresa (%)',
+      b: 'Variación anual de las ventas reales del sector (%)',
+      fuente: 'Ventas propias y encuestas mensuales del DANE (comercio o manufactura)',
+      frecuencia: 'Mensual',
+      sentido: 'sube',
+    },
+  },
+  {
+    id: 'cambio',
+    label: 'Tasa de cambio',
+    values: {
+      decision: 'Si se cubre el dólar y se ajusta el precio de lo importado',
+      nombre: 'Variación de la tasa de cambio en 30 días',
+      tipo: 'variacion',
+      a: 'TRM de hoy',
+      b: 'TRM de hace 30 días',
+      fuente: 'Superintendencia Financiera, TRM en datos.gov.co',
+      frecuencia: 'Mensual',
+      sentido: 'baja',
+    },
+  },
+)
+
 export const states = {
   meta: { label: 'En meta', mark: '●' },
   seguimiento: { label: 'En seguimiento', mark: '▲' },
@@ -175,6 +234,37 @@ export function computeIndicator(v) {
     alerta,
     coherent,
   }
+}
+
+// Tablero de seguimiento: una fila por indicador guardado.
+export function boardRow(v, r) {
+  return {
+    id: `${Date.now()}`,
+    nombre: v.nombre.trim() || 'Indicador sin nombre',
+    valor: r.value === null ? '—' : `${fmt(r.value)} ${r.type.unit}`,
+    estado: r.state,
+    meta: v.meta.trim() || '—',
+    alerta: v.alerta.trim() || '—',
+    frecuencia: v.frecuencia,
+    responsable: v.responsable.trim() || '—',
+    accion: v.accion.trim() || '—',
+    def: v,
+  }
+}
+
+export function buildBoardSheet(rows) {
+  const line = (r) =>
+    `| ${r.nombre} | ${r.valor} | ${states[r.estado].label} | ${r.meta} | ${r.alerta} | ${r.frecuencia} | ${r.responsable} | ${r.accion} |`
+  return `# Tablero de seguimiento
+
+| Indicador | Último valor | Estado | Meta | Alerta | Frecuencia | Responsable | Acción si cruza la alerta |
+|---|---|---|---|---|---|---|---|
+${rows.map(line).join('\n')}
+
+---
+${rows.filter((r) => r.estado === 'alerta').length} en alerta · ${rows.filter((r) => r.estado === 'seguimiento').length} en seguimiento · ${rows.filter((r) => r.estado === 'meta').length} en meta
+Plantilla de ¿Qué IA necesito? · queianecesitas.dev/economia
+`
 }
 
 export function indicatorChecks(v, r) {
