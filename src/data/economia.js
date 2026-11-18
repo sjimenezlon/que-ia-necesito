@@ -300,8 +300,8 @@ export const cases = [
   [
     'PIB potencial de Colombia',
     'Crecimiento potencial estimado por función de producción, con un deslizador para mover la productividad.',
-    'https://sjimenezlon.co/economia#25',
-    'sjimenezlon.co/economia · lámina 25',
+    'https://sjimenezlon.co/economia#26',
+    'sjimenezlon.co/economia · lámina 26',
   ],
   [
     'Charla «Predecir no es decidir»',
