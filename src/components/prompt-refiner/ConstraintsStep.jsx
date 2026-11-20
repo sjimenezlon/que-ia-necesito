@@ -28,8 +28,8 @@ const EFFORT_OPTIONS = [
 const AI_TOOLS = [
   { value: 'universal', label: 'Universal — Compatible con cualquier IA' },
   { value: 'claude', label: 'Claude (Opus 5.5 / Fable 5.2 / Sonnet 5.5)' },
-  { value: 'chatgpt', label: 'ChatGPT (GPT-6 Sol / GPT-6 Astra / GPT-5.6)' },
-  { value: 'gemini', label: 'Gemini (3.8 Flash / 3.1 Pro)' },
+  { value: 'chatgpt', label: 'ChatGPT (GPT-6.2 Sol / GPT-6.2 Astra / GPT-6 Luna)' },
+  { value: 'gemini', label: 'Gemini (4 Hydrogen / 4 Neon / 4 Carbon)' },
   { value: 'perplexity', label: 'Perplexity — Búsqueda con fuentes' },
   { value: 'grok', label: 'Grok 4.7 — Actualidad en tiempo real' },
   { value: 'abiertos', label: 'Modelos abiertos (Kimi K3, DeepSeek V4, GLM, Qwen)' },
